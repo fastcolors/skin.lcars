@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    <defaultcontrol always="true">9000</defaultcontrol>
+    <allowoverlay>no</allowoverlay>
+    <onload condition="!Skin.HasSetting(FirstTimeRun)">ActivateWindow(1112)</onload>
+    <views>50</views>
+    <controls>
+        <control type="button" id="700">
+            <ondown>9000</ondown>
+            <top>15</top>
+            <left>13</left>
+            <width>305</width>
+            <height>79</height>
+            <label></label>
+            <texturenofocus colordiffuse="design">curvelcars1.png</texturenofocus>
+            <texturefocus colordiffuse="blue">curvelcars1.png</texturefocus>
+            <onclick></onclick>
+        </control>
+        <control type="button" id="701">
+            <onup>9000</onup>
+            <top>630</top>
+            <left>13</left>
+            <width>305</width>
+            <height>79</height>
+            <label></label>
+            <texturenofocus colordiffuse="design" flipy="true">curvelcars1.png</texturenofocus>
+            <texturefocus colordiffuse="blue" flipy="true">curvelcars1.png</texturefocus>
+            <onclick>ActivateWindow(Settings)</onclick>
+        </control>
+        <control type="grouplist" id="9000">
+            <top>101</top>
+            <left>13</left>
+            <width>155</width>
+            <height>530</height>
+            <itemgap>6</itemgap>
+            <onup>700</onup>
+            <ondown>701</ondown>
+            <onright>50</onright>
+            <control type="button" id="3">
+                <description>Sort by button</description>
+                <include>9000butts</include>
+                <label>103</label>
+            </control>
+            <!--todo labels-->
+            <control type="togglebutton" id="4">
+                <description>Sort asc</description>
+                <include>9000butts</include>
+                <label>DESC</label>
+                <altlabel>ASC</altlabel>
+                <usealttexture>Container.SortDirection(Ascending)</usealttexture>
+            </control>
+            <control type="radiobutton" id="99">
+                <description>Library button</description>
+                <label>$LOCALIZE[744]</label>
+                <onclick>ReplaceWindow(MusicFiles)</onclick>
+                <selected>Window.IsVisible(MusicLibrary)</selected>
+                <include>9000butts</include>
+            </control>
+            <control type="edit" id="19">
+                <visible>Container.CanFilter + !Container.CanFilterAdvanced</visible>
+                <description>Filter</description>
+                <textwidth>230</textwidth>
+                <include>9000butts</include>
+                <label>587</label>
+            </control>
+            <control type="radiobutton" id="98">
+                <visible>Container.CanFilterAdvanced</visible>
+                <description>Filter</description>
+                <include>9000butts</include>
+                <label>587</label>
+                <selected>Container.Filtered</selected>
+                <onclick>right</onclick>
+                <onclick>Filter</onclick>
+            </control>
+            <control type="button" id="8">
+                <description>Search</description>
+                <include>9000butts</include>
+                <label>137</label>
+            </control>
+            <control type="radiobutton" id="16">
+                <description>PartyMode</description>
+                <label>589</label>
+                <include>9000butts</include>
+            </control>
+            <control type="togglebutton" id="20">
+                <description>Update library</description>
+                <include>9000butts</include>
+                <label>653</label>
+                <altlabel>13353</altlabel>
+                <alttexturefocus border="5">button-focus.png</alttexturefocus>
+                <alttexturenofocus>-</alttexturenofocus>
+                <usealttexture>library.isscanningmusic</usealttexture>
+            </control>
+            <control type="button" id="26">
+                <include>9000butts</include>
+                <enable>false</enable>
+                <label></label>
+            </control>
+        </control>
+        <include>allwindows</include>
+    </controls>
+</window>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+    <include name="lcarsview">
+        <control type="fixedlist" id="50">
+            <animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
+            <onup>9000</onup>
+            <top>135</top>
+            <left>320</left>
+            <width>960</width>
+            <height>280</height>
+            <orientation>horizontal</orientation>
+            <itemlayout width="180" height="280">
+                <control type="image">
+                    <left>10</left>
+                    <top>4</top>
+                    <width>170</width>
+                    <height>250</height>
+                    <aspectratio>keep</aspectratio>
+                    <texture>$VAR[poster]</texture>
+                </control>
+               <control type="textbox">
+                    <visible>IsEmpty(ListItem.Art(poster))</visible>
+                    <top>10</top>
+                    <right>10</right>
+                    <align>right</align>
+                    <font>font30</font>
+                    <width>155</width>
+                    <info>ListItem.Label</info>
+                </control>
+            </itemlayout>
+            <focusedlayout width="180" height="280">
+                <control type="image">
+                    <left>6</left>
+                    <width>178</width>
+                    <height>258</height>
+                    <aspectratio>keep</aspectratio>
+                    <texture>$VAR[poster]</texture>
+                    <bordertexture>white.png</bordertexture>
+                    <bordersize>4</bordersize>
+                </control>
+                <control type="textbox">
+                    <visible>IsEmpty(ListItem.Art(poster))</visible>
+                    <top>10</top>
+                    <right>10</right>
+                    <align>right</align>
+                    <font>font30</font>
+                    <width>155</width>
+                    <info>ListItem.Label</info>
+                </control>
+            </focusedlayout>
+        </control>
+        <control type="textbox">
+            <top>470</top>
+            <centerleft>670</centerleft>
+            <width>660</width>
+            <height>190</height>
+            <textcolor>yellow</textcolor>
+            <align>justify</align>
+            <font>font14_plot</font>
+            <info>ListItem.Plot</info>
+        </control>
+        <control type="label">
+        <top>180</top>
+        <left>153</left>
+        <align>right</align>
+        <width>145</width>
+        <height>40</height>
+        <label>$INFO[ListItem.MPAA]</label>
+    </control>
+    <control type="label">
+        <top>272</top>
+        <left>153</left>
+        <align>right</align>
+        <width>145</width>
+        <height>40</height>
+        <label>$INFO[ListItem.Year]</label>
+    </control>
+        <control type="label">
+            <visible>Control.HasFocus(50)</visible>
+            <top>417</top>
+            <centerleft>475</centerleft>
+            <align>right</align>
+            <width>250</width>
+            <height>30</height>
+            <font>font12</font>
+            <label>^ PRESS UP TO GO TO OPTIONS MENU^</label>
+        </control>
+    </include>
+</includes>

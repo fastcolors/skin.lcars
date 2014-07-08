@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    <defaultcontrol always="true">52</defaultcontrol>
+    <allowoverlay>no</allowoverlay>
+    <controls>
+        <control type="group">
+            <control type="image">
+                <width>1280</width>
+                <height>720</height>
+                <texture>login.jpg</texture>
+            </control>
+            <control type="fixedlist" id="52">
+                <centerleft>640</centerleft>
+                <top>142</top>
+                <width>260</width>
+                <height>300</height>
+                <onleft>52</onleft>
+                <onright>52</onright>
+                <onup>52</onup>
+                <ondown>20</ondown>
+                <viewtype label="52">list</viewtype>
+                <orientation>horizontal</orientation>
+                <pagecontrol>60</pagecontrol>
+                <scrolltime>200</scrolltime>
+                <itemlayout height="260" width="260">
+                    <control type="image">
+                        <left>0</left>
+                        <top>0</top>
+                        <width>690</width>
+                        <height>95</height>
+                        <texture border="5">button-nofocus.png</texture>
+                    </control>
+                    <control type="image">
+                        <width>260</width>
+                        <height>260</height>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                        <colordiffuse>99FFFFFF</colordiffuse>
+                        <texture background="true" diffuse="logindiffuse.png">$INFO[ListItem.Icon]</texture>
+                    </control>
+                </itemlayout>
+                <focusedlayout height="260" width="260">
+                    <control type="image">
+                        <width>260</width>
+                        <height>260</height>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                        <texture background="true" diffuse="logindiffuse.png">$INFO[ListItem.Icon]</texture>
+                    </control>
+
+                </focusedlayout>
+            </control>
+            <control type="button" id="20">
+                <description>Power push button</description>
+                <centerleft>640</centerleft>
+                <top>669</top>
+                <width>1160</width>
+                <height>39</height>
+                <label>$LOCALIZE[31003]</label>
+                <font>font30</font>
+                <onclick>ActivateWindow(ShutdownMenu)</onclick>
+                <align>center</align>
+                <onleft>52</onleft>
+                <onright>52</onright>
+                <onup>52</onup>
+                <ondown>52</ondown>
+            </control>
+            <control type="image">
+                <top>669</top>
+                <left>1230</left>
+                <width>40</width>
+                <height>39</height>
+                <texture colordiffuse="design">bullet.png</texture>
+            </control>
+            <control type="image">
+                <top>15</top>
+                <left>1230</left>
+                <width>40</width>
+                <height>39</height>
+                <texture colordiffuse="design">bullet.png</texture>
+            </control>
+            <control type="image">
+                <top>669</top>
+                <left>10</left>
+                <width>40</width>
+                <height>39</height>
+                <texture colordiffuse="design" flipx="true">bullet.png</texture>
+            </control>
+            <control type="image">
+                <top>15</top>
+                <left>10</left>
+                <width>40</width>
+                <height>39</height>
+                <texture colordiffuse="design" flipx="true">bullet.png</texture>
+            </control>
+            <control type="image">
+                <top>15</top>
+                <centerleft>640</centerleft>
+                <width>685</width>
+                <height>39</height>
+                <texture colordiffuse="design">white.png</texture>
+            </control>
+            <control type="label">
+                <top>18</top>
+                <centerleft>176</centerleft>
+                <height>39</height>
+                <width>240</width>
+                <font>font30</font>
+                <textcolor>yellow</textcolor>
+                <align>center</align>
+                <label>$INFO[System.Date] • $INFO[System.Time]</label>
+            </control>
+            <control type="label">
+                <top>18</top>
+                <left>1020</left>
+                <height>39</height>
+                <width>200</width>
+                <font>font30</font>
+                <textcolor>yellow</textcolor>
+                <label>USS XBMC  •  NCC-1929</label>
+            </control>
+        </control>
+    </controls>
+</window>

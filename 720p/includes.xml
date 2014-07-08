@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+    <include file="defaults.xml"/>
+    <include file="ViewsVideoLibrary.xml"/>
+    <include name="750">
+        <control type="group" id="750">
+
+            <control type="fixedlist" id="311">
+                <!--movies-->
+                <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
+                <visible>Container(9000).HasFocus(1)</visible>
+                <onup>9000</onup>
+                <onleft>9000</onleft>
+                <top>135</top>
+                <left>320</left>
+                <width>960</width>
+                <height>280</height>
+                <orientation>horizontal</orientation>
+                <itemlayout width="180" height="280">
+                    <control type="image">
+                        <left>10</left>
+                        <top>4</top>
+                        <width>170</width>
+                        <height>250</height>
+                        <aspectratio>keep</aspectratio>
+                        <texture>$VAR[Poster]</texture>
+                    </control>
+                </itemlayout>
+                <focusedlayout width="180" height="280">
+                    <control type="image">
+                        <left>6</left>
+                        <width>178</width>
+                        <height>258</height>
+                        <aspectratio>keep</aspectratio>
+                        <texture>$VAR[Poster]</texture>
+                        <bordertexture>white.png</bordertexture>
+                        <bordersize>4</bordersize>
+                    </control>
+                </focusedlayout>
+                <content target="video">videodb://recentlyaddedmovies/</content>
+            </control>
+            <control type="fixedlist" id="311">
+                <!--tv-->
+                <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
+                <visible>Container(9000).HasFocus(2)</visible>
+                <onup>9000</onup>
+                <onleft>9000</onleft>
+                <top>135</top>
+                <left>320</left>
+                <width>960</width>
+                <height>280</height>
+                <orientation>horizontal</orientation>
+                <itemlayout width="180" height="280">
+                    <control type="image">
+                        <left>10</left>
+                        <top>4</top>
+                        <width>170</width>
+                        <height>250</height>
+                        <aspectratio>keep</aspectratio>
+                        <info>ListItem.Art(tvshow.poster)</info>
+                    </control>
+                </itemlayout>
+                <focusedlayout width="180" height="280">
+                    <control type="image">
+                        <left>6</left>
+                        <width>178</width>
+                        <height>258</height>
+                        <aspectratio>keep</aspectratio>
+                        <info>ListItem.Art(tvshow.poster)</info>
+                        <bordertexture>white.png</bordertexture>
+                        <bordersize>4</bordersize>
+                    </control>
+                </focusedlayout>
+                <content target="video">videodb://recentlyaddedepisodes/</content>
+            </control>
+            <control type="fixedlist" id="311">
+                <!--music-->
+                <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
+                <visible>Container(9000).HasFocus(3)</visible>
+                <onup>9000</onup>
+                <onleft>9000</onleft>
+                <top>135</top>
+                <left>320</left>
+                <width>960</width>
+                <height>280</height>
+                <orientation>horizontal</orientation>
+                <itemlayout width="280" height="280">
+                    <control type="image">
+                        <left>10</left>
+                        <top>4</top>
+                        <width>250</width>
+                        <height>250</height>
+                        <aspectratio>keep</aspectratio>
+                        <texture fallback="DefaultAlbumcover.png">$INFO[ListItem.Thumb]</texture>
+                    </control>
+                </itemlayout>
+                <focusedlayout width="280" height="280">
+                    <control type="image">
+                        <left>6</left>
+                        <width>258</width>
+                        <height>258</height>
+                        <aspectratio>keep</aspectratio>
+                        <texture fallback="DefaultAlbumcover.png">$INFO[ListItem.Thumb]</texture>
+                        <bordertexture>white.png</bordertexture>
+                        <bordersize>4</bordersize>
+                    </control>
+                </focusedlayout>
+                <content target="music">musicdb://recentlyaddedalbums/</content>
+            </control>
+        </control>
+    </include>
+    <include name="9000butts">
+        <width>155</width>
+        <height>60</height>
+        <texturenofocus colordiffuse="design">white.png</texturenofocus>
+        <texturefocus colordiffuse="blue">white.png</texturefocus>
+        <align>right</align>
+    </include>
+
+    <include name="allwindows">
+        <control type="image">
+            <top>15</top>
+            <left>1230</left>
+            <width>40</width>
+            <height>39</height>
+            <texture colordiffuse="design">bullet.png</texture>
+        </control>
+        <control type="image">
+            <top>669</top>
+            <left>660</left>
+            <width>280</width>
+            <height>39</height>
+            <texture colordiffuse="design">white.png</texture>
+        </control>
+        <control type="image">
+            <top>669</top>
+            <left>945</left>
+            <width>140</width>
+            <height>39</height>
+            <texture colordiffuse="design">white.png</texture>
+        </control>
+        <control type="image">
+            <top>669</top>
+            <left>1090</left>
+            <width>136</width>
+            <height>39</height>
+            <texture colordiffuse="design">white.png</texture>
+        </control>
+        <control type="label">
+                <top>18</top>
+                <left>1020</left>
+                <height>39</height>
+                <width>200</width>
+                <font>font30</font>
+                <textcolor>yellow</textcolor>
+                <label>USS XBMC  •  NCC-1929</label>
+            </control>
+        <control type="label">
+            <visible>System.InternetState</visible>
+            <top>670</top>
+            <left>1090</left>
+            <width>136</width>
+            <height>39</height>
+            <label>ONLINE</label>
+            <aligny>center</aligny>
+            <align>center</align>
+            <font>font30</font>
+        </control>
+        <control type="label">
+        <top>672</top>
+        <left>330</left>
+        <textcolor>yellow</textcolor>
+        <font>font30</font>
+        <width>330</width>
+        <height>40</height>
+        <label>STARDATE : $INFO[System.Date] • $INFO[System.Time]</label>
+    </control>
+    </include>
+
+    <variable name="Poster">
+        <value condition="Container.Content(episodes) + !IsEmpty(ListItem.Art(tvshow.poster))">$INFO[ListItem.Art(tvshow.poster)]</value>
+        <value condition="!IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
+        <!--<value condition="StringCompare(ListItem.Label,..)">$INFO[ListItem.Icon]</value>-->
+        <!--<value condition="!IsEmpty(ListItem.Thumb))">$INFO[ListItem.Thumb]</value>-->
+        <value>$INFO[ListItem.Icon]</value>
+    </variable>
+</includes>

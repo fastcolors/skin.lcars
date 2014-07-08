@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon
+        id="skin.lcars"
+        version="0.0.1"
+        name="lcars"
+        provider-name="fastcolors">
+    <requires>
+        <import addon="xbmc.gui" version="5.0.0"/>
+    </requires>
+    <extension
+            point="xbmc.gui.skin"
+            defaultthemename="textures.xbt"
+            debugging="true"
+            effectslowdown="1">
+        <res width="1280" height="720" aspect="16:9" default="true" folder="720p" />
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Confluence tema deur Jezz_X. (XBMC se standaard tema)</summary>
+        <description>Confluence este costumul implicit pentru XBMC 9.11 și versiunile ulterioare. Este o combinație de concepte împrumutate de la mai multe costume populare, care încearcă să îmbrățișeze și să integreze ideile lor bune într-un costum care să fie ușor de înțeles și folosit de către utilizatorii XBMC începători.</description>
+        <disclaimer>Confluence is die standaard tema vir XBMC, verwydering mag probleme veroorsaak</disclaimer>
+        <platform>all</platform>
+    </extension>
+</addon>

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    <defaultcontrol always="false">9000</defaultcontrol>
+    <allowoverlay>no</allowoverlay><controls>
+    <control type="group">
+        <control type="image">
+            <width>1280</width>
+            <height>720</height>
+            <texture>background.png</texture>
+        </control>
+        <!--todo labels-->
+        <control type="label">
+            <visible>Control.HasFocus(311)</visible>
+            <top>417</top>
+            <centerleft>475</centerleft>
+            <align>right</align>
+            <width>250</width>
+            <height>30</height>
+            <font>font12</font>
+            <label>^ PRESS UP TO EXIT TO MAIN MENU^</label>
+        </control>
+        <control type="image">
+            <top>15</top>
+            <left>325</left>
+            <width>685</width>
+            <height>39</height>
+            <texture colordiffuse="design">white.png</texture>
+        </control>
+
+        <control type="button" id="702">
+            <description>powerbutton</description>
+            <onleft>701</onleft>
+            <top>669</top>
+            <left>1230</left>
+            <width>40</width>
+            <height>39</height>
+            <label></label>
+            <texturenofocus colordiffuse="design">bullet.png</texturenofocus>
+            <texturefocus colordiffuse="blue">bullet.png</texturefocus>
+            <onclick>ActivateWindow(ShutdownMenu)</onclick>
+        </control>
+        <control type="button" id="700">
+            <ondown>9000</ondown>
+            <top>15</top>
+            <left>13</left>
+            <width>305</width>
+            <height>79</height>
+            <label></label>
+            <texturenofocus colordiffuse="design">curvelcars1.png</texturenofocus>
+            <texturefocus colordiffuse="blue">curvelcars1.png</texturefocus>
+            <onclick></onclick>
+        </control>
+        <control type="button" id="701">
+            <onup>9000</onup>
+            <onright>702</onright>
+            <top>630</top>
+            <left>13</left>
+            <width>305</width>
+            <height>79</height>
+            <label></label>
+            <texturenofocus colordiffuse="design" flipy="true">curvelcars1.png</texturenofocus>
+            <texturefocus colordiffuse="blue" flipy="true">curvelcars1.png</texturefocus>
+            <onclick>ActivateWindow(Settings)</onclick>
+        </control>
+        <include>allwindows</include>
+    </control>
+    <include>750</include>
+    <control type="panel" id="9000">
+        <top>98</top>
+        <left>13</left>
+        <width>155</width>
+        <height>530</height>
+        <onup>700</onup>
+        <ondown>701</ondown>
+        <onright>750</onright>
+        <itemlayout width="155" height="66">
+            <control type="image">
+                <top>3</top>
+                <width>155</width>
+                <height>60</height>
+                <texture colordiffuse="design">white.png</texture>
+            </control>
+            <control type="label">
+                <top>30</top>
+                <left>145</left>
+                <width>145</width>
+                <height>23</height>
+                <aligny>bottom</aligny>
+                <align>right</align>
+                <label>$INFO[ListItem.label]</label>
+            </control>
+        </itemlayout>
+        <focusedlayout width="155" height="66">
+            <control type="image">
+                <top>3</top>
+                <width>155</width>
+                <height>60</height>
+                <texture colordiffuse="blue">white.png</texture>
+            </control>
+            <control type="label">
+                <top>30</top>
+                <left>145</left>
+                <width>145</width>
+                <height>23</height>
+                <aligny>bottom</aligny>
+                <align>right</align>
+                <label>$INFO[ListItem.label]</label>
+            </control>
+        </focusedlayout>
+        <content>
+            <item id="1">
+                <label>342</label>
+                <label2>FFFF0000</label2>
+                <onclick condition="Library.HasContent(Movies)">ActivateWindow(Videos,MovieTitles,return)</onclick>
+                <onclick condition="!Library.HasContent(Movies)">ActivateWindow(Videos,root)</onclick>
+            </item>
+            <item id="2">
+                <label>20343</label>
+                <label2>FFFF0000</label2>
+                <onclick condition="Library.HasContent(TVShows)">ActivateWindow(VideoLibrary,TVShowTitles,return)</onclick>
+                <onclick condition="!Library.HasContent(TVShows)">ActivateWindow(Videos,root)</onclick>
+            </item>
+            <item id="3">
+                <label>2</label>
+                <property name="color">icons/Orange.png</property>
+                <onclick>ActivateWindow(502,$INFO[Skin.String(MusicLink)])</onclick>
+                <onclick condition="!Library.HasContent(Music)">ActivateWindow(501,root)</onclick>
+            </item>
+            <item id="4">
+                <label>24001</label>
+                <property name="color">icons/Green.png</property>
+                <onclick>ActivateWindow(1118)</onclick>
+            </item>
+            <item id="5">
+                <thumb>icons/LiveTV.png</thumb>
+                <!--todo label-->
+                <label>LiveTV</label>
+                <property name="color">icons/green3.png</property>
+                <onclick>ActivateWindowAndFocus(1718)</onclick>
+            </item>
+            <item id="6">
+                <label>Pictures</label>
+                <property name="color">icons/teak.png</property>
+                <onclick>ActivateWindow(Pictures)</onclick>
+            </item>
+            <item id="7">
+                <label>Sources</label>
+                <property name="color">icons/teak.png</property>
+                <onclick>ActivateWindow(MediaSources)</onclick>
+            </item>
+            <item id="7">
+                <label>$INFO[Weather.Temperature]</label>
+                <property name="color">icons/teak.png</property>
+                <onclick>ActivateWindow(MyWeather)</onclick>
+            </item>
+        </content>
+    </control>
+    <control type="label">
+        <top>638</top>
+        <left>13</left>
+        <align>right</align>
+        <width>145</width>
+        <height>40</height>
+        <label>CONFIGURE</label>
+    </control>
+    <control type="label">
+        <visible>Control.IsVisible(311)</visible>
+        <top>180</top>
+        <left>153</left>
+        <align>right</align>
+        <width>145</width>
+        <height>40</height>
+        <label>$INFO[Container(311).ListItem.MPAA]</label>
+    </control>
+    <control type="label">
+        <visible>Control.IsVisible(311)</visible>
+        <top>272</top>
+        <left>153</left>
+        <align>right</align>
+        <width>145</width>
+        <height>40</height>
+        <label>$INFO[Container(311).ListItem.Year]</label>
+    </control>
+    <control type="textbox">
+        <visible>Control.IsVisible(311)</visible>
+        <top>470</top>
+        <centerleft>670</centerleft>
+        <width>660</width>
+        <height>190</height>
+        <textcolor>yellow</textcolor>
+        <font>font14_plot</font>
+        <align>justify</align>
+        <info>Container(311).ListItem.Plot</info>
+    </control>
+</controls>
+</window>

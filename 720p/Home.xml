@@ -117,20 +117,20 @@
             <item id="3">
                 <label>2</label>
                 <label2>FFFF0000</label2>
-                <onclick>ActivateWindow(502,$INFO[Skin.String(MusicLink)])</onclick>
+                <onclick>ActivateWindow(502,Artists)</onclick>
                 <onclick condition="!Library.HasContent(Music)">ActivateWindow(501,root)</onclick>
             </item>
             <item id="4">
                 <label>24001</label>
                 <label2>FFFF0000</label2>
-                <onclick>ActivateWindow(1118)</onclick>
+                <onclick>noop</onclick>
             </item>
             <item id="5">
                 <thumb>icons/LiveTV.png</thumb>
                 <!--todo label-->
                 <label>LiveTV</label>
                 <label2>FFFF0000</label2>
-                <onclick>ActivateWindowAndFocus(1718)</onclick>
+                <onclick>ActivateWindow(myPVR)</onclick>
             </item>
             <item id="6">
                 <label>Pictures</label>

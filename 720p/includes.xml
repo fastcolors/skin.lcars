@@ -270,7 +270,7 @@
                             <info>ListItem.Label</info>
                         </control>
                     </focusedlayout>
-                    <content>$INFO[Skin.String(addonhome)]</content>
+                    <content target="video">$INFO[Skin.String(addonhome)]</content>
                 </control>
             </control>
         </control>
@@ -298,6 +298,14 @@
             <height>39</height>
             <texture colordiffuse="design">bullet.png</texture>
         </control>
+        <control type="image">
+            <top>669</top>
+            <left>1230</left>
+            <width>40</width>
+            <height>39</height>
+            <texture colordiffuse="design">bullet.png</texture>
+        </control>
+
         <control type="image">
             <top>669</top>
             <left>660</left>

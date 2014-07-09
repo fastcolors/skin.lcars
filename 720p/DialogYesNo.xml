@@ -12,28 +12,26 @@
         </control>
         <control type="label" id="1">
             <description>header label</description>
-            <left>40</left>
-            <top>20</top>
+            <centerleft>640</centerleft>
+            <top>240</top>
             <width>530</width>
             <height>30</height>
-            <font>font13_title</font>
-            <label>$LOCALIZE[13406]</label>
+            <font>font14</font>
+            <label>-</label>
             <align>center</align>
             <aligny>center</aligny>
-            <textcolor>selected</textcolor>
-            <shadowcolor>black</shadowcolor>
+            <textcolor>darkgreen</textcolor>
         </control>
 
         <control type="textbox" id="9">
             <description>text</description>
             <centerleft>640</centerleft>
-            <centertop>320</centertop>
+            <top>290</top>
             <width>550</width>
             <height>100</height>
             <align>center</align>
             <label>-</label>
-            <font>font13</font>
-            <autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
+            <font>font14</font>
         </control>
         <control type="grouplist">
             <centerleft>640</centerleft>
@@ -48,7 +46,6 @@
                 <width>200</width>
                 <height>40</height>
                 <label>107</label>
-                <font>font12_title</font>
                 <aligny>center</aligny>
                 <align>center</align>
                 <onleft>10</onleft>
@@ -63,7 +60,6 @@
                 <width>200</width>
                 <height>40</height>
                 <label>106</label>
-                <font>font12_title</font>
                 <aligny>center</aligny>
                 <align>center</align>
                 <onleft>11</onleft>

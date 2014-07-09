@@ -83,8 +83,8 @@
 		<height>42</height>
 		<spinwidth>33</spinwidth>
 		<spinheight>22</spinheight>
-		<texturefocus>button-focus.png</texturefocus>
-		<texturenofocus>-</texturenofocus>
+		<texturenofocus colordiffuse="design">white.png</texturenofocus>
+        <texturefocus colordiffuse="blue">white.png</texturefocus>
 		<textureup>scroll-up-2.png</textureup>
 		<texturedown>scroll-down-2.png</texturedown>
 		<textureupfocus>scroll-up-focus-2.png</textureupfocus>
@@ -108,8 +108,8 @@
 		<textureradioonnofocus>radiobutton-focus.png</textureradioonnofocus>
 		<textureradioofffocus>radiobutton-nofocus.png</textureradioofffocus>
 		<textureradiooffnofocus>radiobutton-nofocus.png</textureradiooffnofocus>
-		<texturefocus border="5">button-focus.png</texturefocus>
-		<texturenofocus border="5">button-nofocus.png</texturenofocus>
+		<texturenofocus colordiffuse="design">white.png</texturenofocus>
+        <texturefocus colordiffuse="blue">white.png</texturefocus>
 		<label>215</label>
 		<font>font14</font>
 		<textcolor>black</textcolor>
@@ -125,8 +125,8 @@
 		<height>50</height>
 		<label>-</label>
 		<font>font12</font>
-		<texturefocus>-</texturefocus>
-		<texturenofocus>-</texturenofocus>
+		<texturenofocus colordiffuse="design">white.png</texturenofocus>
+        <texturefocus colordiffuse="blue">white.png</texturefocus>
 		<texturebg>button-focus.png</texturebg>
 		<textureleft>scroll-left.png</textureleft>
 		<textureleftfocus>scroll-left-focus.png</textureleftfocus>

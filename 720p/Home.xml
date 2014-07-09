@@ -72,7 +72,7 @@
         <height>530</height>
         <onup>700</onup>
         <ondown>701</ondown>
-        <onright>750</onright>
+        <onright>888</onright>
         <itemlayout width="155" height="66">
             <control type="image">
                 <top>3</top>

@@ -81,14 +81,14 @@
 		<top>160</top>
 		<width>300</width>
 		<height>42</height>
-		<spinwidth>33</spinwidth>
+		<spinwidth>22</spinwidth>
 		<spinheight>22</spinheight>
-		<texturenofocus colordiffuse="design">white.png</texturenofocus>
-        <texturefocus colordiffuse="blue">white.png</texturefocus>
-		<textureup>scroll-up-2.png</textureup>
-		<texturedown>scroll-down-2.png</texturedown>
-		<textureupfocus>scroll-up-focus-2.png</textureupfocus>
-		<texturedownfocus>scroll-down-focus-2.png</texturedownfocus>
+		<texturenofocus colordiffuse="design" border="20">whiterounded.png</texturenofocus>
+            <texturefocus colordiffuse="blue" border="20">whiterounded.png</texturefocus>
+		<textureup>up.png</textureup>
+		<texturedown>down.png</texturedown>
+		<textureupfocus>upf.png</textureupfocus>
+		<texturedownfocus>downf.png</texturedownfocus>
 		<font>font14</font>
 		<textcolor>black</textcolor>
 		<disabledcolor>grey3</disabledcolor>
@@ -104,12 +104,10 @@
 		<height>42</height>
 		<radiowidth>24</radiowidth>
 		<radioheight>24</radioheight>
-		<textureradioonfocus>radiobutton-focus.png</textureradioonfocus>
-		<textureradioonnofocus>radiobutton-focus.png</textureradioonnofocus>
-		<textureradioofffocus>radiobutton-nofocus.png</textureradioofffocus>
-		<textureradiooffnofocus>radiobutton-nofocus.png</textureradiooffnofocus>
-		<texturenofocus colordiffuse="design">white.png</texturenofocus>
-        <texturefocus colordiffuse="blue">white.png</texturefocus>
+		 <textureradiofocus aspectratio="keep">radioon.png</textureradiofocus>
+        <textureradionofocus aspectratio="keep">radiooff.png</textureradionofocus>
+		<texturenofocus colordiffuse="design" border="20">whiterounded.png</texturenofocus>
+            <texturefocus colordiffuse="blue" border="20">whiterounded.png</texturefocus>
 		<label>215</label>
 		<font>font14</font>
 		<textcolor>black</textcolor>

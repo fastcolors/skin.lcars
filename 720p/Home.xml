@@ -19,13 +19,7 @@
             <font>font12</font>
             <label>^ PRESS UP TO EXIT TO MAIN MENU^</label>
         </control>
-        <control type="image">
-            <top>15</top>
-            <left>325</left>
-            <width>685</width>
-            <height>39</height>
-            <texture colordiffuse="design">white.png</texture>
-        </control>
+
 
         <control type="button" id="702">
             <description>powerbutton</description>

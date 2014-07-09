@@ -3,122 +3,117 @@
     <defaultcontrol>3</defaultcontrol>
     <allowoverlay>no</allowoverlay>
     <controls>
-        <control type="group">
-            <control type="grouplist" id="3">
-                <description>button area</description>
-                <top>101</top>
-                <left>13</left>
-                <width>155</width>
-                <height>530</height>
-                <itemgap>6</itemgap>
-                <onleft>5</onleft>
-                <onright>5</onright>
-                <onup>700</onup>
-                <ondown>20</ondown>
-            </control>
-            <control type="button" id="700">
-                <ondown>3</ondown>
-                <top>15</top>
-                <left>13</left>
-                <width>305</width>
-                <height>79</height>
-                <label></label>
-                <texturenofocus colordiffuse="design">curvelcars1.png</texturenofocus>
-                <texturefocus colordiffuse="blue">curvelcars1.png</texturefocus>
-                <onclick></onclick>
-            </control>
-            <control type="button" id="20">
-                <onup>3</onup>
-                <onright>702</onright>
-                <top>630</top>
-                <left>13</left>
-                <width>305</width>
-                <height>79</height>
-                <label></label>
-                <textcolor>00FFFFFF</textcolor>
-                <texturenofocus colordiffuse="design" flipy="true">curvelcars1.png</texturenofocus>
-                <texturefocus colordiffuse="blue" flipy="true">curvelcars1.png</texturefocus>
-                <onclick>SettingsLevelChange</onclick>
-            </control>
-            <control type="label">
-                <top>638</top>
-                <left>13</left>
-                <align>right</align>
-                <width>145</width>
-                <height>40</height>
-                <label>$INFO[Control.GetLabel(20)]</label>
-            </control>
-            <control type="label">
-                <left>20</left>
-                <top>566</top>
-                <height>25</height>
-                <width>230</width>
-                <label>31142</label>
-                <font>font13_title</font>
-                <textcolor>white</textcolor>
-                <align>right</align>
-                <aligny>center</aligny>
-            </control>
-            <control type="image">
-                <left>268</left>
-                <top>10</top>
-                <width>790</width>
-                <height>618</height>
-                <texture border="5">black-back2.png</texture>
-            </control>
-            <control type="label">
-                <description>header label</description>
-                <left>300</left>
-                <top>20</top>
-                <width>726</width>
-                <height>30</height>
-                <font>font16</font>
-                <label>$INFO[Control.GetLabel(2)] - $LOCALIZE[5]</label>
-                <align>center</align>
-                <aligny>center</aligny>
-                <textcolor>white</textcolor>
-                <shadowcolor>black</shadowcolor>
-            </control>
-            <control type="grouplist" id="5">
-                <description>control area</description>
-                <left>290</left>
-                <top>70</top>
-                <width>750</width>
-                <height>435</height>
-                <itemgap>4</itemgap>
-                <pagecontrol>60</pagecontrol>
-                <onleft>3</onleft>
-                <onright>60</onright>
-                <onup>5</onup>
-                <ondown>5</ondown>
-            </control>
-            <control type="scrollbar" id="60">
-                <left>1060</left>
-                <top>60</top>
-                <width>25</width>
-                <height>435</height>
-                <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
-                <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
-                <texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
-                <textureslidernib>ScrollBarNib.png</textureslidernib>
-                <textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
-                <onleft>5</onleft>
-                <onright>3</onright>
-                <showonepage>false</showonepage>
-                <orientation>vertical</orientation>
-            </control>
-            <control type="textbox" id="6">
-                <description>description area</description>
-                <left>297</left>
-                <top>530</top>
-                <width>736</width>
-                <height>85</height>
-                <font>font12</font>
-                <align>justify</align>
-                <autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
-            </control>
+        <control type="image">
+            <width>1280</width>
+            <height>720</height>
+            <texture>settings.jpg</texture>
         </control>
-        <include>BehindDialogFadeOut</include>
+        <include>allwindows</include>
+        <control type="grouplist" id="3">
+            <description>button area</description>
+            <top>101</top>
+            <left>13</left>
+            <width>155</width>
+            <height>530</height>
+            <itemgap>6</itemgap>
+            <onleft>5</onleft>
+            <onright>5</onright>
+            <onup>700</onup>
+            <ondown>20</ondown>
+        </control>
+        <control type="button" id="700">
+            <ondown>3</ondown>
+            <top>15</top>
+            <left>13</left>
+            <width>305</width>
+            <height>79</height>
+            <label></label>
+            <texturenofocus colordiffuse="design">curvelcars1.png</texturenofocus>
+            <texturefocus colordiffuse="blue">curvelcars1.png</texturefocus>
+            <onclick></onclick>
+        </control>
+        <control type="button" id="20">
+            <onup>3</onup>
+            <onright>702</onright>
+            <top>630</top>
+            <left>13</left>
+            <width>305</width>
+            <height>79</height>
+            <label></label>
+            <textcolor>00FFFFFF</textcolor>
+            <texturenofocus colordiffuse="design" flipy="true">curvelcars1.png</texturenofocus>
+            <texturefocus colordiffuse="blue" flipy="true">curvelcars1.png</texturefocus>
+            <onclick>SettingsLevelChange</onclick>
+        </control>
+        <control type="label">
+            <top>638</top>
+            <left>13</left>
+            <align>right</align>
+            <width>145</width>
+            <height>40</height>
+            <label>$INFO[Control.GetLabel(20)]</label>
+        </control>
+        <control type="label">
+            <left>20</left>
+            <top>566</top>
+            <height>25</height>
+            <width>230</width>
+            <label>31142</label>
+            <font>font13_title</font>
+            <textcolor>white</textcolor>
+            <align>right</align>
+            <aligny>center</aligny>
+        </control>
+        <control type="label">
+            <description>header label</description>
+            <left>300</left>
+            <top>20</top>
+            <width>726</width>
+            <height>32</height>
+            <font>font30</font>
+            <label>$INFO[Control.GetLabel(2)] - $LOCALIZE[5]</label>
+            <align>center</align>
+            <aligny>center</aligny>
+        </control>
+        <control type="grouplist" id="5">
+            <description>control area</description>
+            <top>75</top>
+            <left>325</left>
+            <width>685</width>
+            <height>526</height>
+            <itemgap>4</itemgap>
+            <pagecontrol>60</pagecontrol>
+            <onleft>3</onleft>
+            <onright>60</onright>
+            <onup>5</onup>
+            <ondown>5</ondown>
+        </control>
+        <control type="scrollbar" id="60">
+            <left>1060</left>
+            <top>60</top>
+            <width>25</width>
+            <height>435</height>
+            <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+            <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+            <texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+            <textureslidernib>ScrollBarNib.png</textureslidernib>
+            <textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
+            <onleft>5</onleft>
+            <onright>3</onright>
+            <showonepage>false</showonepage>
+            <orientation>vertical</orientation>
+        </control>
+        <control type="textbox" id="6">
+            <description>description area</description>
+            <left>325</left>
+            <width>685</width>
+            <top>605</top>
+            <height>50</height>
+            <font>font12</font>
+            <textcolor>yellow</textcolor>
+            <align>justify</align>
+            <autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
+        </control>
 
         <control type="button" id="10">
             <description>Default Category Button</description>
@@ -132,6 +127,8 @@
             <font>font13</font>
             <aligny>center</aligny>
             <invalidcolor>invalid</invalidcolor>
+            <texturenofocus colordiffuse="design" border="20">whiterounded.png</texturenofocus>
+            <texturefocus colordiffuse="blue" border="20">whiterounded.png</texturefocus>
         </control>
         <control type="radiobutton" id="8">
             <description>Default RadioButton</description>
@@ -159,23 +156,6 @@
             <font>-</font>
             <visible>false</visible>
         </control>
-        <control type="grouplist">
-            <left>65</left>
-            <top>5</top>
-            <width>1000</width>
-            <height>30</height>
-            <orientation>horizontal</orientation>
-            <align>left</align>
-            <itemgap>5</itemgap>
-            <control type="label">
-                <include>WindowTitleCommons</include>
-                <label>$LOCALIZE[5]</label>
-            </control>
-            <control type="label">
-                <include>WindowTitleCommons</include>
-                <label>[COLOR=blue] - [/COLOR]$INFO[Control.GetLabel(2)]</label>
-            </control>
-        </control>
-        <include>allwindows</include>
+
     </controls>
 </window>

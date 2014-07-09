@@ -286,6 +286,13 @@
     <include name="allwindows">
         <control type="image">
             <top>15</top>
+            <left>325</left>
+            <width>685</width>
+            <height>39</height>
+            <texture colordiffuse="design">white.png</texture>
+        </control>
+        <control type="image">
+            <top>15</top>
             <left>1230</left>
             <width>40</width>
             <height>39</height>

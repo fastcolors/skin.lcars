@@ -5,7 +5,32 @@
     <include file="ViewsMusicLibrary.xml"/>
     <include name="750">
         <control type="group" id="750">
-
+            <control type="group">
+                <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
+                <visible>Container(9000).HasFocus(8)</visible>
+                <control type="multiimage">
+                    <description>map multiimage</description>
+                    <left>325</left>
+                    <top>475</top>
+                    <width>300</width>
+                    <height>174</height>
+                    <imagepath>$INFO[Window(Weather).Property(MapPath)]</imagepath>
+                    <timeperimage>500</timeperimage>
+                    <pauseatend>1000</pauseatend>
+                    <fadetime>0</fadetime>
+                    <randomize>false</randomize>
+                    <loop>yes</loop>
+                    <aligny>center</aligny>
+                </control>
+                <control type="textbox">
+                    <left>650</left>
+                    <top>485</top>
+                    <width>300</width>
+                    <height>174</height>
+                    <textcolor>yellow</textcolor>
+                    <label>$INFO[Window(Weather).Property(Location)][CR][CR]$INFO[Window(Weather).Property(Current.Condition)][CR][CR]$INFO[Window(Weather).Property(Current.Humidity)] HUMIDITY[CR][CR]WIND $INFO[Window(Weather).Property(Current.Wind)]</label>
+                </control>
+            </control>
             <control type="fixedlist" id="311">
                 <!--movies-->
                 <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>

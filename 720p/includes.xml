@@ -10,11 +10,11 @@
                 <visible>Container(9000).HasFocus(8)</visible>
                 <control type="multiimage">
                     <description>map multiimage</description>
-                    <left>325</left>
+                    <left>360</left>
                     <top>475</top>
                     <width>300</width>
                     <height>174</height>
-                    <imagepath>$INFO[Window(Weather).Property(MapPath)]</imagepath>
+                    <imagepath diffuse="soap.png">$INFO[Window(Weather).Property(MapPath)]</imagepath>
                     <timeperimage>500</timeperimage>
                     <pauseatend>1000</pauseatend>
                     <fadetime>0</fadetime>
@@ -23,7 +23,7 @@
                     <aligny>center</aligny>
                 </control>
                 <control type="textbox">
-                    <left>650</left>
+                    <left>700</left>
                     <top>485</top>
                     <width>300</width>
                     <height>174</height>
@@ -207,6 +207,17 @@
             <font>font30</font>
             <textcolor>yellow</textcolor>
             <label>USS XBMC  •  NCC-1929</label>
+        </control>
+        <control type="label">
+            <visible>system.hasnetwork</visible>
+            <top>670</top>
+            <left>945</left>
+            <width>138</width>
+            <height>39</height>
+            <label>$INFO[network.ipaddress]</label>
+            <aligny>center</aligny>
+            <align>center</align>
+            <font>font30</font>
         </control>
         <control type="label">
             <visible>System.InternetState</visible>

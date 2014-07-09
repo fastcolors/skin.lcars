@@ -18,7 +18,7 @@
                     <texture>$VAR[poster]</texture>
                 </control>
                <control type="textbox">
-                   <visible>!IsEmpty(ListItem.Artist) | !IsEmpty(ListItem.Album)</visible>
+                   <visible>Container.Content(albums) | Container.Content(artists)</visible>
                     <top>10</top>
                     <right>10</right>
                     <align>right</align>
@@ -26,6 +26,15 @@
                     <width>240</width>
                    <textcolor>yellow</textcolor>
                    <shadowcolor>88000000</shadowcolor>
+                    <info>ListItem.Label</info>
+                </control>
+                 <control type="textbox">
+                    <visible>Container.Content(years) | Container.Content(genres)</visible>
+                    <top>10</top>
+                    <right>10</right>
+                    <align>right</align>
+                    <font>font30</font>
+                    <width>240</width>
                     <info>ListItem.Label</info>
                 </control>
             </itemlayout>
@@ -40,7 +49,7 @@
                     <bordersize>4</bordersize>
                 </control>
                 <control type="textbox">
-                    <visible>!IsEmpty(ListItem.Artist) | !IsEmpty(ListItem.Album)</visible>
+                    <visible>Container.Content(albums) | Container.Content(artists)</visible>
                     <top>10</top>
                     <right>10</right>
                     <align>right</align>
@@ -50,6 +59,16 @@
                    <shadowcolor>88000000</shadowcolor>
                     <info>ListItem.Label</info>
                 </control>
+                <control type="textbox">
+                    <visible>Container.Content(years) | Container.Content(genres)</visible>
+                    <top>10</top>
+                    <right>10</right>
+                    <align>right</align>
+                    <font>font30</font>
+                    <width>240</width>
+                    <info>ListItem.Label</info>
+                </control>
+
             </focusedlayout>
         </control>
         <control type="textbox">

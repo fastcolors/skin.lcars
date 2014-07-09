@@ -80,30 +80,57 @@
                 <visible>Container(9000).HasFocus(3)</visible>
                 <onup>9000</onup>
                 <onleft>9000</onleft>
-                <top>135</top>
-                <left>320</left>
+                <top>125</top>
+                <left>330</left>
                 <width>960</width>
-                <height>280</height>
+                <height>300</height>
                 <orientation>horizontal</orientation>
-                <itemlayout width="280" height="280">
+                <itemlayout width="228" height="280">
                     <control type="image">
-                        <left>10</left>
-                        <top>4</top>
-                        <width>250</width>
-                        <height>250</height>
+                        <top>74</top>
+                        <centerleft>114</centerleft>
+                        <width>200</width>
+                        <height>200</height>
                         <aspectratio>keep</aspectratio>
                         <texture fallback="DefaultAlbumcover.png">$INFO[ListItem.Thumb]</texture>
                     </control>
-                </itemlayout>
-                <focusedlayout width="280" height="280">
                     <control type="image">
-                        <left>6</left>
-                        <width>258</width>
-                        <height>258</height>
+                        <centerleft>114</centerleft>
+                        <width>218</width>
+                        <height>65</height>
+                        <texture colordiffuse="design">white.png</texture>
+                    </control>
+                    <control type="textbox">
+                        <align>center</align>
+                        <centerleft>114</centerleft>
+                        <font>font16</font>
+                        <width>208</width>
+                        <info>ListItem.Label</info>
+                    </control>
+                </itemlayout>
+                <focusedlayout width="228" height="280">
+                    <control type="image">
+                        <top>70</top>
+                        <centerleft>114</centerleft>
+                        <width>208</width>
+                        <height>208</height>
                         <aspectratio>keep</aspectratio>
                         <texture fallback="DefaultAlbumcover.png">$INFO[ListItem.Thumb]</texture>
                         <bordertexture>white.png</bordertexture>
                         <bordersize>4</bordersize>
+                    </control>
+                    <control type="image">
+                        <centerleft>114</centerleft>
+                        <width>218</width>
+                        <height>65</height>
+                        <texture colordiffuse="design">white.png</texture>
+                    </control>
+                    <control type="textbox">
+                        <centerleft>114</centerleft>
+                        <align>center</align>
+                        <font>font16</font>
+                        <width>208</width>
+                        <info>ListItem.Label</info>
                     </control>
                 </focusedlayout>
                 <content target="music">musicdb://recentlyaddedalbums/</content>
@@ -148,14 +175,14 @@
             <texture colordiffuse="design">white.png</texture>
         </control>
         <control type="label">
-                <top>18</top>
-                <left>1020</left>
-                <height>39</height>
-                <width>200</width>
-                <font>font30</font>
-                <textcolor>yellow</textcolor>
-                <label>USS XBMC  •  NCC-1929</label>
-            </control>
+            <top>18</top>
+            <left>1020</left>
+            <height>39</height>
+            <width>200</width>
+            <font>font30</font>
+            <textcolor>yellow</textcolor>
+            <label>USS XBMC  •  NCC-1929</label>
+        </control>
         <control type="label">
             <visible>System.InternetState</visible>
             <top>670</top>
@@ -168,14 +195,14 @@
             <font>font30</font>
         </control>
         <control type="label">
-        <top>672</top>
-        <left>330</left>
-        <textcolor>yellow</textcolor>
-        <font>font30</font>
-        <width>330</width>
-        <height>40</height>
-        <label>STARDATE : $INFO[System.Date] • $INFO[System.Time]</label>
-    </control>
+            <top>672</top>
+            <left>330</left>
+            <textcolor>yellow</textcolor>
+            <font>font30</font>
+            <width>330</width>
+            <height>40</height>
+            <label>STARDATE : $INFO[System.Date] • $INFO[System.Time]</label>
+        </control>
     </include>
 
     <variable name="Poster">

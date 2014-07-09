@@ -100,15 +100,15 @@
             </control>
         </control>
         <include>allwindows</include>
-        <control type="label">
-            <visible>Control.HasFocus(50)</visible>
-            <top>679</top>
-            <centerleft>765</centerleft>
-            <align>right</align>
-            <width>250</width>
-            <height>30</height>
-            <font>font12</font>
-            <label>^ LEFT TO GO TO OPTIONS MENU^</label>
-        </control>
+        <!--<control type="label">-->
+            <!--<visible>Control.HasFocus(50)</visible>-->
+            <!--<top>679</top>-->
+            <!--<centerleft>765</centerleft>-->
+            <!--<align>right</align>-->
+            <!--<width>250</width>-->
+            <!--<height>30</height>-->
+            <!--<font>font12</font>-->
+            <!--<label>^ LEFT TO GO TO OPTIONS MENU^</label>-->
+        <!--</control>-->
     </controls>
 </window>

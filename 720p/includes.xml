@@ -160,6 +160,119 @@
                 </focusedlayout>
                 <content target="music">musicdb://recentlyaddedalbums/</content>
             </control>
+            <control type="group">
+                <control type="panel" id="888">
+                    <visible>Container(9000).HasFocus(4)</visible>
+                    <onup>9000</onup>
+                    <onleft>9000</onleft>
+                    <onright>311</onright>
+                    <top>130</top>
+                    <left>207</left>
+                    <width>105</width>
+                    <height>300</height>
+                    <itemlayout width="100" height="90">
+                        <control type="label">
+                            <top>60</top>
+                            <left>95</left>
+                            <width>90</width>
+                            <height>30</height>
+                            <align>right</align>
+                            <info>ListItem.Label</info>
+                        </control>
+                    </itemlayout>
+                    <focusedlayout width="100" height="90">
+                        <control type="image">
+                            <top>2</top>
+                            <height>87</height>
+                            <width>102</width>
+                            <texture>white.png</texture>
+                        </control>
+                        <control type="label">
+                            <top>60</top>
+                            <left>95</left>
+                            <width>90</width>
+                            <height>30</height>
+                            <align>right</align>
+                            <info>ListItem.Label</info>
+                        </control>
+                    </focusedlayout>
+                    <content>
+                        <item id="1">
+                            <label>VIDEO</label>
+                            <onclick>Skin.SetString(addonhome,addons://sources/video/)</onclick>
+                        </item>
+                        <item id="2">
+                            <label>MUSIC</label>
+                            <onclick>Skin.SetString(addonhome,addons://sources/audio/)</onclick>
+                        </item>
+                        <item id="3">
+                            <label>PROGRAMS</label>
+                            <onclick>Skin.SetString(addonhome,addons://sources/executable/)</onclick>
+                        </item>
+                    </content>
+                </control>
+                <control type="fixedlist" id="311">
+                    <!--plugs-->
+                    <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
+                    <visible>Container(9000).HasFocus(4)</visible>
+                    <onup>9000</onup>
+                    <onleft>888</onleft>
+                    <top>125</top>
+                    <left>330</left>
+                    <width>960</width>
+                    <height>300</height>
+                    <orientation>horizontal</orientation>
+                    <itemlayout width="228" height="280">
+                        <control type="image">
+                            <top>74</top>
+                            <centerleft>114</centerleft>
+                            <width>200</width>
+                            <height>200</height>
+                            <aspectratio>keep</aspectratio>
+                            <texture fallback="DefaultAlbumcover.png">$INFO[ListItem.Thumb]</texture>
+                        </control>
+                        <control type="image">
+                            <centerleft>114</centerleft>
+                            <width>218</width>
+                            <height>65</height>
+                            <texture colordiffuse="design">white.png</texture>
+                        </control>
+                        <control type="textbox">
+                            <align>center</align>
+                            <centerleft>114</centerleft>
+                            <font>font16</font>
+                            <width>208</width>
+                            <info>ListItem.Label</info>
+                        </control>
+                    </itemlayout>
+                    <focusedlayout width="228" height="280">
+                        <control type="image">
+                            <top>70</top>
+                            <centerleft>114</centerleft>
+                            <width>208</width>
+                            <height>208</height>
+                            <aspectratio>keep</aspectratio>
+                            <texture fallback="DefaultAlbumcover.png">$INFO[ListItem.Thumb]</texture>
+                            <bordertexture>white.png</bordertexture>
+                            <bordersize>4</bordersize>
+                        </control>
+                        <control type="image">
+                            <centerleft>114</centerleft>
+                            <width>218</width>
+                            <height>65</height>
+                            <texture colordiffuse="design">white.png</texture>
+                        </control>
+                        <control type="textbox">
+                            <centerleft>114</centerleft>
+                            <align>center</align>
+                            <font>font16</font>
+                            <width>208</width>
+                            <info>ListItem.Label</info>
+                        </control>
+                    </focusedlayout>
+                    <content>$INFO[Skin.String(addonhome)]</content>
+                </control>
+            </control>
         </control>
     </include>
     <include name="9000butts">

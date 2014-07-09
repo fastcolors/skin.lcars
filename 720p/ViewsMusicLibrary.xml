@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-	<include name="musiclcarsview">
+    <include name="musiclcarsview">
         <control type="panel" id="50">
+            <visible>!Container.Content(artists)</visible>
             <animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
             <onleft>9000</onleft>
             <top>100</top>
@@ -17,18 +18,18 @@
                     <aspectratio>stretch</aspectratio>
                     <texture>$VAR[poster]</texture>
                 </control>
-               <control type="textbox">
-                   <visible>Container.Content(albums) | Container.Content(artists)</visible>
+                <control type="textbox">
+                    <visible>Container.Content(albums) | Container.Content(artists)</visible>
                     <top>10</top>
                     <right>10</right>
                     <align>right</align>
                     <font>font30</font>
                     <width>240</width>
-                   <textcolor>yellow</textcolor>
-                   <shadowcolor>88000000</shadowcolor>
+                    <textcolor>yellow</textcolor>
+                    <shadowcolor>88000000</shadowcolor>
                     <info>ListItem.Label</info>
                 </control>
-                 <control type="textbox">
+                <control type="textbox">
                     <visible>Container.Content(years) | Container.Content(genres)</visible>
                     <top>10</top>
                     <right>10</right>
@@ -56,7 +57,7 @@
                     <font>font30</font>
                     <width>240</width>
                     <textcolor>yellow</textcolor>
-                   <shadowcolor>88000000</shadowcolor>
+                    <shadowcolor>88000000</shadowcolor>
                     <info>ListItem.Label</info>
                 </control>
                 <control type="textbox">
@@ -71,6 +72,134 @@
 
             </focusedlayout>
         </control>
+        <control type="list" id="501">
+            <visible>Container.Content(artists)</visible>
+            <centertop>360</centertop>
+            <left>250</left>
+            <height>484</height>
+            <width>300</width>
+            <onup>noop</onup>
+            <ondown>noop</ondown>
+            <onleft>9000</onleft>
+            <onright>300</onright>
+            <orientation>vertical</orientation>
+            <itemlayout height="44" width="300">
+                <control type="image">
+                    <width>300</width>
+                    <height>40</height>
+                    <texture flipx="true" border="20" colordiffuse="design">whiterounded.png</texture>
+                </control>
+                <control type="label">
+                    <left>295</left>
+                    <width>290</width>
+                    <height>40</height>
+                    <align>right</align>
+                    <aligny>center</aligny>
+                    <info>ListItem.Label</info>
+                </control>
+            </itemlayout>
+            <focusedlayout height="44" width="300">
+                <control type="image">
+                    <width>300</width>
+                    <height>40</height>
+                    <texture flipx="true" border="20" colordiffuse="blue">whiterounded.png</texture>
+                </control>
+                <control type="label">
+                    <left>295</left>
+                    <width>290</width>
+                    <height>40</height>
+                    <align>right</align>
+                    <aligny>center</aligny>
+                    <info>ListItem.Label</info>
+                </control>
+            </focusedlayout>
+        </control>
+         <control type="list" id="300">
+            <visible>Container.Content(artists)</visible>
+            <centertop>360</centertop>
+            <left>610</left>
+            <height>484</height>
+            <width>300</width>
+            <onup>noop</onup>
+            <ondown>noop</ondown>
+            <onleft>501</onleft>
+            <onright>301</onright>
+            <orientation>vertical</orientation>
+           <itemlayout height="44" width="300">
+                <control type="image">
+                    <width>300</width>
+                    <height>40</height>
+                    <texture flipx="true" border="20" colordiffuse="design">whiterounded.png</texture>
+                </control>
+                <control type="label">
+                    <left>295</left>
+                    <width>290</width>
+                    <height>40</height>
+                    <align>right</align>
+                    <aligny>center</aligny>
+                    <info>ListItem.Label</info>
+                </control>
+            </itemlayout>
+            <focusedlayout height="44" width="300">
+                <control type="image">
+                    <width>300</width>
+                    <height>40</height>
+                    <texture flipx="true" border="20" colordiffuse="blue">whiterounded.png</texture>
+                </control>
+                <control type="label">
+                    <left>295</left>
+                    <width>290</width>
+                    <height>40</height>
+                    <align>right</align>
+                    <aligny>center</aligny>
+                    <info>ListItem.Label</info>
+                </control>
+            </focusedlayout>
+             <content>$INFO[ListItem.DBID,musicdb://artists/]</content>
+        </control>
+        <control type="list" id="301">
+            <visible>Container.Content(artists)</visible>
+            <centertop>360</centertop>
+            <left>980</left>
+            <height>484</height>
+            <width>300</width>
+            <onup>noop</onup>
+            <ondown>noop</ondown>
+            <onleft>501</onleft>
+            <onright>301</onright>
+            <orientation>vertical</orientation>
+            <itemlayout height="44" width="300">
+                <control type="image">
+                    <width>300</width>
+                    <height>40</height>
+                    <texture flipx="true" border="20" colordiffuse="design">whiterounded.png</texture>
+                </control>
+                <control type="label">
+                    <left>295</left>
+                    <width>290</width>
+                    <height>40</height>
+                    <align>right</align>
+                    <aligny>center</aligny>
+                    <info>ListItem.Label</info>
+                </control>
+            </itemlayout>
+            <focusedlayout height="44" width="300">
+                <control type="image">
+                    <width>300</width>
+                    <height>40</height>
+                    <texture flipx="true" border="20" colordiffuse="blue">whiterounded.png</texture>
+                </control>
+                <control type="label">
+                    <left>295</left>
+                    <width>290</width>
+                    <height>40</height>
+                    <align>right</align>
+                    <aligny>center</aligny>
+                    <info>ListItem.Label</info>
+                </control>
+            </focusedlayout>
+             <content>$INFO[Container(300).ListItem.DBID,musicdb://albums/]</content>
+        </control>
         <control type="textbox">
             <top>470</top>
             <centerleft>670</centerleft>
@@ -79,7 +208,7 @@
             <textcolor>yellow</textcolor>
             <align>justify</align>
             <font>font14_plot</font>
-            <info>ListItem.Plot</info>
+            <info>ListItem.DBID</info>
         </control>
     </include>
 </includes>

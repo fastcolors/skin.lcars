@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-	<default type="image">
-		<texture>-</texture>
-		<colorkey>0</colorkey>
-	</default>
 	<default type="label">
 		<label>-</label>
 		<font>font14</font>

@@ -5,6 +5,9 @@
     <onload condition="!Skin.HasSetting(FirstTimeRun)">ActivateWindow(1112)</onload>
     <views>50</views>
     <controls>
+
+        <include>musiclcarsview</include> <!-- view id = 50 -->
+
         <control type="button" id="700">
             <ondown>9000</ondown>
             <top>15</top>
@@ -59,7 +62,6 @@
             <control type="edit" id="19">
                 <visible>Container.CanFilter + !Container.CanFilterAdvanced</visible>
                 <description>Filter</description>
-                <textwidth>230</textwidth>
                 <include>9000butts</include>
                 <label>587</label>
             </control>
@@ -98,5 +100,15 @@
             </control>
         </control>
         <include>allwindows</include>
+        <control type="label">
+            <visible>Control.HasFocus(50)</visible>
+            <top>679</top>
+            <centerleft>765</centerleft>
+            <align>right</align>
+            <width>250</width>
+            <height>30</height>
+            <font>font12</font>
+            <label>^ LEFT TO GO TO OPTIONS MENU^</label>
+        </control>
     </controls>
 </window>

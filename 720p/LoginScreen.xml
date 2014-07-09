@@ -58,6 +58,7 @@
                 <font>font30</font>
                 <onclick>ActivateWindow(ShutdownMenu)</onclick>
                 <align>center</align>
+                <aligny>center</aligny>
                 <onleft>52</onleft>
                 <onright>52</onright>
                 <onup>52</onup>

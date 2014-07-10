@@ -368,6 +368,18 @@
             <label>STARDATE : $INFO[System.Date] • $INFO[System.Time]</label>
         </control>
     </include>
+    <include name="keybutt">
+        <width>85</width>
+        <height>40</height>
+        <texturenofocus border="20" colordiffuse="lightblue">whiteallrounded.png</texturenofocus>
+        <texturefocus border="20" colordiffuse="lightgreen">whiteallrounded.png</texturefocus>
+        <alttexturenofocus border="20" colordiffuse="blue">whiteallrounded.png</alttexturenofocus>
+        <alttexturefocus border="20" colordiffuse="green">whiteallrounded.png</alttexturefocus>
+        <align>center</align>
+        <aligny>center</aligny>
+        <textoffsetx>0</textoffsetx>
+        <font>font30</font>
+    </include>
 
     <variable name="Poster">
         <value condition="Container.Content(episodes) + !IsEmpty(ListItem.Art(tvshow.poster))">$INFO[ListItem.Art(tvshow.poster)]</value>

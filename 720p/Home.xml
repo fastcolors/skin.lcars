@@ -19,8 +19,7 @@
             <font>font12</font>
             <label>^ PRESS UP TO EXIT TO MAIN MENU^</label>
         </control>
-
-
+        <include>allwindows</include>
         <control type="button" id="702">
             <description>powerbutton</description>
             <onleft>701</onleft>
@@ -56,7 +55,6 @@
             <texturefocus colordiffuse="blue" flipy="true">curvelcars1.png</texturefocus>
             <onclick>ActivateWindow(Settings)</onclick>
         </control>
-        <include>allwindows</include>
     </control>
     <include>750</include>
     <control type="panel" id="9000">

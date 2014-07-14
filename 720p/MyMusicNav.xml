@@ -27,6 +27,7 @@
             <texturefocus colordiffuse="blue" flipy="true">curvelcars1.png</texturefocus>
             <onclick>ActivateWindow(Settings)</onclick>
         </control>
+        <include>allwindows</include>
         <control type="grouplist" id="9000">
             <top>101</top>
             <left>13</left>
@@ -96,7 +97,7 @@
                 <label></label>
             </control>
         </control>
-        <include>allwindows</include>
+
         <!--<control type="label">-->
             <!--<visible>Control.HasFocus(50)</visible>-->
             <!--<top>679</top>-->

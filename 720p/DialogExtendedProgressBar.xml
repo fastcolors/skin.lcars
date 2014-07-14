@@ -28,7 +28,7 @@
             <control type="progress" id="32">
                 <description>progress control</description>
                 <left>350</left>
-                <top>672</top>
+                <top>673</top>
                 <width>250</width>
                 <height>8</height>
             </control>

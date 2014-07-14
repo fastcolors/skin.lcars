@@ -84,7 +84,7 @@
 		<spinwidth>22</spinwidth>
 		<spinheight>22</spinheight>
 		<texturenofocus colordiffuse="design" border="20">whiterounded.png</texturenofocus>
-            <texturefocus colordiffuse="blue" border="20">whiterounded.png</texturefocus>
+        <texturefocus colordiffuse="blue" border="20">whiterounded.png</texturefocus>
 		<textureup>up.png</textureup>
 		<texturedown>down.png</texturedown>
 		<textureupfocus>upf.png</textureupfocus>

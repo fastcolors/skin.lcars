@@ -12,11 +12,12 @@
         <control type="label">
             <visible>Control.HasFocus(311)</visible>
             <top>417</top>
-            <centerleft>475</centerleft>
-            <align>right</align>
+            <centerleft>512</centerleft>
+            <align>center</align>
             <width>250</width>
             <height>30</height>
             <font>font12</font>
+            <textcolor>darkred</textcolor>
             <label>^ PRESS UP TO EXIT TO MAIN MENU^</label>
         </control>
         <include>allwindows</include>
@@ -138,7 +139,7 @@
             <item id="7">
                 <label>Sources</label>
                 <label2>FFFF0000</label2>
-                <onclick>ActivateWindow(Videos,files)</onclick>
+                <onclick>ActivateWindow(MusicFiles,root)</onclick>
             </item>
             <item id="8">
                 <label>$INFO[Weather.Temperature]</label>
@@ -157,18 +158,20 @@
     </control>
     <control type="label">
         <visible>Control.IsVisible(311)</visible>
-        <top>180</top>
-        <left>153</left>
-        <align>right</align>
+        <top>415</top>
+        <centerleft>718</centerleft>
+        <font>font13</font>
+        <align>center</align>
         <width>145</width>
         <height>40</height>
         <label>$INFO[Container(311).ListItem.MPAA]</label>
     </control>
     <control type="label">
         <visible>Control.IsVisible(311)</visible>
-        <top>272</top>
-        <left>153</left>
-        <align>right</align>
+         <top>415</top>
+        <centerleft>918</centerleft>
+        <font>font13</font>
+        <align>center</align>
         <width>145</width>
         <height>40</height>
         <label>$INFO[Container(311).ListItem.Year]</label>

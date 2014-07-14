@@ -57,7 +57,7 @@
                 <texturefocus colordiffuse="blue" flipy="true">curvelcars1.png</texturefocus>
                 <onclick>ActivateWindow(Settings)</onclick>
             </control>
-
+ <include>allwindows</include>
         </control>
         <include>lcarsview</include> <!-- view id = 50 -->
         <control type="grouplist" id="9000">
@@ -146,6 +146,6 @@
             <align>center</align>
             <info>ListItem.Label</info>
         </control>
-        <include>allwindows</include>
+
     </controls>
 </window>

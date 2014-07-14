@@ -35,7 +35,7 @@
                     <height>258</height>
                     <aspectratio>keep</aspectratio>
                     <texture>$VAR[poster]</texture>
-                    <bordertexture>white.png</bordertexture>
+                    <bordertexture colordiffuse="red">white.png</bordertexture>
                     <bordersize>4</bordersize>
                 </control>
                 <control type="textbox">

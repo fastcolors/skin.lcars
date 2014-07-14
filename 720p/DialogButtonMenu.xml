@@ -8,7 +8,8 @@
 					<centertop>360</centertop>
 					<width>500</width>
 					<height>500</height>
-					<texture border="60">dialog.png</texture>
+					<texture border="180">dialog.png</texture>
+            <colordiffuse>FFFFA5AE</colordiffuse>
 				</control>
 		<control type="grouplist" id="9000">
 			<centerleft>640</centerleft>

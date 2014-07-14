@@ -32,7 +32,9 @@
                 </control>
             </control>
             <control type="group">
-                 <!--movies-->
+
+                <visible>Container(9000).HasFocus(1)</visible>
+                <!--movies-->
                 <control type="label">
                     <top>81</top>
                     <right>80</right>
@@ -41,7 +43,6 @@
                     <label>$INFO[Skin.String(movieshome)]</label>
                 </control>
                 <control type="panel" id="888">
-                    <visible>Container(9000).HasFocus(1)</visible>
                     <onup>9000</onup>
                     <onleft>9000</onleft>
                     <onright>311</onright>
@@ -90,42 +91,42 @@
                         </item>
                     </content>
                 </control>
-            <control type="fixedlist" id="311">
+                <control type="fixedlist" id="311">
 
-                <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
-                <visible>Container(9000).HasFocus(1)</visible>
-                <onup>9000</onup>
-                <onleft>888</onleft>
-                <top>135</top>
-                <left>320</left>
-                <width>960</width>
-                <height>280</height>
-                <orientation>horizontal</orientation>
-                <itemlayout width="180" height="280">
-                    <control type="image">
-                        <left>10</left>
-                        <top>4</top>
-                        <width>170</width>
-                        <height>250</height>
-                        <aspectratio>keep</aspectratio>
-                        <texture>$VAR[Poster]</texture>
-                    </control>
-                </itemlayout>
-                <focusedlayout width="180" height="280">
-                    <control type="image">
-                        <left>6</left>
-                        <width>178</width>
-                        <height>258</height>
-                        <aspectratio>keep</aspectratio>
-                        <texture>$VAR[Poster]</texture>
-                        <bordertexture>white.png</bordertexture>
-                        <bordersize>4</bordersize>
-                    </control>
-                </focusedlayout>
-                <content target="video">$INFO[Skin.String(movieshome)]</content>
-            </control>
+                    <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
+                    <onup>9000</onup>
+                    <onleft>888</onleft>
+                    <top>135</top>
+                    <left>320</left>
+                    <width>960</width>
+                    <height>280</height>
+                    <orientation>horizontal</orientation>
+                    <itemlayout width="180" height="280">
+                        <control type="image">
+                            <left>10</left>
+                            <top>4</top>
+                            <width>170</width>
+                            <height>250</height>
+                            <aspectratio>keep</aspectratio>
+                            <texture>$VAR[Poster]</texture>
+                        </control>
+                    </itemlayout>
+                    <focusedlayout width="180" height="280">
+                        <control type="image">
+                            <left>6</left>
+                            <width>178</width>
+                            <height>258</height>
+                            <aspectratio>keep</aspectratio>
+                            <texture>$VAR[Poster]</texture>
+                            <bordertexture>white.png</bordertexture>
+                            <bordersize>4</bordersize>
+                        </control>
+                    </focusedlayout>
+                    <content target="video">$INFO[Skin.String(movieshome)]</content>
                 </control>
+            </control>
             <control type="group">
+                <visible>Container(9000).HasFocus(2)</visible>
                 <!--tv-->
                 <control type="label">
                     <top>81</top>
@@ -135,7 +136,7 @@
                     <label>$INFO[Skin.String(tvhome)]</label>
                 </control>
                 <control type="panel" id="888">
-                    <visible>Container(9000).HasFocus(2)</visible>
+
                     <onup>9000</onup>
                     <onleft>9000</onleft>
                     <onright>311</onright>
@@ -184,60 +185,59 @@
                         </item>
                     </content>
                 </control>
-            <control type="fixedlist" id="311">
-                <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
-                <visible>Container(9000).HasFocus(2)</visible>
-                <onup>9000</onup>
-                <onleft>9000</onleft>
-                <top>135</top>
-                <left>320</left>
-                <width>960</width>
-                <height>280</height>
-                <orientation>horizontal</orientation>
-                <itemlayout width="180" height="280">
-                    <control type="image">
-                        <left>10</left>
-                        <top>4</top>
-                        <width>170</width>
-                        <height>250</height>
-                        <aspectratio>keep</aspectratio>
-                        <info>ListItem.Art(tvshow.poster)</info>
-                    </control>
-                    <control type="image">
-                        <visible>Skin.String(tvhome,videodb://tvshows/titles/)</visible>
-                        <left>6</left>
-                        <width>178</width>
-                        <height>258</height>
-                        <aspectratio>keep</aspectratio>
-                        <info>ListItem.Art(poster)</info>
-                        <bordertexture>white.png</bordertexture>
-                        <bordersize>4</bordersize>
-                    </control>
-                </itemlayout>
-                <focusedlayout width="180" height="280">
-                    <control type="image">
-                        <left>6</left>
-                        <width>178</width>
-                        <height>258</height>
-                        <aspectratio>keep</aspectratio>
-                        <info>ListItem.Art(tvshow.poster)</info>
-                        <bordertexture>white.png</bordertexture>
-                        <bordersize>4</bordersize>
-                    </control>
-                    <control type="image">
-                        <visible>Skin.String(tvhome,videodb://tvshows/titles/)</visible>
-                        <left>6</left>
-                        <width>178</width>
-                        <height>258</height>
-                        <aspectratio>keep</aspectratio>
-                        <info>ListItem.Art(poster)</info>
-                        <bordertexture>white.png</bordertexture>
-                        <bordersize>4</bordersize>
-                    </control>
-                </focusedlayout>
-                <content target="video">$INFO[Skin.String(tvhome)]</content>
-            </control>
+                <control type="fixedlist" id="311">
+                    <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
+                    <onup>9000</onup>
+                    <onleft>9000</onleft>
+                    <top>135</top>
+                    <left>320</left>
+                    <width>960</width>
+                    <height>280</height>
+                    <orientation>horizontal</orientation>
+                    <itemlayout width="180" height="280">
+                        <control type="image">
+                            <left>10</left>
+                            <top>4</top>
+                            <width>170</width>
+                            <height>250</height>
+                            <aspectratio>keep</aspectratio>
+                            <info>ListItem.Art(tvshow.poster)</info>
+                        </control>
+                        <control type="image">
+                            <visible>Skin.String(tvhome,videodb://tvshows/titles/)</visible>
+                            <left>6</left>
+                            <width>178</width>
+                            <height>258</height>
+                            <aspectratio>keep</aspectratio>
+                            <info>ListItem.Art(poster)</info>
+                            <bordertexture>white.png</bordertexture>
+                            <bordersize>4</bordersize>
+                        </control>
+                    </itemlayout>
+                    <focusedlayout width="180" height="280">
+                        <control type="image">
+                            <left>6</left>
+                            <width>178</width>
+                            <height>258</height>
+                            <aspectratio>keep</aspectratio>
+                            <info>ListItem.Art(tvshow.poster)</info>
+                            <bordertexture>white.png</bordertexture>
+                            <bordersize>4</bordersize>
+                        </control>
+                        <control type="image">
+                            <visible>Skin.String(tvhome,videodb://tvshows/titles/)</visible>
+                            <left>6</left>
+                            <width>178</width>
+                            <height>258</height>
+                            <aspectratio>keep</aspectratio>
+                            <info>ListItem.Art(poster)</info>
+                            <bordertexture>white.png</bordertexture>
+                            <bordersize>4</bordersize>
+                        </control>
+                    </focusedlayout>
+                    <content target="video">$INFO[Skin.String(tvhome)]</content>
                 </control>
+            </control>
             <control type="fixedlist" id="311">
                 <!--music-->
                 <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
@@ -469,7 +469,7 @@
                         </item>
                     </content>
                 </control>
-                 <control type="fixedlist" id="311">
+                <control type="fixedlist" id="311">
                     <!--plugs-->
                     <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
                     <visible>Container(9000).HasFocus(7)</visible>

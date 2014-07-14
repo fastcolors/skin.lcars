@@ -31,215 +31,216 @@
                     <label>$INFO[Window(Weather).Property(Location)][CR][CR]$INFO[Window(Weather).Property(Current.Condition)][CR][CR]$INFO[Window(Weather).Property(Current.Humidity)] HUMIDITY[CR][CR]WIND $INFO[Window(Weather).Property(Current.Wind)]</label>
                 </control>
             </control>
-            <control type="group">
-
+            <!--movies-->
+            <control type="label">
                 <visible>Container(9000).HasFocus(1)</visible>
-                <!--movies-->
-                <control type="label">
-                    <top>81</top>
-                    <right>80</right>
-                    <align>right</align>
-                    <width>600</width>
-                    <label>$INFO[Skin.String(movieshome)]</label>
-                </control>
-                <control type="panel" id="888">
-                    <onup>9000</onup>
-                    <onleft>9000</onleft>
-                    <onright>311</onright>
-                    <top>130</top>
-                    <left>207</left>
-                    <width>105</width>
-                    <height>300</height>
-                    <itemlayout width="100" height="90">
-                        <control type="label">
-                            <top>60</top>
-                            <left>95</left>
-                            <width>90</width>
-                            <height>30</height>
-                            <align>right</align>
-                            <info>ListItem.Label</info>
-                        </control>
-                    </itemlayout>
-                    <focusedlayout width="100" height="90">
-                        <control type="image">
-                            <top>2</top>
-                            <height>87</height>
-                            <width>102</width>
-                            <texture>white.png</texture>
-                        </control>
-                        <control type="label">
-                            <top>60</top>
-                            <left>95</left>
-                            <width>90</width>
-                            <height>30</height>
-                            <align>right</align>
-                            <info>ListItem.Label</info>
-                        </control>
-                    </focusedlayout>
-                    <content>
-                        <item id="1">
-                            <label>RECENTLY</label>
-                            <onclick>Skin.SetString(movieshome,videodb://recentlyaddedmovies/)</onclick>
-                        </item>
-                        <item id="2">
-                            <label>STILLDUNNO</label>
-                            <onclick>Skin.SetString(movieshome,videodb://)</onclick>
-                        </item>
-                        <item id="3">
-                            <label>ALL MOVIES</label>
-                            <onclick>Skin.SetString(movieshome,videodb://movies/titles/)</onclick>
-                        </item>
-                    </content>
-                </control>
-                <control type="fixedlist" id="311">
-
-                    <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
-                    <onup>9000</onup>
-                    <onleft>888</onleft>
-                    <top>135</top>
-                    <left>320</left>
-                    <width>960</width>
-                    <height>280</height>
-                    <orientation>horizontal</orientation>
-                    <itemlayout width="180" height="280">
-                        <control type="image">
-                            <left>10</left>
-                            <top>4</top>
-                            <width>170</width>
-                            <height>250</height>
-                            <aspectratio>keep</aspectratio>
-                            <texture>$VAR[Poster]</texture>
-                        </control>
-                    </itemlayout>
-                    <focusedlayout width="180" height="280">
-                        <control type="image">
-                            <left>6</left>
-                            <width>178</width>
-                            <height>258</height>
-                            <aspectratio>keep</aspectratio>
-                            <texture>$VAR[Poster]</texture>
-                            <bordertexture>white.png</bordertexture>
-                            <bordersize>4</bordersize>
-                        </control>
-                    </focusedlayout>
-                    <content target="video">$INFO[Skin.String(movieshome)]</content>
-                </control>
+                <top>81</top>
+                <right>80</right>
+                <align>right</align>
+                <width>600</width>
+                <label>$INFO[Skin.String(movieshome)]</label>
             </control>
-            <control type="group">
-                <visible>Container(9000).HasFocus(2)</visible>
-                <!--tv-->
-                <control type="label">
-                    <top>81</top>
-                    <right>80</right>
-                    <align>right</align>
-                    <width>600</width>
-                    <label>$INFO[Skin.String(tvhome)]</label>
-                </control>
-                <control type="panel" id="888">
-
-                    <onup>9000</onup>
-                    <onleft>9000</onleft>
-                    <onright>311</onright>
-                    <top>130</top>
-                    <left>207</left>
-                    <width>105</width>
-                    <height>300</height>
-                    <itemlayout width="100" height="90">
-                        <control type="label">
-                            <top>60</top>
-                            <left>95</left>
-                            <width>90</width>
-                            <height>30</height>
-                            <align>right</align>
-                            <info>ListItem.Label</info>
-                        </control>
-                    </itemlayout>
-                    <focusedlayout width="100" height="90">
-                        <control type="image">
-                            <top>2</top>
-                            <height>87</height>
-                            <width>102</width>
-                            <texture>white.png</texture>
-                        </control>
-                        <control type="label">
-                            <top>60</top>
-                            <left>95</left>
-                            <width>90</width>
-                            <height>30</height>
-                            <align>right</align>
-                            <info>ListItem.Label</info>
-                        </control>
-                    </focusedlayout>
-                    <content>
-                        <item id="1">
-                            <label>RECENTLY</label>
-                            <onclick>Skin.SetString(tvhome,videodb://recentlyaddedepisodes/)</onclick>
-                        </item>
-                        <item id="2">
-                            <label>STILLDUNNO</label>
-                            <onclick>Skin.SetString(tvhome,videodb://)</onclick>
-                        </item>
-                        <item id="3">
-                            <label>ALL TVSHOWS</label>
-                            <onclick>Skin.SetString(tvhome,videodb://tvshows/titles/)</onclick>
-                        </item>
-                    </content>
-                </control>
-                <control type="fixedlist" id="311">
-                    <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
-                    <onup>9000</onup>
-                    <onleft>9000</onleft>
-                    <top>135</top>
-                    <left>320</left>
-                    <width>960</width>
-                    <height>280</height>
-                    <orientation>horizontal</orientation>
-                    <itemlayout width="180" height="280">
-                        <control type="image">
-                            <left>10</left>
-                            <top>4</top>
-                            <width>170</width>
-                            <height>250</height>
-                            <aspectratio>keep</aspectratio>
-                            <info>ListItem.Art(tvshow.poster)</info>
-                        </control>
-                        <control type="image">
-                            <visible>Skin.String(tvhome,videodb://tvshows/titles/)</visible>
-                            <left>6</left>
-                            <width>178</width>
-                            <height>258</height>
-                            <aspectratio>keep</aspectratio>
-                            <info>ListItem.Art(poster)</info>
-                            <bordertexture>white.png</bordertexture>
-                            <bordersize>4</bordersize>
-                        </control>
-                    </itemlayout>
-                    <focusedlayout width="180" height="280">
-                        <control type="image">
-                            <left>6</left>
-                            <width>178</width>
-                            <height>258</height>
-                            <aspectratio>keep</aspectratio>
-                            <info>ListItem.Art(tvshow.poster)</info>
-                            <bordertexture>white.png</bordertexture>
-                            <bordersize>4</bordersize>
-                        </control>
-                        <control type="image">
-                            <visible>Skin.String(tvhome,videodb://tvshows/titles/)</visible>
-                            <left>6</left>
-                            <width>178</width>
-                            <height>258</height>
-                            <aspectratio>keep</aspectratio>
-                            <info>ListItem.Art(poster)</info>
-                            <bordertexture>white.png</bordertexture>
-                            <bordersize>4</bordersize>
-                        </control>
-                    </focusedlayout>
-                    <content target="video">$INFO[Skin.String(tvhome)]</content>
-                </control>
+            <control type="panel" id="888">
+                <visible>Container(9000).HasFocus(1)</visible>
+                <onup>9000</onup>
+                <onleft>9000</onleft>
+                <onright>311</onright>
+                <top>130</top>
+                <left>207</left>
+                <width>105</width>
+                <height>300</height>
+                <itemlayout width="100" height="90">
+                    <control type="label">
+                        <top>60</top>
+                        <left>95</left>
+                        <width>90</width>
+                        <height>30</height>
+                        <align>right</align>
+                        <info>ListItem.Label</info>
+                    </control>
+                </itemlayout>
+                <focusedlayout width="100" height="90">
+                    <control type="image">
+                        <top>2</top>
+                        <height>87</height>
+                        <width>102</width>
+                        <texture>white.png</texture>
+                    </control>
+                    <control type="label">
+                        <top>60</top>
+                        <left>95</left>
+                        <width>90</width>
+                        <height>30</height>
+                        <align>right</align>
+                        <info>ListItem.Label</info>
+                    </control>
+                </focusedlayout>
+                <content>
+                    <item id="1">
+                        <label>RECENTLY</label>
+                        <onclick>Skin.SetString(movieshome,videodb://recentlyaddedmovies/)</onclick>
+                    </item>
+                    <item id="2">
+                        <label>STILLDUNNO</label>
+                        <onclick>Skin.SetString(movieshome,videodb://)</onclick>
+                    </item>
+                    <item id="3">
+                        <label>ALL MOVIES</label>
+                        <onclick>Skin.SetString(movieshome,videodb://movies/titles/)</onclick>
+                    </item>
+                </content>
             </control>
             <control type="fixedlist" id="311">
-                <!--music-->
+                <visible>Container(9000).HasFocus(1)</visible>
+                <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
+                <onup>9000</onup>
+                <onleft>888</onleft>
+                <top>135</top>
+                <left>320</left>
+                <width>960</width>
+                <height>280</height>
+                <orientation>horizontal</orientation>
+                <itemlayout width="180" height="280">
+                    <control type="image">
+                        <left>10</left>
+                        <top>4</top>
+                        <width>170</width>
+                        <height>250</height>
+                        <aspectratio>keep</aspectratio>
+                        <texture>$VAR[Poster]</texture>
+                    </control>
+                </itemlayout>
+                <focusedlayout width="180" height="280">
+                    <control type="image">
+                        <left>6</left>
+                        <width>178</width>
+                        <height>258</height>
+                        <aspectratio>keep</aspectratio>
+                        <texture>$VAR[Poster]</texture>
+                        <bordertexture>white.png</bordertexture>
+                        <bordersize>4</bordersize>
+                    </control>
+                </focusedlayout>
+                <content target="video">$INFO[Skin.String(movieshome)]</content>
+            </control>
+
+            <!--tv-->
+
+            <control type="label">
+                <visible>Container(9000).HasFocus(2)</visible>
+                <top>81</top>
+                <right>80</right>
+                <align>right</align>
+                <width>600</width>
+                <label>$INFO[Skin.String(tvhome)]</label>
+            </control>
+            <control type="panel" id="888">
+                <visible>Container(9000).HasFocus(2)</visible>
+                <onup>9000</onup>
+                <onleft>9000</onleft>
+                <onright>311</onright>
+                <top>130</top>
+                <left>207</left>
+                <width>105</width>
+                <height>300</height>
+                <itemlayout width="100" height="90">
+                    <control type="label">
+                        <top>60</top>
+                        <left>95</left>
+                        <width>90</width>
+                        <height>30</height>
+                        <align>right</align>
+                        <info>ListItem.Label</info>
+                    </control>
+                </itemlayout>
+                <focusedlayout width="100" height="90">
+                    <control type="image">
+                        <top>2</top>
+                        <height>87</height>
+                        <width>102</width>
+                        <texture>white.png</texture>
+                    </control>
+                    <control type="label">
+                        <top>60</top>
+                        <left>95</left>
+                        <width>90</width>
+                        <height>30</height>
+                        <align>right</align>
+                        <info>ListItem.Label</info>
+                    </control>
+                </focusedlayout>
+                <content>
+                    <item id="1">
+                        <label>RECENTLY</label>
+                        <onclick>Skin.SetString(tvhome,videodb://recentlyaddedepisodes/)</onclick>
+                    </item>
+                    <item id="2">
+                        <label>STILLDUNNO</label>
+                        <onclick>Skin.SetString(tvhome,videodb://)</onclick>
+                    </item>
+                    <item id="3">
+                        <label>ALL TVSHOWS</label>
+                        <onclick>Skin.SetString(tvhome,videodb://tvshows/titles/)</onclick>
+                    </item>
+                </content>
+            </control>
+            <control type="fixedlist" id="311">
+                <visible>Container(9000).HasFocus(2)</visible>
+                <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
+                <onup>9000</onup>
+                <onleft>9000</onleft>
+                <top>135</top>
+                <left>320</left>
+                <width>960</width>
+                <height>280</height>
+                <orientation>horizontal</orientation>
+                <itemlayout width="180" height="280">
+                    <control type="image">
+                        <left>10</left>
+                        <top>4</top>
+                        <width>170</width>
+                        <height>250</height>
+                        <aspectratio>keep</aspectratio>
+                        <info>ListItem.Art(tvshow.poster)</info>
+                    </control>
+                    <control type="image">
+                        <visible>Skin.String(tvhome,videodb://tvshows/titles/)</visible>
+                        <left>6</left>
+                        <width>178</width>
+                        <height>258</height>
+                        <aspectratio>keep</aspectratio>
+                        <info>ListItem.Art(poster)</info>
+                        <bordertexture>white.png</bordertexture>
+                        <bordersize>4</bordersize>
+                    </control>
+                </itemlayout>
+                <focusedlayout width="180" height="280">
+                    <control type="image">
+                        <left>6</left>
+                        <width>178</width>
+                        <height>258</height>
+                        <aspectratio>keep</aspectratio>
+                        <info>ListItem.Art(tvshow.poster)</info>
+                        <bordertexture>white.png</bordertexture>
+                        <bordersize>4</bordersize>
+                    </control>
+                    <control type="image">
+                        <visible>Skin.String(tvhome,videodb://tvshows/titles/)</visible>
+                        <left>6</left>
+                        <width>178</width>
+                        <height>258</height>
+                        <aspectratio>keep</aspectratio>
+                        <info>ListItem.Art(poster)</info>
+                        <bordertexture>white.png</bordertexture>
+                        <bordersize>4</bordersize>
+                    </control>
+                </focusedlayout>
+                <content target="video">$INFO[Skin.String(tvhome)]</content>
+            </control>
+
+            <!--music-->
+
+            <control type="fixedlist" id="311">
                 <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
                 <visible>Container(9000).HasFocus(3)</visible>
                 <onup>9000</onup>
@@ -299,356 +300,365 @@
                 </focusedlayout>
                 <content target="music">musicdb://recentlyaddedalbums/</content>
             </control>
-            <control type="group">
-                <control type="panel" id="888">
-                    <visible>Container(9000).HasFocus(4)</visible>
-                    <onup>9000</onup>
-                    <onleft>9000</onleft>
-                    <onright>311</onright>
-                    <top>130</top>
-                    <left>207</left>
-                    <width>105</width>
-                    <height>300</height>
-                    <itemlayout width="100" height="90">
-                        <control type="label">
-                            <top>60</top>
-                            <left>95</left>
-                            <width>90</width>
-                            <height>30</height>
-                            <align>right</align>
-                            <info>ListItem.Label</info>
-                        </control>
-                    </itemlayout>
-                    <focusedlayout width="100" height="90">
-                        <control type="image">
-                            <top>2</top>
-                            <height>87</height>
-                            <width>102</width>
-                            <texture>white.png</texture>
-                        </control>
-                        <control type="label">
-                            <top>60</top>
-                            <left>95</left>
-                            <width>90</width>
-                            <height>30</height>
-                            <align>right</align>
-                            <info>ListItem.Label</info>
-                        </control>
-                    </focusedlayout>
-                    <content>
-                        <item id="1">
-                            <label>VIDEO</label>
-                            <onclick>Skin.SetString(addonhome,addons://sources/video/)</onclick>
-                        </item>
-                        <item id="2">
-                            <label>MUSIC</label>
-                            <onclick>Skin.SetString(addonhome,addons://sources/audio/)</onclick>
-                        </item>
-                        <item id="3">
-                            <label>PROGRAMS</label>
-                            <onclick>Skin.SetString(addonhome,addons://sources/executable/)</onclick>
-                        </item>
-                    </content>
-                </control>
-                <control type="fixedlist" id="311">
-                    <!--plugs-->
-                    <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
-                    <visible>Container(9000).HasFocus(4)</visible>
-                    <onup>9000</onup>
-                    <onleft>888</onleft>
-                    <top>125</top>
-                    <left>330</left>
-                    <width>960</width>
-                    <height>300</height>
-                    <orientation>horizontal</orientation>
-                    <itemlayout width="228" height="280">
-                        <control type="image">
-                            <top>74</top>
-                            <centerleft>114</centerleft>
-                            <width>200</width>
-                            <height>200</height>
-                            <aspectratio>keep</aspectratio>
-                            <texture fallback="DefaultAlbumcover.png">$INFO[ListItem.Thumb]</texture>
-                        </control>
-                        <control type="image">
-                            <centerleft>114</centerleft>
-                            <width>218</width>
-                            <height>65</height>
-                            <texture colordiffuse="design">white.png</texture>
-                        </control>
-                        <control type="textbox">
-                            <align>center</align>
-                            <centerleft>114</centerleft>
-                            <font>font16</font>
-                            <width>208</width>
-                            <info>ListItem.Label</info>
-                        </control>
-                    </itemlayout>
-                    <focusedlayout width="228" height="280">
-                        <control type="image">
-                            <top>70</top>
-                            <centerleft>114</centerleft>
-                            <width>208</width>
-                            <height>208</height>
-                            <aspectratio>keep</aspectratio>
-                            <texture fallback="DefaultAlbumcover.png">$INFO[ListItem.Thumb]</texture>
-                            <bordertexture>white.png</bordertexture>
-                            <bordersize>4</bordersize>
-                        </control>
-                        <control type="image">
-                            <centerleft>114</centerleft>
-                            <width>218</width>
-                            <height>65</height>
-                            <texture colordiffuse="design">white.png</texture>
-                        </control>
-                        <control type="textbox">
-                            <centerleft>114</centerleft>
-                            <align>center</align>
-                            <font>font16</font>
-                            <width>208</width>
-                            <info>ListItem.Label</info>
-                        </control>
-                    </focusedlayout>
-                    <content target="video">$INFO[Skin.String(addonhome)]</content>
-                </control>
+
+            <!--plugs-->
+
+
+            <control type="label">
+                <visible>Container(9000).HasFocus(4)</visible>
+                <top>81</top>
+                <right>80</right>
+                <align>right</align>
+                <width>600</width>
+                <label>$INFO[Skin.String(addonhome)]</label>
             </control>
-            <control type="group">
-                <control type="panel" id="888">
-                    <visible>Container(9000).HasFocus(7)</visible>
-                    <onup>9000</onup>
-                    <onleft>9000</onleft>
-                    <onright>311</onright>
-                    <top>130</top>
-                    <left>207</left>
-                    <width>105</width>
-                    <height>300</height>
-                    <itemlayout width="100" height="90">
-                        <control type="label">
-                            <top>60</top>
-                            <left>95</left>
-                            <width>90</width>
-                            <height>30</height>
-                            <align>right</align>
-                            <info>ListItem.Label</info>
-                        </control>
-                    </itemlayout>
-                    <focusedlayout width="100" height="90">
-                        <control type="image">
-                            <top>2</top>
-                            <height>87</height>
-                            <width>102</width>
-                            <texture>white.png</texture>
-                        </control>
-                        <control type="label">
-                            <top>60</top>
-                            <left>95</left>
-                            <width>90</width>
-                            <height>30</height>
-                            <align>right</align>
-                            <info>ListItem.Label</info>
-                        </control>
-                    </focusedlayout>
-                    <content>
-                        <item id="1">
-                            <label>VIDEO</label>
-                            <onclick>Skin.SetString(sourceshome,sources://video/)</onclick>
-                        </item>
-                        <item id="2">
-                            <label>AUDIO</label>
-                            <onclick>Skin.SetString(sourceshome,sources://music/)</onclick>
-                        </item>
-                        <item id="3">
-                            <visible>Skin.String(sourceshome,sources://video/)</visible>
-                            <label>+ VIDEO</label>
-                            <onclick>ActivateWindow(Videos,files,return)</onclick>
-                        </item>
-                        <item id="4">
-                            <visible>Skin.String(sourceshome,sources://music/)</visible>
-                            <label>+ AUDIO</label>
-                            <onclick>ActivateWindow(Music,files,return)</onclick>
-                        </item>
-                    </content>
-                </control>
-                <control type="fixedlist" id="311">
-                    <!--plugs-->
-                    <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
-                    <visible>Container(9000).HasFocus(7)</visible>
-                    <onup>9000</onup>
-                    <onleft>888</onleft>
-                    <top>125</top>
-                    <left>330</left>
-                    <width>960</width>
-                    <height>300</height>
-                    <orientation>horizontal</orientation>
-                    <itemlayout width="228" height="280">
-                        <control type="image">
-                            <top>74</top>
-                            <centerleft>114</centerleft>
-                            <width>200</width>
-                            <height>200</height>
-                            <aspectratio>scale</aspectratio>
-                            <texture>$INFO[ListItem.Icon]</texture>
-                        </control>
-                        <control type="image">
-                            <centerleft>114</centerleft>
-                            <width>218</width>
-                            <height>65</height>
-                            <texture colordiffuse="design">white.png</texture>
-                        </control>
-                        <control type="textbox">
-                            <align>center</align>
-                            <centerleft>114</centerleft>
-                            <font>font16</font>
-                            <width>208</width>
-                            <info>ListItem.Label</info>
-                        </control>
-                    </itemlayout>
-                    <focusedlayout width="228" height="280">
-                        <control type="image">
-                            <top>70</top>
-                            <centerleft>114</centerleft>
-                            <width>208</width>
-                            <height>208</height>
-                            <aspectratio>scale</aspectratio>
-                            <texture>$INFO[ListItem.Icon]</texture>
-                            <bordertexture>white.png</bordertexture>
-                            <bordersize>4</bordersize>
-                        </control>
-                        <control type="image">
-                            <centerleft>114</centerleft>
-                            <width>218</width>
-                            <height>65</height>
-                            <texture colordiffuse="design">white.png</texture>
-                        </control>
-                        <control type="textbox">
-                            <centerleft>114</centerleft>
-                            <align>center</align>
-                            <font>font16</font>
-                            <width>208</width>
-                            <info>ListItem.Label</info>
-                        </control>
-                    </focusedlayout>
-                    <content target="video">$INFO[Skin.String(sourceshome)]</content>
-                </control>
+            <control type="panel" id="888">
+                <visible>Container(9000).HasFocus(4)</visible>
+                <onup>9000</onup>
+                <onleft>9000</onleft>
+                <onright>311</onright>
+                <top>130</top>
+                <left>207</left>
+                <width>105</width>
+                <height>300</height>
+                <itemlayout width="100" height="90">
+                    <control type="label">
+                        <top>60</top>
+                        <left>95</left>
+                        <width>90</width>
+                        <height>30</height>
+                        <align>right</align>
+                        <info>ListItem.Label</info>
+                    </control>
+                </itemlayout>
+                <focusedlayout width="100" height="90">
+                    <control type="image">
+                        <top>2</top>
+                        <height>87</height>
+                        <width>102</width>
+                        <texture>white.png</texture>
+                    </control>
+                    <control type="label">
+                        <top>60</top>
+                        <left>95</left>
+                        <width>90</width>
+                        <height>30</height>
+                        <align>right</align>
+                        <info>ListItem.Label</info>
+                    </control>
+                </focusedlayout>
+                <content>
+                    <item id="1">
+                        <label>VIDEO</label>
+                        <onclick>Skin.SetString(addonhome,addons://sources/video/)</onclick>
+                    </item>
+                    <item id="2">
+                        <label>MUSIC</label>
+                        <onclick>Skin.SetString(addonhome,addons://sources/audio/)</onclick>
+                    </item>
+                    <item id="3">
+                        <label>PROGRAMS</label>
+                        <onclick>Skin.SetString(addonhome,addons://sources/executable/)</onclick>
+                    </item>
+                </content>
+            </control>
+            <control type="fixedlist" id="311">
+                <visible>Container(9000).HasFocus(4)</visible>
+                <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
+                <onup>9000</onup>
+                <onleft>888</onleft>
+                <top>125</top>
+                <left>330</left>
+                <width>960</width>
+                <height>300</height>
+                <orientation>horizontal</orientation>
+                <itemlayout width="228" height="280">
+                    <control type="image">
+                        <top>74</top>
+                        <centerleft>114</centerleft>
+                        <width>200</width>
+                        <height>200</height>
+                        <aspectratio>keep</aspectratio>
+                        <texture fallback="DefaultAlbumcover.png">$INFO[ListItem.Thumb]</texture>
+                    </control>
+                    <control type="image">
+                        <centerleft>114</centerleft>
+                        <width>218</width>
+                        <height>65</height>
+                        <texture colordiffuse="design">white.png</texture>
+                    </control>
+                    <control type="textbox">
+                        <align>center</align>
+                        <centerleft>114</centerleft>
+                        <font>font16</font>
+                        <width>208</width>
+                        <info>ListItem.Label</info>
+                    </control>
+                </itemlayout>
+                <focusedlayout width="228" height="280">
+                    <control type="image">
+                        <top>70</top>
+                        <centerleft>114</centerleft>
+                        <width>208</width>
+                        <height>208</height>
+                        <aspectratio>keep</aspectratio>
+                        <texture fallback="DefaultAlbumcover.png">$INFO[ListItem.Thumb]</texture>
+                        <bordertexture>white.png</bordertexture>
+                        <bordersize>4</bordersize>
+                    </control>
+                    <control type="image">
+                        <centerleft>114</centerleft>
+                        <width>218</width>
+                        <height>65</height>
+                        <texture colordiffuse="design">white.png</texture>
+                    </control>
+                    <control type="textbox">
+                        <centerleft>114</centerleft>
+                        <align>center</align>
+                        <font>font16</font>
+                        <width>208</width>
+                        <info>ListItem.Label</info>
+                    </control>
+                </focusedlayout>
+                <content target="video">$INFO[Skin.String(addonhome)]</content>
+            </control>
+
+            <!--plugs-->
+
+            <control type="panel" id="888">
+                <visible>Container(9000).HasFocus(7)</visible>
+                <onup>9000</onup>
+                <onleft>9000</onleft>
+                <onright>311</onright>
+                <top>130</top>
+                <left>207</left>
+                <width>105</width>
+                <height>300</height>
+                <itemlayout width="100" height="90">
+                    <control type="label">
+                        <top>60</top>
+                        <left>95</left>
+                        <width>90</width>
+                        <height>30</height>
+                        <align>right</align>
+                        <info>ListItem.Label</info>
+                    </control>
+                </itemlayout>
+                <focusedlayout width="100" height="90">
+                    <control type="image">
+                        <top>2</top>
+                        <height>87</height>
+                        <width>102</width>
+                        <texture>white.png</texture>
+                    </control>
+                    <control type="label">
+                        <top>60</top>
+                        <left>95</left>
+                        <width>90</width>
+                        <height>30</height>
+                        <align>right</align>
+                        <info>ListItem.Label</info>
+                    </control>
+                </focusedlayout>
+                <content>
+                    <item id="1">
+                        <label>VIDEO</label>
+                        <onclick>Skin.SetString(sourceshome,sources://video/)</onclick>
+                    </item>
+                    <item id="2">
+                        <label>AUDIO</label>
+                        <onclick>Skin.SetString(sourceshome,sources://music/)</onclick>
+                    </item>
+                    <item id="3">
+                        <visible>Skin.String(sourceshome,sources://video/)</visible>
+                        <label>+ VIDEO</label>
+                        <onclick>ActivateWindow(Videos,files,return)</onclick>
+                    </item>
+                    <item id="4">
+                        <visible>Skin.String(sourceshome,sources://music/)</visible>
+                        <label>+ AUDIO</label>
+                        <onclick>ActivateWindow(Music,files,return)</onclick>
+                    </item>
+                </content>
+            </control>
+            <control type="fixedlist" id="311">
+                <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
+                <visible>Container(9000).HasFocus(7)</visible>
+                <onup>9000</onup>
+                <onleft>888</onleft>
+                <top>125</top>
+                <left>330</left>
+                <width>960</width>
+                <height>300</height>
+                <orientation>horizontal</orientation>
+                <itemlayout width="228" height="280">
+                    <control type="image">
+                        <top>74</top>
+                        <centerleft>114</centerleft>
+                        <width>200</width>
+                        <height>200</height>
+                        <aspectratio>scale</aspectratio>
+                        <texture>$INFO[ListItem.Icon]</texture>
+                    </control>
+                    <control type="image">
+                        <centerleft>114</centerleft>
+                        <width>218</width>
+                        <height>65</height>
+                        <texture colordiffuse="design">white.png</texture>
+                    </control>
+                    <control type="textbox">
+                        <align>center</align>
+                        <centerleft>114</centerleft>
+                        <font>font16</font>
+                        <width>208</width>
+                        <info>ListItem.Label</info>
+                    </control>
+                </itemlayout>
+                <focusedlayout width="228" height="280">
+                    <control type="image">
+                        <top>70</top>
+                        <centerleft>114</centerleft>
+                        <width>208</width>
+                        <height>208</height>
+                        <aspectratio>scale</aspectratio>
+                        <texture>$INFO[ListItem.Icon]</texture>
+                        <bordertexture>white.png</bordertexture>
+                        <bordersize>4</bordersize>
+                    </control>
+                    <control type="image">
+                        <centerleft>114</centerleft>
+                        <width>218</width>
+                        <height>65</height>
+                        <texture colordiffuse="design">white.png</texture>
+                    </control>
+                    <control type="textbox">
+                        <centerleft>114</centerleft>
+                        <align>center</align>
+                        <font>font16</font>
+                        <width>208</width>
+                        <info>ListItem.Label</info>
+                    </control>
+                </focusedlayout>
+                <content target="video">$INFO[Skin.String(sourceshome)]</content>
             </control>
         </control>
-    </include>
-    <include name="9000butts">
-        <width>155</width>
-        <height>60</height>
-        <texturenofocus colordiffuse="design">white.png</texturenofocus>
-        <texturefocus colordiffuse="blue">white.png</texturefocus>
-        <align>right</align>
-    </include>
+</include>
+<include name="9000butts">
+<width>155</width>
+<height>60</height>
+<texturenofocus colordiffuse="design">white.png</texturenofocus>
+<texturefocus colordiffuse="blue">white.png</texturefocus>
+<align>right</align>
+</include>
 
-    <include name="allwindows">
-        <control type="image">
-            <width>200</width>
-            <height>720</height>
-            <texture>emptyslots.png</texture>
-        </control>
-        <control type="image">
-            <top>15</top>
-            <left>325</left>
-            <width>685</width>
-            <height>39</height>
-            <texture colordiffuse="design">white.png</texture>
-        </control>
-        <control type="image">
-            <top>15</top>
-            <left>1230</left>
-            <width>40</width>
-            <height>39</height>
-            <texture colordiffuse="design">bullet.png</texture>
-        </control>
-        <control type="image">
-            <top>669</top>
-            <left>1230</left>
-            <width>40</width>
-            <height>39</height>
-            <texture colordiffuse="design">bullet.png</texture>
-        </control>
+<include name="allwindows">
+<control type="image">
+    <width>200</width>
+    <height>720</height>
+    <texture>emptyslots.png</texture>
+</control>
+<control type="image">
+    <top>15</top>
+    <left>325</left>
+    <width>685</width>
+    <height>39</height>
+    <texture colordiffuse="design">white.png</texture>
+</control>
+<control type="image">
+    <top>15</top>
+    <left>1230</left>
+    <width>40</width>
+    <height>39</height>
+    <texture colordiffuse="design">bullet.png</texture>
+</control>
+<control type="image">
+    <top>669</top>
+    <left>1230</left>
+    <width>40</width>
+    <height>39</height>
+    <texture colordiffuse="design">bullet.png</texture>
+</control>
 
-        <control type="image">
-            <top>669</top>
-            <left>660</left>
-            <width>280</width>
-            <height>39</height>
-            <texture colordiffuse="design">white.png</texture>
-        </control>
-        <control type="image">
-            <top>669</top>
-            <left>945</left>
-            <width>140</width>
-            <height>39</height>
-            <texture colordiffuse="design">white.png</texture>
-        </control>
-        <control type="image">
-            <top>669</top>
-            <left>1090</left>
-            <width>136</width>
-            <height>39</height>
-            <texture colordiffuse="design">white.png</texture>
-        </control>
-        <control type="label">
-            <top>18</top>
-            <left>1020</left>
-            <height>39</height>
-            <width>200</width>
-            <font>font30</font>
-            <textcolor>yellow</textcolor>
-            <label>USS XBMC  •  NCC-1929</label>
-        </control>
-        <control type="label">
-            <visible>system.hasnetwork</visible>
-            <top>670</top>
-            <left>945</left>
-            <width>138</width>
-            <height>39</height>
-            <label>$INFO[network.ipaddress]</label>
-            <aligny>center</aligny>
-            <align>center</align>
-            <font>font30</font>
-        </control>
-        <control type="label">
-            <visible>System.InternetState</visible>
-            <top>670</top>
-            <left>1090</left>
-            <width>136</width>
-            <height>39</height>
-            <label>ONLINE</label>
-            <aligny>center</aligny>
-            <align>center</align>
-            <font>font30</font>
-        </control>
-        <control type="label">
-            <top>672</top>
-            <left>330</left>
-            <textcolor>yellow</textcolor>
-            <font>font30</font>
-            <width>330</width>
-            <height>40</height>
-            <label>STARDATE : $INFO[System.Date] • $INFO[System.Time]</label>
-        </control>
-    </include>
-    <include name="keybutt">
-        <width>85</width>
-        <height>40</height>
-        <texturenofocus border="20" colordiffuse="lightblue">whiteallrounded.png</texturenofocus>
-        <texturefocus border="20" colordiffuse="lightgreen">whiteallrounded.png</texturefocus>
-        <alttexturenofocus border="20" colordiffuse="blue">whiteallrounded.png</alttexturenofocus>
-        <alttexturefocus border="20" colordiffuse="green">whiteallrounded.png</alttexturefocus>
-        <align>center</align>
-        <aligny>center</aligny>
-        <textoffsetx>0</textoffsetx>
-        <font>font30</font>
-    </include>
+<control type="image">
+    <top>669</top>
+    <left>660</left>
+    <width>280</width>
+    <height>39</height>
+    <texture colordiffuse="design">white.png</texture>
+</control>
+<control type="image">
+    <top>669</top>
+    <left>945</left>
+    <width>140</width>
+    <height>39</height>
+    <texture colordiffuse="design">white.png</texture>
+</control>
+<control type="image">
+    <top>669</top>
+    <left>1090</left>
+    <width>136</width>
+    <height>39</height>
+    <texture colordiffuse="design">white.png</texture>
+</control>
+<control type="label">
+    <top>18</top>
+    <left>1020</left>
+    <height>39</height>
+    <width>200</width>
+    <font>font30</font>
+    <textcolor>yellow</textcolor>
+    <label>USS XBMC  •  NCC-1929</label>
+</control>
+<control type="label">
+    <visible>system.hasnetwork</visible>
+    <top>670</top>
+    <left>945</left>
+    <width>138</width>
+    <height>39</height>
+    <label>$INFO[network.ipaddress]</label>
+    <aligny>center</aligny>
+    <align>center</align>
+    <font>font30</font>
+</control>
+<control type="label">
+    <visible>System.InternetState</visible>
+    <top>670</top>
+    <left>1090</left>
+    <width>136</width>
+    <height>39</height>
+    <label>ONLINE</label>
+    <aligny>center</aligny>
+    <align>center</align>
+    <font>font30</font>
+</control>
+<control type="label">
+    <top>672</top>
+    <left>330</left>
+    <textcolor>yellow</textcolor>
+    <font>font30</font>
+    <width>330</width>
+    <height>40</height>
+    <label>STARDATE : $INFO[System.Date] • $INFO[System.Time]</label>
+</control>
+</include>
+<include name="keybutt">
+<width>85</width>
+<height>40</height>
+<texturenofocus border="20" colordiffuse="lightblue">whiteallrounded.png</texturenofocus>
+<texturefocus border="20" colordiffuse="lightgreen">whiteallrounded.png</texturefocus>
+<alttexturenofocus border="20" colordiffuse="blue">whiteallrounded.png</alttexturenofocus>
+<alttexturefocus border="20" colordiffuse="green">whiteallrounded.png</alttexturefocus>
+<align>center</align>
+<aligny>center</aligny>
+<textoffsetx>0</textoffsetx>
+<font>font30</font>
+</include>
 
-    <variable name="Poster">
-        <value condition="Container.Content(episodes) + !IsEmpty(ListItem.Art(tvshow.poster))">$INFO[ListItem.Art(tvshow.poster)]</value>
-        <value condition="!IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
-        <!--<value condition="StringCompare(ListItem.Label,..)">$INFO[ListItem.Icon]</value>-->
-        <!--<value condition="!IsEmpty(ListItem.Thumb))">$INFO[ListItem.Thumb]</value>-->
-        <value>$INFO[ListItem.Icon]</value>
-    </variable>
-</includes>
+<variable name="Poster">
+<value condition="Container.Content(episodes) + !IsEmpty(ListItem.Art(tvshow.poster))">$INFO[ListItem.Art(tvshow.poster)]</value>
+<value condition="!IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
+<!--<value condition="StringCompare(ListItem.Label,..)">$INFO[ListItem.Icon]</value>-->
+<!--<value condition="!IsEmpty(ListItem.Thumb))">$INFO[ListItem.Thumb]</value>-->
+<value>$INFO[ListItem.Icon]</value>
+</variable>
+        </includes>

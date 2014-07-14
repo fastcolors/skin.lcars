@@ -47,6 +47,7 @@
 		<height>215</height>
 		<textcolor>black</textcolor>
 		<font>font14</font>
+        <autoscroll delay="13000" time="4500" repeat="10000">true</autoscroll>
 	</default>
 	<default type="progress">
 		<left>100</left>

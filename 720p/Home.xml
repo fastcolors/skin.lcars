@@ -176,16 +176,27 @@
         <height>40</height>
         <label>$INFO[Container(311).ListItem.Year]</label>
     </control>
-    <control type="textbox">
+    <control type="label">
         <visible>Control.IsVisible(311)</visible>
-        <top>470</top>
+        <top>469</top>
         <centerleft>670</centerleft>
         <width>660</width>
-        <height>190</height>
+        <height>30</height>
+        <font>font30</font>
+        <textcolor>yellow</textcolor>
+        <align>center</align>
+        <info>Container(311).ListItem.Label</info>
+    </control>
+    <control type="textbox">
+        <visible>Control.IsVisible(311)</visible>
+        <top>500</top>
+        <centerleft>670</centerleft>
+        <width>660</width>
+        <height>150</height>
         <textcolor>yellow</textcolor>
         <font>font14_plot</font>
         <align>justify</align>
-        <info>Container(311).ListItem.Plot</info>
+        <label>$INFO[Container(311).ListItem.Plot]$INFO[Container(311).ListItem.Property(Addon.Description)]$INFO[Container(311).ListItem.Property(Album_Description)]</label>
     </control>
 </controls>
 </window>

@@ -21,8 +21,8 @@
 		<disabledcolor>grey3</disabledcolor>
 		<textoffsetx>7</textoffsetx>
         <textoffsety>26</textoffsety>
-        <texturenofocus colordiffuse="design">white.png</texturenofocus>
-        <texturefocus colordiffuse="blue">white.png</texturefocus>
+        <texturenofocus colordiffuse="55000000" border="20">whiteallrounded.png</texturenofocus>
+        <texturefocus colordiffuse="green" border="20">whiteallrounded.png</texturefocus>
 		<pulseonselect>no</pulseonselect>
 	</default>
 	<default type="togglebutton">

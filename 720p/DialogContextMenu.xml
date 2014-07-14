@@ -27,8 +27,6 @@
                 <align>center</align>
                 <aligny>center</aligny>
                 <label>Cinema</label>
-                <texturenofocus colordiffuse="green" border="20">whiteallrounded.png</texturenofocus>
-                <texturefocus colordiffuse="blue" border="20">whiteallrounded.png</texturefocus>
                 <onclick>XBMC.RunScript(script.cinema.experience)</onclick>
             </control>
         </control>
@@ -38,8 +36,6 @@
             <height>40</height>
             <align>center</align>
             <aligny>center</aligny>
-            <texturenofocus colordiffuse="green" border="20">whiteallrounded.png</texturenofocus>
-            <texturefocus colordiffuse="blue" border="20">whiteallrounded.png</texturefocus>
         </control>
     </controls>
 </window>

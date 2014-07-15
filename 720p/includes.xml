@@ -3,6 +3,7 @@
     <include file="defaults.xml"/>
     <include file="ViewsVideoLibrary.xml"/>
     <include file="ViewsMusicLibrary.xml"/>
+    <include file="ViewsAddonBrowser.xml"/>
     <include name="888buttons">
         <height>87</height>
         <width>102</width>

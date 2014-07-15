@@ -3,6 +3,7 @@
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<controls>
+        <include>allwindows</include>
 		<control type="image">
 			<left>0</left>
 			<top>100r</top>
@@ -152,6 +153,6 @@
 			<texture>icon_system.png</texture>
 		</control>
 
-		<include>allwindows</include>
+
 	</controls>
 </window>

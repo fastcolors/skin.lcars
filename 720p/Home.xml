@@ -116,8 +116,8 @@
             <item id="3">
                 <label>2</label>
                 <label2>FFFF0000</label2>
-                <onclick>ActivateWindow(502,Artists)</onclick>
-                <onclick condition="!Library.HasContent(Music)">ActivateWindow(501,root)</onclick>
+                <onclick condition="!Library.HasContent(Music)">ActivateWindow(501,root,return)</onclick>
+                <onclick condition="Library.HasContent(Music)">ActivateWindow(502,return)</onclick>
             </item>
             <item id="4">
                 <label>24001</label>

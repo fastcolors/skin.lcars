@@ -119,6 +119,8 @@
             <description>Default Category Button</description>
             <height>60</height>
             <width>155</width>
+            <texturenofocus colordiffuse="design">white.png</texturenofocus>
+        <texturefocus colordiffuse="blue">white.png</texturefocus>
             <align>right</align>
         </control>
         <control type="button" id="7">

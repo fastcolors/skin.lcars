@@ -3,6 +3,12 @@
     <include file="defaults.xml"/>
     <include file="ViewsVideoLibrary.xml"/>
     <include file="ViewsMusicLibrary.xml"/>
+    <include name="888buttons">
+        <height>87</height>
+        <width>102</width>
+        <texturenofocus>-</texturenofocus>
+        <texturefocus colordiffuse="red">white.png</texturefocus>
+    </include>
     <include name="750">
         <control type="group" id="750">
             <control type="group">
@@ -40,61 +46,37 @@
                 <width>600</width>
                 <label>$INFO[Skin.String(movieshome)]</label>
             </control>
-            <control type="panel" id="888">
+            <control type="grouplist" id="888">
                 <visible>Container(9000).HasFocus(1)</visible>
                 <onup>9000</onup>
                 <onleft>9000</onleft>
                 <onright>311</onright>
-                <top>130</top>
+                <top>132</top>
                 <left>207</left>
                 <width>105</width>
                 <height>300</height>
-                <itemlayout width="100" height="90">
-                    <control type="label">
-                        <top>60</top>
-                        <left>95</left>
-                        <width>90</width>
-                        <height>30</height>
-                        <align>right</align>
-                        <info>ListItem.Label</info>
-                    </control>
-                </itemlayout>
-                <focusedlayout width="100" height="90">
-                    <control type="image">
-                        <top>2</top>
-                        <height>87</height>
-                        <width>102</width>
-                        <texture>white.png</texture>
-                    </control>
-                    <control type="label">
-                        <top>60</top>
-                        <left>95</left>
-                        <width>90</width>
-                        <height>30</height>
-                        <align>right</align>
-                        <info>ListItem.Label</info>
-                    </control>
-                </focusedlayout>
-                <content>
-                    <item id="1">
-                        <label>RECENTLY</label>
-                        <onclick>Skin.SetString(movieshome,videodb://recentlyaddedmovies/)</onclick>
-                    </item>
-                    <item id="2">
-                        <label>STILLDUNNO</label>
-                        <onclick>Skin.SetString(movieshome,videodb://)</onclick>
-                    </item>
-                    <item id="3">
-                        <label>ALL MOVIES</label>
-                        <onclick>Skin.SetString(movieshome,videodb://movies/titles/)</onclick>
-                    </item>
-                </content>
+                <itemgap>3</itemgap>
+                <control type="button" id="500">
+                    <include>888buttons</include>
+                    <label>RECENTLY</label>
+                    <onfocus>Skin.SetString(movieshome,videodb://recentlyaddedmovies/)</onfocus>
+                </control>
+                <control type="button" id="501">
+                    <include>888buttons</include>
+                    <label>NOT SURE</label>
+                    <onfocus>Skin.SetString(movieshome,videodb://)</onfocus>
+                </control>
+                <control type="button" id="502">
+                    <include>888buttons</include>
+                    <label>ALL MOVIES</label>
+                    <onfocus>Skin.SetString(movieshome,videodb://movies/titles/)</onfocus>
+                </control>
             </control>
             <control type="panel" id="311">
                 <animation effect="fade" start="100" end="80" condition="!Control.HasFocus(311)">Conditional</animation>
                 <visible>Container(9000).HasFocus(1)</visible>
                 <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
-                <onup>9000</onup>
+                <onup>888</onup>
                 <onleft>888</onleft>
                 <top>135</top>
                 <left>320</left>
@@ -135,62 +117,39 @@
                 <width>600</width>
                 <label>$INFO[Skin.String(tvhome)]</label>
             </control>
-            <control type="panel" id="888">
+            <control type="grouplist" id="888">
                 <visible>Container(9000).HasFocus(2)</visible>
                 <onup>9000</onup>
                 <onleft>9000</onleft>
                 <onright>311</onright>
-                <top>130</top>
+                <top>132</top>
                 <left>207</left>
                 <width>105</width>
                 <height>300</height>
-                <itemlayout width="100" height="90">
-                    <control type="label">
-                        <top>60</top>
-                        <left>95</left>
-                        <width>90</width>
-                        <height>30</height>
-                        <align>right</align>
-                        <info>ListItem.Label</info>
-                    </control>
-                </itemlayout>
-                <focusedlayout width="100" height="90">
-                    <control type="image">
-                        <top>2</top>
-                        <height>87</height>
-                        <width>102</width>
-                        <texture>white.png</texture>
-                    </control>
-                    <control type="label">
-                        <top>60</top>
-                        <left>95</left>
-                        <width>90</width>
-                        <height>30</height>
-                        <align>right</align>
-                        <info>ListItem.Label</info>
-                    </control>
-                </focusedlayout>
-                <content>
-                    <item id="1">
-                        <label>RECENTLY</label>
-                        <onclick>Skin.SetString(tvhome,videodb://recentlyaddedepisodes/)</onclick>
-                    </item>
-                    <item id="2">
-                        <label>STILLDUNNO</label>
-                        <onclick>Skin.SetString(tvhome,videodb://)</onclick>
-                    </item>
-                    <item id="3">
-                        <label>ALL TVSHOWS</label>
-                        <onclick>Skin.SetString(tvhome,videodb://tvshows/titles/)</onclick>
-                    </item>
-                </content>
+                <itemgap>3</itemgap>
+                <control type="button" id="500">
+                    <include>888buttons</include>
+                    <label>RECENTLY</label>
+                    <onfocus>Skin.SetString(tvhome,videodb://recentlyaddedepisodes/)</onfocus>
+                </control>
+                <control type="button" id="501">
+                    <include>888buttons</include>
+                    <label>NOT SURE</label>
+                    <onfocus>Skin.SetString(tvhome,videodb://)</onfocus>
+                </control>
+                <control type="button" id="502">
+                    <include>888buttons</include>
+                    <label>ALL TVSHOWS</label>
+                    <onfocus>Skin.SetString(tvhome,videodb://tvshows/titles/)</onfocus>
+                </control>
             </control>
+
             <control type="panel" id="311">
                 <animation effect="fade" start="100" end="80" condition="!Control.HasFocus(311)">Conditional</animation>
                 <visible>Container(9000).HasFocus(2)</visible>
                 <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
-                <onup>9000</onup>
-                <onleft>9000</onleft>
+                <onup>888</onup>
+                <onleft>888</onleft>
                 <top>135</top>
                 <left>320</left>
                 <width>960</width>
@@ -198,6 +157,7 @@
                 <orientation>horizontal</orientation>
                 <itemlayout width="180" height="280">
                     <control type="image">
+                         <visible>Skin.String(tvhome,videodb://recentlyaddedepisodes/)</visible>
                         <left>10</left>
                         <top>4</top>
                         <width>170</width>
@@ -206,16 +166,18 @@
                         <info>ListItem.Art(tvshow.poster)</info>
                     </control>
                     <control type="image">
-                        <visible>Skin.String(tvhome,videodb://tvshows/titles/)</visible>
-                        <left>6</left>
-                        <width>178</width>
-                        <height>258</height>
+                        <visible>!Skin.String(tvhome,videodb://recentlyaddedepisodes/)</visible>
+                        <left>10</left>
+                        <top>4</top>
+                        <width>170</width>
+                        <height>250</height>
                         <aspectratio>keep</aspectratio>
-                        <info>ListItem.Art(poster)</info>
+                        <texture>$VAR[poster]</texture>
                     </control>
                 </itemlayout>
                 <focusedlayout width="180" height="280">
                     <control type="image">
+                         <visible>Skin.String(tvhome,videodb://recentlyaddedepisodes/)</visible>
                         <left>6</left>
                         <width>178</width>
                         <height>258</height>
@@ -225,12 +187,12 @@
                         <bordersize>4</bordersize>
                     </control>
                     <control type="image">
-                        <visible>Skin.String(tvhome,videodb://tvshows/titles/)</visible>
+                        <visible>!Skin.String(tvhome,videodb://recentlyaddedepisodes/)</visible>
                         <left>6</left>
                         <width>178</width>
                         <height>258</height>
                         <aspectratio>keep</aspectratio>
-                        <info>ListItem.Art(poster)</info>
+                        <texture>$VAR[poster]</texture>
                         <bordertexture colordiffuse="red">white.png</bordertexture>
                         <bordersize>4</bordersize>
                     </control>
@@ -239,13 +201,47 @@
             </control>
 
             <!--music-->
+            <control type="label">
+                <visible>Container(9000).HasFocus(3)</visible>
+                <top>81</top>
+                <right>80</right>
+                <align>right</align>
+                <width>600</width>
+                <label>$INFO[Skin.String(tvhome)]</label>
+            </control>
+            <control type="grouplist" id="888">
+                <visible>Container(9000).HasFocus(3)</visible>
+                <onup>9000</onup>
+                <onleft>9000</onleft>
+                <onright>311</onright>
+                <top>132</top>
+                <left>207</left>
+                <width>105</width>
+                <height>300</height>
+                <itemgap>3</itemgap>
+                <control type="button" id="500">
+                    <include>888buttons</include>
+                    <label>RECENTLY</label>
+                    <onfocus>Skin.SetString(musichome,musicdb://recentlyaddedalbums/)</onfocus>
+                </control>
+                <control type="button" id="501">
+                    <include>888buttons</include>
+                    <label>ALBUMS</label>
+                    <onfocus>Skin.SetString(musichome,musicdb://albums/)</onfocus>
+                </control>
+                <control type="button" id="502">
+                    <include>888buttons</include>
+                    <label>ARTISTS</label>
+                    <onfocus>Skin.SetString(musichome,musicdb://artists/)</onfocus>
+                </control>
+            </control>
 
             <control type="panel" id="311">
                 <animation effect="fade" start="100" end="80" condition="!Control.HasFocus(311)">Conditional</animation>
                 <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
                 <visible>Container(9000).HasFocus(3)</visible>
-                <onup>9000</onup>
-                <onleft>9000</onleft>
+                <onup>888</onup>
+                <onleft>888</onleft>
                 <top>125</top>
                 <left>330</left>
                 <width>960</width>
@@ -299,7 +295,7 @@
                         <info>ListItem.Label</info>
                     </control>
                 </focusedlayout>
-                <content target="music">musicdb://recentlyaddedalbums/</content>
+                <content target="music">$INFO[Skin.String(musichome)]</content>
             </control>
 
             <!--plugs-->
@@ -313,55 +309,32 @@
                 <width>600</width>
                 <label>$INFO[Skin.String(addonhome)]</label>
             </control>
-            <control type="panel" id="888">
+            <control type="grouplist" id="888">
                 <visible>Container(9000).HasFocus(4)</visible>
                 <onup>9000</onup>
                 <onleft>9000</onleft>
                 <onright>311</onright>
-                <top>130</top>
+                <top>132</top>
                 <left>207</left>
                 <width>105</width>
                 <height>300</height>
-                <itemlayout width="100" height="90">
-                    <control type="label">
-                        <top>60</top>
-                        <left>95</left>
-                        <width>90</width>
-                        <height>30</height>
-                        <align>right</align>
-                        <info>ListItem.Label</info>
-                    </control>
-                </itemlayout>
-                <focusedlayout width="100" height="90">
-                    <control type="image">
-                        <top>2</top>
-                        <height>87</height>
-                        <width>102</width>
-                        <texture>white.png</texture>
-                    </control>
-                    <control type="label">
-                        <top>60</top>
-                        <left>95</left>
-                        <width>90</width>
-                        <height>30</height>
-                        <align>right</align>
-                        <info>ListItem.Label</info>
-                    </control>
-                </focusedlayout>
-                <content>
-                    <item id="1">
-                        <label>VIDEO</label>
-                        <onclick>Skin.SetString(addonhome,addons://sources/video/)</onclick>
-                    </item>
-                    <item id="2">
-                        <label>MUSIC</label>
-                        <onclick>Skin.SetString(addonhome,addons://sources/audio/)</onclick>
-                    </item>
-                    <item id="3">
-                        <label>PROGRAMS</label>
-                        <onclick>Skin.SetString(addonhome,addons://sources/executable/)</onclick>
-                    </item>
-                </content>
+                <itemgap>3</itemgap>
+                <control type="button" id="500">
+                    <include>888buttons</include>
+                    <label>VIDEO</label>
+                    <onfocus>Skin.SetString(addonhome,addons://sources/video/)</onfocus>
+                </control>
+                <control type="button" id="501">
+                    <include>888buttons</include>
+                    <label>AUDIO</label>
+                    <onfocus>Skin.SetString(addonhome,addons://sources/audio/)</onfocus>
+                </control>
+                <control type="button" id="502">
+                    <include>888buttons</include>
+                    <label>Programs</label>
+                    <onfocus>Skin.SetString(addonhome,addons://sources/executable/)</onfocus>
+                </control>
+
             </control>
             <control type="panel" id="311">
                 <animation effect="fade" start="100" end="80" condition="!Control.HasFocus(311)">Conditional</animation>
@@ -425,7 +398,7 @@
                 <content target="video">$INFO[Skin.String(addonhome)]</content>
             </control>
 
-            <!--plugs-->
+            <!--sources-->
 
             <control type="panel" id="888">
                 <visible>Container(9000).HasFocus(7)</visible>

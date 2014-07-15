@@ -453,7 +453,7 @@
 					<description>IP ADDRESS button</description>
 					<posx>0</posx>
 					<posy>200</posy>
-                    <width>350</width>
+                    <width>263</width>
 					<include>keybutt</include>
 					<label>1006</label>
 					<textoffsetx>0</textoffsetx>
@@ -465,9 +465,9 @@
 				</control>
 				<control type="button" id="32">
 					<description>SPACE button</description>
-					<posx>350</posx>
+					<posx>263</posx>
 					<posy>200</posy>
-                    <width>350</width>
+                    <width>262</width>
 					<include>keybutt</include>
 					<label>20182</label>
 					<textoffsetx>0</textoffsetx>
@@ -479,9 +479,9 @@
 				</control>
 				<control type="button" id="305">
 					<description>PREVIOUS button</description>
-					<posx>700</posx>
+					<posx>525</posx>
 					<posy>200</posy>
-                    <width>350</width>
+                    <width>262</width>
 					<include>keybutt</include>
 					<label>&lt;</label>
 					<focusedcolor>black</focusedcolor>
@@ -492,9 +492,9 @@
 				</control>
 				<control type="button" id="306">
 					<description>NEXT button</description>
-					<posx>1200</posx>
+					<posx>787</posx>
 					<posy>200</posy>
-                    <width>400</width>
+                    <width>263</width>
 					<include>keybutt</include>
 					<label>&gt;</label>
 					<focusedcolor>black</focusedcolor>

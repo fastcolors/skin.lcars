@@ -90,7 +90,8 @@
                     </item>
                 </content>
             </control>
-            <control type="fixedlist" id="311">
+            <control type="panel" id="311">
+                <animation effect="fade" start="100" end="80" condition="!Control.HasFocus(311)">Conditional</animation>
                 <visible>Container(9000).HasFocus(1)</visible>
                 <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
                 <onup>9000</onup>
@@ -184,7 +185,8 @@
                     </item>
                 </content>
             </control>
-            <control type="fixedlist" id="311">
+            <control type="panel" id="311">
+                <animation effect="fade" start="100" end="80" condition="!Control.HasFocus(311)">Conditional</animation>
                 <visible>Container(9000).HasFocus(2)</visible>
                 <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
                 <onup>9000</onup>
@@ -238,7 +240,8 @@
 
             <!--music-->
 
-            <control type="fixedlist" id="311">
+            <control type="panel" id="311">
+                <animation effect="fade" start="100" end="80" condition="!Control.HasFocus(311)">Conditional</animation>
                 <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
                 <visible>Container(9000).HasFocus(3)</visible>
                 <onup>9000</onup>
@@ -360,7 +363,8 @@
                     </item>
                 </content>
             </control>
-            <control type="fixedlist" id="311">
+            <control type="panel" id="311">
+                <animation effect="fade" start="100" end="80" condition="!Control.HasFocus(311)">Conditional</animation>
                 <visible>Container(9000).HasFocus(4)</visible>
                 <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
                 <onup>9000</onup>
@@ -479,7 +483,8 @@
                     </item>
                 </content>
             </control>
-            <control type="fixedlist" id="311">
+            <control type="panel" id="311">
+                <animation effect="fade" start="100" end="80" condition="!Control.HasFocus(311)">Conditional</animation>
                 <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
                 <visible>Container(9000).HasFocus(7)</visible>
                 <onup>9000</onup>
@@ -538,6 +543,137 @@
                     </control>
                 </focusedlayout>
                 <content target="video">$INFO[Skin.String(sourceshome)]</content>
+            </control>
+
+            <!--weather-->
+
+            <control type="list" id="311" description="TOP Weather">
+                <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
+                <visible>Container(9000).HasFocus(8)</visible>
+                <onup>9000</onup>
+                <onleft>888</onleft>
+                <top>125</top>
+                <left>330</left>
+                <width>960</width>
+                <height>300</height>
+                <orientation>horizontal</orientation>
+                <itemlayout width="126">
+                    <control type="image">
+                        <top>60</top>
+                        <left>10</left>
+                        <width>106</width>
+                        <height>200</height>
+                        <texture border="60" colordiffuse="darkblue">soap.png</texture>
+                    </control>
+                    <control type="label">
+                        <top>160</top>
+                        <left>63</left>
+                        <height>45</height>
+                        <width>125</width>
+                        <align>center</align>
+                        <textcolor>white</textcolor>
+                        <shadowcolor>-</shadowcolor>
+                        <label>$INFO[ListItem.label]</label>
+                    </control>
+                    <control type="label" description="temps">
+                        <top>200</top>
+                        <left>63</left>
+                        <height>100</height>
+                        <width>125</width>
+                        <align>center</align>
+                        <textcolor>white</textcolor>
+                        <shadowcolor>-</shadowcolor>
+                        <label>$INFO[ListItem.label2]</label>
+                    </control>
+                    <control type="image" description="Dayicon">
+                        <top>10</top>
+                        <height>130</height>
+                        <width>126</width>
+                        <texture>$INFO[ListItem.thumb]</texture>
+                        <aspectratio align="center">keep</aspectratio>
+                    </control>
+                </itemlayout>
+                <focusedlayout width="126">
+                    <control type="image">
+                        <top>60</top>
+                        <left>10</left>
+                        <width>106</width>
+                        <height>200</height>
+                        <texture border="60" colordiffuse="darkblue">soap.png</texture>
+                    </control>
+                    <control type="label">
+                        <top>160</top>
+                        <left>63</left>
+                        <height>45</height>
+                        <width>125</width>
+                        <align>center</align>
+                        <textcolor>white</textcolor>
+                        <shadowcolor>-</shadowcolor>
+                        <label>$INFO[ListItem.label]</label>
+                    </control>
+                    <control type="label" description="temps">
+                        <top>200</top>
+                        <left>63</left>
+                        <height>100</height>
+                        <width>125</width>
+                        <align>center</align>
+                        <textcolor>white</textcolor>
+                        <shadowcolor>-</shadowcolor>
+                        <label>$INFO[ListItem.label2]</label>
+                    </control>
+                    <control type="image" description="Dayicon">
+                        <top>10</top>
+                        <height>130</height>
+                        <width>126</width>
+                        <texture>$INFO[ListItem.thumb]</texture>
+                        <aspectratio align="center">keep</aspectratio>
+                    </control>
+                </focusedlayout>
+                <content>
+                    <item id="0">
+                        <label>$INFO[Window(Weather).Property(Day0.Title)]</label>
+                        <label2>Min:  $INFO[Window(Weather).Property(Day0.LowTemp)] [CR]Max:  $INFO[Window(Weather).Property(Day0.HighTemp)]</label2>
+
+                        <thumb>$INFO[Window(Weather).Property(Day0.OutlookIcon)]</thumb>
+                        <onclick>noop</onclick>
+                    </item>
+                    <item id="1">
+                        <label>$INFO[Window(Weather).Property(Day1.Title)]</label>
+                        <label2>Min:  $INFO[Window(Weather).Property(Day1.LowTemp)] [CR] Max:  $INFO[Window(Weather).Property(Day1.HighTemp)]</label2>
+                        <thumb>$INFO[Window(Weather).Property(Day1.OutlookIcon)]</thumb>
+                        <onclick>noop</onclick>
+                    </item>
+                    <item id="2">
+                        <label>$INFO[Window(Weather).Property(Day2.Title)]</label>
+                        <label2>Min:  $INFO[Window(Weather).Property(Day2.LowTemp)] [CR] Max:  $INFO[Window(Weather).Property(Day2.HighTemp)]</label2>
+                        <thumb>$INFO[Window(Weather).Property(Day2.OutlookIcon)]</thumb>
+                        <onclick>noop</onclick>
+                    </item>
+                    <item id="3">
+                        <label>$INFO[Window(Weather).Property(Day3.Title)]</label>
+                        <label2>Min:  $INFO[Window(Weather).Property(Day3.LowTemp)] [CR] Max:  $INFO[Window(Weather).Property(Day3.HighTemp)]</label2>
+                        <thumb>$INFO[Window(Weather).Property(Day3.OutlookIcon)]</thumb>
+                        <onclick>noop</onclick>
+                    </item>
+                    <item id="4">
+                        <label>$INFO[Window(Weather).Property(Day4.Title)]</label>
+                        <label2>Min:  $INFO[Window(Weather).Property(Day4.LowTemp)] [CR] Max:  $INFO[Window(Weather).Property(Day4.HighTemp)]</label2>
+                        <thumb>$INFO[Window(Weather).Property(Day4.OutlookIcon)]</thumb>
+                        <onclick>noop</onclick>
+                    </item>
+                    <item id="5">
+                        <label>$INFO[Window(Weather).Property(Day5.Title)]</label>
+                        <label2>Min:  $INFO[Window(Weather).Property(Day5.LowTemp)] [CR] Max:  $INFO[Window(Weather).Property(Day5.HighTemp)]</label2>
+                        <thumb>$INFO[Window(Weather).Property(Day5.OutlookIcon)]</thumb>
+                        <onclick>noop</onclick>
+                    </item>
+                    <item id="6">
+                        <label>$INFO[Window(Weather).Property(Day6.Title)]</label>
+                        <label2>Min:  $INFO[Window(Weather).Property(Day6.LowTemp)] [CR] Max:  $INFO[Window(Weather).Property(Day6.HighTemp)]</label2>
+                        <thumb>$INFO[Window(Weather).Property(Day6.OutlookIcon)]</thumb>
+                        <onclick>noop</onclick>
+                    </item>
+                </content>
             </control>
         </control>
     </include>
@@ -658,6 +794,14 @@
         <font>font30</font>
         <align>center</align>
         <textcolor>white</textcolor>
+    </include>
+
+    <include name="largebutton">
+        <width>390</width>
+        <height>40</height>
+        <align>center</align>
+        <aligny>center</aligny>
+        <texturefocus colordiffuse="red" border="20">whiteallrounded.png</texturefocus>
     </include>
 
     <variable name="Poster">

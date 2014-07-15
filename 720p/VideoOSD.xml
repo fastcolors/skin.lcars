@@ -6,62 +6,65 @@
     <controls>
         <control type="group" id="101" description="Options content">
             <visible>!Window.IsVisible(10123) + !Window.IsVisible(10124) + !Window.IsVisible(10125)</visible>
-            <posx>330</posx>
-            <top>865</top>
+            <left>640</left>
+            <top>718</top>
+            <width>780</width>
             <animation type="Focus">
-                <effect type="slide" tween="Cubic" easing="out" start="0,0" end="0,-800" time="800"/>
+                <effect type="slide" tween="Cubic" easing="out" start="0,0" end="0,-600" time="800"/>
             </animation>
             <animation type="unFocus">
-                <effect type="slide" tween="Cubic" easing="in" start="0,-800" end="0,0" time="500"/>
+                <effect type="slide" tween="Cubic" easing="in" start="0,-600" end="0,0" time="500"/>
             </animation>
             <control type="image">
-                <width>680</width>
-                <height>520</height>
+                <centerleft>0</centerleft>
+                <width>550</width>
+                <height>400</height>
                 <aspectratio>stretch</aspectratio>
-                <texture border="100">dialog.png</texture>
+                <texture border="120">dialog.png</texture>
             </control>
             <control type="grouplist" id="101" description="OSD Options">
-                <width>640</width>
-                <height>640</height>
-                <itemgap>0</itemgap>
+                <centerleft>5</centerleft>
+                <top>40</top>
+                <width>400</width>
+                <height>400</height>
+                <itemgap>6</itemgap>
                 <onleft>100</onleft>
                 <onright>100</onright>
                 <onup>101</onup>
                 <ondown>101</ondown>
                 <scrolltime>240</scrolltime>
                 <control type="togglebutton" id="701" description="Subtitles">
-                    <width>590</width>
-                    <include>DialogButt</include>
+                    <include>largebutton</include>
                     <label>$LOCALIZE[33003] $LOCALIZE[287]</label>
+                    <texturenofocus colordiffuse="55000000" border="20">whiteallrounded.png</texturenofocus>
+                    <texturefocus colordiffuse="red" border="20">whiteallrounded.png</texturefocus>
                     <onclick>SetFocus(100,2)</onclick>
                     <onclick>Dialog.Close(VideoOSD)</onclick>
                     <onclick>ActivateWindow(SubtitleSearch)</onclick>
                 </control>
                 <control type="button" id="703">
-                    <width>590</width>
-                    <include>DialogButt</include>
+                    <include>largebutton</include>
                     <label>13395</label>
                     <onclick>SetFocus(100,2)</onclick>
                     <onclick>ActivateWindow(OSDVideoSettings)</onclick>
                 </control>
                 <control type="button" id="704">
-                    <width>590</width>
-                    <include>DialogButt</include>
+                    <include>largebutton</include>
                     <label>$LOCALIZE[292] &amp; $LOCALIZE[287]</label>
                     <onclick>SetFocus(100,2)</onclick>
                     <onclick>ActivateWindow(OSDAudioSettings)</onclick>
                 </control>
                 <control type="button" id="705">
-                    <width>590</width>
-                    <include>DialogButt</include>
+                    <include>largebutton</include>
                     <label>298</label>
                     <onclick>SetFocus(100,2)</onclick>
                     <onclick>ActivateWindow(VideoBookmarks)</onclick>
                 </control>
                 <control type="togglebutton" id="706" description="Info">
-                    <width>590</width>
-                    <include>DialogButt</include>
+                    <include>largebutton</include>
                     <label>20176</label>
+                    <texturenofocus colordiffuse="55000000" border="20">whiteallrounded.png</texturenofocus>
+                    <texturefocus colordiffuse="red" border="20">whiteallrounded.png</texturefocus>
                     <onclick>SetFocus(100,2)</onclick>
                     <onclick>close</onclick>
                     <onclick>ActivateWindow(142)</onclick>
@@ -71,14 +74,12 @@
                     <usealttexture>Window.IsActive(142)</usealttexture>
                 </control>
                 <control type="button" id="707">
-                    <width>590</width>
-                    <include>DialogButt</include>
+                    <include>largebutton</include>
                     <label>21445</label>
                     <onclick>CodecInfo</onclick>
                 </control>
                 <control type="button" id="708">
-                    <width>590</width>
-                    <include>DialogButt</include>
+                    <include>largebutton</include>
                     <label>25003</label>
                     <onclick>SetFocus(100,2)</onclick>
                     <onclick>PlayerControl(ShowVideoMenu)</onclick>
@@ -93,49 +94,58 @@
             <animation effect="fade" end="0" time="100">Hidden</animation>
             <posx>0</posx>
             <top>0</top>
-            <control type="group">
-                <control type="group" description="Dialog Background">
-                    <visible>Window.IsVisible(videoosd.xml) + Window.IsActive(dialogseekbar.xml)</visible>
-                    <control type="image">
-                        <top>550</top>
-                        <left>10</left>
-                        <width>1260</width>
-                        <height>250</height>
-                        <aspectratio>stretch</aspectratio>
-                        <texture border="150">dialog.png</texture>
-                    </control>
+            <control type="group" description="Dialog Background">
+                <visible>Window.IsVisible(videoosd.xml) + Window.IsActive(dialogseekbar.xml)</visible>
+                <control type="image">
+                    <top>550</top>
+                    <left>10</left>
+                    <width>1260</width>
+                    <height>250</height>
+                    <aspectratio>stretch</aspectratio>
+                    <texture border="150">dialog.png</texture>
                 </control>
+            </control>
+            <control type="grouplist">
+                <left>340</left>
+                <top>566</top>
+                <width>840</width>
+                <height>30</height>
+                <orientation>horizontal</orientation>
+                <itemgap>10</itemgap>
                 <control type="label" description="Title">
-                    <left>340</left>
-                    <top>566</top>
-                    <width>840</width>
+                    <width>auto</width>
                     <height>30</height>
                     <scroll>true</scroll>
                     <font>font30</font>
                     <textcolor>yellow</textcolor>
-                    <label>$INFO[VideoPlayer.Title] $INFO[Player.Chapter, • chapter  ]$INFO[Player.ChapterCount,/]</label>
+                    <label>$INFO[VideoPlayer.Title]</label>
                 </control>
-                <control type="image">
-                    <visible>!ControlGroup(101).HasFocus()</visible>
-                    <centerleft>180</centerleft>
-                    <top>445</top>
-                    <height>230</height>
-                    <width>230</width>
-                    <aspectratio align="right">keep</aspectratio>
-                    <texture>$INFO[Player.Art(Thumb)]</texture>
+                <control type="label" description="Title">
+                    <visible>Player.ChapterCount + !VideoPlayer.Content(LiveTV)</visible>
+                    <width>auto</width>
+                    <height>30</height>
+                    <scroll>true</scroll>
+                    <font>font30</font>
+                    <textcolor>yellow</textcolor>
+                    <label>$INFO[Player.Chapter,• chapter  ]$INFO[Player.ChapterCount,/]</label>
                 </control>
-                <!--<control type="label" description="Channel">-->
-                <!--<visible>Pvr.IsPlayingTV</visible>-->
-                <!--<posx>190</posx>-->
-                <!--<top>290</top>-->
-                <!--<height>60</height>-->
-                <!--<width>220</width>-->
-                <!--<scroll>false</scroll>-->
-                <!--<font>size24</font>-->
-                <!--<align>right</align>-->
-                <!--<textcolor>Black</textcolor>-->
-                <!--<label>($INFO[VideoPlayer.ChannelNumber]) - $INFO[VideoPlayer.ChannelName]</label>-->
-                <!--</control>-->
+                <control type="label" description="Channel">
+                    <visible>Pvr.IsPlayingTV</visible>
+                    <width>auto</width>
+                    <height>30</height>
+                    <scroll>true</scroll>
+                    <font>font30</font>
+                    <textcolor>yellow</textcolor>
+                    <label>($INFO[VideoPlayer.ChannelNumber]) - $INFO[VideoPlayer.ChannelName]</label>
+                </control>
+            </control>
+            <control type="image">
+                <centerleft>180</centerleft>
+                <top>445</top>
+                <height>230</height>
+                <width>230</width>
+                <aspectratio align="right">keep</aspectratio>
+                <texture>$INFO[Player.Art(Thumb)]</texture>
             </control>
             <control type="grouplist" id="100">
                 <left>320</left>
@@ -214,91 +224,81 @@
                     <label>NEXT</label>
                     <onclick>PlayerControl(Record)</onclick>
                 </control>
+                <control type="button" id="10">
+                    <visible>VideoPlayer.IsStereoscopic</visible>
+                    <width>60</width>
+                    <height>60</height>
+                    <label>3D</label>
+                    <onclick>SetFocus(500)</onclick>
+                </control>
             </control>
         </control>
-        <control type="image">
+        <control type="label">
             <visible>!ControlGroup(101).HasFocus()</visible>
             <visible>!Window.IsVisible(10123) + !Window.IsVisible(10124) + !Window.IsVisible(10125)</visible>
             <animation type="Visible">
                 <effect type="fade" tween="circle" easing="in" start="0" end="100" time="800"/>
             </animation>
-            <posx>1000</posx>
+            <centerleft>640</centerleft>
             <top>700</top>
-            <width>35</width>
+            <width>800</width>
             <height>35</height>
-            <texture>white.png</texture>
+            <font>font13</font>
+            <align>center</align>
+            <label>PRESS UP FOR MENU</label>
         </control>
 
         <!-- 3D -->
         <control type="group">
+            <top>80</top>
             <visible>VideoPlayer.IsStereoscopic + ![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks)]</visible>
             <visible allowhiddenfocus="true">ControlGroup(500).HasFocus</visible>
-            <animation effect="fade" time="200">VisibleChange</animation>
+            <!--<animation effect="fade" time="200">VisibleChange</animation>-->
             <control type="image">
-                <posx>510</posx>
-                <top>500</top>
-                <width>900</width>
-                <height>450</height>
+                <centerleft>640</centerleft>
+                <top>0</top>
+                <width>550</width>
+                <height>230</height>
                 <aspectratio>stretch</aspectratio>
-                <texture border="150">images/Dialog.png</texture>
+                <texture border="150">dialog.png</texture>
             </control>
             <control type="grouplist" id="500">
-
-                <posx>710</posx>
-                <top>300</top>
-                <width>500</width>
-                <height>500</height>
-                <align>bottom</align>
-                <itemgap>0</itemgap>
+                <centerleft>640</centerleft>
+                <top>0</top>
+                <width>400</width>
+                <height>200</height>
+                <itemgap>6</itemgap>
                 <onleft>100</onleft>
                 <onright>100</onright>
                 <onup>noop</onup>
                 <ondown>noop</ondown>
-                <orientation>vertical</orientation>
-
-                <include>VisibleFadeEffect</include>
-
                 <control type="group">
-                    <description>WindowsTopInfos</description>
-                    <width>500</width>
+                    <width>400</width>
                     <height>50</height>
                     <control type="label" id="">
-                        <top>20</top>
-                        <width>500</width>
-                        <height>15</height>
-                        <font>size33</font>
+                        <include>largebutton</include>
                         <label>36501</label>
-                        <align>center</align>
-                        <aligny>center</aligny>
                     </control>
                 </control>
                 <control type="radiobutton" id="503">
-                    <height>40</height>
-                    <width>500</width>
-                    <font>size33</font>
+                   <include>largebutton</include>
                     <label>Enable</label>
                     <onclick>ToggleStereoMode</onclick>
+                    <texturenofocus border="20" colordiffuse="55000000">whiteallrounded.png</texturenofocus>
                     <selected>IntegerGreaterThan(System.StereoscopicMode,0)</selected>
-                    <pulseonselect>false</pulseonselect>
                 </control>
                 <control type="button" id="502">
-                    <height>40</height>
-                    <width>500</width>
-                    <align>left</align>
-                    <font>size33</font>
+                    <include>largebutton</include>
                     <textoffsetx>30</textoffsetx>
-                    <pulseonselect>false</pulseonselect>
                     <label>3D Mode Selection</label>
                     <onclick>StereoMode</onclick>
                 </control>
                 <control type="radiobutton" id="501">
-                    <height>40</height>
-                    <width>500</width>
-                    <font>size33</font>
+                    <include>largebutton</include>
                     <label>Force 2D</label>
                     <onclick>StereoModeToMono</onclick>
+                    <texturenofocus border="20" colordiffuse="55000000">whiteallrounded.png</texturenofocus>
                     <selected>StringCompare(System.StereoscopicMode,7)</selected>
-                    <pulseonselect>false</pulseonselect>
                 </control>
             </control>
         </control>

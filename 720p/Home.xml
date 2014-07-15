@@ -18,7 +18,7 @@
             <height>30</height>
             <font>font12</font>
             <textcolor>darkred</textcolor>
-            <label>^ PRESS UP TO EXIT TO MAIN MENU^</label>
+            <label>^ PRESS UP TO EXIT TO MAIN MENU ^</label>
         </control>
         <include>allwindows</include>
         <control type="button" id="702">

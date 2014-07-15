@@ -547,7 +547,7 @@
 
             <!--weather-->
 
-            <control type="list" id="311" description="TOP Weather">
+            <control type="list" id="411" description="TOP Weather">
                 <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
                 <visible>Container(9000).HasFocus(8)</visible>
                 <onup>9000</onup>
@@ -566,28 +566,37 @@
                         <texture border="60" colordiffuse="darkblue">soap.png</texture>
                     </control>
                     <control type="label">
-                        <top>160</top>
+                        <top>130</top>
                         <left>63</left>
-                        <height>45</height>
-                        <width>125</width>
+                        <height>30</height>
+                        <width>120</width>
                         <align>center</align>
                         <textcolor>white</textcolor>
                         <shadowcolor>-</shadowcolor>
                         <label>$INFO[ListItem.label]</label>
                     </control>
+                    <control type="label">
+                        <top>160</top>
+                        <left>63</left>
+                        <height>30</height>
+                        <width>120</width>
+                        <align>center</align>
+                        <textcolor>white</textcolor>
+                        <shadowcolor>-</shadowcolor>
+                        <label>$INFO[ListItem.Property(condition)]</label>
+                    </control>
                     <control type="label" description="temps">
                         <top>200</top>
                         <left>63</left>
                         <height>100</height>
-                        <width>125</width>
+                        <width>120</width>
                         <align>center</align>
                         <textcolor>white</textcolor>
                         <shadowcolor>-</shadowcolor>
                         <label>$INFO[ListItem.label2]</label>
                     </control>
                     <control type="image" description="Dayicon">
-                        <top>10</top>
-                        <height>130</height>
+                        <height>126</height>
                         <width>126</width>
                         <texture>$INFO[ListItem.thumb]</texture>
                         <aspectratio align="center">keep</aspectratio>
@@ -602,28 +611,37 @@
                         <texture border="60" colordiffuse="darkblue">soap.png</texture>
                     </control>
                     <control type="label">
-                        <top>160</top>
+                        <top>130</top>
                         <left>63</left>
-                        <height>45</height>
-                        <width>125</width>
+                        <height>30</height>
+                        <width>120</width>
                         <align>center</align>
                         <textcolor>white</textcolor>
                         <shadowcolor>-</shadowcolor>
                         <label>$INFO[ListItem.label]</label>
                     </control>
+                    <control type="label">
+                        <top>160</top>
+                        <left>63</left>
+                        <height>30</height>
+                        <width>120</width>
+                        <align>center</align>
+                        <textcolor>white</textcolor>
+                        <shadowcolor>-</shadowcolor>
+                        <label>$INFO[ListItem.Property(condition)]</label>
+                    </control>
                     <control type="label" description="temps">
                         <top>200</top>
                         <left>63</left>
                         <height>100</height>
-                        <width>125</width>
+                        <width>120</width>
                         <align>center</align>
                         <textcolor>white</textcolor>
                         <shadowcolor>-</shadowcolor>
                         <label>$INFO[ListItem.label2]</label>
                     </control>
                     <control type="image" description="Dayicon">
-                        <top>10</top>
-                        <height>130</height>
+                        <height>126</height>
                         <width>126</width>
                         <texture>$INFO[ListItem.thumb]</texture>
                         <aspectratio align="center">keep</aspectratio>
@@ -633,44 +651,50 @@
                     <item id="0">
                         <label>$INFO[Window(Weather).Property(Day0.Title)]</label>
                         <label2>Min:  $INFO[Window(Weather).Property(Day0.LowTemp)] [CR]Max:  $INFO[Window(Weather).Property(Day0.HighTemp)]</label2>
-
                         <thumb>$INFO[Window(Weather).Property(Day0.OutlookIcon)]</thumb>
+                        <property name="condition">$INFO[Window(Weather).Property(Day0.Outlook)]</property>
                         <onclick>noop</onclick>
                     </item>
                     <item id="1">
                         <label>$INFO[Window(Weather).Property(Day1.Title)]</label>
                         <label2>Min:  $INFO[Window(Weather).Property(Day1.LowTemp)] [CR] Max:  $INFO[Window(Weather).Property(Day1.HighTemp)]</label2>
                         <thumb>$INFO[Window(Weather).Property(Day1.OutlookIcon)]</thumb>
+                        <property name="condition">$INFO[Window(Weather).Property(Day1.Outlook)]</property>
                         <onclick>noop</onclick>
                     </item>
                     <item id="2">
                         <label>$INFO[Window(Weather).Property(Day2.Title)]</label>
                         <label2>Min:  $INFO[Window(Weather).Property(Day2.LowTemp)] [CR] Max:  $INFO[Window(Weather).Property(Day2.HighTemp)]</label2>
                         <thumb>$INFO[Window(Weather).Property(Day2.OutlookIcon)]</thumb>
+                        <property name="condition">$INFO[Window(Weather).Property(Day2.Outlook)]</property>
                         <onclick>noop</onclick>
                     </item>
                     <item id="3">
                         <label>$INFO[Window(Weather).Property(Day3.Title)]</label>
                         <label2>Min:  $INFO[Window(Weather).Property(Day3.LowTemp)] [CR] Max:  $INFO[Window(Weather).Property(Day3.HighTemp)]</label2>
                         <thumb>$INFO[Window(Weather).Property(Day3.OutlookIcon)]</thumb>
+                        <property name="condition">$INFO[Window(Weather).Property(Day3.Outlook)]</property>
                         <onclick>noop</onclick>
                     </item>
                     <item id="4">
                         <label>$INFO[Window(Weather).Property(Day4.Title)]</label>
                         <label2>Min:  $INFO[Window(Weather).Property(Day4.LowTemp)] [CR] Max:  $INFO[Window(Weather).Property(Day4.HighTemp)]</label2>
                         <thumb>$INFO[Window(Weather).Property(Day4.OutlookIcon)]</thumb>
+                        <property name="condition">$INFO[Window(Weather).Property(Day4.Outlook)]</property>
                         <onclick>noop</onclick>
                     </item>
                     <item id="5">
                         <label>$INFO[Window(Weather).Property(Day5.Title)]</label>
                         <label2>Min:  $INFO[Window(Weather).Property(Day5.LowTemp)] [CR] Max:  $INFO[Window(Weather).Property(Day5.HighTemp)]</label2>
                         <thumb>$INFO[Window(Weather).Property(Day5.OutlookIcon)]</thumb>
+                        <property name="condition">$INFO[Window(Weather).Property(Day5.Outlook)]</property>
                         <onclick>noop</onclick>
                     </item>
                     <item id="6">
                         <label>$INFO[Window(Weather).Property(Day6.Title)]</label>
                         <label2>Min:  $INFO[Window(Weather).Property(Day6.LowTemp)] [CR] Max:  $INFO[Window(Weather).Property(Day6.HighTemp)]</label2>
                         <thumb>$INFO[Window(Weather).Property(Day6.OutlookIcon)]</thumb>
+                        <property name="condition">$INFO[Window(Weather).Property(Day6.Outlook)]</property>
                         <onclick>noop</onclick>
                     </item>
                 </content>

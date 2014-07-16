@@ -12,55 +12,55 @@
     </include>
     <include name="squareshome">
         <itemlayout width="228" height="280">
-                    <control type="image">
-                        <top>64</top>
-                        <centerleft>114</centerleft>
-                        <width>200</width>
-                        <height>200</height>
-                        <aspectratio>keep</aspectratio>
-                        <texture fallback="defaultmissing.png">$INFO[ListItem.Thumb]</texture>
-                    </control>
-                    <control type="image">
-                        <centerleft>114</centerleft>
-                        <width>218</width>
-                        <height>58</height>
-                        <texture colordiffuse="design">white.png</texture>
-                    </control>
-                    <control type="textbox">
-                        <align>center</align>
-                        <centerleft>114</centerleft>
-                        <font>font16</font>
-                        <width>208</width>
-                        <height>58</height>
-                        <info>ListItem.Label</info>
-                    </control>
-                </itemlayout>
-                <focusedlayout width="228" height="280">
-                    <control type="image">
-                        <top>60</top>
-                        <centerleft>114</centerleft>
-                        <width>208</width>
-                        <height>208</height>
-                        <aspectratio>keep</aspectratio>
-                        <texture fallback="defaultmissing.png">$INFO[ListItem.Thumb]</texture>
-                        <bordertexture colordiffuse="red">white.png</bordertexture>
-                        <bordersize>4</bordersize>
-                    </control>
-                    <control type="image">
-                        <centerleft>114</centerleft>
-                        <width>218</width>
-                       <height>58</height>
-                        <texture colordiffuse="design">white.png</texture>
-                    </control>
-                    <control type="textbox">
-                        <centerleft>114</centerleft>
-                        <align>center</align>
-                        <font>font16</font>
-                        <width>208</width>
-                        <height>58</height>
-                        <info>ListItem.Label</info>
-                    </control>
-                </focusedlayout>
+            <control type="image">
+                <top>64</top>
+                <centerleft>114</centerleft>
+                <width>200</width>
+                <height>200</height>
+                <aspectratio>keep</aspectratio>
+                <texture fallback="defaultmissing.png">$INFO[ListItem.Thumb]</texture>
+            </control>
+            <control type="image">
+                <centerleft>114</centerleft>
+                <width>218</width>
+                <height>58</height>
+                <texture colordiffuse="design">white.png</texture>
+            </control>
+            <control type="textbox">
+                <align>center</align>
+                <centerleft>114</centerleft>
+                <font>font16</font>
+                <width>208</width>
+                <height>58</height>
+                <info>ListItem.Label</info>
+            </control>
+        </itemlayout>
+        <focusedlayout width="228" height="280">
+            <control type="image">
+                <top>60</top>
+                <centerleft>114</centerleft>
+                <width>208</width>
+                <height>208</height>
+                <aspectratio>keep</aspectratio>
+                <texture fallback="defaultmissing.png">$INFO[ListItem.Thumb]</texture>
+                <bordertexture colordiffuse="red">white.png</bordertexture>
+                <bordersize>4</bordersize>
+            </control>
+            <control type="image">
+                <centerleft>114</centerleft>
+                <width>218</width>
+                <height>58</height>
+                <texture colordiffuse="design">white.png</texture>
+            </control>
+            <control type="textbox">
+                <centerleft>114</centerleft>
+                <align>center</align>
+                <font>font16</font>
+                <width>208</width>
+                <height>58</height>
+                <info>ListItem.Label</info>
+            </control>
+        </focusedlayout>
     </include>
     <include name="750">
         <control type="group" id="750">
@@ -216,7 +216,7 @@
                 <orientation>horizontal</orientation>
                 <itemlayout width="180" height="280">
                     <control type="image">
-                         <visible>Skin.String(tvhome,videodb://recentlyaddedepisodes/)</visible>
+                        <visible>Skin.String(tvhome,videodb://recentlyaddedepisodes/)</visible>
                         <left>10</left>
                         <top>4</top>
                         <width>170</width>
@@ -236,7 +236,7 @@
                 </itemlayout>
                 <focusedlayout width="180" height="280">
                     <control type="image">
-                         <visible>Skin.String(tvhome,videodb://recentlyaddedepisodes/)</visible>
+                        <visible>Skin.String(tvhome,videodb://recentlyaddedepisodes/)</visible>
                         <left>6</left>
                         <width>178</width>
                         <height>258</height>
@@ -528,7 +528,7 @@
                         <top>160</top>
                         <left>63</left>
                         <height>30</height>
-                        <width>120</width>
+                        <width>100</width>
                         <align>center</align>
                         <textcolor>white</textcolor>
                         <shadowcolor>-</shadowcolor>
@@ -775,6 +775,15 @@
         <align>center</align>
         <aligny>center</aligny>
         <texturefocus colordiffuse="red" border="20">whiteallrounded.png</texturefocus>
+    </include>
+
+    <include name="winding">
+        <top>10</top>
+        <width>200</width>
+        <font>font30</font>
+        <textcolor>white</textcolor>
+        <align>center</align>
+        <centerleft>640</centerleft>
     </include>
 
     <variable name="Poster">

@@ -182,11 +182,14 @@
         <aligny>center</aligny>
         <pulseonselect>no</pulseonselect>
     </default>
-    <default type="scrollbar" id="60">
+    <default type="scrollbar">
         <width>9</width>
         <texturesliderbackground border="4">ScrollbarBG.png</texturesliderbackground>
         <textureslidernib>ScrollerNF.png</textureslidernib>
         <textureslidernibfocus>ScrollerFO.png</textureslidernibfocus>
         <showonepage>false</showonepage>
+    </default>
+    <default type="panel">
+        <scrolltime tween="sine" easing="out">350</scrolltime>
     </default>
 </includes>

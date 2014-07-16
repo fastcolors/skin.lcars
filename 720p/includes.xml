@@ -10,6 +10,58 @@
         <texturenofocus>-</texturenofocus>
         <texturefocus colordiffuse="red">white.png</texturefocus>
     </include>
+    <include name="squareshome">
+        <itemlayout width="228" height="280">
+                    <control type="image">
+                        <top>64</top>
+                        <centerleft>114</centerleft>
+                        <width>200</width>
+                        <height>200</height>
+                        <aspectratio>keep</aspectratio>
+                        <texture fallback="DefaultAlbumcover.png">$INFO[ListItem.Thumb]</texture>
+                    </control>
+                    <control type="image">
+                        <centerleft>114</centerleft>
+                        <width>218</width>
+                        <height>58</height>
+                        <texture colordiffuse="design">white.png</texture>
+                    </control>
+                    <control type="textbox">
+                        <align>center</align>
+                        <centerleft>114</centerleft>
+                        <font>font16</font>
+                        <width>208</width>
+                        <height>58</height>
+                        <info>ListItem.Label</info>
+                    </control>
+                </itemlayout>
+                <focusedlayout width="228" height="280">
+                    <control type="image">
+                        <top>60</top>
+                        <centerleft>114</centerleft>
+                        <width>208</width>
+                        <height>208</height>
+                        <aspectratio>keep</aspectratio>
+                        <texture fallback="DefaultAlbumcover.png">$INFO[ListItem.Thumb]</texture>
+                        <bordertexture colordiffuse="red">white.png</bordertexture>
+                        <bordersize>4</bordersize>
+                    </control>
+                    <control type="image">
+                        <centerleft>114</centerleft>
+                        <width>218</width>
+                       <height>58</height>
+                        <texture colordiffuse="design">white.png</texture>
+                    </control>
+                    <control type="textbox">
+                        <centerleft>114</centerleft>
+                        <align>center</align>
+                        <font>font16</font>
+                        <width>208</width>
+                        <height>58</height>
+                        <info>ListItem.Label</info>
+                    </control>
+                </focusedlayout>
+    </include>
     <include name="750">
         <control type="group" id="750">
             <control type="group">
@@ -74,7 +126,7 @@
                 </control>
             </control>
             <control type="panel" id="311">
-                <animation effect="fade" start="100" end="80" condition="!Control.HasFocus(311)">Conditional</animation>
+                <animation effect="fade" start="100" end="80" condition="!Control.HasFocus(311) + !Control.HasFocus(60)">Conditional</animation>
                 <visible>Container(9000).HasFocus(1)</visible>
                 <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
                 <onup>888</onup>
@@ -83,6 +135,8 @@
                 <left>320</left>
                 <width>960</width>
                 <height>280</height>
+                <pagecontrol>60</pagecontrol>
+                <ondown>60</ondown>
                 <orientation>horizontal</orientation>
                 <itemlayout width="180" height="280">
                     <control type="image">
@@ -146,7 +200,7 @@
             </control>
 
             <control type="panel" id="311">
-                <animation effect="fade" start="100" end="80" condition="!Control.HasFocus(311)">Conditional</animation>
+                <animation effect="fade" start="100" end="80" condition="!Control.HasFocus(311) + !Control.HasFocus(60)">Conditional</animation>
                 <visible>Container(9000).HasFocus(2)</visible>
                 <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
                 <onup>888</onup>
@@ -155,6 +209,8 @@
                 <left>320</left>
                 <width>960</width>
                 <height>280</height>
+                <pagecontrol>60</pagecontrol>
+                <ondown>60</ondown>
                 <orientation>horizontal</orientation>
                 <itemlayout width="180" height="280">
                     <control type="image">
@@ -202,6 +258,7 @@
             </control>
 
             <!--music-->
+
             <control type="label">
                 <visible>Container(9000).HasFocus(3)</visible>
                 <top>81</top>
@@ -238,7 +295,7 @@
             </control>
 
             <control type="panel" id="311">
-                <animation effect="fade" start="100" end="80" condition="!Control.HasFocus(311)">Conditional</animation>
+                <animation effect="fade" start="100" end="80" condition="!Control.HasFocus(311) + !Control.HasFocus(60)">Conditional</animation>
                 <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
                 <visible>Container(9000).HasFocus(3)</visible>
                 <onup>888</onup>
@@ -247,55 +304,10 @@
                 <left>330</left>
                 <width>960</width>
                 <height>300</height>
+                <pagecontrol>60</pagecontrol>
+                <ondown>60</ondown>
                 <orientation>horizontal</orientation>
-                <itemlayout width="228" height="280">
-                    <control type="image">
-                        <top>74</top>
-                        <centerleft>114</centerleft>
-                        <width>200</width>
-                        <height>200</height>
-                        <aspectratio>keep</aspectratio>
-                        <texture fallback="DefaultAlbumcover.png">$INFO[ListItem.Thumb]</texture>
-                    </control>
-                    <control type="image">
-                        <centerleft>114</centerleft>
-                        <width>218</width>
-                        <height>65</height>
-                        <texture colordiffuse="design">white.png</texture>
-                    </control>
-                    <control type="textbox">
-                        <align>center</align>
-                        <centerleft>114</centerleft>
-                        <font>font16</font>
-                        <width>208</width>
-                        <info>ListItem.Label</info>
-                    </control>
-                </itemlayout>
-                <focusedlayout width="228" height="280">
-                    <control type="image">
-                        <top>70</top>
-                        <centerleft>114</centerleft>
-                        <width>208</width>
-                        <height>208</height>
-                        <aspectratio>keep</aspectratio>
-                        <texture fallback="DefaultAlbumcover.png">$INFO[ListItem.Thumb]</texture>
-                        <bordertexture colordiffuse="red">white.png</bordertexture>
-                        <bordersize>4</bordersize>
-                    </control>
-                    <control type="image">
-                        <centerleft>114</centerleft>
-                        <width>218</width>
-                        <height>65</height>
-                        <texture colordiffuse="design">white.png</texture>
-                    </control>
-                    <control type="textbox">
-                        <centerleft>114</centerleft>
-                        <align>center</align>
-                        <font>font16</font>
-                        <width>208</width>
-                        <info>ListItem.Label</info>
-                    </control>
-                </focusedlayout>
+                <include>squareshome</include>
                 <content target="music">$INFO[Skin.String(musichome)]</content>
             </control>
 
@@ -338,64 +350,19 @@
 
             </control>
             <control type="panel" id="311">
-                <animation effect="fade" start="100" end="80" condition="!Control.HasFocus(311)">Conditional</animation>
+                <animation effect="fade" start="100" end="80" condition="!Control.HasFocus(311) + !Control.HasFocus(60)">Conditional</animation>
                 <visible>Container(9000).HasFocus(4)</visible>
                 <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
-                <onup>9000</onup>
+                <onup>888</onup>
                 <onleft>888</onleft>
                 <top>125</top>
                 <left>330</left>
                 <width>960</width>
                 <height>300</height>
+                <pagecontrol>60</pagecontrol>
+                <ondown>60</ondown>
                 <orientation>horizontal</orientation>
-                <itemlayout width="228" height="280">
-                    <control type="image">
-                        <top>74</top>
-                        <centerleft>114</centerleft>
-                        <width>200</width>
-                        <height>200</height>
-                        <aspectratio>keep</aspectratio>
-                        <texture fallback="DefaultAlbumcover.png">$INFO[ListItem.Thumb]</texture>
-                    </control>
-                    <control type="image">
-                        <centerleft>114</centerleft>
-                        <width>218</width>
-                        <height>65</height>
-                        <texture colordiffuse="design">white.png</texture>
-                    </control>
-                    <control type="textbox">
-                        <align>center</align>
-                        <centerleft>114</centerleft>
-                        <font>font16</font>
-                        <width>208</width>
-                        <info>ListItem.Label</info>
-                    </control>
-                </itemlayout>
-                <focusedlayout width="228" height="280">
-                    <control type="image">
-                        <top>70</top>
-                        <centerleft>114</centerleft>
-                        <width>208</width>
-                        <height>208</height>
-                        <aspectratio>keep</aspectratio>
-                        <texture fallback="DefaultAlbumcover.png">$INFO[ListItem.Thumb]</texture>
-                        <bordertexture colordiffuse="red">white.png</bordertexture>
-                        <bordersize>4</bordersize>
-                    </control>
-                    <control type="image">
-                        <centerleft>114</centerleft>
-                        <width>218</width>
-                        <height>65</height>
-                        <texture colordiffuse="design">white.png</texture>
-                    </control>
-                    <control type="textbox">
-                        <centerleft>114</centerleft>
-                        <align>center</align>
-                        <font>font16</font>
-                        <width>208</width>
-                        <info>ListItem.Label</info>
-                    </control>
-                </focusedlayout>
+                <include>squareshome</include>
                 <content target="video">$INFO[Skin.String(addonhome)]</content>
             </control>
 
@@ -458,19 +425,21 @@
                 </content>
             </control>
             <control type="panel" id="311">
-                <animation effect="fade" start="100" end="80" condition="!Control.HasFocus(311)">Conditional</animation>
+                <animation effect="fade" start="100" end="80" condition="!Control.HasFocus(311) + !Control.HasFocus(60)">Conditional</animation>
                 <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
                 <visible>Container(9000).HasFocus(7)</visible>
-                <onup>9000</onup>
+                <onup>888</onup>
                 <onleft>888</onleft>
                 <top>125</top>
                 <left>330</left>
                 <width>960</width>
                 <height>300</height>
+                <pagecontrol>60</pagecontrol>
+                <ondown>60</ondown>
                 <orientation>horizontal</orientation>
                 <itemlayout width="228" height="280">
                     <control type="image">
-                        <top>74</top>
+                        <top>64</top>
                         <centerleft>114</centerleft>
                         <width>200</width>
                         <height>200</height>
@@ -480,7 +449,7 @@
                     <control type="image">
                         <centerleft>114</centerleft>
                         <width>218</width>
-                        <height>65</height>
+                        <height>58</height>
                         <texture colordiffuse="design">white.png</texture>
                     </control>
                     <control type="textbox">
@@ -488,12 +457,13 @@
                         <centerleft>114</centerleft>
                         <font>font16</font>
                         <width>208</width>
+                        <height>58</height>
                         <info>ListItem.Label</info>
                     </control>
                 </itemlayout>
                 <focusedlayout width="228" height="280">
                     <control type="image">
-                        <top>70</top>
+                        <top>60</top>
                         <centerleft>114</centerleft>
                         <width>208</width>
                         <height>208</height>
@@ -505,7 +475,7 @@
                     <control type="image">
                         <centerleft>114</centerleft>
                         <width>218</width>
-                        <height>65</height>
+                        <height>58</height>
                         <texture colordiffuse="design">white.png</texture>
                     </control>
                     <control type="textbox">
@@ -513,6 +483,7 @@
                         <align>center</align>
                         <font>font16</font>
                         <width>208</width>
+                        <height>58</height>
                         <info>ListItem.Label</info>
                     </control>
                 </focusedlayout>

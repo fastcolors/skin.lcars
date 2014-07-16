@@ -206,14 +206,9 @@
 				<control type="scrollbar" id="60">
 					<left>80</left>
 					<centertop>380</centertop>
-					<width>9</width>
 					<height>600</height>
-					<texturesliderbackground border="4">ScrollbarBG.png</texturesliderbackground>
-					<textureslidernib>ScrollerNF.png</textureslidernib>
-					<textureslidernibfocus>ScrollerFO.png</textureslidernibfocus>
 					<onleft>noop</onleft>
 					<onright>450</onright>
-					<showonepage>false</showonepage>
 					<orientation>vertical</orientation>
 				</control>
 				<control type="label">

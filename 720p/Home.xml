@@ -185,7 +185,7 @@
         <font>font30</font>
         <textcolor>yellow</textcolor>
         <align>center</align>
-        <info>Container(311).ListItem.Label</info>
+        <label>$INFO[Container(311).ListItem.Label] $INFO[Container(311).ListItem.Label2, • ]</label>
     </control>
     <control type="textbox">
         <visible>Control.IsVisible(311)</visible>
@@ -197,6 +197,18 @@
         <font>font14_plot</font>
         <align>justify</align>
         <label>$INFO[Container(311).ListItem.Plot]$INFO[Container(311).ListItem.Property(Addon.Description)]$INFO[Container(311).ListItem.Property(Album_Description)]</label>
+    </control>
+    <control type="scrollbar" id="60">
+        <visible>Control.IsVisible(311)</visible>
+        <top>400</top>
+        <left>350</left>
+        <onup>311</onup>
+        <orientation>horizontal</orientation>
+        <width>860</width>
+        <height>6</height>
+        <texturesliderbackground border="4">HScrollbarBG.png</texturesliderbackground>
+        <textureslidernib>HScrollerNF.png</textureslidernib>
+        <textureslidernibfocus>HScrollerFO.png</textureslidernibfocus>
     </control>
 </controls>
 </window>

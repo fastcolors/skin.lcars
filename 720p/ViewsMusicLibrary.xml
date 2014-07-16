@@ -8,7 +8,7 @@
             <texture>artistsbg.jpg</texture>
         </control>
         <control type="panel" id="50">
-            <visible>!Container.Content(artists)</visible>
+            <visible>!Container.Content(artists) + !Container.Content(songs)</visible>
             <animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
             <onleft>9000</onleft>
             <top>100</top>
@@ -25,7 +25,7 @@
                     <texture>$VAR[poster]</texture>
                 </control>
                 <control type="textbox">
-                    <visible>Container.Content(albums) | Container.Content(artists)</visible>
+                    <visible>Container.Content(albums)</visible>
                     <top>10</top>
                     <right>10</right>
                     <align>right</align>
@@ -33,7 +33,7 @@
                     <width>240</width>
                     <textcolor>yellow</textcolor>
                     <shadowcolor>88000000</shadowcolor>
-                    <info>ListItem.Label</info>
+                    <label>$INFO[ListItem.Label] </label>
                 </control>
                 <control type="textbox">
                     <visible>Window.IsVisible(MyMusicSongs.xml)</visible>
@@ -42,7 +42,7 @@
                     <align>right</align>
                     <font>font30</font>
                     <width>240</width>
-                    <info>ListItem.Label</info>
+                    <label>$INFO[ListItem.Label] </label>
                 </control>
                 <control type="textbox">
                     <visible>Container.Content(years) | Container.Content(genres)</visible>
@@ -51,7 +51,7 @@
                     <align>right</align>
                     <font>font30</font>
                     <width>240</width>
-                    <info>ListItem.Label</info>
+                    <label>$INFO[ListItem.Label] </label>
                 </control>
             </itemlayout>
             <focusedlayout width="260" height="260">
@@ -65,7 +65,7 @@
                     <bordersize>4</bordersize>
                 </control>
                 <control type="textbox">
-                    <visible>Container.Content(albums) | Container.Content(artists)</visible>
+                    <visible>Container.Content(albums)</visible>
                     <top>10</top>
                     <right>10</right>
                     <align>right</align>
@@ -73,7 +73,7 @@
                     <width>240</width>
                     <textcolor>yellow</textcolor>
                     <shadowcolor>88000000</shadowcolor>
-                    <info>ListItem.Label</info>
+                    <label>$INFO[ListItem.Label] </label>
                 </control>
                 <control type="textbox">
                     <visible>Window.IsVisible(MyMusicSongs.xml)</visible>
@@ -82,7 +82,7 @@
                     <align>right</align>
                     <font>font30</font>
                     <width>240</width>
-                    <info>ListItem.Label</info>
+                    <label>$INFO[ListItem.Label] </label>
                 </control>
                 <control type="textbox">
                     <visible>Container.Content(years) | Container.Content(genres)</visible>
@@ -91,7 +91,7 @@
                     <align>right</align>
                     <font>font30</font>
                     <width>240</width>
-                    <info>ListItem.Label</info>
+                    <label>$INFO[ListItem.Label] </label>
                 </control>
 
             </focusedlayout>
@@ -230,6 +230,7 @@
             <content>$INFO[Container(300).ListItem.DBID,musicdb://albums/]</content>
         </control>
         <control type="textbox">
+            <visible>Container.Content(artists)</visible>
             <top>530</top>
             <centerleft>252</centerleft>
             <width>80</width>
@@ -238,6 +239,60 @@
             <align>justify</align>
             <font>font14_plot</font>
             <info>ListItem.DBID</info>
+        </control>
+        <control type="image">
+            <visible>Container.Content(songs)</visible>
+            <centerleft>940</centerleft>
+            <centertop>360</centertop>
+            <width>550</width>
+            <height>550</height>
+            <aspectratio>keep</aspectratio>
+            <texture fallback="defaultmissing.png">$INFO[ListItem.Icon]</texture>
+            <bordertexture colordiffuse="design">white.png</bordertexture>
+            <bordersize>4</bordersize>
+        </control>
+        <control type="list" id="502">
+            <visible>Container.Content(songs)</visible>
+            <centertop>360</centertop>
+            <left>250</left>
+            <height>484</height>
+            <width>400</width>
+            <onup>noop</onup>
+            <ondown>noop</ondown>
+            <onleft>9000</onleft>
+            <onright>300</onright>
+            <orientation>vertical</orientation>
+            <itemlayout height="44" width="400">
+                <control type="image">
+                    <width>400</width>
+                    <height>40</height>
+                    <texture flipx="true" border="20" colordiffuse="design">whiterounded.png</texture>
+                </control>
+                <control type="label">
+                    <posx>395</posx>
+                    <width>390</width>
+                    <height>40</height>
+                    <align>right</align>
+                    <aligny>center</aligny>
+                    <label>$INFO[ListItem.Title] • $INFO[ListItem.Label2]</label>
+                </control>
+            </itemlayout>
+            <focusedlayout height="44" width="400">
+                <control type="image">
+                    <animation effect="fade" start="100" end="50" condition="!Control.Hasfocus(501)" reversible="true">Conditional</animation>
+                    <width>400</width>
+                    <height>40</height>
+                    <texture flipx="true" border="20" colordiffuse="blue">whiterounded.png</texture>
+                </control>
+                <control type="label">
+                    <posx>395</posx>
+                    <width>390</width>
+                    <height>40</height>
+                    <align>right</align>
+                    <aligny>center</aligny>
+                    <label>$INFO[ListItem.Title] • $INFO[ListItem.Label2]</label>
+                </control>
+            </focusedlayout>
         </control>
     </include>
 </includes>

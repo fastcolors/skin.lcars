@@ -97,6 +97,7 @@
                 <visible>Container.CanFilterAdvanced</visible>
                 <description>Filter</description>
                 <label>$LOCALIZE[587]</label>
+                <radioposx>5</radioposx>
                 <include>9000butts</include>
                 <selected>Container.Filtered</selected>
                 <onclick>right</onclick>
@@ -105,6 +106,7 @@
             <control type="radiobutton" id="14">
                 <description>Watched Toggle</description>
                 <include>9000butts</include>
+                <radioposx>5</radioposx>
                 <label>$LOCALIZE[20367]</label>
             </control>
             <control type="button" id="8">
@@ -115,6 +117,7 @@
             <control type="radiobutton" id="16">
                 <description>PartyMode</description>
                 <label>589</label>
+                <radioposx>5</radioposx>
                 <include>9000butts</include>
                 <visible>Container.Content(MusicVideos)</visible>
             </control>

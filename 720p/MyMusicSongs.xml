@@ -38,10 +38,10 @@
             <ondown>701</ondown>
             <onright>50</onright>
             <!--<control type="button" id="2">-->
-                <!--<description>View As button</description>-->
-                <!--<textwidth>235</textwidth>-->
-                <!--<include>9000butts</include>-->
-                <!--<label>-</label>-->
+            <!--<description>View As button</description>-->
+            <!--<textwidth>235</textwidth>-->
+            <!--<include>9000butts</include>-->
+            <!--<label>-</label>-->
             <!--</control>-->
             <control type="button" id="3">
                 <description>Sort by button</description>
@@ -60,8 +60,10 @@
                 <description>Library button</description>
                 <label>$LOCALIZE[29800]</label>
                 <onclick>ReplaceWindow(MusicLibrary)</onclick>
-                <selected>Window.IsVisible(MusicLibrary)</selected>
+                <selected>-</selected>
                 <include>9000butts</include>
+                <textureradiofocus>-</textureradiofocus>
+                <textureradionofocus>-</textureradionofocus>
                 <enable>Library.HasContent(Music)</enable>
             </control>
             <control type="edit" id="19">

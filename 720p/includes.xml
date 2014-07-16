@@ -114,10 +114,11 @@
                     <label>RECENTLY</label>
                     <onfocus>Skin.SetString(movieshome,videodb://recentlyaddedmovies/)</onfocus>
                 </control>
+                <!--todo not sure-->
                 <control type="button" id="501">
                     <include>888buttons</include>
                     <label>NOT SURE</label>
-                    <onfocus>Skin.SetString(movieshome,videodb://)</onfocus>
+                    <onfocus>Skin.SetString(movieshome,x)</onfocus>
                 </control>
                 <control type="button" id="502">
                     <include>888buttons</include>
@@ -187,10 +188,11 @@
                     <label>RECENTLY</label>
                     <onfocus>Skin.SetString(tvhome,videodb://recentlyaddedepisodes/)</onfocus>
                 </control>
+                <!--todo not sure-->
                 <control type="button" id="501">
                     <include>888buttons</include>
                     <label>NOT SURE</label>
-                    <onfocus>Skin.SetString(tvhome,videodb://)</onfocus>
+                    <onfocus>Skin.SetString(tvhome,x)</onfocus>
                 </control>
                 <control type="button" id="502">
                     <include>888buttons</include>
@@ -286,13 +288,13 @@
                     <include>888buttons</include>
                     <label>ALBUMS</label>
                     <onfocus>Skin.SetString(musichome,musicdb://albums/)</onfocus>
-                    <onclick>ActivateWindow(music,albums)</onclick>
+                    <onclick>ActivateWindow(music,albums,return)</onclick>
                 </control>
                 <control type="button" id="502">
                     <include>888buttons</include>
                     <label>ARTISTS</label>
                     <onfocus>Skin.SetString(musichome,musicdb://artists/)</onfocus>
-                    <onclick>ActivateWindow(music,artists)</onclick>
+                    <onclick>ActivateWindow(music,artists,return)</onclick>
                 </control>
             </control>
 

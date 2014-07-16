@@ -4,6 +4,7 @@
         <label>-</label>
         <font>font14</font>
         <textcolor>black</textcolor>
+        <selectedcolor>darkred</selectedcolor>
         <disabledcolor>grey3</disabledcolor>
     </default>
     <default type="fadelabel">

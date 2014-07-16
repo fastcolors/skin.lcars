@@ -230,11 +230,11 @@
             <content>$INFO[Container(300).ListItem.DBID,musicdb://albums/]</content>
         </control>
         <control type="textbox">
-            <top>470</top>
-            <centerleft>670</centerleft>
-            <width>660</width>
+            <top>530</top>
+            <centerleft>252</centerleft>
+            <width>80</width>
             <height>190</height>
-            <textcolor>yellow</textcolor>
+            <textcolor>blue</textcolor>
             <align>justify</align>
             <font>font14_plot</font>
             <info>ListItem.DBID</info>

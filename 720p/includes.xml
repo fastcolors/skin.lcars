@@ -18,7 +18,7 @@
                         <width>200</width>
                         <height>200</height>
                         <aspectratio>keep</aspectratio>
-                        <texture fallback="DefaultAlbumcover.png">$INFO[ListItem.Thumb]</texture>
+                        <texture fallback="defaultmissing.png">$INFO[ListItem.Thumb]</texture>
                     </control>
                     <control type="image">
                         <centerleft>114</centerleft>
@@ -42,7 +42,7 @@
                         <width>208</width>
                         <height>208</height>
                         <aspectratio>keep</aspectratio>
-                        <texture fallback="DefaultAlbumcover.png">$INFO[ListItem.Thumb]</texture>
+                        <texture fallback="defaultmissing.png">$INFO[ListItem.Thumb]</texture>
                         <bordertexture colordiffuse="red">white.png</bordertexture>
                         <bordersize>4</bordersize>
                     </control>
@@ -286,11 +286,13 @@
                     <include>888buttons</include>
                     <label>ALBUMS</label>
                     <onfocus>Skin.SetString(musichome,musicdb://albums/)</onfocus>
+                    <onclick>ActivateWindow(music,albums)</onclick>
                 </control>
                 <control type="button" id="502">
                     <include>888buttons</include>
                     <label>ARTISTS</label>
                     <onfocus>Skin.SetString(musichome,musicdb://artists/)</onfocus>
+                    <onclick>ActivateWindow(music,artists)</onclick>
                 </control>
             </control>
 

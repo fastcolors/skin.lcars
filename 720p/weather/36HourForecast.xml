@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<include name="Weather36HourForcast">
+		<control type="group">
+            <left>630</left>
+			<visible>StringCompare(Window.Property(Weather.CurrentView),36hour)</visible>
+			<control type="button" id="997">
+				<description>Hidden Button for focus</description>
+				<left>-600</left>
+				<top>-20</top>
+				<width>1</width>
+				<height>1</height>
+				<texturenofocus>-</texturenofocus>
+				<texturefocus>-</texturefocus>
+				<onleft>9000</onleft>
+				<onright>9000</onright>
+			</control>
+            <!--todo label-->
+			<control type="label">
+				<left>0</left>
+				<top>200</top>
+				<width>600</width>
+				<height>30</height>
+				<font>font13</font>
+				<textcolor>white</textcolor>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>NOT FETCHED</label>
+				<visible>IsEmpty(Window.Property(36Hour.IsFetched))</visible>
+			</control>
+			<control type="group">
+				<left>20</left>
+				<top>50</top>
+				<visible>!IsEmpty(Window.Property(36Hour.IsFetched))</visible>
+				<control type="group">
+                    <control type="image">
+						<left>0</left>
+						<top>40</top>
+						<width>600</width>
+						<height>120</height>
+						<texture border="20" colordiffuse="darkblue">whiteallrounded.png</texture>
+                        </control>
+					<control type="label">
+						<left>0</left>
+						<top>5</top>
+						<width>600</width>
+						<height>30</height>
+						<font>font30</font>
+                        <textcolor>yellow</textcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<label>$INFO[Window.Property(36Hour.1.Heading)]</label>
+					</control>
+					<control type="image">
+						<left>10</left>
+						<top>0</top>
+						<width>130</width>
+						<height>130</height>
+						<aspectratio>keep</aspectratio>
+						<texture>$INFO[Window.Property(36Hour.1.OutlookIcon)]</texture>
+					</control>
+					<control type="label">
+						<left>150</left>
+						<top>40</top>
+						<width>100</width>
+						<height>70</height>
+						<textcolor>white</textcolor>
+						<selectedcolor>selected</selectedcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>[COLOR=grey2]$INFO[Window.Property(36Hour.1.TemperatureHeading)][CR][/COLOR]$INFO[Window.Property(36Hour.1.Temperature),[B] ,[/B]]</label>
+					</control>
+					<control type="label">
+						<right>50</right>
+						<top>40</top>
+						<width>390</width>
+						<height>70</height>
+						<textcolor>white</textcolor>
+						<selectedcolor>selected</selectedcolor>
+						<align>right</align>
+						<aligny>center</aligny>
+						<label>$INFO[Window.Property(36Hour.1.ChancePrecipitation),[COLOR=grey2]CHANCE OF PRECIPITATION :[/COLOR][B] ,[/B]]</label>
+					</control>
+					<control type="label">
+						<left>20</left>
+						<top>130</top>
+						<width>560</width>
+						<height>18</height>
+						<textcolor>white</textcolor>
+						<selectedcolor>selected</selectedcolor>
+						<align>left</align>
+                        <aligny>center</aligny>
+						<label>$INFO[Window.Property(36hour.1.Forecast),[COLOR=grey2]CONDITIONS: [/COLOR]]</label>
+					</control>
+				</control>
+				<control type="group">
+					<left>0</left>
+					<top>185</top>
+                      <control type="image">
+						<left>0</left>
+						<top>40</top>
+						<width>600</width>
+						<height>120</height>
+						<texture border="20" colordiffuse="darkblue">whiteallrounded.png</texture>
+                        </control>
+					<control type="label">
+						<left>0</left>
+						<top>5</top>
+						<width>600</width>
+						<height>30</height>
+						<font>font30</font>
+                        <textcolor>yellow</textcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<label>$INFO[Window.Property(36Hour.2.Heading)]</label>
+					</control>
+					<control type="image">
+						<left>10</left>
+						<top>0</top>
+						<width>130</width>
+						<height>130</height>
+						<aspectratio>keep</aspectratio>
+						<texture>$INFO[Window.Property(36Hour.2.OutlookIcon)]</texture>
+					</control>
+					<control type="label">
+						<left>150</left>
+						<top>40</top>
+						<width>100</width>
+						<height>70</height>
+						<textcolor>white</textcolor>
+						<selectedcolor>selected</selectedcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>[COLOR=grey2]$INFO[Window.Property(36Hour.2.TemperatureHeading)][CR][/COLOR]$INFO[Window.Property(36Hour.2.Temperature),[B] ,[/B]]</label>
+					</control>
+					<control type="label">
+						<right>50</right>
+						<top>40</top>
+						<width>390</width>
+						<height>70</height>
+						<textcolor>white</textcolor>
+						<selectedcolor>selected</selectedcolor>
+						<align>right</align>
+						<aligny>center</aligny>
+						<label>$INFO[Window.Property(36Hour.2.ChancePrecipitation),[COLOR=grey2]CHANCE OF PRECIPITATION :[/COLOR][B] ,[/B]]</label>
+					</control>
+					<control type="label">
+						<left>20</left>
+						<top>130</top>
+						<width>560</width>
+						<height>18</height>
+						<textcolor>white</textcolor>
+						<selectedcolor>selected</selectedcolor>
+						<align>left</align>
+                        <aligny>center</aligny>
+						<label>$INFO[Window.Property(36hour.2.Forecast),[COLOR=grey2]CONDITIONS: [/COLOR]]</label>
+					</control>
+				</control>
+				<control type="group">
+					<left>0</left>
+					<top>370</top>
+                      <control type="image">
+						<left>0</left>
+						<top>40</top>
+						<width>600</width>
+						<height>120</height>
+						<texture border="20" colordiffuse="darkblue">whiteallrounded.png</texture>
+                        </control>
+					<control type="label">
+						<left>0</left>
+						<top>5</top>
+						<width>600</width>
+						<height>30</height>
+						<font>font30</font>
+                        <textcolor>yellow</textcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<label>$INFO[Window.Property(36Hour.3.Heading)]</label>
+					</control>
+					<control type="image">
+						<left>10</left>
+						<top>0</top>
+						<width>130</width>
+						<height>130</height>
+						<aspectratio>keep</aspectratio>
+						<texture>$INFO[Window.Property(36Hour.3.OutlookIcon)]</texture>
+					</control>
+					<control type="label">
+						<left>150</left>
+						<top>40</top>
+						<width>100</width>
+						<height>70</height>
+						<textcolor>white</textcolor>
+						<selectedcolor>selected</selectedcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>[COLOR=grey2]$INFO[Window.Property(36Hour.3.TemperatureHeading)][CR][/COLOR]$INFO[Window.Property(36Hour.3.Temperature),[B] ,[/B]]</label>
+					</control>
+					<control type="label">
+						<right>50</right>
+						<top>40</top>
+						<width>390</width>
+						<height>70</height>
+						<textcolor>white</textcolor>
+						<selectedcolor>selected</selectedcolor>
+						<align>right</align>
+						<aligny>center</aligny>
+						<label>$INFO[Window.Property(36Hour.3.ChancePrecipitation),[COLOR=grey2]CHANCE OF PRECIPITATION :[/COLOR][B] ,[/B]]</label>
+					</control>
+					<control type="label">
+						<left>20</left>
+						<top>130</top>
+						<width>560</width>
+						<height>18</height>
+						<textcolor>white</textcolor>
+						<selectedcolor>selected</selectedcolor>
+						<align>left</align>
+                        <aligny>center</aligny>
+						<label>$INFO[Window.Property(36hour.3.Forecast),[COLOR=grey2]CONDITIONS: [/COLOR]]</label>
+					</control>
+				</control>
+			</control>
+		</control>
+	</include>
+</includes>

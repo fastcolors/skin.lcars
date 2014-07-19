@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<include name="Weather10DayForcast">
+		<control type="group">
+			<visible>IsEmpty(Window.Property(Weather.CurrentView))</visible>
+			<control type="label">
+				<description>header label</description>
+				<left>20</left>
+				<top>15</top>
+				<width>610</width>
+				<height>30</height>
+				<font>font13_title</font>
+				<label>31904</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="panel" id="51">
+				<left>230</left>
+				<top>70</top>
+				<width>1000</width>
+				<height>541</height>
+				<onleft>9000</onleft>
+				<onright>61</onright>
+				<onup>51</onup>
+				<ondown>51</ondown>
+				<viewtype label="535">list</viewtype>
+				<pagecontrol>61</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<itemlayout height="100" width="496">
+					<control type="image">
+						<left>0</left>
+						<top>3</top>
+						<width>490</width>
+						<height>94</height>
+						<texture colordiffuse="darkblue" border="20">whiteallrounded.png</texture>
+						<include>VisibleFadeEffect</include>
+					</control>
+					<control type="label">
+						<left>30</left>
+						<top>3</top>
+						<width>50</width>
+						<height>94</height>
+                        <textcolor>white</textcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+					<control type="image">
+						<left>84</left>
+                        <top>3</top>
+						<width>94</width>
+						<height>94</height>
+						<aspectratio>keep</aspectratio>
+						<texture>$INFO[ListItem.Thumb]</texture>
+					</control>
+					<control type="label">
+						<left>189</left>
+						<top>3</top>
+						<width>390</width>
+						<height>94</height>
+                        <textcolor>white</textcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label2][CR]$INFO[ListItem.ActualIcon]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout height="100" width="496">
+					<control type="image">
+						<left>0</left>
+						<top>3</top>
+						<width>490</width>
+						<height>94</height>
+						<texture colordiffuse="darkblue" border="20">whiteallrounded.png</texture>
+					</control>
+                    <control type="image">
+						<left>0</left>
+						<top>3</top>
+						<width>490</width>
+						<height>94</height>
+						<texture colordiffuse="55FFFFFF" border="20">whiteallrounded.png</texture>
+						<visible>Control.HasFocus(51)</visible>
+					</control>
+					<control type="label">
+						<left>30</left>
+						<top>3</top>
+						<width>50</width>
+						<height>94</height>
+                        <textcolor>white</textcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+					<control type="image">
+						<left>84</left>
+                        <top>3</top>
+						<width>94</width>
+						<height>94</height>
+						<aspectratio>keep</aspectratio>
+						<texture>$INFO[ListItem.Thumb]</texture>
+					</control>
+					<control type="label">
+						<left>189</left>
+						<top>3</top>
+						<width>390</width>
+						<height>94</height>
+                        <textcolor>white</textcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label2][CR]$INFO[ListItem.ActualIcon]</label>
+					</control>
+				</focusedlayout>
+				<content>
+					<item>
+						<icon>NON VA</icon>
+						<onclick>noop</onclick>
+						<visible>IsEmpty(Window.Property(Daily.IsFetched))</visible>
+					</item>
+					<item>
+						<label>$INFO[Window.Property(Daily.1.ShortDay)][CR]$INFO[Window.Property(Daily.1.ShortDate)]</label>
+						<label2>$INFO[Window.Property(Daily.1.HighTemperature),$LOCALIZE[419] : ,]  $INFO[Window.Property(Daily.1.LowTemperature),$LOCALIZE[418] : ,][CR]$INFO[Window.Property(Daily.1.Precipitation),$LOCALIZE[33022] : ,]</label2>
+						<thumb>$INFO[Window.Property(Daily.1.OutlookIcon)]</thumb>
+						<onclick>noop</onclick>
+                        <icon>$INFO[Window.Property(Daily.2.Outlook),$LOCALIZE[33030]: ][CR]$LOCALIZE[383]: $INFO[Window.Property(Daily.2.WindSpeed)] $INFO[Window.Property(Daily.2.WindDirection)]</icon>
+						<visible>!IsEmpty(Window.Property(Daily.IsFetched))</visible>
+					</item>
+					<item>
+						<label>$INFO[Window.Property(Daily.2.ShortDay)][CR]$INFO[Window.Property(Daily.2.ShortDate)]</label>
+						<label2>$INFO[Window.Property(Daily.2.HighTemperature),$LOCALIZE[419] : ,]  $INFO[Window.Property(Daily.2.LowTemperature),$LOCALIZE[418] : ,][CR]$INFO[Window.Property(Daily.2.Precipitation),$LOCALIZE[33022] : ,]</label2>
+						<thumb>$INFO[Window.Property(Daily.2.OutlookIcon)]</thumb>
+						<icon>$INFO[Window.Property(Daily.2.Outlook),$LOCALIZE[33030]: ][CR]$LOCALIZE[383]: $INFO[Window.Property(Daily.2.WindSpeed)] $INFO[Window.Property(Daily.2.WindDirection)]</icon>
+						<onclick>noop</onclick>
+						<visible>!IsEmpty(Window.Property(Daily.IsFetched))</visible>
+					</item>
+					<item>
+						<label>$INFO[Window.Property(Daily.3.ShortDay)][CR]$INFO[Window.Property(Daily.3.ShortDate)]</label>
+						<label2>$INFO[Window.Property(Daily.3.HighTemperature),$LOCALIZE[419] : ,]  $INFO[Window.Property(Daily.3.LowTemperature),$LOCALIZE[418] : ,][CR]$INFO[Window.Property(Daily.3.Precipitation),$LOCALIZE[33022] : ,]</label2>
+						<thumb>$INFO[Window.Property(Daily.3.OutlookIcon)]</thumb>
+						<icon>$INFO[Window.Property(Daily.3.Outlook),$LOCALIZE[33030]: ][CR]$LOCALIZE[383]: $INFO[Window.Property(Daily.3.WindSpeed)] $INFO[Window.Property(Daily.3.WindDirection)]</icon>
+						<onclick>noop</onclick>
+						<visible>!IsEmpty(Window.Property(Daily.IsFetched))</visible>
+					</item>
+					<item>
+						<label>$INFO[Window.Property(Daily.4.ShortDay)][CR]$INFO[Window.Property(Daily.4.ShortDate)]</label>
+						<label2>$INFO[Window.Property(Daily.4.HighTemperature),$LOCALIZE[419] : ,]  $INFO[Window.Property(Daily.4.LowTemperature),$LOCALIZE[418] : ,][CR]$INFO[Window.Property(Daily.4.Precipitation),$LOCALIZE[33022] : ,]</label2>
+						<thumb>$INFO[Window.Property(Daily.4.OutlookIcon)]</thumb>
+						<icon>$INFO[Window.Property(Daily.4.Outlook),$LOCALIZE[33030]: ][CR]$LOCALIZE[383]: $INFO[Window.Property(Daily.4.WindSpeed)] $INFO[Window.Property(Daily.4.WindDirection)]</icon>
+						<onclick>noop</onclick>
+						<visible>!IsEmpty(Window.Property(Daily.IsFetched))</visible>
+					</item>
+					<item>
+						<label>$INFO[Window.Property(Daily.5.ShortDay)][CR]$INFO[Window.Property(Daily.5.ShortDate)]</label>
+						<label2>$INFO[Window.Property(Daily.5.HighTemperature),$LOCALIZE[419] : ,]  $INFO[Window.Property(Daily.5.LowTemperature),$LOCALIZE[418] : ,][CR]$INFO[Window.Property(Daily.5.Precipitation),$LOCALIZE[33022] : ,]</label2>
+						<thumb>$INFO[Window.Property(Daily.5.OutlookIcon)]</thumb>
+						<icon>$INFO[Window.Property(Daily.5.Outlook),$LOCALIZE[33030]: ][CR]$LOCALIZE[383]: $INFO[Window.Property(Daily.5.WindSpeed)] $INFO[Window.Property(Daily.5.WindDirection)]</icon>
+						<onclick>noop</onclick>
+						<visible>!IsEmpty(Window.Property(Daily.IsFetched))</visible>
+					</item>
+					<item>
+						<label>$INFO[Window.Property(Daily.6.ShortDay)][CR]$INFO[Window.Property(Daily.6.ShortDate)]</label>
+						<label2>$INFO[Window.Property(Daily.6.HighTemperature),$LOCALIZE[419] : ,]  $INFO[Window.Property(Daily.6.LowTemperature),$LOCALIZE[418] : ,][CR]$INFO[Window.Property(Daily.6.Precipitation),$LOCALIZE[33022] : ,]</label2>
+						<thumb>$INFO[Window.Property(Daily.6.OutlookIcon)]</thumb>
+						<icon>$INFO[Window.Property(Daily.6.Outlook),$LOCALIZE[33030]: ][CR]$LOCALIZE[383]: $INFO[Window.Property(Daily.6.WindSpeed)] $INFO[Window.Property(Daily.6.WindDirection)]</icon>
+						<onclick>noop</onclick>
+						<visible>!IsEmpty(Window.Property(Daily.IsFetched))</visible>
+					</item>
+					<item>
+						<label>$INFO[Window.Property(Daily.7.ShortDay)][CR]$INFO[Window.Property(Daily.7.ShortDate)]</label>
+						<label2>$INFO[Window.Property(Daily.7.HighTemperature),$LOCALIZE[419] : ,]  $INFO[Window.Property(Daily.7.LowTemperature),$LOCALIZE[418] : ,][CR]$INFO[Window.Property(Daily.7.Precipitation),$LOCALIZE[33022] : ,]</label2>
+						<thumb>$INFO[Window.Property(Daily.7.OutlookIcon)]</thumb>
+						<icon>$INFO[Window.Property(Daily.7.Outlook),$LOCALIZE[33030]: ][CR]$LOCALIZE[383]: $INFO[Window.Property(Daily.7.WindSpeed)] $INFO[Window.Property(Daily.7.WindDirection)]</icon>
+						<onclick>noop</onclick>
+						<visible>!IsEmpty(Window.Property(Daily.IsFetched))</visible>
+					</item>
+					<item>
+						<label>$INFO[Window.Property(Daily.8.ShortDay)][CR]$INFO[Window.Property(Daily.8.ShortDate)]</label>
+						<label2>$INFO[Window.Property(Daily.8.HighTemperature),$LOCALIZE[419] : ,]  $INFO[Window.Property(Daily.8.LowTemperature),$LOCALIZE[418] : ,][CR]$INFO[Window.Property(Daily.8.Precipitation),$LOCALIZE[33022] : ,]</label2>
+						<thumb>$INFO[Window.Property(Daily.8.OutlookIcon)]</thumb>
+						<icon>$INFO[Window.Property(Daily.8.Outlook),$LOCALIZE[33030]: ][CR]$LOCALIZE[383]: $INFO[Window.Property(Daily.8.WindSpeed)] $INFO[Window.Property(Daily.8.WindDirection)]</icon>
+						<onclick>noop</onclick>
+						<visible>!IsEmpty(Window.Property(Daily.IsFetched))</visible>
+					</item>
+					<item>
+						<label>$INFO[Window.Property(Daily.9.ShortDay)][CR]$INFO[Window.Property(Daily.9.ShortDate)]</label>
+						<label2>$INFO[Window.Property(Daily.9.HighTemperature),$LOCALIZE[419] : ,]  $INFO[Window.Property(Daily.9.LowTemperature),$LOCALIZE[418] : ,][CR]$INFO[Window.Property(Daily.9.Precipitation),$LOCALIZE[33022] : ,]</label2>
+						<thumb>$INFO[Window.Property(Daily.9.OutlookIcon)]</thumb>
+						<icon>$INFO[Window.Property(Daily.9.Outlook),$LOCALIZE[33030]: ][CR]$LOCALIZE[383]: $INFO[Window.Property(Daily.9.WindSpeed)] $INFO[Window.Property(Daily.9.WindDirection)]</icon>
+						<onclick>noop</onclick>
+						<visible>!IsEmpty(Window.Property(Daily.IsFetched))</visible>
+					</item>
+					<item>
+						<label>$INFO[Window.Property(Daily.10.ShortDay)][CR]$INFO[Window.Property(Daily.10.ShortDate)]</label>
+						<label2>$INFO[Window.Property(Daily.10.HighTemperature),$LOCALIZE[419] : ,]  $INFO[Window.Property(Daily.10.LowTemperature),$LOCALIZE[418] : ,][CR]$INFO[Window.Property(Daily.10.Precipitation),$LOCALIZE[33022] : ,]</label2>
+						<thumb>$INFO[Window.Property(Daily.10.OutlookIcon)]</thumb>
+						<icon>$INFO[Window.Property(Daily.10.Outlook),$LOCALIZE[33030]: ][CR]$LOCALIZE[383]: $INFO[Window.Property(Daily.10.WindSpeed)] $INFO[Window.Property(Daily.10.WindDirection)]</icon>
+						<onclick>noop</onclick>
+						<visible>!IsEmpty(Window.Property(Daily.IsFetched))</visible>
+					</item>
+				</content>
+			</control>
+			<control type="scrollbar" id="61">
+				<left>615</left>
+				<top>60</top>
+				<width>25</width>
+				<height>540</height>
+				<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+				<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+				<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+				<textureslidernib>ScrollBarNib.png</textureslidernib>
+				<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
+				<onleft>51</onleft>
+				<onright>9000</onright>
+				<showonepage>true</showonepage>
+				<orientation>vertical</orientation>
+				<visible>Control.IsVisible(50)</visible>
+			</control>
+			<control type="label">
+				<animation effect="slide" start="0,0" end="-90,0" time="0" condition="system.getbool(input.enablemouse)">Conditional</animation>
+				<description>number of files/pages</description>
+				<right>40</right>
+				<top>627</top>
+				<width>570</width>
+				<font>font12</font>
+				<align>right</align>
+				<scroll>true</scroll>
+				<textcolor>grey</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<label>([COLOR=blue]$INFO[Container(51).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=blue]$INFO[Container(51).CurrentPage]/$INFO[Container(51).NumPages][/COLOR])</label>
+			</control>
+		</control>
+	</include>
+</includes>

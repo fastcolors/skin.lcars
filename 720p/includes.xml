@@ -5,11 +5,11 @@
     <include file="ViewsMusicLibrary.xml"/>
     <include file="ViewsAddonBrowser.xml"/>
 
-     <include file="weather/10DayForecast.xml"/>
-     <include file="weather/36HourForecast.xml"/>
-     <include file="weather/HourlyForecast.xml"/>
-     <include file="weather/MapAlerts.xml"/>
-     <include file="weather/WeekendForecast.xml"/>
+    <include file="weather/10DayForecast.xml"/>
+    <include file="weather/36HourForecast.xml"/>
+    <include file="weather/HourlyForecast.xml"/>
+    <include file="weather/MapAlerts.xml"/>
+    <include file="weather/WeekendForecast.xml"/>
 
     <include name="888buttons">
         <height>87</height>
@@ -754,7 +754,7 @@
             <height>40</height>
             <label>STARDATE : $INFO[System.Date] • $INFO[System.Time]</label>
         </control>
-         <control type="button" id="700">
+        <control type="button" id="700">
             <ondown>9000</ondown>
             <top>15</top>
             <left>13</left>
@@ -802,6 +802,11 @@
         <textcolor>white</textcolor>
         <align>center</align>
         <centerleft>640</centerleft>
+    </include>
+
+    <include name="osdbutt">
+        <width>60</width>
+        <height>60</height>
     </include>
 
     <variable name="Poster">

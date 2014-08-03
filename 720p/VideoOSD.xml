@@ -4,7 +4,7 @@
     <allowoverlay>yes</allowoverlay>
     <zorder>2</zorder>
     <controls>
-        <control type="group" id="101" description="Options content">
+        <control type="group" description="Options content">
             <visible>!Window.IsVisible(10123) + !Window.IsVisible(10124) + !Window.IsVisible(10125)</visible>
             <left>640</left>
             <top>718</top>
@@ -92,8 +92,6 @@
             <visible>![Window.IsActive(DialogSelect.xml) | Window.IsActive(SliderDialog) | Window.IsActive(OSDVideoSettings) | Window.IsActive(OSDAudioSettings) | Window.IsActive(VideoBookmarks) | Window.IsActive(script-XBMC-Subtitles-main.xml)]</visible>
             <animation effect="fade" end="100" time="400">Visible</animation>
             <animation effect="fade" end="0" time="100">Hidden</animation>
-            <posx>0</posx>
-            <top>0</top>
             <control type="group" description="Dialog Background">
                 <visible>Window.IsVisible(videoosd.xml) + Window.IsActive(dialogseekbar.xml)</visible>
                 <control type="image">
@@ -185,49 +183,42 @@
                     <onclick>PlayerControl(Play)</onclick>
                 </control>
                 <control type="button" id="4">
-                    <width>60</width>
-                    <height>60</height>
+                    <include>osdbutt</include>
                     <label>STOP</label>
                     <onclick>PlayerControl(Stop)</onclick>
                 </control>
                 <control type="button" id="5">
                     <visible>!Pvr.IsPlayingTV</visible>
-                    <width>60</width>
-                    <height>60</height>
+                    <include>osdbutt</include>
                     <label>FFWD</label>
                     <onclick>PlayerControl(Forward)</onclick>
                 </control>
                 <control type="button" id="6">
-                    <width>60</width>
-                    <height>60</height>
+                    <include>osdbutt</include>
                     <label>NEXT</label>
                     <onclick>PlayerControl(Next)</onclick>
                 </control>
                 <control type="button" id="7">
                     <visible>Pvr.IsPlayingTV</visible>
-                    <width>60</width>
-                    <height>60</height>
+                    <include>osdbutt</include>
                     <label>NEXT</label>
                     <onclick>ActivateWindow(PVROSDChannels)</onclick>
                 </control>
                 <control type="button" id="8">
                     <visible>Pvr.IsPlayingTV</visible>
-                    <width>60</width>
-                    <height>60</height>
+                    <include>osdbutt</include>
                     <label>NEXT</label>
                     <onclick>ActivateWindow(PVROSDGuide)</onclick>
                 </control>
                 <control type="button" id="9">
                     <visible>Pvr.IsPlayingTV + Player.CanRecord</visible>
-                    <width>60</width>
-                    <height>60</height>
+                    <include>osdbutt</include>
                     <label>NEXT</label>
                     <onclick>PlayerControl(Record)</onclick>
                 </control>
                 <control type="button" id="10">
                     <visible>VideoPlayer.IsStereoscopic</visible>
-                    <width>60</width>
-                    <height>60</height>
+                    <include>osdbutt</include>
                     <label>3D</label>
                     <onclick>SetFocus(500)</onclick>
                 </control>

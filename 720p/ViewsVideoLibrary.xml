@@ -19,7 +19,8 @@
                     <texture>$VAR[poster]</texture>
                 </control>
                <control type="textbox">
-                    <visible>IsEmpty(ListItem.Art(poster))</visible>
+                    <visible>IsEmpty(ListItem.Art(thumb)) | [IsEmpty(ListItem.Art(fanart)) +  ![Container.Content(files)|Container.Content(tvshows)|Container.Content(movies)|Container.Content(musicvideos) |Container.Content(actors)|Container.Content(episodes)]]</visible>
+                   
                     <top>10</top>
                     <right>10</right>
                     <align>right</align>
@@ -39,7 +40,7 @@
                     <bordersize>4</bordersize>
                 </control>
                 <control type="textbox">
-                    <visible>IsEmpty(ListItem.Art(poster))</visible>
+                    <visible>IsEmpty(ListItem.Art(thumb)) | [IsEmpty(ListItem.Art(fanart)) +  ![Container.Content(files)|Container.Content(tvshows)|Container.Content(movies)|Container.Content(musicvideos) |Container.Content(actors)|Container.Content(episodes)]]</visible>
                     <top>10</top>
                     <right>10</right>
                     <align>right</align>

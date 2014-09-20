@@ -6,7 +6,7 @@
             <onup>9000</onup>
             <top>135</top>
             <left>320</left>
-            <width>960</width>
+            <width>900</width>
             <height>280</height>
             <orientation>horizontal</orientation>
             <itemlayout width="180" height="280">

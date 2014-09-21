@@ -96,7 +96,7 @@
 			</focusedlayout>
 		</control>
 		<control type="list" id="6">
-			<left>450</left>
+			<left>455</left>
 			<top>130</top>
 			<width>550</width>
 			<height>406</height>
@@ -110,37 +110,30 @@
 			<animation effect="slide" end="120,0" time="0" condition="!Control.IsVisible(5)">Conditional</animation>
 			<itemlayout height="85" width="550">
 				<control type="image">
-					<left>0</left>
-					<top>0</top>
-					<width>550</width>
-					<height>80</height>
-					<texture border="5">button-nofocus.png</texture>
-				</control>
-				<control type="image">
-					<left>2</left>
-					<top>2</top>
+					<left>5</left>
+					<top>5</top>
 					<width>80</width>
 					<height>76</height>
-					<texture>$INFO[Listitem.Icon]</texture>
-					<bordertexture border="3">black-back2.png</bordertexture>
+					<aspectratio>scale</aspectratio>
+                    <texture>$INFO[Listitem.Icon]</texture>
 					<bordersize>2</bordersize>
 				</control>
 				<control type="label">
-					<left>90</left>
-					<top>10</top>
-					<width>450</width>
+					<left>93</left>
+					<top>5</top>
+					<width>250</width>
 					<height>30</height>
 					<font>font13</font>
 					<textcolor>grey</textcolor>
 					<selectedcolor>selected</selectedcolor>
 					<align>left</align>
 					<aligny>center</aligny>
-					<label>[B]$INFO[ListItem.Label][/B]</label>
+					<label>$INFO[ListItem.Label]</label>
 				</control>
 				<control type="textbox">
-					<left>90</left>
+					<left>93</left>
 					<top>30</top>
-					<width>450</width>
+					<width>250</width>
 					<height>50</height>
 					<font>font12</font>
 					<textcolor>grey</textcolor>
@@ -151,48 +144,31 @@
 			</itemlayout>
 			<focusedlayout height="85" width="550">
 				<control type="image">
-					<left>0</left>
-					<top>0</top>
-					<width>550</width>
-					<height>80</height>
-					<texture border="5">button-nofocus.png</texture>
-					<visible>!Control.HasFocus(6)</visible>
-					<include>VisibleFadeEffect</include>
-				</control>
-				<control type="image">
-					<left>0</left>
-					<top>0</top>
-					<width>550</width>
-					<height>80</height>
-					<texture border="5">button-focus2.png</texture>
-					<visible>Control.HasFocus(6)</visible>
-					<include>VisibleFadeEffect</include>
-				</control>
-				<control type="image">
-					<left>2</left>
-					<top>2</top>
+					<left>5</left>
+					<top>5</top>
 					<width>80</width>
 					<height>76</height>
-					<texture>$INFO[Listitem.Icon]</texture>
-					<bordertexture border="3">black-back2.png</bordertexture>
-					<bordersize>2</bordersize>
+					<aspectratio>scale</aspectratio>
+                    <texture>$INFO[Listitem.Icon]</texture>
+					<bordertexture colordiffuse="red">white.png</bordertexture>
+                    <bordersize>2</bordersize>
 				</control>
 				<control type="label">
-					<left>90</left>
-					<top>10</top>
-					<width>450</width>
+					<left>93</left>
+					<top>5</top>
+					<width>250</width>
 					<height>30</height>
 					<font>font13</font>
 					<textcolor>white</textcolor>
 					<selectedcolor>selected</selectedcolor>
 					<align>left</align>
 					<aligny>center</aligny>
-					<label>[B]$INFO[ListItem.Label][/B]</label>
+					<label>$INFO[ListItem.Label]</label>
 				</control>
 				<control type="textbox">
-					<left>90</left>
+					<left>93</left>
 					<top>30</top>
-					<width>450</width>
+					<width>250</width>
 					<height>50</height>
 					<font>font12</font>
 					<textcolor>grey</textcolor>
@@ -282,7 +258,7 @@
 			<ondown>3</ondown>
 			<visible>system.getbool(input.enablemouse)</visible>
 		</control>
-		<control type="group">
+		<!--control type="group">
 			<left>640</left>
 			<top>340</top>
 			<visible>Control.IsVisible(6) + Control.IsVisible(5)</visible>
@@ -301,6 +277,6 @@
 				<aspectratio>keep</aspectratio>
 				<texture background="true">$INFO[Container(6).ListItem.Icon]</texture>
 			</control> 
-		</control>
+		</control-->
 	</controls>
 </window>

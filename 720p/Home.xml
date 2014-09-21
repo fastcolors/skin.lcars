@@ -28,9 +28,9 @@
             <left>1230</left>
             <width>40</width>
             <height>39</height>
-            <label></label>
-            <texturenofocus colordiffuse="design">bullet.png</texturenofocus>
-            <texturefocus colordiffuse="blue">bullet.png</texturefocus>
+            <aligny>center</aligny>
+            <texturenofocus colordiffuse="design">quitbullet.png</texturenofocus>
+            <texturefocus colordiffuse="blue">quitbullet.png</texturefocus>
             <onclick>ActivateWindow(ShutdownMenu)</onclick>
         </control>
         <!--<control type="button" id="700">-->

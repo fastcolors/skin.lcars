@@ -80,7 +80,7 @@
                     <top>475</top>
                     <width>300</width>
                     <height>174</height>
-                    <imagepath diffuse="soap.png">$INFO[Window(Weather).Property(MapPath)]</imagepath>
+                    <imagepath diffuse="soap.png">$INFO[Window(Weather).Property(Map.1.Area)]</imagepath>
                     <timeperimage>500</timeperimage>
                     <pauseatend>1000</pauseatend>
                     <fadetime>0</fadetime>

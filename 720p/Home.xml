@@ -101,46 +101,54 @@
             </control>
         </focusedlayout>
         <content>
+            <!--MOVIES-->
             <item id="1">
                 <label>342</label>
                 <label2>FFFF0000</label2>
                 <onclick condition="Library.HasContent(Movies)">ActivateWindow(Videos,MovieTitles,return)</onclick>
                 <onclick condition="!Library.HasContent(Movies)">ActivateWindow(Videos,root)</onclick>
             </item>
+            <!--TVSHOWS-->
             <item id="2">
                 <label>20343</label>
                 <label2>FFFF0000</label2>
                 <onclick condition="Library.HasContent(TVShows)">ActivateWindow(VideoLibrary,TVShowTitles,return)</onclick>
                 <onclick condition="!Library.HasContent(TVShows)">ActivateWindow(Videos,root)</onclick>
             </item>
+            <!--MUSIC-->
             <item id="3">
                 <label>2</label>
                 <label2>FFFF0000</label2>
                 <onclick condition="!Library.HasContent(Music)">ActivateWindow(501,root,return)</onclick>
                 <onclick condition="Library.HasContent(Music)">ActivateWindow(502,return)</onclick>
             </item>
+            <!--ADDONS-->
             <item id="4">
                 <label>24001</label>
                 <label2>FFFF0000</label2>
                 <onclick>ActivateWindow(AddonBrowser.xml)</onclick>
             </item>
+            <!--LIVETV-->
             <item id="5">
-                <thumb>icons/LiveTV.png</thumb>
-                <!--todo label-->
-                <label>LiveTV</label>
+                <label>19020</label>
                 <label2>FFFF0000</label2>
-                <onclick>ActivateWindow(myPVR)</onclick>
+                <!--<onclick>ActivateWindow(myPVR)</onclick>-->
+                <onclick>noop</onclick>
             </item>
+            <!--PICTURES-->
             <item id="6">
-                <label>Pictures</label>
+                <label>1</label>
                 <label2>FFFF0000</label2>
-                <onclick>ActivateWindow(Pictures)</onclick>
+                <!--<onclick>ActivateWindow(Pictures)</onclick>-->
+                <onclick>noop</onclick>
             </item>
+            <!--SOURCES-->
             <item id="7">
-                <label>Sources</label>
+                <label>20094</label>
                 <label2>FFFF0000</label2>
-                <onclick>ActivateWindow(MusicFiles,root)</onclick>
+                <onclick>noop</onclick>
             </item>
+            <!--WEATHER-->
             <item id="8">
                 <label>$INFO[Weather.Temperature]</label>
                 <label2>FFFF0000</label2>
@@ -154,7 +162,7 @@
         <align>right</align>
         <width>145</width>
         <height>40</height>
-        <label>CONFIGURE</label>
+        <label>24020</label>
     </control>
     <control type="label">
         <visible>Control.IsVisible(311)</visible>
@@ -207,7 +215,7 @@
         <width>860</width>
         <height>6</height>
         <texturesliderbackground border="4">HScrollbarBG.png</texturesliderbackground>
-        <textureslidernib>HScrollerNF.png</textureslidernib>
+        <textureslidernib border="4">HScrollerNF.png</textureslidernib>
         <textureslidernibfocus>HScrollerFO.png</textureslidernibfocus>
     </control>
 </controls>

@@ -83,8 +83,8 @@
             <!--todo labels-->
             <control type="togglebutton" id="4">
                 <description>Sort asc</description>
-                <label>DESC</label>
-                <altlabel>ASC</altlabel>
+                <label>585</label>
+                <altlabel>584</altlabel>
                 <include>9000butts</include>
             </control>
             <control type="edit" id="19">

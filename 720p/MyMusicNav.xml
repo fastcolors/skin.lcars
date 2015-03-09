@@ -42,12 +42,11 @@
                 <include>9000butts</include>
                 <label>103</label>
             </control>
-            <!--todo labels-->
             <control type="togglebutton" id="4">
                 <description>Sort asc</description>
                 <include>9000butts</include>
-                <label>DESC</label>
-                <altlabel>ASC</altlabel>
+                <label>585</label>
+                <altlabel>584</altlabel>
                 <usealttexture>Container.SortDirection(Ascending)</usealttexture>
             </control>
             <control type="radiobutton" id="99">

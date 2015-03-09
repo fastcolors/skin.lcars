@@ -121,16 +121,16 @@
                     <label>RECENTLY</label>
                     <onfocus>Skin.SetString(movieshome,videodb://recentlyaddedmovies/)</onfocus>
                 </control>
-                <!--todo not sure-->
                 <control type="button" id="501">
                     <include>888buttons</include>
-                    <label>NOT SURE</label>
-                    <onfocus>Skin.SetString(movieshome,x)</onfocus>
+                    <label>RANDOM</label>
+                    <onfocus>Skin.SetString(movieshome,special://skin/resources/random.xsp)</onfocus>
+                    <onclick>ReloadSkin()</onclick>
                 </control>
                 <control type="button" id="502">
                     <include>888buttons</include>
-                    <label>ALL MOVIES</label>
-                    <onfocus>Skin.SetString(movieshome,videodb://movies/titles/)</onfocus>
+                    <label>IN PROGRESS</label>
+                    <onfocus>Skin.SetString(movieshome,special://skin/resources/laststarted.xsp)</onfocus>
                 </control>
             </control>
             <control type="panel" id="311">
@@ -153,7 +153,7 @@
                         <width>170</width>
                         <height>250</height>
                         <aspectratio>keep</aspectratio>
-                        <texture>$VAR[Poster]</texture>
+                        <texture>$VAR[poster]</texture>
                     </control>
                 </itemlayout>
                 <focusedlayout width="180" height="280">
@@ -162,7 +162,7 @@
                         <width>178</width>
                         <height>258</height>
                         <aspectratio>keep</aspectratio>
-                        <texture>$VAR[Poster]</texture>
+                        <texture>$VAR[poster]</texture>
                         <bordertexture colordiffuse="red">white.png</bordertexture>
                         <bordersize>4</bordersize>
                     </control>
@@ -195,11 +195,10 @@
                     <label>RECENTLY</label>
                     <onfocus>Skin.SetString(tvhome,videodb://recentlyaddedepisodes/)</onfocus>
                 </control>
-                <!--todo not sure-->
                 <control type="button" id="501">
                     <include>888buttons</include>
-                    <label>NOT SURE</label>
-                    <onfocus>Skin.SetString(tvhome,x)</onfocus>
+                    <label>RECOMMENDED</label>
+                    <onfocus>Skin.SetString(tvhome,plugin://service.library.data.provider?type=recommendedepisodes&limit=20&reload=$INFO[Window.Property(recommendedepisodes)])</onfocus>
                 </control>
                 <control type="button" id="502">
                     <include>888buttons</include>
@@ -207,7 +206,6 @@
                     <onfocus>Skin.SetString(tvhome,videodb://tvshows/titles/)</onfocus>
                 </control>
             </control>
-
             <control type="panel" id="311">
                 <animation effect="fade" start="100" end="80" condition="!Control.HasFocus(311) + !Control.HasFocus(60)">Conditional</animation>
                 <visible>Container(9000).HasFocus(2)</visible>
@@ -223,37 +221,16 @@
                 <orientation>horizontal</orientation>
                 <itemlayout width="180" height="280">
                     <control type="image">
-                        <visible>Skin.String(tvhome,videodb://recentlyaddedepisodes/)</visible>
                         <left>10</left>
                         <top>4</top>
                         <width>170</width>
                         <height>250</height>
                         <aspectratio>keep</aspectratio>
-                        <info>ListItem.Art(tvshow.poster)</info>
-                    </control>
-                    <control type="image">
-                        <visible>!Skin.String(tvhome,videodb://recentlyaddedepisodes/)</visible>
-                        <left>10</left>
-                        <top>4</top>
-                        <width>170</width>
-                        <height>250</height>
-                        <aspectratio>keep</aspectratio>
-                        <texture>$VAR[poster]</texture>
+                        <texture>$INFO[ListItem.Art(poster)]$INFO[ListItem.Art(tvshow.poster)]</texture>
                     </control>
                 </itemlayout>
                 <focusedlayout width="180" height="280">
                     <control type="image">
-                        <visible>Skin.String(tvhome,videodb://recentlyaddedepisodes/)</visible>
-                        <left>6</left>
-                        <width>178</width>
-                        <height>258</height>
-                        <aspectratio>keep</aspectratio>
-                        <info>ListItem.Art(tvshow.poster)</info>
-                        <bordertexture colordiffuse="red">white.png</bordertexture>
-                        <bordersize>4</bordersize>
-                    </control>
-                    <control type="image">
-                        <visible>!Skin.String(tvhome,videodb://recentlyaddedepisodes/)</visible>
                         <left>6</left>
                         <width>178</width>
                         <height>258</height>
@@ -809,8 +786,8 @@
         <height>60</height>
     </include>
 
-    <variable name="Poster">
-        <value condition="Container.Content(episodes) + !IsEmpty(ListItem.Art(tvshow.poster))">$INFO[ListItem.Art(tvshow.poster)]</value>
+    <variable name="poster">
+        <!--<value condition="Container.Content(episodes) + !IsEmpty(ListItem.Art(tvshow.poster))">$INFO[ListItem.Art(tvshow.poster)]</value>-->
         <value condition="!IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
         <!--<value condition="StringCompare(ListItem.Label,..)">$INFO[ListItem.Icon]</value>-->
         <!--<value condition="!IsEmpty(ListItem.Thumb))">$INFO[ListItem.Thumb]</value>-->

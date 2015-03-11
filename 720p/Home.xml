@@ -20,6 +20,17 @@
             <textcolor>darkred</textcolor>
             <label>^ PRESS UP TO EXIT TO MAIN MENU ^</label>
         </control>
+        <control type="label">
+            <visible>StringCompare(Skin.String(movieshome),special://skin/resources/random.xsp)</visible>
+            <top>417</top>
+            <centerleft>512</centerleft>
+            <align>center</align>
+            <width>250</width>
+            <height>30</height>
+            <font>font12</font>
+            <textcolor>darkred</textcolor>
+            <label>^ CLICK TO REFRESH ^</label>
+        </control>
         <include>allwindows</include>
         <control type="button" id="702">
             <description>powerbutton</description>

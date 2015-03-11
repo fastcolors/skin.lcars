@@ -21,19 +21,19 @@
             <onup>700</onup>
             <ondown>20</ondown>
         </control>
-        <control type="button" id="20">
-            <onup>3</onup>
-            <onright>702</onright>
-            <top>630</top>
-            <left>13</left>
-            <width>305</width>
-            <height>79</height>
-            <label></label>
-            <textcolor>00FFFFFF</textcolor>
-            <texturenofocus colordiffuse="design" flipy="true">curvelcars1.png</texturenofocus>
-            <texturefocus colordiffuse="blue" flipy="true">curvelcars1.png</texturefocus>
-            <onclick>SettingsLevelChange</onclick>
-        </control>
+        <!--<control type="button" id="20">-->
+            <!--<onup>3</onup>-->
+            <!--<onright>702</onright>-->
+            <!--<top>630</top>-->
+            <!--<left>13</left>-->
+            <!--<width>305</width>-->
+            <!--<height>79</height>-->
+            <!--<label>-</label>-->
+            <!--<textcolor>00FFFFFF</textcolor>-->
+            <!--<texturenofocus colordiffuse="design" flipy="true">curvelcars1.png</texturenofocus>-->
+            <!--<texturefocus colordiffuse="blue" flipy="true">curvelcars1.png</texturefocus>-->
+            <!--<onclick>SettingsLevelChange</onclick>-->
+        <!--</control>-->
         <control type="label">
             <top>638</top>
             <left>13</left>
@@ -103,13 +103,12 @@
             <align>justify</align>
             <autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
         </control>
-
         <control type="button" id="10">
             <description>Default Category Button</description>
             <height>60</height>
             <width>155</width>
             <texturenofocus colordiffuse="design">white.png</texturenofocus>
-        <texturefocus colordiffuse="blue">white.png</texturefocus>
+            <texturefocus colordiffuse="blue">white.png</texturefocus>
             <align>right</align>
         </control>
         <control type="button" id="7">

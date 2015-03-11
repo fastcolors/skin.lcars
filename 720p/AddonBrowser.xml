@@ -6,17 +6,6 @@
 	<controls>
 		<include>allwindows</include>
 		<include>addonslcarsview</include> <!-- view id = 50 -->
-		<control type="button" id="700">
-			<ondown>9000</ondown>
-			<top>15</top>
-			<left>13</left>
-			<width>305</width>
-			<height>79</height>
-			<label></label>
-			<texturenofocus colordiffuse="design">curvelcars1.png</texturenofocus>
-			<texturefocus colordiffuse="blue">curvelcars1.png</texturefocus>
-			<onclick>Back</onclick>
-		</control>
 		<control type="button" id="701">
 			<onup>9000</onup>
 			<top>630</top>
@@ -51,8 +40,8 @@
 			<control type="togglebutton" id="4">
 				<description>Sort asc</description>
 				<include>9000butts</include>
-				<label>31051</label>
-				<altlabel>31050</altlabel>
+				<label>584</label>
+				<altlabel>585</altlabel>
 				<usealttexture>Container.SortDirection(Ascending)</usealttexture>
 			</control>
 			<control type="button" id="5">

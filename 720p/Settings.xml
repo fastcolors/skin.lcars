@@ -30,7 +30,6 @@
             </control>
             <control type="label">
                 <top>30</top>
-                <left>145</left>
                 <width>145</width>
                 <height>23</height>
                 <aligny>bottom</aligny>
@@ -47,7 +46,6 @@
             </control>
             <control type="label">
                 <top>30</top>
-                <left>145</left>
                 <width>145</width>
                 <height>23</height>
                 <aligny>bottom</aligny>

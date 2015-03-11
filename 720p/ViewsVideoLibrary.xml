@@ -11,6 +11,7 @@
             <orientation>horizontal</orientation>
             <itemlayout width="180" height="280">
                 <control type="image">
+                    <visible>!Container.Content(episodes)</visible>
                     <left>10</left>
                     <top>4</top>
                     <width>170</width>
@@ -18,9 +19,17 @@
                     <aspectratio>keep</aspectratio>
                     <texture>$VAR[poster]</texture>
                 </control>
-               <control type="textbox">
+                <control type="image">
+                    <visible>Container.Content(episodes)</visible>
+                    <left>10</left>
+                    <top>4</top>
+                    <width>170</width>
+                    <height>250</height>
+                    <aspectratio>scale</aspectratio>
+                    <texture>$VAR[poster]</texture>
+                </control>
+                <control type="textbox">
                     <visible>IsEmpty(ListItem.Art(thumb)) | [IsEmpty(ListItem.Art(fanart)) +  ![Container.Content(files)|Container.Content(tvshows)|Container.Content(movies)|Container.Content(musicvideos) |Container.Content(actors)|Container.Content(episodes)]]</visible>
-                   
                     <top>10</top>
                     <right>10</right>
                     <align>right</align>
@@ -31,10 +40,21 @@
             </itemlayout>
             <focusedlayout width="180" height="280">
                 <control type="image">
+                    <visible>!Container.Content(episodes)</visible>
                     <left>6</left>
                     <width>178</width>
                     <height>258</height>
                     <aspectratio>keep</aspectratio>
+                    <texture>$VAR[poster]</texture>
+                    <bordertexture colordiffuse="red">white.png</bordertexture>
+                    <bordersize>4</bordersize>
+                </control>
+                <control type="image">
+                    <visible>Container.Content(episodes)</visible>
+                    <left>6</left>
+                    <width>178</width>
+                    <height>258</height>
+                    <aspectratio>scale</aspectratio>
                     <texture>$VAR[poster]</texture>
                     <bordertexture colordiffuse="red">white.png</bordertexture>
                     <bordersize>4</bordersize>
@@ -61,21 +81,21 @@
             <info>ListItem.Plot</info>
         </control>
         <control type="label">
-        <top>180</top>
-        <left>153</left>
-        <align>right</align>
-        <width>145</width>
-        <height>40</height>
-        <label>$INFO[ListItem.MPAA]</label>
-    </control>
-    <control type="label">
-        <top>272</top>
-        <left>153</left>
-        <align>right</align>
-        <width>145</width>
-        <height>40</height>
-        <label>$INFO[ListItem.Year]</label>
-    </control>
+            <top>180</top>
+            <left>153</left>
+            <align>right</align>
+            <width>145</width>
+            <height>40</height>
+            <label>$INFO[ListItem.MPAA]</label>
+        </control>
+        <control type="label">
+            <top>272</top>
+            <left>153</left>
+            <align>right</align>
+            <width>145</width>
+            <height>40</height>
+            <label>$INFO[ListItem.Year]</label>
+        </control>
         <control type="label">
             <visible>Control.HasFocus(50)</visible>
             <top>417</top>

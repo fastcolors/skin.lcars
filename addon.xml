@@ -5,11 +5,11 @@
         name="lcars"
         provider-name="fastcolors">
     <requires>
-        <import addon="xbmc.gui" version="5.0.0"/>
+        <import addon="xbmc.gui" version="5.3.0"/>
+        <import addon="service.library.data.provider" version="0.0.4"/>
     </requires>
     <extension
             point="xbmc.gui.skin"
-            defaultthemename="textures.xbt"
             debugging="false"
             effectslowdown="1">
         <res width="1280" height="720" aspect="16:9" default="true" folder="720p" />

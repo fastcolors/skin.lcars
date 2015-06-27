@@ -19,7 +19,7 @@
         <width>155</width>
         <height>530</height>
         <onup>700</onup>
-        <ondown>700</ondown>
+        <ondown>701</ondown>
         <onright>750</onright>
         <itemlayout width="155" height="35">
             <!--control type="image">
@@ -114,7 +114,13 @@
             <!--<texturefocus colordiffuse="blue">curvelcars1.png</texturefocus>-->
             <!--<onclick></onclick>-->
         <!--</control>-->
-       <!--control type="button" id="701">
+        <control type="image">
+            <top>630</top>
+            <left>13</left>
+            <width>305</width>
+            <height>79</height>
+            <texture colordiffuse="design" flipy="true">curvelcars1.png</texture>
+        </control><!--control type="button" id="701">
             <onup>9000</onup>
             <onright>702</onright>
             <top>630</top>

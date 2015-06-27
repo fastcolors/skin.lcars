@@ -286,19 +286,40 @@
                 <include condition="StringCompare(Weather.Plugin,weather.wunderground)">WeatherMapAlerts</include>
             </control>
         </control>
-        
+        <control type="group">
             <control type="grouplist" id="9000">
-                <top>103</top>
-				<left>13</left>
-				<width>155</width>
-				<height>530</height>
-				<itemgap>5</itemgap>
-				<onup>700</onup>
-				<ondown>700</ondown>
-				<onright>50</onright>
-                <control type="spincontrolex" id="3">
-                    <description>change location button</description>
+                <top>101</top>
+                <left>13</left>
+                <width>155</width>
+                <height>524</height>
+                <itemgap>6</itemgap>
+                <onup>700</onup>
+                <ondown>701</ondown>
+                <onright>50</onright>
+                <control type="group" id="300">
                     <include>9000butts</include>
+                    <control type="spincontrolex" id="3">
+                        <description>change location button</description>
+                        <left>0</left>
+                        <top>0</top>
+                        <font>-</font>
+                        <include>9000butts</include>
+                        <onleft>50</onleft>
+                        <onright>50</onright>
+                        <onup>700</onup>
+                        <ondown>302</ondown>
+                        <onback>50</onback>
+                    </control>
+                    <control type="label" id="301">
+                        <left>10</left>
+                        <top>0</top>
+                        <align>left</align>
+                        <aligny>center</aligny>
+                        <include>9000butts</include>
+                        <font>font13</font>
+                        <label>LOCATION</label>
+
+                    </control>
                 </control>
                 <control type="button" id="302">
                     <description>Hourly forcast button</description>
@@ -306,7 +327,7 @@
                     <label>Map</label>
                     <onfocus>SetProperty(Weather.CurrentView,map)</onfocus>
                     <onclick>Weather.Refresh</onclick>
-                    <!--visible>StringCompare(Weather.Plugin,weather.wunderground)</visible-->
+                    <visible>StringCompare(Weather.Plugin,weather.wunderground)</visible>
                 </control>
                 <control type="button" id="303">
                     <description>10 day forcast button</description>
@@ -314,7 +335,7 @@
                     <label>10 day</label>
                     <onfocus>ClearProperty(Weather.CurrentView)</onfocus>
                     <onclick>Weather.Refresh</onclick>
-                    <!--visible>StringCompare(Weather.Plugin,weather.wunderground)</visible-->
+                    <visible>StringCompare(Weather.Plugin,weather.wunderground)</visible>
                 </control>
                 <control type="button" id="304">
                     <description>36 hour forcast button</description>
@@ -322,7 +343,7 @@
                     <label>36 hour</label>
                     <onfocus>SetProperty(Weather.CurrentView,36hour)</onfocus>
                     <onclick>Weather.Refresh</onclick>
-                    <!--visible>StringCompare(Weather.Plugin,weather.wunderground)</visible-->
+                    <visible>StringCompare(Weather.Plugin,weather.wunderground)</visible>
                 </control>
                 <control type="button" id="305">
                     <description>Weekend forcast button</description>
@@ -330,7 +351,7 @@
                     <label>Weekend forcast</label>
                     <onfocus>SetProperty(Weather.CurrentView,weekend)</onfocus>
                     <onclick>Weather.Refresh</onclick>
-                    <!--visible>StringCompare(Weather.Plugin,weather.wunderground)</visible-->
+                    <visible>StringCompare(Weather.Plugin,weather.wunderground)</visible>
                 </control>
                 <control type="button" id="306">
                     <description>Hourly forcast button</description>
@@ -338,18 +359,13 @@
                     <label>Hourly forcast</label>
                     <onfocus>SetProperty(Weather.CurrentView,hourly)</onfocus>
                     <onclick>Weather.Refresh</onclick>
-                    <!--visible>StringCompare(Weather.Plugin,weather.wunderground)</visible-->
+                    <visible>StringCompare(Weather.Plugin,weather.wunderground)</visible>
                 </control>
                 <control type="button" id="2">
                     <description>Refresh button</description>
                     <include>9000butts</include>
                     <label>103</label>
                 </control>
-				<control type="button" id="701">
-					<include>9000butts</include>
-                    <label>CONFIGURE</label>
-					<onclick>ActivateWindow(MyWeatherSettings)</onclick>
-            </control>
                 <!--<control type="button" id="4">-->
                     <!--<description>-</description>-->
                     <!--<label>-</label>-->
@@ -368,8 +384,18 @@
                 <!--<texturefocus colordiffuse="blue">curvelcars1.png</texturefocus>-->
                 <!--<onclick></onclick>-->
             <!--</control>-->
-            
-        
+            <control type="button" id="701">
+                <onup>9000</onup>
+                <top>630</top>
+                <left>13</left>
+                <width>305</width>
+                <height>79</height>
+                <label></label>
+                <texturenofocus colordiffuse="design" flipy="true">curvelcars1.png</texturenofocus>
+                <texturefocus colordiffuse="blue" flipy="true">curvelcars1.png</texturefocus>
+                <onclick>ActivateWindow(MyWeatherSettings)</onclick>
+            </control>
+        </control>
         <control type="label">
             <centerleft>650</centerleft>
             <top>15</top>
@@ -380,5 +406,13 @@
             <font>font30</font>
             <info>Weather.Location</info>
         </control>
+        <control type="label">
+        <top>638</top>
+        <left>13</left>
+        <align>right</align>
+        <width>145</width>
+        <height>40</height>
+        <label>CONFIGURE</label>
+    </control>
     </controls>
 </window>

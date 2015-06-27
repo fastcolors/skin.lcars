@@ -21,16 +21,19 @@
             <onup>700</onup>
             <ondown>20</ondown>
         </control>
-        <control type="button" id="20">
-            <onup>3</onup>
-            <onright>702</onright>
-            <ondown>700</ondown>
-			<top>558</top>
-            <left>13</left>
-            <label>-</label>
-            <include>9000butts</include>
-            <onclick>SettingsLevelChange</onclick>
-        </control>
+        <!--<control type="button" id="20">-->
+            <!--<onup>3</onup>-->
+            <!--<onright>702</onright>-->
+            <!--<top>630</top>-->
+            <!--<left>13</left>-->
+            <!--<width>305</width>-->
+            <!--<height>79</height>-->
+            <!--<label>-</label>-->
+            <!--<textcolor>00FFFFFF</textcolor>-->
+            <!--<texturenofocus colordiffuse="design" flipy="true">curvelcars1.png</texturenofocus>-->
+            <!--<texturefocus colordiffuse="blue" flipy="true">curvelcars1.png</texturefocus>-->
+            <!--<onclick>SettingsLevelChange</onclick>-->
+        <!--</control>-->
         <control type="label">
             <top>638</top>
             <left>13</left>
@@ -140,6 +143,12 @@
             <font>-</font>
             <visible>false</visible>
         </control>
-		
+		<control type="image">
+            <top>630</top>
+            <left>13</left>
+            <width>305</width>
+            <height>79</height>
+            <texture colordiffuse="design" flipy="true">curvelcars1.png</texture>
+        </control>
     </controls>
 </window>

@@ -741,22 +741,10 @@
                 <texture colordiffuse="design">white.png</texture>
             </control>
 			<control type="image">
-                <visible>Window.IsActive(Home)</visible>
-				<top>495</top>
+                <top>495</top>
                 <width>155</width>
                 <height>30</height>
                 <texture colordiffuse="design">white.png</texture>
-            </control>
-			<control type="button" id="700">
-                <visible>!Window.IsActive(Home)</visible>
-				<onup>20</onup>
-				<onup>9000</onup>
-				<ondown>9000</ondown>
-				<ondown>3</ondown>
-				<top>495</top>
-                <label>Back</label>
-                <onclick>Back</onclick>
-				<include>9000butts</include>
             </control>
         </control>
         <control type="image">
@@ -842,19 +830,16 @@
             <height>40</height>
             <label>STARDATE : $INFO[System.Date] • $INFO[System.Time]</label>
         </control>
-        <control type="image" >
-            <top>630</top>
-            <left>13</left>
-            <width>305</width>
-            <height>79</height>
-            <texture colordiffuse="design" flipy="true">curvelcars1.png</texture>
-        </control>
-		<control type="image">
+        <control type="button" id="700">
+            <ondown>9000</ondown>
             <top>15</top>
             <left>13</left>
             <width>305</width>
             <height>79</height>
-            <texture colordiffuse="design">curvelcars1.png</texture>
+            <label></label>
+            <texturenofocus colordiffuse="design">curvelcars1.png</texturenofocus>
+            <texturefocus colordiffuse="blue">curvelcars1.png</texturefocus>
+            <onclick>Back</onclick>
         </control>
     </include>
     <include name="keybutt">

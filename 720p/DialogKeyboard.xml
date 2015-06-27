@@ -63,37 +63,37 @@
 						<description>Layout button</description>
 						<width>175</width>
 						<label>20177</label>
-						<onup>300</onup>
+						<onup>305</onup>
 						<ondown>302</ondown>
 						<include>keybutt</include>
 					</control>
 					<control type="button" id="100">
 						<description>(0,0) key button</description>
-						<onup>32</onup>
+						<onup>305</onup>
 						<ondown>120</ondown>
 						<include>keybutt</include>
 					</control>
 					<control type="button" id="101">
 						<description>(0,1) key button</description>
-						<onup>32</onup>
+						<onup>305</onup>
 						<ondown>121</ondown>
 						<include>keybutt</include>
 					</control>
 					<control type="button" id="102">
 						<description>(0,2) key button</description>
-						<onup>32</onup>
+						<onup>306</onup>
 						<ondown>122</ondown>
 						<include>keybutt</include>
 					</control>
 					<control type="button" id="103">
 						<description>(0,3) key button</description>
-						<onup>32</onup>
+						<onup>306</onup>
 						<ondown>123</ondown>
 						<include>keybutt</include>
 					</control>
 					<control type="button" id="104">
 						<description>(0,4) key button</description>
-						<onup>8</onup>
+						<onup>306</onup>
 						<ondown>124</ondown>
 						<include>keybutt</include>
 					</control>
@@ -117,25 +117,25 @@
 					</control>
 					<control type="button" id="108">
 						<description>(0,8) key button</description>
-						<onup>305</onup>
+						<onup>32</onup>
 						<ondown>128</ondown>
 						<include>keybutt</include>
 					</control>
 					<control type="button" id="109">
 						<description>(0,9) key button</description>
-						<onup>305</onup>
+						<onup>32</onup>
 						<ondown>129</ondown>
 						<include>keybutt</include>
 					</control>
 					<control type="button" id="110">
 						<description>(0,10) key button</description>
-						<onup>306</onup>
+						<onup>32</onup>
 						<ondown>130</ondown>
 						<include>keybutt</include>
 					</control>
 					<control type="button" id="111">
 						<description>(0,11) key button</description>
-						<onup>306</onup>
+						<onup>32</onup>
 						<ondown>131</ondown>
 						<include>keybutt</include>
 					</control>
@@ -238,7 +238,7 @@
 						<width>175</width>
 						<label>20179</label>
 						<onup>302</onup>
-						<ondown>307</ondown>
+						<ondown>304</ondown>
 						<include>keybutt</include>
 					</control>
 					<control type="button" id="140">
@@ -325,86 +325,86 @@
 						<width>175</width>
 						<label>@#!*   </label>
 						<onup>303</onup>
-						<ondown>300</ondown>
+						<ondown>305</ondown>
 						<include>keybutt</include>
 					</control>
 					
 					<control type="button" id="160">
 						<description>(3,0) key button</description>
 						<onup>140</onup>
-						<ondown>32</ondown>
+						<ondown>305</ondown>
 						<include>keybutt</include>
 					</control>
 					<control type="button" id="161">
 						<description>(3,1) key button</description>
 						<onup>141</onup>
-						<ondown>32</ondown>
+						<ondown>305</ondown>
 						<include>keybutt</include>
 					</control>
 					<control type="button" id="162">
 						<description>(3,2) key button</description>
 						<onup>142</onup>
-						<ondown>32</ondown>
+						<ondown>306</ondown>
 						<include>keybutt</include>
 					</control>
 					<control type="button" id="163">
 						<description>(3,3) key button</description>
 						<onup>143</onup>
-						<ondown>32</ondown>
+						<ondown>306</ondown>
 						<include>keybutt</include>
 					</control>
 					<control type="button" id="164">
 						<description>(3,4) key button</description>
 						<onup>144</onup>
-						<ondown>8</ondown>
+						<ondown>306</ondown>
 						<include>keybutt</include>
 					</control>
 					<control type="button" id="165">
 						<description>(3,5) key button</description>
 						<onup>145</onup>
-						<ondown>8</ondown>
+						<ondown>32</ondown>
 						<include>keybutt</include>
 					</control>
 					<control type="button" id="166">
 						<description>(3,6) key button</description>
 						<onup>146</onup>
-						<ondown>8</ondown>
+						<ondown>32</ondown>
 						<include>keybutt</include>
 					</control>
 					<control type="button" id="167">
 						<description>(3,7) key button</description>
 						<onup>147</onup>
-						<ondown>8</ondown>
+						<ondown>32</ondown>
 						<include>keybutt</include>
 					</control>
 					<control type="button" id="168">
 						<description>(3,8) key button</description>
 						<onup>148</onup>
-						<ondown>305</ondown>
+						<ondown>8</ondown>
 						<include>keybutt</include>
 					</control>
 					<control type="button" id="169">
 						<description>(3,9) key button</description>
 						<onup>149</onup>
-						<ondown>305</ondown>
+						<ondown>8</ondown>
 						<include>keybutt</include>
 					</control>
 					<control type="button" id="170">
 						<description>(3,10) key button</description>
 						<onup>150</onup>
-						<ondown>306</ondown>
+						<ondown>8</ondown>
 						<include>keybutt</include>
 					</control>
 					<control type="button" id="171">
 						<description>(3,11) key button</description>
 						<onup>151</onup>
-						<ondown>306</ondown>
+						<ondown>8</ondown>
 						<include>keybutt</include>
 					</control>
 					<control type="button" id="307">
 						<description>IP Input button</description>
-						<onup>303</onup>
-						<ondown>300</ondown>
+						<onup>130</onup>
+						<ondown>8</ondown>
 						<label>IP</label>
 						<include>keybutt</include>
 					</control>
@@ -413,8 +413,8 @@
 						<width>175</width>
 						<include>keybutt</include>
 						<label>20177</label>
-						<onup>304</onup>
-						<ondown>309</ondown>
+						<onup>129</onup>
+						<ondown>8</ondown>
 					</control>
 				</control>
 					<!-- 5th row -->
@@ -426,15 +426,15 @@
 						<description>previous button</description>
 						<label>&lt;</label>
 						<include>keybutt</include>
-						<onup>168</onup>
-						<ondown>108</ondown>
+						<onup>304</onup>
+						<ondown>309</ondown>
 					</control>
 					<control type="button" id="306">
 						<description>next button</description>
 						<label>&gt;</label>
 						<include>keybutt</include>
-						<onup>170</onup>
-						<ondown>110</ondown>
+						<onup>304</onup>
+						<ondown>309</ondown>
 					</control>
 					<control type="button" id="32">
 						<description>SPACE button</description>
@@ -448,7 +448,7 @@
 						<description>BACKSPACE button</description>
 						<width>175</width>
 						<label>20181</label>
-						<onup>165</onup>
+						<onup>300</onup>
 						<ondown>105</ondown>
 						<include>keybutt</include>
 					</control>

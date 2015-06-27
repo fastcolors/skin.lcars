@@ -18,12 +18,12 @@
 			<onclick></onclick>
 		</control>
 		<control type="grouplist" id="9000">
-			<top>103</top>
-            <left>13</left>
-            <width>155</width>
-            <height>530</height>
-            <itemgap>5</itemgap>
-            <onup>700</onup>
+			<top>101</top>
+			<left>13</left>
+			<width>155</width>
+			<height>530</height>
+			<itemgap>6</itemgap>
+			<onup>700</onup>
 			<ondown>701</ondown>
 			<onright>50</onright>
 			<control type="button" id="2">

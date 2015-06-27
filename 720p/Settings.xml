@@ -21,35 +21,33 @@
         <onup>700</onup>
         <ondown>701</ondown>
         <onright>750</onright>
-        <itemlayout width="155" height="35">
-            <!--control type="image">
-                <top>5</top>
+        <itemlayout width="155" height="66">
+            <control type="image">
+                <top>3</top>
                 <width>155</width>
-                <height>30</height>
+                <height>60</height>
                 <texture colordiffuse="design">white.png</texture>
-            </control-->
+            </control>
             <control type="label">
-                <top>7</top>
+                <top>30</top>
                 <width>145</width>
                 <height>23</height>
                 <aligny>bottom</aligny>
-                <font>font16</font>
-				<align>right</align>
-                <label>$INFO[ListItem.label]</label>
+                <align>right</align>
+                <label>$INFO[ListItem.label][CR]$INFO[ListItem.label2]</label>
             </control>
         </itemlayout>
-        <focusedlayout width="155" height="35">
+        <focusedlayout width="155" height="66">
             <control type="image">
-                <top>5</top>
+                <top>3</top>
                 <width>155</width>
-                <height>30</height>
+                <height>60</height>
                 <texture colordiffuse="blue">white.png</texture>
             </control>
             <control type="label">
-                <top>7</top>
+                <top>30</top>
                 <width>145</width>
-                <font>font16</font>
-				<height>23</height>
+                <height>23</height>
                 <aligny>bottom</aligny>
                 <align>right</align>
                 <label>$INFO[ListItem.label]</label>
@@ -96,11 +94,6 @@
 						<onclick>ActivateWindow(ServiceSettings)</onclick>
 						<icon>-</icon>
 					</item>
-					<item id="8">
-						<label>System Setting</label>
-						<onclick>ActivateWindow(SystemSettings)</onclick>
-						<icon>-</icon>
-					</item>
 				</content>
 			</control>
             <!--<control type="button" id="700">-->
@@ -114,13 +107,7 @@
             <!--<texturefocus colordiffuse="blue">curvelcars1.png</texturefocus>-->
             <!--<onclick></onclick>-->
         <!--</control>-->
-        <control type="image">
-            <top>630</top>
-            <left>13</left>
-            <width>305</width>
-            <height>79</height>
-            <texture colordiffuse="design" flipy="true">curvelcars1.png</texture>
-        </control><!--control type="button" id="701">
+        <control type="button" id="701">
             <onup>9000</onup>
             <onright>702</onright>
             <top>630</top>
@@ -139,7 +126,7 @@
         <width>145</width>
         <height>40</height>
         <label>SYSTEM SETTINGS</label>
-    </control-->
+    </control>
 
 			<control type="textbox">
 				<description>Appearance Description</description>

@@ -638,114 +638,17 @@
     </include>
     <include name="9000butts">
         <width>155</width>
-        <height>30</height>
+        <height>60</height>
         <texturenofocus colordiffuse="design">white.png</texturenofocus>
         <texturefocus colordiffuse="blue">white.png</texturefocus>
-        <aligny>bottom</aligny>
-		<font>font16</font>
-		<align>right</align>
-		<textoffsetx>5</textoffsetx>
-        <textoffsety>2</textoffsety>
-        		
-                
+        <align>right</align>
     </include>
 
     <include name="allwindows">
-        <control type="group">
-            <top>98</top>
-			<left>13</left>
-			<width>155</width>
-			<height>530</height>
-			<control type="image">
-                <top>5</top>
-                <width>155</width>
-                <height>30</height>
-                <texture colordiffuse="design">white.png</texture>
-            </control>
-            <control type="image">
-                <top>40</top>
-                <width>155</width>
-                <height>30</height>
-                <texture colordiffuse="design">white.png</texture>
-            </control>
-			<control type="image">
-                <top>75</top>
-                <width>155</width>
-                <height>30</height>
-                <texture colordiffuse="design">white.png</texture>
-            </control>
-			<control type="image">
-                <top>110</top>
-                <width>155</width>
-                <height>30</height>
-                <texture colordiffuse="design">white.png</texture>
-            </control>
-			<control type="image">
-                <top>145</top>
-                <width>155</width>
-                <height>30</height>
-                <texture colordiffuse="design">white.png</texture>
-            </control>
-			<control type="image">
-                <top>180</top>
-                <width>155</width>
-                <height>30</height>
-                <texture colordiffuse="design">white.png</texture>
-            </control>
-			<control type="image">
-                <top>215</top>
-                <width>155</width>
-                <height>30</height>
-                <texture colordiffuse="design">white.png</texture>
-            </control>
-			<control type="image">
-                <top>250</top>
-                <width>155</width>
-                <height>30</height>
-                <texture colordiffuse="design">white.png</texture>
-            </control>
-			<control type="image">
-                <top>285</top>
-                <width>155</width>
-                <height>30</height>
-                <texture colordiffuse="design">white.png</texture>
-            </control>
-			<control type="image">
-                <top>320</top>
-                <width>155</width>
-                <height>30</height>
-                <texture colordiffuse="design">white.png</texture>
-            </control>
-			<control type="image">
-                <top>355</top>
-                <width>155</width>
-                <height>30</height>
-                <texture colordiffuse="design">white.png</texture>
-            </control>
-			<control type="image">
-                <top>390</top>
-                <width>155</width>
-                <height>30</height>
-                <texture colordiffuse="design">white.png</texture>
-            </control>
-			<control type="image">
-                <top>425</top>
-                <width>155</width>
-                <height>30</height>
-                <texture colordiffuse="design">white.png</texture>
-            </control>
-			<control type="image">
-                <top>460</top>
-                <width>155</width>
-                <height>30</height>
-                <texture colordiffuse="design">white.png</texture>
-            </control>
-			<control type="image">
-                <top>495</top>
-                <width>155</width>
-                <height>30</height>
-                <texture colordiffuse="design">white.png</texture>
-            </control>
+        <control type="image">
+            <width>200</width>
+            <height>720</height>
+            <texture>emptyslots.png</texture>
         </control>
         <control type="image">
             <top>15</top>
@@ -811,7 +714,7 @@
             <font>font30</font>
         </control>
         <control type="label">
-            <visible>StringCompare(System.InternetState,Connected) + System.hasnetwork</visible>
+            <visible>System.InternetState</visible>
             <top>670</top>
             <left>1090</left>
             <width>136</width>

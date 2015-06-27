@@ -734,6 +734,7 @@
             <label>STARDATE : $INFO[System.Date] • $INFO[System.Time]</label>
         </control>
         <control type="button" id="700">
+            <ondown condition="Window.IsActive(SettingsCategory.xml)">3</ondown>
             <ondown>9000</ondown>
             <top>15</top>
             <left>13</left>
@@ -743,6 +744,14 @@
             <texturenofocus colordiffuse="design">curvelcars1.png</texturenofocus>
             <texturefocus colordiffuse="blue">curvelcars1.png</texturefocus>
             <onclick>Back</onclick>
+        </control>
+        <control type="label">
+            <top>60</top>
+            <left>13</left>
+            <width>145</width>
+            <align>right</align>
+            <height>30</height>
+            <label>BACK</label>
         </control>
     </include>
     <include name="keybutt">

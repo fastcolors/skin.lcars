@@ -16,17 +16,6 @@
             <!--<texturefocus colordiffuse="blue">curvelcars1.png</texturefocus>-->
             <!--<onclick>Back</onclick>-->
         <!--</control>-->
-        <control type="button" id="701">
-            <onup>9000</onup>
-            <top>630</top>
-            <left>13</left>
-            <width>305</width>
-            <height>79</height>
-            <label></label>
-            <texturenofocus colordiffuse="design" flipy="true">curvelcars1.png</texturenofocus>
-            <texturefocus colordiffuse="blue" flipy="true">curvelcars1.png</texturefocus>
-            <onclick>ActivateWindow(Settings)</onclick>
-        </control>
         <include>allwindows</include>
         <control type="grouplist" id="9000">
             <top>103</top>
@@ -35,7 +24,7 @@
             <height>530</height>
             <itemgap>5</itemgap>
             <onup>700</onup>
-            <ondown>701</ondown>
+            <ondown>700</ondown>
             <onright>50</onright>
             <control type="button" id="3">
                 <description>Sort by button</description>

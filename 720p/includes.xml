@@ -638,7 +638,7 @@
     </include>
     <include name="9000butts">
         <width>155</width>
-        <height>30</height>
+        <height>38</height>
         <texturenofocus colordiffuse="design">white.png</texturenofocus>
         <texturefocus colordiffuse="blue">white.png</texturefocus>
         <aligny>bottom</aligny>
@@ -652,99 +652,81 @@
 
     <include name="allwindows">
         <control type="group">
-            <top>98</top>
+            <top>96</top>
 			<left>13</left>
 			<width>155</width>
 			<height>530</height>
 			<control type="image">
                 <top>5</top>
                 <width>155</width>
-                <height>30</height>
+                <height>38</height>
                 <texture colordiffuse="design">white.png</texture>
             </control>
             <control type="image">
-                <top>40</top>
+                <top>49</top>
                 <width>155</width>
-                <height>30</height>
+                <height>38</height>
                 <texture colordiffuse="design">white.png</texture>
             </control>
 			<control type="image">
-                <top>75</top>
+                <top>93</top>
                 <width>155</width>
-                <height>30</height>
+                <height>38</height>
                 <texture colordiffuse="design">white.png</texture>
             </control>
 			<control type="image">
-                <top>110</top>
+                <top>137</top>
                 <width>155</width>
-                <height>30</height>
+                <height>38</height>
                 <texture colordiffuse="design">white.png</texture>
             </control>
 			<control type="image">
-                <top>145</top>
+                <top>181</top>
                 <width>155</width>
-                <height>30</height>
+                <height>38</height>
                 <texture colordiffuse="design">white.png</texture>
             </control>
 			<control type="image">
-                <top>180</top>
+                <top>225</top>
                 <width>155</width>
-                <height>30</height>
+                <height>38</height>
                 <texture colordiffuse="design">white.png</texture>
             </control>
 			<control type="image">
-                <top>215</top>
+                <top>269</top>
                 <width>155</width>
-                <height>30</height>
+                <height>38</height>
                 <texture colordiffuse="design">white.png</texture>
             </control>
 			<control type="image">
-                <top>250</top>
+                <top>313</top>
                 <width>155</width>
-                <height>30</height>
+                <height>38</height>
                 <texture colordiffuse="design">white.png</texture>
             </control>
 			<control type="image">
-                <top>285</top>
+                <top>357</top>
                 <width>155</width>
-                <height>30</height>
+                <height>38</height>
                 <texture colordiffuse="design">white.png</texture>
             </control>
 			<control type="image">
-                <top>320</top>
+                <top>401</top>
                 <width>155</width>
-                <height>30</height>
+                <height>38</height>
                 <texture colordiffuse="design">white.png</texture>
             </control>
 			<control type="image">
-                <top>355</top>
+                <top>445</top>
                 <width>155</width>
-                <height>30</height>
-                <texture colordiffuse="design">white.png</texture>
-            </control>
-			<control type="image">
-                <top>390</top>
-                <width>155</width>
-                <height>30</height>
-                <texture colordiffuse="design">white.png</texture>
-            </control>
-			<control type="image">
-                <top>425</top>
-                <width>155</width>
-                <height>30</height>
-                <texture colordiffuse="design">white.png</texture>
-            </control>
-			<control type="image">
-                <top>460</top>
-                <width>155</width>
-                <height>30</height>
+                <height>38</height>
                 <texture colordiffuse="design">white.png</texture>
             </control>
 			<control type="image">
                 <visible>Window.IsActive(Home)</visible>
-				<top>495</top>
+				<top>489</top>
                 <width>155</width>
-                <height>30</height>
+                <height>38</height>
                 <texture colordiffuse="design">white.png</texture>
             </control>
 			<control type="button" id="700">
@@ -753,7 +735,7 @@
 				<onup>9000</onup>
 				<ondown>9000</ondown>
 				<ondown>3</ondown>
-				<top>495</top>
+				<top>489</top>
                 <label>Back</label>
                 <onclick>Back</onclick>
 				<include>9000butts</include>

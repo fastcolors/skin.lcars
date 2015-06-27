@@ -11,11 +11,11 @@
         <include>allwindows</include>
         <control type="grouplist" id="3">
             <description>button area</description>
-            <top>101</top>
+            <top>103</top>
             <left>13</left>
             <width>155</width>
             <height>530</height>
-            <itemgap>6</itemgap>
+            <itemgap>5</itemgap>
             <onleft>5</onleft>
             <onright>5</onright>
             <onup>700</onup>
@@ -105,11 +105,8 @@
         </control>
         <control type="button" id="10">
             <description>Default Category Button</description>
-            <height>60</height>
-            <width>155</width>
-            <texturenofocus colordiffuse="design">white.png</texturenofocus>
-            <texturefocus colordiffuse="blue">white.png</texturefocus>
-            <align>right</align>
+            <include>9000butts</include>
+                
         </control>
         <control type="button" id="7">
             <description>Default Button</description>
@@ -146,6 +143,12 @@
             <font>-</font>
             <visible>false</visible>
         </control>
-
+		<control type="image">
+            <top>630</top>
+            <left>13</left>
+            <width>305</width>
+            <height>79</height>
+            <texture colordiffuse="design" flipy="true">curvelcars1.png</texture>
+        </control>
     </controls>
 </window>

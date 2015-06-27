@@ -29,11 +29,11 @@
         </control>
         <include>allwindows</include>
         <control type="grouplist" id="9000">
-            <top>101</top>
+            <top>103</top>
             <left>13</left>
             <width>155</width>
             <height>530</height>
-            <itemgap>6</itemgap>
+            <itemgap>5</itemgap>
             <onup>700</onup>
             <ondown>701</ondown>
             <onright>50</onright>

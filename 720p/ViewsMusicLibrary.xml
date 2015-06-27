@@ -269,6 +269,7 @@
                     <texture flipx="true" border="20" colordiffuse="design">whiterounded.png</texture>
                 </control>
                 <control type="label">
+                    <posx>5</posx>
                     <width>390</width>
                     <height>40</height>
                     <align>right</align>
@@ -284,6 +285,7 @@
                     <texture flipx="true" border="20" colordiffuse="blue">whiterounded.png</texture>
                 </control>
                 <control type="label">
+                    <posx>5</posx>
                     <width>390</width>
                     <height>40</height>
                     <align>right</align>

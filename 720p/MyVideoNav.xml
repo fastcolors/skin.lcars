@@ -51,11 +51,11 @@
         </control>
         <include>lcarsview</include> <!-- view id = 50 -->
         <control type="grouplist" id="9000">
-            <top>103</top>
+            <top>101</top>
             <left>13</left>
             <width>155</width>
             <height>530</height>
-            <itemgap>5</itemgap>
+            <itemgap>6</itemgap>
             <onup>700</onup>
             <ondown>700</ondown>
             <onright>50</onright>

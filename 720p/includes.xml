@@ -368,7 +368,6 @@
                 <itemlayout width="100" height="90">
                     <control type="label">
                         <top>60</top>
-                        <left>95</left>
                         <width>90</width>
                         <height>30</height>
                         <align>right</align>
@@ -384,7 +383,6 @@
                     </control>
                     <control type="label">
                         <top>60</top>
-                        <left>95</left>
                         <width>90</width>
                         <height>30</height>
                         <align>right</align>

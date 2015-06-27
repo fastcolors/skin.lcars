@@ -47,13 +47,14 @@
         
     </control>
     <include>750</include>
+	
     <control type="panel" id="9000">
-        <top>98</top>
+        <top>96</top>
         <left>13</left>
         <width>155</width>
         <height>530</height>
         <onright>888</onright>
-        <itemlayout width="155" height="35">
+        <itemlayout width="155" height="44">
             <!--control type="image">
                 <top>5</top>
                 <width>155</width>
@@ -70,11 +71,11 @@
                 <label>$INFO[ListItem.label]</label>
             </control>
         </itemlayout>
-        <focusedlayout width="155" height="35">
+        <focusedlayout width="155" height="44">
             <control type="image">
                 <top>5</top>
                 <width>155</width>
-                <height>30</height>
+                <height>38</height>
                 <texture colordiffuse="blue">white.png</texture>
             </control>
             <control type="label">
@@ -142,23 +143,27 @@
                 <label2>FFFF0000</label2>
                 <onclick>ActivateWindow(MyWeather)</onclick>
             </item>
-			<item id="9">
+			<!--NEXT AIR-->
+            <item id="9">
                 <visible>!Skin.HasSetting(nextair) + System.HasAddon(script.tv.show.next.aired) + Library.HasContent(TVShows)</visible>
 				<label>Next Air</label>
                 <label2>FFFF0000</label2>
                 <onclick>RunAddon(script.tv.show.next.aired)</onclick>
             </item>
-			<item id="10">
+			<!--Favorites-->
+            <item id="10">
                 <label>Favorites</label>
                 <label2>FFFF0000</label2>
                 <onclick>ActivateWindow(134)</onclick>
             </item>
-			<item id="11">
+			<!--Settings-->
+            <item id="11">
                 <label>Settings</label>
                 <label2>FFFF0000</label2>
                 <onclick>ActivateWindow(Settings)</onclick>
             </item>
-			<item id="12">
+			<!--EXIT-->
+            <item id="12">
                 <label>Energize</label>
                 <label2>FFFF0000</label2>
                 <onclick>ActivateWindow(ShutdownMenu)</onclick>

@@ -92,7 +92,7 @@
             <visible>![Window.IsActive(DialogSelect.xml) | Window.IsActive(SliderDialog) | Window.IsActive(OSDVideoSettings) | Window.IsActive(OSDAudioSettings) | Window.IsActive(VideoBookmarks) | Window.IsActive(script-XBMC-Subtitles-main.xml)]</visible>
             <animation effect="fade" end="100" time="400">Visible</animation>
             <animation effect="fade" end="0" time="100">Hidden</animation>
-            <control type="group" description="Dialog Background">
+            <!--control type="group" description="Dialog Background">
                 <visible>Window.IsVisible(videoosd.xml) + Window.IsActive(dialogseekbar.xml)</visible>
                 <control type="image">
                     <top>550</top>
@@ -102,10 +102,10 @@
                     <aspectratio>stretch</aspectratio>
                     <texture border="150">dialog.png</texture>
                 </control>
-            </control>
+            </control-->
             <control type="grouplist">
-                <left>340</left>
-                <top>566</top>
+                <centerleft>700</centerleft>
+                <top>17</top>
                 <width>840</width>
                 <height>30</height>
                 <orientation>horizontal</orientation>
@@ -136,6 +136,13 @@
                     <textcolor>yellow</textcolor>
                     <label>($INFO[VideoPlayer.ChannelNumber]) - $INFO[VideoPlayer.ChannelName]</label>
                 </control>
+				<control type="label" description="Next item">
+                    <visible>!IsEmpty(VideoPlayer.NextTitle)</visible>
+                    <width>auto</width>
+                    <height>30</height>
+                    <scroll>true</scroll>
+                    <label>$INFO[VideoPlayer.NextTitle,[COLOR=red]$LOCALIZE[209]:  [/COLOR]]</label>
+                </control>
             </control>
             <control type="image">
                 <centerleft>180</centerleft>
@@ -146,38 +153,38 @@
                 <texture>$INFO[Player.Art(Thumb)]</texture>
             </control>
             <control type="grouplist" id="100">
-                <left>320</left>
-                <top>615</top>
+                <posx>70</posx>
+                <top>620</top>
                 <onright>100</onright>
                 <onleft>100</onleft>
                 <onup>101</onup>
                 <ondown>101</ondown>
-                <width>700</width>
-                <height>100</height>
+                <width>800</width>
+                <height>40</height>
                 <align>left</align>
                 <orientation>horizontal</orientation>
                 <control type="button" id="1">
-                    <width>60</width>
-                    <height>60</height>
-                    <label>PREV</label>
+                    <textoffsetx>15</textoffsetx>
+					<textoffsety>10</textoffsety>
+					<width>120</width>
+					<height>30</height>
+					<texturenofocus colordiffuse="55ffffff"  flipx="true" border="20">whiterounded.png</texturenofocus>
+					<texturefocus colordiffuse="green"  flipx="true" border="20">whiterounded.png</texturefocus>
+					<label>PREV</label>
                     <onclick>PlayerControl(Previous)</onclick>
                 </control>
                 <control type="button" id="2">
                     <visible>!Pvr.IsPlayingTV</visible>
-                    <width>60</width>
-                    <height>60</height>
+                    <include>osdbutt</include>
                     <label>REW</label>
                     <onclick>PlayerControl(Rewind)</onclick>
                 </control>
                 <control type="togglebutton" id="3">
                     <visible>!Pvr.IsPlayingTV</visible>
                     <usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
-                    <width>60</width>
-                    <height>60</height>
+                    <include>osdbutt</include>
                     <label>PAUSE</label>
-                    <texturenofocus colordiffuse="55000000" border="20">whiteallrounded.png</texturenofocus>
-                    <texturefocus colordiffuse="green" border="20">whiteallrounded.png</texturefocus>
-                    <alttexturenofocus colordiffuse="55000000" border="20">whiteallrounded.png</alttexturenofocus>
+                    <alttexturenofocus colordiffuse="5566A7FF" border="20">whiteallrounded.png</alttexturenofocus>
                     <alttexturefocus colordiffuse="green" border="20">whiteallrounded.png</alttexturefocus>
                     <altlabel>PLAY</altlabel>
                     <onclick>PlayerControl(Play)</onclick>
@@ -194,8 +201,13 @@
                     <onclick>PlayerControl(Forward)</onclick>
                 </control>
                 <control type="button" id="6">
-                    <include>osdbutt</include>
-                    <label>NEXT</label>
+                    <textoffsetx>15</textoffsetx>
+					<textoffsety>10</textoffsety>
+					<width>120</width>
+					<height>30</height>
+					<texturenofocus colordiffuse="55ffffff" border="20">white.png</texturenofocus>
+					<texturefocus colordiffuse="green" border="20">white.png</texturefocus>
+					<label>NEXT</label>
                     <onclick>PlayerControl(Next)</onclick>
                 </control>
                 <control type="button" id="7">
@@ -230,12 +242,12 @@
             <animation type="Visible">
                 <effect type="fade" tween="circle" easing="in" start="0" end="100" time="800"/>
             </animation>
-            <centerleft>640</centerleft>
-            <top>700</top>
-            <width>800</width>
+            <posx>70</posx>
+            <top>667</top>
+            <width>100</width>
             <height>35</height>
+            <textcolor>yellow</textcolor>
             <font>font13</font>
-            <align>center</align>
             <label>PRESS UP FOR MENU</label>
         </control>
 

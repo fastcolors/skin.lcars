@@ -9,6 +9,11 @@
     <animation effect="fade" start="0" end="100" time="400">Visible</animation>
     <animation effect="fade" start="100" end="0" time="100">Hidden</animation>
     <controls>
+        <control type="image">
+            <width>1280</width>
+            <height>720</height>
+            <texture>osb.png</texture>
+        </control>
         <control type="group">
             <description>PROGRESS</description>
             <width>1200</width>
@@ -31,51 +36,50 @@
                 <visible>!Window.IsActive(142)</visible>
                 <control type="label">
                     <posx>60</posx>
-                    <top>5</top>
-                    <width>695</width>
+                    <top>12</top>
+                    <width>75</width>
                     <height>30</height>
                     <textcolor>white</textcolor>
                     <label>$LOCALIZE[142] $INFO[System.Time]</label>
                 </control>
                 <control type="label">
                     <posx>60</posx>
-                    <top>30</top>
-                    <width>495</width>
+                    <top>32</top>
+                    <width>75</width>
                     <height>30</height>
                     <textcolor>white</textcolor>
                     <label>$INFO[Player.Time]</label>
                 </control>
                 <control type="label" description="End time">
-                    <posx>60r</posx>
-                    <top>5</top>
-                    <width>695</width>
+                    <posx>260</posx>
+                    <top>12</top>
+                    <width>75</width>
                     <height>30</height>
                     <align>right</align>
                     <textcolor>white</textcolor>
                     <label>END: $INFO[Player.FinishTime]</label>
                 </control>
                 <control type="label">
-                    <posx>60r</posx>
-                    <top>30</top>
+                    <posx>260</posx>
+                    <top>32</top>
                     <height>30</height>
-                    <width>195</width>
+                    <width>75</width>
                     <align>right</align>
                     <textcolor>white</textcolor>
                     <label>- $INFO[Player.TimeRemaining]</label>
                 </control>
-                <control type="label" description="Next item">
+                <!--control type="label" description="Next item">
                     <visible>!IsEmpty(VideoPlayer.NextTitle)</visible>
                     <posx>300</posx>
-                    <top>1</top>
+                    <top>10</top>
                     <width>1320</width>
                     <height>60</height>
                     <align>center</align>
                     <aligny>center</aligny>
                     <label>$INFO[VideoPlayer.NextTitle,[COLOR=gray]$LOCALIZE[209]:  [/COLOR]]</label>
-                </control>
+                </control-->
             </control>
-
-            <control type="label" description="Seek time label">
+			<control type="label" description="Seek time label">
                 <visible>![player.forwarding | player.rewinding]</visible>
                 <visible>Player.DisplayAfterSeek</visible>
                 <include>winding</include>
@@ -101,7 +105,7 @@
             <control type="label" description="FFFF">
                 <visible>player.forwarding4x</visible>
                 <include>winding</include>
-                <label>4xFF</label>
+                <label>4x FFW</label>
             </control>
             <control type="label" description="2FFFF">
                 <visible>player.forwarding8x</visible>

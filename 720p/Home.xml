@@ -225,7 +225,7 @@
         <textcolor>yellow</textcolor>
         <font>font14_plot</font>
         <align>justify</align>
-        <label>$INFO[Container(311).ListItem.Plot]$INFO[Container(311).ListItem.Property(Addon.Description)]$INFO[Container(311).ListItem.Property(Album_Description)]$INFO[Container(311).ListItem.Property(Artist_Description)]</label>
+        <label>$INFO[Container(311).ListItem.Property(NextAir)]$INFO[Container(311).ListItem.Plot]$INFO[Container(311).ListItem.Property(Addon.Description)]$INFO[Container(311).ListItem.Property(Album_Description)]$INFO[Container(311).ListItem.Property(Artist_Description)]</label>
     </control>
     <control type="scrollbar" id="60">
         <visible>Control.IsVisible(311)</visible>

@@ -35,6 +35,17 @@
             <control type="group" description="Top Bar">
                 <visible>!Window.IsActive(142)</visible>
                 <control type="label">
+                    <visible>Pvr.IsPlayingTV</visible>
+                    <posx>60</posx>
+                    <top>17</top>
+                    <width>150</width>
+                    <font>font35_title</font>
+                    <height>30</height>
+                    <textcolor>yellow</textcolor>
+                    <label>$LOCALIZE[142] $INFO[System.Time]</label>
+                </control>
+                <control type="label">
+                    <visible>!Pvr.IsPlayingTV</visible>
                     <posx>60</posx>
                     <top>12</top>
                     <width>75</width>
@@ -43,6 +54,7 @@
                     <label>$LOCALIZE[142] $INFO[System.Time]</label>
                 </control>
                 <control type="label">
+                    <visible>!Pvr.IsPlayingTV</visible>
                     <posx>60</posx>
                     <top>32</top>
                     <width>75</width>
@@ -51,6 +63,7 @@
                     <label>$INFO[Player.Time]</label>
                 </control>
                 <control type="label" description="End time">
+                    <visible>!Pvr.IsPlayingTV</visible>
                     <posx>260</posx>
                     <top>12</top>
                     <width>75</width>
@@ -60,6 +73,7 @@
                     <label>END: $INFO[Player.FinishTime]</label>
                 </control>
                 <control type="label">
+                    <visible>!Pvr.IsPlayingTV</visible>
                     <posx>260</posx>
                     <top>32</top>
                     <height>30</height>

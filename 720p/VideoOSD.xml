@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="2901">
-    <defaultcontrol always="true">3</defaultcontrol>
+    <defaultcontrol always="true">4</defaultcontrol>
     <allowoverlay>yes</allowoverlay>
     <zorder>2</zorder>
     <controls>
@@ -184,8 +184,8 @@
                     <usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
                     <include>osdbutt</include>
                     <label>PAUSE</label>
-                    <alttexturenofocus colordiffuse="5566A7FF" border="20">whiteallrounded.png</alttexturenofocus>
-                    <alttexturefocus colordiffuse="green" border="20">whiteallrounded.png</alttexturefocus>
+                    <alttexturenofocus colordiffuse="5566A7FF" border="20">white.png</alttexturenofocus>
+                    <alttexturefocus colordiffuse="green" border="20">white.png</alttexturefocus>
                     <altlabel>PLAY</altlabel>
                     <onclick>PlayerControl(Play)</onclick>
                 </control>
@@ -200,7 +200,31 @@
                     <label>FFWD</label>
                     <onclick>PlayerControl(Forward)</onclick>
                 </control>
-                <control type="button" id="6">
+               <control type="button" id="7">
+                    <visible>Pvr.IsPlayingTV</visible>
+                    <include>osdbutt</include>
+                    <label>EPG</label>
+                    <onclick>ActivateWindow(PVROSDChannels)</onclick>
+                </control>
+                <control type="button" id="8">
+                    <visible>Pvr.IsPlayingTV</visible>
+                    <include>osdbutt</include>
+                    <label>LIST</label>
+                    <onclick>ActivateWindow(PVROSDGuide)</onclick>
+                </control>
+                <control type="button" id="9">
+                    <visible>Pvr.IsPlayingTV + Player.CanRecord</visible>
+					<include>osdbutt</include>
+                    <label>Record</label>
+                    <onclick>PlayerControl(Record)</onclick>
+                </control>
+                <control type="button" id="10">
+                    <visible>VideoPlayer.IsStereoscopic</visible>
+                    <include>osdbutt</include>
+                    <label>3D</label>
+                    <onclick>SetFocus(500)</onclick>
+                </control>
+				 <control type="button" id="6">
                     <textoffsetx>15</textoffsetx>
 					<textoffsety>10</textoffsety>
 					<width>120</width>
@@ -210,45 +234,7 @@
 					<label>NEXT</label>
                     <onclick>PlayerControl(Next)</onclick>
                 </control>
-                <control type="button" id="7">
-                    <visible>Pvr.IsPlayingTV</visible>
-                    <textoffsetx>15</textoffsetx>
-					<textoffsety>10</textoffsety>
-					<width>120</width>
-					<height>30</height>
-					<texturenofocus colordiffuse="55ffffff" border="20">whiterounded.png</texturenofocus>
-					<texturefocus colordiffuse="green" border="20">whiterounded.png</texturefocus>
-					<label>NEXT</label>
-                    <onclick>ActivateWindow(PVROSDChannels)</onclick>
-                </control>
-                <control type="button" id="8">
-                    <visible>Pvr.IsPlayingTV</visible>
-                    <textoffsetx>15</textoffsetx>
-					<textoffsety>10</textoffsety>
-					<width>120</width>
-					<height>30</height>
-					<texturenofocus colordiffuse="55ffffff" border="20">whiterounded.png</texturenofocus>
-					<texturefocus colordiffuse="green" border="20">whiterounded.png</texturefocus>
-					<label>NEXT</label>
-                    <onclick>ActivateWindow(PVROSDGuide)</onclick>
-                </control>
-                <control type="button" id="9">
-                    <visible>Pvr.IsPlayingTV + Player.CanRecord</visible>
-					<textoffsetx>15</textoffsetx>
-					<textoffsety>10</textoffsety>
-					<width>120</width>
-					<height>30</height>
-					<texturenofocus colordiffuse="55ffffff" border="20">whiterounded.png</texturenofocus>
-					<texturefocus colordiffuse="green" border="20">whiterounded.png</texturefocus>
-					<label>NEXT</label>
-                    <onclick>PlayerControl(Record)</onclick>
-                </control>
-                <control type="button" id="10">
-                    <visible>VideoPlayer.IsStereoscopic</visible>
-                    <include>osdbutt</include>
-                    <label>3D</label>
-                    <onclick>SetFocus(500)</onclick>
-                </control>
+                
             </control>
         </control>
         <control type="label">

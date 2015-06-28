@@ -164,11 +164,17 @@
             </item>
 			<!--EXIT-->
             <item id="12">
-                <label>Energize</label>
+                <visible>!Player.HasMedia</visible>
+				<label>Energize</label>
                 <label2>FFFF0000</label2>
                 <onclick>ActivateWindow(ShutdownMenu)</onclick>
             </item>
-			
+			<item id="12">
+                <visible>Player.HasMedia</visible>
+				<label2>FFFF0000</label2>
+                <label>Fullscreen</label>
+				<onclick>fullscreen</onclick>
+            </item>
         </content>
     </control>
     <!--control type="label">

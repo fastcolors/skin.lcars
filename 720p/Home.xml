@@ -121,7 +121,7 @@
                 <visible>PVR.HasTVChannels</visible>
 				<label>19020</label>
                 <label2>FFFF0000</label2>
-                <!--<onclick>ActivateWindow(myPVR)</onclick>-->
+                <onclick>ActivateWindow(TVChannels)</onclick>
                 <onclick>noop</onclick>
             </item>
             <!--PICTURES-->

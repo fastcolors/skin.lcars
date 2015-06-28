@@ -205,27 +205,42 @@
 					<textoffsety>10</textoffsety>
 					<width>120</width>
 					<height>30</height>
-					<texturenofocus colordiffuse="55ffffff" border="20">white.png</texturenofocus>
-					<texturefocus colordiffuse="green" border="20">white.png</texturefocus>
+					<texturenofocus colordiffuse="55ffffff" border="20">whiterounded.png</texturenofocus>
+					<texturefocus colordiffuse="green" border="20">whiterounded.png</texturefocus>
 					<label>NEXT</label>
                     <onclick>PlayerControl(Next)</onclick>
                 </control>
                 <control type="button" id="7">
                     <visible>Pvr.IsPlayingTV</visible>
-                    <include>osdbutt</include>
-                    <label>NEXT</label>
+                    <textoffsetx>15</textoffsetx>
+					<textoffsety>10</textoffsety>
+					<width>120</width>
+					<height>30</height>
+					<texturenofocus colordiffuse="55ffffff" border="20">whiterounded.png</texturenofocus>
+					<texturefocus colordiffuse="green" border="20">whiterounded.png</texturefocus>
+					<label>NEXT</label>
                     <onclick>ActivateWindow(PVROSDChannels)</onclick>
                 </control>
                 <control type="button" id="8">
                     <visible>Pvr.IsPlayingTV</visible>
-                    <include>osdbutt</include>
-                    <label>NEXT</label>
+                    <textoffsetx>15</textoffsetx>
+					<textoffsety>10</textoffsety>
+					<width>120</width>
+					<height>30</height>
+					<texturenofocus colordiffuse="55ffffff" border="20">whiterounded.png</texturenofocus>
+					<texturefocus colordiffuse="green" border="20">whiterounded.png</texturefocus>
+					<label>NEXT</label>
                     <onclick>ActivateWindow(PVROSDGuide)</onclick>
                 </control>
                 <control type="button" id="9">
                     <visible>Pvr.IsPlayingTV + Player.CanRecord</visible>
-                    <include>osdbutt</include>
-                    <label>NEXT</label>
+					<textoffsetx>15</textoffsetx>
+					<textoffsety>10</textoffsety>
+					<width>120</width>
+					<height>30</height>
+					<texturenofocus colordiffuse="55ffffff" border="20">whiterounded.png</texturenofocus>
+					<texturefocus colordiffuse="green" border="20">whiterounded.png</texturefocus>
+					<label>NEXT</label>
                     <onclick>PlayerControl(Record)</onclick>
                 </control>
                 <control type="button" id="10">

@@ -109,12 +109,31 @@
                 <width>840</width>
                 <height>30</height>
                 <orientation>horizontal</orientation>
-                <itemgap>10</itemgap>
+                <itemgap>15</itemgap>
                 <control type="label" description="Title">
+                    <visible>Pvr.IsPlayingTV</visible>
                     <width>auto</width>
                     <height>30</height>
                     <scroll>true</scroll>
-                    <font>font30</font>
+                    <font>font35_title</font>
+                    <textcolor>blue</textcolor>
+                    <label>$INFO[VideoPlayer.Title,NOW:  ]</label>
+                </control>
+                <control type="label" description="Channel">
+                    <visible>Pvr.IsPlayingTV</visible>
+                    <width>auto</width>
+                    <height>30</height>
+                    <scroll>true</scroll>
+                    <font>font35_title</font>
+                    <textcolor>yellow</textcolor>
+                    <label>($INFO[VideoPlayer.ChannelNumber]) - $INFO[VideoPlayer.ChannelName]</label>
+                </control>
+				<control type="label" description="Title">
+                    <visible>!Pvr.IsPlayingTV</visible>
+                    <width>auto</width>
+                    <height>30</height>
+                    <scroll>true</scroll>
+                    <font>font35_title</font>
                     <textcolor>yellow</textcolor>
                     <label>$INFO[VideoPlayer.Title]</label>
                 </control>
@@ -123,25 +142,18 @@
                     <width>auto</width>
                     <height>30</height>
                     <scroll>true</scroll>
-                    <font>font30</font>
+                    <font>font35_title</font>
                     <textcolor>yellow</textcolor>
                     <label>$INFO[Player.Chapter,• chapter  ]$INFO[Player.ChapterCount,/]</label>
                 </control>
-                <control type="label" description="Channel">
-                    <visible>Pvr.IsPlayingTV</visible>
-                    <width>auto</width>
-                    <height>30</height>
-                    <scroll>true</scroll>
-                    <font>font30</font>
-                    <textcolor>yellow</textcolor>
-                    <label>($INFO[VideoPlayer.ChannelNumber]) - $INFO[VideoPlayer.ChannelName]</label>
-                </control>
-				<control type="label" description="Next item">
+                <control type="label" description="Next item">
                     <visible>!IsEmpty(VideoPlayer.NextTitle)</visible>
                     <width>auto</width>
                     <height>30</height>
+                    <font>font35_title</font>
+                    <textcolor>red</textcolor>
                     <scroll>true</scroll>
-                    <label>$INFO[VideoPlayer.NextTitle,[COLOR=red]$LOCALIZE[209]:  [/COLOR]]</label>
+                    <label>$INFO[VideoPlayer.NextTitle,$LOCALIZE[209]:  ]</label>
                 </control>
             </control>
             <control type="image">

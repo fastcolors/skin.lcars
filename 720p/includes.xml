@@ -1151,5 +1151,79 @@
 				</control>
             
         </control>
+		</include>
+		<include name="TVNextAiredListCommonLayout">
+			<top>120</top>
+			<left>630</left>
+			<height>475</height>
+			<width>600</width>
+			<onleft>5000</onleft>
+			<pagecontrol>-</pagecontrol>
+			<orientation>verical</orientation>
+			
+		<itemlayout width="600" height="185">
+				<control type="image">
+					<!--Panel icon image-->
+					<left>20</left>
+					<posy>38</posy>
+					<width>200</width>
+					<height>170</height>
+					<texture background="true" >$INFO[ListItem.Property(Art(poster))]</texture>
+					<aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
+					<visible>StringCompare(Window(Home).Property(TVGuide.ThumbType),0)</visible>
+              	 </control>
+				 <control type="image">
+					<!--Panel icon image-->
+					<left>20</left>
+					<posy>38</posy>
+					<width>200</width>
+					<height>170</height>
+					<texture background="true" >$INFO[ListItem.Property(Art(banner))]</texture>
+					<aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
+					<visible>StringCompare(Window(Home).Property(TVGuide.ThumbType),1)</visible>
+              	 </control>
+				<control type="image">
+					<!--Panel icon image-->
+					<left>20</left>
+					<posy>38</posy>
+					<width>200</width>
+					<height>170</height>
+					<texture background="true" >$INFO[ListItem.Property(Art(clearlogo))]</texture>
+					<aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
+					<visible>StringCompare(Window(Home).Property(TVGuide.ThumbType),2)</visible>
+              	 </control>
+								
+				<control type="textbox">
+					<left>240</left>
+					<textcolor>yellow</textcolor>
+					<posy>38</posy>
+					<width>400</width>
+					<height>170</height>
+					<label>$INFO[ListItem.Label][CR]$LOCALIZE[126]: $INFO[ListItem.Property(Status)][CR]$INFO[ListItem.Property(Genre)][CR][CR]Episode: $INFO[ListItem.Property(NextNumber),,. ]$INFO[ListItem.Property(NextTitle)][CR]Air: $INFO[ListItem.Property(NextDay)] At $INFO[ListItem.Property(ShortTime)]$INFO[ListItem.Property(Network), On ]</label>
+					<aligny>center</aligny>
+				</control>
+		</itemlayout>
+		<focusedlayout width="600" height="185">
+				<control type="image">
+					<!--Panel icon image-->
+					<left>20</left>
+					<posy>38</posy>
+					<width>200</width>
+					<height>170</height>
+					<texture background="true" fallback="DefaultVideoCover.png">$INFO[ListItem.Property(Fanart)]</texture>
+					<aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
+				</control>
+				<control type="textbox">
+					<left>240</left>
+					<textcolor>yellow</textcolor>
+					<posy>38</posy>
+					<width>400</width>
+					<height>170</height>
+					<label>$INFO[ListItem.Label][CR]$LOCALIZE[126]: $INFO[ListItem.Property(Status)][CR]$INFO[ListItem.Property(Genre)][CR][CR]Episode: $INFO[ListItem.Property(NextNumber),,. ]$INFO[ListItem.Property(NextTitle)][CR]Air: $INFO[ListItem.Property(NextDay)] At $INFO[ListItem.Property(ShortTime)]$INFO[ListItem.Property(Network), On ]</label>
+					<aligny>center</aligny>
+				</control>
+		</focusedlayout>
+            
 	</include>
+	
 </includes>

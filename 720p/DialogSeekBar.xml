@@ -2,7 +2,7 @@
 <window type="dialog" id="115">
     <defaultcontrol always="true">901</defaultcontrol>
     <allowoverlay>yes</allowoverlay>
-    <zorder>5</zorder>
+    <zorder>1</zorder>
     <include>OpenClose</include>
     <visible>![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks) | Window.IsActive(script-XBMC-Subtitles-main.xml)]</visible>
     <visible>Window.IsVisible(FullScreenVideo) + [Window.IsActive(videoosd.xml) | Player.Seeking | Player.DisplayAfterSeek | Player.Forwarding | Player.Rewinding | Player.Caching | Player.Paused]</visible>
@@ -35,76 +35,51 @@
             <control type="group" description="Top Bar">
                 <visible>!Window.IsActive(142)</visible>
                 <control type="label">
-                    <visible>Pvr.IsPlayingTV</visible>
-                    <posx>60</posx>
-                    <top>17</top>
-                    <width>150</width>
-                    <font>font35_title</font>
-                    <height>30</height>
-                    <textcolor>yellow</textcolor>
-                    <label>$LOCALIZE[142] $INFO[System.Time]</label>
-                </control>
-                <control type="label">
-                    <visible>!Pvr.IsPlayingTV</visible>
-                    <posx>60</posx>
-                    <top>12</top>
-                    <width>75</width>
-                    <height>30</height>
+                    <top>10</top>
+                    <left>50</left>
+                    <width>110</width>
+                    <height>20</height>
                     <textcolor>white</textcolor>
+                    <align>center</align>
                     <label>$LOCALIZE[142] $INFO[System.Time]</label>
                 </control>
                 <control type="label">
-                    <visible>!Pvr.IsPlayingTV</visible>
-                    <posx>60</posx>
                     <top>32</top>
-                    <width>75</width>
-                    <height>30</height>
+                    <left>50</left>
+                    <width>110</width>
+                    <height>20</height>
+                    <align>center</align>
                     <textcolor>white</textcolor>
                     <label>$INFO[Player.Time]</label>
                 </control>
                 <control type="label" description="End time">
-                    <visible>!Pvr.IsPlayingTV</visible>
-                    <posx>260</posx>
-                    <top>12</top>
-                    <width>75</width>
-                    <height>30</height>
-                    <align>right</align>
+                    <top>10</top>
+                    <right>50</right>
+                    <width>110</width>
+                    <height>20</height>
+                    <align>center</align>
                     <textcolor>white</textcolor>
                     <label>END: $INFO[Player.FinishTime]</label>
                 </control>
                 <control type="label">
-                    <visible>!Pvr.IsPlayingTV</visible>
-                    <posx>260</posx>
                     <top>32</top>
-                    <height>30</height>
-                    <width>75</width>
-                    <align>right</align>
+                    <right>50</right>
+                    <width>110</width>
+                    <align>center</align>
                     <textcolor>white</textcolor>
                     <label>- $INFO[Player.TimeRemaining]</label>
                 </control>
-                <!--control type="label" description="Next item">
-                    <visible>!IsEmpty(VideoPlayer.NextTitle)</visible>
-                    <posx>300</posx>
-                    <top>10</top>
-                    <width>1320</width>
-                    <height>60</height>
-                    <align>center</align>
-                    <aligny>center</aligny>
-                    <label>$INFO[VideoPlayer.NextTitle,[COLOR=gray]$LOCALIZE[209]:  [/COLOR]]</label>
-                </control-->
             </control>
-			<control type="label" description="Seek time label">
+            <control type="label" description="Seek time label">
                 <visible>![player.forwarding | player.rewinding]</visible>
                 <visible>Player.DisplayAfterSeek</visible>
                 <include>winding</include>
                 <label>$INFO[Player.SeekOffset]</label>
             </control>
-
             <control type="label" description="Buffer icon">
                 <visible>Player.Caching</visible>
                 <include>winding</include>
                 <label>BUFFERING...</label>
-                <!--<animation effect="rotate" start="360" end="0" center="auto" time="1200" loop="true" pulse="true" condition="true">conditional</animation>-->
             </control>
             <control type="label" description="Pause">
                 <visible>Player.Paused + !Player.Caching</visible>

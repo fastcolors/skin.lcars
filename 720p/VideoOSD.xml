@@ -104,9 +104,9 @@
                 </control>
             </control-->
             <control type="grouplist">
-                <centerleft>700</centerleft>
+                <centerleft>640</centerleft>
                 <top>17</top>
-                <width>840</width>
+                <width>920</width>
                 <height>30</height>
                 <orientation>horizontal</orientation>
                 <itemgap>15</itemgap>
@@ -114,9 +114,8 @@
                     <visible>Pvr.IsPlayingTV</visible>
                     <width>auto</width>
                     <height>30</height>
-                    <scroll>true</scroll>
-                    <font>font35_title</font>
-                    <textcolor>blue</textcolor>
+                    <font>font30_title</font>
+                    <textcolor>orange</textcolor>
                     <label>$INFO[VideoPlayer.Title,NOW:  ]</label>
                 </control>
                 <control type="label" description="Channel">
@@ -124,33 +123,33 @@
                     <width>auto</width>
                     <height>30</height>
                     <scroll>true</scroll>
-                    <font>font35_title</font>
+                    <font>font30_title</font>
                     <textcolor>yellow</textcolor>
                     <label>($INFO[VideoPlayer.ChannelNumber]) - $INFO[VideoPlayer.ChannelName]</label>
                 </control>
-				<control type="label" description="Title">
+                <control type="label" description="Title">
                     <visible>!Pvr.IsPlayingTV</visible>
                     <width>auto</width>
-                    <height>30</height>
-                    <scroll>true</scroll>
-                    <font>font35_title</font>
-                    <textcolor>yellow</textcolor>
+                    <height>40</height>
+                    <font>font30_title</font>
+                    <textcolor>black</textcolor>
                     <label>$INFO[VideoPlayer.Title]</label>
                 </control>
                 <control type="label" description="Title">
                     <visible>Player.ChapterCount + !VideoPlayer.Content(LiveTV)</visible>
                     <width>auto</width>
+                    <top>10</top>
                     <height>30</height>
                     <scroll>true</scroll>
-                    <font>font35_title</font>
-                    <textcolor>yellow</textcolor>
+                    <font>font24_title</font>
+                    <textcolor>black</textcolor>
                     <label>$INFO[Player.Chapter,• chapter  ]$INFO[Player.ChapterCount,/]</label>
                 </control>
                 <control type="label" description="Next item">
                     <visible>!IsEmpty(VideoPlayer.NextTitle)</visible>
                     <width>auto</width>
                     <height>30</height>
-                    <font>font35_title</font>
+                    <font>font24_title</font>
                     <textcolor>red</textcolor>
                     <scroll>true</scroll>
                     <label>$INFO[VideoPlayer.NextTitle,$LOCALIZE[209]:  ]</label>
@@ -161,8 +160,8 @@
                 <top>445</top>
                 <height>230</height>
                 <width>230</width>
-                <aspectratio align="right">keep</aspectratio>
-                <texture>$INFO[Player.Art(Thumb)]</texture>
+                <aspectratio>keep</aspectratio>
+                <texture>$INFO[Player.Art(Cover)]</texture>
             </control>
             <control type="grouplist" id="100">
                 <posx>70</posx>
@@ -176,13 +175,10 @@
                 <align>left</align>
                 <orientation>horizontal</orientation>
                 <control type="button" id="1">
-                    <textoffsetx>15</textoffsetx>
-					<textoffsety>10</textoffsety>
-					<width>120</width>
-					<height>30</height>
-					<texturenofocus colordiffuse="55ffffff"  flipx="true" border="20">whiterounded.png</texturenofocus>
-					<texturefocus colordiffuse="green"  flipx="true" border="20">whiterounded.png</texturefocus>
-					<label>PREV</label>
+                    <texturenofocus colordiffuse="55ffffff"  flipx="true" border="20">whiterounded.png</texturenofocus>
+                    <texturefocus colordiffuse="green"  flipx="true" border="20">whiterounded.png</texturefocus>
+                    <include>osdbutt</include>
+                    <label>PREV</label>
                     <onclick>PlayerControl(Previous)</onclick>
                 </control>
                 <control type="button" id="2">
@@ -212,7 +208,7 @@
                     <label>FFWD</label>
                     <onclick>PlayerControl(Forward)</onclick>
                 </control>
-               <control type="button" id="7">
+                <control type="button" id="7">
                     <visible>Pvr.IsPlayingTV</visible>
                     <include>osdbutt</include>
                     <label>EPG</label>
@@ -226,7 +222,7 @@
                 </control>
                 <control type="button" id="9">
                     <visible>Pvr.IsPlayingTV + Player.CanRecord</visible>
-					<include>osdbutt</include>
+                    <include>osdbutt</include>
                     <label>Record</label>
                     <onclick>PlayerControl(Record)</onclick>
                 </control>
@@ -236,17 +232,13 @@
                     <label>3D</label>
                     <onclick>SetFocus(500)</onclick>
                 </control>
-				 <control type="button" id="6">
-                    <textoffsetx>15</textoffsetx>
-					<textoffsety>10</textoffsety>
-					<width>120</width>
-					<height>30</height>
-					<texturenofocus colordiffuse="55ffffff" border="20">whiterounded.png</texturenofocus>
-					<texturefocus colordiffuse="green" border="20">whiterounded.png</texturefocus>
-					<label>NEXT</label>
+                <control type="button" id="6">
+                    <texturenofocus colordiffuse="55ffffff" border="20">whiterounded.png</texturenofocus>
+                    <texturefocus colordiffuse="green" border="20">whiterounded.png</texturefocus>
+                    <include>osdbutt</include>
+                    <label>NEXT</label>
                     <onclick>PlayerControl(Next)</onclick>
                 </control>
-                
             </control>
         </control>
         <control type="label">
@@ -255,11 +247,11 @@
             <animation type="Visible">
                 <effect type="fade" tween="circle" easing="in" start="0" end="100" time="800"/>
             </animation>
-            <posx>70</posx>
+            <right>70</right>
             <top>667</top>
-            <width>100</width>
+            <width>150</width>
             <height>35</height>
-            <textcolor>yellow</textcolor>
+            <textcolor>black</textcolor>
             <font>font13</font>
             <label>PRESS UP FOR MENU</label>
         </control>
@@ -297,7 +289,7 @@
                     </control>
                 </control>
                 <control type="radiobutton" id="503">
-                   <include>largebutton</include>
+                    <include>largebutton</include>
                     <label>Enable</label>
                     <onclick>ToggleStereoMode</onclick>
                     <texturenofocus border="20" colordiffuse="55000000">whiteallrounded.png</texturenofocus>

@@ -1008,7 +1008,7 @@
         <font>font30</font>
         <textcolor>yellow</textcolor>
         <align>right</align>
-        <posx>70r</posx>
+        <posx>170r</posx>
     </include>
 
     <include name="osdbutt">

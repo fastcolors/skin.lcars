@@ -1003,7 +1003,8 @@
     </include>
 
     <include name="winding">
-        <top>17</top>
+        <shadowcolor>black</shadowcolor>
+		<top>17</top>
         <width>100</width>
         <font>font30</font>
         <textcolor>yellow</textcolor>
@@ -1096,12 +1097,13 @@
                 <include>9000butts</include>
                 <label>-</label>
             </control>
-            <control type="button" id="2">
-                <description>View As button</description>
+            <control type="button" id="222">
+                <description>Fullscreen As button</description>
                 <textwidth>235</textwidth>
                 <include>9000butts</include>
-                <label>-</label>
-                <visible>Window.IsActive(TVGuide) | Window.IsActive(RadioGuide)</visible>
+                <label>Fullscreen</label>
+                <visible>Player.HasMedia</visible>
+				<onclick>fullscreen</onclick>
             </control>
             <control type="button" id="3">
                 <description>Sort by button</description>

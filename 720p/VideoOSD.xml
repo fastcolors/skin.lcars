@@ -170,7 +170,7 @@
                 <onleft>100</onleft>
                 <onup>101</onup>
                 <ondown>101</ondown>
-                <width>800</width>
+                <width>900</width>
                 <height>40</height>
                 <align>left</align>
                 <orientation>horizontal</orientation>
@@ -232,7 +232,12 @@
                     <label>3D</label>
                     <onclick>SetFocus(500)</onclick>
                 </control>
-                <control type="button" id="6">
+                <control type="button" id="11">
+                    <include>osdbutt</include>
+                    <label>Menu</label>
+                    <onclick>SetFocus(101)</onclick>
+                </control>
+				<control type="button" id="6">
                     <texturenofocus colordiffuse="55ffffff" border="20">whiterounded.png</texturenofocus>
                     <texturefocus colordiffuse="green" border="20">whiterounded.png</texturefocus>
                     <include>osdbutt</include>
@@ -241,7 +246,7 @@
                 </control>
             </control>
         </control>
-        <control type="label">
+        <!--control type="label">
             <visible>!ControlGroup(101).HasFocus()</visible>
             <visible>!Window.IsVisible(10123) + !Window.IsVisible(10124) + !Window.IsVisible(10125)</visible>
             <animation type="Visible">
@@ -254,7 +259,7 @@
             <textcolor>black</textcolor>
             <font>font13</font>
             <label>PRESS UP FOR MENU</label>
-        </control>
+        </control-->
 
         <!-- 3D -->
         <control type="group">

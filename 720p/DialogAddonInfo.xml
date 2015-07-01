@@ -38,8 +38,8 @@
 				<description>Close Window button</description>
 				<left>-49</left>
 				<top>38</top>
-				<width>40</width>
-				<height>40</height>
+				<width>30</width>
+				<height>30</height>
 				<label>-</label>
 				<font>-</font>
 				<onclick>PreviousMenu</onclick>

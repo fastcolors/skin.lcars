@@ -36,9 +36,11 @@
                 <control type="togglebutton" id="701" description="Subtitles">
                     <include>largebutton</include>
                     <label>$LOCALIZE[33003] $LOCALIZE[287]</label>
-                    <texturenofocus colordiffuse="55000000" border="20">whiteallrounded.png</texturenofocus>
+                    <texturenofocus colordiffuse="design" border="20">whiteallrounded.png</texturenofocus>
                     <texturefocus colordiffuse="red" border="20">whiteallrounded.png</texturefocus>
-                    <onclick>SetFocus(100,2)</onclick>
+                    <alttexturenofocus colordiffuse="design" border="20">whiteallrounded.png</alttexturenofocus>
+					<alttexturefocus colordiffuse="blue" border="20">whiteallrounded.png</alttexturefocus>
+					<onclick>SetFocus(100,2)</onclick>
                     <onclick>Dialog.Close(VideoOSD)</onclick>
                     <onclick>ActivateWindow(SubtitleSearch)</onclick>
                 </control>
@@ -63,9 +65,11 @@
                 <control type="togglebutton" id="706" description="Info">
                     <include>largebutton</include>
                     <label>20176</label>
-                    <texturenofocus colordiffuse="55000000" border="20">whiteallrounded.png</texturenofocus>
+                    <texturenofocus colordiffuse="design" border="20">whiteallrounded.png</texturenofocus>
                     <texturefocus colordiffuse="red" border="20">whiteallrounded.png</texturefocus>
-                    <onclick>SetFocus(100,2)</onclick>
+                    <alttexturenofocus colordiffuse="design" border="20">whiteallrounded.png</alttexturenofocus>
+					<alttexturefocus colordiffuse="blue" border="20">whiteallrounded.png</alttexturefocus>
+					<onclick>SetFocus(100,2)</onclick>
                     <onclick>close</onclick>
                     <onclick>ActivateWindow(142)</onclick>
                     <altclick>SetFocus(100,2)</altclick>

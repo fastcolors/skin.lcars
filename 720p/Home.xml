@@ -21,7 +21,7 @@
             <label>^ PRESS UP TO EXIT TO MAIN MENU ^</label>
         </control>
         <control type="label">
-            <visible>StringCompare(Skin.String(movieshome),special://skin/resources/random.xsp)</visible>
+            <visible>StringCompare(Skin.String(movieshome),special://skin/resources/random.xsp) + Control.IsVisible(501) + !Control.HasFocus(311)</visible>
             <top>417</top>
             <centerleft>512</centerleft>
             <align>center</align>

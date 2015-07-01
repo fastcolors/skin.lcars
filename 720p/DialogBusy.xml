@@ -9,44 +9,26 @@
 	</coordinates>
 	<controls>
 		<control type="group">
-			<left>1070</left>
-			<top>640</top>
-			<control type="image">
-				<description>background image</description>
-				<left>0</left>
-				<top>0</top>
-				<width>200</width>
-				<height>70</height>
-				<texture border="20">OverlayDialogBackground.png</texture>
-			</control>
-			<control type="image">
-				<description>Busy animation</description>
-				<left>20</left>
-				<top>20</top>
-				<width>32</width>
-				<height>32</height>
-				<texture>busy.png</texture>
-				<aspectratio>keep</aspectratio>
-				<animation effect="rotate" start="0" end="360" center="36,36" time="1200" loop="true" condition="true">conditional</animation>
-			</control>
-			<control type="label">
+            <top>12</top>
+            <left>325</left>
+            <control type="label">
 				<description>Busy label</description>
-				<left>60</left>
-				<top>20</top>
-				<width>120</width>
-				<height>32</height>
-				<align>left</align>
-				<aligny>center</aligny>
-				<label>$LOCALIZE[31004]</label>
-				<font>font12</font>
+				<left>215</left>
+                <top>5</top>
+                <height>39</height>
+				<width>450</width>
+				<font>font30</font>
+				<align>right</align>
+                <aligny>center</aligny>
+				<label>Please Stand By</label>
 			</control>
-			<control type="progress" id="10">
-				<description>Progressbar</description>
-				<left>20</left>
-				<top>53</top>
-				<width>160</width>
-				<height>8</height>
-			</control>
+			<control type="progress" id="32">
+                <description>progress control</description>
+                <left>350</left>
+                <top>673</top>
+                <width>250</width>
+                <height>8</height>
+            </control>
 		</control>
 	</controls>
 </window>

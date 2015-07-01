@@ -8,59 +8,152 @@
             <control type="image">
                 <width>1280</width>
                 <height>720</height>
-                <texture>background.png</texture>
+                <texture>pvrbg.jpg</texture>
             </control>
-            <!--todo labels-->
-            <control type="label">
-                <visible>Control.HasFocus(311)</visible>
-                <top>417</top>
-                <centerleft>475</centerleft>
-                <align>right</align>
-                <width>250</width>
-                <height>30</height>
-                <font>font12</font>
-                <label>^ PRESS UP TO EXIT TO MAIN MENU^</label>
-            </control>
-            <control type="image">
-                <top>15</top>
-                <left>325</left>
-                <width>685</width>
-                <height>39</height>
-                <texture colordiffuse="design">white.png</texture>
-            </control>
-            <control type="image">
-                <top>669</top>
-                <left>1230</left>
-                <width>40</width>
-                <height>39</height>
-                <texture colordiffuse="design">bullet.png</texture>
-            </control>
-            <!--<control type="button" id="700">-->
-            <!--<ondown>9000</ondown>-->
-            <!--<top>15</top>-->
-            <!--<left>13</left>-->
-            <!--<width>305</width>-->
-            <!--<height>79</height>-->
-            <!--<label></label>-->
-            <!--<texturenofocus colordiffuse="design">curvelcars1.png</texturenofocus>-->
-            <!--<texturefocus colordiffuse="blue">curvelcars1.png</texturefocus>-->
-            <!--<onclick></onclick>-->
-            <!--</control>-->
-            
-            <include>allwindows</include>
+        <include>allwindows</include>
         </control>
-        <include>lcarsview</include> <!-- view id = 32 -->
         <include>PVRbutt</include> <!-- PVR Button -->
-        
-        <control type="label">
-            <centerleft>730</centerleft>
-            <top>80</top>
-            <width>990</width>
-            <height>30</height>
-            <font>font30</font>
-            <align>center</align>
-            <info>ListItem.Label</info>
-        </control>
+        <control type="list" id="50">
+			<centertop>360</centertop>
+            <left>250</left>
+            <height>484</height>
+            <width>300</width>
+            <onup>noop</onup>
+            <ondown>noop</ondown>
+            <onleft>9000</onleft>
+            <onright>noop</onright>
+            <orientation>vertical</orientation>
+            <itemlayout height="44" width="300">
+                <control type="image">
+                    <width>300</width>
+                    <height>40</height>
+                    <texture flipx="true" border="20" colordiffuse="design">whiterounded.png</texture>
+                </control>
+                <control type="label">
+                    <width>290</width>
+                    <height>40</height>
+                    <align>right</align>
+                    <aligny>center</aligny>
+                    <info>ListItem.Label</info>
+                </control>
+				<control type="label">
+					<left>5</left>
+					<width>280</width>
+                    <height>40</height>
+                    <align>left</align>
+                    <aligny>center</aligny>
+                    <info>ListItem.ChannelNumber</info>
+                </control>
+            </itemlayout>
+            <focusedlayout height="44" width="300">
+                <control type="image">
+                    <animation effect="fade" start="100" end="50" condition="!Control.Hasfocus(501)" reversible="true">Conditional</animation>
+                    <width>300</width>
+                    <height>40</height>
+                    <texture flipx="true" border="20" colordiffuse="blue">whiterounded.png</texture>
+                </control>
+                <control type="label">
+                    <width>290</width>
+                    <height>40</height>
+                    <align>right</align>
+                    <aligny>center</aligny>
+                    <info>ListItem.Label</info>
+                </control>
+				<control type="label">
+                    <left>5</left>
+					<width>280</width>
+                    <height>40</height>
+                    <align>left</align>
+                    <aligny>center</aligny>
+                    <info>ListItem.ChannelNumber</info>
+                </control>
+            </focusedlayout>
+		</control>
+        <control type="group">
+				<description>Small Media Window</description>
+				<top>120</top>
+                <left>630</left>
+                <visible>Control.IsVisible(50)</visible>
+			<control type="image">
+				<left>5</left>
+				<top>5</top>
+				<width>600</width>
+				<height>150</height>
+				<aspectratio scalediffuse="false">keep</aspectratio>
+                <texture  background="true" >$INFO[ListItem.Icon]</texture>
+                <visible>!Player.HasVideo</visible>
+			</control>
+			<control type="videowindow">
+				<left>5</left>
+				<top>5</top>
+				<width>600</width>
+				<height>150</height>
+				<visible>Player.HasVideo</visible>
+				<animation effect="slide" start="0,0" end="-2000,0" time="0">WindowClose</animation>
+			</control>
+			
+					
+		</control>
+        <control type="grouplist">
+                <top>300</top>
+                <left>630</left>
+                <itemgap>15</itemgap>
+                    <control type="label">
+                        <width>600</width>
+                        <height>30</height>
+                        <textcolor>white</textcolor>
+                        <scroll>false</scroll>
+                        
+						<font>font30_title</font>
+						<align>center</align>
+                        <visible>Container(50).ListItem.HasEpg</visible>
+                        <label>$INFO[Container(50).ListItem.ChannelNumber] • $INFO[Container(50).ListItem.label]</label>
+                    </control>
+                    <control type="label">
+                        <width>600</width>
+                        <height>30</height>
+                        <textcolor>white</textcolor>
+                        <font>font30_title</font>
+						<scroll>false</scroll>
+                        <align>left</align>
+                        <visible>Container(50).ListItem.HasEpg</visible>
+                        <label>$INFO[Container(50).ListItem.StartTime] • [COLOR=red]$INFO[Container(50).ListItem.Title][/COLOR]</label>
+                    </control>
+                    <!--control type="progress">
+                        <description>Progressbar</description>
+                        <left>100</left>
+                        <width>600</width>
+                        <height>8</height>
+                        <texturebg colordiffuse="red" border="6,6,6,6">ProgressBG.png</texturebg>
+                        <midtexture border="6,6,6,6">ProgressM.png</midtexture>
+                        <righttexture  border="0,6,0,6">ProgressR.png</righttexture>
+                        <lefttexture  border="0,6,0,6">ProgressL.png</lefttexture>
+                        <visible>Container(50).ListItem.HasEpg</visible>
+                        <info>Container(50).ListItem.Progress</info>
+                    </control-->
+                    <control type="textbox">
+                        <description>Plot Value for TVShow</description>
+                        <textcolor>white</textcolor>
+                        <width>600</width>
+                        <height>125</height>
+                        <align>justify</align>
+                        <label>$INFO[Container(50).ListItem.Plot]</label>
+                        <autoscroll time="2000" delay="3000" repeat="5000">true</autoscroll>
+                    </control>
+					<control type="label">
+                        <width>600</width>
+                        <height>30</height>
+                        
+                        <textcolor>white</textcolor>
+                        
+						<font>font30_title</font>
+						<align>left</align>
+                        <scroll>false</scroll>
+                        <visible>!IsEmpty(Container(50).ListItem.NextTitle)</visible>
+                        <label>$INFO[Container(50).ListItem.EndTime] • [COLOR=red]$INFO[Container(50).ListItem.NextTitle][/COLOR]</label>
+                    </control>
+                    
+                </control>
 
     </controls>
 </window>

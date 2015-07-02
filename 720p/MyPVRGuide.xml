@@ -15,15 +15,6 @@
 			<description>TV Guide Timeline</description>
 			<visible>Control.IsVisible(10)</visible>
 			<include>VisibleFadeEffect</include>
-			<control type="image">
-				<description>separator image</description>
-				<left>80</left>
-				<top>101</top>
-				<width>1050</width>
-				<height>1</height>
-				<colordiffuse>88FFFFFF</colordiffuse>
-				<texture>separator2.png</texture>
-			</control>
 			<control type="epggrid" id="10">
 				<viewtype label="19032">list</viewtype>
 				<description>EPG Grid</description>
@@ -69,77 +60,63 @@
 				</rulerlayout>
 				<channellayout height="48" width="280">
 					<control type="image">
-						<left>0</left>
-						<top>0</top>
 						<width>270</width>
-						<height>48</height>
-						<texture border="2">MenuItemNF.png</texture>
-						<include>VisibleFadeEffect</include>
+						<height>40</height>
+						<texture  flipx="true" border="20" colordiffuse="design">whiterounded.png</texture>
 					</control>
 					<control type="label">
 						<left>5</left>
-						<top>5</top>
 						<width>40</width>
 						<height>35</height>
-						<align>left</align>
 						<aligny>center</aligny>
-						<textcolor>grey</textcolor>
+						<textcolor>black</textcolor>
 						<selectedcolor>grey</selectedcolor>
 						<info>ListItem.ChannelNumberLabel</info>
 					</control>
 					<control type="image">
 						<left>45</left>
-						<top>4</top>
 						<width>45</width>
 						<height>44</height>
+						<aligny>center</aligny>
 						<texture>$INFO[ListItem.Icon]</texture>
 						<aspectratio>keep</aspectratio>
 					</control>
 					<control type="label" id="1">
 						<left>94</left>
-						<top>0</top>
 						<width>160</width>
-						<height>48</height>
+						<height>35</height>
 						<aligny>center</aligny>
 						<selectedcolor>selected</selectedcolor>
-						<textcolor>grey</textcolor>
+						<textcolor>black</textcolor>
 						<align>left</align>
 						<label>$INFO[ListItem.ChannelName]</label>
 					</control>
 				</channellayout>
 				<focusedchannellayout height="48" width="280">
 					<control type="image">
-						<left>0</left>
-						<top>0</top>
 						<width>270</width>
-						<height>48</height>
-						<texture border="2">MenuItemNF.png</texture>
+						<height>40</height>
+						<texture  flipx="true" border="20" colordiffuse="green">whiterounded.png</texture>
 						<visible>!Control.HasFocus(10)</visible>
-						<include>VisibleFadeEffect</include>
 					</control>
 					<control type="image">
-						<left>0</left>
-						<top>0</top>
 						<width>270</width>
-						<height>48</height>
-						<texture border="2">MenuItemFO.png</texture>
+						<height>40</height>
+						<texture  flipx="true" border="20" colordiffuse="green">whiterounded.png</texture>
 						<visible>Control.HasFocus(10)</visible>
-						<include>VisibleFadeEffect</include>
 					</control>
 					<control type="label">
 						<left>5</left>
-						<top>5</top>
 						<width>40</width>
 						<height>35</height>
-						<align>left</align>
 						<aligny>center</aligny>
-						<textcolor>grey</textcolor>
+						<textcolor>black</textcolor>
 						<selectedcolor>grey</selectedcolor>
 						<info>ListItem.ChannelNumberLabel</info>
 					</control>
 					<control type="image">
 						<left>45</left>
-						<top>4</top>
+						<aligny>center</aligny>
 						<width>45</width>
 						<height>44</height>
 						<texture>$INFO[ListItem.Icon]</texture>
@@ -147,11 +124,10 @@
 					</control>
 					<control type="label" id="1">
 						<left>94</left>
-						<top>0</top>
 						<width>160</width>
-						<height>48</height>
+						<height>35</height>
 						<aligny>center</aligny>
-						<textcolor>grey</textcolor>
+						<textcolor>black</textcolor>
 						<selectedcolor>selected</selectedcolor>
 						<align>left</align>
 						<label>$INFO[ListItem.ChannelName]</label>
@@ -160,19 +136,16 @@
 				<itemlayout height="48" width="40">
 					<control type="image" id="2">
 						<width>40</width>
-						<height>48</height>
-						<left>0</left>
-						<top>0</top>
+						<height>40</height>
 						<aspectratio>stretch</aspectratio>
 						<texture border="3">epg-genres/$INFO[ListItem.Property(GenreType)].png</texture>
 					</control>
 					<control type="label" id="1">
 						<left>10</left>
-						<top>3</top>
 						<width>20</width>
-						<height>25</height>
+						<height>35</height>
 						<aligny>center</aligny>
-						<textcolor>grey</textcolor>
+						<textcolor>white</textcolor>
 						<selectedcolor>selected</selectedcolor>
 						<align>left</align>
 						<info>ListItem.Label</info>
@@ -205,26 +178,21 @@
 				<focusedlayout height="48" width="40">
 					<control type="image" id="14">
 						<width>40</width>
-						<height>48</height>
-						<left>0</left>
-						<top>0</top>
-						<texture border="5">folder-focus.png</texture>
+						<height>40</height>
+						<texture border="20" colordiffuse="green">white.png</texture>
 					</control>
 					<control type="image" id="2">
 						<width>40</width>
-						<height>48</height>
-						<left>0</left>
-						<top>0</top>
+						<height>40</height>
 						<aspectratio>stretch</aspectratio>
 						<texture border="3">epg-genres/$INFO[ListItem.Property(GenreType)].png</texture>
 					</control>
 					<control type="label" id="1">
 						<left>10</left>
-						<top>3</top>
 						<width>20</width>
-						<height>25</height>
+						<height>35</height>
 						<aligny>center</aligny>
-						<textcolor>grey</textcolor>
+						<textcolor>black</textcolor>
 						<selectedcolor>selected</selectedcolor>
 						<align>left</align>
 						<info>ListItem.Label</info>

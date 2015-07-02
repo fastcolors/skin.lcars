@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    <defaultcontrol always="true">50</defaultcontrol>
+    <allowoverlay>no</allowoverlay>
+    <views>50</views>
+    <controls>
+        <control type="group">
+            <control type="image">
+                <width>1280</width>
+                <height>720</height>
+                <texture>background.png</texture>
+            </control>
+            <!--todo labels-->
+            <control type="label">
+                <visible>Control.HasFocus(311)</visible>
+                <top>417</top>
+                <centerleft>475</centerleft>
+                <align>right</align>
+                <width>250</width>
+                <height>30</height>
+                <font>font12</font>
+                <label>^ PRESS UP TO EXIT TO MAIN MENU^</label>
+            </control>
+            <control type="image">
+                <top>15</top>
+                <left>325</left>
+                <width>685</width>
+                <height>39</height>
+                <texture colordiffuse="design">white.png</texture>
+            </control>
+            <control type="image">
+                <top>669</top>
+                <left>1230</left>
+                <width>40</width>
+                <height>39</height>
+                <texture colordiffuse="design">bullet.png</texture>
+            </control>
+            <!--<control type="button" id="700">-->
+            <!--<ondown>9000</ondown>-->
+            <!--<top>15</top>-->
+            <!--<left>13</left>-->
+            <!--<width>305</width>-->
+            <!--<height>79</height>-->
+            <!--<label></label>-->
+            <!--<texturenofocus colordiffuse="design">curvelcars1.png</texturenofocus>-->
+            <!--<texturefocus colordiffuse="blue">curvelcars1.png</texturefocus>-->
+            <!--<onclick></onclick>-->
+            <!--</control>-->
+            
+            <include>allwindows</include>
+        </control>
+        <include>lcarsview</include> <!-- view id = 32 -->
+        <include>PVRbutt</include> <!-- PVR Button -->
+        
+        <control type="label">
+            <centerleft>730</centerleft>
+            <top>80</top>
+            <width>990</width>
+            <height>30</height>
+            <font>font30</font>
+            <align>center</align>
+            <info>ListItem.Label</info>
+        </control>
+
+    </controls>
+</window>

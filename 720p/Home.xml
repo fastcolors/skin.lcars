@@ -21,7 +21,7 @@
             <label>^ PRESS UP TO EXIT TO MAIN MENU ^</label>
         </control>
         <control type="label">
-            <visible>StringCompare(Skin.String(movieshome),special://skin/resources/random.xsp)</visible>
+            <visible>StringCompare(Skin.String(movieshome),special://skin/resources/random.xsp) + [Container(9000).HasFocus(1) + Control.HasFocus(501) + !Control.HasFocus(311)]</visible>
             <top>417</top>
             <centerleft>512</centerleft>
             <align>center</align>
@@ -32,7 +32,7 @@
             <label>^ CLICK TO REFRESH ^</label>
         </control>
         <include>allwindows</include>
-        <control type="button" id="702">
+        <!--control type="button" id="702">
             <description>powerbutton</description>
             <onleft>701</onleft>
             <top>669</top>
@@ -43,56 +43,46 @@
             <texturenofocus colordiffuse="design">quitbullet.png</texturenofocus>
             <texturefocus colordiffuse="blue">quitbullet.png</texturefocus>
             <onclick>ActivateWindow(ShutdownMenu)</onclick>
-        </control>
-        <control type="button" id="701">
-            <onup>9000</onup>
-            <onright>702</onright>
-            <top>630</top>
-            <left>13</left>
-            <width>305</width>
-            <height>79</height>
-            <label></label>
-            <texturenofocus colordiffuse="design" flipy="true">curvelcars1.png</texturenofocus>
-            <texturefocus colordiffuse="blue" flipy="true">curvelcars1.png</texturefocus>
-            <onclick>ActivateWindow(Settings)</onclick>
-        </control>
+        </control-->
+        
     </control>
     <include>750</include>
+	
     <control type="panel" id="9000">
-        <top>98</top>
+        <top>96</top>
         <left>13</left>
         <width>155</width>
         <height>530</height>
-        <onup>700</onup>
-        <ondown>701</ondown>
         <onright>888</onright>
-        <itemlayout width="155" height="66">
-            <control type="image">
-                <top>3</top>
+        <itemlayout width="155" height="44">
+            <!--control type="image">
+                <top>5</top>
                 <width>155</width>
-                <height>60</height>
+                <height>30</height>
                 <texture colordiffuse="design">white.png</texture>
-            </control>
+            </control-->
             <control type="label">
-                <top>30</top>
+                <top>7</top>
                 <width>145</width>
                 <height>23</height>
                 <aligny>bottom</aligny>
-                <align>right</align>
+                <font>font16</font>
+				<align>right</align>
                 <label>$INFO[ListItem.label]</label>
             </control>
         </itemlayout>
-        <focusedlayout width="155" height="66">
+        <focusedlayout width="155" height="44">
             <control type="image">
-                <top>3</top>
+                <top>5</top>
                 <width>155</width>
-                <height>60</height>
+                <height>38</height>
                 <texture colordiffuse="blue">white.png</texture>
             </control>
             <control type="label">
-                <top>30</top>
+                <top>7</top>
                 <width>145</width>
-                <height>23</height>
+                <font>font16</font>
+				<height>23</height>
                 <aligny>bottom</aligny>
                 <align>right</align>
                 <label>$INFO[ListItem.label]</label>
@@ -128,9 +118,10 @@
             </item>
             <!--LIVETV-->
             <item id="5">
-                <label>19020</label>
+                <visible>PVR.HasTVChannels</visible>
+				<label>19020</label>
                 <label2>FFFF0000</label2>
-                <!--<onclick>ActivateWindow(myPVR)</onclick>-->
+                <onclick>ActivateWindow(TVChannels)</onclick>
                 <onclick>noop</onclick>
             </item>
             <!--PICTURES-->
@@ -152,16 +143,48 @@
                 <label2>FFFF0000</label2>
                 <onclick>ActivateWindow(MyWeather)</onclick>
             </item>
+			<!--NEXT AIR-->
+            <item id="9">
+                <visible>!Skin.HasSetting(nextair) + System.HasAddon(script.tv.show.next.aired) + Library.HasContent(TVShows)</visible>
+				<label>Next Air</label>
+                <label2>FFFF0000</label2>
+                <onclick>RunAddon(script.tv.show.next.aired)</onclick>
+            </item>
+			<!--Favorites-->
+            <item id="10">
+                <label>Favorites</label>
+                <label2>FFFF0000</label2>
+                <onclick>ActivateWindow(134)</onclick>
+            </item>
+			<!--Settings-->
+            <item id="11">
+                <label>Settings</label>
+                <label2>FFFF0000</label2>
+                <onclick>ActivateWindow(Settings)</onclick>
+            </item>
+			<!--EXIT-->
+            <item id="12">
+                <visible>!Player.HasMedia</visible>
+				<label>Energize</label>
+                <label2>FFFF0000</label2>
+                <onclick>ActivateWindow(ShutdownMenu)</onclick>
+            </item>
+			<item id="12">
+                <visible>Player.HasMedia</visible>
+				<label2>FFFF0000</label2>
+                <label>Fullscreen</label>
+				<onclick>fullscreen</onclick>
+            </item>
         </content>
     </control>
-    <control type="label">
+    <!--control type="label">
         <top>638</top>
         <left>13</left>
         <align>right</align>
         <width>145</width>
         <height>40</height>
         <label>24020</label>
-    </control>
+    </control-->
     <control type="label">
         <visible>Control.IsVisible(311)</visible>
         <top>415</top>
@@ -202,7 +225,7 @@
         <textcolor>yellow</textcolor>
         <font>font14_plot</font>
         <align>justify</align>
-        <label>$INFO[Container(311).ListItem.Plot]$INFO[Container(311).ListItem.Property(Addon.Description)]$INFO[Container(311).ListItem.Property(Album_Description)]$INFO[Container(311).ListItem.Property(Artist_Description)]</label>
+        <label>$INFO[Container(311).ListItem.Property(NextAir)]$INFO[Container(311).ListItem.Plot]$INFO[Container(311).ListItem.Property(Addon.Description)]$INFO[Container(311).ListItem.Property(Album_Description)]$INFO[Container(311).ListItem.Property(Artist_Description)]</label>
     </control>
     <control type="scrollbar" id="60">
         <visible>Control.IsVisible(311)</visible>

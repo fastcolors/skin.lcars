@@ -13,7 +13,7 @@
         <control type="label" id="1">
             <description>header label</description>
             <centerleft>640</centerleft>
-            <top>240</top>
+            <top>250</top>
             <width>530</width>
             <height>30</height>
             <font>font14</font>
@@ -31,7 +31,8 @@
             <height>100</height>
             <align>center</align>
             <label>-</label>
-            <font>font14</font>
+            <textcolor>white</textcolor>
+			<font>font14</font>
         </control>
         <control type="grouplist">
             <centerleft>640</centerleft>
@@ -41,8 +42,8 @@
             <width>450</width>
             <control type="button" id="11">
                 <description>Yes button</description>
-                <texturenofocus colordiffuse="55666666" flipx="true" border="20">whiterounded.png</texturenofocus>
-                <texturefocus colordiffuse="pink" flipx="true" border="20">whiterounded.png</texturefocus>
+                <texturenofocus colordiffuse="design" flipx="true" border="20">whiterounded.png</texturenofocus>
+                <texturefocus colordiffuse="green" flipx="true" border="20">whiterounded.png</texturefocus>
                 <width>200</width>
                 <height>40</height>
                 <label>107</label>
@@ -55,8 +56,8 @@
             </control>
             <control type="button" id="10">
                 <description>No button</description>
-                <texturenofocus colordiffuse="55666666" border="20">whiterounded.png</texturenofocus>
-                <texturefocus colordiffuse="pink" border="20">whiterounded.png</texturefocus>
+                <texturenofocus colordiffuse="design" border="20">whiterounded.png</texturenofocus>
+                <texturefocus colordiffuse="green" border="20">whiterounded.png</texturefocus>
                 <width>200</width>
                 <height>40</height>
                 <label>106</label>

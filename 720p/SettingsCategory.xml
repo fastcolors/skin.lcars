@@ -24,23 +24,12 @@
         <control type="button" id="20">
             <onup>3</onup>
             <onright>702</onright>
-            <top>630</top>
+            <ondown>700</ondown>
+			<top>497</top>
             <left>13</left>
-            <width>305</width>
-            <height>79</height>
             <label>-</label>
-            <textcolor>00FFFFFF</textcolor>
-            <texturenofocus colordiffuse="design" flipy="true">curvelcars1.png</texturenofocus>
-            <texturefocus colordiffuse="blue" flipy="true">curvelcars1.png</texturefocus>
+            <include>9000butts</include>
             <onclick>SettingsLevelChange</onclick>
-        </control>
-        <control type="label">
-            <top>638</top>
-            <left>13</left>
-            <align>right</align>
-            <width>145</width>
-            <height>40</height>
-            <label>$INFO[Control.GetLabel(20)]</label>
         </control>
         <control type="label">
             <left>20</left>
@@ -105,11 +94,8 @@
         </control>
         <control type="button" id="10">
             <description>Default Category Button</description>
-            <height>60</height>
-            <width>155</width>
-            <texturenofocus colordiffuse="design">white.png</texturenofocus>
-            <texturefocus colordiffuse="blue">white.png</texturefocus>
-            <align>right</align>
+            <include>9000butts</include>
+                
         </control>
         <control type="button" id="7">
             <description>Default Button</description>
@@ -146,6 +132,6 @@
             <font>-</font>
             <visible>false</visible>
         </control>
-
+		
     </controls>
 </window>

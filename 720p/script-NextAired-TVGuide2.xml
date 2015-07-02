@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">5000</defaultcontrol>
+    <allowoverlay>no</allowoverlay>
+	<controls>
+		<control type="image">
+            <width>1280</width>
+            <height>720</height>
+            <texture>pvrbg.jpg</texture>
+        </control>
+        <include>allwindows</include>
+        <control type="list" id="5000">
+				<centertop>360</centertop>
+				<left>250</left>
+				<height>484</height>
+				<width>300</width>
+				<onleft>9000</onleft>
+				<onright condition="Container(5000).HasFocus(1)">200</onright>
+				<onright condition="Container(5000).HasFocus(2)">201</onright>
+				<onright condition="Container(5000).HasFocus(3)">202</onright>
+				<onright condition="Container(5000).HasFocus(4)">203</onright>
+				<onright condition="Container(5000).HasFocus(5)">204</onright>
+				<onright condition="Container(5000).HasFocus(6)">205</onright>
+				<onright condition="Container(5000).HasFocus(7)">206</onright>
+				<onright condition="Container(5000).HasFocus(8)">207</onright>
+				<onright condition="Container(5000).HasFocus(9)">208</onright>
+				<onright condition="Container(5000).HasFocus(10)">209</onright>
+				<onright condition="Container(5000).HasFocus(11)">210</onright>
+				<onright condition="Container(5000).HasFocus(12)">211</onright>
+				<onright condition="Container(5000).HasFocus(13)">212</onright>
+				<onright condition="Container(5000).HasFocus(14)">213</onright>
+				<onright condition="Container(5000).HasFocus(15)">214</onright>
+				<onright condition="Container(5000).HasFocus(16)">215</onright>
+				<onup>5000</onup>
+				<ondown>5000</ondown>
+				<pagecontrol>-</pagecontrol>
+				<itemlayout height="44" width="300">
+					<control type="image">
+						<width>300</width>
+						<height>40</height>
+						<texture flipx="true" border="20" colordiffuse="design">whiterounded.png</texture>
+					</control>
+					<control type="label">
+						<width>290</width>
+						<height>40</height>
+						<align>right</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+					<control type="label">
+						<width>290</width>
+						<height>40</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label2]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout height="44" width="300">
+					<control type="image">
+                    	<width>300</width>
+						<height>40</height>
+						<texture flipx="true" border="20" colordiffuse="blue">whiterounded.png</texture>
+					</control>
+					<control type="label">
+						<width>290</width>
+						<height>40</height>
+						<align>right</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+					<control type="label">
+						<width>290</width>
+						<height>40</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label2]</label>
+					</control>
+				</focusedlayout>			
+				<content>
+					<item id="1">
+						<label>$INFO[Window(home).Property(NextAired.200.Weekday)]</label>
+						<label2>$INFO[Container(200).NumItems, (,)]</label2>
+						<onclick>noop</onclick>
+						<icon>-</icon>
+					</item>
+					<item id="2">
+						<label>$INFO[Window(home).Property(NextAired.201.Weekday)]</label>
+						<label2>$INFO[Container(201).NumItems, (,)]</label2>
+						<onclick>noop</onclick>
+						<icon>-</icon>
+					</item>
+					<item id="3">
+						<label>$INFO[Window(home).Property(NextAired.202.Weekday)]</label>
+						<label2>$INFO[Container(202).NumItems, (,)]</label2>
+						<onclick>noop</onclick>
+						<icon>-</icon>
+					</item>
+					<item id="4">
+						<label>$INFO[Window(home).Property(NextAired.203.Weekday)]</label>
+						<label2>$INFO[Container(203).NumItems, (,)]</label2>
+						<onclick>noop</onclick>
+						<icon>-</icon>
+					</item>
+					<item id="5">
+						<label>$INFO[Window(home).Property(NextAired.204.Weekday)]</label>
+						<label2>$INFO[Container(204).NumItems, (,)]</label2>
+						<onclick>noop</onclick>
+						<icon>-</icon>
+					</item>
+					<item id="6">
+						<label>$INFO[Window(home).Property(NextAired.205.Weekday)]</label>
+						<label2>$INFO[Container(205).NumItems, (,)]</label2>
+						<onclick>noop</onclick>
+						<icon>-</icon>
+					</item>
+					<item id="7">
+						<label>$INFO[Window(home).Property(NextAired.206.Weekday)]</label>
+						<label2>$INFO[Container(206).NumItems, (,)]</label2>
+						<onclick>noop</onclick>
+						<icon>-</icon>
+					</item>
+					<item id="8">
+						<label>$INFO[Window(home).Property(NextAired.207.Wday)] $INFO[Window(Home).Property(NextAired.207.Date)]</label>
+						<label2>$INFO[Container(207).NumItems, (,)]</label2>
+						<onclick>noop</onclick>
+					</item>
+					<item id="9">
+						<label>$INFO[Window(home).Property(NextAired.208.Wday)] $INFO[Window(Home).Property(NextAired.208.Date)]</label>
+						<label2>$INFO[Container(208).NumItems, (,)]</label2>
+						<onclick>noop</onclick>
+					</item>
+					<item id="10">
+						<label>$INFO[Window(home).Property(NextAired.209.Wday)] $INFO[Window(Home).Property(NextAired.209.Date)]</label>
+						<label2>$INFO[Container(209).NumItems, (,)]</label2>
+						<onclick>noop</onclick>
+					</item>
+					<item id="11">
+						<label>$INFO[Window(home).Property(NextAired.210.Wday)] $INFO[Window(Home).Property(NextAired.210.Date)]</label>
+						<label2>$INFO[Container(210).NumItems, (,)]</label2>
+						<onclick>noop</onclick>
+					</item>
+					<item id="12">
+						<label>$INFO[Window(home).Property(NextAired.211.Wday)] $INFO[Window(Home).Property(NextAired.211.Date)]</label>
+						<label2>$INFO[Container(211).NumItems, (,)]</label2>
+						<onclick>noop</onclick>
+					</item>
+					<item id="13">
+						<label>$INFO[Window(home).Property(NextAired.212.Wday)] $INFO[Window(Home).Property(NextAired.212.Date)]</label>
+						<label2>$INFO[Container(212).NumItems, (,)]</label2>
+						<onclick>noop</onclick>
+					</item>
+					<item id="14">
+						<label>$INFO[Window(home).Property(NextAired.213.Wday)] $INFO[Window(Home).Property(NextAired.213.Date)]</label>
+						<label2>$INFO[Container(213).NumItems, (,)]</label2>
+						<onclick>noop</onclick>
+					</item>
+					<item id="15">
+						<label>$INFO[Window(home).Property(NextAired.214.Wday)] $INFO[Window(Home).Property(NextAired.214.Date)]</label>
+						<label2>$INFO[Container(214).NumItems, (,)]</label2>
+						<onclick>noop</onclick>
+					</item>
+					<item id="16">
+						<label>$INFO[Window(home).Property(NextAired.215.Wday)] $INFO[Window(Home).Property(NextAired.215.Date)]</label>
+						<label2>$INFO[Container(215).NumItems, (,)]</label2>
+						<onclick>noop</onclick>
+					</item>
+				</content>
+			</control>
+			
+			<control type="group" id="9001">
+				<control type="panel" id="200">
+					<visible >[Container(5000).HasFocus(1)]</visible>
+					<ondown>200</ondown>
+					<include>TVNextAiredListCommonLayout</include>				
+				</control>
+				<control type="panel" id="201">
+					<visible >[Container(5000).HasFocus(2)]</visible>
+					<ondown>201</ondown>
+					<include>TVNextAiredListCommonLayout</include>
+				</control>
+				<control type="panel" id="202">
+					<visible >[Container(5000).HasFocus(3)]</visible>
+					<ondown>202</ondown>
+					<include>TVNextAiredListCommonLayout</include>
+				</control>
+				<control type="panel" id="203">
+					<visible>[Container(5000).HasFocus(4)]</visible>
+					<ondown>203</ondown>
+					<include>TVNextAiredListCommonLayout</include>
+				</control>
+				<control type="panel" id="204">
+					<visible >[Container(5000).HasFocus(5)]</visible>
+					<ondown>204</ondown>
+					<include>TVNextAiredListCommonLayout</include>
+				</control>
+				<control type="panel" id="205">
+					<visible >[Container(5000).HasFocus(6)]</visible>
+					<ondown>205</ondown>
+					<include>TVNextAiredListCommonLayout</include>
+				</control>
+				<control type="panel" id="206">
+					<visible >[Container(5000).HasFocus(7)]</visible>
+					<ondown>206</ondown>
+					<include>TVNextAiredListCommonLayout</include>
+				</control>
+				<control type="panel" id="207">
+					<visible>Container(5000).HasFocus(8)</visible>
+					<onright>207</onright>
+					<include>TVNextAiredListCommonLayout</include>
+				</control>
+				<control type="panel" id="208">
+					<visible>Container(5000).HasFocus(9)</visible>
+					<onright>208</onright>
+					<include>TVNextAiredListCommonLayout</include>
+				</control>
+				<control type="panel" id="209">
+					<visible>Container(5000).HasFocus(10)</visible>
+					<onright>209</onright>
+					<include>TVNextAiredListCommonLayout</include>
+				</control>
+				<control type="panel" id="210">
+					<visible>Container(5000).HasFocus(11)</visible>
+					<onright>210</onright>
+					<include>TVNextAiredListCommonLayout</include>
+				</control>
+				<control type="panel" id="211">
+					<visible>Container(5000).HasFocus(12)</visible>
+					<onright>211</onright>
+					<include>TVNextAiredListCommonLayout</include>
+				</control>
+				<control type="panel" id="212">
+					<visible>Container(5000).HasFocus(13)</visible>
+					<onright>212</onright>
+					<include>TVNextAiredListCommonLayout</include>
+				</control>
+				<control type="panel" id="213">
+					<visible>Container(5000).HasFocus(14)</visible>
+					<onright>213</onright>
+					<include>TVNextAiredListCommonLayout</include>
+				</control>
+				<control type="panel" id="214">
+					<visible>Container(5000).HasFocus(15)</visible>
+					<onright>214</onright>
+					<include>TVNextAiredListCommonLayout</include>
+				</control>
+				<control type="panel" id="215">
+					<visible>Container(5000).HasFocus(16)</visible>
+					<onright>215</onright>
+					<include>TVNextAiredListCommonLayout</include>
+				</control>
+			</control>
+			<control type="grouplist" id="9000">
+                    <top>101</top>
+					<left>13</left>
+					<width>155</width>
+					<height>530</height>
+					<itemgap>6</itemgap>
+					<onup>700</onup>
+					<ondown>700</ondown>
+					<onright>5000</onright>
+					<onleft>9000</onleft>
+                    <control type="button" id="8">
+                        <description>Settings</description>
+                        <include>9000butts</include>
+						<label>5</label>
+                    </control>
+                    
+            </control>
+
+	</controls>
+</window>

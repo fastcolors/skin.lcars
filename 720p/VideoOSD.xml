@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="2901">
-    <defaultcontrol always="true">3</defaultcontrol>
+    <defaultcontrol always="true">4</defaultcontrol>
     <allowoverlay>yes</allowoverlay>
     <zorder>2</zorder>
     <controls>
@@ -10,10 +10,10 @@
             <top>718</top>
             <width>780</width>
             <animation type="Focus">
-                <effect type="slide" tween="Cubic" easing="out" start="0,0" end="0,-600" time="800"/>
+                <effect type="slide" tween="Cubic" easing="out" start="0,0" end="0,-620" time="800"/>
             </animation>
             <animation type="unFocus">
-                <effect type="slide" tween="Cubic" easing="in" start="0,-600" end="0,0" time="500"/>
+                <effect type="slide" tween="Cubic" easing="in" start="0,-620" end="0,0" time="500"/>
             </animation>
             <control type="image">
                 <centerleft>0</centerleft>
@@ -36,9 +36,11 @@
                 <control type="togglebutton" id="701" description="Subtitles">
                     <include>largebutton</include>
                     <label>$LOCALIZE[33003] $LOCALIZE[287]</label>
-                    <texturenofocus colordiffuse="55000000" border="20">whiteallrounded.png</texturenofocus>
+                    <texturenofocus colordiffuse="design" border="20">whiteallrounded.png</texturenofocus>
                     <texturefocus colordiffuse="red" border="20">whiteallrounded.png</texturefocus>
-                    <onclick>SetFocus(100,2)</onclick>
+                    <alttexturenofocus colordiffuse="design" border="20">whiteallrounded.png</alttexturenofocus>
+					<alttexturefocus colordiffuse="blue" border="20">whiteallrounded.png</alttexturefocus>
+					<onclick>SetFocus(100,2)</onclick>
                     <onclick>Dialog.Close(VideoOSD)</onclick>
                     <onclick>ActivateWindow(SubtitleSearch)</onclick>
                 </control>
@@ -63,9 +65,11 @@
                 <control type="togglebutton" id="706" description="Info">
                     <include>largebutton</include>
                     <label>20176</label>
-                    <texturenofocus colordiffuse="55000000" border="20">whiteallrounded.png</texturenofocus>
+                    <texturenofocus colordiffuse="design" border="20">whiteallrounded.png</texturenofocus>
                     <texturefocus colordiffuse="red" border="20">whiteallrounded.png</texturefocus>
-                    <onclick>SetFocus(100,2)</onclick>
+                    <alttexturenofocus colordiffuse="design" border="20">whiteallrounded.png</alttexturenofocus>
+					<alttexturefocus colordiffuse="blue" border="20">whiteallrounded.png</alttexturefocus>
+					<onclick>SetFocus(100,2)</onclick>
                     <onclick>close</onclick>
                     <onclick>ActivateWindow(142)</onclick>
                     <altclick>SetFocus(100,2)</altclick>
@@ -92,7 +96,7 @@
             <visible>![Window.IsActive(DialogSelect.xml) | Window.IsActive(SliderDialog) | Window.IsActive(OSDVideoSettings) | Window.IsActive(OSDAudioSettings) | Window.IsActive(VideoBookmarks) | Window.IsActive(script-XBMC-Subtitles-main.xml)]</visible>
             <animation effect="fade" end="100" time="400">Visible</animation>
             <animation effect="fade" end="0" time="100">Hidden</animation>
-            <control type="group" description="Dialog Background">
+            <!--control type="group" description="Dialog Background">
                 <visible>Window.IsVisible(videoosd.xml) + Window.IsActive(dialogseekbar.xml)</visible>
                 <control type="image">
                     <top>550</top>
@@ -102,39 +106,57 @@
                     <aspectratio>stretch</aspectratio>
                     <texture border="150">dialog.png</texture>
                 </control>
-            </control>
+            </control-->
             <control type="grouplist">
-                <left>340</left>
-                <top>566</top>
-                <width>840</width>
+                <centerleft>640</centerleft>
+                <top>17</top>
+                <width>920</width>
                 <height>30</height>
                 <orientation>horizontal</orientation>
-                <itemgap>10</itemgap>
+                <itemgap>15</itemgap>
                 <control type="label" description="Title">
+                    <visible>Pvr.IsPlayingTV</visible>
                     <width>auto</width>
                     <height>30</height>
-                    <scroll>true</scroll>
-                    <font>font30</font>
-                    <textcolor>yellow</textcolor>
-                    <label>$INFO[VideoPlayer.Title]</label>
-                </control>
-                <control type="label" description="Title">
-                    <visible>Player.ChapterCount + !VideoPlayer.Content(LiveTV)</visible>
-                    <width>auto</width>
-                    <height>30</height>
-                    <scroll>true</scroll>
-                    <font>font30</font>
-                    <textcolor>yellow</textcolor>
-                    <label>$INFO[Player.Chapter,• chapter  ]$INFO[Player.ChapterCount,/]</label>
+                    <font>font30_title</font>
+                    <textcolor>orange</textcolor>
+                    <label>$INFO[VideoPlayer.Title,NOW:  ]</label>
                 </control>
                 <control type="label" description="Channel">
                     <visible>Pvr.IsPlayingTV</visible>
                     <width>auto</width>
                     <height>30</height>
                     <scroll>true</scroll>
-                    <font>font30</font>
+                    <font>font30_title</font>
                     <textcolor>yellow</textcolor>
                     <label>($INFO[VideoPlayer.ChannelNumber]) - $INFO[VideoPlayer.ChannelName]</label>
+                </control>
+                <control type="label" description="Title">
+                    <visible>!Pvr.IsPlayingTV</visible>
+                    <width>auto</width>
+                    <height>40</height>
+                    <font>font30_title</font>
+                    <textcolor>black</textcolor>
+                    <label>$INFO[VideoPlayer.Title]</label>
+                </control>
+                <control type="label" description="Title">
+                    <visible>Player.ChapterCount + !VideoPlayer.Content(LiveTV)</visible>
+                    <width>auto</width>
+                    <top>10</top>
+                    <height>30</height>
+                    <scroll>true</scroll>
+                    <font>font24_title</font>
+                    <textcolor>black</textcolor>
+                    <label>$INFO[Player.Chapter,• chapter  ]$INFO[Player.ChapterCount,/]</label>
+                </control>
+                <control type="label" description="Next item">
+                    <visible>!IsEmpty(VideoPlayer.NextTitle)</visible>
+                    <width>auto</width>
+                    <height>30</height>
+                    <font>font24_title</font>
+                    <textcolor>red</textcolor>
+                    <scroll>true</scroll>
+                    <label>$INFO[VideoPlayer.NextTitle,$LOCALIZE[209]:  ]</label>
                 </control>
             </control>
             <control type="image">
@@ -142,43 +164,40 @@
                 <top>445</top>
                 <height>230</height>
                 <width>230</width>
-                <aspectratio align="right">keep</aspectratio>
-                <texture>$INFO[Player.Art(Thumb)]</texture>
+                <aspectratio>keep</aspectratio>
+                <texture>$INFO[Player.Art(Cover)]</texture>
             </control>
             <control type="grouplist" id="100">
-                <left>320</left>
-                <top>615</top>
+                <posx>70</posx>
+                <top>620</top>
                 <onright>100</onright>
                 <onleft>100</onleft>
                 <onup>101</onup>
                 <ondown>101</ondown>
-                <width>700</width>
-                <height>100</height>
+                <width>900</width>
+                <height>40</height>
                 <align>left</align>
                 <orientation>horizontal</orientation>
                 <control type="button" id="1">
-                    <width>60</width>
-                    <height>60</height>
+                    <texturenofocus colordiffuse="55ffffff"  flipx="true" border="20">whiterounded.png</texturenofocus>
+                    <texturefocus colordiffuse="green"  flipx="true" border="20">whiterounded.png</texturefocus>
+                    <include>osdbutt</include>
                     <label>PREV</label>
                     <onclick>PlayerControl(Previous)</onclick>
                 </control>
                 <control type="button" id="2">
                     <visible>!Pvr.IsPlayingTV</visible>
-                    <width>60</width>
-                    <height>60</height>
+                    <include>osdbutt</include>
                     <label>REW</label>
                     <onclick>PlayerControl(Rewind)</onclick>
                 </control>
                 <control type="togglebutton" id="3">
                     <visible>!Pvr.IsPlayingTV</visible>
                     <usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
-                    <width>60</width>
-                    <height>60</height>
+                    <include>osdbutt</include>
                     <label>PAUSE</label>
-                    <texturenofocus colordiffuse="55000000" border="20">whiteallrounded.png</texturenofocus>
-                    <texturefocus colordiffuse="green" border="20">whiteallrounded.png</texturefocus>
-                    <alttexturenofocus colordiffuse="55000000" border="20">whiteallrounded.png</alttexturenofocus>
-                    <alttexturefocus colordiffuse="green" border="20">whiteallrounded.png</alttexturefocus>
+                    <alttexturenofocus colordiffuse="5566A7FF" border="20">white.png</alttexturenofocus>
+                    <alttexturefocus colordiffuse="green" border="20">white.png</alttexturefocus>
                     <altlabel>PLAY</altlabel>
                     <onclick>PlayerControl(Play)</onclick>
                 </control>
@@ -193,27 +212,22 @@
                     <label>FFWD</label>
                     <onclick>PlayerControl(Forward)</onclick>
                 </control>
-                <control type="button" id="6">
-                    <include>osdbutt</include>
-                    <label>NEXT</label>
-                    <onclick>PlayerControl(Next)</onclick>
-                </control>
                 <control type="button" id="7">
                     <visible>Pvr.IsPlayingTV</visible>
                     <include>osdbutt</include>
-                    <label>NEXT</label>
+                    <label>EPG</label>
                     <onclick>ActivateWindow(PVROSDChannels)</onclick>
                 </control>
                 <control type="button" id="8">
                     <visible>Pvr.IsPlayingTV</visible>
                     <include>osdbutt</include>
-                    <label>NEXT</label>
+                    <label>LIST</label>
                     <onclick>ActivateWindow(PVROSDGuide)</onclick>
                 </control>
                 <control type="button" id="9">
                     <visible>Pvr.IsPlayingTV + Player.CanRecord</visible>
                     <include>osdbutt</include>
-                    <label>NEXT</label>
+                    <label>Record</label>
                     <onclick>PlayerControl(Record)</onclick>
                 </control>
                 <control type="button" id="10">
@@ -222,22 +236,34 @@
                     <label>3D</label>
                     <onclick>SetFocus(500)</onclick>
                 </control>
+                <control type="button" id="11">
+                    <include>osdbutt</include>
+                    <label>Menu</label>
+                    <onclick>SetFocus(101)</onclick>
+                </control>
+				<control type="button" id="6">
+                    <texturenofocus colordiffuse="55ffffff" border="20">whiterounded.png</texturenofocus>
+                    <texturefocus colordiffuse="green" border="20">whiterounded.png</texturefocus>
+                    <include>osdbutt</include>
+                    <label>NEXT</label>
+                    <onclick>PlayerControl(Next)</onclick>
+                </control>
             </control>
         </control>
-        <control type="label">
+        <!--control type="label">
             <visible>!ControlGroup(101).HasFocus()</visible>
             <visible>!Window.IsVisible(10123) + !Window.IsVisible(10124) + !Window.IsVisible(10125)</visible>
             <animation type="Visible">
                 <effect type="fade" tween="circle" easing="in" start="0" end="100" time="800"/>
             </animation>
-            <centerleft>640</centerleft>
-            <top>700</top>
-            <width>800</width>
+            <right>70</right>
+            <top>667</top>
+            <width>150</width>
             <height>35</height>
+            <textcolor>black</textcolor>
             <font>font13</font>
-            <align>center</align>
             <label>PRESS UP FOR MENU</label>
-        </control>
+        </control-->
 
         <!-- 3D -->
         <control type="group">
@@ -272,7 +298,7 @@
                     </control>
                 </control>
                 <control type="radiobutton" id="503">
-                   <include>largebutton</include>
+                    <include>largebutton</include>
                     <label>Enable</label>
                     <onclick>ToggleStereoMode</onclick>
                     <texturenofocus border="20" colordiffuse="55000000">whiteallrounded.png</texturenofocus>

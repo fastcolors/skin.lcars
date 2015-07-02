@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="142">
+    <defaultcontrol always="false">9000</defaultcontrol>
+    <zorder>2</zorder>
+    <controls>
+        
+			<control type="image">
+				<description>background image</description>
+				<left>0</left>
+				<top>30</top>
+				<width>730</width>
+				<height>560</height>
+				<texture border="40">Dialog.png</texture>
+			</control>
+			<control type="button">
+				<description>Close Window button</description>
+				<left>640</left>
+				<top>45</top>
+				<width>30</width>
+				<height>30</height>
+				<label>-</label>
+				<font>-</font>
+				<onclick>PreviousMenu</onclick>
+				<texturefocus>closefocus.png</texturefocus>
+				<texturenofocus>close.png</texturenofocus>
+				<onleft>10</onleft>
+				<onright>10</onright>
+				<onup>10</onup>
+				<ondown>10</ondown>
+				<visible>system.getbool(input.enablemouse)</visible>
+			</control>
+		<control type="group">
+			<control type="image">
+				<left>40</left>
+				<top>46</top>
+				<width>650</width>
+				<aspectratio>keep</aspectratio>
+				<height>260</height>
+				<texture>$INFO[Player.Art(poster)]$INFO[Player.Art(tvshow.poster)]</texture>
+			</control>
+			<control type="group">
+					<left>40</left>
+					<top>325</top>
+				<control type="label" description="Main label">
+                    <visible>VideoPlayer.Content(MusicVideos)</visible>
+                    <textcolor>yellow</textcolor>
+                    <label>$INFO[VideoPlayer.Artist]</label>
+                </control>
+                <control type="label" description="Main label">
+                    <visible>!VideoPlayer.Content(MusicVideos)</visible>
+                    <textcolor>yellow</textcolor>
+                    <label>$INFO[VideoPlayer.Title]</label>
+                </control>
+                <control type="label" description="Label 2">
+                    <visible>VideoPlayer.Content(MusicVideos)</visible>
+                    <top>45</top>
+                    <textcolor>yellow</textcolor>
+                    <label>$INFO[VideoPlayer.Album]</label>
+                </control>
+                <control type="label" description="chapters">
+                    <visible>Player.ChapterCount</visible>
+                    <top>45</top>
+                    <textcolor>yellow</textcolor>
+                    <label>$LOCALIZE[21396]$INFO[Player.Chapter, : ]$INFO[Player.ChapterCount, / ]</label>
+                </control>
+                <control type="label" description="Episode s-e">
+                    <visible>VideoPlayer.Content(Episodes)</visible>
+                    <top>45</top>
+                    <textcolor>yellow</textcolor>
+                    <include>FullscreenInfoLabel</include>
+                    <label>$INFO[VideoPlayer.TVShowTitle] - $LOCALIZE[20373] $INFO[VideoPlayer.Season], $LOCALIZE[20359] $INFO[VideoPlayer.Episode]</label>
+                </control>
+                <control type="label" description="music video title">
+                    <visible>VideoPlayer.Content(Musicvideos)</visible>
+                    <top>45</top>
+                    <textcolor>yellow</textcolor>
+                    <label>$INFO[VideoPlayer.Title]</label>
+                </control>
+                <control type="textbox">
+                    <top>80</top>
+                    <width>650</width>
+                    <height>170</height>
+                    <textcolor>white</textcolor>
+                    <label>$INFO[VideoPlayer.Plot]</label>
+                    <align>justify</align>
+                    <autoscroll delay="3000" time="3000" repeat="10000">Window.IsVisible(142)</autoscroll>
+                </control>
+			</control>
+		</control>
+	</controls>
+</window>

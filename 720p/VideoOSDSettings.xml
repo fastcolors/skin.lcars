@@ -6,7 +6,6 @@
 		<left>240</left>
 		<top>60</top>
 	</coordinates>
-	<include>dialogeffect</include>
 	<controls>
 		<control type="group">
 			<animation effect="fade" start="100" end="0" time="400" condition="Window.IsVisible(SliderDialog) | Window.IsVisible(FileBrowser)">Conditional</animation>
@@ -16,7 +15,7 @@
 				<top>0</top>
 				<width>800</width>
 				<height>600</height>
-				<texture border="40">DialogBack2.png</texture>
+				<texture border="40">Dialog.png</texture>
 			</control>
 			<control type="image">
 				<description>Dialog Header image</description>
@@ -58,13 +57,13 @@
 				<description>Close Window button</description>
 				<left>710</left>
 				<top>15</top>
-				<width>64</width>
-				<height>32</height>
+				<width>30</width>
+				<height>30</height>
 				<label>-</label>
 				<font>-</font>
 				<onclick>PreviousMenu</onclick>
-				<texturefocus>DialogCloseButton-focus.png</texturefocus>
-				<texturenofocus>DialogCloseButton.png</texturenofocus>
+				<texturefocus>closefocus.png</texturefocus>
+				<texturenofocus>close.png</texturenofocus>
 				<onleft>2</onleft>
 				<onright>2</onright>
 				<onup>2</onup>
@@ -113,50 +112,50 @@
 		</control>
 		<control type="sliderex" id="10">
 			<description>Default Slider</description>
-			<height>40</height>
+			<!--height>40</height>
 			<texturenofocus border="5">button-nofocus.png</texturenofocus>
 			<texturefocus border="5">button-focus2.png</texturefocus>
 			<font>font13</font>
 			<textcolor>grey2</textcolor>
-			<focusedcolor>white</focusedcolor>
+			<focusedcolor>white</focusedcolor-->
 		</control>
 		<control type="button" id="7">
 			<description>Default Button</description>
 			<left>0</left>
 			<top>0</top>
-			<height>40</height>
+			<aligny>center</aligny>
+			<texturenofocus colordiffuse="design" border="20">whiterounded.png</texturenofocus>
+			<texturefocus colordiffuse="blue" border="20">whiterounded.png</texturefocus>
+			<!--height>40</height>
 			<font>font13</font>
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>
-			<texturefocus border="5">button-focus2.png</texturefocus>
+			<texturefocus border="5">button-focus2.png</texturefocus-->
 		</control>
 		<control type="radiobutton" id="8">
 			<description>Default RadioButton</description>
 			<left>0</left>
 			<top>0</top>
-			<height>40</height>
+			<aligny>center</aligny>
+			<!--height>40</height>
 			<font>font13</font>
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>
-			<texturefocus border="5">button-focus2.png</texturefocus>
+			<texturefocus border="5">button-focus2.png</texturefocus-->
 		</control>
 		<control type="spincontrolex" id="9">
 			<description>Default SpinControlex</description>
 			<left>0</left>
 			<top>0</top>
-			<height>40</height>
+			<!--height>40</height>
 			<font>font13</font>
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>
 			<texturenofocus border="5">button-nofocus.png</texturenofocus>
 			<texturefocus border="5">button-focus2.png</texturefocus>
-			<aligny>center</aligny>
+			<aligny>center</aligny-->
 			<reverse>yes</reverse>
 		</control>
-		<control type="image" id="11">
-			<description>separator image</description>
-			<height>2</height>
-			<texture>separator2.png</texture>
-		</control>
+		
 	</controls>
 </window>

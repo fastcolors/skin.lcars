@@ -13,7 +13,7 @@
 			<top>0</top>
 			<width>610</width>
 			<height>240</height>
-			<texture border="40">DialogBack.png</texture>
+			<texture border="40">Dialog.png</texture>
 		</control>
 		<control type="image">
 			<description>Dialog Header image</description>
@@ -45,7 +45,7 @@
 			<textcolor>selected</textcolor>
 			<shadowcolor>black</shadowcolor>
 		</control>
-		<control type="button">
+		<!--control type="button">
 			<description>Close Window button</description>
 			<left>520</left>
 			<top>15</top>
@@ -54,14 +54,14 @@
 			<label>-</label>
 			<font>-</font>
 			<onclick>PreviousMenu</onclick>
-			<texturefocus>DialogCloseButton-focus.png</texturefocus>
-			<texturenofocus>DialogCloseButton.png</texturenofocus>
+			<texturefocus>closefocus.png</texturefocus>
+			<texturenofocus>close.png</texturenofocus>
 			<onleft>10</onleft>
 			<onright>10</onright>
 			<onup>10</onup>
 			<ondown>10</ondown>
 			<visible>system.getbool(input.enablemouse)</visible>
-		</control>
+		</control-->
 		<control type="textbox" id="9">
 			<description>text</description>
 			<left>30</left>
@@ -69,6 +69,7 @@
 			<width>550</width>
 			<height>80</height>
 			<align>left</align>
+			<textcolor>white</textcolor>
 			<label>-</label>
 			<font>font13</font>
 			<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
@@ -83,15 +84,13 @@
 		</control>
 		<control type="button" id="10">
 			<description>Cancel button</description>
+			<label>222</label>
 			<left>205</left>
 			<top>175</top>
 			<width>200</width>
 			<height>40</height>
-			<label>222</label>
-			<font>font12_title</font>
-			<textcolor>white</textcolor>
-			<focusedcolor>white</focusedcolor>
 			<align>center</align>
+            <aligny>center</aligny>
 			<onleft>10</onleft>
 			<onright>10</onright>
 			<onup>10</onup>

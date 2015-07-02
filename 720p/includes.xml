@@ -70,19 +70,19 @@
         </focusedlayout>
     </include>
     <include name="750">
+        <control type="image">
+            <visible>!Control.IsVisible(311) + !Control.IsVisible(411)</visible>
+            <animation effect="fade" time="150" start="0" end="100">VisibleChange</animation>
+            <top>135</top>
+            <left>300</left>
+            <width>910</width>
+            <height>280</height>
+            <aspectratio>keep</aspectratio>
+            <texture>login.jpg</texture>
+        </control>
         <control type="group" id="750">
             <!--background-->
-            <control type="group">
-                <visible>![Container(9000).HasFocus(1) | Container(9000).HasFocus(2) | Container(9000).HasFocus(3) | Container(9000).HasFocus(4) | Container(9000).HasFocus(7) | Container(9000).HasFocus(8) | Container(9000).HasFocus(9)]</visible>
-                <control type="image">
-                    <top>135</top>
-                    <left>320</left>
-                    <width>910</width>
-                    <height>280</height>
-                    <aspectratio>keep</aspectratio>
-                    <texture>login.jpg</texture>
-                </control>
-            </control>
+
             <control type="label">
                 <centerleft>718</centerleft>
                 <top>440</top>
@@ -156,7 +156,9 @@
                     <label>$INFO[Window(Weather).Property(Location)][CR][CR]$INFO[Window(Weather).Property(Current.Condition)][CR][CR]$INFO[Window(Weather).Property(Current.Humidity)] HUMIDITY[CR][CR]WIND $INFO[Window(Weather).Property(Current.Wind)]</label>
                 </control>
             </control>
+
             <!--movies-->
+
             <control type="label">
                 <visible>Container(9000).HasFocus(1)</visible>
                 <top>81</top>
@@ -229,7 +231,7 @@
                 <content target="video">$INFO[Skin.String(movieshome)]</content>
             </control>
 
-            <!--tv-->
+            <!--TV-->
 
             <control type="label">
                 <visible>Container(9000).HasFocus(2)</visible>
@@ -301,7 +303,8 @@
                 </focusedlayout>
                 <content target="video">$INFO[Skin.String(tvhome)]</content>
             </control>
-            <!--NEXT AIR tv-->
+
+            <!--NEXT AIRED-->
 
             <control type="label">
                 <visible>Container(9000).HasFocus(9)</visible>
@@ -435,9 +438,9 @@
 
                       <onclick>$INFO[Window(Home).Property(NextAire.%d.Play)]</onclick>
                     </item-->
-
                 </content>
             </control>
+
             <!--music-->
 
             <control type="label">
@@ -476,7 +479,6 @@
                     <onclick>ActivateWindow(music,artists,return)</onclick>
                 </control>
             </control>
-
             <control type="panel" id="311">
                 <animation effect="fade" start="100" end="80" condition="!Control.HasFocus(311) + !Control.HasFocus(60)">Conditional</animation>
                 <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
@@ -670,9 +672,103 @@
                 <content target="video">$INFO[Skin.String(sourceshome)]</content>
             </control>
 
+            <!--FAVOURITES-->
+
+            <control type="button" id="888" description="FakeButton">
+                <visible>Container(9000).HasFocus(10)</visible>
+                <left>-20</left>
+                <top>-20</top>
+                <height>10</height>
+                <width>10</width>
+                <texturefocus>-</texturefocus>
+                <texturenofocus>-</texturenofocus>
+                <onup>9000</onup>
+                <!--<onleft>9000</onleft>-->
+                <onleft>Control.Move(311,-1)</onleft>
+                <onright>Control.Move(311,1)</onright>
+                <label>-</label>
+                <onclick>$INFO[Container(311).ListItem.FileNameAndPath]</onclick>
+            </control>
+
+            <control type="list" id="311">
+                <animation effect="fade" start="100" end="80" condition="!Control.HasFocus(888) + !Control.HasFocus(60)">Conditional</animation>
+                <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
+                <visible>Container(9000).HasFocus(10)</visible>
+                <onup>9000</onup>
+                <onleft>9000</onleft>
+                <top>125</top>
+                <left>330</left>
+                <width>910</width>
+                <height>300</height>
+                <pagecontrol>60</pagecontrol>
+                <ondown>60</ondown>
+                <orientation>horizontal</orientation>
+                <itemlayout width="228" height="280">
+                    <control type="image">
+                        <top>64</top>
+                        <centerleft>114</centerleft>
+                        <width>200</width>
+                        <height>200</height>
+                        <aspectratio>scale</aspectratio>
+                        <texture>$INFO[ListItem.Icon]</texture>
+                    </control>
+                    <control type="image">
+                        <centerleft>114</centerleft>
+                        <width>218</width>
+                        <height>58</height>
+                        <texture colordiffuse="design">white.png</texture>
+                    </control>
+                    <control type="textbox">
+                        <align>center</align>
+                        <centerleft>114</centerleft>
+                        <font>font16</font>
+                        <width>208</width>
+                        <height>58</height>
+                        <info>ListItem.Label</info>
+                    </control>
+                </itemlayout>
+                <focusedlayout width="228" height="280">
+                    <control type="image">
+                        <visible>Control.HasFocus(888)</visible>
+                        <top>60</top>
+                        <centerleft>114</centerleft>
+                        <width>208</width>
+                        <height>208</height>
+                        <aspectratio>scale</aspectratio>
+                        <texture>$INFO[ListItem.Icon]</texture>
+                        <bordertexture colordiffuse="red">white.png</bordertexture>
+                        <bordersize>4</bordersize>
+                    </control>
+                    <control type="image">
+                        <visible>!Control.HasFocus(888)</visible>
+                        <top>64</top>
+                        <centerleft>114</centerleft>
+                        <width>200</width>
+                        <height>200</height>
+                        <aspectratio>scale</aspectratio>
+                        <texture>$INFO[ListItem.Icon]</texture>
+                    </control>
+                    <control type="image">
+                        <centerleft>114</centerleft>
+                        <width>218</width>
+                        <height>58</height>
+                        <texture colordiffuse="design">white.png</texture>
+                    </control>
+                    <control type="textbox">
+                        <centerleft>114</centerleft>
+                        <align>center</align>
+                        <font>font16</font>
+                        <width>208</width>
+                        <height>58</height>
+                        <info>ListItem.Label</info>
+                    </control>
+                </focusedlayout>
+                <content target="video">favourites://</content>
+            </control>
+
             <!--weather-->
 
-            <control type="list" id="411" description="TOP Weather">
+            <control type="list" id="411">
                 <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
                 <visible>Container(9000).HasFocus(8)</visible>
                 <onup>9000</onup>

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
     <defaultcontrol always="false">9000</defaultcontrol>
-    <allowoverlay>no</allowoverlay><controls>
+    <allowoverlay>no</allowoverlay>
+    <controls>
     <control type="group">
         <control type="image">
             <width>1280</width>
@@ -171,7 +172,7 @@
         <label>24020</label>
     </control-->
     <control type="label">
-        <visible>Control.IsVisible(311)</visible>
+        <visible>Control.HasFocus(311)</visible>
         <top>415</top>
         <centerleft>718</centerleft>
         <font>font13</font>
@@ -181,7 +182,7 @@
         <label>$INFO[Container(311).ListItem.MPAA]</label>
     </control>
     <control type="label">
-        <visible>Control.IsVisible(311)</visible>
+        <visible>Control.HasFocus(311)</visible>
         <top>415</top>
         <centerleft>918</centerleft>
         <font>font13</font>
@@ -191,7 +192,7 @@
         <label>$INFO[Container(311).ListItem.Year]</label>
     </control>
     <control type="label">
-        <visible>Control.IsVisible(311)</visible>
+        <visible>Control.HasFocus(311)</visible>
         <top>469</top>
         <centerleft>670</centerleft>
         <width>660</width>
@@ -202,7 +203,7 @@
         <label>$INFO[Container(311).ListItem.Label] $INFO[Container(311).ListItem.Label2, • ]</label>
     </control>
     <control type="textbox">
-        <visible>Control.IsVisible(311)</visible>
+        <visible>Control.HasFocus(311)</visible>
         <top>500</top>
         <centerleft>670</centerleft>
         <width>660</width>

@@ -23,3 +23,8 @@ msgstr "Next Aired"
 msgctxt "#31001"
 msgid "Energize"
 msgstr "Energize"
+
+msgctxt "#31002"
+msgid "Fullscreen"
+msgstr "Fullscreen"
+

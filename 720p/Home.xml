@@ -44,10 +44,8 @@
             <texturefocus colordiffuse="blue">quitbullet.png</texturefocus>
             <onclick>ActivateWindow(ShutdownMenu)</onclick>
         </control-->
-        
     </control>
     <include>750</include>
-	
     <control type="panel" id="9000">
         <top>96</top>
         <left>13</left>
@@ -67,7 +65,7 @@
                 <height>23</height>
                 <aligny>bottom</aligny>
                 <font>font16</font>
-				<align>right</align>
+                <align>right</align>
                 <label>$INFO[ListItem.label]</label>
             </control>
         </itemlayout>
@@ -82,7 +80,7 @@
                 <top>7</top>
                 <width>145</width>
                 <font>font16</font>
-				<height>23</height>
+                <height>23</height>
                 <aligny>bottom</aligny>
                 <align>right</align>
                 <label>$INFO[ListItem.label]</label>
@@ -119,7 +117,7 @@
             <!--LIVETV-->
             <item id="5">
                 <visible>PVR.HasTVChannels</visible>
-				<label>19020</label>
+                <label>19020</label>
                 <label2>FFFF0000</label2>
                 <onclick>ActivateWindow(TVChannels)</onclick>
                 <onclick>noop</onclick>
@@ -143,37 +141,37 @@
                 <label2>FFFF0000</label2>
                 <onclick>ActivateWindow(MyWeather)</onclick>
             </item>
-			<!--NEXT AIR-->
+            <!--NEXT AIR-->
             <item id="9">
                 <visible>!Skin.HasSetting(nextair) + System.HasAddon(script.tv.show.next.aired) + Library.HasContent(TVShows)</visible>
-				<label>Next Air</label>
+                <label>31000</label>
                 <label2>FFFF0000</label2>
                 <onclick>RunAddon(script.tv.show.next.aired)</onclick>
             </item>
-			<!--Favorites-->
+            <!--Favorites-->
             <item id="10">
-                <label>Favorites</label>
+                <label>1036</label>
                 <label2>FFFF0000</label2>
                 <onclick>ActivateWindow(134)</onclick>
             </item>
-			<!--Settings-->
+            <!--Settings-->
             <item id="11">
-                <label>Settings</label>
+                <label>1390</label>
                 <label2>FFFF0000</label2>
                 <onclick>ActivateWindow(Settings)</onclick>
             </item>
-			<!--EXIT-->
+            <!--EXIT-->
             <item id="12">
                 <visible>!Player.HasMedia</visible>
-				<label>Energize</label>
+                <label>31001</label>
                 <label2>FFFF0000</label2>
                 <onclick>ActivateWindow(ShutdownMenu)</onclick>
             </item>
-			<item id="12">
+            <item id="12">
                 <visible>Player.HasMedia</visible>
-				<label2>FFFF0000</label2>
+                <label2>FFFF0000</label2>
                 <label>Fullscreen</label>
-				<onclick>fullscreen</onclick>
+                <onclick>fullscreen</onclick>
             </item>
         </content>
     </control>
@@ -197,7 +195,7 @@
     </control>
     <control type="label">
         <visible>Control.IsVisible(311)</visible>
-         <top>415</top>
+        <top>415</top>
         <centerleft>918</centerleft>
         <font>font13</font>
         <align>center</align>

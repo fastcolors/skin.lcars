@@ -46,7 +46,7 @@
         </control-->
     </control>
     <include>750</include>
-    <control type="panel" id="9000">
+    <control type="list" id="9000">
         <top>96</top>
         <left>13</left>
         <width>155</width>

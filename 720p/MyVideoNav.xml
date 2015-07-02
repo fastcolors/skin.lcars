@@ -104,6 +104,12 @@
                 <enable>false</enable>
                 <label></label>
             </control>
+			<control type="button" id="611">
+                <include>9000butts</include>
+                <visible>Player.HasMedia</visible>
+				<label>31002</label>
+				<onclick>fullscreen</onclick>
+			</control>
         </control>
         <control type="label">
             <centerleft>730</centerleft>

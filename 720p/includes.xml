@@ -924,7 +924,9 @@
             </control>
             <control type="button" id="700">
                 <visible>!Window.IsActive(Home)</visible>
-                <!--<onup>20</onup>-->
+                <!--<onup condition="Window.IsActive(...)">20</onup>-->
+                <!--OR-->
+                <!--<onup condition="Window.IsVisible(...)">20</onup>-->
                 <onup>9000</onup>
                 <ondown>noop</ondown>
                 <top>489</top>

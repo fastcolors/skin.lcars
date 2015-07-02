@@ -142,17 +142,17 @@
         <controloffsety>0</controloffsety>
     </default>
     <default type="sliderex">
-        <height>35</height>
+        <height>40</height>
         <textoffsetx>7</textoffsetx>
         <aligny>center</aligny>
         <texturefocus border="5">button-focus.png</texturefocus>
         <texturenofocus border="5">button-nofocus.png</texturenofocus>
         <sliderwidth>150</sliderwidth>
         <sliderheight>20</sliderheight>
-        <texturesliderbar>osd_slider_bg.png</texturesliderbar>
-        <textureslidernib>osd_slider_nibNF.png</textureslidernib>
-        <textureslidernibfocus>osd_slider_nib.png</textureslidernibfocus>
-        <font>font12</font>
+        <texturesliderbar>slider_bg.png</texturesliderbar>
+        <textureslidernib>slider_nib_nf.png</textureslidernib>
+        <textureslidernibfocus>slider_nib.png</textureslidernibfocus>
+        <font>font14</font>
         <textcolor>black</textcolor>
         <disabledcolor>grey3</disabledcolor>
     </default>

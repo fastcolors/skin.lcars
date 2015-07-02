@@ -929,6 +929,8 @@
         <height>38</height>
         <texturenofocus colordiffuse="yellow">white.png</texturenofocus>
         <texturefocus colordiffuse="blue">white.png</texturefocus>
+        <alttexturenofocus colordiffuse="yellow">white.png</alttexturenofocus>
+        <alttexturefocus colordiffuse="blue">white.png</alttexturefocus>
         <aligny>bottom</aligny>
         <font>font16</font>
         <align>right</align>
@@ -1200,6 +1202,8 @@
             <!--<label>-</label>-->
             <!--</control>-->
 
+            <!--todo EPG once done we activate this part back-->
+
             <control type="button" id="100">
                 <visible>![Window.IsActive(TVChannels) | Window.IsActive(RadioChannels)]</visible>
                 <description>Channels</description>
@@ -1210,16 +1214,16 @@
                 <onclick condition="IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVChannels)</onclick>
                 <onclick condition="!IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioChannels)</onclick>
             </control>
-            <control type="button" id="101">
-                <description>TV Guide</description>
-                <visible>![Window.IsActive(TVGuide) | Window.IsActive(RadioGuide)]</visible>
-                <textwidth>235</textwidth>
-                <include>9000butts</include>
-                <label>22020</label>
-                <onclick condition="Window.IsActive(TVGuide) | Window.IsActive(RadioGuide)">NextChannelGroup</onclick>
-                <onclick condition="IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVGuide)</onclick>
-                <onclick condition="!IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioGuide)</onclick>
-            </control>
+            <!--<control type="button" id="101">-->
+                <!--<description>TV Guide</description>-->
+                <!--<visible>![Window.IsActive(TVGuide) | Window.IsActive(RadioGuide)]</visible>-->
+                <!--<textwidth>235</textwidth>-->
+                <!--<include>9000butts</include>-->
+                <!--<label>22020</label>-->
+                <!--<onclick condition="Window.IsActive(TVGuide) | Window.IsActive(RadioGuide)">NextChannelGroup</onclick>-->
+                <!--<onclick condition="IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVGuide)</onclick>-->
+                <!--<onclick condition="!IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioGuide)</onclick>-->
+            <!--</control>-->
             <control type="button" id="102">
                 <description>Recordings</description>
                 <visible>![Window.IsActive(TVRecordings) | Window.IsActive(RadioRecordings)]</visible><textwidth>235</textwidth>
@@ -1268,8 +1272,8 @@
             <control type="togglebutton" id="4">
                 <description>Sort asc</description>
                 <include>9000butts</include>
-                <label>584</label>
-                <altlabel>585</altlabel>
+                <label>585</label>
+                <altlabel>584</altlabel>
                 <usealttexture>Container.SortDirection(Ascending)</usealttexture>
             </control>
             <control type="radiobutton" id="31">

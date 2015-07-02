@@ -10,7 +10,6 @@
                 <height>720</height>
                 <texture>background.png</texture>
             </control>
-            <!--todo labels-->
             <control type="label">
                 <visible>Control.HasFocus(311)</visible>
                 <top>417</top>

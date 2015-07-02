@@ -61,6 +61,10 @@ msgid "^ CLICK TO REFRESH ^"
 msgstr "^ CLICK TO REFRESH ^"
 
 msgctxt "#31011"
-msgid "^ PRESS UP TO GO TO OPTIONS MENU^"
-msgstr "^ PRESS UP TO GO TO OPTIONS MENU^"
+msgid "^ PRESS UP TO GO TO OPTIONS MENU ^"
+msgstr "^ PRESS UP TO GO TO OPTIONS MENU ^"
+
+msgctxt "#31012"
+msgid "Self Destruct in "
+msgstr "Self Destruct in "
 

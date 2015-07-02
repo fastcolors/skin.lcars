@@ -15,7 +15,6 @@
 				<onleft>9000</onleft>
 				<onright>9000</onright>
 			</control>
-            <!--todo label-->
 			<control type="label">
 				<left>0</left>
 				<top>200</top>
@@ -25,7 +24,7 @@
 				<textcolor>white</textcolor>
 				<align>center</align>
 				<aligny>center</aligny>
-				<label>NOT FETCHED</label>
+				<label>416</label>
 				<visible>IsEmpty(Window.Property(36Hour.IsFetched))</visible>
 			</control>
 			<control type="group">

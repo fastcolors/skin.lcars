@@ -122,13 +122,12 @@
 				<width>300</width>
 				<height>70</height>
                 <visible>System.HasAlarm(shutdowntimer)</visible>
-                <!--todo label-->
 				<control type="textbox">
 					<top>20</top>
 					<width>290</width>
 					<height>50</height>
 					<align>center</align>
-					<label>Self Destruct in $INFO[System.Alarmpos]</label>
+					<label>$LOCALIZE[31012] $INFO[System.Alarmpos]</label>
 				</control>
 			</control>
 			<control type="button" id="12">

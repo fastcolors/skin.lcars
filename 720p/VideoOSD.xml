@@ -145,7 +145,7 @@
                     <top>10</top>
                     <height>30</height>
                     <scroll>true</scroll>
-                    <font>font24_title</font>
+                    <font>font30_title<</font>
                     <textcolor>black</textcolor>
                     <label>$INFO[Player.Chapter,• chapter  ]$INFO[Player.ChapterCount,/]</label>
                 </control>
@@ -153,7 +153,7 @@
                     <visible>!IsEmpty(VideoPlayer.NextTitle)</visible>
                     <width>auto</width>
                     <height>30</height>
-                    <font>font24_title</font>
+                    <font>font30_title<</font>
                     <textcolor>red</textcolor>
                     <scroll>true</scroll>
                     <label>$INFO[VideoPlayer.NextTitle,$LOCALIZE[209]:  ]</label>

@@ -52,3 +52,15 @@ msgctxt "#31008"
 msgid "Back"
 msgstr "Back"
 
+msgctxt "#31009"
+msgid "^ PRESS UP TO EXIT TO MAIN MENU ^"
+msgstr "^ PRESS UP TO EXIT TO MAIN MENU ^"
+
+msgctxt "#31010"
+msgid "^ CLICK TO REFRESH ^"
+msgstr "^ CLICK TO REFRESH ^"
+
+msgctxt "#31011"
+msgid "^ PRESS UP TO GO TO OPTIONS MENU^"
+msgstr "^ PRESS UP TO GO TO OPTIONS MENU^"
+

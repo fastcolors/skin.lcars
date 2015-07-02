@@ -18,7 +18,7 @@
             <height>30</height>
             <font>font12</font>
             <textcolor>darkred</textcolor>
-            <label>^ PRESS UP TO EXIT TO MAIN MENU ^</label>
+            <label>31009</label>
         </control>
         <control type="label">
             <visible>StringCompare(Skin.String(movieshome),special://skin/resources/random.xsp) + [Container(9000).HasFocus(1) + Control.HasFocus(501) + !Control.HasFocus(311)]</visible>
@@ -29,7 +29,7 @@
             <height>30</height>
             <font>font12</font>
             <textcolor>darkred</textcolor>
-            <label>^ CLICK TO REFRESH ^</label>
+            <label>31010</label>
         </control>
         <include>allwindows</include>
         <!--control type="button" id="702">

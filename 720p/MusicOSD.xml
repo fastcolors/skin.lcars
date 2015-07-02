@@ -147,7 +147,15 @@
                     <textcolor>white</textcolor>
                     <label>$LOCALIZE[589]</label>
                 </control>
-            </control>
+				<control type="label">
+                    <top>32</top>
+                    <right>50</right>
+                    <width>110</width>
+                    <align>center</align>
+                    <textcolor>white</textcolor>
+                    <label>- $INFO[Player.TimeRemaining]</label>
+                </control>
+             </control>
 		<control type="grouplist" id="100">
 				<posx>0</posx>
                 <top>620</top>

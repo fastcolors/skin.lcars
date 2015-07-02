@@ -351,7 +351,7 @@
                         <visible>!IsEmpty(Window(Home).Property(NextAired.1.NextTitle))</visible>
                         <label>$INFO[Window(Home).Property(NextAired.1.Label),, • ]$INFO[Window(Home).Property(NextAired.1.NextNumber),, • ]$INFO[Window(Home).Property(NextAired.1.NextTitle)]</label>
                         <property name="NextAir">$INFO[Window(Home).Property(NextAired.1.Status)][CR]$INFO[Window(Home).Property(NextAired.1.Genre)][CR][CR]$INFO[Window(Home).Property(NextAired.1.NextDay)] $INFO[Window(Home).Property(NextAired.1.ShortTime),AT: ][CR]$INFO[Window(Home).Property(NextAired.1.Network),Network: ]</property>
-                        <thumb>$INFO[Window(Home).Property(NextAired.1.Thumb)]</thumb>
+                        <thumb>$INFO[Window(Home).Property(NextAired.1.Art(poster))]</thumb>
                         <onclick>ActivateWindow(Video,$INFO[Window.Property(NextAired.1.Library)])</onclick>
                     </item>
                     <item id="2" description="Episodes2">
@@ -359,7 +359,7 @@
                         <visible>!IsEmpty(Window(Home).Property(NextAired.2.NextTitle))</visible>
                         <label>$INFO[Window(Home).Property(NextAired.2.Label),, • ]$INFO[Window(Home).Property(NextAired.2.NextNumber),, • ]$INFO[Window(Home).Property(NextAired.2.NextTitle)]</label>
                         <property name="NextAir">$INFO[Window(Home).Property(NextAired.2.Status)][CR]$INFO[Window(Home).Property(NextAired.2.Genre)][CR][CR]$INFO[Window(Home).Property(NextAired.2.NextDay)] $INFO[Window(Home).Property(NextAired.2.ShortTime),AT: ][CR]$INFO[Window(Home).Property(NextAired.2.Network),Network: ]</property>
-                        <thumb>$INFO[Window(Home).Property(NextAired.2.Thumb)]</thumb>
+                        <thumb>$INFO[Window(Home).Property(NextAired.2.Art(poster))]</thumb>
                         <onclick>ActivateWindow(Video,$INFO[Window.Property(NextAired.2.Library)])</onclick>
                     </item>
                     <item id="3" description="Episodes3">
@@ -367,7 +367,7 @@
                         <visible>!IsEmpty(Window(Home).Property(NextAired.3.NextTitle))</visible>
                         <label>$INFO[Window(Home).Property(NextAired.3.Label),, • ]$INFO[Window(Home).Property(NextAired.3.NextNumber),, • ]$INFO[Window(Home).Property(NextAired.3.NextTitle)]</label>
                         <property name="NextAir">$INFO[Window(Home).Property(NextAired.3.Status)][CR]$INFO[Window(Home).Property(NextAired.3.Genre)][CR][CR]$INFO[Window(Home).Property(NextAired.3.NextDay)] $INFO[Window(Home).Property(NextAired.3.ShortTime),AT: ][CR]$INFO[Window(Home).Property(NextAired.3.Network),Network: ]</property>
-                        <thumb>$INFO[Window(Home).Property(NextAired.3.Thumb)]</thumb>
+                        <thumb>$INFO[Window(Home).Property(NextAired.3.Art(poster))]</thumb>
                         <onclick>ActivateWindow(Video,$INFO[Window.Property(NextAired.3.Library)])</onclick>
                     </item>
                     <item id="4" description="Episodes4">
@@ -375,7 +375,7 @@
                         <visible>!IsEmpty(Window(Home).Property(NextAired.4.NextTitle))</visible>
                         <label>$INFO[Window(Home).Property(NextAired.4.Label),, • ]$INFO[Window(Home).Property(NextAired.4.NextNumber),, • ]$INFO[Window(Home).Property(NextAired.4.NextTitle)]</label>
                         <property name="NextAir">$INFO[Window(Home).Property(NextAired.4.Status)][CR]$INFO[Window(Home).Property(NextAired.4.Genre)][CR][CR]$INFO[Window(Home).Property(NextAired.4.NextDay)] $INFO[Window(Home).Property(NextAired.4.ShortTime),AT: ][CR]$INFO[Window(Home).Property(NextAired.4.Network),Network: ]</property>
-                        <thumb>$INFO[Window(Home).Property(NextAired.4.Thumb)]</thumb>
+                        <thumb>$INFO[Window(Home).Property(NextAired.4.Art(poster))]</thumb>
                         <onclick>ActivateWindow(Video,$INFO[Window.Property(NextAired.4.Library)])</onclick>
                     </item>
                     <item id="5" description="Episodes5">
@@ -383,7 +383,7 @@
                         <visible>!IsEmpty(Window(Home).Property(NextAired.5.NextTitle))</visible>
                         <label>$INFO[Window(Home).Property(NextAired.5.Label),, • ]$INFO[Window(Home).Property(NextAired.5.NextNumber),, • ]$INFO[Window(Home).Property(NextAired.5.NextTitle)]</label>
                         <property name="NextAir">$INFO[Window(Home).Property(NextAired.5.Status)][CR]$INFO[Window(Home).Property(NextAired.5.Genre)][CR][CR]$INFO[Window(Home).Property(NextAired.5.NextDay)] $INFO[Window(Home).Property(NextAired.5.ShortTime),AT: ][CR]$INFO[Window(Home).Property(NextAired.5.Network),Network: ]</property>
-                        <thumb>$INFO[Window(Home).Property(NextAired.5.Thumb)]</thumb>
+                        <thumb>$INFO[Window(Home).Property(NextAired.5.Art(poster))]</thumb>
                         <onclick>ActivateWindow(Video,$INFO[Window.Property(NextAired.5.Library)])</onclick>
                     </item>
                     <item id="6" description="Episodes6">
@@ -391,7 +391,7 @@
                         <visible>!IsEmpty(Window(Home).Property(NextAired.6.NextTitle))</visible>
                         <label>$INFO[Window(Home).Property(NextAired.6.Label),, • ]$INFO[Window(Home).Property(NextAired.6.NextNumber),, • ]$INFO[Window(Home).Property(NextAired.6.NextTitle)]</label>
                         <property name="NextAir">$INFO[Window(Home).Property(NextAired.6.Status)][CR]$INFO[Window(Home).Property(NextAired.6.Genre)][CR][CR]$INFO[Window(Home).Property(NextAired.6.NextDay)] $INFO[Window(Home).Property(NextAired.6.ShortTime),AT: ][CR]$INFO[Window(Home).Property(NextAired.6.Network),Network: ]</property>
-                        <thumb>$INFO[Window(Home).Property(NextAired.6.Thumb)]</thumb>
+                        <thumb>$INFO[Window(Home).Property(NextAired.6.Art(poster))]</thumb>
                         <onclick>ActivateWindow(Video,$INFO[Window.Property(NextAired.6.Library)])</onclick>
                     </item>
                     <item id="7" description="Episodes7">
@@ -399,7 +399,7 @@
                         <visible>!IsEmpty(Window(Home).Property(NextAired.7.NextTitle))</visible>
                         <label>$INFO[Window(Home).Property(NextAired.7.Label),, • ]$INFO[Window(Home).Property(NextAired.7.NextNumber),, • ]$INFO[Window(Home).Property(NextAired.7.NextTitle)]</label>
                         <property name="NextAir">$INFO[Window(Home).Property(NextAired.7.Status)][CR]$INFO[Window(Home).Property(NextAired.7.Genre)][CR][CR]$INFO[Window(Home).Property(NextAired.7.NextDay)] $INFO[Window(Home).Property(NextAired.7.ShortTime),AT: ][CR]$INFO[Window(Home).Property(NextAired.7.Network),Network: ]</property>
-                        <thumb>$INFO[Window(Home).Property(NextAired.7.Thumb)]</thumb>
+                        <thumb>$INFO[Window(Home).Property(NextAired.7.Art(poster))]</thumb>
                         <onclick>ActivateWindow(Video,$INFO[Window.Property(NextAired.7.Library)])</onclick>
                     </item>
                     <item id="8" description="Episodes8">
@@ -407,7 +407,7 @@
                         <visible>!IsEmpty(Window(Home).Property(NextAired.8.NextTitle))</visible>
                         <label>$INFO[Window(Home).Property(NextAired.8.Label),, • ]$INFO[Window(Home).Property(NextAired.8.NextNumber),, • ]$INFO[Window(Home).Property(NextAired.8.NextTitle)]</label>
                         <property name="NextAir">$INFO[Window(Home).Property(NextAired.8.Status)][CR]$INFO[Window(Home).Property(NextAired.8.Genre)][CR][CR]$INFO[Window(Home).Property(NextAired.8.NextDay)] $INFO[Window(Home).Property(NextAired.8.ShortTime),AT: ][CR]$INFO[Window(Home).Property(NextAired.9.Network),Network: ]</property>
-                        <thumb>$INFO[Window(Home).Property(NextAired.8.Thumb)]</thumb>
+                        <thumb>$INFO[Window(Home).Property(NextAired.8.Art(poster))]</thumb>
                         <onclick>ActivateWindow(Video,$INFO[Window.Property(NextAired.8.Library)])</onclick>
                     </item>
                     <item id="9" description="Episodes9">
@@ -415,14 +415,14 @@
                         <visible>!IsEmpty(Window(Home).Property(NextAired.9.NextTitle))</visible>
                         <label>$INFO[Window(Home).Property(NextAired.9.Label),, • ]$INFO[Window(Home).Property(NextAired.9.NextNumber),, • ]$INFO[Window(Home).Property(NextAired.9.NextTitle)]</label>
                         <property name="NextAir">$INFO[Window(Home).Property(NextAired.9.Status)][CR]$INFO[Window(Home).Property(NextAired.9.Genre)][CR][CR]$INFO[Window(Home).Property(NextAired.9.NextDay)] $INFO[Window(Home).Property(NextAired.9.ShortTime),AT: ][CR]$INFO[Window(Home).Property(NextAired.9.Network),Network: ]</property>
-                        <thumb>$INFO[Window(Home).Property(NextAired.9.Thumb)]</thumb>
+                        <thumb>$INFO[Window(Home).Property(NextAired.9.Art(poster))]</thumb>
                         <onclick>ActivateWindow(Video,$INFO[Window.Property(NextAired.9.Library)])</onclick>
                     </item>
                     <item id="10" description="Episodes10">
                         <visible>!IsEmpty(Window(Home).Property(NextAired.10.NextTitle))</visible>
                         <label>$INFO[Window(Home).Property(NextAired.10.Label),, • ]$INFO[Window(Home).Property(NextAired.10.NextNumber),, • ]$INFO[Window(Home).Property(NextAired.10.NextTitle)]</label>
                         <property name="NextAir">$INFO[Window(Home).Property(NextAired.10.Status)][CR]$INFO[Window(Home).Property(NextAired.10.Genre)][CR][CR]$INFO[Window(Home).Property(NextAired.10.NextDay)] $INFO[Window(Home).Property(NextAired.10.ShortTime),AT: ][CR]$INFO[Window(Home).Property(NextAired.10.Network),Network: ]</property>
-                        <thumb>$INFO[Window(Home).Property(NextAired.10.Thumb)]</thumb>
+                        <thumb>$INFO[Window(Home).Property(NextAired.10.Art(poster))]</thumb>
                         <onclick>ActivateWindow(Video,$INFO[Window.Property(NextAired.10.Library)])</onclick>
                     </item>
                     <!--item id="%d" description="Episodes%d">

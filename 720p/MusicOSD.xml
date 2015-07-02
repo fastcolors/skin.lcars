@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-    <defaultcontrol always="true">602</defaultcontrol>
+    <defaultcontrol always="true">603</defaultcontrol>
     <controls>
          <control type="group" description="Options content">
             <!--<visible>!Window.IsVisible(10123) + !Window.IsVisible(10124) + !Window.IsVisible(10125)</visible>-->
@@ -8,10 +8,10 @@
             <top>718</top>
             <width>780</width>
             <animation type="Focus">
-                <effect type="slide" tween="Cubic" easing="out" start="0,0" end="0,-600" time="800"/>
+                <effect type="slide" tween="Cubic" easing="out" start="0,0" end="0,-620" time="800"/>
             </animation>
             <animation type="unFocus">
-                <effect type="slide" tween="Cubic" easing="in" start="0,-600" end="0,0" time="500"/>
+                <effect type="slide" tween="Cubic" easing="in" start="0,-620" end="0,0" time="500"/>
             </animation>
             <control type="image">
                 <centerleft>0</centerleft>
@@ -29,12 +29,12 @@
                 <!--<animation effect="fade" time="200">VisibleChange</animation>-->
                 <!--<visible>![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList)]</visible>-->
                <control type="togglebutton" id="701">
-                    <texturenofocus colordiffuse="55000000" border="20">whiteallrounded.png</texturenofocus>
-                    <texturefocus colordiffuse="red" border="20">whiteallrounded.png</texturefocus>
-                    <alttexturenofocus colordiffuse="55000000" border="20">whiteallrounded.png</alttexturenofocus>
-                    <alttexturefocus colordiffuse="red" border="20">whiteallrounded.png</alttexturefocus>
                     <include>largebutton</include>
-                    <label>LYRICS</label>
+                    <texturenofocus colordiffuse="design" border="20">whiteallrounded.png</texturenofocus>
+                    <texturefocus colordiffuse="red" border="20">whiteallrounded.png</texturefocus>
+                    <alttexturenofocus colordiffuse="design" border="20">whiteallrounded.png</alttexturenofocus>
+					<alttexturefocus colordiffuse="blue" border="20">whiteallrounded.png</alttexturefocus>
+					<label>LYRICS</label>
                     <onleft>607</onleft>
                     <onright>500</onright>
                     <onup>1000</onup>
@@ -85,20 +85,86 @@
                 </control>
             </control>
         </control>
-        <control type="grouplist" id="100">
-            <left>350</left>
-            <top>610</top>
-            <itemgap>10</itemgap>
-            <orientation>horizontal</orientation>
-            <animation effect="fade" time="200">VisibleChange</animation>
-            <visible>![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList)]</visible>
+        <control type="image">
+            <width>1280</width>
+            <height>720</height>
+            <texture>osb.png</texture>
+        </control>
+        <control type="group">
+            <description>PROGRESS</description>
+            <width>1200</width>
+            <top>362</top>
+            <control type="progress" description="Cache Progress">
+                <centerleft>640</centerleft>
+                <width>1100</width>
+                <height>14</height>
+                <info>Player.ProgressCache</info>
+            </control>
+            <control type="progress" id="23" description="Progress Bar">
+                <centerleft>640</centerleft>
+                <width>1100</width>
+                <height>14</height>
+                <info>Player.Progress</info>
+            </control>
+        </control>
+		<control type="group" description="Top Bar">
+                <visible>!Window.IsActive(142)</visible>
+                <control type="label">
+                    <top>10</top>
+                    <left>50</left>
+                    <width>110</width>
+                    <height>20</height>
+                    <textcolor>white</textcolor>
+                    <align>center</align>
+                    <label>$LOCALIZE[142] $INFO[System.Time]</label>
+                </control>
+                <control type="label">
+                    <top>32</top>
+                    <left>50</left>
+                    <width>110</width>
+                    <height>20</height>
+                    <align>center</align>
+                    <textcolor>white</textcolor>
+                    <label>$INFO[Player.Time]</label>
+                </control>
+                <control type="label" description="Normal Header label">
+                    <visible>!MusicPartyMode.Enabled</visible>
+					<top>10</top>
+                    <right>50</right>
+                    <width>110</width>
+                    <height>20</height>
+                    <align>center</align>
+                    <textcolor>white</textcolor>
+                    <label>$INFO[musicplayer.Playlistposition,$LOCALIZE[554]: ]$INFO[musicplayer.Playlistlength, / ]</label>
+                </control>
+				<control type="label" description="Partymode Header label">
+                    <visible>MusicPartyMode.Enabled</visible>
+					<top>10</top>
+                    <right>50</right>
+                    <width>110</width>
+                    <height>20</height>
+                    <align>center</align>
+                    <textcolor>white</textcolor>
+                    <label>$LOCALIZE[589]</label>
+                </control>
+            </control>
+		<control type="grouplist" id="100">
+				<posx>0</posx>
+                <top>620</top>
+                <onright>100</onright>
+                <onleft>100</onleft>
+                <width>1280</width>
+                <height>40</height>
+                <align>center</align>
+                <orientation>horizontal</orientation>
+                <visible>![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList)]</visible>
             <control type="button" id="600">
-                <include>osdbutt</include>
                 <label>210</label>
+                <texturenofocus colordiffuse="55ffffff"  flipx="true" border="20">whiterounded.png</texturenofocus>
+                <texturefocus colordiffuse="green"  flipx="true" border="20">whiterounded.png</texturefocus>
+                <include>osdbutt</include>
                 <onleft>704</onleft>
                 <onright>601</onright>
-                <onup>1000</onup>
-                <ondown>1000</ondown>
                 <onclick>PlayerControl(Previous)</onclick>
             </control>
             <control type="button" id="601">
@@ -106,22 +172,16 @@
                 <label>REW</label>
                 <onleft>600</onleft>
                 <onright>602</onright>
-                <onup>1000</onup>
-                <ondown>1000</ondown>
                 <onclick>PlayerControl(Rewind)</onclick>
             </control>
             <control type="togglebutton" id="602">
                 <include>osdbutt</include>
-                <label>PAUSE</label>
-                <altlabel>PLAY</altlabel>
-                <texturenofocus colordiffuse="55000000" border="20">whiteallrounded.png</texturenofocus>
-                <texturefocus colordiffuse="green" border="20">whiteallrounded.png</texturefocus>
-                <alttexturenofocus colordiffuse="55000000" border="20">whiteallrounded.png</alttexturenofocus>
-                <alttexturefocus colordiffuse="green" border="20">whiteallrounded.png</alttexturefocus>
+                <label>PLAY</label>
+                <altlabel>PAUSE</altlabel>
+                <alttexturenofocus colordiffuse="5566A7FF" border="20">white.png</alttexturenofocus>
+                <alttexturefocus colordiffuse="green" border="20">white.png</alttexturefocus>
                 <onleft>601</onleft>
                 <onright>603</onright>
-                <onup>1000</onup>
-                <ondown>1000</ondown>
                 <onclick>PlayerControl(Play)</onclick>
             </control>
             <control type="button" id="603">
@@ -129,8 +189,6 @@
                 <label>STOP</label>
                 <onleft>602</onleft>
                 <onright>604</onright>
-                <onup>1000</onup>
-                <ondown>1000</ondown>
                 <onclick>PlayerControl(Stop)</onclick>
             </control>
             <control type="button" id="604">
@@ -138,8 +196,6 @@
                 <label>FFWD</label>
                 <onleft>603</onleft>
                 <onright>605</onright>
-                <onup>1000</onup>
-                <ondown>1000</ondown>
                 <onclick>PlayerControl(Forward)</onclick>
             </control>
             <control type="button" id="605">
@@ -147,37 +203,34 @@
                 <label>209</label>
                 <onleft>604</onleft>
                 <onright>606</onright>
-                <onup>1000</onup>
-                <ondown>1000</ondown>
                 <onclick>PlayerControl(Next)</onclick>
             </control>
-            <control type="button" id="606">
-                <width>100</width>
-                <height>60</height>
+            <control type="button" id="11">
+                    <include>osdbutt</include>
+                    <label>Menu</label>
+                    <onclick>SetFocus(1000)</onclick>
+            </control>
+			<control type="button" id="606">
+                <include>osdbutt</include>
                 <align>center</align>
                 <label>$LOCALIZE[486]$INFO[Playlist.Repeat, : ]</label>
                 <onclick>XBMC.PlayerControl(Repeat)</onclick>
                 <onleft>605</onleft>
                 <onright>607</onright>
-                <onup>1000</onup>
-                <ondown>1000</ondown>
             </control>
             <control type="togglebutton" id="607">
-                <width>100</width>
-                <height>60</height>
+                <texturenofocus colordiffuse="55ffffff" border="20">whiterounded.png</texturenofocus>
+                <texturefocus colordiffuse="green" border="20">whiterounded.png</texturefocus>
+                <include>osdbutt</include>
                 <label>$LOCALIZE[590]$INFO[Playlist.Random, : ]</label>
-                <texturenofocus colordiffuse="55000000" border="20">whiteallrounded.png</texturenofocus>
-                <texturefocus colordiffuse="green" border="20">whiteallrounded.png</texturefocus>
-                <alttexturenofocus colordiffuse="55000000" border="20">whiteallrounded.png</alttexturenofocus>
-                <alttexturefocus colordiffuse="green" border="20">whiteallrounded.png</alttexturefocus>
+                <alttexturenofocus colordiffuse="55000000" border="20">whiterounded.png</alttexturenofocus>
+                <alttexturefocus colordiffuse="green" border="20">whiterounded.png</alttexturefocus>
                 <onclick>XBMC.PlayerControl(Random)</onclick>
                 <onleft>606</onleft>
                 <onright>701</onright>
-                <onup>1000</onup>
-                <ondown>1000</ondown>
             </control>
         </control>
-        <control type="label">
+        <!--control type="label">
             <visible>!ControlGroup(1000).HasFocus()</visible>
             <animation type="Visible">
                 <effect type="fade" tween="circle" easing="in" start="0" end="100" time="800"/>
@@ -189,6 +242,6 @@
             <font>font13</font>
             <align>center</align>
             <label>PRESS UP FOR MENU</label>
-        </control>
+        </control-->
     </controls>
 </window>

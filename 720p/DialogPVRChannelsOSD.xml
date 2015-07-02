@@ -12,15 +12,15 @@
 			<control type="image">
 				<description>background image</description>
 				<left>0</left>
-				<top>0</top>
+				<top>30</top>
 				<width>480</width>
-				<height>660</height>
+				<height>560</height>
 				<texture border="40">Dialog.png</texture>
 			</control>
 			<control type="button">
 				<description>Close Window button</description>
 				<left>390</left>
-				<top>15</top>
+				<top>45</top>
 				<width>30</width>
 				<height>30</height>
 				<label>-</label>
@@ -34,18 +34,10 @@
 				<ondown>2</ondown>
 				<visible>system.getbool(input.enablemouse)</visible>
 			</control>
-			<control type="image">
-				<description>Dialog Header image</description>
-				<left>40</left>
-				<top>16</top>
-				<width>400</width>
-				<height>50</height>
-				<texture>dialogheader.png</texture>
-			</control>
 			<control type="label">
 				<description>header label</description>
 				<left>40</left>
-				<top>16</top>
+				<top>46</top>
 				<width>430</width>
 				<height>40</height>
 				<font>font12_title</font>
@@ -59,7 +51,7 @@
 			<control type="label">
 				<description>header label</description>
 				<left>40</left>
-				<top>16</top>
+				<top>46</top>
 				<width>430</width>
 				<height>40</height>
 				<font>font12_title</font>
@@ -73,7 +65,7 @@
 			<control type="label">
 				<description>header label</description>
 				<left>40</left>
-				<top>-7</top>
+				<top>23</top>
 				<width>430</width>
 				<height>120</height>
 				<font>font10_title</font>
@@ -85,9 +77,9 @@
 			</control>
 			<control type="list" id="11">
 				<left>30</left>
-				<top>70</top>
+				<top>100</top>
 				<width>410</width>
-				<height>520</height>
+				<height>440</height>
 				<onleft>PreviousChannelGroup</onleft>
 				<onright>60</onright>
 				<onup>11</onup>
@@ -323,15 +315,13 @@
 				</focusedlayout>
 			</control>
 			<control type="scrollbar" id="60">
-				<left>440</left>
-				<top>70</top>
-				<width>25</width>
-				<height>520</height>
-				<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
-				<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
-				<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
-				<textureslidernib>ScrollBarNib.png</textureslidernib>
-				<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
+				<left>442</left>
+				<top>100</top>
+				<width>8</width>
+				<height>450</height>
+				<texturesliderbackground border="4">ScrollbarBG_light.png</texturesliderbackground>
+				<textureslidernib border="4">ScrollerNF.png</textureslidernib>
+				<textureslidernibfocus>ScrollerFO.png</textureslidernibfocus>
 				<onleft>11</onleft>
 				<onright>NextChannelGroup</onright>
 				<ondown>61</ondown>
@@ -342,7 +332,7 @@
 			<control type="label">
 				<description>Page Count Label</description>
 				<left>50</left>
-				<top>610</top>
+				<top>550</top>
 				<width>400</width>
 				<height>20</height>
 				<font>font12</font>

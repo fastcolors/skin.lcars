@@ -10,10 +10,10 @@
             <top>718</top>
             <width>780</width>
             <animation type="Focus">
-                <effect type="slide" tween="Cubic" easing="out" start="0,0" end="0,-600" time="800"/>
+                <effect type="slide" tween="Cubic" easing="out" start="0,0" end="0,-620" time="800"/>
             </animation>
             <animation type="unFocus">
-                <effect type="slide" tween="Cubic" easing="in" start="0,-600" end="0,0" time="500"/>
+                <effect type="slide" tween="Cubic" easing="in" start="0,-620" end="0,0" time="500"/>
             </animation>
             <control type="image">
                 <centerleft>0</centerleft>

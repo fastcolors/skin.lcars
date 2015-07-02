@@ -74,63 +74,64 @@
             <!--background-->
             <control type="group">
                 <visible>![Container(9000).HasFocus(1) | Container(9000).HasFocus(2) | Container(9000).HasFocus(3) | Container(9000).HasFocus(4) | Container(9000).HasFocus(7) | Container(9000).HasFocus(8) | Container(9000).HasFocus(9)]</visible>
-				<control type="image">
-					<top>135</top>
-					<left>320</left>
-					<width>910</width>
-					<height>280</height>
-					<aspectratio>keep</aspectratio>
-					<texture>login.jpg</texture>
-				</control>
+                <control type="image">
+                    <top>135</top>
+                    <left>320</left>
+                    <width>910</width>
+                    <height>280</height>
+                    <aspectratio>keep</aspectratio>
+                    <texture>login.jpg</texture>
+                </control>
 
-			</control>
-				<control type="label">
-                    <centerleft>718</centerleft>
-					<top>440</top>
-                    <font>font13</font>
-					<align>center</align>
-					<width>145</width>
-					<height>40</height>
-					<label>$INFO[Window.Property(Movies.Count),, $LOCALIZE[342] ]</label>
-				</control>
-				<control type="label">
-                    <centerleft>918</centerleft>
-					<top>440</top>
-                    <font>font13</font>
-					<align>center</align>
-					<width>145</width>
-					<height>40</height>
-					<label>$INFO[Window.Property(TVShows.Count),, $LOCALIZE[20343] ]</label>
-				</control>
-				<control type="label">
-                    <centerleft>518</centerleft>
-					<top>440</top>
-                    <font>font13</font>
-					<align>center</align>
-					<width>145</width>
-					<height>40</height>
-					<label>$INFO[Window.Property(Music.SongsCount),, $LOCALIZE[134] ]</label>
-				</control>
-				<control type="label">
-                    <visible>System.Platform.Linux.RaspberryPi</visible>
-					<centerleft>1118</centerleft>
-					<top>415</top>
-                    <font>font13</font>
-					<align>center</align>
-					<width>145</width>
-					<height>40</height>
-					<label>$INFO[System.CPUTemperature,, $LOCALIZE[140] ]</label>
-				</control>
-				<control type="label">
-                    <visible>IntegerGreaterThan(System.BatteryLevel,0)</visible>
-					<centerleft>1118</centerleft>
-					<top>440</top>
-                    <font>font13</font>
-					<align>center</align>
-					<width>145</width>
-					<height>40</height>
-					<label>$INFO[System.BatteryLevel,, Power Level ]</label>
-				</control>			<control type="group">
+            </control>
+            <control type="label">
+                <centerleft>718</centerleft>
+                <top>440</top>
+                <font>font13</font>
+                <align>center</align>
+                <width>145</width>
+                <height>40</height>
+                <label>$INFO[Window.Property(Movies.Count),, $LOCALIZE[342] ]</label>
+            </control>
+            <control type="label">
+                <centerleft>918</centerleft>
+                <top>440</top>
+                <font>font13</font>
+                <align>center</align>
+                <width>145</width>
+                <height>40</height>
+                <label>$INFO[Window.Property(TVShows.Count),, $LOCALIZE[20343] ]</label>
+            </control>
+            <control type="label">
+                <centerleft>518</centerleft>
+                <top>440</top>
+                <font>font13</font>
+                <align>center</align>
+                <width>145</width>
+                <height>40</height>
+                <label>$INFO[Window.Property(Music.SongsCount),, $LOCALIZE[134] ]</label>
+            </control>
+            <control type="label">
+                <visible>System.Platform.Linux.RaspberryPi</visible>
+                <centerleft>1118</centerleft>
+                <top>415</top>
+                <font>font13</font>
+                <align>center</align>
+                <width>145</width>
+                <height>40</height>
+                <label>$INFO[System.CPUTemperature,, $LOCALIZE[140] ]</label>
+            </control>
+            <control type="label">
+                <visible>IntegerGreaterThan(System.BatteryLevel,0)</visible>
+                <centerleft>1118</centerleft>
+                <top>440</top>
+                <font>font13</font>
+                <align>center</align>
+                <width>145</width>
+                <height>40</height>
+                <label>$INFO[System.BatteryLevel,, $LOCALIZE[31004] ]</label>
+            </control>
+            <control type="group">
                 <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
                 <visible>Container(9000).HasFocus(8)</visible>
                 <control type="multiimage">
@@ -1016,7 +1017,7 @@
             <font>font30</font>
             <width>330</width>
             <height>40</height>
-            <label>STARDATE : $INFO[System.Date] • $INFO[System.Time]</label>
+            <label>$LOCALIZE[31003] : $INFO[System.Date] • $INFO[System.Time]</label>
         </control>
         <control type="image" >
             <top>630</top>
@@ -1064,7 +1065,7 @@
 
     <include name="winding">
         <shadowcolor>black</shadowcolor>
-		<top>17</top>
+        <top>17</top>
         <width>100</width>
         <font>font30</font>
         <textcolor>yellow</textcolor>
@@ -1163,7 +1164,7 @@
                 <include>9000butts</include>
                 <label>Fullscreen</label>
                 <visible>Player.HasMedia</visible>
-				<onclick>fullscreen</onclick>
+                <onclick>fullscreen</onclick>
             </control>
             <control type="button" id="3">
                 <description>Sort by button</description>

@@ -30,9 +30,5 @@ msgstr "Fullscreen"
 
 msgctxt "#31003"
 msgid "STARDATE"
-msgstr "STARDATE"
-
-msgctxt "#31004"
-msgid "Power Level"
-msgstr "Power Level"
+msgstr "DATA ASTRALE"
 

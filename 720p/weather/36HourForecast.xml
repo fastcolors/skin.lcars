@@ -2,7 +2,7 @@
 <includes>
 	<include name="Weather36HourForcast">
 		<control type="group">
-            <left>630</left>
+			<left>630</left>
 			<visible>StringCompare(Window.Property(Weather.CurrentView),36hour)</visible>
 			<control type="button" id="997">
 				<description>Hidden Button for focus</description>
@@ -32,20 +32,20 @@
 				<top>50</top>
 				<visible>!IsEmpty(Window.Property(36Hour.IsFetched))</visible>
 				<control type="group">
-                    <control type="image">
+					<control type="image">
 						<left>0</left>
 						<top>40</top>
 						<width>600</width>
 						<height>120</height>
 						<texture border="20" colordiffuse="darkblue">whiteallrounded.png</texture>
-                        </control>
+					</control>
 					<control type="label">
 						<left>0</left>
 						<top>5</top>
 						<width>600</width>
 						<height>30</height>
 						<font>font30</font>
-                        <textcolor>yellow</textcolor>
+						<textcolor>yellow</textcolor>
 						<align>center</align>
 						<aligny>center</aligny>
 						<label>$INFO[Window.Property(36Hour.1.Heading)]</label>
@@ -88,27 +88,27 @@
 						<textcolor>white</textcolor>
 						<selectedcolor>selected</selectedcolor>
 						<align>left</align>
-                        <aligny>center</aligny>
+						<aligny>center</aligny>
 						<label>$INFO[Window.Property(36hour.1.Forecast),[COLOR=grey2]CONDITIONS: [/COLOR]]</label>
 					</control>
 				</control>
 				<control type="group">
 					<left>0</left>
 					<top>185</top>
-                      <control type="image">
+					<control type="image">
 						<left>0</left>
 						<top>40</top>
 						<width>600</width>
 						<height>120</height>
 						<texture border="20" colordiffuse="darkblue">whiteallrounded.png</texture>
-                        </control>
+					</control>
 					<control type="label">
 						<left>0</left>
 						<top>5</top>
 						<width>600</width>
 						<height>30</height>
 						<font>font30</font>
-                        <textcolor>yellow</textcolor>
+						<textcolor>yellow</textcolor>
 						<align>center</align>
 						<aligny>center</aligny>
 						<label>$INFO[Window.Property(36Hour.2.Heading)]</label>
@@ -151,27 +151,27 @@
 						<textcolor>white</textcolor>
 						<selectedcolor>selected</selectedcolor>
 						<align>left</align>
-                        <aligny>center</aligny>
+						<aligny>center</aligny>
 						<label>$INFO[Window.Property(36hour.2.Forecast),[COLOR=grey2]CONDITIONS: [/COLOR]]</label>
 					</control>
 				</control>
 				<control type="group">
 					<left>0</left>
 					<top>370</top>
-                      <control type="image">
+					<control type="image">
 						<left>0</left>
 						<top>40</top>
 						<width>600</width>
 						<height>120</height>
 						<texture border="20" colordiffuse="darkblue">whiteallrounded.png</texture>
-                        </control>
+					</control>
 					<control type="label">
 						<left>0</left>
 						<top>5</top>
 						<width>600</width>
 						<height>30</height>
 						<font>font30</font>
-                        <textcolor>yellow</textcolor>
+						<textcolor>yellow</textcolor>
 						<align>center</align>
 						<aligny>center</aligny>
 						<label>$INFO[Window.Property(36Hour.3.Heading)]</label>
@@ -214,7 +214,7 @@
 						<textcolor>white</textcolor>
 						<selectedcolor>selected</selectedcolor>
 						<align>left</align>
-                        <aligny>center</aligny>
+						<aligny>center</aligny>
 						<label>$INFO[Window.Property(36hour.3.Forecast),[COLOR=grey2]CONDITIONS: [/COLOR]]</label>
 					</control>
 				</control>

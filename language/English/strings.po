@@ -36,3 +36,15 @@ msgctxt "#31004"
 msgid "Power Level"
 msgstr "Power Level"
 
+msgctxt "#31005"
+msgid "Recent"
+msgstr "Recent"
+
+msgctxt "#31006"
+msgid "Recommended"
+msgstr "Recommended"
+
+msgctxt "#31007"
+msgid "Random"
+msgstr "Random"
+

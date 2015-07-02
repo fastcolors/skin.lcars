@@ -82,7 +82,6 @@
                     <aspectratio>keep</aspectratio>
                     <texture>login.jpg</texture>
                 </control>
-
             </control>
             <control type="label">
                 <centerleft>718</centerleft>
@@ -178,18 +177,18 @@
                 <itemgap>3</itemgap>
                 <control type="button" id="500">
                     <include>888buttons</include>
-                    <label>RECENTLY</label>
+                    <label>31005</label>
                     <onfocus>Skin.SetString(movieshome,videodb://recentlyaddedmovies/)</onfocus>
                 </control>
                 <control type="button" id="501">
                     <include>888buttons</include>
-                    <label>RANDOM</label>
+                    <label>31007</label>
                     <onfocus>Skin.SetString(movieshome,special://skin/resources/random.xsp)</onfocus>
                     <onclick>ReloadSkin()</onclick>
                 </control>
                 <control type="button" id="502">
                     <include>888buttons</include>
-                    <label>IN PROGRESS</label>
+                    <label>575</label>
                     <onfocus>Skin.SetString(movieshome,special://skin/resources/laststarted.xsp)</onfocus>
                 </control>
             </control>
@@ -252,17 +251,17 @@
                 <itemgap>3</itemgap>
                 <control type="button" id="500">
                     <include>888buttons</include>
-                    <label>RECENTLY</label>
+                    <label>31005</label>
                     <onfocus>Skin.SetString(tvhome,videodb://recentlyaddedepisodes/)</onfocus>
                 </control>
                 <control type="button" id="501">
                     <include>888buttons</include>
-                    <label>RECOMMENDED</label>
+                    <label>31006</label>
                     <onfocus>Skin.SetString(tvhome,plugin://service.library.data.provider?type=recommendedepisodes&limit=20&reload=$INFO[Window.Property(recommendedepisodes)])</onfocus>
                 </control>
                 <control type="button" id="502">
                     <include>888buttons</include>
-                    <label>ALL TVSHOWS</label>
+                    <label>593</label>
                     <onfocus>Skin.SetString(tvhome,videodb://tvshows/titles/)</onfocus>
                 </control>
             </control>
@@ -461,18 +460,18 @@
                 <itemgap>3</itemgap>
                 <control type="button" id="500">
                     <include>888buttons</include>
-                    <label>RECENTLY</label>
+                    <label>31005</label>
                     <onfocus>Skin.SetString(musichome,musicdb://recentlyaddedalbums/)</onfocus>
                 </control>
                 <control type="button" id="501">
                     <include>888buttons</include>
-                    <label>ALBUMS</label>
+                    <label>132</label>
                     <onfocus>Skin.SetString(musichome,musicdb://albums/)</onfocus>
                     <onclick>ActivateWindow(music,albums,return)</onclick>
                 </control>
                 <control type="button" id="502">
                     <include>888buttons</include>
-                    <label>ARTISTS</label>
+                    <label>133</label>
                     <onfocus>Skin.SetString(musichome,musicdb://artists/)</onfocus>
                     <onclick>ActivateWindow(music,artists,return)</onclick>
                 </control>
@@ -518,20 +517,19 @@
                 <itemgap>3</itemgap>
                 <control type="button" id="500">
                     <include>888buttons</include>
-                    <label>VIDEO</label>
+                    <label>157</label>
                     <onfocus>Skin.SetString(addonhome,addons://sources/video/)</onfocus>
                 </control>
                 <control type="button" id="501">
                     <include>888buttons</include>
-                    <label>AUDIO</label>
+                    <label>292</label>
                     <onfocus>Skin.SetString(addonhome,addons://sources/audio/)</onfocus>
                 </control>
                 <control type="button" id="502">
                     <include>888buttons</include>
-                    <label>Programs</label>
+                    <label>350</label>
                     <onfocus>Skin.SetString(addonhome,addons://sources/executable/)</onfocus>
                 </control>
-
             </control>
             <control type="panel" id="311">
                 <animation effect="fade" start="100" end="80" condition="!Control.HasFocus(311) + !Control.HasFocus(60)">Conditional</animation>

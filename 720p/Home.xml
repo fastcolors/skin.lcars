@@ -90,7 +90,6 @@
             <!--MOVIES-->
             <item id="1">
                 <label>342</label>
-                <label2>FFFF0000</label2>
                 <onclick condition="Library.HasContent(Movies)">ActivateWindow(Videos,MovieTitles,return)</onclick>
                 <onclick condition="!Library.HasContent(Movies)">ActivateWindow(Videos,root)</onclick>
             </item>
@@ -104,73 +103,62 @@
             <!--MUSIC-->
             <item id="3">
                 <label>2</label>
-                <label2>FFFF0000</label2>
                 <onclick condition="!Library.HasContent(Music)">ActivateWindow(501,root,return)</onclick>
                 <onclick condition="Library.HasContent(Music)">ActivateWindow(502,return)</onclick>
             </item>
             <!--ADDONS-->
             <item id="4">
                 <label>24001</label>
-                <label2>FFFF0000</label2>
                 <onclick>ActivateWindow(AddonBrowser.xml)</onclick>
             </item>
             <!--LIVETV-->
             <item id="5">
                 <visible>PVR.HasTVChannels</visible>
                 <label>19020</label>
-                <label2>FFFF0000</label2>
                 <onclick>ActivateWindow(TVChannels)</onclick>
                 <onclick>noop</onclick>
             </item>
             <!--PICTURES-->
             <item id="6">
                 <label>1</label>
-                <label2>FFFF0000</label2>
                 <!--<onclick>ActivateWindow(Pictures)</onclick>-->
                 <onclick>noop</onclick>
             </item>
             <!--SOURCES-->
             <item id="7">
                 <label>20094</label>
-                <label2>FFFF0000</label2>
                 <onclick>noop</onclick>
             </item>
             <!--WEATHER-->
             <item id="8">
                 <label>$INFO[Weather.Temperature]</label>
-                <label2>FFFF0000</label2>
                 <onclick>ActivateWindow(MyWeather)</onclick>
             </item>
             <!--NEXT AIR-->
             <item id="9">
                 <visible>!Skin.HasSetting(nextair) + System.HasAddon(script.tv.show.next.aired) + Library.HasContent(TVShows)</visible>
                 <label>31000</label>
-                <label2>FFFF0000</label2>
                 <onclick>RunAddon(script.tv.show.next.aired)</onclick>
             </item>
             <!--Favorites-->
             <item id="10">
                 <label>1036</label>
-                <label2>FFFF0000</label2>
                 <onclick>ActivateWindow(134)</onclick>
             </item>
             <!--Settings-->
             <item id="11">
                 <label>1390</label>
-                <label2>FFFF0000</label2>
                 <onclick>ActivateWindow(Settings)</onclick>
             </item>
             <!--EXIT-->
             <item id="12">
                 <visible>!Player.HasMedia</visible>
                 <label>31001</label>
-                <label2>FFFF0000</label2>
                 <onclick>ActivateWindow(ShutdownMenu)</onclick>
             </item>
             <item id="12">
                 <visible>Player.HasMedia</visible>
-                <label2>FFFF0000</label2>
-                <label>Fullscreen</label>
+                <label>14083</label>
                 <onclick>fullscreen</onclick>
             </item>
         </content>

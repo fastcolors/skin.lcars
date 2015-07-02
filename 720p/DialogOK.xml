@@ -6,14 +6,13 @@
 		<left>335</left>
 		<top>230</top>
 	</coordinates>
-	<include>dialogeffect</include>
 	<controls>
 		<control type="image">
 			<left>0</left>
 			<top>0</top>
 			<width>610</width>
 			<height>240</height>
-			<texture border="40">DialogBack.png</texture>
+			<texture border="40">Dialog.png</texture>
 		</control>
 		<control type="image">
 			<description>Dialog Header image</description>
@@ -40,13 +39,13 @@
 			<description>Close Window button</description>
 			<left>520</left>
 			<top>15</top>
-			<width>64</width>
-			<height>32</height>
+			<width>30</width>
+			<height>30</height>
 			<label>-</label>
 			<font>-</font>
 			<onclick>PreviousMenu</onclick>
-			<texturefocus>DialogCloseButton-focus.png</texturefocus>
-			<texturenofocus>DialogCloseButton.png</texturenofocus>
+			<texturefocus>closefocus.png</texturefocus>
+			<texturenofocus>close.png</texturenofocus>
 			<onleft>10</onleft>
 			<onright>10</onright>
 			<onup>10</onup>
@@ -60,6 +59,7 @@
 			<width>550</width>
 			<height>100</height>
 			<align>left</align>
+			<textcolor>white</textcolor>
 			<label>-</label>
 			<font>font13</font>
 			<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
@@ -71,14 +71,9 @@
 			<width>200</width>
 			<height>40</height>
 			<label>186</label>
-			<font>font12_title</font>
-			<textcolor>white</textcolor>
-			<focusedcolor>white</focusedcolor>
+			<aligny>center</aligny>
 			<align>center</align>
-			<onleft>10</onleft>
-			<onright>10</onright>
-			<onup>10</onup>
-			<ondown>10</ondown>
+			
 		</control>
 	</controls>
 </window>

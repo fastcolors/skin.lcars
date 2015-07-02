@@ -3,7 +3,7 @@
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<controls>
-        <include>allwindows</include>
+		<include>allwindows</include>
 		<control type="image">
 			<left>0</left>
 			<top>100r</top>
@@ -13,141 +13,139 @@
 			<animation effect="slide" start="0,10" end="0,0" time="200" condition="Window.Previous(Home)">WindowOpen</animation>
 			<animation effect="slide" start="0,0" end="0,10" time="200" condition="Window.Next(Home)">WindowClose</animation>
 		</control>
-			<control type="panel" id="9000">
-				<top>96</top>
-        <left>13</left>
-        <width>155</width>
-        <height>530</height>
-        <onup>700</onup>
-        <ondown>700</ondown>
-        <onright>750</onright>
-        <itemlayout width="155" height="44">
-            <!--control type="image">
-                <top>5</top>
-                <width>155</width>
-                <height>30</height>
-                <texture colordiffuse="design">white.png</texture>
-            </control-->
+		<control type="panel" id="9000">
+			<top>96</top>
+			<left>13</left>
+			<width>155</width>
+			<height>530</height>
+			<onup>noop</onup>
+			<ondown>700</ondown>
+			<onright>750</onright>
+			<itemlayout width="155" height="44">
+				<!--control type="image">
+                    <top>5</top>
+                    <width>155</width>
+                    <height>30</height>
+                    <texture colordiffuse="design">white.png</texture>
+                </control-->
+				<control type="label">
+					<top>7</top>
+					<width>145</width>
+					<height>23</height>
+					<aligny>bottom</aligny>
+					<font>font16</font>
+					<align>right</align>
+					<label>$INFO[ListItem.label]</label>
+				</control>
+			</itemlayout>
+			<focusedlayout width="155" height="44">
+				<control type="image">
+					<top>5</top>
+					<width>155</width>
+					<height>38</height>
+					<texture colordiffuse="blue">white.png</texture>
+				</control>
+				<control type="label">
+					<top>7</top>
+					<width>145</width>
+					<font>font16</font>
+					<height>23</height>
+					<aligny>bottom</aligny>
+					<align>right</align>
+					<label>$INFO[ListItem.label]</label>
+				</control>
+			</focusedlayout>
+			<content>
+				<item id="1">
+					<label>480</label>
+					<onclick>ActivateWindow(AppearanceSettings)</onclick>
+					<icon>-</icon>
+				</item>
+				<item id="2">
+					<label>157</label>
+					<onclick>ActivateWindow(VideosSettings)</onclick>
+					<icon>-</icon>
+				</item>
+				<item id="3">
+					<label>TV</label>
+					<onclick>ActivateWindow(PVRSettings)</onclick>
+					<icon>special://skin/backgrounds/tv.jpg</icon>
+				</item>
+				<item id="4">
+					<label>2</label>
+					<onclick>ActivateWindow(MusicSettings)</onclick>
+					<icon>-</icon>
+				</item>
+				<item id="5">
+					<label>1</label>
+					<onclick>ActivateWindow(PicturesSettings)</onclick>
+					<icon>-</icon>
+				</item>
+				<item id="6">
+					<label>8</label>
+					<onclick>ActivateWindow(WeatherSettings)</onclick>
+					<icon>-</icon>
+				</item>
+				<item id="7">
+					<label>24001</label>
+					<onclick>ActivateWindow(AddonBrowser)</onclick>
+					<icon>-</icon>
+				</item>
+				<item id="8">
+					<label>14036</label>
+					<onclick>ActivateWindow(ServiceSettings)</onclick>
+					<icon>-</icon>
+				</item>
+				<item id="8">
+					<label>System Setting</label>
+					<onclick>ActivateWindow(SystemSettings)</onclick>
+					<icon>-</icon>
+				</item>
+			</content>
+		</control>
+		<!--<control type="button" id="700">-->
+		<!--<ondown>9000</ondown>-->
+		<!--<top>15</top>-->
+		<!--<left>13</left>-->
+		<!--<width>305</width>-->
+		<!--<height>79</height>-->
+		<!--<label></label>-->
+		<!--<texturenofocus colordiffuse="design">curvelcars1.png</texturenofocus>-->
+		<!--<texturefocus colordiffuse="blue">curvelcars1.png</texturefocus>-->
+		<!--<onclick></onclick>-->
+		<!--</control>-->
+		<!--control type="button" id="701">
+                <onup>9000</onup>
+                <onright>702</onright>
+                <top>630</top>
+                <left>13</left>
+                <width>305</width>
+                <height>79</height>
+                <label></label>
+                <texturenofocus colordiffuse="design" flipy="true">curvelcars1.png</texturenofocus>
+                <texturefocus colordiffuse="blue" flipy="true">curvelcars1.png</texturefocus>
+                <onclick>ActivateWindow(SystemSettings)</onclick>
+            </control>
             <control type="label">
-                <top>7</top>
-                <width>145</width>
-                <height>23</height>
-                <aligny>bottom</aligny>
-                <font>font16</font>
-				<align>right</align>
-                <label>$INFO[ListItem.label]</label>
-            </control>
-        </itemlayout>
-        <focusedlayout width="155" height="44">
-            <control type="image">
-                <top>5</top>
-                <width>155</width>
-                <height>38</height>
-                <texture colordiffuse="blue">white.png</texture>
-            </control>
-            <control type="label">
-                <top>7</top>
-                <width>145</width>
-                <font>font16</font>
-				<height>23</height>
-                <aligny>bottom</aligny>
-                <align>right</align>
-                <label>$INFO[ListItem.label]</label>
-            </control>
-        </focusedlayout>
-				<content>
-					<item id="1">
-						<label>480</label>
-						<onclick>ActivateWindow(AppearanceSettings)</onclick>
-						<icon>-</icon>
-					</item>
-					<item id="2">
-						<label>157</label>
-						<onclick>ActivateWindow(VideosSettings)</onclick>
-						<icon>-</icon>
-					</item>
-					<item id="3">
-						<label>TV</label>
-						<onclick>ActivateWindow(PVRSettings)</onclick>
-						<icon>special://skin/backgrounds/tv.jpg</icon>
-					</item>
-					<item id="4">
-						<label>2</label>
-						<onclick>ActivateWindow(MusicSettings)</onclick>
-						<icon>-</icon>
-					</item>
-					<item id="5">
-						<label>1</label>
-						<onclick>ActivateWindow(PicturesSettings)</onclick>
-						<icon>-</icon>
-					</item>
-					<item id="6">
-						<label>8</label>
-						<onclick>ActivateWindow(WeatherSettings)</onclick>
-						<icon>-</icon>
-					</item>
-					<item id="7">
-						<label>24001</label>
-						<onclick>ActivateWindow(AddonBrowser)</onclick>
-						<icon>-</icon>
-					</item>
-					<item id="8">
-						<label>14036</label>
-						<onclick>ActivateWindow(ServiceSettings)</onclick>
-						<icon>-</icon>
-					</item>
-					<item id="8">
-						<label>System Setting</label>
-						<onclick>ActivateWindow(SystemSettings)</onclick>
-						<icon>-</icon>
-					</item>
-				</content>
-			</control>
-            <!--<control type="button" id="700">-->
-            <!--<ondown>9000</ondown>-->
-            <!--<top>15</top>-->
-            <!--<left>13</left>-->
-            <!--<width>305</width>-->
-            <!--<height>79</height>-->
-            <!--<label></label>-->
-            <!--<texturenofocus colordiffuse="design">curvelcars1.png</texturenofocus>-->
-            <!--<texturefocus colordiffuse="blue">curvelcars1.png</texturefocus>-->
-            <!--<onclick></onclick>-->
-        <!--</control>-->
-       <!--control type="button" id="701">
-            <onup>9000</onup>
-            <onright>702</onright>
-            <top>630</top>
+            <top>638</top>
             <left>13</left>
-            <width>305</width>
-            <height>79</height>
-            <label></label>
-            <texturenofocus colordiffuse="design" flipy="true">curvelcars1.png</texturenofocus>
-            <texturefocus colordiffuse="blue" flipy="true">curvelcars1.png</texturefocus>
-            <onclick>ActivateWindow(SystemSettings)</onclick>
-        </control>
-        <control type="label">
-        <top>638</top>
-        <left>13</left>
-        <align>right</align>
-        <width>145</width>
-        <height>40</height>
-        <label>SYSTEM SETTINGS</label>
-    </control-->
-
-			<control type="textbox">
-				<description>Appearance Description</description>
-				<left>300</left>
-				<top>520</top>
-				<width>740</width>
-				<height>100</height>
-				<font>font12</font>
-				<label>$INFO[Container(9000).ListItem.Label2]</label>
-				<align>left</align>
-				<textcolor>white</textcolor>
-				<shadowcolor>black</shadowcolor>
-			</control>
-
+            <align>right</align>
+            <width>145</width>
+            <height>40</height>
+            <label>SYSTEM SETTINGS</label>
+        </control-->
+		<control type="textbox">
+			<description>Appearance Description</description>
+			<left>300</left>
+			<top>520</top>
+			<width>740</width>
+			<height>100</height>
+			<font>font12</font>
+			<label>$INFO[Container(9000).ListItem.Label2]</label>
+			<align>left</align>
+			<textcolor>white</textcolor>
+			<shadowcolor>black</shadowcolor>
+		</control>
 		<control type="image">
 			<description>Section header image</description>
 			<left>20</left>
@@ -157,7 +155,5 @@
 			<aspectratio>keep</aspectratio>
 			<texture>icon_system.png</texture>
 		</control>
-
-
 	</controls>
 </window>

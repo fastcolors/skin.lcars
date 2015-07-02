@@ -929,7 +929,7 @@
                 <onup>9000</onup>
                 <ondown>noop</ondown>
                 <top>489</top>
-                <label>Back</label>
+                <label>31008</label>
                 <onclick>Back</onclick>
                 <include>9000butts</include>
             </control>
@@ -979,12 +979,12 @@
         </control>
         <control type="label">
             <top>18</top>
-            <left>1020</left>
+            <left>1030</left>
             <height>39</height>
             <width>200</width>
             <font>font30</font>
             <textcolor>yellow</textcolor>
-            <label>USS XBMC  •  NCC-1929</label>
+            <label>USS KODI  •  NCC-1929</label>
         </control>
         <control type="label">
             <visible>system.hasnetwork</visible>

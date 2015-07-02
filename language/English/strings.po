@@ -48,3 +48,7 @@ msgctxt "#31007"
 msgid "Random"
 msgstr "Random"
 
+msgctxt "#31008"
+msgid "Back"
+msgstr "Back"
+

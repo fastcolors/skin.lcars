@@ -25,7 +25,7 @@
 				<top>0</top>
 				<width>730</width>
 				<height>660</height>
-				<texture border="40">DialogBack.png</texture>
+				<texture border="40">Dialog.png</texture>
 				<visible>![Window.IsVisible(FullscreenVideo) | Window.IsVisible(Visualisation)]</visible>
 			</control>
 			<control type="image">
@@ -53,13 +53,13 @@
 				<description>Close Window button</description>
 				<left>640</left>
 				<top>15</top>
-				<width>64</width>
-				<height>32</height>
+				<width>30</width>
+				<height>30</height>
 				<label>-</label>
 				<font>-</font>
 				<onclick>PreviousMenu</onclick>
-				<texturefocus>DialogCloseButton-focus.png</texturefocus>
-				<texturenofocus>DialogCloseButton.png</texturenofocus>
+				<texturefocus>closefocus.png</texturefocus>
+				<texturenofocus>close.png</texturenofocus>
 				<onleft>10</onleft>
 				<onright>10</onright>
 				<onup>10</onup>
@@ -169,6 +169,7 @@
 					</control>
 					<control type="label">
 						<description>Genre value</description>
+						<textcolor>white</textcolor>
 						<left>180</left>
 						<top>105</top>
 						<width>470</width>
@@ -206,17 +207,26 @@
 					<ondown>60</ondown>
 					<control type="button" id="5">
 						<description>Switch to Channel</description>
-						<include>ButtonInfoDialogsCommonValues</include>
+						<width>200</width>
+						<height>40</height>
+						<align>center</align>
+						<aligny>center</aligny>
 						<label>19165</label>
 					</control>
 					<control type="button" id="6">
 						<description>Record</description>
-						<include>ButtonInfoDialogsCommonValues</include>
+						<width>200</width>
+						<height>40</height>
+						<align>center</align>
+						<aligny>center</aligny>
 						<label>-</label>
 					</control>
 					<control type="button" id="7">
 						<description>OK</description>
-						<include>ButtonInfoDialogsCommonValues</include>
+						<width>200</width>
+						<height>40</height>
+						<align>center</align>
+						<aligny>center</aligny>
 						<label>186</label>
 					</control>
 				</control>

@@ -53,10 +53,11 @@
     <default type="progress">
         <left>100</left>
         <top>325</top>
-        <texturebg border="6,0,6,0">ProgressBG.png</texturebg>
-        <lefttexture>ProgressL.png</lefttexture>
-        <midtexture border="6,0,6,0">ProgressM.png</midtexture>
-        <righttexture>ProgressR.png</righttexture>
+        <height>10</height>
+        <texturebg border="5,5,5,5">ProgressBG.png</texturebg>
+        <lefttexture border="5,5,5,5">ProgressL.png</lefttexture>
+        <midtexture border="5,5,5,5">ProgressM.png</midtexture>
+        <righttexture border="5,5,5,5">ProgressR.png</righttexture>
         <overlaytexture>-</overlaytexture>
     </default>
     <default type="spincontrol">

@@ -71,7 +71,7 @@
         </control>
         <control type="group">
             <description>Small Media Window</description>
-            <top>120</top>
+            <top>130</top>
             <left>630</left>
             <visible>Control.IsVisible(50)</visible>
             <control type="image">
@@ -101,9 +101,8 @@
             <control type="label">
                 <width>600</width>
                 <height>30</height>
-                <textcolor>white</textcolor>
+                <textcolor>orange</textcolor>
                 <scroll>false</scroll>
-
                 <font>font30_title</font>
                 <align>center</align>
                 <visible>Container(50).ListItem.HasEpg</visible>
@@ -111,7 +110,7 @@
             </control>
             <control type="label">
                 <width>600</width>
-                <height>30</height>
+                <height>25</height>
                 <textcolor>white</textcolor>
                 <font>font30_title</font>
                 <scroll>false</scroll>
@@ -119,30 +118,26 @@
                 <visible>Container(50).ListItem.HasEpg</visible>
                 <label>$INFO[Container(50).ListItem.StartTime] • [COLOR=red]$INFO[Container(50).ListItem.Title][/COLOR]</label>
             </control>
-            <!--control type="progress">
+            <control type="progress">
                 <description>Progressbar</description>
                 <left>100</left>
                 <width>600</width>
-                <height>8</height>
-                <texturebg colordiffuse="red" border="6,6,6,6">ProgressBG.png</texturebg>
-                <midtexture border="6,6,6,6">ProgressM.png</midtexture>
-                <righttexture  border="0,6,0,6">ProgressR.png</righttexture>
-                <lefttexture  border="0,6,0,6">ProgressL.png</lefttexture>
+                <height>10</height>
                 <visible>Container(50).ListItem.HasEpg</visible>
                 <info>Container(50).ListItem.Progress</info>
-            </control-->
+            </control>
             <control type="textbox">
                 <description>Plot Value for TVShow</description>
                 <textcolor>white</textcolor>
                 <width>600</width>
-                <height>125</height>
+                <height>145</height>
                 <align>justify</align>
                 <label>$INFO[Container(50).ListItem.Plot]</label>
                 <autoscroll time="2000" delay="3000" repeat="5000">true</autoscroll>
             </control>
             <control type="label">
                 <width>600</width>
-                <height>30</height>
+                <height>25</height>
                 <textcolor>white</textcolor>
                 <font>font30_title</font>
                 <align>left</align>

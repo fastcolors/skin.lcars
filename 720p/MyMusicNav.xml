@@ -91,7 +91,7 @@
 			<control type="button" id="611">
                 <include>9000butts</include>
                 <visible>Player.HasMedia</visible>
-				<label>Fullscreen</label>
+				<label>31002</label>
 				<onclick>fullscreen</onclick>
 			</control>
         </control>

@@ -26,7 +26,7 @@
 					<progresstexture border="0,48,18,14">PVR-EpgProgressIndicator.png</progresstexture>
 					<onleft>101</onleft>
 					<onright>101</onright>
-					<onup>10</onup>
+					<onup>101</onup>
 					<ondown>10</ondown>
 					<onback>101</onback>
 					<rulerlayout height="35" width="40">
@@ -219,7 +219,6 @@
 					</focusedlayout>
 				</control>
 			</control>
-
 		</control>
 		<control type="group">
 			<visible>!IsEmpty(ListItem.Label)</visible>
@@ -234,7 +233,7 @@
                 <visible>!Player.HasVideo</visible>
             </control>
 			<control type="videowindow">
-                <top>6</top>
+                <top>16</top>
                 <width>400</width>
                 <height>130</height>
                 <visible>Player.HasVideo</visible>

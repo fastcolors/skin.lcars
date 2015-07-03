@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="buttonMenu">
     <defaultcontrol always="true">3</defaultcontrol>
-    <include>dialogeffect</include>
     <controls>
         <control type="image">
             <centerleft>640</centerleft>
@@ -39,22 +38,20 @@
             <onright>61</onright>
             <pagecontrol>61</pagecontrol>
             <scrolltime>200</scrolltime>
-            <animation effect="slide" start="0,0" end="10,0" time="0" condition="!Control.IsVisible(61)">Conditional</animation>
-            <animation effect="slide" end="120,0" time="0" condition="!Control.IsVisible(5)">Conditional</animation>
             <itemlayout height="46" width="460">
                 <control type="image">
                     <left>0</left>
                     <top>0</top>
                     <width>460</width>
                     <height>40</height>
-                    <texture border="5">button-nofocus.png</texture>
+                    <texture border="5">menuitemnf.png</texture>
                 </control>
                 <control type="label">
                     <left>20</left>
                     <top>0</top>
                     <width>420</width>
                     <height>40</height>
-                    <font>font13</font>
+                    <font>font14</font>
                     <textcolor>grey2</textcolor>
                     <selectedcolor>selected</selectedcolor>
                     <align>left</align>
@@ -68,26 +65,15 @@
                     <top>0</top>
                     <width>460</width>
                     <height>40</height>
-                    <texture border="5">button-nofocus.png</texture>
-                    <visible>!Control.HasFocus(3)</visible>
-                    <include>VisibleFadeEffect</include>
-                </control>
-                <control type="image">
-                    <left>0</left>
-                    <top>0</top>
-                    <width>460</width>
-                    <height>40</height>
-                    <texture border="5">button-focus2.png</texture>
-                    <visible>Control.HasFocus(3)</visible>
-                    <include>VisibleFadeEffect</include>
+                    <texture border="5">menuitemfo.png</texture>
                 </control>
                 <control type="label">
                     <left>20</left>
                     <top>0</top>
                     <width>420</width>
                     <height>40</height>
-                    <font>font13</font>
-                    <textcolor>white</textcolor>
+                    <font>font14</font>
+                    <textcolor>yellow</textcolor>
                     <selectedcolor>selected</selectedcolor>
                     <align>left</align>
                     <aligny>center</aligny>
@@ -106,8 +92,6 @@
             <onright>61</onright>
             <pagecontrol>61</pagecontrol>
             <scrolltime>200</scrolltime>
-            <animation effect="slide" start="0,0" end="10,0" time="0" condition="!Control.IsVisible(61)">Conditional</animation>
-            <animation effect="slide" end="120,0" time="0" condition="!Control.IsVisible(5)">Conditional</animation>
             <itemlayout height="85" width="460">
                 <control type="image">
                     <left>5</left>
@@ -115,7 +99,7 @@
                     <width>80</width>
                     <height>76</height>
                     <aspectratio>scale</aspectratio>
-                    <texture >$INFO[Listitem.Icon]</texture>
+                    <texture fallback="defaultalbumcover.png">$INFO[Listitem.Icon]</texture>
                     <bordersize>2</bordersize>
                 </control>
                 <control type="label">
@@ -123,7 +107,7 @@
                     <top>5</top>
                     <width>250</width>
                     <height>30</height>
-                    <font>font13</font>
+                    <font>font14</font>
                     <textcolor>grey</textcolor>
                     <selectedcolor>selected</selectedcolor>
                     <align>left</align>
@@ -135,7 +119,7 @@
                     <top>30</top>
                     <width>250</width>
                     <height>50</height>
-                    <font>font12</font>
+                    <font>font13</font>
                     <textcolor>grey</textcolor>
                     <selectedcolor>selected</selectedcolor>
                     <align>left</align>
@@ -149,7 +133,7 @@
                     <width>80</width>
                     <height>76</height>
                     <aspectratio>scale</aspectratio>
-                    <texture>$INFO[Listitem.Icon]</texture>
+                    <texture fallback="defaultalbumcover.png">$INFO[Listitem.Icon]</texture>
                     <bordertexture colordiffuse="red">white.png</bordertexture>
                     <bordersize>2</bordersize>
                 </control>
@@ -158,7 +142,7 @@
                     <top>5</top>
                     <width>250</width>
                     <height>30</height>
-                    <font>font13</font>
+                    <font>font14</font>
                     <textcolor>white</textcolor>
                     <selectedcolor>selected</selectedcolor>
                     <align>left</align>
@@ -170,7 +154,7 @@
                     <top>30</top>
                     <width>250</width>
                     <height>50</height>
-                    <font>font12</font>
+                    <font>font13</font>
                     <textcolor>grey</textcolor>
                     <selectedcolor>selected</selectedcolor>
                     <align>left</align>
@@ -179,26 +163,24 @@
             </focusedlayout>
         </control>
         <control type="scrollbar" id="61">
-            <left>450</left>
-            <top>65</top>
-            <width>25</width>
-            <height>510</height>
-            <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
-            <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
-            <texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
-            <textureslidernib>ScrollBarNib.png</textureslidernib>
-            <textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
-            <onleft>3</onleft>
+            <left>860</left>
+            <top>140</top>
+            <width>8</width>
+            <height>406</height>
+            <texturesliderbackground border="4">ScrollbarBG_light.png</texturesliderbackground>
+			<textureslidernib border="4">ScrollerNF.png</textureslidernib>
+			<textureslidernibfocus>ScrollerFO.png</textureslidernibfocus>
+			<onleft>3</onleft>
             <onright>5</onright>
             <ondown>61</ondown>
             <onup>61</onup>
             <showonepage>false</showonepage>
             <orientation>vertical</orientation>
-            <animation effect="slide" end="120,0" time="0" condition="!Control.IsVisible(5)">Conditional</animation>
+            
         </control>
         <control type="label">
             <description>number of files/pages in list text label</description>
-            <left>420</left>
+            <centerleft>640</centerleft>
             <top>562</top>
             <width>460</width>
             <height>35</height>
@@ -208,12 +190,11 @@
             <scroll>true</scroll>
             <textcolor>grey</textcolor>
             <label>([COLOR=blue]$INFO[Container(3).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=blue]$INFO[Container(3).CurrentPage]/$INFO[Container(3).NumPages][/COLOR])</label>
-            <animation effect="slide" end="-120,0" time="0" condition="!Control.IsVisible(5)">Conditional</animation>
             <visible>Control.IsVisible(3)</visible>
         </control>
         <control type="label">
             <description>number of files/pages in list text label</description>
-            <left>420</left>
+            <centerleft>640</centerleft>
             <top>562</top>
             <width>460</width>
             <height>35</height>
@@ -224,7 +205,6 @@
             <textcolor>grey</textcolor>
             <label>([COLOR=blue]$INFO[Container(6).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=blue]$INFO[Container(6).CurrentPage]/$INFO[Container(6).NumPages][/COLOR])</label>
             <wrapmultiline>true</wrapmultiline>
-            <animation effect="slide" end="-120,0" time="0" condition="!Control.IsVisible(5)">Conditional</animation>
             <visible>Control.IsVisible(6)</visible>
         </control>
         <control type="button" id="5">

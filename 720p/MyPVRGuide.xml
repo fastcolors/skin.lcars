@@ -224,21 +224,29 @@
 			<visible>!IsEmpty(ListItem.Label)</visible>
 			<left>130</left>
 			<top>70</top>
-			 <control type="image">
-                <top>16</top>
-                <width>400</width>
-                <height>130</height>
-                <aspectratio scalediffuse="false">keep</aspectratio>
-                <texture  background="true" >$INFO[ListItem.Icon]</texture>
-                <visible>!Player.HasVideo</visible>
-            </control>
+			<control type="image">
+				<top>-18</top>
+				<centerleft>200</centerleft>
+				<width>320</width>
+				<height>200</height>
+				<aspectratio>keep</aspectratio>
+				<texture  background="true" >videowindowbg.png</texture>
+			</control>
+			<control type="image">
+				<top>16</top>
+				<width>400</width>
+				<height>130</height>
+				<aspectratio scalediffuse="false">keep</aspectratio>
+				<texture  background="true" >$INFO[ListItem.Icon]</texture>
+				<visible>!Player.HasVideo</visible>
+			</control>
 			<control type="videowindow">
-                <top>16</top>
-                <width>400</width>
-                <height>130</height>
-                <visible>Player.HasVideo</visible>
-                <animation effect="slide" start="0,0" end="-2000,0" time="0">WindowClose</animation>
-            </control>
+				<top>16</top>
+				<width>400</width>
+				<height>130</height>
+				<visible>Player.HasVideo</visible>
+				<animation effect="slide" start="0,0" end="-2000,0" time="0">WindowClose</animation>
+			</control>
 			<control type="label">
 				<top>20</top>
 				<left>360</left>

@@ -75,6 +75,14 @@
             <left>630</left>
             <visible>Control.IsVisible(50)</visible>
             <control type="image">
+				<top>-28</top>
+				<centerleft>306</centerleft>
+				<width>390</width>
+				<height>214</height>
+				<!--<aspectratio>keep</aspectratio>-->
+				<texture background="true" border="10">videowindowbg.png</texture>
+			</control>
+            <control type="image">
                 <left>5</left>
                 <top>5</top>
                 <width>600</width>

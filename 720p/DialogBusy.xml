@@ -24,6 +24,7 @@
 			</control>
 			<control type="progress" id="32">
                 <description>progress control</description>
+                <colordiffuse>black</colordiffuse>
                 <left>350</left>
                 <top>673</top>
                 <width>250</width>

@@ -88,7 +88,7 @@
         <control type="image">
             <width>1280</width>
             <height>720</height>
-            <texture>osb.png</texture>
+            <texture colordiffuse="osd">osb.png</texture>
         </control>
         <control type="group">
             <description>PROGRESS</description>
@@ -97,12 +97,14 @@
             <control type="progress" description="Cache Progress">
                 <centerleft>640</centerleft>
                 <width>1100</width>
+                <colordiffuse>black</colordiffuse>
                 <height>14</height>
                 <info>Player.ProgressCache</info>
             </control>
             <control type="progress" id="23" description="Progress Bar">
                 <centerleft>640</centerleft>
                 <width>1100</width>
+                <colordiffuse>black</colordiffuse>
                 <height>14</height>
                 <info>Player.Progress</info>
             </control>
@@ -168,7 +170,7 @@
                 <visible>![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList)]</visible>
             <control type="button" id="600">
                 <label>210</label>
-                <texturenofocus colordiffuse="55ffffff"  flipx="true" border="20">whiterounded.png</texturenofocus>
+                <texturenofocus colordiffuse="osd"  flipx="true" border="20">whiterounded.png</texturenofocus>
                 <texturefocus colordiffuse="green"  flipx="true" border="20">whiterounded.png</texturefocus>
                 <include>osdbutt</include>
                 <onleft>704</onleft>
@@ -186,7 +188,7 @@
                 <include>osdbutt</include>
                 <label>PLAY</label>
                 <altlabel>PAUSE</altlabel>
-                <alttexturenofocus colordiffuse="5566A7FF" border="20">white.png</alttexturenofocus>
+                <alttexturenofocus colordiffuse="blue" border="20">white.png</alttexturenofocus>
                 <alttexturefocus colordiffuse="green" border="20">white.png</alttexturefocus>
                 <onleft>601</onleft>
                 <onright>603</onright>
@@ -227,11 +229,11 @@
                 <onright>607</onright>
             </control>
             <control type="togglebutton" id="607">
-                <texturenofocus colordiffuse="55ffffff" border="20">whiterounded.png</texturenofocus>
+                <texturenofocus colordiffuse="osd" border="20">whiterounded.png</texturenofocus>
                 <texturefocus colordiffuse="green" border="20">whiterounded.png</texturefocus>
                 <include>osdbutt</include>
                 <label>$LOCALIZE[590]$INFO[Playlist.Random, : ]</label>
-                <alttexturenofocus colordiffuse="55000000" border="20">whiterounded.png</alttexturenofocus>
+                <alttexturenofocus colordiffuse="blue" border="20">whiterounded.png</alttexturenofocus>
                 <alttexturefocus colordiffuse="green" border="20">whiterounded.png</alttexturefocus>
                 <onclick>XBMC.PlayerControl(Random)</onclick>
                 <onleft>606</onleft>

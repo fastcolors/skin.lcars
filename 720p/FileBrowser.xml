@@ -14,7 +14,7 @@
 				<top>0</top>
 				<width>1000</width>
 				<height>720</height>
-				<texture border="180" flipx="true">dialog.png</texture>
+				<texture border="180">dialog.png</texture>
 			</control>
 			<control type="image">
 				<description>background image</description>
@@ -124,7 +124,7 @@
                          <control type="image">
                             <height>40</height>
                             <width>420</width>
-                            <texture colordiffuse="55000000" border="20">whiteallrounded.png</texture>
+                            <texture colordiffuse="design" border="20">whiteallrounded.png</texture>
                         </control>
 						<control type="label">
 							<left>55</left>
@@ -171,7 +171,7 @@
                          <control type="image">
                             <height>40</height>
                             <width>420</width>
-                            <texture colordiffuse="55000000" border="20">whiteallrounded.png</texture>
+                            <texture colordiffuse="design" border="20">whiteallrounded.png</texture>
                         </control>
 						<control type="label">
 							<left>55</left>

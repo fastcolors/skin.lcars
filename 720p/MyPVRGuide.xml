@@ -1,269 +1,272 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-    <defaultcontrol always="true">10</defaultcontrol>
-    <allowoverlay>no</allowoverlay>
-    <views>10</views>
-    <controls>
-           
-        <include>allwindows</include>
-        
-        <include>PVRbutt</include> <!-- PVR Button -->
-        <control type="group" id="50">
-			<centertop>380</centertop>
-            <left>125</left>
-            <control type="group">
-			<description>TV Guide Timeline</description>
-			<visible>Control.IsVisible(10)</visible>
-			<include>VisibleFadeEffect</include>
-			<control type="epggrid" id="10">
-				<viewtype label="19032">list</viewtype>
-				<description>EPG Grid</description>
-				<left>80</left>
-				<top>71</top>
-				<width>1050</width>
-				<height>419</height>
-				<pagecontrol>10</pagecontrol>
-				<scrolltime>350</scrolltime>
-				<timeblocks>40</timeblocks>
-				<rulerunit>6</rulerunit>
-				<progresstexture border="0,48,18,14">PVR-EpgProgressIndicator.png</progresstexture>
-				<onleft>101</onleft>
-				<onright>101</onright>
-				<onup>10</onup>
-				<ondown>10</ondown>
-				<onback>101</onback>
-				<rulerlayout height="35" width="40">
-					<control type="label" id="2">
-						<left>0</left>
-						<top>0</top>
-						<width>34</width>
-						<height>29</height>
-						<aligny>center</aligny>
-						<selectedcolor>selected</selectedcolor>
-						<textcolor>grey</textcolor>
-						<align>center</align>
-						<label>$INFO[ListItem.Label]</label>
-						<visible>!ListItem.Property(DateLabel)</visible>
-					</control>
-					<control type="label" id="2">
-						<left>0</left>
-						<top>0</top>
-						<width>34</width>
-						<height>29</height>
-						<aligny>center</aligny>
-						<selectedcolor>selected</selectedcolor>
-						<textcolor>grey</textcolor>
-						<align>left</align>
-						<label>$INFO[ListItem.Label]</label>
-						<visible>ListItem.Property(DateLabel)</visible>
-					</control>
-				</rulerlayout>
-				<channellayout height="48" width="280">
-					<control type="image">
-						<width>270</width>
-						<height>40</height>
-						<texture  flipx="true" border="20" colordiffuse="design">whiterounded.png</texture>
-					</control>
-					<control type="label">
-						<left>5</left>
-						<width>40</width>
-						<height>35</height>
-						<aligny>center</aligny>
-						<textcolor>black</textcolor>
-						<selectedcolor>grey</selectedcolor>
-						<info>ListItem.ChannelNumberLabel</info>
-					</control>
-					<control type="image">
-						<left>45</left>
-						<width>45</width>
-						<height>44</height>
-						<aligny>center</aligny>
-						<texture>$INFO[ListItem.Icon]</texture>
-						<aspectratio>keep</aspectratio>
-					</control>
-					<control type="label" id="1">
-						<left>94</left>
-						<width>160</width>
-						<height>35</height>
-						<aligny>center</aligny>
-						<selectedcolor>selected</selectedcolor>
-						<textcolor>black</textcolor>
-						<align>left</align>
-						<label>$INFO[ListItem.ChannelName]</label>
-					</control>
-				</channellayout>
-				<focusedchannellayout height="48" width="280">
-					<control type="image">
-						<width>270</width>
-						<height>40</height>
-						<texture  flipx="true" border="20" colordiffuse="green">whiterounded.png</texture>
-						<visible>!Control.HasFocus(10)</visible>
-					</control>
-					<control type="image">
-						<width>270</width>
-						<height>40</height>
-						<texture  flipx="true" border="20" colordiffuse="green">whiterounded.png</texture>
-						<visible>Control.HasFocus(10)</visible>
-					</control>
-					<control type="label">
-						<left>5</left>
-						<width>40</width>
-						<height>35</height>
-						<aligny>center</aligny>
-						<textcolor>black</textcolor>
-						<selectedcolor>grey</selectedcolor>
-						<info>ListItem.ChannelNumberLabel</info>
-					</control>
-					<control type="image">
-						<left>45</left>
-						<aligny>center</aligny>
-						<width>45</width>
-						<height>44</height>
-						<texture>$INFO[ListItem.Icon]</texture>
-						<aspectratio>keep</aspectratio>
-					</control>
-					<control type="label" id="1">
-						<left>94</left>
-						<width>160</width>
-						<height>35</height>
-						<aligny>center</aligny>
-						<textcolor>black</textcolor>
-						<selectedcolor>selected</selectedcolor>
-						<align>left</align>
-						<label>$INFO[ListItem.ChannelName]</label>
-					</control>
-				</focusedchannellayout>
-				<itemlayout height="48" width="40">
-					<control type="image" id="2">
-						<width>40</width>
-						<height>40</height>
-						<aspectratio>stretch</aspectratio>
-						<texture border="3">epg-genres/$INFO[ListItem.Property(GenreType)].png</texture>
-					</control>
-					<control type="label" id="1">
-						<left>10</left>
-						<width>20</width>
-						<height>35</height>
-						<aligny>center</aligny>
-						<textcolor>white</textcolor>
-						<selectedcolor>selected</selectedcolor>
-						<align>left</align>
-						<info>ListItem.Label</info>
-					</control>
-					<control type="image">
-						<left>6</left>
-						<top>28</top>
-						<width>24</width>
-						<height>16</height>
-						<texture>PVR-IsRecording.png</texture>
-						<visible>ListItem.IsRecording</visible>
-					</control>
-					<control type="image">
-						<left>6</left>
-						<top>28</top>
-						<width>16</width>
-						<height>16</height>
-						<texture>PVR-HasTimer.png</texture>
-						<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
-					</control>
-					<control type="image">
-						<left>6</left>
-						<top>28</top>
-						<width>16</width>
-						<height>16</height>
-						<texture>PVR-HasRecording.png</texture>
-						<visible>ListItem.HasRecording + !ListItem.IsRecording + !ListItem.HasTimer</visible>
-					</control>
-				</itemlayout>
-				<focusedlayout height="48" width="40">
-					<control type="image" id="14">
-						<width>40</width>
-						<height>40</height>
-						<texture border="20" colordiffuse="green">white.png</texture>
-					</control>
-					<control type="image" id="2">
-						<width>40</width>
-						<height>40</height>
-						<aspectratio>stretch</aspectratio>
-						<texture border="3">epg-genres/$INFO[ListItem.Property(GenreType)].png</texture>
-					</control>
-					<control type="label" id="1">
-						<left>10</left>
-						<width>20</width>
-						<height>35</height>
-						<aligny>center</aligny>
-						<textcolor>black</textcolor>
-						<selectedcolor>selected</selectedcolor>
-						<align>left</align>
-						<info>ListItem.Label</info>
-					</control>
-					<control type="image">
-						<left>6</left>
-						<top>28</top>
-						<width>24</width>
-						<height>16</height>
-						<texture>PVR-IsRecording.png</texture>
-						<visible>ListItem.IsRecording</visible>
-					</control>
-					<control type="image">
-						<left>6</left>
-						<top>28</top>
-						<width>16</width>
-						<height>16</height>
-						<texture>PVR-HasTimer.png</texture>
-						<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
-					</control>
-					<control type="image">
-						<left>6</left>
-						<top>28</top>
-						<width>16</width>
-						<height>16</height>
-						<texture>PVR-HasRecording.png</texture>
-						<visible>ListItem.HasRecording + !ListItem.IsRecording + !ListItem.HasTimer</visible>
-					</control>
-				</focusedlayout>
-			</control>
+	<defaultcontrol always="true">10</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<views>10</views>
+	<controls>
+		<include>allwindows</include>
+		<include>PVRbutt</include> <!-- PVR Button -->
+		<control type="group" id="50">
+			<top>170</top>
+			<left>190</left>
 			<control type="group">
-				<visible>!IsEmpty(ListItem.Label)</visible>
-				<left>80</left>
-				<top>508</top>
-				<control type="image">
-					<left>62</left>
-					<top>6</top>
-					<width>130</width>
-					<height>130</height>
-					<texture background="true">$INFO[ListItem.Icon]</texture>
-					<aspectratio align="center" aligny="top">keep</aspectratio>
+				<description>TV Guide Timeline</description>
+				<visible>Control.IsVisible(10)</visible>
+				<include>VisibleFadeEffect</include>
+				<control type="epggrid" id="10">
+					<viewtype label="19032">list</viewtype>
+					<description>EPG Grid</description>
+					<top>71</top>
+					<width>1050</width>
+					<height>419</height>
+					<pagecontrol>10</pagecontrol>
+					<scrolltime>350</scrolltime>
+					<timeblocks>40</timeblocks>
+					<rulerunit>6</rulerunit>
+					<progresstexture border="0,48,18,14">PVR-EpgProgressIndicator.png</progresstexture>
+					<onleft>101</onleft>
+					<onright>101</onright>
+					<onup>10</onup>
+					<ondown>10</ondown>
+					<onback>101</onback>
+					<rulerlayout height="35" width="40">
+						<control type="label" id="2">
+							<width>34</width>
+							<height>29</height>
+							<aligny>center</aligny>
+							<selectedcolor>selected</selectedcolor>
+							<textcolor>grey</textcolor>
+							<align>center</align>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>!ListItem.Property(DateLabel)</visible>
+						</control>
+						<control type="label" id="2">
+							<width>34</width>
+							<height>29</height>
+							<aligny>center</aligny>
+							<selectedcolor>selected</selectedcolor>
+							<textcolor>grey</textcolor>
+							<align>left</align>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>ListItem.Property(DateLabel)</visible>
+						</control>
+					</rulerlayout>
+					<channellayout height="48" width="280">
+						<control type="image">
+							<width>270</width>
+							<height>40</height>
+							<texture  flipx="true" border="20" colordiffuse="design">whiterounded.png</texture>
+						</control>
+						<control type="label">
+							<left>15</left>
+							<width>40</width>
+							<height>40</height>
+							<aligny>center</aligny>
+							<textcolor>black</textcolor>
+							<selectedcolor>grey</selectedcolor>
+							<info>ListItem.ChannelNumberLabel</info>
+						</control>
+						<control type="image">
+							<top>3</top>
+							<left>45</left>
+							<width>34</width>
+							<height>34</height>
+							<aligny>center</aligny>
+							<texture>$INFO[ListItem.Icon]</texture>
+							<aspectratio>keep</aspectratio>
+						</control>
+						<control type="label" id="1">
+							<left>88</left>
+							<width>180</width>
+							<height>40</height>
+							<aligny>center</aligny>
+							<selectedcolor>selected</selectedcolor>
+							<textcolor>black</textcolor>
+							<align>left</align>
+							<label>$INFO[ListItem.ChannelName]</label>
+						</control>
+					</channellayout>
+					<focusedchannellayout height="48" width="280">
+						<control type="image">
+							<width>270</width>
+							<height>40</height>
+							<texture  flipx="true" border="20" colordiffuse="green">whiterounded.png</texture>
+							<visible>!Control.HasFocus(10)</visible>
+						</control>
+						<control type="image">
+							<width>270</width>
+							<height>40</height>
+							<texture  flipx="true" border="20" colordiffuse="green">whiterounded.png</texture>
+							<visible>Control.HasFocus(10)</visible>
+						</control>
+						<control type="label">
+							<left>15</left>
+							<width>40</width>
+							<height>40</height>
+							<aligny>center</aligny>
+							<textcolor>black</textcolor>
+							<selectedcolor>grey</selectedcolor>
+							<info>ListItem.ChannelNumberLabel</info>
+						</control>
+						<control type="image">
+							<top>3</top>
+							<left>45</left>
+							<width>34</width>
+							<height>34</height>
+							<aligny>center</aligny>
+							<texture>$INFO[ListItem.Icon]</texture>
+							<aspectratio>keep</aspectratio>
+						</control>
+						<control type="label" id="1">
+							<left>88</left>
+							<width>180</width>
+							<height>40</height>
+							<aligny>center</aligny>
+							<selectedcolor>selected</selectedcolor>
+							<textcolor>black</textcolor>
+							<align>left</align>
+							<label>$INFO[ListItem.ChannelName]</label>
+						</control>
+					</focusedchannellayout>
+					<itemlayout height="48" width="40">
+						<control type="image" id="2">
+							<width>40</width>
+							<height>40</height>
+							<aspectratio>stretch</aspectratio>
+							<texture border="3">epg-genres/$INFO[ListItem.Property(GenreType)].png</texture>
+						</control>
+						<control type="label" id="1">
+							<left>10</left>
+							<width>20</width>
+							<height>40</height>
+							<aligny>center</aligny>
+							<textcolor>white</textcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<info>ListItem.Label</info>
+						</control>
+						<control type="image">
+							<left>6</left>
+							<top>28</top>
+							<width>24</width>
+							<height>16</height>
+							<texture>PVR-IsRecording.png</texture>
+							<visible>ListItem.IsRecording</visible>
+						</control>
+						<control type="image">
+							<left>6</left>
+							<top>28</top>
+							<width>16</width>
+							<height>16</height>
+							<texture>PVR-HasTimer.png</texture>
+							<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
+						</control>
+						<control type="image">
+							<left>6</left>
+							<top>28</top>
+							<width>16</width>
+							<height>16</height>
+							<texture>PVR-HasRecording.png</texture>
+							<visible>ListItem.HasRecording + !ListItem.IsRecording + !ListItem.HasTimer</visible>
+						</control>
+					</itemlayout>
+					<focusedlayout height="48" width="40">
+						<control type="image" id="14">
+							<width>40</width>
+							<height>40</height>
+							<texture border="20" colordiffuse="green">white.png</texture>
+						</control>
+						<control type="image" id="2">
+							<width>40</width>
+							<height>40</height>
+							<aspectratio>stretch</aspectratio>
+							<texture border="3">epg-genres/$INFO[ListItem.Property(GenreType)].png</texture>
+						</control>
+						<control type="label" id="1">
+							<left>10</left>
+							<width>20</width>
+							<height>40</height>
+							<aligny>center</aligny>
+							<textcolor>black</textcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<info>ListItem.Label</info>
+						</control>
+						<control type="image">
+							<left>6</left>
+							<top>28</top>
+							<width>24</width>
+							<height>16</height>
+							<texture>PVR-IsRecording.png</texture>
+							<visible>ListItem.IsRecording</visible>
+						</control>
+						<control type="image">
+							<left>6</left>
+							<top>28</top>
+							<width>16</width>
+							<height>16</height>
+							<texture>PVR-HasTimer.png</texture>
+							<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
+						</control>
+						<control type="image">
+							<left>6</left>
+							<top>28</top>
+							<width>16</width>
+							<height>16</height>
+							<texture>PVR-HasRecording.png</texture>
+							<visible>ListItem.HasRecording + !ListItem.IsRecording + !ListItem.HasTimer</visible>
+						</control>
+					</focusedlayout>
 				</control>
-				<control type="label">
-					<left>280</left>
-					<top>0</top>
-					<width>700</width>
-					<height>20</height>
-					<label>$INFO[ListItem.Label]$INFO[ListItem.EpisodeName, (,)]</label>
-					<textcolor>white</textcolor>
-				</control>
-				<control type="label">
-					<left>280</left>
-					<top>25</top>
-					<width>700</width>
-					<height>20</height>
-					<label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ]$INFO[ListItem.Season, • $LOCALIZE[20373] ]$INFO[ListItem.Episode, • $LOCALIZE[20359] ]$INFO[ListItem.Genre, • ]</label>
-					<textcolor>grey</textcolor>
-				</control>
-				<control type="textbox">
-					<description>Plot value</description>
-					<left>280</left>
-					<top>57</top>
-					<width>700</width>
-					<height>63</height>
-					<align>justify</align>
-					<textcolor>grey</textcolor>
-					<autoscroll delay="10000" time="3000" repeat="6000">true</autoscroll>
-					<label>$INFO[ListItem.Plot]</label>
-				</control>
+			</control>
+
+		</control>
+		<control type="group">
+			<visible>!IsEmpty(ListItem.Label)</visible>
+			<left>130</left>
+			<top>70</top>
+			 <control type="image">
+                <top>16</top>
+                <width>400</width>
+                <height>130</height>
+                <aspectratio scalediffuse="false">keep</aspectratio>
+                <texture  background="true" >$INFO[ListItem.Icon]</texture>
+                <visible>!Player.HasVideo</visible>
+            </control>
+			<control type="videowindow">
+                <top>6</top>
+                <width>400</width>
+                <height>130</height>
+                <visible>Player.HasVideo</visible>
+                <animation effect="slide" start="0,0" end="-2000,0" time="0">WindowClose</animation>
+            </control>
+			<control type="label">
+				<top>20</top>
+				<left>360</left>
+				<width>700</width>
+				<height>20</height>
+				<label>$INFO[ListItem.Label]$INFO[ListItem.EpisodeName, (,)]</label>
+				<textcolor>white</textcolor>
+			</control>
+			<control type="label">
+				<left>360</left>
+				<top>45</top>
+				<width>700</width>
+				<height>20</height>
+				<label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ]$INFO[ListItem.Season, • $LOCALIZE[20373] ]$INFO[ListItem.Episode, • $LOCALIZE[20359] ]$INFO[ListItem.Genre, • ]</label>
+				<textcolor>grey</textcolor>
+			</control>
+			<control type="textbox">
+				<description>Plot value</description>
+				<left>360</left>
+				<top>77</top>
+				<width>700</width>
+				<height>63</height>
+				<align>justify</align>
+				<textcolor>grey</textcolor>
+				<autoscroll delay="10000" time="3000" repeat="6000">true</autoscroll>
+				<label>$INFO[ListItem.Plot]</label>
 			</control>
 		</control>
- 		</control>
 	</controls>
 </window>

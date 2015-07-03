@@ -23,7 +23,7 @@
 					<scrolltime>350</scrolltime>
 					<timeblocks>40</timeblocks>
 					<rulerunit>6</rulerunit>
-					<progresstexture border="0,48,18,14">PVR-EpgProgressIndicator.png</progresstexture>
+					<progresstexture border="5,48,14,5">PVR-EpgProgressIndicator.png</progresstexture>
 					<onleft>101</onleft>
 					<onright>101</onright>
 					<onup>101</onup>

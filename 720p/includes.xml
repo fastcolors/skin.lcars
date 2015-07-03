@@ -326,8 +326,9 @@
                 <height>280</height>
                 <pagecontrol>60</pagecontrol>
                 <ondown>60</ondown>
+                <include>squareshome</include>
                 <orientation>horizontal</orientation>
-                <itemlayout width="180" height="280">
+                <!--itemlayout width="180" height="280">
                     <control type="image">
                         <left>10</left>
                         <top>4</top>
@@ -347,7 +348,7 @@
                         <bordertexture colordiffuse="red">white.png</bordertexture>
                         <bordersize>4</bordersize>
                     </control>
-                </focusedlayout>
+                </focusedlayout-->
                 <content>
                     <item id="1" description="Episodes1">
                         <visible>!IsEmpty(Window(Home).Property(NextAired.1.NextTitle))</visible>
@@ -1170,7 +1171,7 @@
     </include>
 
     <include name="osdbutt">
-        <texturenofocus colordiffuse="55ffffff" border="20">white.png</texturenofocus>
+        <texturenofocus colordiffuse="osd" border="20">white.png</texturenofocus>
         <texturefocus colordiffuse="green" border="20">white.png</texturefocus>
         <textoffsety>8</textoffsety>
         <align>center</align>
@@ -1215,15 +1216,15 @@
                 <onclick condition="!IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioChannels)</onclick>
             </control>
             <control type="button" id="101">
-                <description>TV Guide</description>
-                <visible>![Window.IsActive(TVGuide) | Window.IsActive(RadioGuide)]</visible>
-                <textwidth>235</textwidth>
-                <include>9000butts</include>
-                <label>22020</label>
-                <onclick condition="Window.IsActive(TVGuide) | Window.IsActive(RadioGuide)">NextChannelGroup</onclick>
-                <onclick condition="IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVGuide)</onclick>
-                <onclick condition="!IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioGuide)</onclick>
-            </control>
++                <description>TV Guide</description>
++                <visible>![Window.IsActive(TVGuide) | Window.IsActive(RadioGuide)]</visible>
++                <textwidth>235</textwidth>
++                <include>9000butts</include>
++                <label>22020</label>
++                <onclick condition="Window.IsActive(TVGuide) | Window.IsActive(RadioGuide)">NextChannelGroup</onclick>
++                <onclick condition="IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVGuide)</onclick>
++                <onclick condition="!IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioGuide)</onclick>
++            </control>
             <control type="button" id="102">
                 <description>Recordings</description>
                 <visible>![Window.IsActive(TVRecordings) | Window.IsActive(RadioRecordings)]</visible><textwidth>235</textwidth>

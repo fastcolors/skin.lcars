@@ -12,7 +12,7 @@
         <control type="image">
             <width>1280</width>
             <height>720</height>
-            <texture>osb.png</texture>
+            <texture colordiffuse="osd">osb.png</texture>
         </control>
         <control type="group">
             <description>PROGRESS</description>
@@ -21,11 +21,13 @@
             <control type="progress" description="Cache Progress">
                 <centerleft>640</centerleft>
                 <width>1100</width>
+                <colordiffuse>black</colordiffuse>
                 <height>14</height>
                 <info>Player.ProgressCache</info>
             </control>
             <control type="progress" id="23" description="Progress Bar">
                 <centerleft>640</centerleft>
+                <colordiffuse>black</colordiffuse>
                 <width>1100</width>
                 <height>14</height>
                 <info>Player.Progress</info>

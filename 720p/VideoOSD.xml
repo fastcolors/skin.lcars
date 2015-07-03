@@ -179,7 +179,7 @@
                 <align>left</align>
                 <orientation>horizontal</orientation>
                 <control type="button" id="1">
-                    <texturenofocus colordiffuse="55ffffff"  flipx="true" border="20">whiterounded.png</texturenofocus>
+                    <texturenofocus colordiffuse="osd"  flipx="true" border="20">whiterounded.png</texturenofocus>
                     <texturefocus colordiffuse="green"  flipx="true" border="20">whiterounded.png</texturefocus>
                     <include>osdbutt</include>
                     <label>PREV</label>
@@ -196,7 +196,7 @@
                     <usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
                     <include>osdbutt</include>
                     <label>PAUSE</label>
-                    <alttexturenofocus colordiffuse="5566A7FF" border="20">white.png</alttexturenofocus>
+                    <alttexturenofocus colordiffuse="blue" border="20">white.png</alttexturenofocus>
                     <alttexturefocus colordiffuse="green" border="20">white.png</alttexturefocus>
                     <altlabel>PLAY</altlabel>
                     <onclick>PlayerControl(Play)</onclick>
@@ -242,7 +242,7 @@
                     <onclick>SetFocus(101)</onclick>
                 </control>
 				<control type="button" id="6">
-                    <texturenofocus colordiffuse="55ffffff" border="20">whiterounded.png</texturenofocus>
+                    <texturenofocus colordiffuse="osd" border="20">whiterounded.png</texturenofocus>
                     <texturefocus colordiffuse="green" border="20">whiterounded.png</texturefocus>
                     <include>osdbutt</include>
                     <label>NEXT</label>

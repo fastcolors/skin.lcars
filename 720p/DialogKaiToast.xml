@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<animation effect="fade" start="0" end="100" time="200">WindowOpen</animation>
-	<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
-	<controls>
+	<visible>![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks) | Window.IsActive(script-XBMC-Subtitles-main.xml)]</visible>
+    <visible>![Window.IsVisible(FullScreenVideo) + [Window.IsActive(videoosd.xml) | Player.Seeking | Player.DisplayAfterSeek | Player.Forwarding | Player.Rewinding | Player.Caching | Player.Paused]]</visible>
+    <controls>
 		<control type="group">
             <left>665</left>
             <top>669</top>

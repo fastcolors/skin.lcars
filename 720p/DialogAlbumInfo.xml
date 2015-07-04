@@ -13,12 +13,11 @@
 				<width>1100</width>
 				<height>720</height>
 				<texture border="130">Dialog.png</texture>
-				
 			</control>
 			<control type="button">
 				<description>Close Window button</description>
-				<left>230</left>
-				<top>0</top>
+				<left>220</left>
+				<top>30</top>
 				<width>30</width>
 				<height>30</height>
 				<label>-</label>
@@ -67,7 +66,6 @@
 					<visible>Control.HasFocus(12)</visible>
 					<top>90</top>
 					<left>387</left>
-					<include>VisibleFadeEffect</include>
 					<control type="image">
 						<description>Current Fanart image</description>
 						<left>0</left>
@@ -112,34 +110,37 @@
 					<visible>container.content(Albums) + !Control.HasFocus(12)</visible>
 					<top>90</top>
 					<left>210</left>
-					<include>VisibleFadeEffect</include>
 					<control type="image">
 						<left>0</left>
 						<top>0</top>
 						<width>380</width>
 						<height>360</height>
 						<aspectratio>keep</aspectratio>
-						<bordertexture border="5">button-nofocus.png</bordertexture>
+						<bordertexture border="5">white.png</bordertexture>
 						<bordersize>4</bordersize>
 						<texture background="true">$INFO[ListItem.Icon]</texture>
 					</control>
 					<control type="list" id="49">
-						<left>390</left>
+						<left>170</left>
+						<top>430</top>
+						<width>860</width>
+						<height>120</height>
+						<!--left>390</left>
 						<top>20</top>
-						<width>640</width>
-						<height>330</height>
+						<width>920</width>
+						<height>130</height-->
 						<onleft>49</onleft>
 						<onright>49</onright>
 						<onup>9000</onup>
 						<ondown>61</ondown>
 						<pagecontrol>-</pagecontrol>
 						<scrolltime>200</scrolltime>
-						<itemlayout height="30">
+						<orientation>vertical</orientation>
+						<itemlayout height="20"  width="455">
 							<control type="label">
-								<left>140</left>
 								<top>0</top>
-								<width>160</width>
-								<height>30</height>
+								<width>100</width>
+								<height>20</height>
 								<font>font13</font>
 								<align>right</align>
 								<aligny>center</aligny>
@@ -148,10 +149,10 @@
 								<info>ListItem.Label</info>
 							</control>
 							<control type="label">
-								<left>150</left>
+								<left>105</left>
 								<top>0</top>
-								<width>500</width>
-								<height>30</height>
+								<width>340</width>
+								<height>20</height>
 								<font>font13</font>
 								<align>left</align>
 								<aligny>center</aligny>
@@ -160,21 +161,11 @@
 								<info>ListItem.Label2</info>
 							</control>
 						</itemlayout>
-						<focusedlayout height="30">
-							<control type="image">
-								<left>0</left>
-								<top>0</top>
-								<width>640</width>
-								<height>30</height>
-								<visible>Control.HasFocus(49)</visible>
-								<texture>MenuItemFO.png</texture>
-								<include>VisibleFadeEffect</include>
-							</control>
+						<focusedlayout height="20"  width="455">
 							<control type="label">
-								<left>140</left>
 								<top>0</top>
-								<width>160</width>
-								<height>30</height>
+								<width>100</width>
+								<height>20</height>
 								<font>font13</font>
 								<align>right</align>
 								<aligny>center</aligny>
@@ -183,10 +174,10 @@
 								<info>ListItem.Label</info>
 							</control>
 							<control type="label">
-								<left>150</left>
+								<left>105</left>
 								<top>0</top>
-								<width>500</width>
-								<height>30</height>
+								<width>340</width>
+								<height>20</height>
 								<font>font13</font>
 								<align>left</align>
 								<aligny>center</aligny>
@@ -252,47 +243,52 @@
 							</item>
 						</content>
 					</control>
-					<control type="image">
-						<left>390</left>
-						<top>370</top>
-						<width>640</width>
-						<height>4</height>
-						<aspectratio>stretch</aspectratio>
-						<texture>separator.png</texture>
-					</control>
 				</control>
 				<control type="group">
 					<visible>container.content(Artists) + !Control.HasFocus(12)</visible>
 					<top>90</top>
 					<left>210</left>
-					<include>VisibleFadeEffect</include>
 					<control type="image">
-						<left>0</left>
+						<visible>!Control.IsVisible(50)</visible><left>0</left>
 						<top>0</top>
 						<width>380</width>
 						<height>360</height>
 						<aspectratio>keep</aspectratio>
-						<bordertexture border="5">button-nofocus.png</bordertexture>
+						<bordertexture border="5">white.png</bordertexture>
 						<bordersize>4</bordersize>
 						<texture background="true">$INFO[ListItem.Icon]</texture>
 					</control>
+					<control type="image">
+						<visible>container.content(Artists) + Control.IsVisible(50)</visible><left>0</left>
+						<top>0</top>
+						<width>380</width>
+						<height>360</height>
+						<aspectratio>keep</aspectratio>
+						<bordertexture border="5">white.png</bordertexture>
+						<bordersize>4</bordersize>
+						<texture background="true">$INFO[Container(50).Listitem.Icon]</texture>
+					</control>
 					<control type="list" id="49">
-						<left>390</left>
+						<left>170</left>
+						<top>430</top>
+						<width>860</width>
+						<height>120</height>
+						<!--left>390</left>
 						<top>20</top>
-						<width>640</width>
-						<height>330</height>
+						<width>920</width>
+						<height>130</height-->
 						<onleft>49</onleft>
 						<onright>49</onright>
 						<onup>9000</onup>
 						<ondown>61</ondown>
 						<pagecontrol>-</pagecontrol>
 						<scrolltime>200</scrolltime>
-						<itemlayout height="30">
+						<orientation>vertical</orientation>
+						<itemlayout height="20"  width="455">
 							<control type="label">
-								<left>165</left>
 								<top>0</top>
-								<width>160</width>
-								<height>30</height>
+								<width>100</width>
+								<height>20</height>
 								<font>font13</font>
 								<align>right</align>
 								<aligny>center</aligny>
@@ -301,10 +297,10 @@
 								<info>ListItem.Label</info>
 							</control>
 							<control type="label">
-								<left>175</left>
+								<left>105</left>
 								<top>0</top>
-								<width>465</width>
-								<height>30</height>
+								<width>340</width>
+								<height>20</height>
 								<font>font13</font>
 								<align>left</align>
 								<aligny>center</aligny>
@@ -313,21 +309,11 @@
 								<info>ListItem.Label2</info>
 							</control>
 						</itemlayout>
-						<focusedlayout height="30">
-							<control type="image">
-								<left>0</left>
-								<top>0</top>
-								<width>640</width>
-								<height>30</height>
-								<visible>Control.HasFocus(49)</visible>
-								<texture>MenuItemFO.png</texture>
-								<include>VisibleFadeEffect</include>
-							</control>
+						<focusedlayout height="20"  width="455">
 							<control type="label">
-								<left>165</left>
 								<top>0</top>
-								<width>160</width>
-								<height>30</height>
+								<width>100</width>
+								<height>20</height>
 								<font>font13</font>
 								<align>right</align>
 								<aligny>center</aligny>
@@ -336,10 +322,10 @@
 								<info>ListItem.Label</info>
 							</control>
 							<control type="label">
-								<left>175</left>
+								<left>105</left>
 								<top>0</top>
-								<width>465</width>
-								<height>30</height>
+								<width>340</width>
+								<height>20</height>
 								<font>font13</font>
 								<align>left</align>
 								<aligny>center</aligny>
@@ -405,14 +391,6 @@
 							</item>
 						</content>
 					</control>
-					<control type="image">
-						<left>390</left>
-						<top>370</top>
-						<width>640</width>
-						<height>4</height>
-						<aspectratio>stretch</aspectratio>
-						<texture>separator.png</texture>
-					</control>
 				</control>
 				<control type="label">
 					<right>130</right>
@@ -471,10 +449,14 @@
 				</control>
 				<control type="textbox" id="4">
 					<description>Description</description>
-					<left>210</left>
+					<left>600</left>
+					<top>100</top>
+					<width>600</width>
+					<height>330</height>
+					<!--left>210</left>
 					<top>515</top>
 					<width>1030</width>
-					<height>124</height>
+					<height>124</height-->
 					<font>font13</font>
 					<align>justify</align>
 					<textcolor>white</textcolor>
@@ -482,21 +464,15 @@
 					<autoscroll time="3000" delay="4000" repeat="5000">!Control.HasFocus(61) + Skin.HasSetting(AutoScroll)</autoscroll>
 					<visible>!Control.IsVisible(50)</visible>
 				</control>
-				<control type="image">
-					<description>Actor image</description>
-					<left>210</left>
-					<top>480</top>
-					<width>160</width>
-					<height>160</height>
-					<texture fallback="DefaultAlbumCover.png">$INFO[Container(50).Listitem.Icon]</texture>
-					<aspectratio>keep</aspectratio>
-					<visible>Control.IsVisible(50)</visible>
-				</control>
 				<control type="panel" id="50">
-					<left>380</left>
+					<left>700</left>
+					<top>100</top>
+					<width>440</width>
+					<height>330</height>
+					<!--left>380</left>
 					<top>520</top>
 					<width>860</width>
-					<height>120</height>
+					<height>120</height-->
 					<onleft>9000</onleft>
 					<onright>61</onright>
 					<onup>61</onup>
@@ -506,32 +482,27 @@
 					<scrolltime>200</scrolltime>
 					<orientation>vertical</orientation>
 					<itemlayout condition="Container.Content(Albums)" height="40" width="430">
-						<control type="image">
-							<left>0</left>
-							<top>0</top>
-							<width>430</width>
-							<height>40</height>
-							<texture border="5">button-nofocus.png</texture>
-						</control>
 						<control type="label">
-							<left>10</left>
+							<left>5</left>
 							<top>0</top>
-							<width>410</width>
+							<width>345</width>
 							<height>40</height>
 							<font>font12</font>
+							<textcolor>white</textcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<selectedcolor>selected</selectedcolor>
 							<label>([COLOR=selected][B]$INFO[ListItem.TrackNumber][/B][/COLOR]) - $INFO[ListItem.Label]</label>
 						</control>
 						<control type="label">
-							<left>420</left>
+							<left>360</left>
 							<top>0</top>
-							<width>200</width>
+							<width>60</width>
 							<height>40</height>
 							<font>font12</font>
 							<align>right</align>
 							<aligny>center</aligny>
+							<textcolor>white</textcolor>
 							<selectedcolor>selected</selectedcolor>
 							<label>$INFO[ListItem.Duration]</label>
 						</control>
@@ -543,7 +514,7 @@
 							<width>430</width>
 							<height>40</height>
 							<visible>!Control.HasFocus(50)</visible>
-							<texture border="5">button-nofocus.png</texture>
+							<texture border="5">menuitemfo.png</texture>
 						</control>
 						<control type="image">
 							<left>0</left>
@@ -551,25 +522,27 @@
 							<width>430</width>
 							<height>40</height>
 							<visible>Control.HasFocus(50)</visible>
-							<texture border="5">button-focus2.png</texture>
+							<texture border="5">menuitemfo.png</texture>
 						</control>
 						<control type="label">
-							<left>10</left>
+							<left>5</left>
 							<top>0</top>
-							<width>410</width>
+							<width>345</width>
 							<height>40</height>
 							<font>font12</font>
+							<textcolor>white</textcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<selectedcolor>selected</selectedcolor>
 							<label>([COLOR=selected][B]$INFO[ListItem.TrackNumber][/B][/COLOR]) - $INFO[ListItem.Label]</label>
 						</control>
 						<control type="label">
-							<left>420</left>
+							<left>360</left>
 							<top>0</top>
-							<width>200</width>
+							<width>60</width>
 							<height>40</height>
 							<font>font12</font>
+							<textcolor>white</textcolor>
 							<align>right</align>
 							<aligny>center</aligny>
 							<selectedcolor>selected</selectedcolor>
@@ -577,13 +550,6 @@
 						</control>
 					</focusedlayout>
 					<itemlayout condition="Container.Content(Artists)" height="40" width="430">
-						<control type="image">
-							<left>0</left>
-							<top>0</top>
-							<width>430</width>
-							<height>40</height>
-							<texture border="5">button-nofocus.png</texture>
-						</control>
 						<control type="label">
 							<left>10</left>
 							<top>0</top>
@@ -592,6 +558,7 @@
 							<font>font12</font>
 							<align>left</align>
 							<aligny>center</aligny>
+							<textcolor>white</textcolor>
 							<selectedcolor>selected</selectedcolor>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
@@ -603,7 +570,7 @@
 							<width>430</width>
 							<height>40</height>
 							<visible>!Control.HasFocus(50)</visible>
-							<texture border="5">button-nofocus.png</texture>
+							<texture border="5">menuitemfo.png</texture>
 						</control>
 						<control type="image">
 							<left>0</left>
@@ -611,7 +578,7 @@
 							<width>430</width>
 							<height>40</height>
 							<visible>Control.HasFocus(50)</visible>
-							<texture border="5">button-focus2.png</texture>
+							<texture border="5">menuitemfo.png</texture>
 						</control>
 						<control type="label">
 							<left>10</left>
@@ -621,6 +588,7 @@
 							<font>font12</font>
 							<align>left</align>
 							<aligny>center</aligny>
+							<textcolor>white</textcolor>
 							<selectedcolor>selected</selectedcolor>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
@@ -640,27 +608,42 @@
 					<ondown>49</ondown>
 					<control type="button" id="5">
 						<description>Cast/Review</description>
-						<include>ButtonInfoDialogsCommonValues</include>
+						<width>150</width>
+						<texturenofocus colordiffuse="design"  flipx="true" border="20">whiterounded.png</texturenofocus>
+						<texturefocus colordiffuse="green"  flipx="true" border="20">whiterounded.png</texturefocus>
+						<align>center</align>
+						<aligny>center</aligny>
 						<label>206</label>
 					</control>
 					<control type="button" id="6">
 						<description>Refresh</description>
-						<include>ButtonInfoDialogsCommonValues</include>
+						<width>150</width>
+						<texturenofocus colordiffuse="design" border="20">white.png</texturenofocus>
+						<texturefocus colordiffuse="green" border="20">white.png</texturefocus>
+						<align>center</align>
+						<aligny>center</aligny>
 						<label>184</label>
 					</control>
 					<control type="button" id="10">
 						<description>Get Thumb</description>
-						<include>ButtonInfoDialogsCommonValues</include>
+						<width>150</width>
+						<texturenofocus colordiffuse="design" border="20">white.png</texturenofocus>
+						<texturefocus colordiffuse="green" border="20">white.png</texturefocus>
+						<align>center</align>
+						<aligny>center</aligny>
 						<label>13405</label>
 					</control>
 					<control type="button" id="12">
 						<description>Get Fanart</description>
-						<include>ButtonInfoDialogsCommonValues</include>
+						<width>150</width>
+						<texturenofocus colordiffuse="design" border="20">whiterounded.png</texturenofocus>
+						<texturefocus colordiffuse="green" border="20">whiterounded.png</texturefocus>
+						<align>center</align>
+						<aligny>center</aligny>
 						<label>20413</label>
 					</control>
 				</control>
 			</control>
 		</control>
-		<include>Clock</include>
 	</controls>
 </window>

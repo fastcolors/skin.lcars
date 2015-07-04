@@ -81,7 +81,7 @@
 								<font>font13</font>
 								<align>right</align>
 								<aligny>center</aligny>
-								<textcolor>darkblue</textcolor>
+								<textcolor>blue</textcolor>
 								<selectedcolor>selected</selectedcolor>
 								<info>ListItem.Label</info>
 							</control>
@@ -106,7 +106,7 @@
 								<font>font13</font>
 								<align>right</align>
 								<aligny>center</aligny>
-								<textcolor>darkblue</textcolor>
+								<textcolor>blue</textcolor>
 								<selectedcolor>selected</selectedcolor>
 								<info>ListItem.Label</info>
 							</control>
@@ -114,7 +114,7 @@
 								<left>105</left>
 								<top>0</top>
 								<width>340</width>
-								<height>46</height>
+								<height>20</height>
 								<font>font13</font>
 								<align>left</align>
 								<aligny>center</aligny>
@@ -211,7 +211,7 @@
 								<font>font13</font>
 								<align>right</align>
 								<aligny>center</aligny>
-								<textcolor>darkblue</textcolor>
+								<textcolor>blue</textcolor>
 								<selectedcolor>selected</selectedcolor>
 								<info>ListItem.Label</info>
 							</control>
@@ -236,7 +236,7 @@
 								<font>font13</font>
 								<align>right</align>
 								<aligny>center</aligny>
-								<textcolor>darkblue</textcolor>
+								<textcolor>blue</textcolor>
 								<selectedcolor>selected</selectedcolor>
 								<info>ListItem.Label</info>
 							</control>
@@ -244,7 +244,7 @@
 								<left>105</left>
 								<top>0</top>
 								<width>340</width>
-								<height>46</height>
+								<height>20</height>
 								<font>font13</font>
 								<align>left</align>
 								<aligny>center</aligny>
@@ -311,7 +311,7 @@
 								<font>font13</font>
 								<align>right</align>
 								<aligny>center</aligny>
-								<textcolor>darkblue</textcolor>
+								<textcolor>blue</textcolor>
 								<selectedcolor>selected</selectedcolor>
 								<info>ListItem.Label</info>
 							</control>
@@ -336,7 +336,7 @@
 								<font>font13</font>
 								<align>right</align>
 								<aligny>center</aligny>
-								<textcolor>darkblue</textcolor>
+								<textcolor>blue</textcolor>
 								<selectedcolor>selected</selectedcolor>
 								<info>ListItem.Label</info>
 							</control>
@@ -344,7 +344,7 @@
 								<left>105</left>
 								<top>0</top>
 								<width>340</width>
-								<height>46</height>
+								<height>20</height>
 								<font>font13</font>
 								<align>left</align>
 								<aligny>center</aligny>
@@ -446,7 +446,7 @@
 								<font>font13</font>
 								<align>right</align>
 								<aligny>center</aligny>
-								<textcolor>darkblue</textcolor>
+								<textcolor>blue</textcolor>
 								<selectedcolor>selected</selectedcolor>
 								<info>ListItem.Label</info>
 							</control>
@@ -471,7 +471,7 @@
 								<font>font13</font>
 								<align>right</align>
 								<aligny>center</aligny>
-								<textcolor>darkblue</textcolor>
+								<textcolor>blue</textcolor>
 								<selectedcolor>selected</selectedcolor>
 								<info>ListItem.Label</info>
 							</control>
@@ -479,7 +479,7 @@
 								<left>105</left>
 								<top>0</top>
 								<width>340</width>
-								<height>46</height>
+								<height>20</height>
 								<font>font13</font>
 								<align>left</align>
 								<aligny>center</aligny>

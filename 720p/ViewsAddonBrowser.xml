@@ -15,46 +15,66 @@
             <left>200</left>
             <width>1045</width>
             <height>520</height>
-            <itemlayout width="260" height="260">
+            <itemlayout width="510" height="260">
                 <control type="image">
-                    <left>10</left>
-                    <top>4</top>
-                    <width>250</width>
+                    <left>0</left>
+                    <top>0</top>
+                    <width>500</width>
                     <height>250</height>
                     <aspectratio>stretch</aspectratio>
-                    <texture>$VAR[poster]</texture>
+                    <texture>dialog.png</texture>
+                </control>
+                <control type="image">
+                    <left>20</left>
+                    <top>20</top>
+                    <width>230</width>
+                    <height>210</height>
+                    <bordertexture >white.png</bordertexture>
+                    <bordersize>4</bordersize>
+					<aspectratio>stretch</aspectratio>
+                    <texture fallback="posterfallback.png">$VAR[poster]</texture>
                 </control>
                 <control type="textbox">
-                    <top>10</top>
-                    <right>10</right>
+                    <top>20</top>
+                    <right>25</right>
                     <align>right</align>
                     <font>font30</font>
-                    <width>240</width>
+                    <width>225</width>
                     <textcolor>yellow</textcolor>
                     <shadowcolor>88000000</shadowcolor>
                     <label>$INFO[ListItem.Label] [CR]$INFO[ListItem.Label2] </label>
                 </control>
             </itemlayout>
-            <focusedlayout width="260" height="260">
+            <focusedlayout width="510" height="260">
                 <control type="image">
-                    <left>6</left>
-                    <width>258</width>
-                    <height>258</height>
+                    <left>0</left>
+                    <top>0</top>
+                    <width>500</width>
+                    <height>250</height>
                     <aspectratio>stretch</aspectratio>
-                    <texture>$VAR[poster]</texture>
+                    <texture>dialog.png</texture>
+                </control>
+				<control type="image">
+                    <left>20</left>
+                    <top>20</top>
+                    <width>230</width>
+                    <height>210</height>
+                    <aspectratio>stretch</aspectratio>
                     <bordertexture colordiffuse="red">white.png</bordertexture>
                     <bordersize>4</bordersize>
+					<texture fallback="posterfallback.png">$VAR[poster]</texture>
                 </control>
                 <control type="textbox">
-                    <top>10</top>
-                    <right>10</right>
+                    <top>20</top>
+                    <right>25</right>
                     <align>right</align>
                     <font>font30</font>
-                    <width>240</width>
+                    <width>225</width>
                     <textcolor>yellow</textcolor>
                     <shadowcolor>88000000</shadowcolor>
                     <label>$INFO[ListItem.Label] [CR]$INFO[ListItem.Label2] </label>
                 </control>
+				
 
             </focusedlayout>
         </control>

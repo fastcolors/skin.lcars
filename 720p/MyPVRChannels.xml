@@ -124,7 +124,7 @@
                 <scroll>false</scroll>
                 <align>left</align>
                 <visible>Container(50).ListItem.HasEpg</visible>
-                <label>$INFO[Container(50).ListItem.StartTime] • [COLOR=red]$INFO[Container(50).ListItem.Title][/COLOR]</label>
+                <label>$INFO[Container(50).ListItem.StartTime] • [COLOR=red]$INFO[Container(50).ListItem.Title][/COLOR] $INFO[Container(50).ListItem.EpisodeName, (,)]</label>
             </control>
             <control type="progress">
                 <description>Progressbar</description>

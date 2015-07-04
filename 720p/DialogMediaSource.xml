@@ -13,13 +13,13 @@
         <control type="label" id="2">
             <description>header label</description>
             <centerleft>640</centerleft>
-            <top>110</top>
+            <top>120</top>
             <width>720</width>
             <height>30</height>
             <label>$LOCALIZE[13406]</label>
             <align>center</align>
             <aligny>center</aligny>
-            <textcolor>darkblue</textcolor>
+            <textcolor>blue</textcolor>
         </control>
         <control type="label">
             <description>path label</description>
@@ -31,7 +31,14 @@
             <aligny>center</aligny>
             <label>1021</label>
             <font>13</font>
-            <textcolor>black</textcolor>
+            <textcolor>white</textcolor>
+        </control>
+        <control type="image">
+            <left>330</left>
+            <top>200</top>
+            <width>500</width>
+            <height>40</height>
+            <texture colordiffuse="osd" border="20">whiteallrounded.png</texture>
         </control>
         <control type="list" id="10">
             <left>330</left>
@@ -45,6 +52,10 @@
             <pagecontrol>60</pagecontrol>
             <scrolltime>200</scrolltime>
             <itemlayout height="45">
+                <control type="image">
+                    <width>500</width>
+                    <height>40</height>
+                </control>
                 <control type="label">
                     <left>10</left>
                     <width>480</width>
@@ -52,23 +63,24 @@
                     <font>font13</font>
                     <align>left</align>
                     <aligny>center</aligny>
-                    <textcolor>grey2</textcolor>
-                    <selectedcolor>selected</selectedcolor>
+                    <selectedcolor>black</selectedcolor>
+                    <textcolor>black</textcolor>
                     <info>ListItem.Label</info>
                 </control>
             </itemlayout>
             <focusedlayout height="45">
                 <control type="image">
-                    <width>500</width>
-                    <height>41</height>
                     <visible>Control.HasFocus(10)</visible>
-                    <texture colordiffuse="blue" border="20">whiteallrounded.png</texture>
+                    <width>500</width>
+                    <height>40</height>
+                    <texture colordiffuse="green" border="20">whiteallrounded.png</texture>
                 </control>
                 <control type="label">
                     <left>10</left>
                     <width>480</width>
                     <height>40</height>
                     <font>font13</font>
+					<textcolor>black</textcolor>
                     <align>left</align>
                     <aligny>center</aligny>
                     <selectedcolor>selected</selectedcolor>
@@ -99,8 +111,6 @@
                 <align>center</align>
                 <aligny>center</aligny>
                 <font>font12</font>
-                <texturenofocus colordiffuse="44000000" border="20">whiteallrounded.png</texturenofocus>
-                <texturefocus colordiffuse="blue" border="20">whiteallrounded.png</texturefocus>
                 <onup>18</onup>
                 <onleft>60</onleft>
                 <onright>10</onright>
@@ -114,8 +124,6 @@
                 <height>40</height>
                 <label>15019</label>
                 <font>font12</font>
-                <texturenofocus colordiffuse="44000000" border="20">whiteallrounded.png</texturenofocus>
-                <texturefocus colordiffuse="blue" border="20">whiteallrounded.png</texturefocus>
                 <align>center</align>
                 <aligny>center</aligny>
                 <onup>11</onup>
@@ -131,8 +139,6 @@
                 <height>40</height>
                 <label>1210</label>
                 <font>font12</font>
-                <texturenofocus colordiffuse="44000000" border="20">whiteallrounded.png</texturenofocus>
-                <texturefocus colordiffuse="blue" border="20">whiteallrounded.png</texturefocus>
                 <align>center</align>
                 <aligny>center</aligny>
                 <onup>13</onup>
@@ -141,34 +147,37 @@
                 <ondown>12</ondown>
             </control>
         </control>
-        <control type="label">
-            <description>Name label</description>
-            <centerleft>640</centerleft>
-            <top>420</top>
-            <width>740</width>
-            <height>30</height>
-            <align>center</align>
-            <aligny>center</aligny>
-            <font>font13</font>
-            <label>1022</label>
-        </control>
         <control type="button" id="12">
             <description>Name Button</description>
             <centerleft>640</centerleft>
             <top>450</top>
             <width>640</width>
             <height>40</height>
+            <textcolor>black</textcolor>
+            <focusedcolor>black</focusedcolor>
+            <texturefocus colordiffuse="green" border="20">whiteallrounded.png</texturefocus>
+            <texturenofocus colordiffuse="osd" border="20">whiteallrounded.png</texturenofocus>
             <align>center</align>
             <aligny>center</aligny>
             <label>-</label>
             <font>font13</font>
-            <texturenofocus colordiffuse="44000000" border="20">whiteallrounded.png</texturenofocus>
-            <texturefocus colordiffuse="blue" border="20">whiteallrounded.png</texturefocus>
             <onup>10</onup>
             <onleft>12</onleft>
             <onright>19</onright>
             <ondown>9001</ondown>
         </control>
+        <!--control type="label">
+            <description>Name label</description>
+            <centerleft>640</centerleft>
+            <top>420</top>
+            <width>630</width>
+            <height>30</height>
+            <align>center</align>
+            <textcolor>white</textcolor>
+            <aligny>center</aligny>
+            <font>font13</font>
+            <label>1022</label>
+        </control-->
         <control type="grouplist" id="9001">
             <centerleft>640</centerleft>
             <top>550</top>
@@ -182,8 +191,6 @@
                 <height>40</height>
                 <align>center</align>
                 <aligny>center</aligny>
-                <texturenofocus colordiffuse="44000000" border="20">whiteallrounded.png</texturenofocus>
-                <texturefocus colordiffuse="blue" border="20">whiteallrounded.png</texturefocus>
                 <label>186</label>
                 <font>font12_title</font>
                 <onup>12</onup>
@@ -199,8 +206,6 @@
                 <height>40</height>
                 <align>center</align>
                 <aligny>center</aligny>
-                <texturenofocus colordiffuse="44000000" border="20">whiteallrounded.png</texturenofocus>
-                <texturefocus colordiffuse="blue" border="20">whiteallrounded.png</texturefocus>
                 <label>222</label>
                 <font>font12_title</font>
                 <onup>12</onup>

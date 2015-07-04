@@ -25,7 +25,7 @@
                 <width>200</width>
                 <height>200</height>
                 <aspectratio>keep</aspectratio>
-                <texture fallback="defaultmissing.png">$INFO[ListItem.Thumb]</texture>
+                <texture fallback="posterfallback.png">$INFO[ListItem.Thumb]</texture>
             </control>
             <control type="image">
                 <centerleft>114</centerleft>
@@ -49,7 +49,7 @@
                 <width>208</width>
                 <height>208</height>
                 <aspectratio>keep</aspectratio>
-                <texture fallback="defaultmissing.png">$INFO[ListItem.Thumb]</texture>
+                <texture fallback="posterfallback.png">$INFO[ListItem.Thumb]</texture>
                 <bordertexture colordiffuse="red">white.png</bordertexture>
                 <bordersize>4</bordersize>
             </control>
@@ -118,7 +118,7 @@
                 <align>center</align>
                 <width>145</width>
                 <height>40</height>
-                <label>$INFO[System.CPUTemperature,, $LOCALIZE[140] ]</label>
+                <label>$INFO[System.CPUTemperature,$LOCALIZE[140] , ]</label>
             </control>
             <control type="label">
                 <visible>IntegerGreaterThan(System.BatteryLevel,0)</visible>
@@ -200,10 +200,10 @@
                 <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
                 <onup>888</onup>
                 <onleft>888</onleft>
-                <top>135</top>
-                <left>320</left>
+                <top>125</top>
+                <left>330</left>
                 <width>910</width>
-                <height>280</height>
+                <height>300</height>
                 <pagecontrol>60</pagecontrol>
                 <ondown>60</ondown>
                 <orientation>horizontal</orientation>
@@ -273,10 +273,10 @@
                 <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
                 <onup>888</onup>
                 <onleft>888</onleft>
-                <top>135</top>
-                <left>320</left>
+                <top>125</top>
+                <left>330</left>
                 <width>910</width>
-                <height>280</height>
+                <height>300</height>
                 <pagecontrol>60</pagecontrol>
                 <ondown>60</ondown>
                 <orientation>horizontal</orientation>
@@ -320,10 +320,10 @@
                 <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
                 <onup>888</onup>
                 <onleft>888</onleft>
-                <top>135</top>
-                <left>320</left>
+                <top>125</top>
+                <left>330</left>
                 <width>910</width>
-                <height>280</height>
+                <height>300</height>
                 <pagecontrol>60</pagecontrol>
                 <ondown>60</ondown>
                 <include>squareshome</include>
@@ -711,7 +711,7 @@
                         <width>200</width>
                         <height>200</height>
                         <aspectratio>scale</aspectratio>
-                        <texture>$INFO[ListItem.Icon]</texture>
+                        <texture fallback="posterfallback.png">$INFO[ListItem.Icon]</texture>
                     </control>
                     <control type="image">
                         <centerleft>114</centerleft>
@@ -736,7 +736,7 @@
                         <width>208</width>
                         <height>208</height>
                         <aspectratio>scale</aspectratio>
-                        <texture>$INFO[ListItem.Icon]</texture>
+                        <texture fallback="posterfallback.png">$INFO[ListItem.Icon]</texture>
                         <bordertexture colordiffuse="red">white.png</bordertexture>
                         <bordersize>4</bordersize>
                     </control>

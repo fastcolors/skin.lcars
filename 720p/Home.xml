@@ -89,26 +89,30 @@
         <content>
             <!--MOVIES-->
             <item id="1">
-                <label>342</label>
+                <visible>!Skin.HasSetting(HomeMenuNoMovieButton)</visible>
+				<label>342</label>
                 <onclick condition="Library.HasContent(Movies)">ActivateWindow(Videos,MovieTitles,return)</onclick>
                 <onclick condition="!Library.HasContent(Movies)">ActivateWindow(Videos,root)</onclick>
             </item>
             <!--TVSHOWS-->
             <item id="2">
-                <label>20343</label>
+                <visible>!Skin.HasSetting(HomeMenuNoTVShowButton)</visible>
+				<label>20343</label>
                 <label2>FFFF0000</label2>
                 <onclick condition="Library.HasContent(TVShows)">ActivateWindow(VideoLibrary,TVShowTitles,return)</onclick>
                 <onclick condition="!Library.HasContent(TVShows)">ActivateWindow(Videos,root)</onclick>
             </item>
             <!--MUSIC-->
             <item id="3">
-                <label>2</label>
+                <visible>!Skin.HasSetting(HomeMenuNoMusicButton)</visible>
+				<label>2</label>
                 <onclick condition="!Library.HasContent(Music)">ActivateWindow(501,root,return)</onclick>
                 <onclick condition="Library.HasContent(Music)">ActivateWindow(502,return)</onclick>
             </item>
             <!--ADDONS-->
             <item id="4">
-                <label>24001</label>
+                <visible>!Skin.HasSetting(HomeMenuNoADDONSButton)</visible>
+				<label>24001</label>
                 <onclick>ActivateWindow(AddonBrowser.xml)</onclick>
             </item>
             <!--LIVETV-->
@@ -120,7 +124,8 @@
             </item>
             <!--PICTURES-->
             <item id="6">
-                <label>1</label>
+                <visible>!Skin.HasSetting(HomeMenuNoPicturesButton)</visible>
+				<label>1</label>
                 <!--<onclick>ActivateWindow(Pictures)</onclick>-->
                 <onclick>noop</onclick>
             </item>
@@ -131,18 +136,21 @@
             </item>
             <!--WEATHER-->
             <item id="8">
-                <label>$INFO[Weather.Temperature]</label>
+                <visible>!Skin.HasSetting(HomeMenuNoWeatherButton)</visible>
+				<label>$INFO[Weather.Temperature]</label>
                 <onclick>ActivateWindow(MyWeather)</onclick>
             </item>
             <!--NEXT AIR-->
             <item id="9">
-                <visible>!Skin.HasSetting(nextair) + System.HasAddon(script.tv.show.next.aired) + Library.HasContent(TVShows)</visible>
+                <visible>!Skin.HasSetting(HomeMenuNoNEXTAIRButton)</visible>
+				<visible>!Skin.HasSetting(nextair) + System.HasAddon(script.tv.show.next.aired) + Library.HasContent(TVShows)</visible>
                 <label>31000</label>
                 <onclick>RunAddon(script.tv.show.next.aired)</onclick>
             </item>
             <!--Favorites-->
             <item id="10">
-                <label>1036</label>
+                <visible>!Skin.HasSetting(HomeMenuNoFavoritesButton)</visible>
+				<label>1036</label>
                 <onclick>ActivateWindow(134)</onclick>
             </item>
             <!--Settings-->

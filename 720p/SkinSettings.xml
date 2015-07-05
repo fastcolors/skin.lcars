@@ -2,15 +2,109 @@
 <window>
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<controls>
-	<control type="button" id="9000">
-		<centerleft>640</centerleft>
-		<centertop>360</centertop>
-		<label>SKIN HAS NO SETTINGS</label>
-		<width>300</width>
-		<height>40</height>
-		<align>center</align>
-		<aligny>center</aligny>
-		<onclick>back</onclick>
-	</control>
-	</controls>
+	<include>allwindows</include>
+    <control type="grouplist" id="9000">
+					<left>290</left>
+					<top>170</top>
+					<width>750</width>
+					<height>530</height>
+					<itemgap>8</itemgap>
+					<pagecontrol>-</pagecontrol>
+					<onleft>700</onleft>
+					<onright>noop</onright>
+					<onup>9000</onup>
+					<ondown>9000</ondown>
+					<control type="radiobutton" id="222">
+						<description>Hide Movies Button</description>
+						<width>750</width>
+						<height>40</height>
+						<aligny>center</aligny>
+						<textcolor>black</textcolor>
+						<focusedcolor>black</focusedcolor>
+						<label>$LOCALIZE[31111] - $LOCALIZE[342] [COLOR=grey3] ($LOCALIZE[20314])[/COLOR]</label>
+						<onclick>Skin.ToggleSetting(HomeMenuNoMovieButton)</onclick>
+						<selected>Skin.HasSetting(HomeMenuNoMovieButton)</selected>
+						<enable>Library.HasContent(Movies)</enable>
+					</control>
+					<control type="radiobutton" id="223">
+						<description>Hide TV Shows Button</description>
+						<width>750</width>
+						<height>40</height>
+						<aligny>center</aligny>
+						<textcolor>black</textcolor>
+						<focusedcolor>black</focusedcolor>
+						<label>$LOCALIZE[31111] - $LOCALIZE[20343] [COLOR=grey3] ($LOCALIZE[20314])[/COLOR]</label>
+						<onclick>Skin.ToggleSetting(HomeMenuNoTVShowButton)</onclick>
+						<selected>Skin.HasSetting(HomeMenuNoTVShowButton)</selected>
+						<enable>Library.HasContent(TVShows)</enable>
+					</control>
+					<control type="radiobutton" id="224">
+						<description>Hide Music Button</description>
+						<width>750</width>
+						<height>40</height>
+						<aligny>center</aligny>
+						<textcolor>black</textcolor>
+						<focusedcolor>black</focusedcolor>
+						<label>$LOCALIZE[31111] - $LOCALIZE[2]</label>
+						<onclick>Skin.ToggleSetting(HomeMenuNoMusicButton)</onclick>
+						<selected>Skin.HasSetting(HomeMenuNoMusicButton)</selected>
+					</control>
+					<control type="radiobutton" id="225">
+						<description>Hide Pictures Button</description>
+						<width>750</width>
+						<height>40</height>
+						<aligny>center</aligny>
+						<textcolor>black</textcolor>
+						<focusedcolor>black</focusedcolor>
+						<label>$LOCALIZE[31111] - $LOCALIZE[1]</label>
+						<onclick>Skin.ToggleSetting(HomeMenuNoPicturesButton)</onclick>
+						<selected>Skin.HasSetting(HomeMenuNoPicturesButton)</selected>
+					</control>
+					<control type="radiobutton" id="229">
+						<description>Hide ADDONS Button</description>
+						<width>750</width>
+						<height>40</height>
+						<aligny>center</aligny>
+						<textcolor>black</textcolor>
+						<focusedcolor>black</focusedcolor>
+						<label>$LOCALIZE[31111] - $LOCALIZE[24001]</label>
+						<onclick>Skin.ToggleSetting(HomeMenuNoADDONSButton)</onclick>
+						<selected>Skin.HasSetting(HomeMenuNoADDONSButton)</selected>
+					</control>
+					<control type="radiobutton" id="230">
+						<visible>!Skin.HasSetting(nextair) + System.HasAddon(script.tv.show.next.aired) + Library.HasContent(TVShows)</visible>
+						<description>Hide NEXT AIR Button</description>
+						<width>750</width>
+						<height>40</height>
+						<aligny>center</aligny>
+						<textcolor>black</textcolor>
+						<focusedcolor>black</focusedcolor>
+						<label>$LOCALIZE[31111] - $LOCALIZE[31000]</label>
+						<onclick>Skin.ToggleSetting(HomeMenuNoNEXTAIRButton)</onclick>
+						<selected>Skin.HasSetting(HomeMenuNoNEXTAIRButton)</selected>
+					</control>
+					<control type="radiobutton" id="231">
+						<description>Hide Favorites Button</description>
+						<width>750</width>
+						<height>40</height>
+						<aligny>center</aligny>
+						<textcolor>black</textcolor>
+						<focusedcolor>black</focusedcolor>
+						<label>$LOCALIZE[31111] - $LOCALIZE[1036]</label>
+						<onclick>Skin.ToggleSetting(HomeMenuNoFavoritesButton)</onclick>
+						<selected>Skin.HasSetting(HomeMenuNoFavoritesButton)</selected>
+					</control>
+					<control type="radiobutton" id="228">
+						<description>Hide Weather Button</description>
+						<width>750</width>
+						<height>40</height>
+						<aligny>center</aligny>
+						<textcolor>black</textcolor>
+						<focusedcolor>black</focusedcolor>
+						<label>$LOCALIZE[31111] - $LOCALIZE[8]</label>
+						<onclick>Skin.ToggleSetting(HomeMenuNoWeatherButton)</onclick>
+						<selected>Skin.HasSetting(HomeMenuNoWeatherButton)</selected>
+					</control>
+				</control>
+		</controls>
 </window>

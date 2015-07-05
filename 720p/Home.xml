@@ -126,7 +126,7 @@
             <item id="6">
                 <visible>!Skin.HasSetting(HomeMenuNoPicturesButton)</visible>
 				<label>1</label>
-                <!--<onclick>ActivateWindow(Pictures)</onclick>-->
+                <onclick>ActivateWindow(Pictures)</onclick>
                 <onclick>noop</onclick>
             </item>
             <!--SOURCES-->

@@ -4,6 +4,8 @@
     <include file="ViewsVideoLibrary.xml"/>
     <include file="ViewsMusicLibrary.xml"/>
     <include file="ViewsAddonBrowser.xml"/>
+    <include file="ViewsPictures.xml"/>
+    <include file="ViewsFileMode.xml"/>
 
     <include file="weather/10DayForecast.xml"/>
     <include file="weather/36HourForecast.xml"/>
@@ -1341,7 +1343,7 @@
                 <posy>38</posy>
                 <width>200</width>
                 <height>170</height>
-                <texture background="true" >$INFO[ListItem.Property(Art(poster))]</texture>
+                <texture background="true"  fallback="posterfallback.png">$INFO[ListItem.Property(Art(poster))]</texture>
                 <aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
                 <visible>StringCompare(Window(Home).Property(TVGuide.ThumbType),0)</visible>
             </control>
@@ -1351,7 +1353,7 @@
                 <posy>38</posy>
                 <width>200</width>
                 <height>170</height>
-                <texture background="true" >$INFO[ListItem.Property(Art(banner))]</texture>
+                <texture background="true"  fallback="posterfallback.png">$INFO[ListItem.Property(Art(banner))]</texture>
                 <aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
                 <visible>StringCompare(Window(Home).Property(TVGuide.ThumbType),1)</visible>
             </control>
@@ -1361,7 +1363,7 @@
                 <posy>38</posy>
                 <width>200</width>
                 <height>170</height>
-                <texture background="true" >$INFO[ListItem.Property(Art(clearlogo))]</texture>
+                <texture background="true"  fallback="posterfallback.png">$INFO[ListItem.Property(Art(clearlogo))]</texture>
                 <aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
                 <visible>StringCompare(Window(Home).Property(TVGuide.ThumbType),2)</visible>
             </control>
@@ -1383,7 +1385,7 @@
                 <posy>38</posy>
                 <width>200</width>
                 <height>170</height>
-                <texture background="true" fallback="DefaultVideoCover.png">$INFO[ListItem.Property(Fanart)]</texture>
+                <texture background="true" fallback="posterfallback.png">$INFO[ListItem.Property(Fanart)]</texture>
                 <aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
             </control>
             <control type="textbox">

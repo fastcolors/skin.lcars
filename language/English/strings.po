@@ -68,3 +68,7 @@ msgctxt "#31012"
 msgid "Self Destruct in "
 msgstr "Self Destruct in "
 
+msgctxt "#31111"
+msgid "Hide"
+msgstr "Hide"
+

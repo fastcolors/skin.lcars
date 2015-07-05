@@ -32,3 +32,6 @@ msgctxt "#31003"
 msgid "STARDATE"
 msgstr "DATA ASTRALE"
 
+msgctxt "#31111"
+msgid "Hide"
+msgstr "Hide"

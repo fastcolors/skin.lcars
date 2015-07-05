@@ -43,3 +43,11 @@ msgstr "Ordina: Crescente"
 msgctxt "#31051"
 msgid "Sort: Descending"
 msgstr "Ordina: Decrescente"
+
+msgctxt "#31326"
+msgid "Created"
+msgstr "Creato"
+
+msgctxt "#31327"
+msgid "Resolution"
+msgstr "Risoluzione"

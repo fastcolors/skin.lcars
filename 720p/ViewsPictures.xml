@@ -31,6 +31,17 @@
 				</control>
             </focusedlayout>
 		</control>
+		<control type="textbox">
+            <top>470</top>
+            <centerleft>670</centerleft>
+            <width>660</width>
+            <height>190</height>
+            <textcolor>yellow</textcolor>
+            <align>justify</align>
+            <font>font14_plot</font>
+            <label>$INFO[ListItem.PictureDateTime,[COLOR=blue]$LOCALIZE[31326][/COLOR] - ][CR][CR]$INFO[ListItem.PictureResolution,[COLOR=blue]$LOCALIZE[31327][/COLOR] - ]</label>
+		</control>
+        
 	</include>
 	
 </includes>

@@ -1,22 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<defaultcontrol always="true">10</defaultcontrol>
-	<allowoverlay>no</allowoverlay>
-	<controls>
-		<control type="button" id="10">
-			<description>trigger</description>
-			<onfocus>ReplaceWindow($INFO[System.StartupWindow])</onfocus>
-			<texturenofocus>-</texturenofocus>
-			<texturefocus>-</texturefocus>
-			<visible>!Skin.HasSetting(Use_Startup_Playlist)</visible>
-		</control>
-		<control type="button" id="10">
-			<description>trigger with startup Playlist</description>
-			<onfocus>XBMC.PlayMedia($INFO[Skin.String(Startup_Playlist_Path)])</onfocus>
-			<onfocus>ReplaceWindow($INFO[System.StartupWindow])</onfocus>
-			<texturenofocus>-</texturenofocus>
-			<texturefocus>-</texturefocus>
-			<visible>Skin.HasSetting(Use_Startup_Playlist)</visible>
-		</control>
-	</controls>
+    <onload>AlarmClock(CloseStartup,ReplaceWindow($INFO[System.StartupWindow]),00:03,silent)</onload>
+    <backgroundcolor>FF000000</backgroundcolor>
+    <animation type="WindowOpen">
+        <effect type="fade" start="0" end="100" time="800" delay="200" />
+    </animation>
+    <controls>
+        <control type="image">
+            <centerleft>640</centerleft>
+            <centertop>360</centertop>
+            <width>256</width>
+            <height>256</height>
+            <aspectratio scalediffuse="false">keep</aspectratio>
+            <texture>special://skin/icon.png</texture>
+        </control>
+		<control type="textbox" description="Title">
+            <centerleft>640</centerleft>
+            <top>480</top>
+            <align>center</align>
+			<height>100</height>
+            <width>800</width>
+            <font>font30_title</font>
+            <textcolor>yellow</textcolor>
+            <align>center</align>
+            <aligny>center</aligny>
+			<label>U.S.S. $INFO[System.FriendlyName,, • ]NCC 1929-A [CR]L.C.A.R.S System Online...</label>
+        </control>
+		
+    </controls>
 </window>

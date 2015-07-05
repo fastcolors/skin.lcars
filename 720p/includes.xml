@@ -730,7 +730,7 @@
                 </itemlayout>
                 <focusedlayout width="228" height="280">
                     <control type="image">
-                        <visible>Control.HasFocus(888)</visible>
+                        <!--visible>Control.HasFocus(888)</visible-->
                         <top>60</top>
                         <centerleft>114</centerleft>
                         <width>208</width>
@@ -741,7 +741,7 @@
                         <bordersize>4</bordersize>
                     </control>
                     <control type="image">
-                        <visible>!Control.HasFocus(888)</visible>
+                        <!--visible>!Control.HasFocus(888)</visible-->
                         <top>64</top>
                         <centerleft>114</centerleft>
                         <width>200</width>
@@ -1077,13 +1077,24 @@
             <texture colordiffuse="purple">white.png</texture>
         </control>
         <control type="label">
-            <top>18</top>
+            <top>10</top>
             <left>1030</left>
-            <height>39</height>
+            <height>25</height>
             <width>200</width>
-            <font>font30</font>
+            <font>font24_title</font>
+            <align>left</align>
             <textcolor>yellow</textcolor>
-            <label>USS KODI  •  NCC-1929</label>
+            <label>U.S.S. $INFO[System.FriendlyName]</label>
+        </control>
+        <control type="label">
+            <top>31</top>
+            <left>1030</left>
+            <height>25</height>
+            <width>200</width>
+            <font>font24_title</font>
+            <align>left</align>
+            <textcolor>yellow</textcolor>
+            <label>ncc 1929-A</label>
         </control>
         <control type="label">
             <visible>system.hasnetwork</visible>

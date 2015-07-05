@@ -16,7 +16,7 @@
                     <width>170</width>
                     <height>250</height>
                     <aspectratio>keep</aspectratio>
-                    <texture>$INFO[ListItem.Icon]</texture>
+                    <texture fallback="posterfallback.png">$INFO[ListItem.Icon]</texture>
                 </control>
                 <control type="textbox">
                     <visible>IsEmpty(ListItem.Art(thumb)) | [IsEmpty(ListItem.Art(fanart)) +  ![Container.Content(files)|Container.Content(tvshows)|Container.Content(movies)|Container.Content(musicvideos) |Container.Content(actors)|Container.Content(episodes)]]</visible>
@@ -34,7 +34,7 @@
                     <width>178</width>
                     <height>258</height>
                     <aspectratio>keep</aspectratio>
-                    <texture>$INFO[ListItem.Icon]</texture>
+                    <texture fallback="posterfallback.png">$INFO[ListItem.Icon]</texture>
                     <bordertexture colordiffuse="red">white.png</bordertexture>
                     <bordersize>4</bordersize>
                 </control>

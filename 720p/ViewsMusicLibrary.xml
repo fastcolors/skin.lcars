@@ -22,7 +22,7 @@
                     <width>250</width>
                     <height>250</height>
                     <aspectratio>stretch</aspectratio>
-                    <texture>$VAR[poster]</texture>
+                    <texture fallback="posterfallback.png">$VAR[poster]</texture>
                 </control>
                 <control type="textbox">
                     <visible>Container.Content(albums)</visible>
@@ -60,7 +60,7 @@
                     <width>258</width>
                     <height>258</height>
                     <aspectratio>stretch</aspectratio>
-                    <texture>$VAR[poster]</texture>
+                    <texture fallback="posterfallback.png">$VAR[poster]</texture>
                     <bordertexture colordiffuse="red">white.png</bordertexture>
                     <bordersize>4</bordersize>
                 </control>

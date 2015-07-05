@@ -17,7 +17,7 @@
                     <width>170</width>
                     <height>250</height>
                     <aspectratio>keep</aspectratio>
-                    <texture>$VAR[poster]</texture>
+                    <texture fallback="posterfallback.png">$VAR[poster]</texture>
                 </control>
                 <control type="image">
                     <visible>Container.Content(episodes)</visible>
@@ -26,7 +26,7 @@
                     <width>170</width>
                     <height>250</height>
                     <aspectratio>scale</aspectratio>
-                    <texture>$VAR[poster]</texture>
+                    <texture fallback="posterfallback.png">$VAR[poster]</texture>
                 </control>
                 <control type="textbox">
                     <visible>IsEmpty(ListItem.Art(thumb)) | [IsEmpty(ListItem.Art(fanart)) +  ![Container.Content(files)|Container.Content(tvshows)|Container.Content(movies)|Container.Content(musicvideos) |Container.Content(actors)|Container.Content(episodes)]]</visible>
@@ -45,7 +45,7 @@
                     <width>178</width>
                     <height>258</height>
                     <aspectratio>keep</aspectratio>
-                    <texture>$VAR[poster]</texture>
+                    <texture fallback="posterfallback.png">$VAR[poster]</texture>
                     <bordertexture colordiffuse="red">white.png</bordertexture>
                     <bordersize>4</bordersize>
                 </control>
@@ -55,7 +55,7 @@
                     <width>178</width>
                     <height>258</height>
                     <aspectratio>scale</aspectratio>
-                    <texture>$VAR[poster]</texture>
+                    <texture fallback="posterfallback.png">$VAR[poster]</texture>
                     <bordertexture colordiffuse="red">white.png</bordertexture>
                     <bordersize>4</bordersize>
                 </control>

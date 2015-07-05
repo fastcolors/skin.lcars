@@ -16,7 +16,7 @@
                     <width>170</width>
                     <height>250</height>
                     <aspectratio>keep</aspectratio>
-					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<texture background="true" fallback="posterfallback.png">$INFO[ListItem.Icon]</texture>
                 </control>
             </itemlayout>
             <focusedlayout width="180" height="280">
@@ -25,7 +25,7 @@
                     <width>178</width>
                     <height>258</height>
                     <aspectratio>keep</aspectratio>
-                    <texture background="true">$INFO[ListItem.Icon]</texture>
+                    <texture background="true" fallback="posterfallback.png">$INFO[ListItem.Icon]</texture>
                     <bordertexture colordiffuse="red">white.png</bordertexture>
                     <bordersize>4</bordersize>
 				</control>

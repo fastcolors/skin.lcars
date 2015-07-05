@@ -117,85 +117,71 @@
 				<ondown>20</ondown>
 				<pagecontrol>30</pagecontrol>
 				<scrolltime>200</scrolltime>
-				<itemlayout height="35" width="540">
+				<itemlayout height="45" width="540">
 					<control type="image">
-						<left>0</left>
-						<top>0</top>
 						<width>540</width>
-						<height>36</height>
-						<texture border="0,2,0,2">MenuItemNF.png</texture>
+						<height>40</height>
+						<texture flipx="true" colordiffuse="design" border="20">whiterounded.png</texture>
 					</control>
 					<control type="label">
-						<left>0</left>
+						<left>7</left>
 						<top>0</top>
 						<width>500</width>
-						<height>36</height>
+						<height>40</height>
 						<font>font13</font>
 						<aligny>center</aligny>
 						<selectedcolor>selected</selectedcolor>
-						<textcolor>grey2</textcolor>
+						<textcolor>black</textcolor>
 						<align>left</align>
 						<info>ListItem.Label</info>
 					</control>
 					<control type="label">
-						<left>530</left>
+						<left>500</left>
 						<top>5</top>
 						<width>200</width>
-						<height>24</height>
+						<height>40</height>
 						<font>font12</font>
 						<aligny>center</aligny>
 						<selectedcolor>selected</selectedcolor>
-						<textcolor>grey</textcolor>
+						<textcolor>black</textcolor>
 						<align>right</align>
 						<info>ListItem.Label2</info>
 					</control>
 				</itemlayout>
-				<focusedlayout height="35" width="540">
+				<focusedlayout height="45" width="540">
 					<control type="image">
-						<left>0</left>
-						<top>0</top>
 						<width>540</width>
-						<height>36</height>
+						<height>40</height>
 						<visible>!Control.HasFocus(20)</visible>
-						<texture border="0,2,0,2">MenuItemNF.png</texture>
+						<texture flipx="true" colordiffuse="osd" border="20">whiterounded.png</texture>
 					</control>
 					<control type="image">
-						<left>0</left>
-						<top>0</top>
 						<width>540</width>
-						<height>36</height>
+						<height>40</height>
 						<visible>Control.HasFocus(20)</visible>
-						<texture border="0,2,0,2">MenuItemFO.png</texture>
-					</control>
-					<control type="image">
-						<left>340</left>
-						<top>2</top>
-						<width>200</width>
-						<height>31</height>
-						<texture border="0,0,14,0">MediaItemDetailBG.png</texture>
-						<visible>Control.HasFocus(20) + !IsEmpty(ListItem.Label2)</visible>
+						<texture flipx="true" colordiffuse="green" border="20">whiterounded.png</texture>
 					</control>
 					<control type="label">
-						<left>0</left>
+						<left>7</left>
 						<top>0</top>
 						<width>500</width>
-						<height>36</height>
+						<height>40</height>
 						<font>font13</font>
 						<aligny>center</aligny>
 						<selectedcolor>selected</selectedcolor>
-						<textcolor>white</textcolor>
+						<textcolor>black</textcolor>
 						<align>left</align>
 						<info>ListItem.Label</info>
 					</control>
 					<control type="label">
-						<left>530</left>
+						<left>500</left>
 						<top>5</top>
 						<width>200</width>
-						<height>24</height>
+						<height>40</height>
 						<font>font12</font>
 						<aligny>center</aligny>
 						<selectedcolor>selected</selectedcolor>
-						<textcolor>grey</textcolor>
+						<textcolor>black</textcolor>
 						<align>right</align>
 						<info>ListItem.Label2</info>
 					</control>
@@ -289,73 +275,59 @@
 				<ondown>21</ondown>
 				<pagecontrol>31</pagecontrol>
 				<scrolltime>200</scrolltime>
-				<itemlayout height="35">
+				<itemlayout height="45" width="540">
 					<control type="image">
-						<left>0</left>
-						<top>0</top>
 						<width>540</width>
-						<height>36</height>
-						<texture border="0,2,0,2">MenuItemNF.png</texture>
+						<height>40</height>
+						<texture colordiffuse="design" border="20">whiterounded.png</texture>
 					</control>
 					<control type="label">
-						<left>0</left>
+						<left>7</left>
 						<top>0</top>
 						<width>500</width>
-						<height>36</height>
+						<height>40</height>
 						<font>font13</font>
 						<aligny>center</aligny>
 						<selectedcolor>selected</selectedcolor>
-						<textcolor>grey2</textcolor>
+						<textcolor>black</textcolor>
 						<align>left</align>
 						<info>ListItem.Label</info>
 					</control>
 					<control type="label">
-						<left>530</left>
+						<left>500</left>
 						<top>5</top>
 						<width>200</width>
-						<height>24</height>
+						<height>40</height>
 						<font>font12</font>
 						<aligny>center</aligny>
 						<selectedcolor>selected</selectedcolor>
-						<textcolor>grey</textcolor>
+						<textcolor>black</textcolor>
 						<align>right</align>
 						<info>ListItem.Label2</info>
 					</control>
 				</itemlayout>
-				<focusedlayout height="35">
+				<focusedlayout height="45" width="540">
 					<control type="image">
-						<left>0</left>
-						<top>0</top>
 						<width>540</width>
-						<height>36</height>
+						<height>40</height>
 						<visible>!Control.HasFocus(21)</visible>
-						<texture border="0,2,0,2">MenuItemNF.png</texture>
+						<texture colordiffuse="osd" border="20">whiterounded.png</texture>
 					</control>
 					<control type="image">
-						<left>0</left>
-						<top>0</top>
 						<width>540</width>
-						<height>36</height>
+						<height>40</height>
 						<visible>Control.HasFocus(21)</visible>
-						<texture border="0,2,0,2">MenuItemFO.png</texture>
-					</control>
-					<control type="image">
-						<left>340</left>
-						<top>2</top>
-						<width>200</width>
-						<height>31</height>
-						<texture border="0,0,14,0">MediaItemDetailBG.png</texture>
-						<visible>Control.HasFocus(21) + !IsEmpty(ListItem.Label2)</visible>
+						<texture colordiffuse="green" border="20">whiterounded.png</texture>
 					</control>
 					<control type="label">
-						<left>0</left>
+						<left>7</left>
 						<top>0</top>
 						<width>500</width>
-						<height>36</height>
+						<height>40</height>
 						<font>font13</font>
 						<aligny>center</aligny>
 						<selectedcolor>selected</selectedcolor>
-						<textcolor>white</textcolor>
+						<textcolor>black</textcolor>
 						<align>left</align>
 						<info>ListItem.Label</info>
 					</control>
@@ -363,11 +335,11 @@
 						<left>530</left>
 						<top>5</top>
 						<width>200</width>
-						<height>24</height>
+						<height>40</height>
 						<font>font12</font>
 						<aligny>center</aligny>
 						<selectedcolor>selected</selectedcolor>
-						<textcolor>grey</textcolor>
+						<textcolor>black</textcolor>
 						<align>right</align>
 						<info>ListItem.Label2</info>
 					</control>
@@ -382,9 +354,8 @@
 			<font>font12</font>
 			<align>left</align>
 			<scroll>true</scroll>
-			<textcolor>grey</textcolor>
-			<shadowcolor>black</shadowcolor>
-			<label>([COLOR=blue]$INFO[Container(20).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=blue]$INFO[Container(20).CurrentPage]/$INFO[Container(20).NumPages][/COLOR])</label>
+			<textcolor>black</textcolor>
+			<label>($INFO[Container(20).NumItems]) $LOCALIZE[31025] - $LOCALIZE[31024] ($INFO[Container(20).CurrentPage]/$INFO[Container(20).NumPages])</label>
 		</control>
 		<control type="label">
 			<description>number of files/pages in left list text label</description>
@@ -394,67 +365,27 @@
 			<font>font12</font>
 			<align>right</align>
 			<scroll>true</scroll>
-			<textcolor>grey</textcolor>
-			<shadowcolor>black</shadowcolor>
-			<label>([COLOR=blue]$INFO[Container(21).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=blue]$INFO[Container(21).CurrentPage]/$INFO[Container(21).NumPages][/COLOR])</label>
+			<textcolor>black</textcolor>
+			<label>($INFO[Container(21).NumItems]) $LOCALIZE[31025] - $LOCALIZE[31024] ($INFO[Container(21).CurrentPage]/$INFO[Container(21).NumPages])</label>
 		</control>
 		<control type="group" id="10">
-			<left>595</left>
-			<top>55r</top>
-			<include>Window_OpenClose_Animation</include>
-			<visible>system.getbool(input.enablemouse)</visible>
-			<include>Window_OpenClose_Animation</include>
-			<control type="button">
-				<description>Back push button</description>
-				<left>0</left>
-				<top>0</top>
-				<width>45</width>
-				<height>45</height>
-				<label>1036</label>
-				<font>-</font>
-				<onclick>back</onclick>
-				<texturefocus border="5">floor_buttonFO.png</texturefocus>
-				<texturenofocus border="5">floor_button.png</texturenofocus>
-				<onleft>50</onleft>
-				<onright>50</onright>
-				<onup>50</onup>
-				<ondown>50</ondown>
-			</control>
-			<control type="image">
-				<description>Back Icon</description>
-				<left>5</left>
-				<top>5</top>
-				<width>35</width>
-				<height>35</height>
-				<aspectratio>keep</aspectratio>
-				<texture>icon_back.png</texture>
-			</control>
 			<control type="button">
 				<description>Home push button</description>
-				<left>55</left>
-				<top>0</top>
-				<width>45</width>
-				<height>45</height>
-				<label>31003</label>
-				<font>-</font>
+				<top>13</top>
+                <right>50</right>
+                <width>110</width>
+                <height>40</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>31008</label>
+				<texturenofocus colordiffuse="design" border="20">white.png</texturenofocus>
+				<texturefocus colordiffuse="green" border="20">white.png</texturefocus>
 				<onclick>ActivateWindow(home)</onclick>
-				<texturefocus border="5">floor_buttonFO.png</texturefocus>
-				<texturenofocus border="5">floor_button.png</texturenofocus>
-				<onleft>50</onleft>
-				<onright>50</onright>
-				<onup>50</onup>
-				<ondown>50</ondown>
-			</control>
-			<control type="image">
-				<description>Home Icon</description>
-				<left>60</left>
-				<top>5</top>
-				<width>35</width>
-				<height>35</height>
-				<aspectratio>keep</aspectratio>
-				<texture>icon_home.png</texture>
+				<onleft>20</onleft>
+				<onright>20</onright>
+				<onup>20</onup>
+				<ondown>20</ondown>
 			</control>
 		</control>
-		<include>Clock</include>
 	</controls>
 </window>

@@ -101,6 +101,11 @@
 					<onclick>ActivateWindow(SystemSettings)</onclick>
 					<icon>-</icon>
 				</item>
+				<item id="8">
+					<label>7</label>
+					<onclick>ActivateWindow(3)</onclick>
+					<icon>-</icon>
+				</item>
 			</content>
 		</control>
 		<!--<control type="button" id="700">-->

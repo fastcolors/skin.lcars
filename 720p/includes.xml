@@ -15,7 +15,7 @@
         <height>87</height>
         <width>102</width>
         <texturenofocus>-</texturenofocus>
-        <texturefocus colordiffuse="red">white.png</texturefocus>
+        <texturefocus >white.png</texturefocus>
     </include>
     <include name="squareshome">
         <itemlayout width="228" height="280">
@@ -1077,21 +1077,21 @@
             <texture colordiffuse="purple">white.png</texture>
         </control>
         <control type="label">
-            <top>10</top>
+            <top>9</top>
             <left>1030</left>
             <height>25</height>
             <width>200</width>
-            <font>font24_title</font>
+            <font>font30</font>
             <align>left</align>
             <textcolor>yellow</textcolor>
             <label>U.S.S. $INFO[System.FriendlyName]</label>
         </control>
         <control type="label">
-            <top>31</top>
+            <top>35</top>
             <left>1030</left>
             <height>25</height>
             <width>200</width>
-            <font>font24_title</font>
+            <font>font13_title</font>
             <align>left</align>
             <textcolor>yellow</textcolor>
             <label>ncc 1929-A</label>

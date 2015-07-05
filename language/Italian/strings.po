@@ -34,4 +34,12 @@ msgstr "DATA ASTRALE"
 
 msgctxt "#31111"
 msgid "Hide"
-msgstr "Hide"
+msgstr "Nascondi"
+
+msgctxt "#31050"
+msgid "Sort: Ascending"
+msgstr "Ordina: Crescente"
+
+msgctxt "#31051"
+msgid "Sort: Descending"
+msgstr "Ordina: Decrescente"

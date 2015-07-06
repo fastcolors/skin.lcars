@@ -6,6 +6,7 @@
     <include file="ViewsAddonBrowser.xml"/>
     <include file="ViewsPictures.xml"/>
     <include file="ViewsFileMode.xml"/>
+    <include file="Includesvars.xml"/>
 
     <include file="weather/10DayForecast.xml"/>
     <include file="weather/36HourForecast.xml"/>
@@ -130,7 +131,7 @@
                 <align>center</align>
                 <width>145</width>
                 <height>40</height>
-                <label>$INFO[System.BatteryLevel,, $LOCALIZE[31004] ]</label>
+                <label>$INFO[System.BatteryLevel, $LOCALIZE[31004] : ]</label>
             </control>
             <control type="group">
                 <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
@@ -159,16 +160,27 @@
                 </control>
             </control>
 
-            <!--movies-->
-
             <control type="label">
-                <visible>Container(9000).HasFocus(1)</visible>
+                <!--<visible>!Control.HasFocus(9000)</visible>-->
                 <top>81</top>
                 <right>80</right>
                 <align>right</align>
                 <width>600</width>
-                <label>$INFO[Skin.String(movieshome)]</label>
+                <label>$VAR[311label]</label>
             </control>
+
+            <!--<control type="label">-->
+                <!--<visible>Control.HasFocus(9000)</visible>-->
+                <!--<top>81</top>-->
+                <!--<right>80</right>-->
+                <!--<align>right</align>-->
+                <!--<width>600</width>-->
+                <!--<label>$INFO[Container(9000).ListItem.Label]</label>-->
+            <!--</control>-->
+
+            <!--movies-->
+
+
             <control type="grouplist" id="888">
                 <visible>Container(9000).HasFocus(1)</visible>
                 <onup>9000</onup>
@@ -235,14 +247,6 @@
 
             <!--TV-->
 
-            <control type="label">
-                <visible>Container(9000).HasFocus(2)</visible>
-                <top>81</top>
-                <right>80</right>
-                <align>right</align>
-                <width>600</width>
-                <label>$INFO[Skin.String(tvhome)]</label>
-            </control>
             <control type="grouplist" id="888">
                 <visible>Container(9000).HasFocus(2)</visible>
                 <onup>9000</onup>
@@ -256,17 +260,17 @@
                 <control type="button" id="500">
                     <include>888buttons</include>
                     <label>31005</label>
-                    <onfocus>Skin.SetString(tvhome,videodb://recentlyaddedepisodes/)</onfocus>
+                    <onfocus>Skin.SetString(movieshome,videodb://recentlyaddedepisodes/)</onfocus>
                 </control>
                 <control type="button" id="501">
                     <include>888buttons</include>
                     <label>31006</label>
-                    <onfocus>Skin.SetString(tvhome,plugin://service.library.data.provider?type=recommendedepisodes&limit=20&reload=$INFO[Window.Property(recommendedepisodes)])</onfocus>
+                    <onfocus>Skin.SetString(movieshome,plugin://service.library.data.provider?type=recommendedepisodes&limit=20&reload=$INFO[Window.Property(recommendedepisodes)])</onfocus>
                 </control>
                 <control type="button" id="502">
                     <include>888buttons</include>
                     <label>593</label>
-                    <onfocus>Skin.SetString(tvhome,videodb://tvshows/titles/)</onfocus>
+                    <onfocus>Skin.SetString(movieshome,videodb://tvshows/titles/)</onfocus>
                 </control>
             </control>
             <control type="panel" id="311">
@@ -303,19 +307,11 @@
                         <bordersize>4</bordersize>
                     </control>
                 </focusedlayout>
-                <content target="video">$INFO[Skin.String(tvhome)]</content>
+                <content target="video">$INFO[Skin.String(movieshome)]</content>
             </control>
 
             <!--NEXT AIRED-->
 
-            <control type="label">
-                <visible>Container(9000).HasFocus(9)</visible>
-                <top>81</top>
-                <right>80</right>
-                <align>right</align>
-                <width>600</width>
-                <label>$INFO[Container(311).ListItem.Property(SeasonEpisode)]</label>
-            </control>
             <control type="panel" id="311">
                 <animation effect="fade" start="100" end="80" condition="!Control.HasFocus(311) + !Control.HasFocus(60)">Conditional</animation>
                 <visible>Container(9000).HasFocus(9)</visible>
@@ -446,14 +442,6 @@
 
             <!--music-->
 
-            <control type="label">
-                <visible>Container(9000).HasFocus(3)</visible>
-                <top>81</top>
-                <right>80</right>
-                <align>right</align>
-                <width>600</width>
-                <label>$INFO[Skin.String(musichome)]</label>
-            </control>
             <control type="grouplist" id="888">
                 <visible>Container(9000).HasFocus(3)</visible>
                 <onup>9000</onup>
@@ -467,18 +455,18 @@
                 <control type="button" id="500">
                     <include>888buttons</include>
                     <label>31005</label>
-                    <onfocus>Skin.SetString(musichome,musicdb://recentlyaddedalbums/)</onfocus>
+                    <onfocus>Skin.SetString(movieshome,musicdb://recentlyaddedalbums/)</onfocus>
                 </control>
                 <control type="button" id="501">
                     <include>888buttons</include>
                     <label>132</label>
-                    <onfocus>Skin.SetString(musichome,musicdb://albums/)</onfocus>
+                    <onfocus>Skin.SetString(movieshome,musicdb://albums/)</onfocus>
                     <onclick>ActivateWindow(music,albums,return)</onclick>
                 </control>
                 <control type="button" id="502">
                     <include>888buttons</include>
                     <label>133</label>
-                    <onfocus>Skin.SetString(musichome,musicdb://artists/)</onfocus>
+                    <onfocus>Skin.SetString(movieshome,musicdb://artists/)</onfocus>
                     <onclick>ActivateWindow(music,artists,return)</onclick>
                 </control>
             </control>
@@ -496,20 +484,12 @@
                 <ondown>60</ondown>
                 <orientation>horizontal</orientation>
                 <include>squareshome</include>
-                <content target="music">$INFO[Skin.String(musichome)]</content>
+                <content target="music">$INFO[Skin.String(movieshome)]</content>
             </control>
 
             <!--plugs-->
 
 
-            <control type="label">
-                <visible>Container(9000).HasFocus(4)</visible>
-                <top>81</top>
-                <right>80</right>
-                <align>right</align>
-                <width>600</width>
-                <label>$INFO[Skin.String(addonhome)]</label>
-            </control>
             <control type="grouplist" id="888">
                 <visible>Container(9000).HasFocus(4)</visible>
                 <onup>9000</onup>
@@ -523,17 +503,17 @@
                 <control type="button" id="500">
                     <include>888buttons</include>
                     <label>157</label>
-                    <onfocus>Skin.SetString(addonhome,addons://sources/video/)</onfocus>
+                    <onfocus>Skin.SetString(movieshome,addons://sources/video/)</onfocus>
                 </control>
                 <control type="button" id="501">
                     <include>888buttons</include>
                     <label>292</label>
-                    <onfocus>Skin.SetString(addonhome,addons://sources/audio/)</onfocus>
+                    <onfocus>Skin.SetString(movieshome,addons://sources/audio/)</onfocus>
                 </control>
                 <control type="button" id="502">
                     <include>888buttons</include>
                     <label>350</label>
-                    <onfocus>Skin.SetString(addonhome,addons://sources/executable/)</onfocus>
+                    <onfocus>Skin.SetString(movieshome,addons://sources/executable/)</onfocus>
                 </control>
             </control>
             <control type="panel" id="311">
@@ -550,7 +530,7 @@
                 <ondown>60</ondown>
                 <orientation>horizontal</orientation>
                 <include>squareshome</include>
-                <content target="video">$INFO[Skin.String(addonhome)]</content>
+                <content target="video">$INFO[Skin.String(movieshome)]</content>
             </control>
 
             <!--sources-->
@@ -692,7 +672,6 @@
                 <label>-</label>
                 <onclick>$INFO[Container(311).ListItem.FileNameAndPath]</onclick>
             </control>
-
             <control type="list" id="311">
                 <animation effect="fade" start="100" end="80" condition="!Control.HasFocus(888) + !Control.HasFocus(60)">Conditional</animation>
                 <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
@@ -953,7 +932,7 @@
                 <top>5</top>
                 <width>155</width>
                 <height>38</height>
-                <texture colordiffuse="design">white.png</texture>
+                <texture colordiffuse="yellow">white.png</texture>
             </control>
             <control type="image">
                 <top>49</top>
@@ -1020,7 +999,7 @@
                 <top>489</top>
                 <width>155</width>
                 <height>38</height>
-                <texture colordiffuse="design">white.png</texture>
+                <texture colordiffuse="yellow">white.png</texture>
             </control>
             <control type="button" id="700">
                 <visible>!Window.IsActive(Home)</visible>
@@ -1110,7 +1089,7 @@
             <font>font30</font>
         </control>
         <control type="label">
-            <visible>StringCompare(System.InternetState,Connected) + System.hasnetwork</visible>
+            <visible>!IsEmpty(network.ipaddress)</visible>
             <top>670</top>
             <left>1090</left>
             <width>136</width>
@@ -1122,7 +1101,7 @@
         </control>
         <control type="label">
             <top>672</top>
-            <left>330</left>
+            <centerleft>491</centerleft>
             <textcolor>yellow</textcolor>
             <font>font30</font>
             <width>330</width>

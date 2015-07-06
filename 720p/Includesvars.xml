@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<variable name="311label">
+		<value condition="Container(9000).HasFocus(10)">$LOCALIZE[1036]</value>
+
+		<value condition="Control.HasFocus(9000)">$INFO[Container(9000).ListItem.Label]</value>
+		<value condition="Container(9000).HasFocus(9)">$LOCALIZE[31000]</value>
+
+		<value condition="StringCompare(Skin.String(movieshome),videodb://recentlyaddedmovies/)">$LOCALIZE[31013]</value>
+		<value condition="StringCompare(Skin.String(movieshome),special://skin/resources/random.xsp)">$LOCALIZE[31014]</value>
+		<value condition="StringCompare(Skin.String(movieshome),special://skin/resources/laststarted.xsp)">$LOCALIZE[31015]</value>
+		<value condition="StringCompare(Skin.String(movieshome),videodb://recentlyaddedepisodes/)">$LOCALIZE[31016]</value>
+		<value condition="SubString(Skin.String(movieshome),recommendedepisodes)">$LOCALIZE[31017]</value>
+		<value condition="StringCompare(Skin.String(movieshome),videodb://tvshows/titles/)">$LOCALIZE[31018]</value>
+		<value>$INFO[Skin.String(movieshome)]</value>
+	</variable>
+</includes>

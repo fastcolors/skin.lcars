@@ -96,3 +96,27 @@ msgctxt "#31412"
 msgid "This tab signifies that there is a menu off to the side of this window that contains extra options for this section. To access the menu, navigate to the left with your remote control or keyboard or place your mouse pointer over the tab. [CR][CR]Click \"OK\" to close this dialogue. It will not appear again."
 msgstr "This tab signifies that there is a menu off to the side of this window that contains extra options for this section. To access the menu, navigate to the left with your remote control or keyboard or place your mouse pointer over the tab. [CR][CR]Click \"OK\" to close this dialog. It will not appear again."
 
+msgctxt "#31013"
+msgid "Recently Added Movies"
+msgstr "Recently Added Movies"
+
+msgctxt "#31014"
+msgid "Randomly Selected Movies"
+msgstr "Randomly Selected Movies"
+
+msgctxt "#31015"
+msgid "In progress Movies"
+msgstr "In Progress Movies"
+
+msgctxt "#31016"
+msgid "Recently Added Episodes"
+msgstr "Recently Added Episodes"
+
+msgctxt "#31017"
+msgid "Recommended Episodes"
+msgstr "Recommended Episodes"
+
+msgctxt "#31018"
+msgid "All Tv Shows"
+msgstr "All Tv Shows"
+

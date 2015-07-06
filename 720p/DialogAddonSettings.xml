@@ -20,7 +20,7 @@
 			<label>-</label>
 			<align>center</align>
 			<aligny>center</aligny>
-			<textcolor>darkblue</textcolor>
+			<textcolor>blue</textcolor>
 		</control>
 		<control type="grouplist" id="9">
 			<description>button area</description>

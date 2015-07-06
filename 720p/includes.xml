@@ -4,12 +4,9 @@
     <include file="ViewsVideoLibrary.xml"/>
     <include file="ViewsMusicLibrary.xml"/>
     <include file="ViewsAddonBrowser.xml"/>
-<<<<<<< Updated upstream
     <include file="ViewsPictures.xml"/>
     <include file="ViewsFileMode.xml"/>
-=======
     <include file="Includesvars.xml"/>
->>>>>>> Stashed changes
 
     <include file="weather/10DayForecast.xml"/>
     <include file="weather/36HourForecast.xml"/>

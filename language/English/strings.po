@@ -68,7 +68,6 @@ msgctxt "#31012"
 msgid "Self Destruct in "
 msgstr "Self Destruct in "
 
-<<<<<<< Updated upstream
 msgctxt "#31111"
 msgid "Hide"
 msgstr "Hide"
@@ -96,7 +95,7 @@ msgstr "First run help..."
 msgctxt "#31412"
 msgid "This tab signifies that there is a menu off to the side of this window that contains extra options for this section. To access the menu, navigate to the left with your remote control or keyboard or place your mouse pointer over the tab. [CR][CR]Click \"OK\" to close this dialogue. It will not appear again."
 msgstr "This tab signifies that there is a menu off to the side of this window that contains extra options for this section. To access the menu, navigate to the left with your remote control or keyboard or place your mouse pointer over the tab. [CR][CR]Click \"OK\" to close this dialog. It will not appear again."
-=======
+
 msgctxt "#31013"
 msgid "Recently Added Movies"
 msgstr "Recently Added Movies"
@@ -120,5 +119,4 @@ msgstr "Recommended Episodes"
 msgctxt "#31018"
 msgid "All Tv Shows"
 msgstr "All Tv Shows"
->>>>>>> Stashed changes
 

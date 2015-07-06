@@ -104,7 +104,7 @@
             <aligny>center</aligny>
             <invalidcolor>invalid</invalidcolor>
             <texturenofocus colordiffuse="design" border="20">whiterounded.png</texturenofocus>
-            <texturefocus colordiffuse="blue" border="20">whiterounded.png</texturefocus>
+            <texturefocus colordiffuse="white" border="20">whiterounded.png</texturefocus>
         </control>
         <control type="radiobutton" id="8">
             <description>Default RadioButton</description>

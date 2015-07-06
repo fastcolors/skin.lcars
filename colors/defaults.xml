@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <colors>
 	<color name="osd">AFF1F1F1</color>
-	<color name="white">FFF1F1F1</color>
+	<color name="white">FFffffff</color>
 	<color name="grey">FFb4b4b4</color>
 	<color name="grey2">FF999999</color>
 	<color name="grey3">FF505050</color>
 	<color name="black">FF000000</color>
-	<color name="blue">FF66A7FF</color>
-	<color name="selected">FFEB9E17</color>
-	<color name="invalid">FFFF0000</color>
-    <color name="design">FFDD7755</color>
-    <color name="red">FFdf2f34</color>
-    <color name="yellow">FFFFAA00</color>
+	<color name="blue">FF99ccff</color>
+	<color name="selected">FFffcc67</color>
+	<color name="invalid">FF3266cc</color>
+    <color name="design">FFcc6666</color>
+    <color name="red">FFff0000</color>
+    <color name="yellow">FFFFcc00</color>
 	<color name="green">FF3ad936</color>
-	<color name="purple">FFe6b0d4</color>
+	<color name="purple">FFcc99cc</color>
 </colors>

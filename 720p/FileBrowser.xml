@@ -141,7 +141,7 @@
                         <control type="image">
                             <height>40</height>
                             <width>420</width>
-                            <texture colordiffuse="blue" border="20">whiteallrounded.png</texture>
+                            <texture colordiffuse="white" border="20">whiteallrounded.png</texture>
                         </control>
 						<control type="label">
 							<left>55</left>
@@ -188,7 +188,7 @@
                         <control type="image">
                             <height>40</height>
                             <width>420</width>
-                            <texture colordiffuse="blue" border="20">whiteallrounded.png</texture>
+                            <texture colordiffuse="white" border="20">whiteallrounded.png</texture>
                         </control>
 						<control type="label">
 							<left>55</left>

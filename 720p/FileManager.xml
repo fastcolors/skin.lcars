@@ -153,13 +153,13 @@
 						<width>540</width>
 						<height>40</height>
 						<visible>!Control.HasFocus(20)</visible>
-						<texture flipx="true" colordiffuse="osd" border="20">whiterounded.png</texture>
+						<texture flipx="true" colordiffuse="grey" border="20">whiterounded.png</texture>
 					</control>
 					<control type="image">
 						<width>540</width>
 						<height>40</height>
 						<visible>Control.HasFocus(20)</visible>
-						<texture flipx="true" colordiffuse="green" border="20">whiterounded.png</texture>
+						<texture flipx="true" colordiffuse="white" border="20">whiterounded.png</texture>
 					</control>
 					<control type="label">
 						<left>7</left>
@@ -311,13 +311,13 @@
 						<width>540</width>
 						<height>40</height>
 						<visible>!Control.HasFocus(21)</visible>
-						<texture colordiffuse="osd" border="20">whiterounded.png</texture>
+						<texture colordiffuse="grey" border="20">whiterounded.png</texture>
 					</control>
 					<control type="image">
 						<width>540</width>
 						<height>40</height>
 						<visible>Control.HasFocus(21)</visible>
-						<texture colordiffuse="green" border="20">whiterounded.png</texture>
+						<texture colordiffuse="white" border="20">whiterounded.png</texture>
 					</control>
 					<control type="label">
 						<left>7</left>
@@ -379,7 +379,7 @@
 				<aligny>center</aligny>
 				<label>31008</label>
 				<texturenofocus colordiffuse="design" border="20">white.png</texturenofocus>
-				<texturefocus colordiffuse="green" border="20">white.png</texturefocus>
+				<texturefocus colordiffuse="white" border="20">white.png</texturefocus>
 				<onclick>ActivateWindow(home)</onclick>
 				<onleft>20</onleft>
 				<onright>20</onright>

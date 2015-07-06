@@ -932,7 +932,7 @@
                 <top>5</top>
                 <width>155</width>
                 <height>38</height>
-                <texture colordiffuse="design">white.png</texture>
+                <texture colordiffuse="yellow">white.png</texture>
             </control>
             <control type="image">
                 <top>49</top>
@@ -999,7 +999,7 @@
                 <top>489</top>
                 <width>155</width>
                 <height>38</height>
-                <texture colordiffuse="design">white.png</texture>
+                <texture colordiffuse="yellow">white.png</texture>
             </control>
             <control type="button" id="700">
                 <visible>!Window.IsActive(Home)</visible>

@@ -9,27 +9,29 @@
             <texture>settings.jpg</texture>
         </control>
         <include>allwindows</include>
-        <control type="grouplist" id="3">
-            <description>button area</description>
-            <top>101</top>
-            <left>13</left>
-            <width>155</width>
-            <height>530</height>
-            <itemgap>6</itemgap>
-            <onleft>5</onleft>
-            <onright>5</onright>
-            <onup>700</onup>
-            <ondown>20</ondown>
-        </control>
-        <control type="button" id="20">
-            <onup>3</onup>
-            <onright>702</onright>
-            <ondown>700</ondown>
-			<top>497</top>
-            <left>13</left>
-            <label>-</label>
-            <include>9000butts</include>
-            <onclick>SettingsLevelChange</onclick>
+        <control type="group" id="9000">
+            <control type="grouplist" id="3">
+				<description>button area</description>
+				<top>101</top>
+				<left>13</left>
+				<width>155</width>
+				<height>530</height>
+				<itemgap>6</itemgap>
+				<onleft>5</onleft>
+				<onright>5</onright>
+				<onup>noop</onup>
+				<ondown>20</ondown>
+            </control>
+            <control type="button" id="20">
+				<onup>3</onup>
+				<onright>5</onright>
+				<ondown>700</ondown>
+				<top>497</top>
+				<left>13</left>
+				<label>-</label>
+				<include>9000butts</include>
+				<onclick>SettingsLevelChange</onclick>
+            </control>
         </control>
         <control type="label">
             <left>20</left>

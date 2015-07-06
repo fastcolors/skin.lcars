@@ -37,9 +37,9 @@
                     <include>largebutton</include>
                     <label>$LOCALIZE[33003] $LOCALIZE[287]</label>
                     <texturenofocus colordiffuse="design" border="20">whiteallrounded.png</texturenofocus>
-                    <texturefocus colordiffuse="red" border="20">whiteallrounded.png</texturefocus>
+                    <texturefocus colordiffuse="white" border="20">whiteallrounded.png</texturefocus>
                     <alttexturenofocus colordiffuse="design" border="20">whiteallrounded.png</alttexturenofocus>
-					<alttexturefocus colordiffuse="blue" border="20">whiteallrounded.png</alttexturefocus>
+					<alttexturefocus colordiffuse="white" border="20">whiteallrounded.png</alttexturefocus>
 					<onclick>SetFocus(100,2)</onclick>
                     <onclick>Dialog.Close(VideoOSD)</onclick>
                     <onclick>ActivateWindow(SubtitleSearch)</onclick>
@@ -66,9 +66,9 @@
                     <include>largebutton</include>
                     <label>20176</label>
                     <texturenofocus colordiffuse="design" border="20">whiteallrounded.png</texturenofocus>
-                    <texturefocus colordiffuse="red" border="20">whiteallrounded.png</texturefocus>
+                    <texturefocus colordiffuse="white" border="20">whiteallrounded.png</texturefocus>
                     <alttexturenofocus colordiffuse="design" border="20">whiteallrounded.png</alttexturenofocus>
-					<alttexturefocus colordiffuse="blue" border="20">whiteallrounded.png</alttexturefocus>
+					<alttexturefocus colordiffuse="white" border="20">whiteallrounded.png</alttexturefocus>
 					<onclick>SetFocus(100,2)</onclick>
                     <onclick>close</onclick>
                     <onclick>ActivateWindow(142)</onclick>

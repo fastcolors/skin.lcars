@@ -85,7 +85,7 @@
 						<top>0</top>
 						<width>370</width>
 						<height>40</height>
-						<texture border="20" colordiffuse="green" >whiterounded.png</texture>
+						<texture border="20" colordiffuse="white" >whiterounded.png</texture>
 					</control>
 					<control type="label">
 						<left>10</left>

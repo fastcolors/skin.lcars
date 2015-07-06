@@ -90,13 +90,13 @@
 						<control type="image">
 							<width>270</width>
 							<height>40</height>
-							<texture  flipx="true" border="20" colordiffuse="green">whiterounded.png</texture>
+							<texture  flipx="true" border="20" colordiffuse="white">whiterounded.png</texture>
 							<visible>!Control.HasFocus(10)</visible>
 						</control>
 						<control type="image">
 							<width>270</width>
 							<height>40</height>
-							<texture  flipx="true" border="20" colordiffuse="green">whiterounded.png</texture>
+							<texture  flipx="true" border="20" colordiffuse="white">whiterounded.png</texture>
 							<visible>Control.HasFocus(10)</visible>
 						</control>
 						<control type="label">
@@ -174,7 +174,7 @@
 						<control type="image" id="14">
 							<width>40</width>
 							<height>40</height>
-							<texture border="20" colordiffuse="green">white.png</texture>
+							<texture border="20" colordiffuse="white">white.png</texture>
 						</control>
 						<control type="image" id="2">
 							<width>40</width>

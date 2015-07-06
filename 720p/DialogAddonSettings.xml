@@ -129,28 +129,28 @@
 			<width>150</width>
 			<align>center</align>
 			<aligny>center</aligny>
-			<textcolor>white</textcolor>
+			<textcolor>black</textcolor>
 			<pulseonselect>false</pulseonselect>
 		</control>
 		<control type="button" id="3">
 			<description>Default Button</description>
 			<height>40</height>
             <aligny>center</aligny>
-			<texturenofocus colordiffuse="55000000" border="20">whiteallrounded.png</texturenofocus>
-            <texturefocus colordiffuse="blue" border="20">whiteallrounded.png</texturefocus>
+			<texturenofocus colordiffuse="design" border="20">whiteallrounded.png</texturenofocus>
+            <texturefocus colordiffuse="white" border="20">whiteallrounded.png</texturefocus>
 		</control>
 		<control type="radiobutton" id="4">
 			<description>Default RadioButton</description>
 			<height>40</height>
             <aligny>center</aligny>
-			<texturenofocus colordiffuse="55000000" border="20">whiteallrounded.png</texturenofocus>
-            <texturefocus colordiffuse="blue" border="20">whiteallrounded.png</texturefocus>
+			<texturenofocus colordiffuse="design" border="20">whiteallrounded.png</texturenofocus>
+            <texturefocus colordiffuse="white" border="20">whiteallrounded.png</texturefocus>
 		</control>
 		<control type="spincontrolex" id="5">
 			<description>Default spincontrolex</description>
 			<height>40</height>
-			<texturenofocus colordiffuse="55000000" border="20">whiteallrounded.png</texturenofocus>
-            <texturefocus colordiffuse="blue" border="20">whiteallrounded.png</texturefocus>
+			<texturenofocus colordiffuse="design" border="20">whiteallrounded.png</texturenofocus>
+            <texturefocus colordiffuse="white" border="20">whiteallrounded.png</texturefocus>
 			<aligny>center</aligny>
 			<reverse>yes</reverse>
 		</control>
@@ -169,8 +169,8 @@
 			<description>Default Slider</description>
 			<height>40</height>
             <aligny>center</aligny>
-			<texturenofocus colordiffuse="55000000" border="20">whiteallrounded.png</texturenofocus>
-            <texturefocus colordiffuse="blue" border="20">whiteallrounded.png</texturefocus>
+			<texturenofocus colordiffuse="design" border="20">whiteallrounded.png</texturenofocus>
+            <texturefocus colordiffuse="white" border="20">whiteallrounded.png</texturefocus>
 		</control>
 	</controls>
 </window>

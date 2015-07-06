@@ -610,7 +610,7 @@
 						<description>Cast/Review</description>
 						<width>150</width>
 						<texturenofocus colordiffuse="design"  flipx="true" border="20">whiterounded.png</texturenofocus>
-						<texturefocus colordiffuse="green"  flipx="true" border="20">whiterounded.png</texturefocus>
+						<texturefocus colordiffuse="white"  flipx="true" border="20">whiterounded.png</texturefocus>
 						<align>center</align>
 						<aligny>center</aligny>
 						<label>206</label>
@@ -619,7 +619,7 @@
 						<description>Refresh</description>
 						<width>150</width>
 						<texturenofocus colordiffuse="design" border="20">white.png</texturenofocus>
-						<texturefocus colordiffuse="green" border="20">white.png</texturefocus>
+						<texturefocus colordiffuse="white" border="20">white.png</texturefocus>
 						<align>center</align>
 						<aligny>center</aligny>
 						<label>184</label>
@@ -628,7 +628,7 @@
 						<description>Get Thumb</description>
 						<width>150</width>
 						<texturenofocus colordiffuse="design" border="20">white.png</texturenofocus>
-						<texturefocus colordiffuse="green" border="20">white.png</texturefocus>
+						<texturefocus colordiffuse="white" border="20">white.png</texturefocus>
 						<align>center</align>
 						<aligny>center</aligny>
 						<label>13405</label>
@@ -637,7 +637,7 @@
 						<description>Get Fanart</description>
 						<width>150</width>
 						<texturenofocus colordiffuse="design" border="20">whiterounded.png</texturenofocus>
-						<texturefocus colordiffuse="green" border="20">whiterounded.png</texturefocus>
+						<texturefocus colordiffuse="white" border="20">whiterounded.png</texturefocus>
 						<align>center</align>
 						<aligny>center</aligny>
 						<label>20413</label>

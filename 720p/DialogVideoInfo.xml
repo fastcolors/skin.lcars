@@ -643,7 +643,7 @@
 					<control type="button" id="8">
 						<description>Play/browse to Show</description>
 						<texturenofocus colordiffuse="design"  flipx="true" border="20">whiterounded.png</texturenofocus>
-						<texturefocus colordiffuse="green"  flipx="true" border="20">whiterounded.png</texturefocus>
+						<texturefocus colordiffuse="white"  flipx="true" border="20">whiterounded.png</texturefocus>
 						<width>150</width>
 						<label>208</label>
 						<altlabel>1024</altlabel>
@@ -654,7 +654,7 @@
 					<control type="button" id="5">
 						<description>Cast/Review</description>
 						<texturenofocus colordiffuse="design" border="20">white.png</texturenofocus>
-						<texturefocus colordiffuse="green" border="20">white.png</texturefocus>
+						<texturefocus colordiffuse="white" border="20">white.png</texturefocus>
 						<width>150</width>
 						<align>center</align>
 						<aligny>center</aligny>
@@ -662,7 +662,7 @@
 					<control type="button" id="6">
 						<description>Refresh</description>
 						<texturenofocus colordiffuse="design" border="20">white.png</texturenofocus>
-						<texturefocus colordiffuse="green" border="20">white.png</texturefocus>
+						<texturefocus colordiffuse="white" border="20">white.png</texturefocus>
 						<width>150</width>
 						<label>184</label>
 						<align>center</align>
@@ -671,7 +671,7 @@
 					<control type="button" id="10">
 						<description>Get Thumb</description>
 						<texturenofocus colordiffuse="design" border="20">white.png</texturenofocus>
-						<texturefocus colordiffuse="green" border="20">white.png</texturefocus>
+						<texturefocus colordiffuse="white" border="20">white.png</texturefocus>
 						<width>150</width>
 						<label>13511</label>
 						<align>center</align>
@@ -680,7 +680,7 @@
 					<control type="button" id="11">
 						<description>Play Trailer</description>
 						<texturenofocus colordiffuse="design" border="20">white.png</texturenofocus>
-						<texturefocus colordiffuse="green" border="20">white.png</texturefocus>
+						<texturefocus colordiffuse="white" border="20">white.png</texturefocus>
 						<width>150</width>
 						<label>20410</label>
 						<align>center</align>
@@ -691,7 +691,7 @@
 						<description>Fetch TvTunes stuff</description>
 						<width>150</width>
 						<texturenofocus colordiffuse="design" border="20">whiterounded.png</texturenofocus>
-						<texturefocus colordiffuse="green" border="20">whiterounded.png</texturefocus>
+						<texturefocus colordiffuse="white" border="20">whiterounded.png</texturefocus>
 						<label>TvTunes</label>
 						<align>center</align>
 						<aligny>center</aligny>

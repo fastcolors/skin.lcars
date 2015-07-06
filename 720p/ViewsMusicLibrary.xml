@@ -126,7 +126,7 @@
                     <animation effect="fade" start="100" end="50" condition="!Control.Hasfocus(501)" reversible="true">Conditional</animation>
                     <width>300</width>
                     <height>40</height>
-                    <texture flipx="true" border="20" colordiffuse="blue">whiterounded.png</texture>
+                    <texture flipx="true" border="20" colordiffuse="white">whiterounded.png</texture>
                 </control>
                 <control type="label">
                     <width>290</width>
@@ -168,7 +168,7 @@
                     <animation effect="fade" start="100" end="50" condition="!Control.Hasfocus(300)" reversible="true">Conditional</animation>
                     <width>300</width>
                     <height>40</height>
-                    <texture flipx="true" border="20" colordiffuse="blue">whiterounded.png</texture>
+                    <texture flipx="true" border="20" colordiffuse="white">whiterounded.png</texture>
                 </control>
                 <control type="label">
                     <width>290</width>
@@ -211,7 +211,7 @@
                     <animation effect="fade" start="100" end="50" condition="!Control.Hasfocus(301)" reversible="true">Conditional</animation>
                     <width>300</width>
                     <height>40</height>
-                    <texture flipx="true" border="20" colordiffuse="blue">whiterounded.png</texture>
+                    <texture flipx="true" border="20" colordiffuse="white">whiterounded.png</texture>
                 </control>
                 <control type="label">
                     <width>290</width>
@@ -275,7 +275,7 @@
                     <animation effect="fade" start="100" end="50" condition="!Control.Hasfocus(501)" reversible="true">Conditional</animation>
                     <width>400</width>
                     <height>40</height>
-                    <texture flipx="true" border="20" colordiffuse="blue">whiterounded.png</texture>
+                    <texture flipx="true" border="20" colordiffuse="white">whiterounded.png</texture>
                 </control>
                 <control type="label">
                     <width>390</width>

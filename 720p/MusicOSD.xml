@@ -31,9 +31,9 @@
                <control type="togglebutton" id="701">
                     <include>largebutton</include>
                     <texturenofocus colordiffuse="design" border="20">whiteallrounded.png</texturenofocus>
-                    <texturefocus colordiffuse="red" border="20">whiteallrounded.png</texturefocus>
+                    <texturefocus colordiffuse="white" border="20">whiteallrounded.png</texturefocus>
                     <alttexturenofocus colordiffuse="design" border="20">whiteallrounded.png</alttexturenofocus>
-					<alttexturefocus colordiffuse="blue" border="20">whiteallrounded.png</alttexturefocus>
+					<alttexturefocus colordiffuse="white" border="20">whiteallrounded.png</alttexturefocus>
 					<label>LYRICS</label>
                     <onleft>607</onleft>
                     <onright>500</onright>

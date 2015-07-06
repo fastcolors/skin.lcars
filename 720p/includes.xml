@@ -931,9 +931,9 @@
         <width>155</width>
         <height>38</height>
         <texturenofocus colordiffuse="yellow">white.png</texturenofocus>
-        <texturefocus colordiffuse="blue">white.png</texturefocus>
+        <texturefocus colordiffuse="white">white.png</texturefocus>
         <alttexturenofocus colordiffuse="yellow">white.png</alttexturenofocus>
-        <alttexturefocus colordiffuse="blue">white.png</alttexturefocus>
+        <alttexturefocus colordiffuse="white">white.png</alttexturefocus>
         <aligny>bottom</aligny>
         <font>font16</font>
         <align>right</align>
@@ -953,7 +953,7 @@
                 <top>5</top>
                 <width>155</width>
                 <height>38</height>
-                <texture colordiffuse="yellow">white.png</texture>
+                <texture colordiffuse="design">white.png</texture>
             </control>
             <control type="image">
                 <top>49</top>
@@ -1020,7 +1020,7 @@
                 <top>489</top>
                 <width>155</width>
                 <height>38</height>
-                <texture colordiffuse="yellow">white.png</texture>
+                <texture colordiffuse="design">white.png</texture>
             </control>
             <control type="button" id="700">
                 <visible>!Window.IsActive(Home)</visible>
@@ -1148,9 +1148,9 @@
         <width>85</width>
         <height>40</height>
         <texturenofocus border="20" colordiffuse="lightblue">whiteallrounded.png</texturenofocus>
-        <texturefocus border="20" colordiffuse="lightgreen">whiteallrounded.png</texturefocus>
+        <texturefocus border="20" colordiffuse="white">whiteallrounded.png</texturefocus>
         <alttexturenofocus border="20" colordiffuse="blue">whiteallrounded.png</alttexturenofocus>
-        <alttexturefocus border="20" colordiffuse="green">whiteallrounded.png</alttexturefocus>
+        <alttexturefocus border="20" colordiffuse="white">whiteallrounded.png</alttexturefocus>
         <align>center</align>
         <aligny>center</aligny>
         <textoffsetx>0</textoffsetx>
@@ -1170,7 +1170,7 @@
         <height>40</height>
         <align>center</align>
         <aligny>center</aligny>
-        <texturefocus colordiffuse="red" border="20">whiteallrounded.png</texturefocus>
+        <texturefocus colordiffuse="white" border="20">whiteallrounded.png</texturefocus>
     </include>
 
     <include name="winding">

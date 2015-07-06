@@ -260,7 +260,7 @@
 				<control type="button" id="14" description="Decrease Rating">
                     <width>150</width>
                     <texturenofocus colordiffuse="design"  flipx="true" border="20">whiterounded.png</texturenofocus>
-					<texturefocus colordiffuse="green"  flipx="true" border="20">whiterounded.png</texturefocus>
+					<texturefocus colordiffuse="white"  flipx="true" border="20">whiterounded.png</texturefocus>
 					<align>center</align>
 					<aligny>center</aligny>
 					<label>-  $LOCALIZE[563]</label>
@@ -269,7 +269,7 @@
                 <control type="button" id="15" description="Increase Rating">
                     <width>150</width>
                     <texturenofocus colordiffuse="design" border="20">white.png</texturenofocus>
-					<texturefocus colordiffuse="green" border="20">white.png</texturefocus>
+					<texturefocus colordiffuse="white" border="20">white.png</texturefocus>
 					<align>center</align>
 					<aligny>center</aligny>
 					<label>+ $LOCALIZE[563]</label>
@@ -278,7 +278,7 @@
                 <control type="button" id="12" description="Album Info">
                     <width>150</width>
                     <texturenofocus colordiffuse="design" border="20">white.png</texturenofocus>
-					<texturefocus colordiffuse="green" border="20">white.png</texturefocus>
+					<texturefocus colordiffuse="white" border="20">white.png</texturefocus>
 					<align>center</align>
 					<aligny>center</aligny>
 					<label>10523</label>
@@ -286,7 +286,7 @@
                 <control type="button" id="13" description="Get Thumb">
                     <width>150</width>
                     <texturenofocus colordiffuse="design" border="20">white.png</texturenofocus>
-					<texturefocus colordiffuse="green" border="20">white.png</texturefocus>
+					<texturefocus colordiffuse="white" border="20">white.png</texturefocus>
 					<align>center</align>
 					<aligny>center</aligny>
 					<label>13405</label>
@@ -294,7 +294,7 @@
                 <control type="button" id="10" description="Save rating">
                     <width>150</width>
                     <texturenofocus colordiffuse="design" border="20">whiterounded.png</texturenofocus>
-					<texturefocus colordiffuse="green" border="20">whiterounded.png</texturefocus>
+					<texturefocus colordiffuse="white" border="20">whiterounded.png</texturefocus>
 					<align>center</align>
 					<aligny>center</aligny>
 					<label>186</label>

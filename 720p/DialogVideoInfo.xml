@@ -26,12 +26,12 @@
 				<top>22</top>
 				<width>1250</width>
 				<height>600</height>
-				<texture border="130">dialog.png</texture>
+				<texture border="130">dialog2.png</texture>
 			</control>
 			<control type="button">
 				<description>Close Window button</description>
-				<left>212</left>
-				<top>38</top>
+				<left>220</left>
+				<top>50</top>
 				<width>30</width>
 				<height>30</height>
 				<label>-</label>
@@ -46,10 +46,11 @@
 				<visible>system.getbool(input.enablemouse)</visible>
 			</control>
 			<control type="image">
-				<centerleft>400</centerleft>
-				<centertop>240</centertop>
+				<centerleft>540</centerleft>
+				<centertop>420</centertop>
 				<width>330</width>
 				<height>330</height>
+				<aligny>top</aligny>
 				<aspectratio>keep</aspectratio>
 				<bordertexture border="5">white.png</bordertexture>
 				<bordersize>4</bordersize>
@@ -58,8 +59,8 @@
 
 			<control type="group">
 				<visible>[!container.content(tvshows) + !container.content(episodes) + !container.content(musicvideos)] + ![Control.HasFocus(12) | Control.HasFocus(15)]</visible>
-				<top>20</top>
-				<left>210</left>
+				<top>-360</top>
+				<left>250</left>
 				<include>VisibleFadeEffect</include>
 				<control type="panel" id="49">
 					<left>90</left>
@@ -189,8 +190,8 @@
 			</control>
 			<control type="group">
 				<visible>Container.Content(TVShows) + !Control.HasFocus(12)</visible>
-				<top>20</top>
-				<left>210</left>
+				<top>-360</top>
+				<left>250</left>
 				<control type="panel" id="49">
 					<left>90</left>
 					<top>400</top>
@@ -289,8 +290,8 @@
 			</control>
 			<control type="group">
 				<visible>container.content(episodes) + !Control.HasFocus(12)</visible>
-				<top>20</top>
-				<left>210</left>
+				<top>-360</top>
+				<left>250</left>
 				<control type="panel" id="49">
 					<left>90</left>
 					<top>400</top>
@@ -414,8 +415,8 @@
 			</control>
 			<control type="group">
 				<visible>container.content(musicvideos) + !Control.HasFocus(12)</visible>
-				<top>20</top>
-				<left>210</left>
+				<top>-360</top>
+				<left>250</left>
 				<control type="image">
 					<centerleft>210</centerleft>
 					<centertop>240</centertop>
@@ -550,21 +551,13 @@
 				<textcolor>-</textcolor>
 				<showonepage>true</showonepage>
 			</control>
-			<control type="image">
-				<centerleft>900</centerleft>
-				<top>40</top>
-				<width>650</width>
-				<height>390</height>
-				<colordiffuse>blue</colordiffuse>
-				<texture border="80">videowindowbg.png</texture>
-			</control>
 			<control type="textbox" id="400">
 				<description>Description Value for Movies</description>
-				<centerleft>900</centerleft>
+				<centerleft>1055</centerleft>
 				<visible>!Control.IsVisible(50)</visible>
-				<top>88</top>
-				<width>500</width>
-				<height>300</height>
+				<centertop>400</centertop>
+				<width>400</width>
+				<height>330</height>
 				<font>font14</font>
 				<align>justify</align>
 				<textcolor>white</textcolor>
@@ -574,8 +567,8 @@
 			</control>
 			<control type="label">
 				<visible>Control.IsVisible(50)</visible>
-				<centerleft>900</centerleft>
-				<top>370</top>
+				<centerleft>1055</centerleft>
+				<top>100r</top>
 				<width>500</width>
 				<font>font14</font>
 				<align>center</align>
@@ -583,10 +576,10 @@
 				<label>$INFO[Container(50).ListItem.Label]$INFO[Container(50).ListItem.Label2, as ,]</label>
 			</control>
 			<control type="panel" id="50">
-				<centerleft>900</centerleft>
-				<top>88</top>
-				<width>500</width>
-				<height>280</height>
+				<centerleft>1055</centerleft>
+				<centertop>400</centertop>
+				<width>400</width>
+				<height>330</height>
 				<onleft>61</onleft>
 				<onright>9000</onright>
 				<onup>9000</onup>
@@ -617,8 +610,8 @@
 				</focusedlayout>
 			</control>
 			<control type="grouplist" id="9000">
-				<left>240</left>
-				<top>560</top>
+				<left>280</left>
+				<top>165</top>
 				<width>1030</width>
 				<height>50</height>
 				<itemgap>2</itemgap>
@@ -627,7 +620,7 @@
 				<onleft>9000</onleft>
 				<onright>9000</onright>
 				<onup>50</onup>
-				<ondown>9000</ondown>
+				<ondown>50</ondown>
 				<control type="button" id="8">
 					<description>Play/browse to Show</description>
 					<texturenofocus colordiffuse="design"  flipx="true" border="20">whiterounded.png</texturenofocus>
@@ -688,6 +681,5 @@
 				</control>
 			</control>
 		</control>
-		<include>Clock</include>
 	</controls>
 </window>

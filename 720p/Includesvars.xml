@@ -22,7 +22,7 @@
 		<!--GENRAL-->
 		<value>$INFO[Container(9000).ListItem.Label]</value>
 	</variable>
-	
+
 	<variable name="MediaFlag_MPAA">
 		<!-- US (IMDB) -->
 		<value condition="[SubString(Container(311).ListItem.MPAA,Rated R,Left)] | [!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,Rated R,Left)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,Rated R,Left)]">R</value>

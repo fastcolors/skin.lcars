@@ -963,7 +963,6 @@
             <height>39</height>
             <texture colordiffuse="design">bullet.png</texture>
         </control>
-
         <control type="image">
             <top>669</top>
             <left>660</left>
@@ -986,21 +985,21 @@
             <texture colordiffuse="purple">white.png</texture>
         </control>
         <control type="label">
-            <top>9</top>
-            <left>1030</left>
+            <top>8</top>
+            <left>1020</left>
             <height>25</height>
-            <width>200</width>
-            <font>font30</font>
+            <width>210</width>
+            <font>font16</font>
             <align>left</align>
             <textcolor>yellow</textcolor>
-            <label>U.S.S. $INFO[System.FriendlyName]</label>
+            <label>U.S.S. $INFO[System.ProfileName]</label>
         </control>
         <control type="label">
-            <top>35</top>
-            <left>1030</left>
+            <top>33</top>
+            <left>1020</left>
             <height>25</height>
             <width>200</width>
-            <font>font13_title</font>
+            <font>font16</font>
             <align>left</align>
             <textcolor>yellow</textcolor>
             <label>ncc 1929-A</label>

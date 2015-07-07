@@ -37,8 +37,8 @@
 				<label>-</label>
 				<font>-</font>
 				<onclick>PreviousMenu</onclick>
-				<texturefocus>closefocus.png</texturefocus>
-				<texturenofocus>close.png</texturenofocus>
+				<texturefocus>DefaultIconError.png</texturefocus>
+				<texturenofocus>DefaultIconError.png</texturenofocus>
 				<onleft>3</onleft>
 				<onright>3</onright>
 				<onup>3</onup>
@@ -555,10 +555,10 @@
 				<description>Description Value for Movies</description>
 				<centerleft>1055</centerleft>
 				<visible>!Control.IsVisible(50)</visible>
-				<centertop>400</centertop>
+				<centertop>420</centertop>
 				<width>400</width>
-				<height>330</height>
-				<font>font14</font>
+				<height>370</height>
+				<font>font13</font>
 				<align>justify</align>
 				<textcolor>white</textcolor>
 				<pagecontrol>61</pagecontrol>

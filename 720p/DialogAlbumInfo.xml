@@ -596,9 +596,9 @@
 				</control>
 				<control type="grouplist" id="9000">
 					<left>240</left>
-					<top>660</top>
+					<top>654</top>
 					<width>1030</width>
-					<height>40</height>
+					<height>44</height>
 					<itemgap>2</itemgap>
 					<align>center</align>
 					<orientation>horizontal</orientation>

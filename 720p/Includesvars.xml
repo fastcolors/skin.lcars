@@ -1,26 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<variable name="311label">
+		<!--9000 FOCUSED-->
 		<value condition="Control.HasFocus(9000)">$INFO[Container(9000).ListItem.Label]</value>
-
+		<!--MOVIES-->
 		<value condition="Container(9000).HasFocus(1) + StringCompare(Skin.String(movieshome),videodb://recentlyaddedmovies/)">$LOCALIZE[31013]</value>
 		<value condition="Container(9000).HasFocus(1) + StringCompare(Skin.String(movieshome),special://skin/resources/random.xsp)">$LOCALIZE[31014]</value>
 		<value condition="Container(9000).HasFocus(1) + StringCompare(Skin.String(movieshome),special://skin/resources/laststarted.xsp)">$LOCALIZE[31015]</value>
-
+		<!--TVSHOWS-->
 		<value condition="Container(9000).HasFocus(2) + StringCompare(Skin.String(tvshowshome),videodb://recentlyaddedepisodes/)">$LOCALIZE[31016]</value>
 		<value condition="Container(9000).HasFocus(2) + SubString(Skin.String(tvshowshome),recommendedepisodes)">$LOCALIZE[31017]</value>
 		<value condition="Container(9000).HasFocus(2) + StringCompare(Skin.String(tvshowshome),videodb://tvshows/titles/)">$LOCALIZE[31018]</value>
-
+		<!--MUSIC-->
 		<value condition="Container(9000).HasFocus(3) + StringCompare(Skin.String(musichome),musicdb://recentlyaddedalbums/)">$LOCALIZE[359]</value>
 		<value condition="Container(9000).HasFocus(3) + StringCompare(Skin.String(musichome),musicdb://albums/)">$LOCALIZE[31020]</value>
 		<value condition="Container(9000).HasFocus(3) + StringCompare(Skin.String(musichome),musicdb://artists/)">$LOCALIZE[31021]</value>
-
+		<!--ADDONS-->
 		<value condition="Container(9000).HasFocus(4) + StringCompare(Skin.String(addonshome),addons://sources/video/)">$LOCALIZE[1037]</value>
 		<value condition="Container(9000).HasFocus(4) + StringCompare(Skin.String(addonshome),addons://sources/audio/)">$LOCALIZE[1038]</value>
 		<value condition="Container(9000).HasFocus(4) + StringCompare(Skin.String(addonshome),addons://sources/executable/)">$LOCALIZE[1043]</value>
-
+		<!--GENRAL-->
 		<value>$INFO[Container(9000).ListItem.Label]</value>
 	</variable>
+	
 	<variable name="MediaFlag_MPAA">
 		<!-- US (IMDB) -->
 		<value condition="[SubString(Container(311).ListItem.MPAA,Rated R,Left)] | [!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,Rated R,Left)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,Rated R,Left)]">R</value>

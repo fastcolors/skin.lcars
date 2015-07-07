@@ -14,7 +14,7 @@
 			<animation effect="slide" start="0,0" end="1100,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
 			<control type="image">
 				<description>background image</description>
-				<left>600r</left>
+				<left>570r</left>
 				<top>20</top>
 				<width>600</width>
 				<height>600</height>
@@ -22,7 +22,7 @@
 			</control>
 			<control type="button">
 				<description>Close Window button</description>
-				<left>580r</left>
+				<left>550r</left>
 				<top>38</top>
 				<width>30</width>
 				<height>30</height>
@@ -38,7 +38,7 @@
 				<visible>system.getbool(input.enablemouse)</visible>
 			</control>
 			<control type="image">
-				<left>400r</left>
+				<left>370r</left>
 				<top>30</top>
 				<width>200</width>
 				<height>200</height>
@@ -49,7 +49,7 @@
                 <bordersize>4</bordersize>
 			</control>
 			<control type="list" id="450">
-				<left>480r</left>
+				<left>450r</left>
 				<top>250</top>
 				<width>450</width>
 				<height>380</height>

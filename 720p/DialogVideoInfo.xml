@@ -582,7 +582,7 @@
 					<onup>9000</onup>
 					<ondown>9000</ondown>
 					<viewtype label="">list</viewtype>
-					<pagecontrol>61</pagecontrol>
+					<pagecontrol>-</pagecontrol>
 					<scrolltime>200</scrolltime>
 					<orientation>vertical</orientation>
 					<itemlayout height="170" width="500">

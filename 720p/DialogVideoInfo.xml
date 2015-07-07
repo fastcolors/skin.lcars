@@ -556,7 +556,7 @@
 				<width>650</width>
 				<height>390</height>
 				<colordiffuse>blue</colordiffuse>
-				<texture border="40">videowindowbg.png</texture>
+				<texture border="80">videowindowbg.png</texture>
 			</control>
 			<control type="textbox" id="400">
 				<description>Description Value for Movies</description>
@@ -572,11 +572,21 @@
 				<label>$INFO[ListItem.Plot]</label>
 				<autoscroll time="3000" delay="4000" repeat="5000">!Control.HasFocus(61) + Skin.HasSetting(AutoScroll)</autoscroll>
 			</control>
+			<control type="label">
+				<visible>Control.IsVisible(50)</visible>
+				<centerleft>900</centerleft>
+				<top>370</top>
+				<width>500</width>
+				<font>font14</font>
+				<align>center</align>
+				<textcolor>yellow</textcolor>
+				<label>$INFO[Container(50).ListItem.Label]$INFO[Container(50).ListItem.Label2, as ,]</label>
+			</control>
 			<control type="panel" id="50">
 				<centerleft>900</centerleft>
 				<top>88</top>
 				<width>500</width>
-				<height>300</height>
+				<height>280</height>
 				<onleft>61</onleft>
 				<onright>9000</onright>
 				<onup>9000</onup>
@@ -585,46 +595,24 @@
 				<pagecontrol>-</pagecontrol>
 				<scrolltime>200</scrolltime>
 				<orientation>vertical</orientation>
-				<itemlayout height="170" width="500">
+				<itemlayout height="140" width="100">
 					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>160</width>
-						<height>160</height>
-						<bordertexture border="5">white.png</bordertexture>
-						<bordersize>4</bordersize>
+						<centerleft>50</centerleft>
+						<top>10</top>
+						<width>72</width>
+						<height>122</height>
 						<texture border="5">$INFO[ListItem.Icon]</texture>
-					</control>
-					<control type="textbox">
-						<left>180</left>
-						<top>0</top>
-						<width>300</width>
-						<font>font14</font>
-						<align>left</align>
-						<aligny>center</aligny>
-						<textcolor>white</textcolor>
-						<label>$INFO[ListItem.Label] $INFO[ListItem.Label2, as  , ]</label>
 					</control>
 				</itemlayout>
-				<focusedlayout height="170" width="500">
+				<focusedlayout height="140" width="100">
 					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>160</width>
-						<height>160</height>
+						<centerleft>50</centerleft>
+						<top>6</top>
+						<width>80</width>
+						<height>130</height>
 						<bordertexture border="5">white.png</bordertexture>
 						<bordersize>4</bordersize>
 						<texture border="5">$INFO[ListItem.Icon]</texture>
-					</control>
-					<control type="textbox">
-						<left>180</left>
-						<top>0</top>
-						<width>300</width>
-						<font>font14</font>
-						<align>left</align>
-						<aligny>center</aligny>
-						<textcolor>yellow</textcolor>
-						<label>$INFO[ListItem.Label] $INFO[ListItem.Label2, as  , ]</label>
 					</control>
 				</focusedlayout>
 			</control>

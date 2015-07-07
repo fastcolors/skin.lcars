@@ -120,3 +120,11 @@ msgctxt "#31018"
 msgid "All Tv Shows"
 msgstr "All Tv Shows"
 
+msgctxt "#31020"
+msgid "All Albums"
+msgstr "All Albums"
+
+msgctxt "#31021"
+msgid "All Artists"
+msgstr "All Artists"
+

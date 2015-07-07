@@ -1,68 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<variable name="311label">
-		<value condition="Container(9000).HasFocus(10)">$LOCALIZE[1036]</value>
-
 		<value condition="Control.HasFocus(9000)">$INFO[Container(9000).ListItem.Label]</value>
-		<value condition="Container(9000).HasFocus(9)">$LOCALIZE[31000]</value>
 
-		<value condition="StringCompare(Skin.String(movieshome),videodb://recentlyaddedmovies/)">$LOCALIZE[31013]</value>
-		<value condition="StringCompare(Skin.String(movieshome),special://skin/resources/random.xsp)">$LOCALIZE[31014]</value>
-		<value condition="StringCompare(Skin.String(movieshome),special://skin/resources/laststarted.xsp)">$LOCALIZE[31015]</value>
-		<value condition="StringCompare(Skin.String(movieshome),videodb://recentlyaddedepisodes/)">$LOCALIZE[31016]</value>
-		<value condition="SubString(Skin.String(movieshome),recommendedepisodes)">$LOCALIZE[31017]</value>
-		<value condition="StringCompare(Skin.String(movieshome),videodb://tvshows/titles/)">$LOCALIZE[31018]</value>
-		<value>$INFO[Skin.String(movieshome)]</value>
+		<value condition="Container(9000).HasFocus(1) + StringCompare(Skin.String(movieshome),videodb://recentlyaddedmovies/)">$LOCALIZE[31013]</value>
+		<value condition="Container(9000).HasFocus(1) + StringCompare(Skin.String(movieshome),special://skin/resources/random.xsp)">$LOCALIZE[31014]</value>
+		<value condition="Container(9000).HasFocus(1) + StringCompare(Skin.String(movieshome),special://skin/resources/laststarted.xsp)">$LOCALIZE[31015]</value>
+
+		<value condition="Container(9000).HasFocus(2) + StringCompare(Skin.String(tvshowshome),videodb://recentlyaddedepisodes/)">$LOCALIZE[31016]</value>
+		<value condition="Container(9000).HasFocus(2) + SubString(Skin.String(tvshowshome),recommendedepisodes)">$LOCALIZE[31017]</value>
+		<value condition="Container(9000).HasFocus(2) + StringCompare(Skin.String(tvshowshome),videodb://tvshows/titles/)">$LOCALIZE[31018]</value>
+
+		<value condition="Container(9000).HasFocus(3) + StringCompare(Skin.String(musichome),musicdb://recentlyaddedalbums/)">$LOCALIZE[359]</value>
+		<value condition="Container(9000).HasFocus(3) + StringCompare(Skin.String(musichome),musicdb://albums/)">$LOCALIZE[31020]</value>
+		<value condition="Container(9000).HasFocus(3) + StringCompare(Skin.String(musichome),musicdb://artists/)">$LOCALIZE[31021]</value>
+
+		<value condition="Container(9000).HasFocus(4) + StringCompare(Skin.String(addonshome),addons://sources/video/)">$LOCALIZE[1037]</value>
+		<value condition="Container(9000).HasFocus(4) + StringCompare(Skin.String(addonshome),addons://sources/audio/)">$LOCALIZE[1038]</value>
+		<value condition="Container(9000).HasFocus(4) + StringCompare(Skin.String(addonshome),addons://sources/executable/)">$LOCALIZE[1043]</value>
+
+		<value>$INFO[Container(9000).ListItem.Label]</value>
 	</variable>
 	<variable name="MediaFlag_MPAA">
-        <!-- US (IMDB) -->
-        <value condition="[SubString(Container(311).ListItem.MPAA,Rated R,Left)] | [!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,Rated R,Left)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,Rated R,Left)]">R</value>
-        <value condition="[SubString(Container(311).ListItem.MPAA,Rated Rated PG-13,Left)] | [!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,Rated PG-13,Left)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,Rated PG-13,Left)]">PG 13</value>
-        <value condition="[SubString(Container(311).ListItem.MPAA,Rated PG,Left)] | [!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,Rated PG,Left)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,Rated PG,Left)]">PG</value>
-        <value condition="[SubString(Container(311).ListItem.MPAA,Rated NC,Left)] | [!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,Rated NC,Left)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,Rated NC,Left)]">NC 17</value>
-        <value condition="[SubString(Container(311).ListItem.MPAA,Rated G,Left)] | [!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,Rated G,Left)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,Rated G,Left)]">G</value>
-        <!-- US (TMDB) -->
-        <value condition="[SubString(Container(311).ListItem.MPAA,R)] | [!IsEmpty(ListItem.mpaa) + StringCompare(ListItem.mpaa,R)] | [IsEmpty(ListItem.mpaa) + StringCompare(VideoPlayer.mpaa,R)]">R</value>
-        <value condition="[SubString(Container(311).ListItem.MPAA,PG-13)] | [!IsEmpty(ListItem.mpaa) + StringCompare(ListItem.mpaa,PG-13)] | [IsEmpty(ListItem.mpaa) + StringCompare(VideoPlayer.mpaa,PG-13)]">PG 13</value>
-        <value condition="[SubString(Container(311).ListItem.MPAA,PG)] | [!IsEmpty(ListItem.mpaa) + StringCompare(ListItem.mpaa,PG)] | [IsEmpty(ListItem.mpaa) + StringCompare(VideoPlayer.mpaa,PG)]">PG</value>
-        <value condition="[SubString(Container(311).ListItem.MPAA,NC-17)] | [!IsEmpty(ListItem.mpaa) + StringCompare(ListItem.mpaa,NC-17)] | [IsEmpty(ListItem.mpaa) + StringCompare(VideoPlayer.mpaa,NC-17)]">NC 17</value>
-        <value condition="[SubString(Container(311).ListItem.MPAA,G)] | [!IsEmpty(ListItem.mpaa) + StringCompare(ListItem.mpaa,G)] | [IsEmpty(ListItem.mpaa) + StringCompare(VideoPlayer.mpaa,G)]">G</value>
-        <!-- US (TV) -->
-        <value condition="[SubString(Container(311).ListItem.MPAA,TV-MA)] | [!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,TV-MA)]">TV-MA</value>
-        <value condition="[SubString(Container(311).ListItem.MPAA,TV-Y)] | [!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,TV-Y)]">TV-Y</value>
-        <value condition="[SubString(Container(311).ListItem.MPAA,TV-Y7)] | [!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,TV-Y7)]">TV-Y7</value>
-        <value condition="[SubString(Container(311).ListItem.MPAA,TV-G)] | [!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,TV-G)]">TV-G</value>
-        <value condition="[SubString(Container(311).ListItem.MPAA,TV-PG)] | [!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,TV-PG)]">TV-PG</value>
-        <value condition="[SubString(Container(311).ListItem.MPAA,TV-14)] | [!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,TV-14)]">TV-14</value>
-        <!-- Germany -->
-        <value condition="[SubString(Container(311).ListItem.MPAA,Germany:0)] | [!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,Germany:0)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,Germany:0)]">0</value>
-        <value condition="[SubString(Container(311).ListItem.MPAA,Germany:6)] | [!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,Germany:6)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,Germany:6)]">6</value>
-        <value condition="[SubString(Container(311).ListItem.MPAA,Germany:12)] | [!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,Germany:12)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,Germany:12)]">12</value>
-        <value condition="[SubString(Container(311).ListItem.MPAA,Germany:16)] | [!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,Germany:16)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,Germany:16)]">16</value>
-        <value condition="[SubString(Container(311).ListItem.MPAA,Germany:18)] | [!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,Germany:18)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,Germany:18)]">18</value>
-        <!-- Australia -->
-        <value condition="[SubString(Container(311).ListItem.MPAA,Australia:R)] | [!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,Australia:R)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,Australia:R)]">R</value>
-        <value condition="[SubString(Container(311).ListItem.MPAA,Australia:MA)] | [!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,Australia:MA)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,Australia:MA)]">MA</value>
-        <value condition="[SubString(Container(311).ListItem.MPAA,Australia:M)] | [!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,Australia:M)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,Australia:M)]">M</value>
-        <value condition="[SubString(Container(311).ListItem.MPAA,Australia:PG)] | [!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,Australia:PG)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,Australia:PG)]">PG</value>
-        <value condition="[SubString(Container(311).ListItem.MPAA,Australia:G)] | [!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,Australia:G)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,Australia:G)]">G</value>
-        <value condition="[SubString(Container(311).ListItem.MPAA,Australia:X)] | [!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,Australia:X)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,Australia:X)]">X</value>
-        <!-- Italy -->
-        <value condition="[SubString(Container(311).ListItem.MPAA,Rated All,Left)] | [!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,Rated All,Left)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,Rated All,Left)]">T</value>
-        <value condition="[SubString(Container(311).ListItem.MPAA,Rated T,Left)] | [!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,Rated T,Left)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,Rated T,Left)]">T</value>
-        <value condition="[SubString(Container(311).ListItem.MPAA,it/T)] | [!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,it/T)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,it/T)]">T</value>
-        <value condition="[SubString(Container(311).ListItem.MPAA,VM14)] | [!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,VM14)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,VM14)]">VM14</value>
-        <value condition="[SubString(Container(311).ListItem.MPAA,VM16)] | [!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,VM16)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,VM16)]">VM16</value>
-        <value condition="[SubString(Container(311).ListItem.MPAA,VM18)] | [!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,VM18)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,VM18)]">VM18</value>
-        <!-- United Kingdom -->
-        <value condition="[SubString(Container(311).ListItem.MPAA,UK:U)] | [!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,UK:U)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,UK:U)]">U</value>
-        <value condition="[SubString(Container(311).ListItem.MPAA,UK:PG)] | [!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,UK:PG)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,UK:PG)]">PG</value>
-        <value condition="[SubString(Container(311).ListItem.MPAA,UK:12A)] | [!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,UK:12A)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,UK:12A)]">12A</value>
-        <value condition="[SubString(Container(311).ListItem.MPAA,UK:12)] | [!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,UK:12)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,UK:12)]">12</value>
-        <value condition="[SubString(Container(311).ListItem.MPAA,UK:15)] | [!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,UK:15)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,UK:15)]">15</value>
-        <value condition="[SubString(Container(311).ListItem.MPAA,UK:18)] | [!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,UK:18)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,UK:18)]">18</value>
-        <value condition="[SubString(Container(311).ListItem.MPAA,mpaa,UK:X)] | [!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,UK:X)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,UK:X)]">X</value>
-        <value condition="IsEmpty(ListItem.mpaa)"> </value>
-        
-    </variable>
+		<!-- US (IMDB) -->
+		<value condition="[SubString(Container(311).ListItem.MPAA,Rated R,Left)] | [!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,Rated R,Left)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,Rated R,Left)]">R</value>
+		<value condition="[SubString(Container(311).ListItem.MPAA,Rated Rated PG-13,Left)] | [!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,Rated PG-13,Left)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,Rated PG-13,Left)]">PG 13</value>
+		<value condition="[SubString(Container(311).ListItem.MPAA,Rated PG,Left)] | [!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,Rated PG,Left)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,Rated PG,Left)]">PG</value>
+		<value condition="[SubString(Container(311).ListItem.MPAA,Rated NC,Left)] | [!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,Rated NC,Left)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,Rated NC,Left)]">NC 17</value>
+		<value condition="[SubString(Container(311).ListItem.MPAA,Rated G,Left)] | [!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,Rated G,Left)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,Rated G,Left)]">G</value>
+		<!-- US (TMDB) -->
+		<value condition="[SubString(Container(311).ListItem.MPAA,R)] | [!IsEmpty(ListItem.mpaa) + StringCompare(ListItem.mpaa,R)] | [IsEmpty(ListItem.mpaa) + StringCompare(VideoPlayer.mpaa,R)]">R</value>
+		<value condition="[SubString(Container(311).ListItem.MPAA,PG-13)] | [!IsEmpty(ListItem.mpaa) + StringCompare(ListItem.mpaa,PG-13)] | [IsEmpty(ListItem.mpaa) + StringCompare(VideoPlayer.mpaa,PG-13)]">PG 13</value>
+		<value condition="[SubString(Container(311).ListItem.MPAA,PG)] | [!IsEmpty(ListItem.mpaa) + StringCompare(ListItem.mpaa,PG)] | [IsEmpty(ListItem.mpaa) + StringCompare(VideoPlayer.mpaa,PG)]">PG</value>
+		<value condition="[SubString(Container(311).ListItem.MPAA,NC-17)] | [!IsEmpty(ListItem.mpaa) + StringCompare(ListItem.mpaa,NC-17)] | [IsEmpty(ListItem.mpaa) + StringCompare(VideoPlayer.mpaa,NC-17)]">NC 17</value>
+		<value condition="[SubString(Container(311).ListItem.MPAA,G)] | [!IsEmpty(ListItem.mpaa) + StringCompare(ListItem.mpaa,G)] | [IsEmpty(ListItem.mpaa) + StringCompare(VideoPlayer.mpaa,G)]">G</value>
+		<!-- US (TV) -->
+		<value condition="[SubString(Container(311).ListItem.MPAA,TV-MA)] | [!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,TV-MA)]">TV-MA</value>
+		<value condition="[SubString(Container(311).ListItem.MPAA,TV-Y)] | [!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,TV-Y)]">TV-Y</value>
+		<value condition="[SubString(Container(311).ListItem.MPAA,TV-Y7)] | [!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,TV-Y7)]">TV-Y7</value>
+		<value condition="[SubString(Container(311).ListItem.MPAA,TV-G)] | [!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,TV-G)]">TV-G</value>
+		<value condition="[SubString(Container(311).ListItem.MPAA,TV-PG)] | [!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,TV-PG)]">TV-PG</value>
+		<value condition="[SubString(Container(311).ListItem.MPAA,TV-14)] | [!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,TV-14)]">TV-14</value>
+		<!-- Germany -->
+		<value condition="[SubString(Container(311).ListItem.MPAA,Germany:0)] | [!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,Germany:0)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,Germany:0)]">0</value>
+		<value condition="[SubString(Container(311).ListItem.MPAA,Germany:6)] | [!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,Germany:6)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,Germany:6)]">6</value>
+		<value condition="[SubString(Container(311).ListItem.MPAA,Germany:12)] | [!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,Germany:12)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,Germany:12)]">12</value>
+		<value condition="[SubString(Container(311).ListItem.MPAA,Germany:16)] | [!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,Germany:16)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,Germany:16)]">16</value>
+		<value condition="[SubString(Container(311).ListItem.MPAA,Germany:18)] | [!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,Germany:18)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,Germany:18)]">18</value>
+		<!-- Australia -->
+		<value condition="[SubString(Container(311).ListItem.MPAA,Australia:R)] | [!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,Australia:R)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,Australia:R)]">R</value>
+		<value condition="[SubString(Container(311).ListItem.MPAA,Australia:MA)] | [!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,Australia:MA)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,Australia:MA)]">MA</value>
+		<value condition="[SubString(Container(311).ListItem.MPAA,Australia:M)] | [!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,Australia:M)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,Australia:M)]">M</value>
+		<value condition="[SubString(Container(311).ListItem.MPAA,Australia:PG)] | [!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,Australia:PG)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,Australia:PG)]">PG</value>
+		<value condition="[SubString(Container(311).ListItem.MPAA,Australia:G)] | [!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,Australia:G)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,Australia:G)]">G</value>
+		<value condition="[SubString(Container(311).ListItem.MPAA,Australia:X)] | [!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,Australia:X)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,Australia:X)]">X</value>
+		<!-- Italy -->
+		<value condition="[SubString(Container(311).ListItem.MPAA,Rated All,Left)] | [!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,Rated All,Left)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,Rated All,Left)]">T</value>
+		<value condition="[SubString(Container(311).ListItem.MPAA,Rated T,Left)] | [!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,Rated T,Left)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,Rated T,Left)]">T</value>
+		<value condition="[SubString(Container(311).ListItem.MPAA,it/T)] | [!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,it/T)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,it/T)]">T</value>
+		<value condition="[SubString(Container(311).ListItem.MPAA,VM14)] | [!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,VM14)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,VM14)]">VM14</value>
+		<value condition="[SubString(Container(311).ListItem.MPAA,VM16)] | [!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,VM16)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,VM16)]">VM16</value>
+		<value condition="[SubString(Container(311).ListItem.MPAA,VM18)] | [!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,VM18)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,VM18)]">VM18</value>
+		<!-- United Kingdom -->
+		<value condition="[SubString(Container(311).ListItem.MPAA,UK:U)] | [!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,UK:U)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,UK:U)]">U</value>
+		<value condition="[SubString(Container(311).ListItem.MPAA,UK:PG)] | [!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,UK:PG)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,UK:PG)]">PG</value>
+		<value condition="[SubString(Container(311).ListItem.MPAA,UK:12A)] | [!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,UK:12A)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,UK:12A)]">12A</value>
+		<value condition="[SubString(Container(311).ListItem.MPAA,UK:12)] | [!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,UK:12)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,UK:12)]">12</value>
+		<value condition="[SubString(Container(311).ListItem.MPAA,UK:15)] | [!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,UK:15)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,UK:15)]">15</value>
+		<value condition="[SubString(Container(311).ListItem.MPAA,UK:18)] | [!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,UK:18)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,UK:18)]">18</value>
+		<value condition="[SubString(Container(311).ListItem.MPAA,mpaa,UK:X)] | [!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,UK:X)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,UK:X)]">X</value>
+		<value condition="IsEmpty(ListItem.mpaa)"> </value>
+
+	</variable>
 </includes>

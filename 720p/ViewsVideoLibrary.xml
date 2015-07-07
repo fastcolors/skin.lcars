@@ -86,7 +86,7 @@
             <align>right</align>
             <width>145</width>
             <height>40</height>
-            <label>$INFO[ListItem.MPAA]</label>
+            <label>$VAR[MediaFlag_MPAA]</label>
         </control>
         <control type="label">
             <top>272</top>
@@ -106,5 +106,23 @@
             <font>font12</font>
             <label>31011</label>
         </control>
+		<control type="label">
+			<visible>!IsEmpty(ListItem.videoresolution) + !IntegerGreaterThan(ListItem.videoresolution,719)</visible>
+			<top>364</top>
+            <left>153</left>
+            <align>right</align>
+            <width>145</width>
+            <height>40</height>
+            <label>SD: $INFO[ListItem.VideoResolution]</label>
+		</control>
+		<control type="label">
+			<visible>!IsEmpty(ListItem.videoresolution) + IntegerGreaterThan(ListItem.videoresolution,719)</visible>
+			<top>364</top>
+            <left>153</left>
+            <align>right</align>
+            <width>145</width>
+            <height>40</height>
+            <label>HD : $INFO[ListItem.VideoResolution]</label>
+		</control>
     </include>
 </includes>

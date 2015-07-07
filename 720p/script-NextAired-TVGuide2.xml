@@ -59,7 +59,7 @@
 					<control type="image">
                     	<width>300</width>
 						<height>40</height>
-						<texture flipx="true" border="20" colordiffuse="blue">whiterounded.png</texture>
+						<texture flipx="true" border="20" colordiffuse="white">whiterounded.png</texture>
 					</control>
 					<control type="label">
 						<width>290</width>

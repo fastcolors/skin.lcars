@@ -611,7 +611,7 @@
 			</control>
 			<control type="grouplist" id="9000">
 				<left>280</left>
-				<top>165</top>
+				<top>168</top>
 				<width>1030</width>
 				<height>50</height>
 				<itemgap>2</itemgap>
@@ -623,8 +623,8 @@
 				<ondown>50</ondown>
 				<control type="button" id="8">
 					<description>Play/browse to Show</description>
-					<texturenofocus colordiffuse="design"  flipx="true" border="20">whiterounded.png</texturenofocus>
-					<texturefocus colordiffuse="white"  flipx="true" border="20">whiterounded.png</texturefocus>
+					<texturenofocus colordiffuse="mediumslateblue"  flipx="true" border="20">white.png</texturenofocus>
+					<texturefocus colordiffuse="white"  flipx="true" border="20">white.png</texturefocus>
 					<width>150</width>
 					<label>208</label>
 					<altlabel>1024</altlabel>
@@ -634,7 +634,7 @@
 				</control>
 				<control type="button" id="5">
 					<description>Cast/Review</description>
-					<texturenofocus colordiffuse="design" border="20">white.png</texturenofocus>
+					<texturenofocus colordiffuse="mediumslateblue" border="20">white.png</texturenofocus>
 					<texturefocus colordiffuse="white" border="20">white.png</texturefocus>
 					<width>150</width>
 					<align>center</align>
@@ -642,7 +642,7 @@
 				</control>
 				<control type="button" id="6">
 					<description>Refresh</description>
-					<texturenofocus colordiffuse="design" border="20">white.png</texturenofocus>
+					<texturenofocus colordiffuse="mediumslateblue" border="20">white.png</texturenofocus>
 					<texturefocus colordiffuse="white" border="20">white.png</texturefocus>
 					<width>150</width>
 					<label>184</label>
@@ -651,7 +651,7 @@
 				</control>
 				<control type="button" id="10">
 					<description>Get Thumb</description>
-					<texturenofocus colordiffuse="design" border="20">white.png</texturenofocus>
+					<texturenofocus colordiffuse="mediumslateblue" border="20">white.png</texturenofocus>
 					<texturefocus colordiffuse="white" border="20">white.png</texturefocus>
 					<width>150</width>
 					<label>13511</label>
@@ -660,7 +660,7 @@
 				</control>
 				<control type="button" id="11">
 					<description>Play Trailer</description>
-					<texturenofocus colordiffuse="design" border="20">white.png</texturenofocus>
+					<texturenofocus colordiffuse="mediumslateblue" border="20">white.png</texturenofocus>
 					<texturefocus colordiffuse="white" border="20">white.png</texturefocus>
 					<width>150</width>
 					<label>20410</label>
@@ -671,7 +671,7 @@
 				<control type="button" id="100">
 					<description>Fetch TvTunes stuff</description>
 					<width>150</width>
-					<texturenofocus colordiffuse="design" border="20">whiterounded.png</texturenofocus>
+					<texturenofocus colordiffuse="mediumslateblue" border="20">whiterounded.png</texturenofocus>
 					<texturefocus colordiffuse="white" border="20">whiterounded.png</texturefocus>
 					<label>TvTunes</label>
 					<align>center</align>

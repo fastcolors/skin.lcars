@@ -41,12 +41,12 @@
 			<content>
 				<!--SHIP NAME-->
 				<item id="1">
-					<label>SHIP NAME</label>
+					<label>31113</label>
 					<onclick>ActivateWindow(Videos,MovieTitles,return)</onclick>
 				</item>
 				<!--HIDE MENU ITEMS-->
 				<item id="2">
-					<label>HIDE ITEMS</label>
+					<label>31112</label>
 					<onclick>ActivateWindow(Videos,MovieTitles,return)</onclick>
 				</item>
 			</content>

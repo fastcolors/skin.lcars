@@ -72,6 +72,14 @@ msgctxt "#31111"
 msgid "Hide"
 msgstr "Hide"
 
+msgctxt "#31112"
+msgid "Hide Menu Items"
+msgstr "Hide Menu Items"
+
+msgctxt "#31113"
+msgid "Ship Details"
+msgstr "Ship Details"
+
 msgctxt "#31050"
 msgid "Sort: Ascending"
 msgstr "Sort: Ascending"

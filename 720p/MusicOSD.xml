@@ -186,8 +186,8 @@
             </control>
             <control type="togglebutton" id="602">
                 <include>osdbutt</include>
-                <label>PLAY</label>
-                <altlabel>PAUSE</altlabel>
+                <label>PAUSE</label>
+                <altlabel>PLAY</altlabel>
                 <alttexturenofocus colordiffuse="blue" border="20">white.png</alttexturenofocus>
                 <alttexturefocus colordiffuse="green" border="20">white.png</alttexturefocus>
                 <onleft>601</onleft>

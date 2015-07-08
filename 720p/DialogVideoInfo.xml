@@ -83,7 +83,6 @@
 							<align>right</align>
 							<aligny>center</aligny>
 							<textcolor>blue</textcolor>
-							<selectedcolor>selected</selectedcolor>
 							<info>ListItem.Label</info>
 						</control>
 						<control type="label">
@@ -95,7 +94,6 @@
 							<align>left</align>
 							<aligny>center</aligny>
 							<textcolor>white</textcolor>
-							<selectedcolor>white</selectedcolor>
 							<info>ListItem.Label2</info>
 						</control>
 					</itemlayout>
@@ -108,7 +106,6 @@
 							<align>right</align>
 							<aligny>center</aligny>
 							<textcolor>blue</textcolor>
-							<selectedcolor>selected</selectedcolor>
 							<info>ListItem.Label</info>
 						</control>
 						<control type="label">
@@ -119,8 +116,7 @@
 							<font>font13</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<textcolor>white</textcolor>
-							<selectedcolor>white</selectedcolor>
+							<textcolor>yellow</textcolor>
 							<info>ListItem.Label2</info>
 						</control>
 					</focusedlayout>
@@ -213,7 +209,6 @@
 							<align>right</align>
 							<aligny>center</aligny>
 							<textcolor>blue</textcolor>
-							<selectedcolor>selected</selectedcolor>
 							<info>ListItem.Label</info>
 						</control>
 						<control type="label">
@@ -225,7 +220,6 @@
 							<align>left</align>
 							<aligny>center</aligny>
 							<textcolor>white</textcolor>
-							<selectedcolor>white</selectedcolor>
 							<info>ListItem.Label2</info>
 						</control>
 					</itemlayout>
@@ -238,7 +232,6 @@
 							<align>right</align>
 							<aligny>center</aligny>
 							<textcolor>blue</textcolor>
-							<selectedcolor>selected</selectedcolor>
 							<info>ListItem.Label</info>
 						</control>
 						<control type="label">
@@ -249,8 +242,7 @@
 							<font>font13</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<textcolor>white</textcolor>
-							<selectedcolor>white</selectedcolor>
+							<textcolor>yellow</textcolor>
 							<info>ListItem.Label2</info>
 						</control>
 					</focusedlayout>
@@ -313,7 +305,6 @@
 							<align>right</align>
 							<aligny>center</aligny>
 							<textcolor>blue</textcolor>
-							<selectedcolor>selected</selectedcolor>
 							<info>ListItem.Label</info>
 						</control>
 						<control type="label">
@@ -325,7 +316,6 @@
 							<align>left</align>
 							<aligny>center</aligny>
 							<textcolor>white</textcolor>
-							<selectedcolor>white</selectedcolor>
 							<info>ListItem.Label2</info>
 						</control>
 					</itemlayout>
@@ -338,7 +328,6 @@
 							<align>right</align>
 							<aligny>center</aligny>
 							<textcolor>blue</textcolor>
-							<selectedcolor>selected</selectedcolor>
 							<info>ListItem.Label</info>
 						</control>
 						<control type="label">
@@ -349,8 +338,7 @@
 							<font>font13</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<textcolor>white</textcolor>
-							<selectedcolor>white</selectedcolor>
+							<textcolor>yellow</textcolor>
 							<info>ListItem.Label2</info>
 						</control>
 					</focusedlayout>
@@ -448,7 +436,6 @@
 							<align>right</align>
 							<aligny>center</aligny>
 							<textcolor>blue</textcolor>
-							<selectedcolor>selected</selectedcolor>
 							<info>ListItem.Label</info>
 						</control>
 						<control type="label">
@@ -460,7 +447,6 @@
 							<align>left</align>
 							<aligny>center</aligny>
 							<textcolor>white</textcolor>
-							<selectedcolor>white</selectedcolor>
 							<info>ListItem.Label2</info>
 						</control>
 					</itemlayout>
@@ -473,7 +459,6 @@
 							<align>right</align>
 							<aligny>center</aligny>
 							<textcolor>blue</textcolor>
-							<selectedcolor>selected</selectedcolor>
 							<info>ListItem.Label</info>
 						</control>
 						<control type="label">
@@ -484,8 +469,7 @@
 							<font>font13</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<textcolor>white</textcolor>
-							<selectedcolor>white</selectedcolor>
+							<textcolor>yellow</textcolor>
 							<info>ListItem.Label2</info>
 						</control>
 					</focusedlayout>
@@ -621,7 +605,7 @@
 				<orientation>horizontal</orientation>
 				<onleft>9000</onleft>
 				<onright>9000</onright>
-				<onup>50</onup>
+				<onup>49</onup>
 				<ondown>50</ondown>
 				<control type="button" id="8">
 					<description>Play/browse to Show</description>

@@ -30,15 +30,15 @@
 			</control>
 			<control type="button">
 				<description>Close Window button</description>
-				<left>220</left>
-				<top>50</top>
+				<left>224</left>
+				<top>30</top>
 				<width>30</width>
 				<height>30</height>
 				<label>-</label>
 				<font>-</font>
 				<onclick>PreviousMenu</onclick>
-				<texturefocus>DefaultIconError.png</texturefocus>
-				<texturenofocus>DefaultIconError.png</texturenofocus>
+				<texturefocus>closefocus.png</texturefocus>
+				<texturenofocus>close.png</texturenofocus>
 				<onleft>3</onleft>
 				<onright>3</onright>
 				<onup>3</onup>
@@ -580,8 +580,8 @@
 				<centertop>400</centertop>
 				<width>400</width>
 				<height>330</height>
-				<onleft>61</onleft>
-				<onright>9000</onright>
+				<onleft>50</onleft>
+				<onright>50</onright>
 				<onup>9000</onup>
 				<ondown>9000</ondown>
 				<viewtype label="">list</viewtype>
@@ -595,6 +595,7 @@
 						<width>72</width>
 						<height>122</height>
 						<texture border="5">$INFO[ListItem.Icon]</texture>
+						<aspectratio>scale</aspectratio>
 					</control>
 				</itemlayout>
 				<focusedlayout height="140" width="100">
@@ -606,6 +607,7 @@
 						<bordertexture border="5">white.png</bordertexture>
 						<bordersize>4</bordersize>
 						<texture border="5">$INFO[ListItem.Icon]</texture>
+						<aspectratio>scale</aspectratio>
 					</control>
 				</focusedlayout>
 			</control>

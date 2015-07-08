@@ -3,18 +3,6 @@
 	<defaultcontrol always="true">10</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<controls>
-		<control type="label">
-			<animation effect="fade" start="0" end="100" time="200" delay="400">WindowOpen</animation>
-			<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
-			<description>header label</description>
-			<top>18</top>
-			<centerleft>670</centerleft>
-			<width>675</width>
-			<height>40</height>
-			<label>$INFO[Listitem.Title]</label>
-			<font>font30</font>
-			<align>center</align>
-		</control>
 		<control type="group">
 			<top>40</top>
 			<visible>!Window.IsVisible(FileBrowser)</visible>
@@ -26,108 +14,105 @@
 				<top>22</top>
 				<width>1250</width>
 				<height>600</height>
-				<texture border="130">dialog.png</texture>
+				<colordiffuse>design</colordiffuse>
+				<texture border="130">dialog3.png</texture>
 			</control>
-			<control type="button">
-				<description>Close Window button</description>
-				<left>212</left>
-				<top>38</top>
-				<width>30</width>
-				<height>30</height>
-				<label>-</label>
-				<font>-</font>
-				<onclick>PreviousMenu</onclick>
-				<texturefocus>closefocus.png</texturefocus>
-				<texturenofocus>close.png</texturenofocus>
-				<onleft>3</onleft>
-				<onright>3</onright>
-				<onup>3</onup>
-				<ondown>3</ondown>
-				<visible>system.getbool(input.enablemouse)</visible>
+			<control type="label">
+				<description>header label</description>
+				<top>35</top>
+				<left>270</left>
+				<width>675</width>
+				<height>40</height>
+				<label>$INFO[Listitem.Title]</label>
+				<font>font30</font>
+				<align>left</align>
 			</control>
+			<control type="group">
+				<left>325</left>
+				<top>80</top>
 			<control type="image">
-				<centerleft>400</centerleft>
-				<centertop>240</centertop>
-				<width>330</width>
-				<height>330</height>
+				<left>20</left>
+				<top>70</top>
+				<width>220</width>
+				<height>220</height>
 				<aspectratio>keep</aspectratio>
 				<bordertexture border="5">white.png</bordertexture>
 				<bordersize>4</bordersize>
 				<texture background="true">$VAR[poster]</texture>
 			</control>
 			<control type="image">
-				<centerleft>900</centerleft>
-				<top>40</top>
-				<width>650</width>
-				<height>390</height>
-				<colordiffuse>blue</colordiffuse>
-				<texture border="80">videowindowbg.png</texture>
+				<left>260</left>
+				<top>70</top>
+				<width>640</width>
+				<height>220</height>
+				<texture border="15">whiteallrounded.png</texture>
+				<colordiffuse>design</colordiffuse>
 			</control>
 			<control type="group">
-				<centerleft>940</centerleft>
-				<top>88</top>
+				<left>270</left>
+				<top>90</top>
 				<control type="label">
 					<description>Artist Title</description>
-					<left>0</left>
+					<left>10</left>
 					<top>0</top>
-					<width>150</width>
+					<width>140</width>
 					<height>25</height>
 					<align>right</align>
 					<aligny>center</aligny>
 					<font>font13</font>
-					<textcolor>blue</textcolor>
+					<textcolor>darkblue</textcolor>
 					<label>$LOCALIZE[557]:</label>
 				</control>
 				<control type="fadelabel">
 					<description>Artist Value</description>
 					<left>160</left>
 					<top>0</top>
-					<width>460</width>
+					<width>440</width>
 					<height>25</height>
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>font13</font>
-					<textcolor>white</textcolor>
+					<textcolor>lightcyan</textcolor>
 					<label fallback="161">$INFO[ListItem.Artist]</label>
 					<scrollout>false</scrollout>
 					<pauseatend>2000</pauseatend>
 				</control>
 				<control type="label">
 					<description>Album Title</description>
-					<left>0</left>
+					<left>10</left>
 					<top>30</top>
-					<width>150</width>
+					<width>140</width>
 					<height>25</height>
 					<align>right</align>
 					<aligny>center</aligny>
 					<font>font13</font>
-					<textcolor>blue</textcolor>
+					<textcolor>darkblue</textcolor>
 					<label>$LOCALIZE[558]:</label>
 				</control>
 				<control type="fadelabel">
 					<description>Album Value</description>
 					<left>160</left>
 					<top>30</top>
-					<width>460</width>
+					<width>440</width>
 					<height>25</height>
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>font13</font>
-					<textcolor>white</textcolor>
+					<textcolor>lightcyan</textcolor>
 					<label fallback="161">$INFO[ListItem.Album]$INFO[listitem.discnumber, - $LOCALIZE[427] ]</label>
 					<scrollout>false</scrollout>
 					<pauseatend>2000</pauseatend>
 				</control>
 				<control type="label">
 					<description>Genre Title</description>
-					<left>0</left>
+					<left>10</left>
 					<top>60</top>
-					<width>150</width>
+					<width>140</width>
 					<height>25</height>
 					<align>right</align>
 					<aligny>center</aligny>
 					<font>font13</font>
-					<textcolor>blue</textcolor>
+					<textcolor>darkblue</textcolor>
 					<label>$LOCALIZE[515]:</label>
 					<scrollout>false</scrollout>
 					<pauseatend>2000</pauseatend>
@@ -136,72 +121,72 @@
 					<description>Genre Value</description>
 					<left>160</left>
 					<top>60</top>
-					<width>460</width>
+					<width>440</width>
 					<height>25</height>
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>font13</font>
-					<textcolor>white</textcolor>
+					<textcolor>lightcyan</textcolor>
 					<label fallback="161">$INFO[ListItem.Genre]</label>
 				</control>
 				<control type="label">
 					<description>Year Title</description>
-					<left>0</left>
+					<left>10</left>
 					<top>90</top>
-					<width>150</width>
+					<width>140</width>
 					<height>25</height>
 					<align>right</align>
 					<aligny>center</aligny>
 					<font>font13</font>
-					<textcolor>blue</textcolor>
+					<textcolor>darkblue</textcolor>
 					<label>$LOCALIZE[562]:</label>
 				</control>
 				<control type="fadelabel">
 					<description>Year Value</description>
 					<left>160</left>
 					<top>90</top>
-					<width>460</width>
+					<width>440</width>
 					<height>25</height>
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>font13</font>
-					<textcolor>white</textcolor>
+					<textcolor>lightcyan</textcolor>
 					<label fallback="161">$INFO[ListItem.Year]</label>
 				</control>
 				<control type="label">
 					<description>Track Number Title</description>
-					<left>0</left>
+					<left>10</left>
 					<top>120</top>
-					<width>150</width>
+					<width>140</width>
 					<height>25</height>
 					<align>right</align>
 					<aligny>center</aligny>
 					<font>font13</font>
-					<textcolor>blue</textcolor>
+					<textcolor>darkblue</textcolor>
 					<label>$LOCALIZE[554]:</label>
 				</control>
 				<control type="fadelabel">
 					<description>Track Number Value</description>
 					<left>160</left>
 					<top>120</top>
-					<width>460</width>
+					<width>440</width>
 					<height>25</height>
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>font13</font>
-					<textcolor>white</textcolor>
+					<textcolor>lightcyan</textcolor>
 					<label fallback="161">$INFO[ListItem.TrackNumber]</label>
 				</control>
 				<control type="label">
 					<description>Rating Title</description>
-					<left>0</left>
+					<left>10</left>
 					<top>150</top>
-					<width>150</width>
+					<width>140</width>
 					<height>25</height>
 					<align>right</align>
 					<aligny>center</aligny>
 					<font>font13</font>
-					<textcolor>blue</textcolor>
+					<textcolor>darkblue</textcolor>
 					<label>$LOCALIZE[563]:</label>
 				</control>
 				<control type="group">
@@ -219,78 +204,86 @@
 				</control>
 				<control type="label">
 					<description>Comment Title</description>
-					<left>0</left>
-					<top>180</top>
-					<width>150</width>
+					<left>10</left>
+					<top>200</top>
+					<width>140</width>
 					<height>25</height>
 					<align>right</align>
 					<aligny>center</aligny>
 					<font>font13</font>
-					<textcolor>blue</textcolor>
+					<textcolor>darkblue</textcolor>
 					<label>$LOCALIZE[569]:</label>
 				</control>
 				<control type="textbox">
 					<description>Comment value</description>
-					<left>160</left>
-					<top>177</top>
-					<width>460</width>
-					<height>140</height>
+					<left>10</left>
+					<top>225</top>
+					<width>600</width>
+					<height>250</height>
 					<font>font13</font>
 					<pagecontrol>-</pagecontrol>
+					<textcolor>white</textcolor>
 					<label fallback="161">$INFO[ListItem.Comment]</label>
 				</control>
 			</control>
+			</control>
 			<control type="grouplist" id="9000">
-				<left>240</left>
-				<top>560</top>
-				<width>1030</width>
+				<left>174</left>
+				<top>574</top>
+				<width>1130</width>
 				<height>50</height>
 				<itemgap>2</itemgap>
 				<align>center</align>
 				<orientation>horizontal</orientation>
 				<onleft>9000</onleft>
 				<onright>9000</onright>
-				<onup>50</onup>
+				<onup>9000</onup>
 				<ondown>9000</ondown>
 				<control type="button" id="14" description="Decrease Rating">
-                    <width>150</width>
+                    <width>180</width>
                     <texturenofocus colordiffuse="design"  flipx="true" border="20">whiterounded.png</texturenofocus>
 					<texturefocus colordiffuse="white"  flipx="true" border="20">whiterounded.png</texturefocus>
+					<height>38</height>
 					<align>center</align>
 					<aligny>center</aligny>
 					<label>-  $LOCALIZE[563]</label>
                     <onclick>DecreaseRating</onclick>
                 </control>
                 <control type="button" id="15" description="Increase Rating">
-                    <width>150</width>
+                    <width>180</width>
                     <texturenofocus colordiffuse="design" border="20">white.png</texturenofocus>
 					<texturefocus colordiffuse="white" border="20">white.png</texturefocus>
+					<height>38</height>
 					<align>center</align>
 					<aligny>center</aligny>
 					<label>+ $LOCALIZE[563]</label>
                     <onclick>IncreaseRating</onclick>
                 </control>
                 <control type="button" id="12" description="Album Info">
-                    <width>150</width>
+                    <width>180</width>
                     <texturenofocus colordiffuse="design" border="20">white.png</texturenofocus>
 					<texturefocus colordiffuse="white" border="20">white.png</texturefocus>
+					<height>38</height>
 					<align>center</align>
 					<aligny>center</aligny>
 					<label>10523</label>
                 </control>
                 <control type="button" id="13" description="Get Thumb">
-                    <width>150</width>
+                    <width>180</width>
                     <texturenofocus colordiffuse="design" border="20">white.png</texturenofocus>
 					<texturefocus colordiffuse="white" border="20">white.png</texturefocus>
+					<height>38</height>
 					<align>center</align>
 					<aligny>center</aligny>
 					<label>13405</label>
                 </control>
                 <control type="button" id="10" description="Save rating">
-                    <width>150</width>
-                    <texturenofocus colordiffuse="design" border="20">whiterounded.png</texturenofocus>
-					<texturefocus colordiffuse="white" border="20">whiterounded.png</texturefocus>
-					<align>center</align>
+                    <width>350</width>
+                    <texturenofocus colordiffuse="design" border="20">white.png</texturenofocus>
+					<texturefocus colordiffuse="white" border="20">white.png</texturefocus>
+					<height>38</height>
+					<textoffsetx>90</textoffsetx>
+					<align>left</align>
 					<aligny>center</aligny>
 					<label>186</label>
                 </control>

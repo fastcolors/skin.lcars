@@ -343,7 +343,7 @@
 					<centerleft>1055</centerleft>
 					<centertop>400</centertop>
 					<width>400</width>
-					<height>330</height>
+					<height>340</height>
 					<onleft>9000</onleft>
 					<onright>9000</onright>
 					<onup>9000</onup>
@@ -352,11 +352,18 @@
 					<pagecontrol>-</pagecontrol>
 					<scrolltime>200</scrolltime>
 					<orientation>vertical</orientation>
-					<itemlayout condition="Container.Content(Albums)" height="40" width="430">
-						<control type="label">
-							<left>5</left>
+					<itemlayout condition="Container.Content(Albums)" height="43" width="430">
+						<control type="image">
+							<left>0</left>
 							<top>0</top>
-							<width>345</width>
+							<width>35</width>
+							<height>40</height>
+							<texture border="5" colordiffuse="mediumslateblue"  flipx="true">bullet.png</texture>
+						</control>
+						<control type="label">
+							<left>40</left>
+							<top>0</top>
+							<width>270</width>
 							<height>40</height>
 							<font>font12</font>
 							<textcolor>white</textcolor>
@@ -366,7 +373,7 @@
 							<label>([COLOR=selected][B]$INFO[ListItem.TrackNumber][/B][/COLOR]) - $INFO[ListItem.Label]</label>
 						</control>
 						<control type="label">
-							<left>360</left>
+							<left>320</left>
 							<top>0</top>
 							<width>60</width>
 							<height>40</height>
@@ -377,28 +384,27 @@
 							<selectedcolor>selected</selectedcolor>
 							<label>$INFO[ListItem.Duration]</label>
 						</control>
+						<control type="image">
+							<left>390</left>
+							<top>0</top>
+							<width>10</width>
+							<height>40</height>
+							<texture border="5" colordiffuse="mediumslateblue" >white.png</texture>
+						</control>
+						
 					</itemlayout>
-					<focusedlayout condition="Container.Content(Albums)" height="40" width="430">
+					<focusedlayout condition="Container.Content(Albums)" height="43" width="430">
 						<control type="image">
 							<left>0</left>
 							<top>0</top>
-							<width>430</width>
+							<width>35</width>
 							<height>40</height>
-							<visible>!Control.HasFocus(50)</visible>
-							<texture border="5">menuitemfo.png</texture>
-						</control>
-						<control type="image">
-							<left>0</left>
-							<top>0</top>
-							<width>430</width>
-							<height>40</height>
-							<visible>Control.HasFocus(50)</visible>
-							<texture border="5">menuitemfo.png</texture>
+							<texture border="5" flipx="true">bullet.png</texture>
 						</control>
 						<control type="label">
-							<left>5</left>
+							<left>40</left>
 							<top>0</top>
-							<width>345</width>
+							<width>270</width>
 							<height>40</height>
 							<font>font12</font>
 							<textcolor>white</textcolor>
@@ -408,33 +414,40 @@
 							<label>([COLOR=selected][B]$INFO[ListItem.TrackNumber][/B][/COLOR]) - $INFO[ListItem.Label]</label>
 						</control>
 						<control type="label">
-							<left>360</left>
+							<left>320</left>
 							<top>0</top>
 							<width>60</width>
 							<height>40</height>
 							<font>font12</font>
-							<textcolor>white</textcolor>
 							<align>right</align>
 							<aligny>center</aligny>
+							<textcolor>white</textcolor>
 							<selectedcolor>selected</selectedcolor>
 							<label>$INFO[ListItem.Duration]</label>
+						</control>
+						<control type="image">
+							<left>390</left>
+							<top>0</top>
+							<width>10</width>
+							<height>40</height>
+							<texture border="5">white.png</texture>
 						</control>
 					</focusedlayout>
-					<itemlayout condition="Container.Content(Artists)" height="140" width="100">
+					<itemlayout condition="Container.Content(Artists)" height="100" width="100">
 						<control type="image">
 						<centerleft>50</centerleft>
 						<top>10</top>
-						<width>72</width>
-						<height>122</height>
+						<width>90</width>
+						<height>90</height>
 						<texture border="5">$INFO[ListItem.Icon]</texture>
 					</control>
 					</itemlayout>
-					<focusedlayout condition="Container.Content(Artists)" height="140" width="100">
+					<focusedlayout condition="Container.Content(Artists)" height="100" width="100">
 						<control type="image">
 						<centerleft>50</centerleft>
 						<top>6</top>
-						<width>80</width>
-						<height>130</height>
+						<width>90</width>
+						<height>90</height>
 						<bordertexture border="5">white.png</bordertexture>
 						<bordersize>4</bordersize>
 						<texture border="5">$INFO[ListItem.Icon]</texture>
@@ -442,7 +455,7 @@
 					</focusedlayout>
 				</control>
 				<control type="grouplist" id="9000">
-					<left>280</left>
+					<left>295</left>
 					<top>168</top>
 					<width>1030</width>
 					<height>50</height>
@@ -493,7 +506,7 @@
 						<description>OK</description>
 						<texturenofocus colordiffuse="mediumslateblue" border="20">white.png</texturenofocus>
 						<texturefocus colordiffuse="white" border="20">white.png</texturefocus>
-						<width>180</width>
+						<width>210</width>
 						<align>center</align>
 						<aligny>center</aligny>
 						<onclick>PreviousMenu</onclick>

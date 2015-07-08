@@ -164,10 +164,10 @@
 					<description>Description txt</description>
 					<left>0</left>
 					<top>170</top>
-					<width>300</width>
+					<width>140</width>
 					<height>25</height>
 					<label>$LOCALIZE[21821]</label>
-					<align>left</align>
+					<align>right</align>
 					<aligny>center</aligny>
 					<font>font13</font>
 					<textcolor>darkblue</textcolor>

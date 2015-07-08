@@ -119,8 +119,8 @@
                     <width>auto</width>
                     <height>30</height>
                     <font>font30_title</font>
-                    <textcolor>orange</textcolor>
-                    <label>$INFO[VideoPlayer.Title,NOW:  ]</label>
+                    <textcolor>black</textcolor>
+                    <label>$INFO[VideoPlayer.Title,NOW: ]</label>
                 </control>
                 <control type="label" description="Channel">
                     <visible>Pvr.IsPlayingTV</visible>
@@ -128,7 +128,7 @@
                     <height>30</height>
                     <scroll>true</scroll>
                     <font>font30_title</font>
-                    <textcolor>yellow</textcolor>
+                    <textcolor>black</textcolor>
                     <label>($INFO[VideoPlayer.ChannelNumber]) - $INFO[VideoPlayer.ChannelName]</label>
                 </control>
                 <control type="label" description="Title">
@@ -154,9 +154,9 @@
                     <width>auto</width>
                     <height>30</height>
                     <font>font30_title</font>
-                    <textcolor>red</textcolor>
+                    <textcolor>black</textcolor>
                     <scroll>true</scroll>
-                    <label>$INFO[VideoPlayer.NextTitle,$LOCALIZE[209]:  ]</label>
+                    <label>$INFO[VideoPlayer.NextTitle,$LOCALIZE[209]: ]</label>
                 </control>
             </control>
             <control type="image">

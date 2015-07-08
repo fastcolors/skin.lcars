@@ -1090,11 +1090,10 @@
     </include>
 
     <include name="winding">
-        <shadowcolor>black</shadowcolor>
         <top>17</top>
         <width>100</width>
         <font>font30</font>
-        <textcolor>yellow</textcolor>
+        <textcolor>black</textcolor>
         <align>right</align>
         <posx>170r</posx>
     </include>

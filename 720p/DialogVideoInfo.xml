@@ -579,7 +579,7 @@
 				</focusedlayout>
 			</control>
 			<control type="grouplist" id="9000">
-				<left>287</left>
+				<left>294</left>
 				<top>168</top>
 				<width>1030</width>
 				<height>50</height>
@@ -652,7 +652,7 @@
 					<description>OK</description>
 					<texturenofocus colordiffuse="mediumslateblue" border="20">white.png</texturenofocus>
 					<texturefocus colordiffuse="white" border="20">white.png</texturefocus>
-					<width>130</width>
+					<width>145</width>
 					<align>center</align>
 					<aligny>center</aligny>
 					<onclick>PreviousMenu</onclick>

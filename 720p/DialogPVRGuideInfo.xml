@@ -169,9 +169,9 @@
 				<autoscroll time="3000" delay="4000" repeat="5000">!Control.HasFocus(61) + Skin.HasSetting(AutoScroll)</autoscroll>
 			</control>
 			<control type="grouplist" id="9000">
-				<left>280</left>
+				<left>340</left>
 				<top>168</top>
-				<width>1030</width>
+				<width>456</width>
 				<height>50</height>
 				<itemgap>2</itemgap>
 				<align>center</align>
@@ -182,7 +182,7 @@
 				<ondown>9000</ondown>
 					<control type="button" id="5">
 						<description>Switch to Channel</description>
-						<width>300</width>
+						<width>150</width>
 						<texturenofocus colordiffuse="mediumslateblue" border="20">white.png</texturenofocus>
 						<texturefocus colordiffuse="white" border="20">white.png</texturefocus>
 						<align>center</align>
@@ -191,7 +191,7 @@
 					</control>
 					<control type="button" id="6">
 						<description>Record</description>
-						<width>300</width>
+						<width>150</width>
 						<texturenofocus colordiffuse="mediumslateblue" border="20">white.png</texturenofocus>
 						<texturefocus colordiffuse="white" border="20">white.png</texturefocus>
 						<align>center</align>
@@ -200,13 +200,21 @@
 					</control>
 					<control type="button" id="7">
 						<description>OK</description>
-						<width>300</width>
+						<width>150</width>
 						<texturenofocus colordiffuse="mediumslateblue" border="20">white.png</texturenofocus>
 						<texturefocus colordiffuse="white" border="20">white.png</texturefocus>
 						<align>center</align>
 						<aligny>center</aligny>
 						<label>186</label>
 					</control>
+					
+			</control>
+			<control type="image">
+				<left>797</left>
+				<top>168</top>
+				<width>730</width>
+				<height>42</height>
+				<texture colordiffuse="mediumslateblue" border="20">white.png</texture>
 			</control>
 		</control>
 		</control>			

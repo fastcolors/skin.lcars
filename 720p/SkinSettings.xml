@@ -1,19 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<defaultcontrol always="true">9000</defaultcontrol>
+	<defaultcontrol always="true">9001</defaultcontrol>
 	<controls>
 		<include>allwindows</include>
-		<control type="grouplist" id="9000">
+		<control type="panel" id="9000">
+			<top>96</top>
+			<left>13</left>
+			<width>155</width>
+			<height>530</height>
+			<onright>9001</onright>
+			<ondown>700</ondown>
+			<itemlayout width="155" height="44">
+				<control type="label">
+					<top>7</top>
+					<width>145</width>
+					<height>23</height>
+					<aligny>bottom</aligny>
+					<font>font16</font>
+					<align>right</align>
+					<label>$INFO[ListItem.label]</label>
+				</control>
+			</itemlayout>
+			<focusedlayout width="155" height="44">
+				<control type="image">
+					<top>5</top>
+					<width>155</width>
+					<height>38</height>
+					<texture colordiffuse="white">white.png</texture>
+				</control>
+				<control type="label">
+					<top>7</top>
+					<width>145</width>
+					<font>font16</font>
+					<height>23</height>
+					<aligny>bottom</aligny>
+					<align>right</align>
+					<label>$INFO[ListItem.label]</label>
+				</control>
+			</focusedlayout>
+			<content>
+				<!--SHIP NAME-->
+				<item id="1">
+					<label>SHIP NAME</label>
+					<onclick>ActivateWindow(Videos,MovieTitles,return)</onclick>
+				</item>
+				<!--HIDE MENU ITEMS-->
+				<item id="2">
+					<label>HIDE ITEMS</label>
+					<onclick>ActivateWindow(Videos,MovieTitles,return)</onclick>
+				</item>
+			</content>
+		</control>
+		<control type="grouplist" id="9001">
+			<visible>Container(9000).HasFocus(1)</visible>
 			<left>290</left>
 			<top>130</top>
 			<width>750</width>
 			<height>530</height>
 			<itemgap>8</itemgap>
 			<pagecontrol>-</pagecontrol>
-			<onleft>700</onleft>
+			<onleft>9000</onleft>
 			<onright>noop</onright>
-			<onup>9000</onup>
-			<ondown>9000</ondown>
+			<onup>9001</onup>
+			<ondown>9001</ondown>
 			<control type="button" id="8">
 				<description>Ship name</description>
 				<width>750</width>
@@ -34,6 +83,19 @@
 				<label>N.C.C.  - $INFO[Skin.String(shipregistry)]</label>
 				<onclick>Skin.SetString(shipregistry)</onclick>
 			</control>
+		</control>
+		<control type="grouplist" id="9001">
+			<visible>Container(9000).HasFocus(2)</visible>
+			<left>290</left>
+			<top>130</top>
+			<width>750</width>
+			<height>530</height>
+			<itemgap>8</itemgap>
+			<pagecontrol>-</pagecontrol>
+			<onleft>9000</onleft>
+			<onright>noop</onright>
+			<onup>9001</onup>
+			<ondown>9001</ondown>
 			<control type="radiobutton" id="222">
 				<description>Hide Movies Button</description>
 				<width>750</width>

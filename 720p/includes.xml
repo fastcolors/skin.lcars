@@ -992,7 +992,7 @@
             <font>font16</font>
             <align>left</align>
             <textcolor>yellow</textcolor>
-            <label>U.S.S. $INFO[System.ProfileName]</label>
+            <label>U.S.S. $INFO[Skin.String(shipname)]</label>
         </control>
         <control type="label">
             <top>33</top>
@@ -1002,7 +1002,7 @@
             <font>font16</font>
             <align>left</align>
             <textcolor>yellow</textcolor>
-            <label>ncc 1929-A</label>
+            <label>ncc $INFO[Skin.String(shipregistry)]</label>
         </control>
         <control type="label">
             <visible>system.hasnetwork</visible>

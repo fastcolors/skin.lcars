@@ -19,7 +19,7 @@
 			<itemgap>8</itemgap>
 			<control type="label">
 				<description>FriendlyName</description>
-				<label>U.S.S. $INFO[System.FriendlyName]</label>
+				<label>U.S.S. $INFO[Skin.String(shipname)]</label>
 				<align>right</align>
 				<aligny>center</aligny>
 				<textcolor>red</textcolor>

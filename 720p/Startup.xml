@@ -24,7 +24,7 @@
             <textcolor>yellow</textcolor>
             <align>center</align>
             <aligny>center</aligny>
-			<label>U.S.S. $INFO[System.FriendlyName,, • ]NCC 1929-A [CR]L.C.A.R.S System Online...</label>
+			<label>U.S.S. $INFO[Skin.String(shipname),, • ]N.C.C. $INFO[Skin.String(shipregistry)] [CR]L.C.A.R.S System Online...</label>
         </control>
 		
     </controls>

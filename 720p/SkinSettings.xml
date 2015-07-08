@@ -2,130 +2,146 @@
 <window>
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<controls>
-	<include>allwindows</include>
-    <control type="grouplist" id="9000">
-					<left>290</left>
-					<top>130</top>
-					<width>750</width>
-					<height>530</height>
-					<itemgap>8</itemgap>
-					<pagecontrol>-</pagecontrol>
-					<onleft>700</onleft>
-					<onright>noop</onright>
-					<onup>9000</onup>
-					<ondown>9000</ondown>
-					<control type="button" id="8">
-						<description>Ship name</description>
-						<width>750</width>
-						<height>40</height>
-						<aligny>center</aligny>
-						<textcolor>black</textcolor>
-						<focusedcolor>black</focusedcolor>
-						<label>SHIP NAME U.S.S. $INFO[Skin.String(shipname)]</label>
-						<onclick>Skin.SetString(shipname)</onclick>
-					</control>
-					<control type="button" id="9">
-						<description>Ship registry</description>
-						<width>750</width>
-						<height>40</height>
-						<aligny>center</aligny>
-						<textcolor>black</textcolor>
-						<focusedcolor>black</focusedcolor>
-						<label>N.C.C.  - $INFO[Skin.String(shipregistry)]</label>
-						<onclick>Skin.SetString(shipregistry)</onclick>
-					</control>
-					<control type="radiobutton" id="222">
-						<description>Hide Movies Button</description>
-						<width>750</width>
-						<height>40</height>
-						<aligny>center</aligny>
-						<textcolor>black</textcolor>
-						<focusedcolor>black</focusedcolor>
-						<label>$LOCALIZE[31111] - $LOCALIZE[342] [COLOR=grey3] ($LOCALIZE[20314])[/COLOR]</label>
-						<onclick>Skin.ToggleSetting(HomeMenuNoMovieButton)</onclick>
-						<selected>Skin.HasSetting(HomeMenuNoMovieButton)</selected>
-						<enable>Library.HasContent(Movies)</enable>
-					</control>
-					<control type="radiobutton" id="223">
-						<description>Hide TV Shows Button</description>
-						<width>750</width>
-						<height>40</height>
-						<aligny>center</aligny>
-						<textcolor>black</textcolor>
-						<focusedcolor>black</focusedcolor>
-						<label>$LOCALIZE[31111] - $LOCALIZE[20343] [COLOR=grey3] ($LOCALIZE[20314])[/COLOR]</label>
-						<onclick>Skin.ToggleSetting(HomeMenuNoTVShowButton)</onclick>
-						<selected>Skin.HasSetting(HomeMenuNoTVShowButton)</selected>
-						<enable>Library.HasContent(TVShows)</enable>
-					</control>
-					<control type="radiobutton" id="224">
-						<description>Hide Music Button</description>
-						<width>750</width>
-						<height>40</height>
-						<aligny>center</aligny>
-						<textcolor>black</textcolor>
-						<focusedcolor>black</focusedcolor>
-						<label>$LOCALIZE[31111] - $LOCALIZE[2]</label>
-						<onclick>Skin.ToggleSetting(HomeMenuNoMusicButton)</onclick>
-						<selected>Skin.HasSetting(HomeMenuNoMusicButton)</selected>
-					</control>
-					<control type="radiobutton" id="225">
-						<description>Hide Pictures Button</description>
-						<width>750</width>
-						<height>40</height>
-						<aligny>center</aligny>
-						<textcolor>black</textcolor>
-						<focusedcolor>black</focusedcolor>
-						<label>$LOCALIZE[31111] - $LOCALIZE[1]</label>
-						<onclick>Skin.ToggleSetting(HomeMenuNoPicturesButton)</onclick>
-						<selected>Skin.HasSetting(HomeMenuNoPicturesButton)</selected>
-					</control>
-					<control type="radiobutton" id="229">
-						<description>Hide ADDONS Button</description>
-						<width>750</width>
-						<height>40</height>
-						<aligny>center</aligny>
-						<textcolor>black</textcolor>
-						<focusedcolor>black</focusedcolor>
-						<label>$LOCALIZE[31111] - $LOCALIZE[24001]</label>
-						<onclick>Skin.ToggleSetting(HomeMenuNoADDONSButton)</onclick>
-						<selected>Skin.HasSetting(HomeMenuNoADDONSButton)</selected>
-					</control>
-					<control type="radiobutton" id="230">
-						<visible>!Skin.HasSetting(nextair) + System.HasAddon(script.tv.show.next.aired) + Library.HasContent(TVShows)</visible>
-						<description>Hide NEXT AIR Button</description>
-						<width>750</width>
-						<height>40</height>
-						<aligny>center</aligny>
-						<textcolor>black</textcolor>
-						<focusedcolor>black</focusedcolor>
-						<label>$LOCALIZE[31111] - $LOCALIZE[31000]</label>
-						<onclick>Skin.ToggleSetting(HomeMenuNoNEXTAIRButton)</onclick>
-						<selected>Skin.HasSetting(HomeMenuNoNEXTAIRButton)</selected>
-					</control>
-					<control type="radiobutton" id="231">
-						<description>Hide Favorites Button</description>
-						<width>750</width>
-						<height>40</height>
-						<aligny>center</aligny>
-						<textcolor>black</textcolor>
-						<focusedcolor>black</focusedcolor>
-						<label>$LOCALIZE[31111] - $LOCALIZE[1036]</label>
-						<onclick>Skin.ToggleSetting(HomeMenuNoFavoritesButton)</onclick>
-						<selected>Skin.HasSetting(HomeMenuNoFavoritesButton)</selected>
-					</control>
-					<control type="radiobutton" id="228">
-						<description>Hide Weather Button</description>
-						<width>750</width>
-						<height>40</height>
-						<aligny>center</aligny>
-						<textcolor>black</textcolor>
-						<focusedcolor>black</focusedcolor>
-						<label>$LOCALIZE[31111] - $LOCALIZE[8]</label>
-						<onclick>Skin.ToggleSetting(HomeMenuNoWeatherButton)</onclick>
-						<selected>Skin.HasSetting(HomeMenuNoWeatherButton)</selected>
-					</control>
-					
-				</control>
-		</controls>
+		<include>allwindows</include>
+		<control type="grouplist" id="9000">
+			<left>290</left>
+			<top>130</top>
+			<width>750</width>
+			<height>530</height>
+			<itemgap>8</itemgap>
+			<pagecontrol>-</pagecontrol>
+			<onleft>700</onleft>
+			<onright>noop</onright>
+			<onup>9000</onup>
+			<ondown>9000</ondown>
+			<control type="button" id="8">
+				<description>Ship name</description>
+				<width>750</width>
+				<height>40</height>
+				<aligny>center</aligny>
+				<textcolor>black</textcolor>
+				<focusedcolor>black</focusedcolor>
+				<label>SHIP NAME U.S.S. $INFO[Skin.String(shipname)]</label>
+				<onclick>Skin.SetString(shipname)</onclick>
+			</control>
+			<control type="button" id="9">
+				<description>Ship registry</description>
+				<width>750</width>
+				<height>40</height>
+				<aligny>center</aligny>
+				<textcolor>black</textcolor>
+				<focusedcolor>black</focusedcolor>
+				<label>N.C.C.  - $INFO[Skin.String(shipregistry)]</label>
+				<onclick>Skin.SetString(shipregistry)</onclick>
+			</control>
+			<control type="radiobutton" id="222">
+				<description>Hide Movies Button</description>
+				<width>750</width>
+				<height>40</height>
+				<aligny>center</aligny>
+				<textcolor>black</textcolor>
+				<focusedcolor>black</focusedcolor>
+				<label>$LOCALIZE[31111] - $LOCALIZE[342] [COLOR=grey3] ($LOCALIZE[20314])[/COLOR]</label>
+				<texturenofocus colordiffuse="design" border="20">whiteallrounded.png</texturenofocus>
+				<texturefocus colordiffuse="white" border="20">whiteallrounded.png</texturefocus>
+				<onclick>Skin.ToggleSetting(HomeMenuNoMovieButton)</onclick>
+				<selected>Skin.HasSetting(HomeMenuNoMovieButton)</selected>
+				<enable>Library.HasContent(Movies)</enable>
+			</control>
+			<control type="radiobutton" id="223">
+				<description>Hide TV Shows Button</description>
+				<width>750</width>
+				<height>40</height>
+				<aligny>center</aligny>
+				<textcolor>black</textcolor>
+				<focusedcolor>black</focusedcolor>
+				<label>$LOCALIZE[31111] - $LOCALIZE[20343] [COLOR=grey3] ($LOCALIZE[20314])[/COLOR]</label>
+				<texturenofocus colordiffuse="design" border="20">whiteallrounded.png</texturenofocus>
+				<texturefocus colordiffuse="white" border="20">whiteallrounded.png</texturefocus>
+				<onclick>Skin.ToggleSetting(HomeMenuNoTVShowButton)</onclick>
+				<selected>Skin.HasSetting(HomeMenuNoTVShowButton)</selected>
+				<enable>Library.HasContent(TVShows)</enable>
+			</control>
+			<control type="radiobutton" id="224">
+				<description>Hide Music Button</description>
+				<width>750</width>
+				<height>40</height>
+				<aligny>center</aligny>
+				<textcolor>black</textcolor>
+				<focusedcolor>black</focusedcolor>
+				<label>$LOCALIZE[31111] - $LOCALIZE[2]</label>
+				<texturenofocus colordiffuse="design" border="20">whiteallrounded.png</texturenofocus>
+				<texturefocus colordiffuse="white" border="20">whiteallrounded.png</texturefocus>
+				<onclick>Skin.ToggleSetting(HomeMenuNoMusicButton)</onclick>
+				<selected>Skin.HasSetting(HomeMenuNoMusicButton)</selected>
+			</control>
+			<control type="radiobutton" id="225">
+				<description>Hide Pictures Button</description>
+				<width>750</width>
+				<height>40</height>
+				<aligny>center</aligny>
+				<textcolor>black</textcolor>
+				<focusedcolor>black</focusedcolor>
+				<label>$LOCALIZE[31111] - $LOCALIZE[1]</label>
+				<texturenofocus colordiffuse="design" border="20">whiteallrounded.png</texturenofocus>
+				<texturefocus colordiffuse="white" border="20">whiteallrounded.png</texturefocus>
+				<onclick>Skin.ToggleSetting(HomeMenuNoPicturesButton)</onclick>
+				<selected>Skin.HasSetting(HomeMenuNoPicturesButton)</selected>
+			</control>
+			<control type="radiobutton" id="229">
+				<description>Hide ADDONS Button</description>
+				<width>750</width>
+				<height>40</height>
+				<aligny>center</aligny>
+				<textcolor>black</textcolor>
+				<focusedcolor>black</focusedcolor>
+				<label>$LOCALIZE[31111] - $LOCALIZE[24001]</label>
+				<texturenofocus colordiffuse="design" border="20">whiteallrounded.png</texturenofocus>
+				<texturefocus colordiffuse="white" border="20">whiteallrounded.png</texturefocus>
+				<onclick>Skin.ToggleSetting(HomeMenuNoADDONSButton)</onclick>
+				<selected>Skin.HasSetting(HomeMenuNoADDONSButton)</selected>
+			</control>
+			<control type="radiobutton" id="230">
+				<visible>!Skin.HasSetting(nextair) + System.HasAddon(script.tv.show.next.aired) + Library.HasContent(TVShows)</visible>
+				<description>Hide NEXT AIR Button</description>
+				<width>750</width>
+				<height>40</height>
+				<aligny>center</aligny>
+				<textcolor>black</textcolor>
+				<focusedcolor>black</focusedcolor>
+				<label>$LOCALIZE[31111] - $LOCALIZE[31000]</label>
+				<texturenofocus colordiffuse="design" border="20">whiteallrounded.png</texturenofocus>
+				<texturefocus colordiffuse="white" border="20">whiteallrounded.png</texturefocus>
+				<onclick>Skin.ToggleSetting(HomeMenuNoNEXTAIRButton)</onclick>
+				<selected>Skin.HasSetting(HomeMenuNoNEXTAIRButton)</selected>
+			</control>
+			<control type="radiobutton" id="231">
+				<description>Hide Favorites Button</description>
+				<width>750</width>
+				<height>40</height>
+				<aligny>center</aligny>
+				<textcolor>black</textcolor>
+				<focusedcolor>black</focusedcolor>
+				<label>$LOCALIZE[31111] - $LOCALIZE[1036]</label>
+				<texturenofocus colordiffuse="design" border="20">whiteallrounded.png</texturenofocus>
+				<texturefocus colordiffuse="white" border="20">whiteallrounded.png</texturefocus>
+				<onclick>Skin.ToggleSetting(HomeMenuNoFavoritesButton)</onclick>
+				<selected>Skin.HasSetting(HomeMenuNoFavoritesButton)</selected>
+			</control>
+			<control type="radiobutton" id="228">
+				<description>Hide Weather Button</description>
+				<width>750</width>
+				<height>40</height>
+				<aligny>center</aligny>
+				<textcolor>black</textcolor>
+				<focusedcolor>black</focusedcolor>
+				<label>$LOCALIZE[31111] - $LOCALIZE[8]</label>
+				<texturenofocus colordiffuse="design" border="20">whiteallrounded.png</texturenofocus>
+				<texturefocus colordiffuse="white" border="20">whiteallrounded.png</texturefocus>
+				<onclick>Skin.ToggleSetting(HomeMenuNoWeatherButton)</onclick>
+				<selected>Skin.HasSetting(HomeMenuNoWeatherButton)</selected>
+			</control>
+
+		</control>
+	</controls>
 </window>

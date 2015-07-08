@@ -935,6 +935,8 @@
                 <!--OR-->
                 <!--<onup condition="Window.IsVisible(...)">20</onup>-->
                 <onup>9000</onup>
+                <onright condition="Window.IsActive(SkinSettings.xml)">9000</onright>
+                <onright>noop</onright>
                 <ondown>noop</ondown>
                 <top>489</top>
                 <label>31008</label>

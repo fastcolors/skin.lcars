@@ -42,12 +42,12 @@
 				<!--SHIP NAME-->
 				<item id="1">
 					<label>31113</label>
-					<onclick>ActivateWindow(Videos,MovieTitles,return)</onclick>
+					<onclick>noop</onclick>
 				</item>
 				<!--HIDE MENU ITEMS-->
 				<item id="2">
 					<label>31112</label>
-					<onclick>ActivateWindow(Videos,MovieTitles,return)</onclick>
+					<onclick>noop</onclick>
 				</item>
 			</content>
 		</control>
@@ -80,7 +80,7 @@
 				<aligny>center</aligny>
 				<textcolor>black</textcolor>
 				<focusedcolor>black</focusedcolor>
-				<label>N.C.C.  - $INFO[Skin.String(shipregistry)]</label>
+				<label>N.C.C. $INFO[Skin.String(shipregistry)]</label>
 				<onclick>Skin.SetString(shipregistry)</onclick>
 			</control>
 		</control>

@@ -1033,6 +1033,7 @@
             <font>font30</font>
             <width>330</width>
             <height>40</height>
+            <align>center</align>
             <label>$LOCALIZE[31003] : $INFO[System.Date] • $INFO[System.Time]</label>
         </control>
         <control type="image" >

@@ -1,45 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">9000</defaultcontrol>
-	<allowoverlay>no</allowoverlay>
+	<animation effect="slide" end="0,0" start="1050,0" time="600">WindowOpen</animation>
+	<animation effect="slide" end="1050,0" start="0,0" time="600">WindowClose</animation>
+	<coordinates>
+		<system>1</system>
+		<left>255</left>
+		<top>40</top>
+	</coordinates>
+	<include>dialogeffect</include>
 	<controls>
-		<control type="label">
-			<animation effect="fade" start="0" end="100" time="200" delay="400">WindowOpen</animation>
-			<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
-			<description>header label</description>
-			<top>18</top>
-			<centerleft>670</centerleft>
-			<width>675</width>
-			<height>40</height>
-			<label>$LOCALIZE[24003]</label>
-			<font>font30</font>
-			<align>center</align>
-		</control>
 		<control type="group">
-			<top>40</top>
-			<visible>!Window.IsVisible(FileBrowser)</visible>
-			<animation effect="slide" start="1100,0" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
-			<animation effect="slide" start="0,0" end="1100,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
+			<include>VisibleFadeEffect</include>
+			<visible>!Window.isVisible(AddonSettings) + !Window.IsActive(TextViewer)</visible>
 			<control type="image">
 				<description>background image</description>
-				<left>185</left>
-				<top>22</top>
+				<centerleft>560</centerleft>
+				<top>20</top>
 				<width>1250</width>
 				<height>600</height>
-				<colordiffuse>fffdf681</colordiffuse>
-				<texture border="130">dialog2.png</texture>
+				<texture border="130">dialog.png</texture>
+			</control>
+			<control type="label">
+				<description>header label</description>
+				<centerleft>460</centerleft>
+				<top>30</top>
+				<width>840</width>
+				<height>30</height>
+				<font>font30</font>
+				<label>$LOCALIZE[24003]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>darkblue</textcolor>
+				<shadowcolor>-</shadowcolor>
 			</control>
 			<control type="button">
 				<description>Close Window button</description>
-				<left>220</left>
-				<top>50</top>
+				<left>-49</left>
+				<top>38</top>
 				<width>30</width>
 				<height>30</height>
 				<label>-</label>
 				<font>-</font>
 				<onclick>PreviousMenu</onclick>
-				<texturefocus>DefaultIconError.png</texturefocus>
-				<texturenofocus>DefaultIconError.png</texturenofocus>
+				<texturefocus>closefocus.png</texturefocus>
+				<texturenofocus>close.png</texturenofocus>
 				<onleft>3</onleft>
 				<onright>3</onright>
 				<onup>3</onup>
@@ -47,20 +52,28 @@
 				<visible>system.getbool(input.enablemouse)</visible>
 			</control>
 			<control type="image">
-				<centerleft>500</centerleft>
-				<top>20</top>
+				<left>20</left>
+				<top>70</top>
 				<width>220</width>
 				<height>220</height>
 				<aspectratio>keep</aspectratio>
 				<texture>$INFO[ListItem.Icon]</texture>
-				<bordertexture border="5">white.png</bordertexture>
-				<bordersize>4</bordersize>
+				<bordertexture border="8">black.png</bordertexture>
+				<bordersize>8</bordersize>
+			</control>
+			<control type="image">
+				<left>260</left>
+				<top>70</top>
+				<width>640</width>
+				<height>220</height>
+				<texture border="15">whiteallrounded.png</texture>
+				<colordiffuse>steelblue</colordiffuse>
 			</control>
 			<control type="grouplist">
-				<left>740</left>
-				<top>120</top>
-				<width>400</width>
-				<align>left</align>
+				<left>280</left>
+				<top>80</top>
+				<width>610</width>
+				<align>center</align>
 				<orientation>horizontal</orientation>
 				<control type="label">
 					<description>Addon Title value</description>
@@ -70,7 +83,7 @@
 					<aligny>center</aligny>
 					<font>font30</font>
 					<label>$INFO[ListItem.Property(Addon.Name)]</label>
-					<textcolor>blue</textcolor>
+					<textcolor>cyan</textcolor>
 					<scroll>true</scroll>
 				</control>
 				<control type="label">
@@ -86,37 +99,37 @@
 				</control>
 			</control>
 			<control type="group">
-				<centerleft>955</centerleft>
-				<top>280</top>
+				<left>270</left>
+				<top>140</top>
 				<control type="textbox">
 					<description>Disclaimer</description>
-					<left>210</left>
+					<left>10</left>
 					<top>-30</top>
-					<width>400</width>
+					<width>600</width>
 					<height>25</height>
 					<font>font12</font>
-					<align>left</align>
+					<align>center</align>
 					<textcolor>navajowhite</textcolor>
 					<label>$INFO[ListItem.Property(Addon.Disclaimer)]</label>
 					<autoscroll time="2000" delay="3000" repeat="5000">true</autoscroll>
 				</control>
 				<control type="label">
 					<description>Type txt</description>
-					<left>0</left>
+					<left>10</left>
 					<top>0</top>
-					<width>300</width>
+					<width>140</width>
 					<height>25</height>
 					<label>$LOCALIZE[146]</label>
 					<align>right</align>
 					<aligny>center</aligny>
 					<font>font13</font>
-					<textcolor>blue</textcolor>
+					<textcolor>darkblue</textcolor>
 				</control>
 				<control type="label">
 					<description>Type Value</description>
-					<left>320</left>
+					<left>160</left>
 					<top>0</top>
-					<width>400</width>
+					<width>440</width>
 					<height>25</height>
 					<label fallback="416">$INFO[ListItem.Property(Addon.Type)]</label>
 					<align>left</align>
@@ -127,21 +140,21 @@
 				</control>
 				<control type="label">
 					<description>Author txt</description>
-					<left>0</left>
+					<left>10</left>
 					<top>30</top>
-					<width>300</width>
+					<width>140</width>
 					<height>25</height>
 					<label>$LOCALIZE[21863]:</label>
 					<align>right</align>
 					<aligny>center</aligny>
 					<font>font13</font>
-					<textcolor>blue</textcolor>
+					<textcolor>darkblue</textcolor>
 				</control>
 				<control type="label">
 					<description>Author Value</description>
-					<left>320</left>
+					<left>160</left>
 					<top>30</top>
-					<width>400</width>
+					<width>440</width>
 					<height>25</height>
 					<label fallback="416">$INFO[ListItem.Property(Addon.Creator)]</label>
 					<align>left</align>
@@ -152,19 +165,19 @@
 				</control>
 				<control type="label">
 					<description>Rating txt</description>
-					<left>0</left>
+					<left>10</left>
 					<top>60</top>
-					<width>300</width>
+					<width>140</width>
 					<height>25</height>
 					<label>$LOCALIZE[563]:</label>
 					<align>right</align>
 					<aligny>center</aligny>
 					<font>font13</font>
-					<textcolor>blue</textcolor>
+					<textcolor>darkblue</textcolor>
 				</control>
 				<control type="image">
 					<description>Rating value</description>
-					<left>320</left>
+					<left>155</left>
 					<top>60</top>
 					<width>128</width>
 					<height>25</height>
@@ -173,21 +186,21 @@
 				</control>
 				<control type="label">
 					<description>Summary txt</description>
-					<left>0</left>
+					<left>10</left>
 					<top>90</top>
-					<width>300</width>
+					<width>140</width>
 					<height>25</height>
 					<label>$LOCALIZE[20037]:</label>
 					<align>right</align>
 					<aligny>center</aligny>
 					<font>font13</font>
-					<textcolor>blue</textcolor>
+					<textcolor>darkblue</textcolor>
 				</control>
 				<control type="fadelabel">
 					<description>Summary Value</description>
-					<left>320</left>
+					<left>160</left>
 					<top>90</top>
-					<width>400</width>
+					<width>440</width>
 					<height>25</height>
 					<label fallback="416">$INFO[ListItem.Property(Addon.Summary)]</label>
 					<align>left</align>
@@ -204,27 +217,39 @@
 					<width>300</width>
 					<height>25</height>
 					<label>$LOCALIZE[21821]</label>
-					<align>right</align>
+					<align>left</align>
 					<aligny>center</aligny>
 					<font>font13</font>
-					<textcolor>blue</textcolor>
+					<textcolor>darkblue</textcolor>
 				</control>
-				<control type="textbox" id="400">
-					<description>Description</description>
-					<left>210</left>
-					<top>195</top>
-					<width>400</width>
-					<height>250</height>
-					<font>font13</font>
-					<align>justify</align>
-					<textcolor>white</textcolor>
-					<label>$INFO[ListItem.Property(Addon.Description)]</label>
-					<pagecontrol>-</pagecontrol>
+				<control type="group">
+					<control type="textbox" id="400">
+						<description>Description</description>
+						<left>10</left>
+						<top>195</top>
+						<width>600</width>
+						<height>250</height>
+						<font>font13</font>
+						<align>justify</align>
+						<textcolor>white</textcolor>
+						<label>$INFO[ListItem.Property(Addon.Description)]</label>
+						<pagecontrol>60</pagecontrol>
+					</control>
+					<control type="scrollbar" id="60">
+						<left>630</left>
+						<top>195</top>
+						<width>9</width>
+						<height>250</height>
+						<onleft>9000</onleft>
+						<onright>61</onright>
+						<showonepage>false</showonepage>
+						<orientation>vertical</orientation>
+					</control>
 				</control>
 			</control>
 			<control type="grouplist" id="9000">
-				<centerleft>500</centerleft>
-				<top>270</top>
+				<left>20</left>
+				<top>296</top>
 				<width>220</width>
 				<height>310</height>
 				<onleft>60</onleft>

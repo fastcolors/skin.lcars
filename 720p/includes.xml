@@ -1049,6 +1049,13 @@
             <height>79</height>
             <texture colordiffuse="design">curvelcars1.png</texture>
         </control>
+         <control type="image" >
+            <bottom>16</bottom>
+            <right>16</right>
+            <width>30</width>
+            <height>30</height>
+            <texture colordiffuse="black">kodilogo.png</texture>
+        </control>
     </include>
     <include name="keybutt">
         <width>85</width>

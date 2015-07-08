@@ -13,42 +13,46 @@
         <control type="label" id="1">
             <description>header label</description>
             <centerleft>640</centerleft>
-            <top>250</top>
-            <width>530</width>
+            <top>260</top>
+            <width>580</width>
             <height>30</height>
-            <font>font14</font>
+            <font>font16</font>
             <label>-</label>
             <align>center</align>
             <aligny>center</aligny>
             <textcolor>darkgreen</textcolor>
         </control>
-
         <control type="textbox" id="9">
             <description>text</description>
-            <centerleft>640</centerleft>
-            <top>290</top>
-            <width>550</width>
-            <height>100</height>
+            <left>360</left>
+            <centertop>360</centertop>
+            <width>380</width>
+            <height>110</height>
             <align>center</align>
+            <aligny>center</aligny>
             <label>-</label>
             <textcolor>white</textcolor>
 			<font>font14</font>
         </control>
         <control type="grouplist">
-            <centerleft>640</centerleft>
-            <top>410</top>
-            <orientation>horizontal</orientation>
+            <left>730</left>
+            <centertop>360</centertop>
+            <orientation>vertical</orientation>
             <align>center</align>
-            <width>450</width>
+            <width>180</width>
+            <height>100</height>
             <control type="button" id="11">
                 <description>Yes button</description>
-                <texturenofocus colordiffuse="design" flipx="true" border="20">whiterounded.png</texturenofocus>
-                <texturefocus colordiffuse="green" flipx="true" border="20">whiterounded.png</texturefocus>
-                <width>200</width>
+                <texturenofocus>-</texturenofocus>
+                <texturefocus colordiffuse="green" border="20">yesno_f.png</texturefocus>
+                <width>180</width>
                 <height>40</height>
-                <label>107</label>
+                <!--<label>107</label>-->
+                <textcolor>yellow</textcolor>
+                <font>font_MainMenu</font>
                 <aligny>center</aligny>
                 <align>center</align>
+                <textoffset>-20</textoffset>
                 <onleft>10</onleft>
                 <onright>10</onright>
                 <onup>11</onup>
@@ -56,11 +60,13 @@
             </control>
             <control type="button" id="10">
                 <description>No button</description>
-                <texturenofocus colordiffuse="design" border="20">whiterounded.png</texturenofocus>
-                <texturefocus colordiffuse="green" border="20">whiterounded.png</texturefocus>
-                <width>200</width>
+                 <texturenofocus>-</texturenofocus>
+                <texturefocus colordiffuse="green" border="20">yesno_f.png</texturefocus>
+                <width>180</width>
                 <height>40</height>
-                <label>106</label>
+                <!--<label>106</label>-->
+                <textcolor>yellow</textcolor>
+                <font>font_MainMenu</font>
                 <aligny>center</aligny>
                 <align>center</align>
                 <onleft>11</onleft>

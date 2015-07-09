@@ -490,7 +490,6 @@
 
             <!--plugs-->
 
-
             <control type="grouplist" id="888">
                 <visible>Container(9000).HasFocus(4)</visible>
                 <onup>9000</onup>
@@ -550,19 +549,19 @@
                     <include>888buttons</include>
                     <label>157</label>
                     <onfocus>Skin.SetString(sourceshome,sources://video/)</onfocus>
-                    <onclick></onclick>
+                    <onclick>ActivateWindow(videos,files)</onclick>
                 </control>
                 <control type="button" id="501">
                     <include>888buttons</include>
                     <label>ADD SOURCE</label>
-                    <onclick condition="StringCompare(Skin.String(movieshome),sources://video/)">noop</onclick>
-                    <onclick condition="!StringCompare(Skin.String(movieshome),sources://video/)">noop</onclick>
+                    <onclick condition="StringCompare(Skin.String(sourceshome),sources://video/)">ActivateWindow(videos,files)</onclick>
+                    <onclick condition="!StringCompare(Skin.String(sourceshome),sources://music/)">SendClick(windowid,id)</onclick>
                 </control>
                 <control type="button" id="503">
                     <include>888buttons</include>
                     <label>292</label>
                     <onfocus>Skin.SetString(sourceshome,sources://music/)</onfocus>
-                    <onclick></onclick>
+                    <onclick>ActivateWindow(Music,sources://)</onclick>
                 </control>
             </control>
 
@@ -1052,7 +1051,7 @@
             <height>79</height>
             <texture colordiffuse="design">curvelcars1.png</texture>
         </control>
-         <control type="image" >
+        <control type="image" >
             <bottom>16</bottom>
             <right>16</right>
             <width>30</width>
@@ -1146,15 +1145,15 @@
                 <onclick condition="!IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioChannels)</onclick>
             </control>
             <control type="button" id="101">
-                +                <description>TV Guide</description>
-                +                <visible>![Window.IsActive(TVGuide) | Window.IsActive(RadioGuide)]</visible>
-                +                <textwidth>235</textwidth>
-                +                <include>9000butts</include>
-                +                <label>22020</label>
-                +                <onclick condition="Window.IsActive(TVGuide) | Window.IsActive(RadioGuide)">NextChannelGroup</onclick>
-                +                <onclick condition="IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVGuide)</onclick>
-                +                <onclick condition="!IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioGuide)</onclick>
-                +            </control>
+                <description>TV Guide</description>
+                <visible>![Window.IsActive(TVGuide) | Window.IsActive(RadioGuide)]</visible>
+                <textwidth>235</textwidth>
+                <include>9000butts</include>
+                <label>22020</label>
+                <onclick condition="Window.IsActive(TVGuide) | Window.IsActive(RadioGuide)">NextChannelGroup</onclick>
+                <onclick condition="IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVGuide)</onclick>
+                <onclick condition="!IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioGuide)</onclick>
+            </control>
             <control type="button" id="102">
                 <description>Recordings</description>
                 <visible>![Window.IsActive(TVRecordings) | Window.IsActive(RadioRecordings)]</visible><textwidth>235</textwidth>
@@ -1241,7 +1240,6 @@
                 <label>19184</label>
                 <visible>Window.IsActive(TVRecordings) | Window.IsActive(RadioRecordings)</visible>
             </control>
-
         </control>
     </include>
     <include name="TVNextAiredListCommonLayout">
@@ -1284,7 +1282,6 @@
                 <aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
                 <visible>StringCompare(Window(Home).Property(TVGuide.ThumbType),2)</visible>
             </control>
-
             <control type="textbox">
                 <left>240</left>
                 <textcolor>yellow</textcolor>

@@ -52,7 +52,7 @@
 				<left>450r</left>
 				<top>250</top>
 				<width>450</width>
-				<height>380</height>
+				<height>350</height>
 				<onup>450</onup>
 				<onleft>Dialog.Close(Favourites)</onleft>
 				<onright>450</onright>

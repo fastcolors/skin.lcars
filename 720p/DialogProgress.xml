@@ -45,23 +45,6 @@
 			<textcolor>selected</textcolor>
 			<shadowcolor>black</shadowcolor>
 		</control>
-		<!--control type="button">
-			<description>Close Window button</description>
-			<left>520</left>
-			<top>15</top>
-			<width>64</width>
-			<height>32</height>
-			<label>-</label>
-			<font>-</font>
-			<onclick>PreviousMenu</onclick>
-			<texturefocus>closefocus.png</texturefocus>
-			<texturenofocus>close.png</texturenofocus>
-			<onleft>10</onleft>
-			<onright>10</onright>
-			<onup>10</onup>
-			<ondown>10</ondown>
-			<visible>system.getbool(input.enablemouse)</visible>
-		</control-->
 		<control type="textbox" id="9">
 			<description>text</description>
 			<left>30</left>
@@ -79,7 +62,7 @@
 			<left>30</left>
 			<top>148</top>
 			<width>550</width>
-			<height>16</height>
+			<height>9</height>
 			<info>System.Progressbar</info>
 		</control>
 		<control type="button" id="10">

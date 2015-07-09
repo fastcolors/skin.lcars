@@ -42,14 +42,14 @@
 				<width>300</width>
                 <height>300</height>
                 <aspectratio scalediffuse="false">keep</aspectratio>
-                <texture  background="true" >astmosphere.png</texture>
+                <texture  diffuse="soap.png" background="true" >astmosphere.png</texture>
             </control>
 			<control type="multiimage">
 				<description>map multiimage</description>
 				<left>45</left>
 				<width>300</width>
 				<height>300</height>
-				<imagepath>$INFO[Window.Property(MapPath)]</imagepath>
+				<imagepath  diffuse="soap.png">$INFO[Window.Property(MapPath)]</imagepath>
 				<timeperimage>500</timeperimage>
 				<pauseatend>1000</pauseatend>
 				<fadetime>0</fadetime>

@@ -38,7 +38,7 @@
 						<top>40</top>
 						<width>400</width>
 						<height>120</height>
-						<texture border="20" colordiffuse="darkblue">whiteallrounded.png</texture>
+						<texture border="20">shadow.png</texture>
 					</control>
 					<control type="label">
 						<left>0</left>
@@ -101,7 +101,7 @@
 						<top>40</top>
 						<width>400</width>
 						<height>120</height>
-						<texture border="20" colordiffuse="darkblue">whiteallrounded.png</texture>
+						<texture border="20" >shadow.png</texture>
 					</control>
 					<control type="label">
 						<left>0</left>
@@ -164,7 +164,7 @@
 						<top>40</top>
 						<width>400</width>
 						<height>120</height>
-						<texture border="20" colordiffuse="darkblue">whiteallrounded.png</texture>
+						<texture border="20" >shadow.png</texture>
 					</control>
 					<control type="label">
 						<left>0</left>

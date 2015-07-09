@@ -693,7 +693,7 @@
                         <left>10</left>
                         <width>106</width>
                         <height>200</height>
-                        <texture border="60" colordiffuse="darkblue">soap.png</texture>
+                        <texture border="60">shadow.png</texture>
                     </control>
                     <control type="label">
                         <top>130</top>
@@ -739,7 +739,7 @@
                         <left>10</left>
                         <width>106</width>
                         <height>200</height>
-                        <texture border="60" colordiffuse="darkblue">soap.png</texture>
+                        <texture border="60" >shadow.png</texture>
                     </control>
                     <control type="label">
                         <top>130</top>

@@ -35,7 +35,7 @@
 						<top>3</top>
 						<width>900</width>
 						<height>46</height>
-						<texture colordiffuse="darkblue" border="20">whiteallrounded.png</texture>
+						<texture border="20">shadow.png</texture>
 						<include>VisibleFadeEffect</include>
 					</control>
 					<control type="label">
@@ -73,14 +73,14 @@
 						<top>3</top>
 						<width>900</width>
 						<height>46</height>
-						<texture colordiffuse="darkblue" border="20">whiteallrounded.png</texture>
+						<texture border="20">shadow.png</texture>
 					</control>
                     <control type="image">
 						<left>0</left>
 						<top>3</top>
 						<width>900</width>
 						<height>46</height>
-						<texture colordiffuse="55FFFFFF" border="20">whiteallrounded.png</texture>
+						<texture colordiffuse="red" border="20">shadow.png</texture>
 						<visible>Control.HasFocus(52)</visible>
 					</control>
 					<control type="label">

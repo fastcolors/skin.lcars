@@ -2,7 +2,8 @@
 <includes>
 	<include name="WeatherMapAlerts">
 		<control type="group">
-            <left>630</left>
+            <left>320</left>
+			<top>240</top>
 			<visible>StringCompare(Window.Property(Weather.CurrentView),map)</visible>
 			<control type="button" id="999">
 				<description>Hidden Button for focus</description>
@@ -28,20 +29,26 @@
 				<textcolor>white</textcolor>
 				<shadowcolor>black</shadowcolor>
 			</control>
+			<control type="group">
+				<centerleft>200</centerleft>
+				<top>80</top>
 			<control type="image">
-				<description>Background image</description>
-				<left>40</left>
-				<top>75</top>
-				<width>570</width>
-				<height>325</height>
-				<texture border="20">white.png</texture>
+				<width>390</width>
+				<height>310</height>
+				<texture background="true" border="10">videowindowbg.png</texture>
 			</control>
+            <control type="image">
+                <left>45</left>
+				<width>300</width>
+                <height>300</height>
+                <aspectratio scalediffuse="false">keep</aspectratio>
+                <texture  background="true" >astmosphere.png</texture>
+            </control>
 			<control type="multiimage">
 				<description>map multiimage</description>
 				<left>45</left>
-				<top>80</top>
-				<width>560</width>
-				<height>315</height>
+				<width>300</width>
+				<height>300</height>
 				<imagepath>$INFO[Window.Property(MapPath)]</imagepath>
 				<timeperimage>500</timeperimage>
 				<pauseatend>1000</pauseatend>
@@ -51,40 +58,42 @@
 				<aspectratio>keep</aspectratio>
 				<aligny>center</aligny>
 			</control>
+			
+        </control>
 			<control type="label">
-				<left>40</left>
-				<top>430</top>
+				<top>100</top>
+				<left>380</left>
 				<width>570</width>
 				<height>30</height>
-<textcolor>red</textcolor>
+				<textcolor>red</textcolor>
 				<align>center</align>
 				<aligny>center</aligny>
 				<label>$LOCALIZE[33050]</label>
 			</control>
             <control type="image">
                 <visible>!StringCompare(Window.Property(Alerts.Count),0)</visible>
-                <left>40</left>
-					<top>470</top>
-					<width>570</width>
-					<height>100</height>
-                <texture colordiffuse="red" border="20">whiteallrounded.png</texture>
-                </control>
+                <top>110</top>
+				<left>380</left>
+				<width>570</width>
+				<height>200</height>
+                <texture colordiffuse="red" border="20">videowindowbg.png</texture>
+            </control>
 			<control type="group">
 				<visible>!StringCompare(Window.Property(Alerts.Count),0)</visible>
 				<control type="textbox">
-					<left>40</left>
-					<top>470</top>
+					<top>135</top>
+					<left>380</left>
 					<width>570</width>
-					<height>100</height>
-					<selectedcolor>selected</selectedcolor>
+					<height>150</height>
+					<textcolor>white</textcolor>
 					<align>center</align>
 					<label>$INFO[Window.Property(Alerts)]</label>
 					<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
 			</control>
 			<control type="label">
-				<left>40</left>
-				<top>500</top>
+				<left>380</left>
+				<top>140</top>
 				<width>570</width>
 				<height>30</height>
 				<textcolor>white</textcolor>

@@ -2,7 +2,8 @@
 <includes>
 	<include name="Weather36HourForcast">
 		<control type="group">
-			<left>630</left>
+			<left>360</left>
+			<top>250</top>
 			<visible>StringCompare(Window.Property(Weather.CurrentView),36hour)</visible>
 			<control type="button" id="997">
 				<description>Hidden Button for focus</description>
@@ -35,14 +36,14 @@
 					<control type="image">
 						<left>0</left>
 						<top>40</top>
-						<width>600</width>
+						<width>400</width>
 						<height>120</height>
 						<texture border="20" colordiffuse="darkblue">whiteallrounded.png</texture>
 					</control>
 					<control type="label">
 						<left>0</left>
 						<top>5</top>
-						<width>600</width>
+						<width>400</width>
 						<height>30</height>
 						<font>font30</font>
 						<textcolor>yellow</textcolor>
@@ -94,18 +95,18 @@
 				</control>
 				<control type="group">
 					<left>0</left>
-					<top>185</top>
+					<top>180</top>
 					<control type="image">
 						<left>0</left>
 						<top>40</top>
-						<width>600</width>
+						<width>400</width>
 						<height>120</height>
 						<texture border="20" colordiffuse="darkblue">whiteallrounded.png</texture>
 					</control>
 					<control type="label">
 						<left>0</left>
 						<top>5</top>
-						<width>600</width>
+						<width>400</width>
 						<height>30</height>
 						<font>font30</font>
 						<textcolor>yellow</textcolor>
@@ -156,19 +157,19 @@
 					</control>
 				</control>
 				<control type="group">
-					<left>0</left>
-					<top>370</top>
+					<left>450</left>
+					<top>90</top>
 					<control type="image">
 						<left>0</left>
 						<top>40</top>
-						<width>600</width>
+						<width>400</width>
 						<height>120</height>
 						<texture border="20" colordiffuse="darkblue">whiteallrounded.png</texture>
 					</control>
 					<control type="label">
 						<left>0</left>
 						<top>5</top>
-						<width>600</width>
+						<width>400</width>
 						<height>30</height>
 						<font>font30</font>
 						<textcolor>yellow</textcolor>

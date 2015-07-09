@@ -6,287 +6,123 @@
         <include>allwindows</include>
 
         <control type="group">
-            <control type="group">
-                <visible>StringCompare(Window.Property(Weather.CurrentView),weekend) | StringCompare(Window.Property(Weather.CurrentView),36hour) | StringCompare(Window.Property(Weather.CurrentView),map)</visible>
-                <left>165</left>
-                <top>40</top>
-                <control type="image">
-                    <top>40</top>
-                    <left>20</left>
-                    <width>460</width>
-                    <height>565</height>
-                    <texture colordiffuse="darkblue" border="20">whiteallrounded.png</texture>
-                </control>
-                <control type="label">
-                    <description>header label</description>
-                    <left>20</left>
-                    <top>15</top>
-                    <width>460</width>
-                    <height>30</height>
-                    <font>font13_title</font>
-                    <label>31300</label>
-                    <align>center</align>
-                    <aligny>center</aligny>
-                    <textcolor>white</textcolor>
-                    <shadowcolor>black</shadowcolor>
-                </control>
-                <control type="image">
-                    <left>30</left>
-                    <top>55</top>
-                    <width>440</width>
-                    <height>46</height>
-                    <aspectratio align="center" aligny="center">keep</aspectratio>
-                    <texture>$INFO[Window.Property(WeatherProviderLogo)]</texture>
-                </control>
-                <control type="group">
-                    <control type="label">
-                        <description>weather location label</description>
-                        <left>20</left>
-                        <top>100</top>
-                        <width>460</width>
-                        <height>30</height>
-                        <font>font13_title</font>
-                        <textcolor>white</textcolor>
-                        <scroll>false</scroll>
-                        <align>center</align>
-                        <aligny>center</aligny>
-                        <label>$INFO[Window.Property(Location)]</label>
-                    </control>
-                    <control type="label">
-                        <description>update label</description>
-                        <left>20</left>
-                        <top>120</top>
-                        <width>460</width>
-                        <height>35</height>
-                        <font>font12</font>
-                        <label>$LOCALIZE[31301] - $INFO[Window.Property(Updated)]</label>
-                        <align>center</align>
-                        <aligny>center</aligny>
-                        <textcolor>grey2</textcolor>
-                    </control>
-                    <control type="label">
-                        <description>current temp Value</description>
-                        <left>15</left>
-                        <top>185</top>
-                        <width>180</width>
-                        <height>40</height>
-                        <font>WeatherTemp</font>
-                        <align>right</align>
-                        <aligny>top</aligny>
-                        <label>$INFO[Window.Property(Current.Temperature)]</label>
-                        <textcolor>white</textcolor>
-                        <shadowcolor>black</shadowcolor>
-                    </control>
-                    <control type="label">
-                        <description>current temp Value Units</description>
-                        <left>200</left>
-                        <top>195</top>
-                        <width>100</width>
-                        <height>40</height>
-                        <font>font16</font>
-                        <align>left</align>
-                        <aligny>top</aligny>
-                        <label>$INFO[System.TemperatureUnits]</label>
-                        <textcolor>white</textcolor>
-                        <shadowcolor>black</shadowcolor>
-                    </control>
-                    <control type="image">
-                        <description>current weather icon</description>
-                        <left>260</left>
-                        <top>145</top>
-                        <width>200</width>
-                        <height>200</height>
-                        <info>Window.Property(Current.ConditionIcon)</info>
-                        <aspectratio>keep</aspectratio>
-                    </control>
-                    <control type="label">
-                        <description>current condition label</description>
-                        <left>20</left>
-                        <top>350</top>
-                        <width>460</width>
-                        <height>30</height>
-                        <info>Window.Property(Current.Condition)</info>
-                        <wrapmultiline>true</wrapmultiline>
-                        <font>font13</font>
-                        <align>center</align>
-                        <aligny>center</aligny>
-                        <textcolor>white</textcolor>
-                        <shadowcolor>black</shadowcolor>
-                    </control>
-                </control>
-                <control type="label">
-                    <description>current feels like label</description>
-                    <left>0</left>
-                    <top>400</top>
-                    <width>170</width>
-                    <height>35</height>
-                    <font>font13</font>
-                    <align>right</align>
-                    <aligny>center</aligny>
-                    <label>$LOCALIZE[402] :</label>
-                    <textcolor>grey2</textcolor>
-                    <shadowcolor>black</shadowcolor>
-                </control>
-                <control type="label">
-                    <description>current dew label</description>
-                    <left>0</left>
-                    <top>430</top>
-                    <width>170</width>
-                    <height>35</height>
-                    <font>font13</font>
-                    <align>right</align>
-                    <aligny>center</aligny>
-                    <label>$LOCALIZE[405] :</label>
-                    <textcolor>grey2</textcolor>
-                    <shadowcolor>black</shadowcolor>
-                </control>
-                <control type="label">
-                    <description>current humidity label</description>
-                    <left>0</left>
-                    <top>460</top>
-                    <width>170</width>
-                    <height>35</height>
-                    <font>font13</font>
-                    <align>right</align>
-                    <aligny>center</aligny>
-                    <label>$LOCALIZE[406] :</label>
-                    <textcolor>grey2</textcolor>
-                    <shadowcolor>black</shadowcolor>
-                </control>
-                <control type="label">
-                    <description>current UV Index label</description>
-                    <left>0</left>
-                    <top>490</top>
-                    <width>170</width>
-                    <height>35</height>
-                    <font>font13</font>
-                    <align>right</align>
-                    <aligny>center</aligny>
-                    <label>$LOCALIZE[403] :</label>
-                    <textcolor>grey2</textcolor>
-                    <shadowcolor>black</shadowcolor>
-                </control>
-                <control type="label">
-                    <description>current Wind label</description>
-                    <left>0</left>
-                    <top>520</top>
-                    <width>170</width>
-                    <height>35</height>
-                    <font>font13</font>
-                    <align>right</align>
-                    <aligny>center</aligny>
-                    <label>$LOCALIZE[404] :</label>
-                    <textcolor>grey2</textcolor>
-                    <shadowcolor>black</shadowcolor>
-                </control>
-                <control type="label">
-                    <description>current feels like Value</description>
-                    <left>185</left>
-                    <top>400</top>
-                    <width>300</width>
-                    <height>35</height>
-                    <font>font13</font>
-                    <align>left</align>
-                    <aligny>center</aligny>
-                    <label>$INFO[Window.Property(Current.FeelsLike)]$INFO[System.TemperatureUnits]</label>
-                    <textcolor>white</textcolor>
-                    <shadowcolor>black</shadowcolor>
-                </control>
-                <control type="label">
-                    <description>current dew Value</description>
-                    <left>185</left>
-                    <top>430</top>
-                    <width>300</width>
-                    <height>35</height>
-                    <font>font13</font>
-                    <align>left</align>
-                    <aligny>center</aligny>
-                    <label>$INFO[Window.Property(Current.DewPoint)]$INFO[System.TemperatureUnits]</label>
-                    <textcolor>white</textcolor>
-                    <shadowcolor>black</shadowcolor>
-                </control>
-                <control type="label">
-                    <description>current humidity Value</description>
-                    <left>185</left>
-                    <top>460</top>
-                    <width>300</width>
-                    <height>35</height>
-                    <font>font13</font>
-                    <align>left</align>
-                    <aligny>center</aligny>
-                    <info>Window.Property(Current.Humidity)</info>
-                    <textcolor>white</textcolor>
-                    <shadowcolor>black</shadowcolor>
-                </control>
-                <control type="label">
-                    <description>current UV Index Value</description>
-                    <left>185</left>
-                    <top>490</top>
-                    <width>300</width>
-                    <height>35</height>
-                    <font>font13</font>
-                    <align>left</align>
-                    <aligny>center</aligny>
-                    <info>Window.Property(Current.UVIndex)</info>
-                    <textcolor>white</textcolor>
-                    <shadowcolor>black</shadowcolor>
-                </control>
-                <control type="label">
-                    <description>current Wind Value</description>
-                    <left>185</left>
-                    <top>520</top>
-                    <width>300</width>
-                    <height>35</height>
-                    <font>font13</font>
-                    <align>left</align>
-                    <aligny>center</aligny>
-                    <info>Window.Property(Current.Wind)</info>
-                    <textcolor>white</textcolor>
-                    <shadowcolor>black</shadowcolor>
-                </control>
-                <control type="group">
-                    <visible>StringCompare(Weather.Plugin,weather.wunderground) + !IsEmpty(Window.Property(36Hour.IsFetched))</visible>
-                    <control type="label">
-                        <description>Sunrise Label</description>
-                        <left>30</left>
-                        <top>570</top>
-                        <width>300</width>
-                        <height>35</height>
-                        <font>font13</font>
-                        <align>left</align>
-                        <aligny>center</aligny>
-                        <label>$LOCALIZE[33027] : [COLOR=white]$INFO[Window.Property(Today.Sunrise)][/COLOR]</label>
-                        <textcolor>grey2</textcolor>
-                        <shadowcolor>black</shadowcolor>
-                    </control>
-                    <control type="label">
-                        <description>Sunset label</description>
-                        <left>170</left>
-                        <top>570</top>
-                        <width>300</width>
-                        <height>35</height>
-                        <font>font13</font>
-                        <align>right</align>
-                        <aligny>center</aligny>
-                        <label>$LOCALIZE[33028] : [COLOR=white]$INFO[Window.Property(Today.Sunset)][/COLOR]</label>
-                        <textcolor>grey2</textcolor>
-                        <shadowcolor>black</shadowcolor>
-                    </control>
-                </control>
+            <control type="image">
+				<description>background image</description>
+				<left>185</left>
+				<top>60</top>
+				<width>1250</width>
+				<height>600</height>
+				<texture border="130">dialog4.png</texture>
+			</control>
+			<control type="label">
+				<top>65</top>
+				<left>220</left>
+				<width>400</width>
+				<height>30</height>
+				<align>left</align>
+				<font>font35_title</font>
+				<textcolor>yellow</textcolor>
+				<label>Last Update - $INFO[Window(Weather).Property(Updated)]</label>
+				<description>update label</description>
+			</control>
+			<control type="image">
+                <left>220</left>
+                <top>100</top>
+                <align>center</align>
+				<width>300</width>
+                <height>150</height>
+                <aspectratio>keep</aspectratio>
+                <texture>$INFO[Window(Weather).Property(Current.ConditionIcon)]</texture>
             </control>
-        </control>
-        <control type="group">
-            <visible>StringCompare(Weather.Plugin,weather.wunderground)</visible>
-            <top>40</top>
-            <control type="group" id="50">
-                <include condition="StringCompare(Weather.Plugin,weather.wunderground)">Weather10DayForcast</include>
-                <include condition="StringCompare(Weather.Plugin,weather.wunderground)">Weather36HourForcast</include>
-                <include condition="StringCompare(Weather.Plugin,weather.wunderground)">WeatherWeekendForcast</include>
-                <include condition="StringCompare(Weather.Plugin,weather.wunderground)">WeatherHourlyForcast</include>
-                <include condition="StringCompare(Weather.Plugin,weather.wunderground)">WeatherMapAlerts</include>
-            </control>
-        </control>
-        
+			<control type="image">
+				<left>220</left>
+                <top>100</top>
+                <align>center</align>
+				<width>300</width>
+                <height>150</height>
+                <texture>videowindowbg.png</texture>
+			</control>
+			<control type="group">
+                <left>560</left>
+				<top>20</top>
+					<control type="label">
+						<top>100</top>
+						<width>400</width>
+						<height>35</height>
+						<align>left</align>
+						<textcolor>white</textcolor>
+						<label>$INFO[Window(Weather).Property(Current.Condition)]</label>
+					</control>
+					<control type="label">
+						<top>100</top>
+						<width>400</width>
+						<height>35</height>
+						<align>right</align>
+						<textcolor>white</textcolor>
+						<label>Wind $INFO[Window(Weather).Property(Current.Wind)]</label>
+					</control>
+					<control type="label">
+                        <top>130</top>
+                        <width>400</width>
+                        <height>35</height>
+                        <label>$LOCALIZE[402] : $INFO[Window(Weather).Property(Current.FeelsLike)] $INFO[System.TemperatureUnits]</label>
+                        <textcolor>white</textcolor>
+                    </control>
+					<control type="label">
+                        <top>130</top>
+                        <width>400</width>
+                        <height>35</height>
+                        <align>right</align>
+						<label>$INFO[Window(Weather).Property(Current.Humidity)] Humidity  $LOCALIZE[405]: $INFO[Window(Weather).Property(Current.DewPoint)]$INFO[System.TemperatureUnits]</label>
+                        <textcolor>white</textcolor>
+                    </control>
+					<control type="label">
+						<top>160</top>
+                        <height>35</height>
+						<width>400</width>
+                        <textcolor>white</textcolor>
+						<label>$LOCALIZE[419] : $INFO[Window(Weather).Property(Day0.HighTemp)]$INFO[System.TemperatureUnits]     $LOCALIZE[418] : $INFO[Window(Weather).Property(Day0.LowTemp)]$INFO[System.TemperatureUnits]</label>
+					</control>
+					<control type="label">
+						<description>current Precipitation label</description>
+						<top>160</top>
+						<width>400</width>
+						<height>35</height>
+						<textcolor>white</textcolor>
+						<align>right</align>
+						<label>$LOCALIZE[33021] : $INFO[Window(Weather).Property(Daily.1.Precipitation)]</label>
+						<visible>!IsEmpty(Window(Weather).Property(Current.Precipitation))</visible>
+					</control>
+					<control type="label">
+						<description>Sunrise Label</description>
+						<top>190</top>
+						<width>400</width>
+						<height>35</height>
+						<textcolor>white</textcolor>
+						<align>left</align>
+						<label>$LOCALIZE[33027] : $INFO[Window(Weather).Property(Today.Sunrise)]</label>
+						<visible>!IsEmpty(Window(Weather).Property(Today.Sunrise))</visible>
+					</control>
+					<control type="label">
+						<description>Sunset label</description>
+						<top>190</top>
+						<width>400</width>
+						<height>35</height>
+						<textcolor>white</textcolor>
+						<align>right</align>
+						<label>$LOCALIZE[33028] : $INFO[Window(Weather).Property(Today.Sunset)]</label>
+						<visible>!IsEmpty(Window(Weather).Property(Today.Sunset))</visible>
+					</control>
+                </control>
+           
+      </control>
+			<control type="group" id="50">
+				<include>Weather10DayForcast</include>
+				<include>Weather36HourForcast</include>
+				<include>WeatherWeekendForcast</include>
+				<include>WeatherHourlyForcast</include>
+				<include>WeatherMapAlerts</include>
+			</control>
             <control type="grouplist" id="9000">
                 <top>101</top>
 				<left>13</left>
@@ -298,7 +134,9 @@
 				<onright>50</onright>
                 <control type="spincontrolex" id="3">
                     <description>change location button</description>
-                    <include>9000butts</include>
+                    <align>left</align>
+					<scroll>false</scroll>
+				    <include>9000butts</include>
                 </control>
                 <control type="button" id="302">
                     <description>Hourly forcast button</description>
@@ -312,7 +150,7 @@
                     <description>10 day forcast button</description>
                     <include>9000butts</include>
                     <label>10 day</label>
-                    <onfocus>ClearProperty(Weather.CurrentView)</onfocus>
+                    <onfocus>SetProperty(Weather.CurrentView,10day)</onfocus>
                     <onclick>Weather.Refresh</onclick>
                     <!--visible>StringCompare(Weather.Plugin,weather.wunderground)</visible-->
                 </control>
@@ -350,24 +188,7 @@
                     <label>CONFIGURE</label>
 					<onclick>ActivateWindow(MyWeatherSettings)</onclick>
             </control>
-                <!--<control type="button" id="4">-->
-                    <!--<description>-</description>-->
-                    <!--<label>-</label>-->
-                    <!--<onclick>-</onclick>-->
-                    <!--<include>9000butts</include>-->
-                <!--</control>-->
             </control>
-            <!--<control type="button" id="700">-->
-                <!--<ondown>9000</ondown>-->
-                <!--<top>15</top>-->
-                <!--<left>13</left>-->
-                <!--<width>305</width>-->
-                <!--<height>79</height>-->
-                <!--<label></label>-->
-                <!--<texturenofocus colordiffuse="design">curvelcars1.png</texturenofocus>-->
-                <!--<texturefocus colordiffuse="blue">curvelcars1.png</texturefocus>-->
-                <!--<onclick></onclick>-->
-            <!--</control>-->
             
         
         <control type="label">
@@ -378,7 +199,7 @@
             <width>800</width>
             <height>40</height>
             <font>font30</font>
-            <info>Weather.Location</info>
+            <label>$INFO[Weather.Location] : $INFO[Weather.Temperature]</label>
         </control>
     </controls>
 </window>

@@ -63,16 +63,16 @@
     <default type="spincontrol">
         <left>330</left>
         <top>126</top>
-        <textureup>scroll-up-2.png</textureup>
-        <texturedown>scroll-down-2.png</texturedown>
-        <textureupfocus>scroll-up-focus-2.png</textureupfocus>
-        <texturedownfocus>scroll-down-focus-2.png</texturedownfocus>
+        <textureup>up.png</textureup>
+        <texturedown>down.png</texturedown>
+        <textureupfocus colordiffuse="green" >upf.png</textureupfocus>
+        <texturedownfocus colordiffuse="green" >downf.png</texturedownfocus>
         <align>right</align>
-        <width>33</width>
-        <height>22</height>
+        <width>30</width>
+        <height>18</height>
         <font>font14</font>
         <reverse>yes</reverse>
-        <textcolor>black</textcolor>
+        <textcolor>white</textcolor>
         <disabledcolor>grey3</disabledcolor>
         <subtype>text</subtype>
         <textoffsetx>-5</textoffsetx>

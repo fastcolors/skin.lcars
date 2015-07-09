@@ -507,14 +507,16 @@
 			</control>
 			<control type="spincontrol" id="61">
 				<description>Next page button</description>
-				<left>120r</left>
-				<top>485</top>
+				<left>761</left>
+				<width>20</width>
+				<height>20</height>
+				<top>600</top>
 				<subtype>page</subtype>
 				<font>-</font>
 				<onleft>61</onleft>
 				<onright>61</onright>
 				<ondown>9000</ondown>
-				<onup>49</onup>
+				<onup>9000</onup>
 				<textcolor>-</textcolor>
 				<showonepage>true</showonepage>
 			</control>
@@ -552,7 +554,7 @@
 				<onup>9000</onup>
 				<ondown>9000</ondown>
 				<viewtype label="">list</viewtype>
-				<pagecontrol>-</pagecontrol>
+				<pagecontrol>61</pagecontrol>
 				<scrolltime>200</scrolltime>
 				<orientation>vertical</orientation>
 				<itemlayout height="140" width="100">

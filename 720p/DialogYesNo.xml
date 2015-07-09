@@ -60,8 +60,8 @@
             </control>
             <control type="button" id="10">
                 <description>No button</description>
-                <texturenofocus>-</texturenofocus>
-                <texturefocus colordiffuse="red" border="20">yesno_f.png</texturefocus>
+                 <texturenofocus>-</texturenofocus>
+                <texturefocus colordiffuse="green" border="20">yesno_f.png</texturefocus>
                 <width>180</width>
                 <height>40</height>
                 <!--<label>106</label>-->

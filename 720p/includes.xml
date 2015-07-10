@@ -85,7 +85,6 @@
         </control>
         <control type="group" id="750">
             <!--background-->
-
             <control type="label">
                 <centerleft>718</centerleft>
                 <top>440</top>
@@ -845,8 +844,6 @@
         <align>right</align>
         <textoffsetx>5</textoffsetx>
         <textoffsety>2</textoffsety>
-
-
     </include>
 
     <include name="allwindows">

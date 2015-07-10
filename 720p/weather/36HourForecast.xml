@@ -4,7 +4,7 @@
 		<control type="group">
 			<left>360</left>
 			<top>250</top>
-			<visible>StringCompare(Window.Property(Weather.CurrentView),36hour)</visible>
+			<visible>StringCompare(Window.Property(Weather.CurrentView),36hour) + !IsEmpty(Window.Property(36Hour.IsFetched))</visible>
 			<control type="button" id="997">
 				<description>Hidden Button for focus</description>
 				<left>-600</left>
@@ -61,25 +61,25 @@
 					</control>
 					<control type="label">
 						<left>150</left>
-						<top>40</top>
+						<top>50</top>
 						<width>100</width>
 						<height>70</height>
 						<textcolor>white</textcolor>
 						<selectedcolor>selected</selectedcolor>
 						<align>left</align>
-						<aligny>center</aligny>
-						<label>[COLOR=grey2]$INFO[Window.Property(36Hour.1.TemperatureHeading)][CR][/COLOR]$INFO[Window.Property(36Hour.1.Temperature),[B] ,[/B]]</label>
+						<aligny>top</aligny>
+						<label>[COLOR=grey2]$INFO[Window.Property(36Hour.1.TemperatureHeading)][CR][/COLOR]$INFO[Window.Property(36Hour.1.Temperature)]</label>
 					</control>
 					<control type="label">
-						<right>50</right>
-						<top>40</top>
-						<width>390</width>
+						<left>70</left>
+						<top>50</top>
+						<width>300</width>
 						<height>70</height>
 						<textcolor>white</textcolor>
 						<selectedcolor>selected</selectedcolor>
 						<align>right</align>
-						<aligny>center</aligny>
-						<label>$INFO[Window.Property(36Hour.1.ChancePrecipitation),[COLOR=grey2]CHANCE OF PRECIPITATION :[/COLOR][B] ,[/B]]</label>
+						<aligny>top</aligny>
+						<label>$INFO[Window.Property(36Hour.1.FeelsLike),[COLOR=grey2]$LOCALIZE[402] :[/COLOR]][CR]$INFO[Window.Property(36Hour.1.Precipitation),[COLOR=grey2]$LOCALIZE[33021] :[/COLOR]][CR]$INFO[Window.Property(36Hour.1.Cloudiness),[COLOR=grey2]$LOCALIZE[387] :[/COLOR]]</label>
 					</control>
 					<control type="label">
 						<left>20</left>
@@ -90,7 +90,7 @@
 						<selectedcolor>selected</selectedcolor>
 						<align>left</align>
 						<aligny>center</aligny>
-						<label>$INFO[Window.Property(36hour.1.Forecast),[COLOR=grey2]CONDITIONS: [/COLOR]]</label>
+						<label>$INFO[Window.Property(36hour.1.Outlook)]</label>
 					</control>
 				</control>
 				<control type="group">
@@ -124,25 +124,25 @@
 					</control>
 					<control type="label">
 						<left>150</left>
-						<top>40</top>
+						<top>50</top>
 						<width>100</width>
 						<height>70</height>
 						<textcolor>white</textcolor>
 						<selectedcolor>selected</selectedcolor>
 						<align>left</align>
-						<aligny>center</aligny>
-						<label>[COLOR=grey2]$INFO[Window.Property(36Hour.2.TemperatureHeading)][CR][/COLOR]$INFO[Window.Property(36Hour.2.Temperature),[B] ,[/B]]</label>
+						<aligny>top</aligny>
+						<label>[COLOR=grey2]$INFO[Window.Property(36Hour.2.TemperatureHeading)][CR][/COLOR]$INFO[Window.Property(36Hour.2.Temperature)]</label>
 					</control>
 					<control type="label">
-						<right>50</right>
-						<top>40</top>
-						<width>390</width>
+						<left>70</left>
+						<top>50</top>
+						<width>300</width>
 						<height>70</height>
 						<textcolor>white</textcolor>
 						<selectedcolor>selected</selectedcolor>
 						<align>right</align>
-						<aligny>center</aligny>
-						<label>$INFO[Window.Property(36Hour.2.ChancePrecipitation),[COLOR=grey2]CHANCE OF PRECIPITATION :[/COLOR][B] ,[/B]]</label>
+						<aligny>top</aligny>
+						<label>$INFO[Window.Property(36Hour.2.FeelsLike),[COLOR=grey2]$LOCALIZE[402] :[/COLOR]][CR]$INFO[Window.Property(36Hour.2.Precipitation),[COLOR=grey2]$LOCALIZE[33021] :[/COLOR]][CR]$INFO[Window.Property(36Hour.2.Cloudiness),[COLOR=grey2]$LOCALIZE[387] :[/COLOR]]</label>
 					</control>
 					<control type="label">
 						<left>20</left>
@@ -153,7 +153,7 @@
 						<selectedcolor>selected</selectedcolor>
 						<align>left</align>
 						<aligny>center</aligny>
-						<label>$INFO[Window.Property(36hour.2.Forecast),[COLOR=grey2]CONDITIONS: [/COLOR]]</label>
+						<label>$INFO[Window.Property(36hour.2.Outlook)]</label>
 					</control>
 				</control>
 				<control type="group">
@@ -187,25 +187,25 @@
 					</control>
 					<control type="label">
 						<left>150</left>
-						<top>40</top>
+						<top>50</top>
 						<width>100</width>
 						<height>70</height>
 						<textcolor>white</textcolor>
 						<selectedcolor>selected</selectedcolor>
 						<align>left</align>
-						<aligny>center</aligny>
-						<label>[COLOR=grey2]$INFO[Window.Property(36Hour.3.TemperatureHeading)][CR][/COLOR]$INFO[Window.Property(36Hour.3.Temperature),[B] ,[/B]]</label>
+						<aligny>top</aligny>
+						<label>[COLOR=grey2]$INFO[Window.Property(36Hour.3.TemperatureHeading)][CR][/COLOR]$INFO[Window.Property(36Hour.3.Temperature)]</label>
 					</control>
 					<control type="label">
-						<right>50</right>
-						<top>40</top>
-						<width>390</width>
+						<left>70</left>
+						<top>50</top>
+						<width>300</width>
 						<height>70</height>
 						<textcolor>white</textcolor>
 						<selectedcolor>selected</selectedcolor>
 						<align>right</align>
-						<aligny>center</aligny>
-						<label>$INFO[Window.Property(36Hour.3.ChancePrecipitation),[COLOR=grey2]CHANCE OF PRECIPITATION :[/COLOR][B] ,[/B]]</label>
+						<aligny>top</aligny>
+						<label>$INFO[Window.Property(36Hour.3.FeelsLike),[COLOR=grey2]$LOCALIZE[402] :[/COLOR]][CR]$INFO[Window.Property(36Hour.3.Precipitation),[COLOR=grey2]$LOCALIZE[33021] :[/COLOR]][CR]$INFO[Window.Property(36Hour.3.Cloudiness),[COLOR=grey2]$LOCALIZE[387] :[/COLOR]]</label>
 					</control>
 					<control type="label">
 						<left>20</left>
@@ -216,7 +216,7 @@
 						<selectedcolor>selected</selectedcolor>
 						<align>left</align>
 						<aligny>center</aligny>
-						<label>$INFO[Window.Property(36hour.3.Forecast),[COLOR=grey2]CONDITIONS: [/COLOR]]</label>
+						<label>$INFO[Window.Property(36hour.3.Outlook)]</label>
 					</control>
 				</control>
 			</control>

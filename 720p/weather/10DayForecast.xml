@@ -21,7 +21,7 @@
 			<control type="panel" id="51">
 				<width>900</width>
 				<top>20</top>
-				<height>300</height>
+				<height>310</height>
 				<onleft>9000</onleft>
 				<onright>9000</onright>
 				<onup>51</onup>
@@ -29,18 +29,17 @@
 				<viewtype label="535">list</viewtype>
 				<pagecontrol>-</pagecontrol>
 				<scrolltime>200</scrolltime>
-				<itemlayout height="100" width="450">
+				<itemlayout height="105" width="450">
 					<control type="image">
 						<left>0</left>
-						<top>3</top>
+						<top>0</top>
 						<width>445</width>
-						<height>94</height>
+						<height>100</height>
 						<texture border="20">shadow.png</texture>
-						<include>VisibleFadeEffect</include>
 					</control>
 					<control type="label">
 						<left>30</left>
-						<top>3</top>
+						<top>5</top>
 						<width>50</width>
 						<height>94</height>
                         <textcolor>white</textcolor>
@@ -50,7 +49,7 @@
 					</control>
 					<control type="image">
 						<left>84</left>
-                        <top>3</top>
+                        <top>5</top>
 						<width>94</width>
 						<height>94</height>
 						<aspectratio>keep</aspectratio>
@@ -58,34 +57,34 @@
 					</control>
 					<control type="label">
 						<left>189</left>
-						<top>3</top>
+						<top>5</top>
 						<width>390</width>
-						<height>94</height>
+						<height>90</height>
                         <textcolor>white</textcolor>
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label2][CR]$INFO[ListItem.ActualIcon]</label>
 					</control>
 				</itemlayout>
-				<focusedlayout height="100" width="450">
+				<focusedlayout height="105" width="450">
 					<control type="image">
 						<left>0</left>
-						<top>3</top>
+						<top>0</top>
 						<width>445</width>
-						<height>94</height>
+						<height>100</height>
 						<texture  border="20">shadow.png</texture>
 					</control>
                     <control type="image">
 						<left>0</left>
-						<top>3</top>
+						<top>0</top>
 						<width>445</width>
-						<height>94</height>
+						<height>100</height>
 						<texture colordiffuse="red" border="20">shadow.png</texture>
 						<visible>Control.HasFocus(51)</visible>
 					</control>
 					<control type="label">
 						<left>30</left>
-						<top>3</top>
+						<top>5</top>
 						<width>50</width>
 						<height>94</height>
                         <textcolor>white</textcolor>
@@ -95,7 +94,7 @@
 					</control>
 					<control type="image">
 						<left>84</left>
-                        <top>3</top>
+                        <top>5</top>
 						<width>94</width>
 						<height>94</height>
 						<aspectratio>keep</aspectratio>
@@ -103,9 +102,9 @@
 					</control>
 					<control type="label">
 						<left>189</left>
-						<top>3</top>
+						<top>5</top>
 						<width>390</width>
-						<height>94</height>
+						<height>90</height>
                         <textcolor>white</textcolor>
 						<align>left</align>
 						<aligny>center</aligny>
@@ -204,7 +203,7 @@
 				<animation effect="slide" start="0,0" end="-90,0" time="0" condition="system.getbool(input.enablemouse)">Conditional</animation>
 				<description>number of files/pages</description>
 				<right>40</right>
-				<top>327</top>
+				<top>337</top>
 				<width>570</width>
 				<font>font12</font>
 				<align>right</align>

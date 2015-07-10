@@ -120,7 +120,7 @@
 				<include>Weather36HourForcast</include>
 				<include>WeatherWeekendForcast</include>
 				<include>WeatherHourlyForcast</include>
-				<!--include>WeatherMapAlerts</include-->
+				<include>WeatherMapAlerts</include>
 			</control>
             <control type="grouplist" id="9000">
                 <top>101</top>
@@ -137,14 +137,14 @@
 					<scroll>false</scroll>
 				    <include>9000butts</include>
                 </control>
-                <!--control type="button" id="302">
+                <control type="button" id="302">
                     <description>Hourly forcast button</description>
                     <include>9000butts</include>
                     <label>Map</label>
                     <onfocus>SetProperty(Weather.CurrentView,map)</onfocus>
-                    <onclick>Weather.Refresh</onclick-->
+                    <onclick>Weather.Refresh</onclick>
                     <!--visible>StringCompare(Weather.Plugin,weather.wunderground)</visible-->
-                <!--/control-->
+                </control>
                 <control type="button" id="303">
                     <description>10 day forcast button</description>
                     <include>9000butts</include>

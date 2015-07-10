@@ -2,7 +2,7 @@
 <includes>
 	<include name="WeatherMapAlerts">
 		<control type="group">
-            <left>320</left>
+			<left>320</left>
 			<top>240</top>
 			<visible>StringCompare(Window.Property(Weather.CurrentView),map)</visible>
 			<control type="button" id="999">
@@ -31,35 +31,41 @@
 			</control>
 			<control type="group">
 				<centerleft>200</centerleft>
-				<top>80</top>
-			<control type="image">
-				<width>390</width>
-				<height>310</height>
-				<texture background="true" border="10">videowindowbg.png</texture>
+				<top>40</top>
+				<control type="image">
+					<centerleft>200</centerleft>
+					<width>400</width>
+					<height>400</height>
+					<texture background="true" border="20">videowindowbg.png</texture>
+				</control>
+				<control type="image">
+					<visible>!StringCompare(Weather.plugin,weather.openweathermap.extended)</visible>
+					<centerleft>200</centerleft>
+					<top>50</top>
+					<width>300</width>
+					<height>300</height>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<texture  diffuse="soap.png" background="true" >astmosphere.png</texture>
+				</control>
+				<control type="image">
+					<visible>StringCompare(Weather.plugin,weather.openweathermap.extended)</visible>
+					<centerleft>200</centerleft>
+					<top>50</top>
+					<width>300</width>
+					<height>300</height>
+					<texture>$INFO[Window(weather).Property(Map.1.Area)]</texture>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="image">
+					<visible>StringCompare(Weather.plugin,weather.openweathermap.extended)</visible>
+					<centerleft>200</centerleft>
+					<top>50</top>
+					<width>300</width>
+					<height>300</height>
+					<texture>$INFO[Window(weather).Property(Map.5.Layer)]</texture>
+					<aspectratio>keep</aspectratio>
+				</control>
 			</control>
-            <control type="image">
-                <left>45</left>
-				<width>300</width>
-                <height>300</height>
-                <aspectratio scalediffuse="false">keep</aspectratio>
-                <texture  diffuse="soap.png" background="true" >astmosphere.png</texture>
-            </control>
-			<control type="multiimage">
-				<description>map multiimage</description>
-				<left>45</left>
-				<width>300</width>
-				<height>300</height>
-				<imagepath  diffuse="soap.png">$INFO[Window.Property(MapPath)]</imagepath>
-				<timeperimage>500</timeperimage>
-				<pauseatend>1000</pauseatend>
-				<fadetime>0</fadetime>
-				<randomize>false</randomize>
-				<loop>yes</loop>
-				<aspectratio>keep</aspectratio>
-				<aligny>center</aligny>
-			</control>
-			
-        </control>
 			<control type="label">
 				<top>100</top>
 				<left>380</left>
@@ -70,14 +76,14 @@
 				<aligny>center</aligny>
 				<label>$LOCALIZE[33050]</label>
 			</control>
-            <control type="image">
-                <visible>!StringCompare(Window.Property(Alerts.Count),0)</visible>
-                <top>110</top>
+			<control type="image">
+				<visible>!StringCompare(Window.Property(Alerts.Count),0)</visible>
+				<top>110</top>
 				<left>380</left>
 				<width>570</width>
 				<height>200</height>
-                <texture colordiffuse="red" border="20">videowindowbg.png</texture>
-            </control>
+				<texture colordiffuse="red" border="20">videowindowbg.png</texture>
+			</control>
 			<control type="group">
 				<visible>!StringCompare(Window.Property(Alerts.Count),0)</visible>
 				<control type="textbox">

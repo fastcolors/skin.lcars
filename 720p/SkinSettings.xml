@@ -49,6 +49,11 @@
 					<label>31112</label>
 					<onclick>noop</onclick>
 				</item>
+				<!---SKIN RESET-->
+				<item id="11">
+					<label>10035</label>
+					<onclick>ActivateWindow(1113)</onclick>
+				</item>
 			</content>
 		</control>
 		<control type="grouplist" id="9001">

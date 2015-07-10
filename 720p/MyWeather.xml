@@ -128,7 +128,7 @@
 				<width>155</width>
 				<height>530</height>
 				<itemgap>6</itemgap>
-				<onup>700</onup>
+				<onup>noop</onup>
 				<ondown>700</ondown>
 				<onright>50</onright>
                 <control type="spincontrolex" id="3">

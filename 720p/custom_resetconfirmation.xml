@@ -17,22 +17,10 @@
             <width>580</width>
             <height>30</height>
             <font>font16</font>
-            <label>ARE YOU SURE YOU WANT TO RESET ALL SETTINGS?</label>
+            <label>31022</label>
             <align>center</align>
             <aligny>center</aligny>
             <textcolor>darkgreen</textcolor>
-        </control>
-        <control type="textbox" id="9">
-            <description>text</description>
-            <centerleft>640</centerleft>
-            <top>280</top>
-            <width>300</width>
-            <height>110</height>
-            <align>center</align>
-            <aligny>center</aligny>
-            <label>-</label>
-            <textcolor>white</textcolor>
-            <font>font14</font>
         </control>
         <control type="grouplist">
             <centerleft>640</centerleft>

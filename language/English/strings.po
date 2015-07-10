@@ -136,3 +136,6 @@ msgctxt "#31021"
 msgid "All Artists"
 msgstr "All Artists"
 
+msgctxt "#31022"
+msgid "ARE YOU SURE YOU WANT TO RESET ALL SETTINGS?"
+msgstr "ARE YOU SURE YOU WANT TO RESET ALL SETTINGS?"

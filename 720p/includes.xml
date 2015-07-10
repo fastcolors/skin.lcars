@@ -135,13 +135,18 @@
             <control type="group">
                 <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
                 <visible>Container(9000).HasFocus(8)</visible>
-                <control type="image">
+                <control type="multiimage">
                     <description>map multiimage</description>
                     <left>360</left>
                     <top>475</top>
                     <width>300</width>
                     <height>174</height>
-                    <texture diffuse="soap.png">$INFO[Window(Weather).Property(Map.1.Area)]</texture>
+                    <imagepath diffuse="soap.png">$INFO[Window(Weather).Property(Map.1.Area)]</imagepath>
+                    <timeperimage>500</timeperimage>
+                    <pauseatend>1000</pauseatend>
+                    <fadetime>0</fadetime>
+                    <randomize>false</randomize>
+                    <loop>yes</loop>
                     <aligny>center</aligny>
                 </control>
                 <control type="textbox">

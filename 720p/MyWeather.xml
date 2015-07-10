@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-    <defaultcontrol always="true">303</defaultcontrol>
+    <defaultcontrol always="true">304</defaultcontrol>
     <allowoverlay>no</allowoverlay>
     <controls>
         <include>allwindows</include>
@@ -89,7 +89,7 @@
 						<height>35</height>
 						<textcolor>white</textcolor>
 						<align>right</align>
-						<label>$LOCALIZE[33021] : $INFO[Window.Property(Current.Precipitation)]</label>
+						<label>$LOCALIZE[33021] : $INFO[Window(Weather).Property(Daily.1.Precipitation)]</label>
 						<visible>!IsEmpty(Window(Weather).Property(Current.Precipitation))</visible>
 					</control>
 					<control type="label">
@@ -120,7 +120,7 @@
 				<include>Weather36HourForcast</include>
 				<include>WeatherWeekendForcast</include>
 				<include>WeatherHourlyForcast</include>
-				<include>WeatherMapAlerts</include>
+				<!--include>WeatherMapAlerts</include-->
 			</control>
             <control type="grouplist" id="9000">
                 <top>101</top>
@@ -131,71 +131,51 @@
 				<onup>noop</onup>
 				<ondown>700</ondown>
 				<onright>50</onright>
-                <control type="group" id="300">
-					<width>155</width>
-					<height>38</height>
-					<control type="spincontrolex" id="3">
-						<description>change location button</description>
-						<left>0</left>
-						<top>0</top>
-						<font>-</font>
-						<include>9000butts</include>
-						<onleft>50</onleft>
-						<onright>50</onright>
-						<onup>200</onup>
-						<ondown>302</ondown>
-						<onback>50</onback>
-					</control>
-					<control type="label" id="301">
-						<left>5</left>
-						<top>0</top>
-						<width>200</width>
-						<height>40</height>
-						<font>font16</font>
-						<label>LOCATION</label>
-						<textcolor>black</textcolor>
-						<align>left</align>
-						<aligny>center</aligny>
-					</control>
-				</control><!--control type="spincontrolex" id="3">
+                <control type="spincontrolex" id="3">
                     <description>change location button</description>
                     <align>left</align>
 					<scroll>false</scroll>
 				    <include>9000butts</include>
-                </control-->
-                <control type="button" id="302">
-                    <description>Maps button</description>
+                </control>
+                <!--control type="button" id="302">
+                    <description>Hourly forcast button</description>
                     <include>9000butts</include>
                     <label>Map</label>
                     <onfocus>SetProperty(Weather.CurrentView,map)</onfocus>
-					<visible>!IsEmpty(Window.Property(Map.IsFetched))</visible>
-                </control>
+                    <onclick>Weather.Refresh</onclick-->
+                    <!--visible>StringCompare(Weather.Plugin,weather.wunderground)</visible-->
+                <!--/control-->
                 <control type="button" id="303">
                     <description>10 day forcast button</description>
                     <include>9000butts</include>
                     <label>10 day</label>
                     <onfocus>SetProperty(Weather.CurrentView,10day)</onfocus>
+                    <onclick>Weather.Refresh</onclick>
+                    <!--visible>StringCompare(Weather.Plugin,weather.wunderground)</visible-->
                 </control>
                 <control type="button" id="304">
                     <description>36 hour forcast button</description>
                     <include>9000butts</include>
                     <label>36 hour</label>
                     <onfocus>SetProperty(Weather.CurrentView,36hour)</onfocus>
-					<visible>!IsEmpty(Window.Property(36Hour.IsFetched))</visible>
+                    <onclick>Weather.Refresh</onclick>
+                    <!--visible>StringCompare(Weather.Plugin,weather.wunderground)</visible-->
                 </control>
                 <control type="button" id="305">
                     <description>Weekend forcast button</description>
                     <include>9000butts</include>
                     <label>Weekend forcast</label>
                     <onfocus>SetProperty(Weather.CurrentView,weekend)</onfocus>
-					<visible>!IsEmpty(Window.Property(Weekend.IsFetched))</visible>
+                    <onclick>Weather.Refresh</onclick>
+                    <!--visible>StringCompare(Weather.Plugin,weather.wunderground)</visible-->
                 </control>
                 <control type="button" id="306">
                     <description>Hourly forcast button</description>
                     <include>9000butts</include>
                     <label>Hourly forcast</label>
                     <onfocus>SetProperty(Weather.CurrentView,hourly)</onfocus>
-					<visible>!IsEmpty(Window.Property(Hourly.IsFetched))</visible>
+                    <onclick>Weather.Refresh</onclick>
+                    <!--visible>StringCompare(Weather.Plugin,weather.wunderground)</visible-->
                 </control>
                 <control type="button" id="2">
                     <description>Refresh button</description>

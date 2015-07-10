@@ -20,8 +20,8 @@
 			</control>
 			<control type="panel" id="51">
 				<width>900</width>
-				<top>20</top>
-				<height>310</height>
+				<top>0</top>
+				<height>345</height>
 				<onleft>9000</onleft>
 				<onright>9000</onright>
 				<onup>51</onup>
@@ -29,17 +29,15 @@
 				<viewtype label="535">list</viewtype>
 				<pagecontrol>-</pagecontrol>
 				<scrolltime>200</scrolltime>
-				<itemlayout height="105" width="450">
+				<itemlayout height="115" width="450">
 					<control type="image">
-						<left>0</left>
-						<top>0</top>
 						<width>445</width>
-						<height>100</height>
+						<height>110</height>
 						<texture border="20">shadow.png</texture>
 					</control>
 					<control type="label">
 						<left>30</left>
-						<top>5</top>
+						<centertop>55</centertop>
 						<width>50</width>
 						<height>94</height>
                         <textcolor>white</textcolor>
@@ -49,7 +47,7 @@
 					</control>
 					<control type="image">
 						<left>84</left>
-                        <top>5</top>
+                        <centertop>55</centertop>
 						<width>94</width>
 						<height>94</height>
 						<aspectratio>keep</aspectratio>
@@ -57,7 +55,7 @@
 					</control>
 					<control type="label">
 						<left>189</left>
-						<top>5</top>
+						<centertop>55</centertop>
 						<width>390</width>
 						<height>90</height>
                         <textcolor>white</textcolor>
@@ -66,25 +64,16 @@
 						<label>$INFO[ListItem.Label2][CR]$INFO[ListItem.ActualIcon]</label>
 					</control>
 				</itemlayout>
-				<focusedlayout height="105" width="450">
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>445</width>
-						<height>100</height>
-						<texture  border="20">shadow.png</texture>
-					</control>
+				<focusedlayout height="115" width="450">
                     <control type="image">
-						<left>0</left>
-						<top>0</top>
 						<width>445</width>
-						<height>100</height>
+						<height>110</height>
 						<texture colordiffuse="red" border="20">shadow.png</texture>
 						<visible>Control.HasFocus(51)</visible>
 					</control>
 					<control type="label">
 						<left>30</left>
-						<top>5</top>
+						<centertop>55</centertop>
 						<width>50</width>
 						<height>94</height>
                         <textcolor>white</textcolor>
@@ -94,7 +83,7 @@
 					</control>
 					<control type="image">
 						<left>84</left>
-                        <top>5</top>
+                        <centertop>55</centertop>
 						<width>94</width>
 						<height>94</height>
 						<aspectratio>keep</aspectratio>
@@ -102,7 +91,7 @@
 					</control>
 					<control type="label">
 						<left>189</left>
-						<top>5</top>
+						<centertop>55</centertop>
 						<width>390</width>
 						<height>90</height>
                         <textcolor>white</textcolor>

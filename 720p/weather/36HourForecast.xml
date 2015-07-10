@@ -34,14 +34,12 @@
 				<visible>!IsEmpty(Window.Property(36Hour.IsFetched))</visible>
 				<control type="group">
 					<control type="image">
-						<left>0</left>
 						<top>40</top>
 						<width>400</width>
 						<height>120</height>
 						<texture border="20">shadow.png</texture>
 					</control>
 					<control type="label">
-						<left>0</left>
 						<top>5</top>
 						<width>400</width>
 						<height>30</height>
@@ -53,7 +51,6 @@
 					</control>
 					<control type="image">
 						<left>10</left>
-						<top>0</top>
 						<width>130</width>
 						<height>130</height>
 						<aspectratio>keep</aspectratio>
@@ -66,7 +63,6 @@
 						<height>70</height>
 						<textcolor>white</textcolor>
 						<selectedcolor>selected</selectedcolor>
-						<align>left</align>
 						<aligny>top</aligny>
 						<label>[COLOR=grey2]$INFO[Window.Property(36Hour.1.TemperatureHeading)][CR][/COLOR]$INFO[Window.Property(36Hour.1.Temperature)]</label>
 					</control>
@@ -88,7 +84,6 @@
 						<height>18</height>
 						<textcolor>white</textcolor>
 						<selectedcolor>selected</selectedcolor>
-						<align>left</align>
 						<aligny>center</aligny>
 						<label>$INFO[Window.Property(36hour.1.Outlook)]</label>
 					</control>
@@ -97,14 +92,12 @@
 					<left>0</left>
 					<top>180</top>
 					<control type="image">
-						<left>0</left>
 						<top>40</top>
 						<width>400</width>
 						<height>120</height>
 						<texture border="20" >shadow.png</texture>
 					</control>
 					<control type="label">
-						<left>0</left>
 						<top>5</top>
 						<width>400</width>
 						<height>30</height>
@@ -116,7 +109,6 @@
 					</control>
 					<control type="image">
 						<left>10</left>
-						<top>0</top>
 						<width>130</width>
 						<height>130</height>
 						<aspectratio>keep</aspectratio>
@@ -129,7 +121,6 @@
 						<height>70</height>
 						<textcolor>white</textcolor>
 						<selectedcolor>selected</selectedcolor>
-						<align>left</align>
 						<aligny>top</aligny>
 						<label>[COLOR=grey2]$INFO[Window.Property(36Hour.2.TemperatureHeading)][CR][/COLOR]$INFO[Window.Property(36Hour.2.Temperature)]</label>
 					</control>
@@ -151,7 +142,6 @@
 						<height>18</height>
 						<textcolor>white</textcolor>
 						<selectedcolor>selected</selectedcolor>
-						<align>left</align>
 						<aligny>center</aligny>
 						<label>$INFO[Window.Property(36hour.2.Outlook)]</label>
 					</control>

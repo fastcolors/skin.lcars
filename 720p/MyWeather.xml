@@ -4,7 +4,6 @@
     <allowoverlay>no</allowoverlay>
     <controls>
         <include>allwindows</include>
-
         <control type="group">
             <control type="image">
 				<description>background image</description>

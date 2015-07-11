@@ -7,6 +7,7 @@
 			<top>19</top>
 			<width>30</width>
 			<height>30</height>
+			<colordiffuse>black</colordiffuse>
 			<aspectratio>keep</aspectratio>
 			<texture>mute.png</texture>
 		</control>

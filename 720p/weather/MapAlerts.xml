@@ -30,39 +30,37 @@
 				<shadowcolor>black</shadowcolor>
 			</control>
 			<control type="button" id="992">
-				<left>410</left>
-				<top>150</top>
-				<width>150</width>
-				<height>40</height>
+				<left>314</left>
+				<top>28</top>
+				<width>200</width>
+				<height>20</height>
 				<label>Next</label>
-				<textoffsetx>7</textoffsetx>
-				<texturefocus colordiffuse="white"  border="20">bullet.png</texturefocus>
+				<texturefocus colordiffuse="white" >white.png</texturefocus>
 				<texturenofocus>-</texturenofocus>
-				<textcolor>yellow</textcolor>
+				<textcolor>black</textcolor>
 				<align>center</align>
 				<aligny>center</aligny>
-				<onup>991</onup>
-				<ondown>991</ondown>
-				<onleft>9000</onleft>
+				<onup>noop</onup>
+				<ondown>noop</ondown>
+				<onleft>991</onleft>
 				<onright>9000</onright>
 				<onclick>Control.Move(53,1)</onclick>
 			</control>
 			<control type="button" id="991">
-				<left>410</left>
-				<top>100</top>
-				<width>150</width>
-				<textoffsetx>7</textoffsetx>
-				<height>40</height>
+				<left>113</left>
+				<top>28</top>
+				<width>198</width>
+				<height>20</height>
 				<label>Prev</label>
 				<align>center</align>
 				<aligny>center</aligny>
-				<textcolor>yellow</textcolor>
-				<texturefocus colordiffuse="white"  border="20" flipx="true">bullet.png</texturefocus>
+				<textcolor>black</textcolor>
+				<texturefocus colordiffuse="white" >white.png</texturefocus>
 				<texturenofocus>-</texturenofocus>
-				<onup>992</onup>
-				<ondown>992</ondown>
+				<onup>noop</onup>
+				<ondown>noop</ondown>
 				<onleft>9000</onleft>
-				<onright>9000</onright>
+				<onright>992</onright>
 				<onclick>Control.Move(53,-1)</onclick>
 			</control>
 			<control type="panel" id="53">
@@ -211,6 +209,14 @@
 						<icon>$INFO[Window.Property(Map.4.Area)]</icon>
 						<property name="Layer">$INFO[Window.Property(Map.4.Layer)]</property>
 						<property name="atmosphere">astmosphere4.png</property>
+						<onclick>noop</onclick>
+					</item>
+					<item>
+						<label>$INFO[Window.Property(Map.5.Heading)]</label>
+						<label2>$INFO[Window.Property(Map.5.Legend)]</label2>
+						<icon>$INFO[Window.Property(Map.5.Area)]</icon>
+						<property name="Layer">$INFO[Window.Property(Map.5.Layer)]</property>
+						<property name="atmosphere">astmosphere.png</property>
 						<onclick>noop</onclick>
 					</item>
 				</content>

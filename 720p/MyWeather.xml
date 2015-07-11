@@ -129,9 +129,12 @@
 				<height>530</height>
 				<itemgap>6</itemgap>
 				<onup>noop</onup>
+				<onleft>9000</onleft>
 				<ondown>700</ondown>
+				<onright condition="StringCompare(Window.Property(Weather.CurrentView),map)">991</onright>
 				<onright>50</onright>
-                <control type="group" id="300">
+                <onback>50</onback>
+				<control type="group" id="300">
 					<width>155</width>
 					<height>38</height>
 					<control type="spincontrolex" id="3">

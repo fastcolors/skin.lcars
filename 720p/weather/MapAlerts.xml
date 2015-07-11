@@ -29,45 +29,189 @@
 				<textcolor>white</textcolor>
 				<shadowcolor>black</shadowcolor>
 			</control>
-			<control type="group">
+			<control type="button" id="992">
+				<left>435</left>
+				<top>100</top>
+				<width>30</width>
+				<height>25</height>
+				<label>N</label>
+				<texturefocus colordiffuse="white" >bullet.png</texturefocus>
+				<texturenofocus colordiffuse="design" >bullet.png</texturenofocus>
+				<align>center</align>
+						<aligny>center</aligny>
+						<onleft>991</onleft>
+				<onright>9000</onright>
+				<onclick>Control.Move(53,1)</onclick>
+			</control>
+			<control type="button" id="991">
+				<left>400</left>
+				<top>100</top>
+				<width>30</width>
+				<height>25</height>
+				<label>P</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<texturefocus colordiffuse="white"  flipx="true">bullet.png</texturefocus>
+				<texturenofocus colordiffuse="design" flipx="true">bullet.png</texturenofocus>
+				<onleft>9000</onleft>
+				<onright>992</onright>
+				<onclick>Control.Move(53,-1)</onclick>
+			</control>
+			<!--control type="label">
+				<description>heading label</description>
+				<left>-40</left>
+				<top>25</top>
+				<width>500</width>
+				<height>30</height>
+				<font>font24_title</font>
+				<label>$INFO[Container(53).ListItem.Label]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>black</textcolor>
+			</control-->
+			<control type="list" id="53">
 				<centerleft>200</centerleft>
+				<left>10</left>
 				<top>40</top>
+				<onleft>9000</onleft>
+				<onright>9000</onright>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				<viewtype label="535">list</viewtype>
+				<scrolltime>200</scrolltime>
+				<orientation>horizontal</orientation>
+				<visible>StringCompare(Window.Property(Weather.CurrentView),map) + !IsEmpty(Window.Property(Map.IsFetched))</visible>
+				<itemlayout height="400" width="410">
 				<control type="image">
 					<centerleft>200</centerleft>
 					<width>400</width>
 					<height>400</height>
 					<texture background="true" border="20">videowindowbg.png</texture>
 				</control>
+				<control type="label">
+					<description>heading label</description>
+					<top>10</top>
+					<width>400</width>
+					<height>30</height>
+					<font>font24_title</font>
+					<label>$INFO[ListItem.Label]</label>
+					<align>center</align>
+					<aligny>top</aligny>
+					<textcolor>white</textcolor>
+				</control>
 				<control type="image">
-					<visible>!StringCompare(Weather.plugin,weather.openweathermap.extended)</visible>
 					<centerleft>200</centerleft>
 					<top>50</top>
 					<width>300</width>
 					<height>300</height>
-					<aspectratio scalediffuse="false">keep</aspectratio>
-					<texture  diffuse="soap.png" background="true" >astmosphere.png</texture>
+					<texture>$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
 				</control>
 				<control type="image">
-					<visible>StringCompare(Weather.plugin,weather.openweathermap.extended)</visible>
 					<centerleft>200</centerleft>
 					<top>50</top>
 					<width>300</width>
 					<height>300</height>
-					<texture>$INFO[Window(weather).Property(Map.1.Area)]</texture>
-					<aspectratio>keep</aspectratio>
+					<texture>$INFO[ListItem.Property(Layer)]</texture>
+					<colordiffuse>70FFFFFF</colordiffuse>
+					<aspectratio>scale</aspectratio>
 				</control>
 				<control type="image">
-					<visible>StringCompare(Weather.plugin,weather.openweathermap.extended)</visible>
+					<centerleft>200</centerleft>
+					<top>250</top>
+					<width>280</width>
+					<height>30</height>
+					<texture>$INFO[ListItem.Label2]</texture>
+				</control>
+				</itemlayout>
+				<focusedlayout height="400" width="400">
+				<control type="image">
+					<centerleft>200</centerleft>
+					<width>400</width>
+					<height>400</height>
+					<texture background="true" border="20">videowindowbg.png</texture>
+				</control>
+				<control type="label">
+					<description>heading label</description>
+					<top>10</top>
+					<width>400</width>
+					<height>30</height>
+					<font>font24_title</font>
+					<label>$INFO[ListItem.Label]</label>
+					<align>center</align>
+					<aligny>top</aligny>
+					<textcolor>white</textcolor>
+				</control>
+				<control type="image">
 					<centerleft>200</centerleft>
 					<top>50</top>
 					<width>300</width>
 					<height>300</height>
-					<texture>$INFO[Window(weather).Property(Map.5.Layer)]</texture>
-					<aspectratio>keep</aspectratio>
+					<texture>$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
 				</control>
+				<control type="image">
+					<centerleft>200</centerleft>
+					<top>50</top>
+					<width>300</width>
+					<height>300</height>
+					<texture>$INFO[ListItem.Property(Layer)]</texture>
+					<colordiffuse>70FFFFFF</colordiffuse>
+					<aspectratio>scale</aspectratio>
+				</control>
+				<control type="image">
+					<centerleft>200</centerleft>
+					<top>350</top>
+					<width>280</width>
+					<height>30</height>
+					<texture>$INFO[ListItem.Label2]</texture>
+				</control>
+				</focusedlayout>
+				<content>
+					<item>
+						<label>$INFO[Window.Property(Map.1.Heading)]</label>
+						<label2>$INFO[Window.Property(Map.1.Legend)]</label2>
+						<icon>$INFO[Window.Property(Map.1.Area)]</icon>
+						<property name="Layer">$INFO[Window.Property(Map.1.Layer)]</property>
+						<onclick>noop</onclick>
+						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Map.1.Area)) + !IsEmpty(Window.Property(Map.IsFetched))</visible>
+					</item>
+					<item>
+						<label>$INFO[Window.Property(Map.2.Heading)]</label>
+						<label2>$INFO[Window.Property(Map.2.Legend)]</label2>
+						<icon>$INFO[Window.Property(Map.2.Area)]</icon>
+						<property name="Layer">$INFO[Window.Property(Map.2.Layer)]</property>
+						<onclick>noop</onclick>
+						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Map.2.Area)) + !IsEmpty(Window.Property(Map.IsFetched))</visible>
+					</item>
+					<item>
+						<label>$INFO[Window.Property(Map.3.Heading)]</label>
+						<label2>$INFO[Window.Property(Map.3.Legend)]</label2>
+						<icon>$INFO[Window.Property(Map.3.Area)]</icon>
+						<property name="Layer">$INFO[Window.Property(Map.3.Layer)]</property>
+						<onclick>noop</onclick>
+						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Map.3.Area)) + !IsEmpty(Window.Property(Map.IsFetched))</visible>
+					</item>
+					<item>
+						<label>$INFO[Window.Property(Map.4.Heading)]</label>
+						<label2>$INFO[Window.Property(Map.4.Legend)]</label2>
+						<icon>$INFO[Window.Property(Map.4.Area)]</icon>
+						<property name="Layer">$INFO[Window.Property(Map.4.Layer)]</property>
+						<onclick>noop</onclick>
+						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Map.4.Area)) + !IsEmpty(Window.Property(Map.IsFetched))</visible>
+					</item>
+					<item>
+						<label>$INFO[Window.Property(Map.5.Heading)]</label>
+						<label2>$INFO[Window.Property(Map.5.Legend)]</label2>
+						<icon>$INFO[Window.Property(Map.5.Area)]</icon>
+						<property name="Layer">$INFO[Window.Property(Map.5.Layer)]</property>
+						<onclick>noop</onclick>
+						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Map.5.Area)) + !IsEmpty(Window.Property(Map.IsFetched))</visible>
+					</item>
+				</content>
 			</control>
 			<control type="label">
-				<top>100</top>
+				<top>200</top>
 				<left>380</left>
 				<width>570</width>
 				<height>30</height>
@@ -78,7 +222,7 @@
 			</control>
 			<control type="image">
 				<visible>!StringCompare(Window.Property(Alerts.Count),0)</visible>
-				<top>110</top>
+				<top>210</top>
 				<left>380</left>
 				<width>570</width>
 				<height>200</height>
@@ -87,7 +231,7 @@
 			<control type="group">
 				<visible>!StringCompare(Window.Property(Alerts.Count),0)</visible>
 				<control type="textbox">
-					<top>135</top>
+					<top>235</top>
 					<left>380</left>
 					<width>570</width>
 					<height>150</height>
@@ -99,7 +243,7 @@
 			</control>
 			<control type="label">
 				<left>380</left>
-				<top>140</top>
+				<top>240</top>
 				<width>570</width>
 				<height>30</height>
 				<textcolor>white</textcolor>

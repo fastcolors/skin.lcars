@@ -38,6 +38,7 @@
 			<height>40</height>
 			<label>12321</label>
 			<align>center</align>
+			<aligny>bottom</aligny>
 			<onclick>Skin.Setbool(FirstTimeRun)</onclick>
 			<onclick>back</onclick>
 			<onleft>100</onleft>

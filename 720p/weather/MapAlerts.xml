@@ -118,7 +118,7 @@
 				</control>
 				<control type="image">
 					<centerleft>200</centerleft>
-					<top>250</top>
+					<top>350</top>
 					<width>280</width>
 					<height>30</height>
 					<texture>$INFO[ListItem.Label2]</texture>

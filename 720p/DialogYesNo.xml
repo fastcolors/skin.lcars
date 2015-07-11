@@ -43,8 +43,8 @@
             <height>40</height>
             <control type="button" id="11">
                 <description>Yes button</description>
-                <texturefocus colordiffuse="white" border="20">whiteallrounded.png</texturefocus>
-                <texturenofocus colordiffuse="design" border="20">whiteallrounded.png</texturefocus>
+                <texturenofocus>-</texturenofocus>
+                <texturefocus colordiffuse="design" border="20">whiteallrounded.png</texturefocus>
                 <width>220</width>
                 <height>40</height>
                 <label>-</label>
@@ -55,8 +55,8 @@
             </control>
             <control type="button" id="10">
                 <description>No button</description>
-                <texturefocus colordiffuse="white" border="20">whiteallrounded.png</texturefocus>
-                <texturenofocus colordiffuse="design" border="20">whiteallrounded.png</texturefocus>
+                <texturenofocus>-</texturenofocus>
+                <texturefocus colordiffuse="design" border="20">whiteallrounded.png</texturefocus>
                 <width>220</width>
                 <height>40</height>
                 <label>-</label>

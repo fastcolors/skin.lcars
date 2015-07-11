@@ -42,6 +42,51 @@
                 <texture>videowindowbg.png</texture>
 			</control>
 			<control type="group">
+				<left>320r</left>
+				<top>90</top>
+				<visible>!IsEmpty(Window.Property(Alerts.IsFetched))</visible>
+				<control type="label">
+					<top>10</top>
+					<centerleft>150</centerleft>
+					<width>300</width>
+					<height>30</height>
+					<textcolor>red</textcolor>
+					<align>center</align>
+					<aligny>bottom</aligny>
+					<label>$LOCALIZE[33050]</label>
+				</control>
+				<control type="image">
+					<visible>!StringCompare(Window.Property(Alerts.Count),0)</visible>
+					<centerleft>150</centerleft>
+					<width>300</width>
+					<height>170</height>
+					<texture colordiffuse="red" border="20">videowindowbg.png</texture>
+				</control>
+				<control type="textbox">
+					<visible>!StringCompare(Window.Property(Alerts.Count),0)</visible>
+					<top>35</top>
+					<left>50</left>
+					<width>200</width>
+					<height>105</height>
+					<font>font14</font>
+					<align>justify</align>
+					<textcolor>white</textcolor>
+					<label>$INFO[Window.Property(Alerts)]</label>
+					<autoscroll time="2000" delay="3000" repeat="5000">true</autoscroll>
+				</control>
+				<control type="label">
+					<top>10</top>
+					<centerleft>150</centerleft>
+					<width>300</width>
+					<height>30</height>
+					<textcolor>white</textcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>all system normal</label>
+					<visible>StringCompare(Window.Property(Alerts.Count),0)</visible>
+				</control>
+			</control>
+			<control type="group">
                 <left>560</left>
 				<top>20</top>
 					<control type="label">

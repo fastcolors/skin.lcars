@@ -6,7 +6,7 @@
         <control type="image">
             <width>1280</width>
             <height>720</height>
-            <texture>settings.jpg</texture>
+            <texture>settings.png</texture>
         </control>
         <include>allwindows</include>
         <control type="group" id="9000">
@@ -57,7 +57,7 @@
         </control>
         <control type="grouplist" id="5">
             <description>control area</description>
-            <top>75</top>
+            <top>76</top>
             <left>325</left>
             <width>685</width>
             <height>526</height>

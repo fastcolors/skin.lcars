@@ -836,9 +836,9 @@
     <include name="9000butts">
         <width>155</width>
         <height>38</height>
-        <texturenofocus colordiffuse="yellow">white.png</texturenofocus>
+        <texturenofocus>-</texturenofocus>
         <texturefocus colordiffuse="white">white.png</texturefocus>
-        <alttexturenofocus colordiffuse="yellow">white.png</alttexturenofocus>
+        <alttexturenofocus>-</alttexturenofocus>
         <alttexturefocus colordiffuse="white">white.png</alttexturefocus>
         <aligny>bottom</aligny>
         <font>font16</font>
@@ -869,49 +869,49 @@
                 <top>93</top>
                 <width>155</width>
                 <height>38</height>
-                <texture colordiffuse="yellow">white.png</texture>
+                <texture colordiffuse="purple">white.png</texture>
             </control>
             <control type="image">
                 <top>137</top>
                 <width>155</width>
                 <height>38</height>
-                <texture colordiffuse="yellow">white.png</texture>
+                <texture colordiffuse="purple">white.png</texture>
             </control>
             <control type="image">
                 <top>181</top>
                 <width>155</width>
                 <height>38</height>
-                <texture colordiffuse="yellow">white.png</texture>
+                <texture colordiffuse="blue">white.png</texture>
             </control>
             <control type="image">
                 <top>225</top>
                 <width>155</width>
                 <height>38</height>
-                <texture colordiffuse="yellow">white.png</texture>
+                <texture colordiffuse="blue">white.png</texture>
             </control>
             <control type="image">
                 <top>269</top>
                 <width>155</width>
                 <height>38</height>
-                <texture colordiffuse="yellow">white.png</texture>
+                <texture colordiffuse="purple">white.png</texture>
             </control>
             <control type="image">
                 <top>313</top>
                 <width>155</width>
                 <height>38</height>
-                <texture colordiffuse="yellow">white.png</texture>
+                <texture colordiffuse="purple">white.png</texture>
             </control>
             <control type="image">
                 <top>357</top>
                 <width>155</width>
                 <height>38</height>
-                <texture colordiffuse="yellow">white.png</texture>
+                <texture colordiffuse="blue">white.png</texture>
             </control>
             <control type="image">
                 <top>401</top>
                 <width>155</width>
                 <height>38</height>
-                <texture colordiffuse="yellow">white.png</texture>
+                <texture colordiffuse="blue">white.png</texture>
             </control>
             <control type="image">
                 <top>445</top>
@@ -937,9 +937,19 @@
                 <onright>noop</onright>
                 <ondown>noop</ondown>
                 <top>489</top>
+                <width>155</width>
+                <height>38</height>
                 <label>31008</label>
                 <onclick>Back</onclick>
-                <include>9000butts</include>
+                <texturenofocus colordiffuse="yellow">white.png</texturenofocus>
+				<texturefocus colordiffuse="white">white.png</texturefocus>
+				<alttexturenofocus>-</alttexturenofocus>
+				<alttexturefocus colordiffuse="white">white.png</alttexturefocus>
+				<aligny>bottom</aligny>
+				<font>font16</font>
+				<align>right</align>
+				<textoffsetx>5</textoffsetx>
+				<textoffsety>2</textoffsety>
             </control>
         </control>
         <control type="image">

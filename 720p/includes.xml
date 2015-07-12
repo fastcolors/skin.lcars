@@ -920,7 +920,7 @@
                 <texture colordiffuse="yellow">white.png</texture>
             </control>
             <control type="image">
-                <visible>Window.IsActive(Home)</visible>
+                <visible>Window.IsActive(Home) | Window.IsActive(AddonSettings)</visible>
                 <top>489</top>
                 <width>155</width>
                 <height>38</height>
@@ -928,6 +928,7 @@
             </control>
             <control type="button" id="700">
                 <visible>!Window.IsActive(Home)</visible>
+                <visible>!Window.IsActive(AddonSettings)</visible>
                 <!--<onup condition="Window.IsActive(...)">20</onup>-->
                 <!--OR-->
                 <!--<onup condition="Window.IsVisible(...)">20</onup>-->
@@ -1238,7 +1239,7 @@
                 <label>19184</label>
                 <visible>Window.IsActive(TVRecordings) | Window.IsActive(RadioRecordings)</visible>
             </control>
-        </control>
+		</control>
     </include>
     <include name="TVNextAiredListCommonLayout">
         <top>120</top>

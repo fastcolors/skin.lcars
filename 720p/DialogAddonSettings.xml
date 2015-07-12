@@ -22,17 +22,15 @@
 		</control>
 		<control type="grouplist" id="9">
 			<description>button area</description>
-			<centerleft>880</centerleft>
-			<top>70</top>
-			<width>618</width>
-			<height>40</height>
-			<itemgap>6</itemgap>
-			<align>center</align>
-			<orientation>horizontal</orientation>
-			<onleft>9000</onleft>
-			<onright>9</onright>
-			<onup>2</onup>
-			<ondown>2</ondown>
+			<top>101</top>
+            <left>13</left>
+            <width>155</width>
+            <height>530</height>
+            <itemgap>6</itemgap>
+            <onup>noop</onup>
+            <ondown>noop</ondown>
+            <onright>2</onright>
+            
 		</control>
 		<control type="grouplist" id="2">
 			<description>control area</description>
@@ -42,9 +40,9 @@
 			<height>510</height>
 			<itemgap>6</itemgap>
 			<pagecontrol>30</pagecontrol>
-			<onup>9</onup>
+			<onup>9000</onup>
 			<ondown>noop</ondown>
-			<onleft>9000</onleft>
+			<onleft>9</onleft>
 			<onright>30</onright>
 		</control>
 		<control type="scrollbar" id="30">
@@ -57,39 +55,51 @@
 			<orientation>vertical</orientation>
 		</control>
 		<control type="grouplist" id="9000">
-			<top>101</top>
-            <left>13</left>
-            <width>155</width>
-            <height>530</height>
-            <itemgap>6</itemgap>
-            <onup>noop</onup>
-            <ondown>700</ondown>
-            <onright>2</onright>
-            <control type="button" id="10">
+			<description>button area</description>
+			<centerleft>880</centerleft>
+			<top>70</top>
+			<width>618</width>
+			<height>40</height>
+			<itemgap>6</itemgap>
+			<align>center</align>
+			<orientation>horizontal</orientation>
+			<onleft>9</onleft>
+			<onright>9</onright>
+			<onup>2</onup>
+			<ondown>2</ondown>
+			<control type="button" id="10">
 				<description>OK Button</description>
-				<include>9000butts</include>
-                <label>186</label>
+				<height>40</height>
+			<width>150</width>
+			<align>center</align>
+			<aligny>center</aligny>
+			<textcolor>black</textcolor>
+			<pulseonselect>false</pulseonselect><label>186</label>
 			</control>
 			<control type="button" id="11">
 				<description>Cancel Button</description>
-				<include>9000butts</include>
-                <label>222</label>
+				<height>40</height>
+			<width>150</width>
+			<align>center</align>
+			<aligny>center</aligny>
+			<textcolor>black</textcolor>
+			<pulseonselect>false</pulseonselect><label>222</label>
 			</control>
 			<control type="button" id="12">
 				<description>Defaults Button</description>
-				<include>9000butts</include>
-				<label>409</label>
+				<height>40</height>
+			<width>150</width>
+			<align>center</align>
+			<aligny>center</aligny>
+			<textcolor>black</textcolor>
+			<pulseonselect>false</pulseonselect><label>409</label>
 			</control>
 		</control>
 
 		<control type="button" id="13">
 			<description>Default Category Button</description>
-			<height>40</height>
-			<width>150</width>
-			<align>center</align>
-			<aligny>center</aligny>
-			<textcolor>black</textcolor>
-			<pulseonselect>false</pulseonselect>
+			<include>9000butts</include>
+				
 		</control>
 		<control type="button" id="3">
 			<description>Default Button</description>

@@ -58,8 +58,8 @@
         <control type="grouplist" id="5">
             <description>control area</description>
             <top>76</top>
-            <left>325</left>
-            <width>685</width>
+            <left>225</left>
+            <width>600</width>
             <height>526</height>
             <itemgap>4</itemgap>
             <pagecontrol>60</pagecontrol>
@@ -85,10 +85,10 @@
         </control>
         <control type="textbox" id="6">
             <description>description area</description>
-            <left>325</left>
-            <width>685</width>
+            <left>225</left>
+            <width>600</width>
             <top>605</top>
-            <height>50</height>
+            <height>70</height>
             <font>font12</font>
             <textcolor>yellow</textcolor>
             <align>justify</align>
@@ -97,7 +97,8 @@
         <control type="button" id="10">
             <description>Default Category Button</description>
             <include>9000butts</include>
-                
+            <texturenofocus colordiffuse="design" border="20">whiteallrounded.png</texturenofocus>
+            <texturefocus colordiffuse="white" border="20">whiteallrounded.png</texturefocus>
         </control>
         <control type="button" id="7">
             <description>Default Button</description>
@@ -105,8 +106,8 @@
             <font>font13</font>
             <aligny>center</aligny>
             <invalidcolor>invalid</invalidcolor>
-            <texturenofocus colordiffuse="design" border="20">whiterounded.png</texturenofocus>
-            <texturefocus colordiffuse="white" border="20">whiterounded.png</texturefocus>
+            <texturenofocus colordiffuse="design" border="20">whiteallrounded.png</texturenofocus>
+            <texturefocus colordiffuse="white" border="20">whiteallrounded.png</texturefocus>
         </control>
         <control type="radiobutton" id="8">
             <description>Default RadioButton</description>
@@ -115,6 +116,8 @@
             <height>40</height>
             <font>font13</font>
             <aligny>center</aligny>
+            <texturenofocus colordiffuse="design" border="20">whiteallrounded.png</texturenofocus>
+            <texturefocus colordiffuse="white" border="20">whiteallrounded.png</texturefocus>
         </control>
         <control type="spincontrolex" id="9">
             <description>Default SpinControlex</description>
@@ -124,6 +127,8 @@
             <font>font13</font>
             <aligny>center</aligny>
             <reverse>yes</reverse>
+            <texturenofocus colordiffuse="design" border="20">whiteallrounded.png</texturenofocus>
+            <texturefocus colordiffuse="white" border="20">whiteallrounded.png</texturefocus>
         </control>
         <control type="label" id="2">
             <description>Fake Label so we can pass it value down to the one below</description>

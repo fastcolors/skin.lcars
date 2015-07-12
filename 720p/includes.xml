@@ -836,9 +836,9 @@
     <include name="9000butts">
         <width>155</width>
         <height>38</height>
-        <texturenofocus colordiffuse="yellow">white.png</texturenofocus>
+        <texturenofocus colordiffuse="design">white.png</texturenofocus>
         <texturefocus colordiffuse="white">white.png</texturefocus>
-        <alttexturenofocus colordiffuse="yellow">white.png</alttexturenofocus>
+        <alttexturenofocus colordiffuse="design">white.png</alttexturenofocus>
         <alttexturefocus colordiffuse="white">white.png</alttexturefocus>
         <aligny>bottom</aligny>
         <font>font16</font>
@@ -857,74 +857,74 @@
                 <top>5</top>
                 <width>155</width>
                 <height>38</height>
-                <texture colordiffuse="yellow">white.png</texture>
+                <texture colordiffuse="design">white.png</texture>
             </control>
             <control type="image">
                 <top>49</top>
                 <width>155</width>
                 <height>38</height>
-                <texture colordiffuse="yellow">white.png</texture>
+                <texture colordiffuse="design">white.png</texture>
             </control>
             <control type="image">
                 <top>93</top>
                 <width>155</width>
                 <height>38</height>
-                <texture colordiffuse="yellow">white.png</texture>
+                <texture colordiffuse="design">white.png</texture>
             </control>
             <control type="image">
                 <top>137</top>
                 <width>155</width>
                 <height>38</height>
-                <texture colordiffuse="yellow">white.png</texture>
+                <texture colordiffuse="design">white.png</texture>
             </control>
             <control type="image">
                 <top>181</top>
                 <width>155</width>
                 <height>38</height>
-                <texture colordiffuse="yellow">white.png</texture>
+                <texture colordiffuse="design">white.png</texture>
             </control>
             <control type="image">
                 <top>225</top>
                 <width>155</width>
                 <height>38</height>
-                <texture colordiffuse="yellow">white.png</texture>
+                <texture colordiffuse="design">white.png</texture>
             </control>
             <control type="image">
                 <top>269</top>
                 <width>155</width>
                 <height>38</height>
-                <texture colordiffuse="yellow">white.png</texture>
+                <texture colordiffuse="design">white.png</texture>
             </control>
             <control type="image">
                 <top>313</top>
                 <width>155</width>
                 <height>38</height>
-                <texture colordiffuse="yellow">white.png</texture>
+                <texture colordiffuse="design">white.png</texture>
             </control>
             <control type="image">
                 <top>357</top>
                 <width>155</width>
                 <height>38</height>
-                <texture colordiffuse="yellow">white.png</texture>
+                <texture colordiffuse="design">white.png</texture>
             </control>
             <control type="image">
                 <top>401</top>
                 <width>155</width>
                 <height>38</height>
-                <texture colordiffuse="yellow">white.png</texture>
+                <texture colordiffuse="design">white.png</texture>
             </control>
             <control type="image">
                 <top>445</top>
                 <width>155</width>
                 <height>38</height>
-                <texture colordiffuse="yellow">white.png</texture>
+                <texture colordiffuse="design">white.png</texture>
             </control>
             <control type="image">
                 <visible>Window.IsActive(Home) | Window.IsActive(AddonSettings)</visible>
                 <top>489</top>
                 <width>155</width>
                 <height>38</height>
-                <texture colordiffuse="yellow">white.png</texture>
+                <texture colordiffuse="design">white.png</texture>
             </control>
             <control type="button" id="700">
                 <visible>!Window.IsActive(Home)</visible>

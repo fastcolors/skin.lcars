@@ -216,7 +216,7 @@
 						<label2>$INFO[Window.Property(Map.5.Legend)]</label2>
 						<icon>$INFO[Window.Property(Map.5.Area)]</icon>
 						<property name="Layer">$INFO[Window.Property(Map.5.Layer)]</property>
-						<property name="atmosphere">astmosphere.png</property>
+						<property name="atmosphere">astmosphere5.png</property>
 						<onclick>noop</onclick>
 					</item>
 				</content>

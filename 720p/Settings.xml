@@ -200,9 +200,15 @@
 					<icon>-</icon>
 				</item>
 				<item id="11">
+					<label>13200</label>
+					<onclick>ActivateWindow(Profiles)</onclick>
+					<icon>-</icon>
+				</item>
+				<item id="12">
 					<visible>System.HasAddon(service.openelec.settings)</visible>
 					<label>$ADDON[service.openelec.settings 600]</label>
 					<onclick>RunAddon(service.openelec.settings)</onclick>
+					<icon>-</icon>
 				</item>
 			</content>
 		</control>

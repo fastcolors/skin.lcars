@@ -2,18 +2,17 @@
 <window>
 	<defaultcontrol>5</defaultcontrol>
 	<controls>
-		<control type="label">
+		<include>allwindows</include>
+		<control type="label" id="2">
 			<description>header label</description>
-			<left>40</left>
+			<left>300</left>
 			<top>20</top>
-			<width>620</width>
-			<height>30</height>
-			<font>font13_title</font>
-			<label>$INFO[Window.Property(heading)]</label>
+			<width>726</width>
+			<height>32</height>
+			<font>font30</font>
+			<label>-</label>
 			<align>center</align>
 			<aligny>center</aligny>
-			<textcolor>selected</textcolor>
-			<shadowcolor>black</shadowcolor>
 		</control>
 		<control type="button">
 			<description>Close Window button</description>
@@ -32,99 +31,82 @@
 			<ondown>1</ondown>
 			<visible>system.getbool(input.enablemouse)</visible>
 		</control>
-		<control type="image" id="2">
+		<control type="image" id="101">
 			<description>profile image</description>
-			<left>30</left>
-			<top>70</top>
+			<right>226</right>
+			<bottom>80</bottom>
 			<width>150</width>
 			<height>150</height>
 			<align>left</align>
-			<aspectratio>stretch</aspectratio>
+			<aspectratio>keep</aspectratio>
 			<texture>unknown-user.png</texture>
-			<bordertexture border="8">ThumbBorder.png</bordertexture>
+			<bordertexture border="8">white.png</bordertexture>
 			<bordersize>8</bordersize>
 		</control>
+		<control type="group">
+			<left>250</left>
+			<top>460</top>
 		<control type="label">
 			<description>profile name label</description>
-			<left>200</left>
 			<top>70</top>
-			<width>460</width>
+			<width>300</width>
 			<align>left</align>
-			<font>font13_title</font>
-			<textcolor>blue</textcolor>
+			<textcolor>white</textcolor>
 			<label>$LOCALIZE[20093]</label>
 		</control>
-		<control type="label" id="1000">
+		<control type="label" id="102">
 			<description>profile name Value</description>
-			<left>200</left>
 			<top>95</top>
-			<width>460</width>
-			<align>left</align>
-			<font>font16</font>
+			<width>300</width>
 			<textcolor>white</textcolor>
+			<align>left</align>
 		</control>
 		<control type="label">
 			<description>profile directory label</description>
-			<left>200</left>
-			<top>155</top>
-			<width>460</width>
-			<align>left</align>
-			<font>font13_title</font>
-			<textcolor>blue</textcolor>
+			<top>70</top>
+			<left>300</left>
+			<width>300</width>
+			<align>right</align>
+			<textcolor>white</textcolor>
 			<label>$LOCALIZE[20070]</label>
 		</control>
-		<control type="label" id="1001">
+		<control type="label" id="103">
 			<description>profile directory Value</description>
-			<left>200</left>
-			<top>180</top>
-			<width>460</width>
-			<align>left</align>
-			<font>font13</font>
+			<top>95</top>
+			<left>300</left>
+			<width>300</width>
+			<align>right</align>
 			<textcolor>white</textcolor>
+		</control>
 		</control>
 		<control type="grouplist" id="5">
 			<description>control area</description>
-			<left>30</left>
-			<top>230</top>
-			<width>640</width>
-			<height>265</height>
-			<itemgap>5</itemgap>
+			<top>98</top>
+			<left>240</left>
+			<width>650</width>
+			<height>526</height>
+			<itemgap>4</itemgap>
 			<pagecontrol>60</pagecontrol>
-			<onleft>28</onleft>
+			<onleft>700</onleft>
 			<onright>60</onright>
-			<onup>28</onup>
+			<onup>5</onup>
 			<ondown>28</ondown>
 		</control>
 		<control type="button" id="7">
 			<description>Default Button</description>
-			<left>0</left>
-			<top>0</top>
+			<aligny>center</aligny>
 			<height>40</height>
-			<font>font13</font>
-			<textcolor>grey2</textcolor>
-			<focusedcolor>white</focusedcolor>
-			<texturefocus border="5">button-focus2.png</texturefocus>
 		</control>
 		<control type="radiobutton" id="8">
 			<description>Default RadioButton</description>
-			<left>0</left>
-			<top>0</top>
 			<height>40</height>
-			<font>font13</font>
-			<textcolor>grey2</textcolor>
-			<focusedcolor>white</focusedcolor>
-			<texturefocus border="5">button-focus2.png</texturefocus>
+			<aligny>center</aligny>
 		</control>
 		<control type="spincontrolex" id="9">
 			<description>Default SpinControlex</description>
-			<left>0</left>
-			<top>0</top>
 			<height>40</height>
-			<font>font13</font>
-			<textcolor>grey2</textcolor>
-			<focusedcolor>white</focusedcolor>
-			<texturefocus border="5">button-focus2.png</texturefocus>
-			<texturenofocus border="5">button-nofocus.png</texturenofocus>
+			<texturenofocus colordiffuse="design" border="20">whiteallrounded.png</texturenofocus>
+			<texturefocus colordiffuse="white" border="20">whiteallrounded.png</texturefocus>
 			<aligny>center</aligny>
 			<reverse>yes</reverse>
 		</control>
@@ -133,35 +115,31 @@
 			<height>2</height>
 			<texture>separator2.png</texture>
 		</control>
-		<control type="button" id="28">
-			<description>Ok Button</description>
-			<left>145</left>
-			<top>505</top>
-			<width>200</width>
-			<height>40</height>
-			<align>center</align>
-			<aligny>center</aligny>
-			<font>font12_title</font>
-			<label>186</label>
-			<onleft>29</onleft>
-			<onright>29</onright>
+		<control type="grouplist">
+			<orientation>horizontal</orientation>
+			<centerleft>525</centerleft>
+			<itemgap>20</itemgap>
 			<onup>5</onup>
-			<ondown>5</ondown>
+			<onleft>700</onleft>
+			<top>595</top>
+			<width>420</width>
+			<control type="button" id="28">
+				<description>Ok Button</description>
+				<width>200</width>
+				<height>40</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>186</label>
+			</control>
+			<control type="button" id="29">
+				<description>Cancel Button</description>
+				<width>200</width>
+				<height>40</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>222</label>
+			</control>
 		</control>
-		<control type="button" id="29">
-			<description>Cancel Button</description>
-			<left>355</left>
-			<top>505</top>
-			<width>200</width>
-			<height>40</height>
-			<align>center</align>
-			<aligny>center</aligny>
-			<font>font12_title</font>
-			<label>222</label>
-			<onleft>28</onleft>
-			<onright>28</onright>
-			<onup>5</onup>
-			<ondown>5</ondown>
-		</control>
+
 	</controls>
 </window>

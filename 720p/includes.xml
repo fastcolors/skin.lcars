@@ -934,7 +934,8 @@
                 <!--<onup condition="Window.IsVisible(...)">20</onup>-->
                 <onup>9000</onup>
                 <onright condition="Window.IsActive(SkinSettings.xml)">9001</onright>
-                 <onright condition="Window.IsActive(SettingsProfile.xml)">9010</onright>
+                <onright condition="Window.IsActive(ProfileSettings.xml)">5</onright>
+                <onright condition="Window.IsActive(SettingsProfile.xml)">9010</onright>
                 <onright>noop</onright>
                 <ondown>noop</ondown>
                 <top>489</top>

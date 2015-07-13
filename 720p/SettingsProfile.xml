@@ -101,7 +101,7 @@
 					<enable>!System.HasLoginScreen</enable>
 				</control>
 			</control>
-			<control type="list" id="2">
+			<control type="panel" id="2">
 				<visible>Container(9000).Hasfocus(2)</visible>
 				<onleft>9000</onleft>
 				<top>100</top>
@@ -124,7 +124,7 @@
 						<height>210</height>
 						<bordertexture>white.png</bordertexture>
 						<bordersize>4</bordersize>
-						<aspectratio>stretch</aspectratio>
+						<aspectratio>scale</aspectratio>
 						<texture fallback="posterfallback.png">$INFO[ListItem.Icon]</texture>
 					</control>
 					<control type="textbox">
@@ -154,7 +154,7 @@
 						<top>20</top>
 						<width>230</width>
 						<height>210</height>
-						<aspectratio>stretch</aspectratio>
+						<aspectratio>scale</aspectratio>
 						<bordertexture>white.png</bordertexture>
 						<bordersize>4</bordersize>
 						<texture fallback="posterfallback.png">$INFO[ListItem.Icon]</texture>

@@ -29,17 +29,19 @@
                     <top>20</top>
                     <width>230</width>
                     <height>210</height>
-                    <bordertexture >white.png</bordertexture>
+                    <bordertexture>white.png</bordertexture>
                     <bordersize>4</bordersize>
-					<aspectratio>stretch</aspectratio>
+                    <aspectratio>stretch</aspectratio>
                     <texture fallback="posterfallback.png">$VAR[poster]</texture>
                 </control>
                 <control type="textbox">
                     <top>20</top>
-                    <right>25</right>
+                    <right>30</right>
                     <align>right</align>
+                    <aligny>center</aligny>
                     <font>font30</font>
-                    <width>225</width>
+                    <width>220</width>
+                    <height>240</height>
                     <textcolor>yellow</textcolor>
                     <shadowcolor>88000000</shadowcolor>
                     <label>$INFO[ListItem.Label] [CR]$INFO[ListItem.Label2] </label>
@@ -52,30 +54,30 @@
                     <width>500</width>
                     <height>250</height>
                     <aspectratio>stretch</aspectratio>
-                    <texture>dialog.png</texture>
+                    <texture>dialog_fo.png</texture>
                 </control>
-				<control type="image">
+                <control type="image">
                     <left>20</left>
                     <top>20</top>
                     <width>230</width>
                     <height>210</height>
                     <aspectratio>stretch</aspectratio>
-                    <bordertexture colordiffuse="red">white.png</bordertexture>
+                    <bordertexture>white.png</bordertexture>
                     <bordersize>4</bordersize>
-					<texture fallback="posterfallback.png">$VAR[poster]</texture>
+                    <texture fallback="posterfallback.png">$VAR[poster]</texture>
                 </control>
                 <control type="textbox">
                     <top>20</top>
-                    <right>25</right>
+                    <right>30</right>
                     <align>right</align>
+                    <aligny>center</aligny>
                     <font>font30</font>
-                    <width>225</width>
+                    <width>220</width>
+                    <height>240</height>
                     <textcolor>yellow</textcolor>
                     <shadowcolor>88000000</shadowcolor>
                     <label>$INFO[ListItem.Label] [CR]$INFO[ListItem.Label2] </label>
                 </control>
-				
-
             </focusedlayout>
         </control>
         <control type="textbox">

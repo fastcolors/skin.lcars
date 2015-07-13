@@ -15,12 +15,15 @@
             <onup>noop</onup>
 			<ondown>700</ondown>
 			<onright>50</onright>
-			<control type="button" id="2">
-				<description>View As button</description>
-				<textwidth>235</textwidth>
-				<include>9000butts</include>
-				<label>-</label>
-			</control>
+
+			<!--<control type="button" id="2">-->
+			<!--USELESS-->
+				<!--<description>View As button</description>-->
+				<!--<textwidth>235</textwidth>-->
+				<!--<include>9000butts</include>-->
+				<!--<label>-</label>-->
+			<!--</control>-->
+
 			<control type="button" id="3">
 				<description>Sort by button</description>
 				<include>9000butts</include>

@@ -227,7 +227,7 @@
 						<label2>-</label2>
 						<icon>-</icon>
 						<property name="Layer">-</property>
-						<property name="atmosphere">astmosphere.png</property>
+						<property name="atmosphere">astmosphere6.png</property>
 						<onclick>noop</onclick>
 					</item>
 				</content>

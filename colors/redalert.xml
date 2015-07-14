@@ -6,12 +6,17 @@
 	<color name="grey2">FF999999</color>
 	<color name="grey3">FF505050</color>
 	<color name="black">FF000000</color>
-	<color name="blue">FF99ccff</color>
+	<color name="blue">FFff0000</color>
 	<color name="selected">FFffcc67</color>
 	<color name="invalid">FF3266cc</color>
-    <color name="design">FF3366cc</color>
+    <color name="design">FFff0000</color>
     <color name="red">FFff0000</color>
     <color name="yellow">FFFFAA00</color>
 	<color name="green">FF3ad936</color>
-	<color name="purple">FFcc99cc</color>
+	<color name="purple">FFff0000</color>
+	<color name="button1">FFff0000</color>
+	<color name="button2">FFff0000</color>
+	<color name="button3">FFff0000</color>
+	<color name="button4">FFff0000</color>
+
 </colors>

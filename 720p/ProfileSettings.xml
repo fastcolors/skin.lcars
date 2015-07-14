@@ -39,7 +39,7 @@
 			<height>150</height>
 			<align>left</align>
 			<aspectratio>keep</aspectratio>
-			<texture>unknown-user.png</texture>
+			<texture>default_user.png</texture>
 			<bordertexture border="8">white.png</bordertexture>
 			<bordersize>8</bordersize>
 		</control>

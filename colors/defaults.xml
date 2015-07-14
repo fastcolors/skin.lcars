@@ -14,9 +14,8 @@
     <color name="yellow">FFFFAA00</color>
 	<color name="green">FF3ad936</color>
 	<color name="purple">FFcc99cc</color>
-	<color name="button1">FFffcc00</color>
+	<color name="button1">FFFFAA00</color>
 	<color name="button2">FFcc99cc</color>
 	<color name="button3">FF99ccff</color>
 	<color name="button4">FFffcc00</color>
-
 </colors>

@@ -125,7 +125,7 @@
 						<bordertexture>white.png</bordertexture>
 						<bordersize>4</bordersize>
 						<aspectratio>scale</aspectratio>
-						<texture fallback="posterfallback.png">$INFO[ListItem.Icon]</texture>
+						<texture fallback="default_user.png">$INFO[ListItem.Icon]</texture>
 					</control>
 					<control type="textbox">
 						<top>20</top>
@@ -157,7 +157,7 @@
 						<aspectratio>scale</aspectratio>
 						<bordertexture>white.png</bordertexture>
 						<bordersize>4</bordersize>
-						<texture fallback="posterfallback.png">$INFO[ListItem.Icon]</texture>
+						<texture fallback="default_user.png">$INFO[ListItem.Icon]</texture>
 					</control>
 					<control type="textbox">
 						<top>20</top>

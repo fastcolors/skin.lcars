@@ -9,6 +9,7 @@
 			<left>190</left>
 			<width>1050</width>
 			<height>419</height>
+			<aspectratio>keep</aspectratio>
 			<texture colordiffuse="red">login.jpg</texture>
 		</control>
 		<control type="grouplist">

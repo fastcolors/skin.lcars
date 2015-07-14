@@ -176,7 +176,7 @@
 				<onup>noop</onup>
 				<onleft>9000</onleft>
 				<ondown>700</ondown>
-				<onright condition="StringCompare(Window.Property(Weather.CurrentView),map)">991</onright>
+				<onright condition="StringCompare(Window.Property(Weather.CurrentView),map)">992</onright>
 				<onright>50</onright>
                 <onback>50</onback>
 				<control type="group" id="300">

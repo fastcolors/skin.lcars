@@ -29,23 +29,6 @@
 				<textcolor>white</textcolor>
 				<shadowcolor>black</shadowcolor>
 			</control>
-			<control type="button" id="992">
-				<left>314</left>
-				<top>28</top>
-				<width>200</width>
-				<height>20</height>
-				<label>Next</label>
-				<texturefocus colordiffuse="white" >white.png</texturefocus>
-				<texturenofocus>-</texturenofocus>
-				<textcolor>black</textcolor>
-				<align>center</align>
-				<aligny>center</aligny>
-				<onup>noop</onup>
-				<ondown>noop</ondown>
-				<onleft>991</onleft>
-				<onright>9000</onright>
-				<onclick>Control.Move(53,1)</onclick>
-			</control>
 			<control type="button" id="991">
 				<left>113</left>
 				<top>28</top>
@@ -61,125 +44,145 @@
 				<ondown>noop</ondown>
 				<onleft>9000</onleft>
 				<onright>992</onright>
-				<onclick>Control.Move(53,-1)</onclick>
+				<onclick condition="!Container(53).HasFocus(1) + !Container(53).HasFocus(2)">Control.Move(53,-2)</onclick>
 			</control>
-			<control type="panel" id="53">
-				<centerleft>520</centerleft>
+			<control type="button" id="992">
+				<left>314</left>
+				<top>28</top>
+				<width>200</width>
+				<height>20</height>
+				<label>Next</label>
+				<texturefocus colordiffuse="white" >white.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<textcolor>black</textcolor>
+				<align>center</align>
+				<aligny>center</aligny>
+				<onup>noop</onup>
+				<ondown>noop</ondown>
+				<onleft>991</onleft>
+				<onright>9000</onright>
+				<onclick condition="!Container(53).HasFocus(5) + !Container(53).HasFocus(6)">Control.Move(53,2)</onclick>
+			</control>
+			<control type="list" id="53">
+				<left>20</left>
 				<top>40</top>
-				<width>1020</width>
+				<width>900</width>
 				<height>470</height>
-				<onleft>9000</onleft>
-				<onright>53</onright>
+				<onleft>noop</onleft>
+				<onright>noop</onright>
 				<onup>9000</onup>
 				<ondown>9000</ondown>
 				<scrolltime>200</scrolltime>
+				<!--<pagecontrol>991</pagecontrol>-->
 				<orientation>horizontal</orientation>
-				<itemlayout height="470" width="560">
-				<control type="image">
-					<centerleft>200</centerleft>
-					<width>400</width>
-					<height>400</height>
-					<texture background="true" border="20">videowindowbg.png</texture>
-				</control>
-				<control type="label">
-					<description>heading label</description>
-					<centerleft>200</centerleft>
-					<top>10</top>
-					<width>400</width>
-					<height>30</height>
-					<font>font24_title</font>
-					<label>$INFO[ListItem.Label]</label>
-					<align>center</align>
-					<aligny>top</aligny>
-					<textcolor>white</textcolor>
-				</control>
-				<control type="image">
-					<centerleft>200</centerleft>
-					<top>50</top>
-					<width>300</width>
-					<height>300</height>
-					<aspectratio scalediffuse="false">scale</aspectratio>
-					<texture>$INFO[ListItem.Property(atmosphere)]</texture>
-				</control>
-				<control type="image">
-					<centerleft>200</centerleft>
-					<top>50</top>
-					<width>300</width>
-					<height>300</height>
-					<texture>$INFO[ListItem.Icon]</texture>
-					<aspectratio>scale</aspectratio>
-				</control>
-				<control type="image">
-					<centerleft>200</centerleft>
-					<top>50</top>
-					<width>300</width>
-					<height>300</height>
-					<colordiffuse>70FFFFFF</colordiffuse>
-					<texture>$INFO[ListItem.Property(Layer)]</texture>
-					<aspectratio>scale</aspectratio>
-				</control>
-				<control type="image">
-					<centerleft>200</centerleft>
-					<top>345</top>
-					<width>280</width>
-					<height>30</height>
-					<texture>$INFO[ListItem.Label2]</texture>
-				</control>
+				<focusposition>0</focusposition>
+				<movement>0</movement>
+				<itemlayout height="470" width="500">
+					<control type="image">
+						<centerleft>200</centerleft>
+						<width>400</width>
+						<height>400</height>
+						<texture background="true" border="20">videowindowbg.png</texture>
+					</control>
+					<control type="label">
+						<description>heading label</description>
+						<centerleft>200</centerleft>
+						<top>10</top>
+						<width>400</width>
+						<height>30</height>
+						<font>font24_title</font>
+						<label>$INFO[ListItem.Label]</label>
+						<align>center</align>
+						<aligny>top</aligny>
+						<textcolor>white</textcolor>
+					</control>
+					<control type="image">
+						<centerleft>200</centerleft>
+						<top>50</top>
+						<width>300</width>
+						<height>300</height>
+						<aspectratio scalediffuse="false">scale</aspectratio>
+						<texture>$INFO[ListItem.Property(atmosphere)]</texture>
+					</control>
+					<control type="image">
+						<centerleft>200</centerleft>
+						<top>50</top>
+						<width>300</width>
+						<height>300</height>
+						<texture>$INFO[ListItem.Icon]</texture>
+						<aspectratio>scale</aspectratio>
+					</control>
+					<control type="image">
+						<centerleft>200</centerleft>
+						<top>50</top>
+						<width>300</width>
+						<height>300</height>
+						<colordiffuse>70FFFFFF</colordiffuse>
+						<texture>$INFO[ListItem.Property(Layer)]</texture>
+						<aspectratio>scale</aspectratio>
+					</control>
+					<control type="image">
+						<centerleft>200</centerleft>
+						<top>345</top>
+						<width>280</width>
+						<height>30</height>
+						<texture>$INFO[ListItem.Label2]</texture>
+					</control>
 				</itemlayout>
-				<focusedlayout height="490" width="560">
-				<control type="image">
-					<centerleft>200</centerleft>
-					<width>400</width>
-					<height>400</height>
-					<texture background="true" border="20">videowindowbg.png</texture>
-				</control>
-				<control type="label">
-					<description>heading label</description>
-					<centerleft>200</centerleft>
-					<top>10</top>
-					<width>400</width>
-					<height>30</height>
-					<font>font24_title</font>
-					<label>$INFO[ListItem.Label]</label>
-					<align>center</align>
-					<aligny>top</aligny>
-					<textcolor>white</textcolor>
-				</control>
-				<control type="image">
-					<centerleft>200</centerleft>
-					<top>50</top>
-					<width>300</width>
-					<height>300</height>
-					<aspectratio scalediffuse="false">scale</aspectratio>
-					<texture background="true" >$INFO[ListItem.Property(atmosphere)]</texture>
-				</control>
-				<control type="image">
-					<centerleft>200</centerleft>
-					<top>50</top>
-					<width>300</width>
-					<height>300</height>
-					<texture>$INFO[ListItem.Icon]</texture>
-					<aspectratio>scale</aspectratio>
-				</control>
-				<control type="image">
-					<centerleft>200</centerleft>
-					<top>50</top>
-					<width>300</width>
-					<height>300</height>
-					<colordiffuse>70FFFFFF</colordiffuse>
-					<texture>$INFO[ListItem.Property(Layer)]</texture>
-					<aspectratio>scale</aspectratio>
-				</control>
-				<control type="image">
-					<centerleft>200</centerleft>
-					<top>345</top>
-					<width>280</width>
-					<height>30</height>
-					<texture>$INFO[ListItem.Label2]</texture>
-				</control>
+				<focusedlayout height="490" width="500">
+					<control type="image">
+						<centerleft>200</centerleft>
+						<width>400</width>
+						<height>400</height>
+						<texture background="true" border="20">videowindowbg.png</texture>
+					</control>
+					<control type="label">
+						<description>heading label</description>
+						<centerleft>200</centerleft>
+						<top>10</top>
+						<width>400</width>
+						<height>30</height>
+						<font>font24_title</font>
+						<label>$INFO[ListItem.Label]</label>
+						<align>center</align>
+						<aligny>top</aligny>
+						<textcolor>white</textcolor>
+					</control>
+					<control type="image">
+						<centerleft>200</centerleft>
+						<top>50</top>
+						<width>300</width>
+						<height>300</height>
+						<aspectratio scalediffuse="false">scale</aspectratio>
+						<texture background="true" >$INFO[ListItem.Property(atmosphere)]</texture>
+					</control>
+					<control type="image">
+						<centerleft>200</centerleft>
+						<top>50</top>
+						<width>300</width>
+						<height>300</height>
+						<texture>$INFO[ListItem.Icon]</texture>
+						<aspectratio>scale</aspectratio>
+					</control>
+					<control type="image">
+						<centerleft>200</centerleft>
+						<top>50</top>
+						<width>300</width>
+						<height>300</height>
+						<colordiffuse>70FFFFFF</colordiffuse>
+						<texture>$INFO[ListItem.Property(Layer)]</texture>
+						<aspectratio>scale</aspectratio>
+					</control>
+					<control type="image">
+						<centerleft>200</centerleft>
+						<top>345</top>
+						<width>280</width>
+						<height>30</height>
+						<texture>$INFO[ListItem.Label2]</texture>
+					</control>
 				</focusedlayout>
 				<content>
-					<item>
+					<item id="1">
 						<label>$INFO[Window.Property(Map.1.Heading)]</label>
 						<label2>$INFO[Window.Property(Map.1.Legend)]</label2>
 						<icon>$INFO[Window.Property(Map.1.Area)]</icon>
@@ -187,7 +190,7 @@
 						<property name="atmosphere">astmosphere.png</property>
 						<onclick>noop</onclick>
 					</item>
-					<item>
+					<item id="2">
 						<label>$INFO[Window.Property(Map.2.Heading)]</label>
 						<label2>$INFO[Window.Property(Map.2.Legend)]</label2>
 						<icon>$INFO[Window.Property(Map.2.Area)]</icon>
@@ -195,7 +198,7 @@
 						<property name="atmosphere">astmosphere2.png</property>
 						<onclick>noop</onclick>
 					</item>
-					<item>
+					<item id="3">
 						<label>$INFO[Window.Property(Map.3.Heading)]</label>
 						<label2>$INFO[Window.Property(Map.3.Legend)]</label2>
 						<icon>$INFO[Window.Property(Map.3.Area)]</icon>
@@ -203,7 +206,7 @@
 						<property name="atmosphere">astmosphere3.png</property>
 						<onclick>noop</onclick>
 					</item>
-					<item>
+					<item id="4">
 						<label>$INFO[Window.Property(Map.4.Heading)]</label>
 						<label2>$INFO[Window.Property(Map.4.Legend)]</label2>
 						<icon>$INFO[Window.Property(Map.4.Area)]</icon>
@@ -211,7 +214,7 @@
 						<property name="atmosphere">astmosphere4.png</property>
 						<onclick>noop</onclick>
 					</item>
-					<item>
+					<item id="5">
 						<label>$INFO[Window.Property(Map.5.Heading)]</label>
 						<label2>$INFO[Window.Property(Map.5.Legend)]</label2>
 						<icon>$INFO[Window.Property(Map.5.Area)]</icon>
@@ -219,10 +222,16 @@
 						<property name="atmosphere">astmosphere5.png</property>
 						<onclick>noop</onclick>
 					</item>
+					<item id="6">
+						<label>-</label>
+						<label2>-</label2>
+						<icon>-</icon>
+						<property name="Layer">-</property>
+						<property name="atmosphere">astmosphere.png</property>
+						<onclick>noop</onclick>
+					</item>
 				</content>
 			</control>
-			
-
 		</control>
 	</include>
 </includes>

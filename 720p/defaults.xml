@@ -71,7 +71,6 @@
         <width>30</width>
         <height>18</height>
         <font>font14</font>
-        <reverse>yes</reverse>
         <textcolor>white</textcolor>
         <disabledcolor>grey3</disabledcolor>
         <subtype>text</subtype>

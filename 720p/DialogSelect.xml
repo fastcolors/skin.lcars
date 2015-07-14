@@ -15,22 +15,20 @@
             <control type="label" id="1">
                 <description>header label</description>
                 <centerleft>640</centerleft>
-                <top>120</top>
+                <top>130</top>
                 <width>770</width>
                 <height>30</height>
-                <font>font13_title</font>
+                <font>font30</font>
                 <label>$LOCALIZE[13406]</label>
                 <align>center</align>
                 <aligny>center</aligny>
                 <textcolor>selected</textcolor>
-                <shadowcolor>black</shadowcolor>
             </control>
         </control>
-
         <control type="list" id="3">
             <left>410</left>
             <top>140</top>
-            <width>460</width>
+            <width>445</width>
             <height>406</height>
             <onup>3</onup>
             <ondown>5</ondown>
@@ -38,13 +36,13 @@
             <onright>61</onright>
             <pagecontrol>61</pagecontrol>
             <scrolltime>200</scrolltime>
-            <itemlayout height="46" width="460">
+            <itemlayout height="46" width="445">
                 <control type="image">
                     <left>0</left>
                     <top>0</top>
-                    <width>460</width>
+                    <width>445</width>
                     <height>40</height>
-                    <texture border="5">menuitemnf.png</texture>
+                    <texture colordiffuse="design" border="20">whiteallrounded.png</texture>
                 </control>
                 <control type="label">
                     <left>20</left>
@@ -52,20 +50,19 @@
                     <width>420</width>
                     <height>40</height>
                     <font>font14</font>
-                    <textcolor>grey2</textcolor>
                     <selectedcolor>selected</selectedcolor>
                     <align>left</align>
                     <aligny>center</aligny>
                     <label>$INFO[ListItem.Label]</label>
                 </control>
             </itemlayout>
-            <focusedlayout height="46" width="460">
+            <focusedlayout height="46" width="445">
                 <control type="image">
                     <left>0</left>
                     <top>0</top>
-                    <width>460</width>
+                    <width>445</width>
                     <height>40</height>
-                    <texture border="5">menuitemfo.png</texture>
+                    <texture colordiffuse="white" border="20">whiteallrounded.png</texture>
                 </control>
                 <control type="label">
                     <left>20</left>
@@ -73,7 +70,6 @@
                     <width>420</width>
                     <height>40</height>
                     <font>font14</font>
-                    <textcolor>yellow</textcolor>
                     <selectedcolor>selected</selectedcolor>
                     <align>left</align>
                     <aligny>center</aligny>
@@ -83,16 +79,23 @@
         </control>
         <control type="list" id="6">
             <left>410</left>
-            <top>140</top>
-            <width>460</width>
-            <height>406</height>
+            <top>180</top>
+            <width>445</width>
+            <height>340</height>
             <onup>6</onup>
             <ondown>5</ondown>
             <onleft>61</onleft>
             <onright>61</onright>
             <pagecontrol>61</pagecontrol>
             <scrolltime>200</scrolltime>
-            <itemlayout height="85" width="460">
+            <itemlayout height="85" width="445">
+                <control type="image">
+                    <left>0</left>
+                    <top>5</top>
+                    <width>445</width>
+                    <height>76</height>
+                    <texture colordiffuse="design" border="20">whiterounded.png</texture>
+                </control>
                 <control type="image">
                     <left>5</left>
                     <top>5</top>
@@ -126,7 +129,14 @@
                     <label>$INFO[ListItem.Property(Addon.Summary)]</label>
                 </control>
             </itemlayout>
-            <focusedlayout height="85" width="460">
+            <focusedlayout height="85" width="445">
+                <control type="image">
+                    <left>0</left>
+                    <top>5</top>
+                    <width>445</width>
+                    <height>76</height>
+                    <texture colordiffuse="white" border="20">whiterounded.png</texture>
+                </control>
                 <control type="image">
                     <left>5</left>
                     <top>5</top>
@@ -143,7 +153,6 @@
                     <width>250</width>
                     <height>30</height>
                     <font>font14</font>
-                    <textcolor>white</textcolor>
                     <selectedcolor>selected</selectedcolor>
                     <align>left</align>
                     <aligny>center</aligny>
@@ -155,7 +164,6 @@
                     <width>250</width>
                     <height>50</height>
                     <font>font13</font>
-                    <textcolor>grey</textcolor>
                     <selectedcolor>selected</selectedcolor>
                     <align>left</align>
                     <label>$INFO[ListItem.Property(Addon.Summary)]</label>
@@ -168,24 +176,23 @@
             <width>8</width>
             <height>406</height>
             <texturesliderbackground border="4">ScrollbarBG_light.png</texturesliderbackground>
-			<textureslidernib border="4">ScrollerNF.png</textureslidernib>
-			<textureslidernibfocus>ScrollerFO.png</textureslidernibfocus>
-			<onleft>3</onleft>
+            <textureslidernib border="4">ScrollerNF.png</textureslidernib>
+            <textureslidernibfocus>ScrollerFO.png</textureslidernibfocus>
+            <onleft>3</onleft>
             <onright>5</onright>
             <ondown>61</ondown>
             <onup>61</onup>
             <showonepage>false</showonepage>
             <orientation>vertical</orientation>
-            
         </control>
         <control type="label">
             <description>number of files/pages in list text label</description>
-            <centerleft>640</centerleft>
+            <right>430</right>
             <top>562</top>
             <width>460</width>
             <height>35</height>
             <font>font12</font>
-            <align>left</align>
+            <align>right</align>
             <aligny>center</aligny>
             <scroll>true</scroll>
             <textcolor>grey</textcolor>
@@ -194,18 +201,18 @@
         </control>
         <control type="label">
             <description>number of files/pages in list text label</description>
-            <centerleft>640</centerleft>
+            <visible>Control.IsVisible(6)</visible>
+            <right>430</right>
             <top>562</top>
             <width>460</width>
             <height>35</height>
             <font>font12</font>
-            <align>left</align>
+            <align>right</align>
             <aligny>center</aligny>
             <scroll>true</scroll>
             <textcolor>grey</textcolor>
             <label>([COLOR=blue]$INFO[Container(6).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=blue]$INFO[Container(6).CurrentPage]/$INFO[Container(6).NumPages][/COLOR])</label>
             <wrapmultiline>true</wrapmultiline>
-            <visible>Control.IsVisible(6)</visible>
         </control>
         <control type="button" id="5">
             <description>Manual button</description>

@@ -859,74 +859,74 @@
                 <top>5</top>
                 <width>155</width>
                 <height>38</height>
-                <texture colordiffuse="yellow">white.png</texture>
+                <texture colordiffuse="button1">white.png</texture>
             </control>
             <control type="image">
                 <top>49</top>
                 <width>155</width>
                 <height>38</height>
-                <texture colordiffuse="yellow">white.png</texture>
+                <texture colordiffuse="button1">white.png</texture>
             </control>
             <control type="image">
                 <top>93</top>
                 <width>155</width>
                 <height>38</height>
-                <texture colordiffuse="purple">white.png</texture>
+                <texture colordiffuse="button1">white.png</texture>
             </control>
             <control type="image">
                 <top>137</top>
                 <width>155</width>
                 <height>38</height>
-                <texture colordiffuse="purple">white.png</texture>
+                <texture colordiffuse="button2">white.png</texture>
             </control>
             <control type="image">
                 <top>181</top>
                 <width>155</width>
                 <height>38</height>
-                <texture colordiffuse="blue">white.png</texture>
+                <texture colordiffuse="button2">white.png</texture>
             </control>
             <control type="image">
                 <top>225</top>
                 <width>155</width>
                 <height>38</height>
-                <texture colordiffuse="blue">white.png</texture>
+                <texture colordiffuse="button2">white.png</texture>
             </control>
             <control type="image">
                 <top>269</top>
                 <width>155</width>
                 <height>38</height>
-                <texture colordiffuse="purple">white.png</texture>
+                <texture colordiffuse="button3">white.png</texture>
             </control>
             <control type="image">
                 <top>313</top>
                 <width>155</width>
                 <height>38</height>
-                <texture colordiffuse="purple">white.png</texture>
+                <texture colordiffuse="button3">white.png</texture>
             </control>
             <control type="image">
                 <top>357</top>
                 <width>155</width>
                 <height>38</height>
-                <texture colordiffuse="blue">white.png</texture>
+                <texture colordiffuse="button3">white.png</texture>
             </control>
             <control type="image">
                 <top>401</top>
                 <width>155</width>
                 <height>38</height>
-                <texture colordiffuse="blue">white.png</texture>
+                <texture colordiffuse="button4">white.png</texture>
             </control>
             <control type="image">
                 <top>445</top>
                 <width>155</width>
                 <height>38</height>
-                <texture colordiffuse="yellow">white.png</texture>
+                <texture colordiffuse="button4">white.png</texture>
             </control>
             <control type="image">
                 <visible>Window.IsActive(Home) | Window.IsActive(AddonSettings)</visible>
                 <top>489</top>
                 <width>155</width>
                 <height>38</height>
-                <texture colordiffuse="yellow">white.png</texture>
+                <texture colordiffuse="button4">white.png</texture>
             </control>
             <control type="button" id="700">
                 <visible>!Window.IsActive(Home)</visible>
@@ -945,10 +945,8 @@
                 <height>38</height>
                 <label>31008</label>
                 <onclick>Back</onclick>
-                <texturenofocus colordiffuse="yellow">white.png</texturenofocus>
+                <texturenofocus colordiffuse="button4">white.png</texturenofocus>
 				<texturefocus colordiffuse="white">white.png</texturefocus>
-				<alttexturenofocus>-</alttexturenofocus>
-				<alttexturefocus colordiffuse="white">white.png</alttexturefocus>
 				<aligny>bottom</aligny>
 				<font>font16</font>
 				<align>right</align>

@@ -195,7 +195,30 @@
         <align>justify</align>
         <label>$INFO[Container(311).ListItem.Property(NextAir)]$INFO[Container(311).ListItem.Plot]$INFO[Container(311).ListItem.Property(Addon.Description)]$INFO[Container(311).ListItem.Property(Album_Description)]$INFO[Container(311).ListItem.Property(Artist_Description)]</label>
     </control>
-    <control type="scrollbar" id="60">
+   <control type="label">
+        <visible>Container(9000).HasFocus(9) + !Control.HasFocus(311)</visible>
+        <top>469</top>
+        <centerleft>670</centerleft>
+        <width>660</width>
+        <height>30</height>
+        <font>font30</font>
+        <textcolor>yellow</textcolor>
+        <align>center</align>
+        <label>$INFO[Window(Home).Property(NextAired.Total),, ACTIVE TV SHOW]    $INFO[Window(Home).Property(NextAired.TodayTotal),  , AIRED TODAY ]</label>
+    </control>
+    <control type="textbox">
+        <visible>Container(9000).HasFocus(9) + !Control.HasFocus(311)</visible>
+        <top>500</top>
+        <centerleft>670</centerleft>
+        <width>660</width>
+        <height>150</height>
+        <textcolor>yellow</textcolor>
+        <font>font14</font>
+        <align>justify</align>
+        <label>$INFO[Window(Home).Property(NextAired.TodayShow),PLAYING TODAY ARE:    ]</label>
+    </control>
+  
+	<control type="scrollbar" id="60">
         <visible>Control.IsVisible(311)</visible>
         <top>400</top>
         <left>350</left>

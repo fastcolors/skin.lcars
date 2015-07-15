@@ -459,7 +459,7 @@
                 <control type="button" id="500">
                     <include>888buttons</include>
                     <label>31005</label>
-                    <onfocus>Skin.SetString(musichome,plugin://service.library.data.provider?type=recentalbums&limit=10)</onfocus>
+                    <onfocus>Skin.SetString(musichome,musicdb://recentlyaddedalbums/)</onfocus>
                     <!--<onclick>ActivateWindow(music,recentlyaddedalbums,return)</onclick>-->
                 </control>
                 <control type="button" id="501">
@@ -558,7 +558,7 @@
                 <control type="button" id="501">
                     <include>888buttons</include>
                     <label>ADD SOURCE</label>
-                    <onclick condition="StringCompare(Skin.String(sourceshome),sources://video/)">noop</onclick>
+                    <onclick condition="StringCompare(Skin.String(sourceshome),sources://video/)">ActivateWindow(videos,files)</onclick>
                     <onclick condition="!StringCompare(Skin.String(sourceshome),sources://music/)">SendClick(windowid,id)</onclick>
                 </control>
                 <control type="button" id="503">

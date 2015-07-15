@@ -226,7 +226,7 @@
 				<top>30</top>
 				<width>730</width>
 				<height>560</height>
-				<texture border="40">Dialog.png</texture>
+				<texture border="40">dialog.png</texture>
 			</control>
 			<control type="label">
 				<description>header label</description>

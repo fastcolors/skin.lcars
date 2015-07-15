@@ -22,7 +22,7 @@
 				<width>420</width>
 				<height>470</height>
 				<aspectratio>stretch</aspectratio>
-				<texture border="140"  >Dialog.png</texture>
+				<texture border="140"  >dialog.png</texture>
         </control>
         <control type="label" id="1">
             <description>dialog Heading</description>

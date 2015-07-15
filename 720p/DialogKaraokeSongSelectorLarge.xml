@@ -13,7 +13,7 @@
 				<top>0</top>
 				<width>450</width>
 				<height>170</height>
-				<texture border="40">Dialog.png</texture>
+				<texture border="40">dialog.png</texture>
 			</control>
 			<control type="image">
 				<description>Dialog Header image</description>

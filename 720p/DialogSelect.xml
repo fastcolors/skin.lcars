@@ -8,6 +8,7 @@
             <width>500</width>
             <height>500</height>
             <texture border="180">dialog.png</texture>
+            <colordiffuse>FFFFA5AE</colordiffuse>
         </control>
         <control type="group">
             <visible>Control.IsVisible(5)</visible>

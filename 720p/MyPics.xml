@@ -5,7 +5,7 @@
 	<views>50</views>
 	<controls>
 		<include>allwindows</include>
-
+		<include>background</include>
 		<include>PictureWrapView</include> <!-- view id = 50 -->
 		<control type="grouplist" id="9000">
 			<top>101</top>

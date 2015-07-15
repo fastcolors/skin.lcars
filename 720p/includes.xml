@@ -557,11 +557,20 @@
                     <onfocus>Skin.SetString(sourceshome,sources://video/)</onfocus>
                     <onclick>ActivateWindow(videos,files)</onclick>
                 </control>
-                <control type="button" id="501">
+                <!--<control type="button" id="501">-->
+                    <!--<include>888buttons</include>-->
+                    <!--<label>ADD SOURCE</label>-->
+                    <!--<onclick condition="StringCompare(Skin.String(sourceshome),sources://video/)">ActivateWindow(videos,files)</onclick>-->
+                    <!--<onclick condition="!StringCompare(Skin.String(sourceshome),sources://music/)">SendClick(windowid,id)</onclick>-->
+                <!--</control>-->
+                <control type="togglebutton" id="501">
+                    <font>font13</font>
                     <include>888buttons</include>
-                    <label>ADD SOURCE</label>
-                    <onclick condition="StringCompare(Skin.String(sourceshome),sources://video/)">ActivateWindow(videos,files)</onclick>
-                    <onclick condition="!StringCompare(Skin.String(sourceshome),sources://music/)">SendClick(windowid,id)</onclick>
+                    <label>$VAR[updlibrary]</label>
+                    <altlabel>$VAR[updlibrary]</altlabel>
+                    <usealttexture>StringCompare(Skin.String(sourceshome),sources://music/)</usealttexture>
+                    <onclick>UpdateLibrary(video)</onclick>
+                    <altclick>UpdateLibrary(music)</altclick>
                 </control>
                 <control type="button" id="503">
                     <include>888buttons</include>

@@ -74,4 +74,10 @@
 		<value condition="IsEmpty(ListItem.mpaa)"> </value>
 
 	</variable>
+
+	<variable name="updlibrary">
+		<value condition="library.isscanning">$LOCALIZE[13353]</value>
+		<value condition="StringCompare(Skin.String(sourceshome),sources://music/)">$LOCALIZE[653][CR]$LOCALIZE[292]</value>
+		<value>$LOCALIZE[653][CR]$LOCALIZE[157]</value>
+	</variable>
 </includes>

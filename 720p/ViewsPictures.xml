@@ -18,6 +18,12 @@
                     <aspectratio>scale</aspectratio>
                     <texture fallback="posterfallback.png">$INFO[ListItem.Icon]</texture>
                 </control>
+                <control type="label">
+                    <centerleft>130</centerleft>
+                    <align>center</align>
+                    <textcolor>white</textcolor>
+                    <info>ListItem.Label</info>
+                </control>
             </itemlayout>
             <focusedlayout width="260" height="280">
                 <control type="image">
@@ -29,6 +35,12 @@
                     <texture fallback="posterfallback.png">$INFO[ListItem.Icon]</texture>
                     <bordertexture>white.png</bordertexture>
                     <bordersize>4</bordersize>
+                </control>
+                <control type="label">
+                    <centerleft>130</centerleft>
+                    <align>center</align>
+                    <textcolor>white</textcolor>
+                    <info>ListItem.Label</info>
                 </control>
             </focusedlayout>
         </control>

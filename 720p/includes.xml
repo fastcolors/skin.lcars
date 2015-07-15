@@ -86,7 +86,8 @@
         <control type="group" id="750">
             <!--background-->
             <control type="label">
-                <centerleft>718</centerleft>
+                <visible>!Skin.HasSetting(HomeMenuNoMovieButton)</visible>
+				<centerleft>718</centerleft>
                 <top>440</top>
                 <font>font13</font>
                 <align>center</align>
@@ -96,7 +97,8 @@
             </control>
             <control type="label">
                 <centerleft>918</centerleft>
-                <top>440</top>
+                <visible>!Skin.HasSetting(HomeMenuNoTVShowButton)</visible>
+				<top>440</top>
                 <font>font13</font>
                 <align>center</align>
                 <width>145</width>
@@ -104,7 +106,8 @@
                 <label>$INFO[Window.Property(TVShows.Count),, $LOCALIZE[20343] ]</label>
             </control>
             <control type="label">
-                <centerleft>518</centerleft>
+                <visible>!Skin.HasSetting(HomeMenuNoMusicButton)</visible>
+				<centerleft>518</centerleft>
                 <top>440</top>
                 <font>font13</font>
                 <align>center</align>

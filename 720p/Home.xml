@@ -91,14 +91,14 @@
         <content>
             <!--MOVIES-->
             <item id="1">
-                <visible>!Skin.HasSetting(HomeMenuNoMovieButton)</visible>
+                <visible>!Skin.HasSetting(HomeMenuNoMovieButton) + Library.HasContent(Movies)</visible>
 				<label>342</label>
                 <onclick condition="Library.HasContent(Movies)">ActivateWindow(Videos,MovieTitles,return)</onclick>
                 <onclick condition="!Library.HasContent(Movies)">ActivateWindow(Videos,root)</onclick>
             </item>
             <!--TVSHOWS-->
             <item id="2">
-                <visible>!Skin.HasSetting(HomeMenuNoTVShowButton)</visible>
+                <visible>!Skin.HasSetting(HomeMenuNoTVShowButton) + Library.HasContent(TVShows)</visible>
 				<label>20343</label>
                 <label2>FFFF0000</label2>
                 <onclick condition="Library.HasContent(TVShows)">ActivateWindow(VideoLibrary,TVShowTitles,return)</onclick>

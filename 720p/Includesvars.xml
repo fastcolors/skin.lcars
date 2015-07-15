@@ -12,7 +12,7 @@
 		<value condition="Container(9000).HasFocus(2) + SubString(Skin.String(tvshowshome),recommendedepisodes)">$LOCALIZE[31017]</value>
 		<value condition="Container(9000).HasFocus(2) + StringCompare(Skin.String(tvshowshome),videodb://tvshows/titles/)">$LOCALIZE[31018]</value>
 		<!--MUSIC-->
-		<value condition="Container(9000).HasFocus(3) + StringCompare(Skin.String(musichome),musicdb://recentlyaddedalbums/)">$LOCALIZE[359]</value>
+		<value condition="Container(9000).HasFocus(3) + SubString(Skin.String(musichome),recentalbums)">$LOCALIZE[359]</value>
 		<value condition="Container(9000).HasFocus(3) + StringCompare(Skin.String(musichome),musicdb://albums/)">$LOCALIZE[31020]</value>
 		<value condition="Container(9000).HasFocus(3) + StringCompare(Skin.String(musichome),musicdb://artists/)">$LOCALIZE[31021]</value>
 		<!--ADDONS-->

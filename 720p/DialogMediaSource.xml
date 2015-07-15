@@ -147,7 +147,7 @@
                 <ondown>12</ondown>
             </control>
         </control>
-        <control type="button" id="12">
+        <control type="edit" id="12">
             <description>Name Button</description>
             <centerleft>640</centerleft>
             <top>450</top>

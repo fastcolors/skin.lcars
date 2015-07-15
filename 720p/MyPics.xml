@@ -4,102 +4,60 @@
 	<allowoverlay>no</allowoverlay>
 	<views>50</views>
 	<controls>
-		<control type="group">
-<<<<<<< HEAD
-			<control type="image">
-				<width>1280</width>
-				<height>720</height>
-				<texture>background.png</texture>
-			</control>
-			<include>allwindows</include>
-		</control>
+		<include>allwindows</include>
+
 		<include>PictureWrapView</include> <!-- view id = 50 -->
-		<control type="group">
-=======
-            <!--control type="image">
-            <width>1280</width>
-            <height>720</height>
-            <texture>background.png</texture>
-        </control-->
-        <control type="image">
-            <width>1280</width>
-            <height>720</height>
-            <texture colordiffuse="design" >background2.png</texture>
-        </control>
-        <control type="image">
-            <width>1280</width>
-            <height>720</height>
-            <texture colordiffuse="button2" >background3.png</texture>
-        </control>
-        <control type="image">
-            <width>1280</width>
-            <height>720</height>
-            <texture colordiffuse="button3" >background4.png</texture>
-        </control>
-        <control type="image">
-            <width>1280</width>
-            <height>720</height>
-            <texture colordiffuse="button4" >background5.png</texture>
-        </control>
-        <include>allwindows</include>
-        </control>
-			<include>CommonRootView</include> <!-- view id = 50 -->
-			
-			<include>PictureWrapView</include> <!-- view id = 510 -->
-			<control type="group">
->>>>>>> origin/master
-			<control type="grouplist" id="9000">
-				<top>101</top>
-				<left>13</left>
-				<width>155</width>
-				<height>530</height>
-				<itemgap>6</itemgap>
-				<onup>noop</onup>
-				<ondown>700</ondown>
-				<onright>50</onright>
-				<!--<control type="button" id="2">-->
-					<!--<description>View As button</description>-->
-					<!--<textwidth>235</textwidth>-->
-					<!--<include>9000butts</include>-->
-					<!--<label>-</label>-->
-				<!--</control>-->
-				<control type="button" id="3">
-					<description>Sort by button</description>
-					<include>9000butts</include>
-					<label>103</label>
-				</control>
-				<control type="togglebutton" id="4">
-					<description>Sort asc</description>
-					<include>9000butts</include>
-					<label>31051</label>
-					<altlabel>31050</altlabel>
-				</control>
-				<control type="radiobutton" id="20">
-					<visible>Container.CanFilterAdvanced</visible>
-					<description>Filter</description>
-					<label>587</label>
-					<radioposx>5</radioposx>
-					<include>9000butts</include>
-					<selected>Container.Filtered</selected>
-					<onclick>right</onclick>
-					<onclick>Filter</onclick>
-				</control>
-				<control type="button" id="6">
-					<description>Slideshow</description>
-					<include>9000butts</include>
-					<label>108</label>
-				</control>
-				<control type="button" id="7">
-					<description>Recersive Slideshow</description>
-					<include>9000butts</include>
-					<label>361</label>
-				</control>
-				<control type="radiobutton" id="9">
-					<description>Randomize Toggle</description>
-					<radioposx>5</radioposx>
-					<include>9000butts</include>
-					<label>13319</label>
-				</control>
+		<control type="grouplist" id="9000">
+			<top>101</top>
+			<left>13</left>
+			<width>155</width>
+			<height>530</height>
+			<itemgap>6</itemgap>
+			<onup>noop</onup>
+			<ondown>700</ondown>
+			<onright>50</onright>
+			<!--<control type="button" id="2">-->
+			<!--<description>View As button</description>-->
+			<!--<textwidth>235</textwidth>-->
+			<!--<include>9000butts</include>-->
+			<!--<label>-</label>-->
+			<!--</control>-->
+			<control type="button" id="3">
+				<description>Sort by button</description>
+				<include>9000butts</include>
+				<label>103</label>
+			</control>
+			<control type="togglebutton" id="4">
+				<description>Sort asc</description>
+				<include>9000butts</include>
+				<label>31051</label>
+				<altlabel>31050</altlabel>
+			</control>
+			<control type="radiobutton" id="20">
+				<visible>Container.CanFilterAdvanced</visible>
+				<description>Filter</description>
+				<label>587</label>
+				<radioposx>5</radioposx>
+				<include>9000butts</include>
+				<selected>Container.Filtered</selected>
+				<onclick>right</onclick>
+				<onclick>Filter</onclick>
+			</control>
+			<control type="button" id="6">
+				<description>Slideshow</description>
+				<include>9000butts</include>
+				<label>108</label>
+			</control>
+			<control type="button" id="7">
+				<description>Recersive Slideshow</description>
+				<include>9000butts</include>
+				<label>361</label>
+			</control>
+			<control type="radiobutton" id="9">
+				<description>Randomize Toggle</description>
+				<radioposx>5</radioposx>
+				<include>9000butts</include>
+				<label>13319</label>
 			</control>
 		</control>
 		<control type="label">

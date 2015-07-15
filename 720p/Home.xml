@@ -4,31 +4,7 @@
     <allowoverlay>no</allowoverlay>
     <controls>
     <control type="group">
-        <!--control type="image">
-            <width>1280</width>
-            <height>720</height>
-            <texture>background.png</texture>
-        </control-->
-        <control type="image">
-            <width>1280</width>
-            <height>720</height>
-            <texture colordiffuse="design" >background2.png</texture>
-        </control>
-        <control type="image">
-            <width>1280</width>
-            <height>720</height>
-            <texture colordiffuse="button2" >background3.png</texture>
-        </control>
-        <control type="image">
-            <width>1280</width>
-            <height>720</height>
-            <texture colordiffuse="button3" >background4.png</texture>
-        </control>
-        <control type="image">
-            <width>1280</width>
-            <height>720</height>
-            <texture colordiffuse="button4" >background5.png</texture>
-        </control>
+        <include>background</include>
         <control type="label">
             <visible>Control.HasFocus(311)</visible>
             <top>417</top>

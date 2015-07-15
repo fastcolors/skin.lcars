@@ -459,7 +459,7 @@
                 <control type="button" id="500">
                     <include>888buttons</include>
                     <label>31005</label>
-                    <onfocus>Skin.SetString(musichome,musicdb://recentlyaddedalbums/)</onfocus>
+                    <onfocus>Skin.SetString(musichome,plugin://service.library.data.provider?type=recentalbums&limit=16)</onfocus>
                     <!--<onclick>ActivateWindow(music,recentlyaddedalbums,return)</onclick>-->
                 </control>
                 <control type="button" id="501">
@@ -1328,5 +1328,26 @@
         </focusedlayout>
 
     </include>
-
+    <include name="background">
+        <control type="image">
+			<width>1280</width>
+			<height>720</height>
+			<texture colordiffuse="design" >background2.png</texture>
+		</control>
+		<control type="image">
+			<width>1280</width>
+			<height>720</height>
+			<texture colordiffuse="button2" >background3.png</texture>
+		</control>
+		<control type="image">
+			<width>1280</width>
+			<height>720</height>
+			<texture colordiffuse="button3" >background4.png</texture>
+		</control>
+		<control type="image">
+			<width>1280</width>
+			<height>720</height>
+			<texture colordiffuse="button4" >background5.png</texture>
+		</control>
+    </include>
 </includes>

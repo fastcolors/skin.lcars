@@ -1,40 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<defaultcontrol always="true">50</defaultcontrol>
-	<allowoverlay>no</allowoverlay>
-	<views>50</views>
-	<controls>
-		<control type="group">
-			<include>CommonRootView</include> <!-- view id = 50 -->
-		</control>
-		<control type="group">
-            <!--control type="image">
-            <width>1280</width>
-            <height>720</height>
-            <texture>background.png</texture>
-        </control-->
-        <control type="image">
-            <width>1280</width>
-            <height>720</height>
-            <texture colordiffuse="design" >background2.png</texture>
+    <defaultcontrol always="true">50</defaultcontrol>
+    <allowoverlay>no</allowoverlay>
+    <views>50</views>
+    <controls>
+        <control type="panel" id="50">
+            <animation effect="fade" start="100" end="80" condition="!Control.HasFocus(311) + !Control.HasFocus(60)">Conditional</animation>
+            <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
+            <onup>888</onup>
+            <onleft>888</onleft>
+            <top>125</top>
+            <left>330</left>
+            <width>900</width>
+            <height>300</height>
+            <pagecontrol>60</pagecontrol>
+            <ondown>60</ondown>
+            <orientation>horizontal</orientation>
+            <include>squareshome</include>
         </control>
-        <control type="image">
-            <width>1280</width>
-            <height>720</height>
-            <texture colordiffuse="button2" >background3.png</texture>
-        </control>
-        <control type="image">
-            <width>1280</width>
-            <height>720</height>
-            <texture colordiffuse="button3" >background4.png</texture>
-        </control>
-        <control type="image">
-            <width>1280</width>
-            <height>720</height>
-            <texture colordiffuse="button4" >background5.png</texture>
-        </control>
+        <include>background</include>
         <include>allwindows</include>
-        </control>
         <control type="grouplist" id="9000">
             <top>101</top>
             <left>13</left>
@@ -45,32 +30,54 @@
             <ondown>700</ondown>
             <onright>50</onright>
             <control type="button" id="3">
-				<description>Sort by button</description>
-				<include>9000butts</include>
+                <description>Sort by button</description>
+                <include>9000butts</include>
                 <label>103</label>
-			</control>
-			<control type="togglebutton" id="4">
-				<description>Sort asc</description>
-				<label>31051</label>
-				<altlabel>31050</altlabel>
-			    <include>9000butts</include>
-            	<usealttexture>Container.SortDirection(Ascending)</usealttexture>
-			</control>
-			<control type="edit" id="19">
-				<visible>Container.CanFilter + !Container.CanFilterAdvanced</visible>
-				<description>Filter</description>
-				<include>9000butts</include>
-                <label>587</label>
-			</control>
-			<control type="radiobutton" id="20">
-				<visible>Container.CanFilterAdvanced</visible>
-				<description>Filter</description>
-				<radioposx>5</radioposx>
+            </control>
+            <control type="togglebutton" id="4">
+                <description>Sort asc</description>
+                <label>31051</label>
+                <altlabel>31050</altlabel>
+                <include>9000butts</include>
+                <usealttexture>Container.SortDirection(Ascending)</usealttexture>
+            </control>
+            <control type="edit" id="19">
+                <visible>Container.CanFilter + !Container.CanFilterAdvanced</visible>
+                <description>Filter</description>
                 <include>9000butts</include>
                 <label>587</label>
-				<onclick>right</onclick>
-				<onclick>Filter</onclick>
-			</control>
-			</control>
-	</controls>
+            </control>
+            <control type="radiobutton" id="20">
+                <visible>Container.CanFilterAdvanced</visible>
+                <description>Filter</description>
+                <radioposx>5</radioposx>
+                <include>9000butts</include>
+                <label>587</label>
+                <onclick>right</onclick>
+                <onclick>Filter</onclick>
+            </control>
+        </control>
+        <control type="label">
+        <visible>Control.HasFocus(50)</visible>
+        <top>469</top>
+        <centerleft>670</centerleft>
+        <width>660</width>
+        <height>30</height>
+        <font>font30</font>
+        <textcolor>yellow</textcolor>
+        <align>center</align>
+        <label>$INFO[ListItem.Label] $INFO[ListItem.Label2, • ]</label>
+    </control>
+    <control type="textbox">
+        <visible>Control.HasFocus(50)</visible>
+        <top>500</top>
+        <centerleft>670</centerleft>
+        <width>660</width>
+        <height>150</height>
+        <textcolor>yellow</textcolor>
+        <font>font14_plot</font>
+        <align>justify</align>
+        <label>$INFO[ListItem.Property(Addon.Description)]</label>
+    </control>
+    </controls>
 </window>

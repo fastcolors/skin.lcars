@@ -41,6 +41,7 @@
 				<align>center</align>
                 <aligny>center</aligny>
                 <textcolor>black</textcolor>
+				<font>font30</font>
 				<texturefocus>-</texturefocus>
 				<texturenofocus>-</texturenofocus>
 			</control>

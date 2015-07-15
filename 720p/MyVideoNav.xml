@@ -2,10 +2,11 @@
 <window>
     <defaultcontrol always="true">50</defaultcontrol>
     <allowoverlay>no</allowoverlay>
-    <views>50</views>
+    <views>50,510</views>
     <controls>
         <include>background</include>
         <include>allwindows</include>
+        <include>addonview</include> <!-- view id = 510 -->
         <include>lcarsview</include> <!-- view id = 50 -->
         <control type="grouplist" id="9000">
             <top>101</top>

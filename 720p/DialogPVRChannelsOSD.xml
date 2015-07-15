@@ -88,14 +88,6 @@
 				<pagecontrol>60</pagecontrol>
 				<scrolltime>200</scrolltime>
 				<itemlayout height="70" width="410">
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>410</width>
-						<height>65</height>
-						<texture border="5">menuitemnf.png</texture>
-						
-					</control>
 					<control type="label">
 						<left>5</left>
 						<top>0</top>
@@ -202,7 +194,7 @@
 						<top>0</top>
 						<width>410</width>
 						<height>65</height>
-						<texture border="5">menuitemfo.png</texture>
+						<texture border="5">epg-genres/112.png</texture>
 						<visible>!Control.HasFocus(11)</visible>
 					</control>
 					<control type="image">
@@ -210,7 +202,7 @@
 						<top>0</top>
 						<width>410</width>
 						<height>65</height>
-						<texture border="5">menuitemfo.png</texture>
+						<texture border="5">epg-genres/112.png</texture>
 						<visible>Control.HasFocus(11)</visible>
 					</control>
 					<control type="label">

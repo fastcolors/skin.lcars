@@ -6,7 +6,6 @@
 		<left>780</left>
 		<top>30</top>
 	</coordinates>
-	<include>dialogeffect</include>
 	<controls>
 		<control type="group">
 			<control type="image">
@@ -72,14 +71,6 @@
 				<pagecontrol>60</pagecontrol>
 				<scrolltime>200</scrolltime>
 				<itemlayout height="35" width="410">
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>410</width>
-						<height>30</height>
-						<texture border="5">menuitemnf.png</texture>
-						<include>VisibleFadeEffect</include>
-					</control>
 					<control type="label">
 						<left>10</left>
 						<top>0</top>
@@ -149,16 +140,15 @@
 						<top>0</top>
 						<width>410</width>
 						<height>30</height>
-						<texture border="5">menuitemfo.png</texture>
+						<texture border="5">epg-genres/112.png</texture>
 						<visible>!Control.HasFocus(11)</visible>
-						<include>VisibleFadeEffect</include>
 					</control>
 					<control type="image">
 						<left>0</left>
 						<top>0</top>
 						<width>410</width>
 						<height>30</height>
-						<texture border="5">menuitemfo.png</texture>
+						<texture border="5">epg-genres/112.png</texture>
 						<visible>Control.HasFocus(11)</visible>
 						<include>VisibleFadeEffect</include>
 					</control>

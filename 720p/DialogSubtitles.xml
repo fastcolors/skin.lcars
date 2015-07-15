@@ -125,13 +125,6 @@
 					<scrolltime>200</scrolltime>
 					<itemlayout width="800" height="36">
 						<control type="image">
-							<left>0</left>
-							<top>0</top>
-							<width>780</width>
-							<height>38</height>
-							<texture>MenuItemNF.png</texture>
-						</control>
-						<control type="image">
 							<left>5</left>
 							<top>5</top>
 							<width>26</width>
@@ -192,14 +185,7 @@
 							<top>0</top>
 							<width>780</width>
 							<height>38</height>
-							<texture>MenuItemNF.png</texture>
-						</control>
-						<control type="image">
-							<left>0</left>
-							<top>0</top>
-							<width>780</width>
-							<height>38</height>
-							<texture>MenuItemFO.png</texture>
+							<texture>epg-genres/112.png</texture>
 							<visible>Control.HasFocus(120)</visible>
 						</control>
 						<control type="image">
@@ -356,13 +342,6 @@
 					<viewtype label="535">list</viewtype>
 					<scrolltime>200</scrolltime>
 					<itemlayout width="400" height="36">
-						<control type="image">
-							<left>0</left>
-							<top>0</top>
-							<width>230</width>
-							<height>38</height>
-							<texture>MenuItemNF.png</texture>
-						</control>
 						<control type="label">
 							<left>40</left>
 							<top>0</top>
@@ -378,18 +357,11 @@
 					</itemlayout>
 					<focusedlayout width="400" height="36">
 						<control type="image">
-							<left>0</left>
-							<top>0</top>
-							<width>230</width>
-							<height>38</height>
-							<texture>MenuItemNF.png</texture>
-						</control>
-						<control type="image">
 							<left>10</left>
 							<top>0</top>
 							<width>230</width>
 							<height>38</height>
-							<texture>MenuItemFO.png</texture>
+							<texture>epg-genres/112.png</texture>
 							<visible>Control.HasFocus(150)</visible>
 						</control>
 						<control type="label">

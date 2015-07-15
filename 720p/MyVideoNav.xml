@@ -4,34 +4,8 @@
     <allowoverlay>no</allowoverlay>
     <views>50</views>
     <controls>
-        <control type="group">
-            <!--control type="image">
-            <width>1280</width>
-            <height>720</height>
-            <texture>background.png</texture>
-        </control-->
-        <control type="image">
-            <width>1280</width>
-            <height>720</height>
-            <texture colordiffuse="design" >background2.png</texture>
-        </control>
-        <control type="image">
-            <width>1280</width>
-            <height>720</height>
-            <texture colordiffuse="button2" >background3.png</texture>
-        </control>
-        <control type="image">
-            <width>1280</width>
-            <height>720</height>
-            <texture colordiffuse="button3" >background4.png</texture>
-        </control>
-        <control type="image">
-            <width>1280</width>
-            <height>720</height>
-            <texture colordiffuse="button4" >background5.png</texture>
-        </control>
+        <include>background</include>
         <include>allwindows</include>
-        </control>
         <include>lcarsview</include> <!-- view id = 50 -->
         <control type="grouplist" id="9000">
             <top>101</top>
@@ -110,12 +84,12 @@
                 <enable>false</enable>
                 <label></label>
             </control>
-			<control type="button" id="611">
+            <control type="button" id="611">
                 <include>9000butts</include>
                 <visible>Player.HasMedia</visible>
-				<label>31002</label>
-				<onclick>fullscreen</onclick>
-			</control>
+                <label>31002</label>
+                <onclick>fullscreen</onclick>
+            </control>
         </control>
         <control type="label">
             <centerleft>730</centerleft>

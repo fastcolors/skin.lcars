@@ -172,7 +172,6 @@
                 <width>600</width>
                 <label>$VAR[311label]</label>
             </control>
-
             <!--<control type="label">-->
             <!--<visible>Control.HasFocus(9000)</visible>-->
             <!--<top>81</top>-->
@@ -183,7 +182,6 @@
             <!--</control>-->
 
             <!--movies-->
-
 
             <control type="grouplist" id="888">
                 <visible>Container(9000).HasFocus(1)</visible>

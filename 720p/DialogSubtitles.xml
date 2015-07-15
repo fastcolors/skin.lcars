@@ -183,9 +183,17 @@
 						<control type="image">
 							<left>0</left>
 							<top>0</top>
-							<width>780</width>
+							<width>800</width>
 							<height>38</height>
-							<texture>epg-genres/112.png</texture>
+							<texture border="35">thumb-focus2.png</texture>
+							<visible>!Control.HasFocus(120)</visible>
+						</control>
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>800</width>
+							<height>38</height>
+							<texture border="35">thumb-focus.png</texture>
 							<visible>Control.HasFocus(120)</visible>
 						</control>
 						<control type="image">
@@ -291,13 +299,13 @@
 						</control>
 					</control>
 				</control>
-				<control type="image">
+				<!--control type="image">
 					<left>866</left>
 					<top>348</top>
 					<width>24</width>
 					<height>24</height>
-					<texture>scroll-right-focus.png</texture>
-				</control>
+					<texture>rightarrow.png</texture>
+				</control-->
 			</control>
 			<control type="group">
 				<control type="image">
@@ -314,12 +322,11 @@
 					<top>150</top>
 					<width>240</width>
 					<height>26</height>
-					<label>[B]$LOCALIZE[24018][/B]</label>
+					<label>$LOCALIZE[24018]</label>
 					<font>font13</font>
 					<align>center</align>
 					<aligny>top</aligny>
 					<textcolor>blue</textcolor>
-					<shadowcolor>black</shadowcolor>
 					<wrapmultiline>true</wrapmultiline>
 				</control>
 				<control type="image">
@@ -331,7 +338,7 @@
 					<texture>separator.png</texture>
 				</control>
 				<control type="list" id="150">
-					<left>900</left>
+					<left>880</left>
 					<top>206</top>
 					<width>250</width>
 					<height>399</height>
@@ -341,48 +348,56 @@
 					<ondown>160</ondown>
 					<viewtype label="535">list</viewtype>
 					<scrolltime>200</scrolltime>
-					<itemlayout width="400" height="36">
+					<itemlayout width="250" height="36">
 						<control type="label">
-							<left>40</left>
+							<left>20</left>
 							<top>0</top>
-							<width>230</width>
+							<width>210</width>
 							<height>38</height>
 							<font>font18</font>
 							<aligny>center</aligny>
 							<textcolor>white</textcolor>
 							<selectedcolor>selected</selectedcolor>
-							<align>left</align>
+							<align>center</align>
 							<info>ListItem.Label</info>
 						</control>
 					</itemlayout>
-					<focusedlayout width="400" height="36">
+					<focusedlayout width="250" height="36">
 						<control type="image">
 							<left>10</left>
 							<top>0</top>
 							<width>230</width>
 							<height>38</height>
-							<texture>epg-genres/112.png</texture>
+							<texture border="5">thumb-focus2.png</texture>
+							<visible>!Control.HasFocus(150)</visible>
+						</control>
+						<control type="image">
+							<left>10</left>
+							<top>0</top>
+							<width>230</width>
+							<height>38</height>
+							<texture border="5">thumb-focus.png</texture>
 							<visible>Control.HasFocus(150)</visible>
 						</control>
 						<control type="label">
-							<left>40</left>
+							<left>20</left>
 							<top>0</top>
-							<width>230</width>
+							<width>210</width>
 							<height>38</height>
 							<font>font18</font>
 							<aligny>center</aligny>
 							<textcolor>white</textcolor>
 							<selectedcolor>selected</selectedcolor>
-							<align>left</align>
+							<align>center</align>
 							<info>ListItem.Label</info>
 						</control>
 					</focusedlayout>
 				</control>
 				<control type="button" id="160">
 					<description>Manual search button</description>
-					<left>925</left>
+					<left>890</left>
 					<top>640</top>
-					<width>200</width>
+					<width>230</width>
 					<height>40</height>
 					<onleft>120</onleft>
 					<onright>120</onright>

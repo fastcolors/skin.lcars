@@ -173,7 +173,7 @@
 						<width>360</width>
 						<height>40</height>
 						<visible>!Control.HasFocus(21)</visible>
-						<texture border="5">epg-genres/112.png</texture>
+						<texture border="5">thumb-focus2.png</texture>
 					</control>
 					<control type="image">
 						<left>0</left>
@@ -181,7 +181,7 @@
 						<width>360</width>
 						<height>40</height>
 						<visible>Control.HasFocus(21)</visible>
-						<texture border="5">epg-genres/112.png</texture>
+						<texture border="5">thumb-focus.png</texture>
 					</control>
 					<control type="image">
 						<left>5</left>

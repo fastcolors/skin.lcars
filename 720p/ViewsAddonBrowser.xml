@@ -22,7 +22,7 @@
                     <width>500</width>
                     <height>250</height>
                     <aspectratio>stretch</aspectratio>
-                    <texture>dialog.png</texture>
+                    <texture>frame.png</texture>
                 </control>
                 <control type="image">
                     <left>20</left>
@@ -54,7 +54,7 @@
                     <width>500</width>
                     <height>250</height>
                     <aspectratio>stretch</aspectratio>
-                    <texture>dialog_fo.png</texture>
+                    <texture>frame_fo.png</texture>
                 </control>
                 <control type="image">
                     <left>20</left>

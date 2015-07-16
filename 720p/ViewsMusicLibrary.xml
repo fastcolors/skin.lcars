@@ -272,7 +272,7 @@
             </itemlayout>
             <focusedlayout height="44" width="400">
                 <control type="image">
-                    <animation effect="fade" start="100" end="50" condition="!Control.Hasfocus(501)" reversible="true">Conditional</animation>
+                    <animation effect="fade" start="100" end="50" condition="!Control.Hasfocus(502)" reversible="true">Conditional</animation>
                     <width>400</width>
                     <height>40</height>
                     <texture flipx="true" border="20" colordiffuse="white">whiterounded.png</texture>

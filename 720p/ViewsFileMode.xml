@@ -52,11 +52,11 @@
     </include>
     <include name="addonview">
         <control type="panel" id="510">
-            <!--<visible>Container.Content(addons)</visible>-->
+            <visible>Container.Content(addons)</visible>
             <animation effect="fade" start="100" end="80" condition="!Control.HasFocus(311) + !Control.HasFocus(60)">Conditional</animation>
             <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
             <onup>888</onup>
-            <onleft>888</onleft>
+            <onleft>9000</onleft>
             <top>125</top>
             <left>330</left>
             <width>900</width>

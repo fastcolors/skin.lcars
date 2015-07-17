@@ -9,7 +9,8 @@
             <left>320</left>
             <width>910</width>
             <height>280</height>
-            <orientation>horizontal</orientation>
+            <viewtype label="31023">Icons</viewtype>
+			<orientation>horizontal</orientation>
             <itemlayout width="180" height="280">
                 <control type="image">
                     <visible>!Container.Content(episodes)</visible>
@@ -71,7 +72,9 @@
                 </control>
             </focusedlayout>
         </control>
-        <control type="textbox">
+        <control type="group">
+            <visible>!Control.IsVisible(52)</visible>
+            <control type="textbox">
             <top>470</top>
             <centerleft>670</centerleft>
             <width>660</width>
@@ -125,5 +128,82 @@
             <height>40</height>
             <label>HD : $INFO[ListItem.VideoResolution]</label>
 		</control>
+		</control>
+     </include>
+	<include name="Panellcarsview">
+        <control type="panel" id="52">
+            <visible>!Container.Content(addons)</visible>
+            <animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
+            <onleft>9000</onleft>
+            <top>100</top>
+            <left>200</left>
+            <width>1045</width>
+            <viewtype label="31024">Panel</viewtype>
+			<height>520</height>
+            <itemlayout width="510" height="260">
+                <control type="image">
+                    <left>0</left>
+                    <top>0</top>
+                    <width>500</width>
+                    <height>250</height>
+                    <aspectratio>stretch</aspectratio>
+                    <texture>frame.png</texture>
+                </control>
+                <control type="image">
+                    <right>30</right>
+                    <top>20</top>
+                    <width>180</width>
+                    <height>210</height>
+                    <bordertexture>white.png</bordertexture>
+                    <bordersize>4</bordersize>
+                    <aspectratio>scale</aspectratio>
+                    <texture fallback="posterfallback.png">$VAR[poster]</texture>
+                </control>
+                <control type="textbox">
+                    <top>20</top>
+                    <left>20</left>
+                    <align>left</align>
+                    <aligny>top</aligny>
+                    <font>font16</font>
+                    <width>260</width>
+                    <height>240</height>
+                    <textcolor>blue</textcolor>
+                    <shadowcolor>88000000</shadowcolor>
+                    <label>[COLOR=yellow]$INFO[ListItem.Label] $INFO[ListItem.Year,(,)][/COLOR][CR]$INFO[listitem.premiered,First Air: ][CR]$VAR[MediaFlag_MPAA,RATED: ][CR]$INFO[ListItem.Genre][CR]$INFO[ListItem.Label2] </label>
+                </control>
+            </itemlayout>
+            <focusedlayout width="510" height="260">
+                <control type="image">
+                    <left>0</left>
+                    <top>0</top>
+                    <width>500</width>
+                    <height>250</height>
+                    <aspectratio>stretch</aspectratio>
+                    <texture>frame_fo.png</texture>
+                </control>
+                <control type="image">
+                    <right>30</right>
+                    <top>20</top>
+                    <width>180</width>
+                    <height>210</height>
+                    <bordertexture>white.png</bordertexture>
+                    <bordersize>4</bordersize>
+                    <aspectratio>scale</aspectratio>
+                    <texture fallback="posterfallback.png">$VAR[poster]</texture>
+                </control>
+                <control type="textbox">
+                    <top>20</top>
+                    <left>20</left>
+                    <align>left</align>
+                    <aligny>top</aligny>
+                    <font>font16</font>
+                    <width>260</width>
+                    <height>240</height>
+                    <textcolor>blue</textcolor>
+                    <shadowcolor>88000000</shadowcolor>
+                    <label>[COLOR=yellow]$INFO[ListItem.Label] $INFO[ListItem.Year,(,)][/COLOR][CR]$INFO[listitem.premiered,First Air: ][CR]$VAR[MediaFlag_MPAA,RATED: ][CR]$INFO[ListItem.Genre][CR]$INFO[ListItem.Label2] </label>
+                </control>
+            </focusedlayout>
+        </control>
     </include>
 </includes>

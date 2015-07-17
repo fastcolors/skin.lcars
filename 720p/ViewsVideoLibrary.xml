@@ -156,7 +156,7 @@
                     <height>210</height>
                     <bordertexture>white.png</bordertexture>
                     <bordersize>4</bordersize>
-                    <aspectratio>scale</aspectratio>
+                    <aspectratio>keep</aspectratio>
                     <texture fallback="posterfallback.png">$VAR[poster]</texture>
                 </control>
                 <control type="textbox">
@@ -188,7 +188,7 @@
                     <height>210</height>
                     <bordertexture>white.png</bordertexture>
                     <bordersize>4</bordersize>
-                    <aspectratio>scale</aspectratio>
+                    <aspectratio>keep</aspectratio>
                     <texture fallback="posterfallback.png">$VAR[poster]</texture>
                 </control>
                 <control type="textbox">

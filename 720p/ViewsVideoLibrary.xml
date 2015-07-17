@@ -200,7 +200,7 @@
                         <label>$INFO[ListItem.Genre]</label>
                     </control>
                     <control type="label">
-                        <visible>!Container.Content(movies)</visible>
+                        <!--visible>!Container.Content(movies)</visible-->
                         <top>110</top>
                         <left>20</left>
                         <width>300</width>
@@ -220,6 +220,7 @@
                         <label>First Aired: $INFO[listitem.premiered]</label>
                     </control>
                     <control type="label">
+                        <visible>Container.Content(movies) | Container.Content(tvshows)</visible>
                         <top>170</top>
                         <left>20</left>
                         <width>300</width>
@@ -229,7 +230,7 @@
                         <label>Rated: $VAR[MediaFlag_MPAA]</label>
                     </control>
                     <control type="label">
-                        <visible>!Container.Content(tvshows) + !Container.Content(seasons)</visible>
+                        <visible>Container.Content(movies) | Container.Content(episodes)</visible>
                         <top>200</top>
                         <left>20</left>
                         <width>300</width>
@@ -287,7 +288,7 @@
                         <label>$INFO[ListItem.Genre]</label>
                     </control>
                     <control type="label">
-                        <visible>Container.Content(episodes) | Container.Content(tvshows)</visible>
+                        <!--visible>Container.Content(episodes) | Container.Content(tvshows)</visible-->
                         <top>110</top>
                         <left>20</left>
                         <width>300</width>
@@ -307,6 +308,7 @@
                         <label>First Aired: $INFO[listitem.premiered]</label>
                     </control>
                     <control type="label">
+                        <visible>Container.Content(movies) | Container.Content(tvshows)</visible>
                         <top>170</top>
                         <left>20</left>
                         <width>300</width>
@@ -316,7 +318,7 @@
                         <label>Rated: $VAR[MediaFlag_MPAA]</label>
                     </control>
                     <control type="label">
-                        <visible>!Container.Content(tvshows) + !Container.Content(seasons)</visible>
+                        <visible>Container.Content(movies) | Container.Content(episodes)</visible>
                         <top>200</top>
                         <left>20</left>
                         <width>300</width>

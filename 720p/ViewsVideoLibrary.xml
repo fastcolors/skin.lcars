@@ -152,11 +152,11 @@
                 <control type="image">
                     <right>30</right>
                     <top>20</top>
-                    <width>180</width>
+                    <width>140</width>
                     <height>210</height>
                     <bordertexture>white.png</bordertexture>
                     <bordersize>4</bordersize>
-                    <aspectratio>keep</aspectratio>
+                    <aspectratio>scale</aspectratio>
                     <texture fallback="posterfallback.png">$VAR[poster]</texture>
                 </control>
                 <control type="textbox">
@@ -165,11 +165,11 @@
                     <align>left</align>
                     <aligny>top</aligny>
                     <font>font16</font>
-                    <width>260</width>
+                    <width>280</width>
                     <height>240</height>
                     <textcolor>blue</textcolor>
                     <shadowcolor>88000000</shadowcolor>
-                    <label>[COLOR=yellow]$INFO[ListItem.Label] $INFO[ListItem.Year,(,)][/COLOR][CR]$INFO[listitem.premiered,First Air: ][CR]$VAR[MediaFlag_MPAA,RATED: ][CR]$INFO[ListItem.Genre][CR]$INFO[ListItem.Label2] </label>
+                    <label>[COLOR=yellow]$INFO[ListItem.Label] $INFO[ListItem.Year,(,)][/COLOR][CR]$INFO[listitem.premiered,First Air: ][CR]$VAR[MediaFlag_MPAA,RATED: ][CR]$INFO[ListItem.Genre][CR]$INFO[ListItem.Label2][CR]$INFO[ListItem.VideoResolution,Resolution: ]</label>
                 </control>
             </itemlayout>
             <focusedlayout width="510" height="260">
@@ -184,11 +184,11 @@
                 <control type="image">
                     <right>30</right>
                     <top>20</top>
-                    <width>180</width>
+                    <width>140</width>
                     <height>210</height>
                     <bordertexture>white.png</bordertexture>
                     <bordersize>4</bordersize>
-                    <aspectratio>keep</aspectratio>
+                    <aspectratio>scale</aspectratio>
                     <texture fallback="posterfallback.png">$VAR[poster]</texture>
                 </control>
                 <control type="textbox">
@@ -197,11 +197,11 @@
                     <align>left</align>
                     <aligny>top</aligny>
                     <font>font16</font>
-                    <width>260</width>
+                    <width>280</width>
                     <height>240</height>
                     <textcolor>blue</textcolor>
                     <shadowcolor>88000000</shadowcolor>
-                    <label>[COLOR=yellow]$INFO[ListItem.Label] $INFO[ListItem.Year,(,)][/COLOR][CR]$INFO[listitem.premiered,First Air: ][CR]$VAR[MediaFlag_MPAA,RATED: ][CR]$INFO[ListItem.Genre][CR]$INFO[ListItem.Label2] </label>
+                    <label>[COLOR=yellow]$INFO[ListItem.Label] $INFO[ListItem.Year,(,)][/COLOR][CR]$INFO[listitem.premiered,First Air: ][CR]$VAR[MediaFlag_MPAA,RATED: ][CR]$INFO[ListItem.Genre][CR]$INFO[ListItem.Label2][CR]$INFO[ListItem.VideoResolution,Resolution: ]</label>
                 </control>
             </focusedlayout>
         </control>

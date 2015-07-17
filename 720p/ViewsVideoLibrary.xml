@@ -1,136 +1,149 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
     <include name="lcarsview">
-        <control type="panel" id="50">
-            <visible>!Container.Content(addons)</visible>
-            <animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
-            <onup>9000</onup>
-            <top>135</top>
-            <left>320</left>
-            <width>910</width>
-            <height>280</height>
-            <viewtype label="31023">Icons</viewtype>
-			<orientation>horizontal</orientation>
-            <itemlayout width="180" height="280">
-                <control type="image">
-                    <visible>!Container.Content(episodes)</visible>
-                    <left>10</left>
-                    <top>4</top>
-                    <width>170</width>
-                    <height>250</height>
-                    <aspectratio>scale</aspectratio>
-                    <texture fallback="posterfallback.png">$VAR[poster]</texture>
-                </control>
-                <control type="image">
-                    <visible>Container.Content(episodes)</visible>
-                    <left>10</left>
-                    <top>4</top>
-                    <width>170</width>
-                    <height>250</height>
-                    <aspectratio>scale</aspectratio>
-                    <texture fallback="posterfallback.png">$VAR[poster]</texture>
-                </control>
-                <control type="textbox">
-                    <visible>IsEmpty(ListItem.Art(thumb)) | [IsEmpty(ListItem.Art(fanart)) +  ![Container.Content(files)|Container.Content(tvshows)|Container.Content(movies)|Container.Content(musicvideos) |Container.Content(actors)|Container.Content(episodes)]]</visible>
-                    <top>10</top>
-                    <right>10</right>
-                    <align>right</align>
-                    <font>font30</font>
-                    <width>155</width>
-                    <info>ListItem.Label</info>
-                </control>
-            </itemlayout>
-            <focusedlayout width="180" height="280">
-                <control type="image">
-                    <visible>!Container.Content(episodes)</visible>
-                    <left>6</left>
-                    <width>178</width>
-                    <height>258</height>
-                    <aspectratio>scale</aspectratio>
-                    <texture fallback="posterfallback.png">$VAR[poster]</texture>
-                    <bordertexture colordiffuse="red">white.png</bordertexture>
-                    <bordersize>4</bordersize>
-                </control>
-                <control type="image">
-                    <visible>Container.Content(episodes)</visible>
-                    <left>6</left>
-                    <width>178</width>
-                    <height>258</height>
-                    <aspectratio>scale</aspectratio>
-                    <texture fallback="posterfallback.png">$VAR[poster]</texture>
-                    <bordertexture colordiffuse="red">white.png</bordertexture>
-                    <bordersize>4</bordersize>
-                </control>
-                <control type="textbox">
-                    <visible>IsEmpty(ListItem.Art(thumb)) | [IsEmpty(ListItem.Art(fanart)) +  ![Container.Content(files)|Container.Content(tvshows)|Container.Content(movies)|Container.Content(musicvideos) |Container.Content(actors)|Container.Content(episodes)]]</visible>
-                    <top>10</top>
-                    <right>10</right>
-                    <align>right</align>
-                    <font>font30</font>
-                    <width>155</width>
-                    <info>ListItem.Label</info>
-                </control>
-            </focusedlayout>
-        </control>
         <control type="group">
-            <visible>!Control.IsVisible(52)</visible>
+            <visible>Control.IsVisible(50)</visible>
+            <control type="scrollbar" id="60">
+                <top>400</top>
+                <left>350</left>
+                <onup>311</onup>
+                <orientation>horizontal</orientation>
+                <width>860</width>
+                <height>6</height>
+                <texturesliderbackground border="4">HScrollbarBG.png</texturesliderbackground>
+                <textureslidernib border="4">HScrollerNF.png</textureslidernib>
+                <textureslidernibfocus>HScrollerFO.png</textureslidernibfocus>
+            </control>
+            <control type="panel" id="50">
+                <visible>!Container.Content(addons)</visible>
+                <animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
+                <onup>9000</onup>
+                <top>125</top>
+                <left>330</left>
+                <width>910</width>
+                <height>300</height>
+                <pagecontrol>60</pagecontrol>
+                <ondown>60</ondown>
+                <viewtype label="31023">Icons</viewtype>
+                <orientation>horizontal</orientation>
+                <itemlayout width="180" height="280">
+                    <control type="image">
+                        <visible>!Container.Content(episodes)</visible>
+                        <left>10</left>
+                        <top>4</top>
+                        <width>170</width>
+                        <height>250</height>
+                        <aspectratio>scale</aspectratio>
+                        <texture fallback="posterfallback.png">$VAR[poster]</texture>
+                    </control>
+                    <control type="image">
+                        <visible>Container.Content(episodes)</visible>
+                        <left>10</left>
+                        <top>4</top>
+                        <width>170</width>
+                        <height>250</height>
+                        <aspectratio>scale</aspectratio>
+                        <texture fallback="posterfallback.png">$VAR[poster]</texture>
+                    </control>
+                    <control type="textbox">
+                        <visible>IsEmpty(ListItem.Art(thumb)) | [IsEmpty(ListItem.Art(fanart)) +  ![Container.Content(files)|Container.Content(tvshows)|Container.Content(movies)|Container.Content(musicvideos) |Container.Content(actors)|Container.Content(episodes)]]</visible>
+                        <top>10</top>
+                        <right>10</right>
+                        <align>right</align>
+                        <font>font30</font>
+                        <width>155</width>
+                        <info>ListItem.Label</info>
+                    </control>
+                </itemlayout>
+                <focusedlayout width="180" height="280">
+                    <control type="image">
+                        <visible>!Container.Content(episodes)</visible>
+                        <left>6</left>
+                        <width>178</width>
+                        <height>258</height>
+                        <aspectratio>scale</aspectratio>
+                        <texture fallback="posterfallback.png">$VAR[poster]</texture>
+                        <bordertexture colordiffuse="red">white.png</bordertexture>
+                        <bordersize>4</bordersize>
+                    </control>
+                    <control type="image">
+                        <visible>Container.Content(episodes)</visible>
+                        <left>6</left>
+                        <width>178</width>
+                        <height>258</height>
+                        <aspectratio>scale</aspectratio>
+                        <texture fallback="posterfallback.png">$VAR[poster]</texture>
+                        <bordertexture colordiffuse="red">white.png</bordertexture>
+                        <bordersize>4</bordersize>
+                    </control>
+                    <control type="textbox">
+                        <visible>IsEmpty(ListItem.Art(thumb)) | [IsEmpty(ListItem.Art(fanart)) +  ![Container.Content(files)|Container.Content(tvshows)|Container.Content(movies)|Container.Content(musicvideos) |Container.Content(actors)|Container.Content(episodes)]]</visible>
+                        <top>10</top>
+                        <right>10</right>
+                        <align>right</align>
+                        <font>font30</font>
+                        <width>155</width>
+                        <info>ListItem.Label</info>
+                    </control>
+                </focusedlayout>
+            </control>
             <control type="textbox">
-            <top>470</top>
-            <centerleft>670</centerleft>
-            <width>660</width>
-            <height>190</height>
-            <textcolor>yellow</textcolor>
-            <align>justify</align>
-            <font>font14_plot</font>
-            <info>ListItem.Plot</info>
+                <top>470</top>
+                <centerleft>670</centerleft>
+                <width>660</width>
+                <height>190</height>
+                <textcolor>yellow</textcolor>
+                <align>justify</align>
+                <font>font14_plot</font>
+                <info>ListItem.Plot</info>
+            </control>
+            <control type="label">
+                <top>180</top>
+                <left>153</left>
+                <align>right</align>
+                <width>145</width>
+                <height>40</height>
+                <label>$VAR[MediaFlag_MPAA]</label>
+            </control>
+            <control type="label">
+                <top>272</top>
+                <left>153</left>
+                <align>right</align>
+                <width>145</width>
+                <height>40</height>
+                <label>$INFO[ListItem.Year]</label>
+            </control>
+            <control type="label">
+                <visible>Control.HasFocus(50)</visible>
+                <top>417</top>
+                <centerleft>475</centerleft>
+                <align>right</align>
+                <width>250</width>
+                <height>30</height>
+                <font>font12</font>
+                <label>31011</label>
+            </control>
+            <control type="label">
+                <visible>!IsEmpty(ListItem.videoresolution) + !IntegerGreaterThan(ListItem.videoresolution,719)</visible>
+                <top>364</top>
+                <left>153</left>
+                <align>right</align>
+                <width>145</width>
+                <height>40</height>
+                <label>SD: $INFO[ListItem.VideoResolution]</label>
+            </control>
+            <control type="label">
+                <visible>!IsEmpty(ListItem.videoresolution) + IntegerGreaterThan(ListItem.videoresolution,719)</visible>
+                <top>364</top>
+                <left>153</left>
+                <align>right</align>
+                <width>145</width>
+                <height>40</height>
+                <label>HD : $INFO[ListItem.VideoResolution]</label>
+            </control>
         </control>
-        <control type="label">
-            <top>180</top>
-            <left>153</left>
-            <align>right</align>
-            <width>145</width>
-            <height>40</height>
-            <label>$VAR[MediaFlag_MPAA]</label>
-        </control>
-        <control type="label">
-            <top>272</top>
-            <left>153</left>
-            <align>right</align>
-            <width>145</width>
-            <height>40</height>
-            <label>$INFO[ListItem.Year]</label>
-        </control>
-        <control type="label">
-            <visible>Control.HasFocus(50)</visible>
-            <top>417</top>
-            <centerleft>475</centerleft>
-            <align>right</align>
-            <width>250</width>
-            <height>30</height>
-            <font>font12</font>
-            <label>31011</label>
-        </control>
-		<control type="label">
-			<visible>!IsEmpty(ListItem.videoresolution) + !IntegerGreaterThan(ListItem.videoresolution,719)</visible>
-			<top>364</top>
-            <left>153</left>
-            <align>right</align>
-            <width>145</width>
-            <height>40</height>
-            <label>SD: $INFO[ListItem.VideoResolution]</label>
-		</control>
-		<control type="label">
-			<visible>!IsEmpty(ListItem.videoresolution) + IntegerGreaterThan(ListItem.videoresolution,719)</visible>
-			<top>364</top>
-            <left>153</left>
-            <align>right</align>
-            <width>145</width>
-            <height>40</height>
-            <label>HD : $INFO[ListItem.VideoResolution]</label>
-		</control>
-		</control>
-     </include>
-	<include name="Panellcarsview">
+    </include>
+    <include name="Panellcarsview">
         <control type="panel" id="52">
             <visible>!Container.Content(addons)</visible>
             <animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
@@ -139,18 +152,16 @@
             <left>200</left>
             <width>1045</width>
             <viewtype label="31024">Panel</viewtype>
-			<height>520</height>
+            <height>520</height>
             <itemlayout width="510" height="260">
                 <control type="image">
-                    <left>0</left>
-                    <top>0</top>
                     <width>500</width>
                     <height>250</height>
                     <aspectratio>stretch</aspectratio>
                     <texture>frame.png</texture>
                 </control>
                 <control type="image">
-                    <right>30</right>
+                    <right>36</right>
                     <top>20</top>
                     <width>140</width>
                     <height>210</height>
@@ -159,30 +170,85 @@
                     <aspectratio>scale</aspectratio>
                     <texture fallback="posterfallback.png">$VAR[poster]</texture>
                 </control>
-                <control type="textbox">
+                <control type="label">
                     <top>20</top>
                     <left>20</left>
-                    <align>left</align>
-                    <aligny>top</aligny>
+                    <width>300</width>
+                    <height>20</height>
                     <font>font16</font>
-                    <width>280</width>
-                    <height>240</height>
-                    <textcolor>blue</textcolor>
-                    <shadowcolor>88000000</shadowcolor>
-                    <label>[COLOR=yellow]$INFO[ListItem.Label] $INFO[ListItem.Year,(,)][/COLOR][CR]$INFO[listitem.premiered,First Air: ][CR]$VAR[MediaFlag_MPAA,RATED: ][CR]$INFO[ListItem.Genre][CR]$INFO[ListItem.Label2][CR]$INFO[ListItem.VideoResolution,Resolution: ]</label>
+                    <textcolor>yellow</textcolor>
+                    <label>$INFO[ListItem.Label]</label>
+                </control>
+                <control type="group">
+                    <visible>!StringCompare(listitem.label,..)</visible>
+                    <control type="label">
+                        <top>45</top>
+                        <left>20</left>
+                        <width>300</width>
+                        <height>20</height>
+                        <font>font16</font>
+                        <textcolor>yellow</textcolor>
+                        <label>$INFO[ListItem.Year,(,)]</label>
+                    </control>
+                    <control type="label">
+                        <top>80</top>
+                        <left>20</left>
+                        <width>300</width>
+                        <height>20</height>
+                        <font>font16</font>
+                        <textcolor>blue</textcolor>
+                        <label>$INFO[ListItem.Genre]</label>
+                    </control>
+                    <control type="label">
+                        <visible>!Container.Content(movies)</visible>
+                        <top>110</top>
+                        <left>20</left>
+                        <width>300</width>
+                        <height>20</height>
+                        <font>font16</font>
+                        <textcolor>blue</textcolor>
+                        <label>$INFO[ListItem.Label2]</label>
+                    </control>
+                    <control type="label">
+                        <visible>Container.Content(episodes) | Container.Content(tvshows)</visible>
+                        <top>140</top>
+                        <left>20</left>
+                        <width>300</width>
+                        <height>20</height>
+                        <font>font16</font>
+                        <textcolor>blue</textcolor>
+                        <label>First Aired: $INFO[listitem.premiered]</label>
+                    </control>
+                    <control type="label">
+                        <top>170</top>
+                        <left>20</left>
+                        <width>300</width>
+                        <height>20</height>
+                        <font>font16</font>
+                        <textcolor>blue</textcolor>
+                        <label>Rated: $VAR[MediaFlag_MPAA]</label>
+                    </control>
+                    <control type="label">
+                        <visible>!Container.Content(tvshows) + !Container.Content(seasons)</visible>
+                        <top>200</top>
+                        <left>20</left>
+                        <width>300</width>
+                        <height>20</height>
+                        <font>font16</font>
+                        <textcolor>blue</textcolor>
+                        <label>Resolution: $INFO[ListItem.VideoResolution]</label>
+                    </control>
                 </control>
             </itemlayout>
             <focusedlayout width="510" height="260">
                 <control type="image">
-                    <left>0</left>
-                    <top>0</top>
                     <width>500</width>
                     <height>250</height>
                     <aspectratio>stretch</aspectratio>
                     <texture>frame_fo.png</texture>
                 </control>
                 <control type="image">
-                    <right>30</right>
+                    <right>36</right>
                     <top>20</top>
                     <width>140</width>
                     <height>210</height>
@@ -191,17 +257,74 @@
                     <aspectratio>scale</aspectratio>
                     <texture fallback="posterfallback.png">$VAR[poster]</texture>
                 </control>
-                <control type="textbox">
+                <control type="label">
                     <top>20</top>
                     <left>20</left>
-                    <align>left</align>
-                    <aligny>top</aligny>
+                    <width>300</width>
+                    <height>20</height>
                     <font>font16</font>
-                    <width>280</width>
-                    <height>240</height>
-                    <textcolor>blue</textcolor>
-                    <shadowcolor>88000000</shadowcolor>
-                    <label>[COLOR=yellow]$INFO[ListItem.Label] $INFO[ListItem.Year,(,)][/COLOR][CR]$INFO[listitem.premiered,First Air: ][CR]$VAR[MediaFlag_MPAA,RATED: ][CR]$INFO[ListItem.Genre][CR]$INFO[ListItem.Label2][CR]$INFO[ListItem.VideoResolution,Resolution: ]</label>
+                    <textcolor>yellow</textcolor>
+                    <label>$INFO[ListItem.Label]</label>
+                </control>
+                <control type="group">
+                    <visible>!StringCompare(listitem.label,..)</visible>
+                    <control type="label">
+                        <top>45</top>
+                        <left>20</left>
+                        <width>300</width>
+                        <height>20</height>
+                        <font>font16</font>
+                        <textcolor>yellow</textcolor>
+                        <label>$INFO[ListItem.Year,(,)]</label>
+                    </control>
+                    <control type="label">
+                        <top>80</top>
+                        <left>20</left>
+                        <width>300</width>
+                        <height>20</height>
+                        <font>font16</font>
+                        <textcolor>blue</textcolor>
+                        <label>$INFO[ListItem.Genre]</label>
+                    </control>
+                    <control type="label">
+                        <visible>Container.Content(episodes) | Container.Content(tvshows)</visible>
+                        <top>110</top>
+                        <left>20</left>
+                        <width>300</width>
+                        <height>20</height>
+                        <font>font16</font>
+                        <textcolor>blue</textcolor>
+                        <label>$INFO[ListItem.Label2]</label>
+                    </control>
+                    <control type="label">
+                        <visible>Container.Content(episodes) | Container.Content(tvshows)</visible>
+                        <top>140</top>
+                        <left>20</left>
+                        <width>300</width>
+                        <height>20</height>
+                        <font>font16</font>
+                        <textcolor>blue</textcolor>
+                        <label>First Aired: $INFO[listitem.premiered]</label>
+                    </control>
+                    <control type="label">
+                        <top>170</top>
+                        <left>20</left>
+                        <width>300</width>
+                        <height>20</height>
+                        <font>font16</font>
+                        <textcolor>blue</textcolor>
+                        <label>Rated: $VAR[MediaFlag_MPAA]</label>
+                    </control>
+                    <control type="label">
+                        <visible>!Container.Content(tvshows) + !Container.Content(seasons)</visible>
+                        <top>200</top>
+                        <left>20</left>
+                        <width>300</width>
+                        <height>20</height>
+                        <font>font16</font>
+                        <textcolor>blue</textcolor>
+                        <label>Resolution: $INFO[ListItem.VideoResolution]</label>
+                    </control>
                 </control>
             </focusedlayout>
         </control>

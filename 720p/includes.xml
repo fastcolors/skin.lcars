@@ -229,7 +229,7 @@
                         <top>4</top>
                         <width>170</width>
                         <height>250</height>
-                        <aspectratio>keep</aspectratio>
+                        <aspectratio>scale</aspectratio>
                         <texture>$VAR[poster]</texture>
                     </control>
                 </itemlayout>
@@ -238,7 +238,7 @@
                         <left>6</left>
                         <width>178</width>
                         <height>258</height>
-                        <aspectratio>keep</aspectratio>
+                        <aspectratio>scale</aspectratio>
                         <texture>$VAR[poster]</texture>
                         <bordertexture colordiffuse="red">white.png</bordertexture>
                         <bordersize>4</bordersize>

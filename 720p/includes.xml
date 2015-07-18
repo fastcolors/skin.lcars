@@ -151,7 +151,7 @@
                     <top>475</top>
                     <width>300</width>
                     <height>174</height>
-                    <texture diffuse="soap.png>$INFO[Window(Weather).Property(Map.1.Layer)]</texture>
+                    <texture diffuse="soap.png">$INFO[Window(Weather).Property(Map.1.Layer)]</texture>
 		</control>
 
                 <control type="textbox">

@@ -139,20 +139,20 @@
                 <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
                 <visible>Container(9000).HasFocus(8)</visible>
 
-				<control type="image">
-					<left>360</left>
-                    <top>475</top>
+		<control type="image">
+		    <left>360</left>
+        	    <top>475</top>
                     <width>300</width>
                     <height>174</height>
                     <texture diffuse="soap.png" fallback="map.png">$INFO[Window(Weather).Property(Map.1.Area)]</texture>
-				</control>
-				<control type="image">
-					<left>360</left>
+		</control>
+		<control type="image">
+	       	    <left>360</left>
                     <top>475</top>
                     <width>300</width>
                     <height>174</height>
-                    <texture>$INFO[Window(Weather).Property(Map.1.Layer)]</texture>
-				</control>
+                    <texture diffuse="soap.png>$INFO[Window(Weather).Property(Map.1.Layer)]</texture>
+		</control>
 
                 <control type="textbox">
                     <left>700</left>

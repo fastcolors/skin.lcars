@@ -6,7 +6,7 @@
             <control type="scrollbar" id="60">
                 <top>400</top>
                 <left>350</left>
-                <onup>311</onup>
+                <onup>50</onup>
                 <orientation>horizontal</orientation>
                 <width>860</width>
                 <height>6</height>

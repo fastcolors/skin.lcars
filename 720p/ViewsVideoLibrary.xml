@@ -161,20 +161,20 @@
                     <texture>frame.png</texture>
                 </control>
                 <control type="image">
-                    <right>60</right>
-                    <top>40</top>
-                    <width>108</width>
-                    <height>168</height>
-                    <aspectratio>scale</aspectratio>
-                    <texture fallback="posterfallback.png">$VAR[poster]</texture>
-                </control>
-                <control type="image">
                     <right>36</right>
                     <top>20</top>
                     <width>152</width>
                     <height>210</height>
-                    <aspectratio>keep</aspectratio>
+                    <aspectratio>scale</aspectratio>
                     <texture>padd.png</texture>
+                </control>
+                <control type="image">
+                    <right>60</right>
+                    <top>42</top>
+                    <width>108</width>
+                    <height>168</height>
+                    <aspectratio>scale</aspectratio>
+                    <texture fallback="posterfallback.png">$VAR[poster]</texture>
                 </control>
                 <control type="label">
                     <top>20</top>
@@ -274,21 +274,21 @@
                     <aspectratio>stretch</aspectratio>
                     <texture>frame_fo.png</texture>
                 </control>
-                 <control type="image">
-                    <right>60</right>
-                    <top>40</top>
-                    <width>108</width>
-                    <height>168</height>
-                    <aspectratio>scale</aspectratio>
-                    <texture fallback="posterfallback.png">$VAR[poster]</texture>
-                </control>
                 <control type="image">
                     <right>36</right>
                     <top>20</top>
                     <width>152</width>
                     <height>210</height>
-                    <aspectratio>keep</aspectratio>
+                    <aspectratio>scale</aspectratio>
                     <texture>padd.png</texture>
+                </control>
+                 <control type="image">
+                    <right>60</right>
+                    <top>42</top>
+                    <width>108</width>
+                    <height>168</height>
+                    <aspectratio>scale</aspectratio>
+                    <texture fallback="posterfallback.png">$VAR[poster]</texture>
                 </control>
                 <control type="label">
                     <top>20</top>

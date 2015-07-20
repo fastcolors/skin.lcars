@@ -1263,7 +1263,7 @@
         <orientation>verical</orientation>
         <itemlayout width="600" height="185">
             <control type="image">
-                <!--Panel icon image-->
+                <!--Panel poster image-->
                 <left>20</left>
                 <posy>38</posy>
                 <width>200</width>
@@ -1271,19 +1271,23 @@
                 <texture background="true"  fallback="posterfallback.png">$INFO[ListItem.Property(Art(poster))]</texture>
                 <aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
                 <visible>StringCompare(Window(Home).Property(TVGuide.ThumbType),0)</visible>
+				<bordertexture border="5">shadow2.png</bordertexture>
+                <bordersize>10</bordersize>
             </control>
             <control type="image">
-                <!--Panel icon image-->
+                <!--Panel banner image-->
                 <left>20</left>
                 <posy>38</posy>
                 <width>200</width>
                 <height>170</height>
                 <texture background="true"  fallback="posterfallback.png">$INFO[ListItem.Property(Art(banner))]</texture>
-                <aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
+                <aspectratio scalediffuse="false" align="center" aligny="center">keep</aspectratio>
                 <visible>StringCompare(Window(Home).Property(TVGuide.ThumbType),1)</visible>
+				<bordertexture border="5">shadow2.png</bordertexture>
+                <bordersize>10</bordersize>
             </control>
             <control type="image">
-                <!--Panel icon image-->
+                <!--Panel logo image-->
                 <left>20</left>
                 <posy>38</posy>
                 <width>200</width>
@@ -1291,6 +1295,8 @@
                 <texture background="true"  fallback="posterfallback.png">$INFO[ListItem.Property(Art(clearlogo))]</texture>
                 <aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
                 <visible>StringCompare(Window(Home).Property(TVGuide.ThumbType),2)</visible>
+				<bordertexture border="5">shadow2.png</bordertexture>
+                <bordersize>10</bordersize>
             </control>
             <control type="textbox">
                 <left>240</left>
@@ -1304,13 +1310,26 @@
         </itemlayout>
         <focusedlayout width="600" height="185">
             <control type="image">
-                <!--Panel icon image-->
+                <!--Panel fanart image-->
                 <left>20</left>
                 <posy>38</posy>
                 <width>200</width>
                 <height>170</height>
                 <texture background="true" fallback="posterfallback.png">$INFO[ListItem.Property(Fanart)]</texture>
                 <aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
+				<bordertexture  colordiffuse="red" border="5">shadow2.png</bordertexture>
+                <bordersize>10</bordersize>
+            </control>
+            <control type="image">
+                <!--Panel banner image-->
+                <left>20</left>
+                <posy>18</posy>
+                <width>200</width>
+                <height>170</height>
+                <texture background="true"  fallback="posterfallback.png">$INFO[ListItem.Property(Art(banner))]</texture>
+                <aspectratio scalediffuse="false" align="center" aligny="bottom">keep</aspectratio>
+                <bordertexture  colordiffuse="red" border="5">shadow2.png</bordertexture>
+                <bordersize>10</bordersize>
             </control>
             <control type="textbox">
                 <left>240</left>

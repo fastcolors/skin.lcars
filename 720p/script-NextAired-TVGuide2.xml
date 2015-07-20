@@ -59,7 +59,14 @@
 					<control type="image">
                     	<width>300</width>
 						<height>40</height>
+						<texture flipx="true" border="20" colordiffuse="blue">whiterounded.png</texture>
+						<visible>!Control.HasFocus(5000)</visible>
+					</control>
+					<control type="image">
+                    	<width>300</width>
+						<height>40</height>
 						<texture flipx="true" border="20" colordiffuse="white">whiterounded.png</texture>
+						<visible>Control.HasFocus(5000)</visible>
 					</control>
 					<control type="label">
 						<width>290</width>

@@ -142,8 +142,6 @@
                 <label>HD : $INFO[ListItem.VideoResolution]</label>
             </control>
         </control>
-    </include>
-    <include name="Panellcarsview">
         <control type="panel" id="52">
             <visible>!Container.Content(addons)</visible>
             <animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
@@ -373,6 +371,234 @@
                         <visible>Container.Content(movies) | Container.Content(episodes)</visible>
                         <top>200</top>
                         <left>20</left>
+                        <width>300</width>
+                        <height>20</height>
+                        <font>font16</font>
+                        <textcolor>blue</textcolor>
+                        <label>Resolution: $INFO[ListItem.VideoResolution]</label>
+                    </control>
+                </control>
+            </focusedlayout>
+        </control>
+        <control type="panel" id="53">
+            <visible>!Container.Content(addons)</visible>
+            <animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
+            <onleft>9000</onleft>
+            <top>100</top>
+            <left>200</left>
+            <width>1045</width>
+            <viewtype label="Panel-2">Panel</viewtype>
+            <height>520</height>
+            <itemlayout width="510" height="260">
+                <control type="image">
+                    <width>500</width>
+                    <height>250</height>
+                    <aspectratio>stretch</aspectratio>
+                    <texture colordiffuse="design">frame2.png</texture>
+                </control>
+                <control type="image">
+                    <right>60</right>
+                    <top>40</top>
+                    <width>108</width>
+                    <height>168</height>
+                    <aspectratio>scale</aspectratio>
+                    <texture fallback="posterfallback.png">$VAR[poster]</texture>
+					<bordertexture  colordiffuse="green" border="40">shadow2.png</bordertexture>
+                    <bordersize>10</bordersize>
+                </control>
+                <control type="label">
+                    <top>20</top>
+                    <left>25</left>
+                    <width>300</width>
+                    <height>20</height>
+                    <font>font16</font>
+                    <textcolor>yellow</textcolor>
+                    <label>$INFO[ListItem.Label]</label>
+                </control>
+                <control type="group">
+                    <visible>!StringCompare(listitem.label,..)</visible>
+                    <control type="label">
+                        <top>45</top>
+                        <left>25</left>
+                        <width>300</width>
+                        <height>20</height>
+                        <font>font16</font>
+                        <textcolor>yellow</textcolor>
+                        <label>$INFO[ListItem.Year,(,)]</label>
+                    </control>
+                    <control type="label">
+                        <top>80</top>
+                        <left>25</left>
+                        <width>300</width>
+                        <height>20</height>
+                        <font>font16</font>
+                        <textcolor>blue</textcolor>
+                        <label>$INFO[ListItem.Genre]</label>
+                    </control>
+                    <control type="label">
+                        <visible>Container.Content(movies) | Container.Content(episodes)</visible>
+                        <top>140</top>
+                        <left>25</left>
+                        <width>300</width>
+                        <height>20</height>
+                        <font>font16</font>
+                        <textcolor>blue</textcolor>
+                        <label>$INFO[ListItem.Rating]</label>
+                    </control>
+					<control type="label">
+                        <visible>Container.Content(tvshows) | Container.Content(Seasons)</visible>
+                        <top>140</top>
+                        <left>25</left>
+                        <width>300</width>
+                        <height>20</height>
+                        <font>font16</font>
+                        <textcolor>blue</textcolor>
+                        <label>$INFO[ListItem.Property(TotalEpisodes),Episodes: ]  ($INFO[ListItem.Property(WatchedEpisodes),, Watched] - $INFO[ListItem.Property(UnWatchedEpisodes), , UnWatched])</label>
+                    </control>
+					<control type="label">
+                        <visible>Container.Content(movies)</visible>
+                        <top>110</top>
+                        <left>25</left>
+                        <width>300</width>
+                        <height>20</height>
+                        <font>font16</font>
+                        <textcolor>blue</textcolor>
+                        <label>$INFO[ListItem.TagLine]</label>
+                    </control>
+                    <control type="label">
+                        <visible>Container.Content(episodes) | Container.Content(tvshows)</visible>
+                        <top>110</top>
+                        <left>25</left>
+                        <width>300</width>
+                        <height>20</height>
+                        <font>font16</font>
+                        <textcolor>blue</textcolor>
+                        <label>First Aired: $INFO[listitem.premiered]</label>
+                    </control>
+                    <control type="label">
+                        <visible>Container.Content(movies) | Container.Content(tvshows)</visible>
+                        <top>170</top>
+                        <left>25</left>
+                        <width>300</width>
+                        <height>20</height>
+                        <font>font16</font>
+                        <textcolor>blue</textcolor>
+                        <label>Rated: $VAR[MediaFlag_MPAA]</label>
+                    </control>
+                    <control type="label">
+                        <visible>Container.Content(movies) | Container.Content(episodes)</visible>
+                        <top>200</top>
+                        <left>25</left>
+                        <width>300</width>
+                        <height>20</height>
+                        <font>font16</font>
+                        <textcolor>blue</textcolor>
+                        <label>Resolution: $INFO[ListItem.VideoResolution]</label>
+                    </control>
+                </control>
+            </itemlayout>
+            <focusedlayout width="510" height="260">
+                <control type="image">
+                    <width>500</width>
+                    <height>250</height>
+                    <aspectratio>stretch</aspectratio>
+                    <texture colordiffuse="red">frame2.png</texture>
+                </control>
+                 <control type="image">
+                    <right>60</right>
+                    <top>40</top>
+                    <width>108</width>
+                    <height>168</height>
+                    <aspectratio>scale</aspectratio>
+                    <texture fallback="posterfallback.png">$VAR[poster]</texture>
+					<bordertexture  colordiffuse="red" border="40">shadow2.png</bordertexture>
+                    <bordersize>10</bordersize>
+					<animation reversible="false" effect="zoom" start="60,40,108,168" end="-67,20,152,210" time="150">focus</animation>
+					<animation reversible="false" effect="zoom" end="60,40,108,168" start="-67,20,152,210" time="150">unfocus</animation>
+                </control>
+                <control type="label">
+                    <top>20</top>
+                    <left>25</left>
+                    <width>300</width>
+                    <height>20</height>
+                    <font>font16</font>
+                    <textcolor>yellow</textcolor>
+                    <label>$INFO[ListItem.Label]</label>
+                </control>
+                <control type="group">
+                    <visible>!StringCompare(listitem.label,..)</visible>
+                    <control type="label">
+                        <top>45</top>
+                        <left>25</left>
+                        <width>300</width>
+                        <height>20</height>
+                        <font>font16</font>
+                        <textcolor>yellow</textcolor>
+                        <label>$INFO[ListItem.Year,(,)]</label>
+                    </control>
+                    <control type="label">
+                        <top>80</top>
+                        <left>25</left>
+                        <width>300</width>
+                        <height>20</height>
+                        <font>font16</font>
+                        <textcolor>blue</textcolor>
+                        <label>$INFO[ListItem.Genre]</label>
+                    </control>
+                    <control type="label">
+                        <visible>Container.Content(movies) | Container.Content(episodes)</visible>
+                        <top>140</top>
+                        <left>25</left>
+                        <width>300</width>
+                        <height>20</height>
+                        <font>font16</font>
+                        <textcolor>blue</textcolor>
+                        <label>$INFO[ListItem.Rating]</label>
+                    </control>
+					<control type="label">
+                        <visible>Container.Content(tvshows) | Container.Content(Seasons)</visible>
+                        <top>140</top>
+                        <left>25</left>
+                        <width>300</width>
+                        <height>20</height>
+                        <font>font16</font>
+                        <textcolor>blue</textcolor>
+                        <label>$INFO[ListItem.Property(TotalEpisodes),Episodes: ]  ($INFO[ListItem.Property(WatchedEpisodes),, Watched] - $INFO[ListItem.Property(UnWatchedEpisodes), , UnWatched])</label>
+                    </control>
+					<control type="label">
+                        <visible>Container.Content(movies)</visible>
+                        <top>110</top>
+                        <left>25</left>
+                        <width>300</width>
+                        <height>20</height>
+                        <font>font16</font>
+                        <textcolor>blue</textcolor>
+                        <label>$INFO[ListItem.TagLine]</label>
+                    </control>
+                    <control type="label">
+                        <visible>Container.Content(episodes) | Container.Content(tvshows)</visible>
+                        <top>110</top>
+                        <left>25</left>
+                        <width>300</width>
+                        <height>20</height>
+                        <font>font16</font>
+                        <textcolor>blue</textcolor>
+                        <label>First Aired: $INFO[listitem.premiered]</label>
+                    </control>
+                    <control type="label">
+                        <visible>Container.Content(movies) | Container.Content(tvshows)</visible>
+                        <top>170</top>
+                        <left>25</left>
+                        <width>300</width>
+                        <height>20</height>
+                        <font>font16</font>
+                        <textcolor>blue</textcolor>
+                        <label>Rated: $VAR[MediaFlag_MPAA]</label>
+                    </control>
+                    <control type="label">
+                        <visible>Container.Content(movies) | Container.Content(episodes)</visible>
+                        <top>200</top>
+                        <left>25</left>
                         <width>300</width>
                         <height>20</height>
                         <font>font16</font>

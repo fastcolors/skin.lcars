@@ -2,25 +2,20 @@
 <window>
     <defaultcontrol always="true">50</defaultcontrol>
     <allowoverlay>no</allowoverlay>
-    <views>50,52,510</views>
+    <views>50,52,53,510</views>
     <controls>
-        <control type="group">
-            <visible>Control.IsVisible(52)</visible>
-            <control type="image">
-                <width>1280</width>
-                <height>720</height>
-                <texture>black.png</texture>
-            </control>
-            <include>allwindows</include>
+        <control type="image">
+            <width>1280</width>
+            <height>720</height>
+            <texture>black.png</texture>
         </control>
         <control type="group">
-            <visible>!Control.IsVisible(52)</visible>
+            <visible>Control.IsVisible(50) | Control.IsVisible(510)</visible>
             <include>background</include>
-			<include>allwindows</include>
         </control>
+		<include>allwindows</include>
         <include>addonview</include> <!-- view id = 510 -->
-        <include>lcarsview</include> <!-- view id = 50 -->
-        <include>Panellcarsview</include> <!-- view id = 52 -->
+        <include>lcarsview</include> <!-- view id = 50 ,52, 53-->
         <control type="grouplist" id="9000">
             <top>101</top>
             <left>13</left>
@@ -35,7 +30,7 @@
 				<visible>!Container.Content(addons)</visible>
 				<include>9000butts</include>
 				<label>-</label>
-				</control>
+			</control>
             <control type="button" id="3">
                 <description>Sort by button</description>
                 <include>9000butts</include>
@@ -107,7 +102,7 @@
             </control>
         </control>
         <control type="label">
-            <visible>!Control.IsVisible(52)</visible>
+            <visible>Control.IsVisible(50)</visible>
             <centerleft>730</centerleft>
             <top>80</top>
             <width>990</width>

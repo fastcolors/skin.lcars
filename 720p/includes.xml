@@ -29,6 +29,8 @@
                 <height>200</height>
                 <aspectratio>keep</aspectratio>
                 <texture fallback="posterfallback.png">$INFO[ListItem.Thumb]</texture>
+				<bordertexture border="40">shadow2.png</bordertexture>
+				<bordersize>10</bordersize>
             </control>
             <control type="image">
                 <centerleft>114</centerleft>
@@ -53,9 +55,9 @@
                 <height>208</height>
                 <aspectratio>keep</aspectratio>
                 <texture fallback="posterfallback.png">$INFO[ListItem.Thumb]</texture>
-                <bordertexture colordiffuse="red">white.png</bordertexture>
-                <bordersize>4</bordersize>
-            </control>
+                <bordertexture  colordiffuse="red" border="40">shadow2.png</bordertexture>
+                <bordersize>10</bordersize>
+			</control>
             <control type="image">
                 <centerleft>114</centerleft>
                 <width>218</width>
@@ -139,20 +141,20 @@
                 <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
                 <visible>Container(9000).HasFocus(8)</visible>
 
-		<control type="image">
-		    <left>360</left>
-        	    <top>475</top>
-                    <width>300</width>
-                    <height>174</height>
-                    <texture diffuse="soap.png" fallback="map.png">$INFO[Window(Weather).Property(Map.1.Area)]</texture>
-		</control>
-		<control type="image">
-	       	    <left>360</left>
+				<control type="image">
+					<left>360</left>
                     <top>475</top>
                     <width>300</width>
                     <height>174</height>
-                    <texture diffuse="soap.png">$INFO[Window(Weather).Property(Map.1.Layer)]</texture>
-		</control>
+                    <texture diffuse="soap.png" fallback="map.png">$INFO[Window(Weather).Property(Map.1.Area)]</texture>
+				</control>
+				<control type="image">
+					<left>360</left>
+                    <top>475</top>
+                    <width>300</width>
+                    <height>174</height>
+                    <texture>$INFO[Window(Weather).Property(Map.1.Layer)]</texture>
+				</control>
 
                 <control type="textbox">
                     <left>700</left>
@@ -231,6 +233,8 @@
                         <height>250</height>
                         <aspectratio>scale</aspectratio>
                         <texture>$VAR[poster]</texture>
+						<bordertexture border="40">shadow2.png</bordertexture>
+						<bordersize>10</bordersize>
                     </control>
                 </itemlayout>
                 <focusedlayout width="180" height="280">
@@ -240,9 +244,9 @@
                         <height>258</height>
                         <aspectratio>scale</aspectratio>
                         <texture>$VAR[poster]</texture>
-                        <bordertexture colordiffuse="red">white.png</bordertexture>
-                        <bordersize>4</bordersize>
-                    </control>
+                        <bordertexture  colordiffuse="red" border="40">shadow2.png</bordertexture>
+						<bordersize>10</bordersize>
+				</control>
                 </focusedlayout>
                 <content target="video">$INFO[Skin.String(movieshome)]</content>
             </control>
@@ -294,20 +298,22 @@
                         <top>4</top>
                         <width>170</width>
                         <height>250</height>
-                        <aspectratio>keep</aspectratio>
+                        <aspectratio>scale</aspectratio>
                         <texture>$INFO[ListItem.Art(poster)]$INFO[ListItem.Art(tvshow.poster)]</texture>
-                    </control>
+ 						<bordertexture border="40">shadow2.png</bordertexture>
+						<bordersize>10</bordersize>
+                   </control>
                 </itemlayout>
                 <focusedlayout width="180" height="280">
                     <control type="image">
                         <left>6</left>
                         <width>178</width>
                         <height>258</height>
-                        <aspectratio>keep</aspectratio>
+                        <aspectratio>scale</aspectratio>
                         <texture>$INFO[ListItem.Art(poster)]$INFO[ListItem.Art(tvshow.poster)]</texture>
-                        <bordertexture colordiffuse="red">white.png</bordertexture>
-                        <bordersize>4</bordersize>
-                    </control>
+                        <bordertexture  colordiffuse="red" border="40">shadow2.png</bordertexture>
+						<bordersize>10</bordersize>
+					</control>
                 </focusedlayout>
                 <content target="video">$INFO[Skin.String(tvshowshome)]</content>
             </control>
@@ -326,29 +332,30 @@
                 <height>300</height>
                 <pagecontrol>60</pagecontrol>
                 <ondown>60</ondown>
-                <include>squareshome</include>
                 <orientation>horizontal</orientation>
-                <!--itemlayout width="180" height="280">
+                <itemlayout width="180" height="280">
                     <control type="image">
                         <left>10</left>
                         <top>4</top>
                         <width>170</width>
                         <height>250</height>
-                        <aspectratio>keep</aspectratio>
+                        <aspectratio>scale</aspectratio>
                         <texture>$INFO[ListItem.Thumb]</texture>
-                    </control>
+						<bordertexture border="40">shadow2.png</bordertexture>
+						<bordersize>10</bordersize>
+					</control>
                 </itemlayout>
                 <focusedlayout width="180" height="280">
                     <control type="image">
                         <left>6</left>
                         <width>178</width>
                         <height>258</height>
-                        <aspectratio>keep</aspectratio>
+                        <aspectratio>scale</aspectratio>
                         <texture>$INFO[ListItem.Thumb]</texture>
-                        <bordertexture colordiffuse="red">white.png</bordertexture>
-                        <bordersize>4</bordersize>
-                    </control>
-                </focusedlayout-->
+                        <bordertexture  colordiffuse="red" border="40">shadow2.png</bordertexture>
+						<bordersize>10</bordersize>
+					</control>
+                </focusedlayout>
                 <content>
                     <item id="1" description="Episodes1">
                         <visible>!IsEmpty(Window(Home).Property(NextAired.1.NextTitle))</visible>
@@ -429,16 +436,6 @@
                         <thumb>$INFO[Window(Home).Property(NextAired.10.Art(poster))]</thumb>
                         <onclick>ActivateWindow(Video,$INFO[Window.Property(NextAired.10.Library)])</onclick>
                     </item>
-                    <!--item id="%d" description="Episodes%d">
-
-                      <visible>!IsEmpty(Window(Home).Property(NextAire.%d.NextTitle))</visible>
-                      <label>$INFO[Window(Home).Property(NextAire.%d.NextTitle)]</label>
-                      <label2>$INFO[Window(Home).Property(NextAire.%d.Art(tvshow.banner))]</label2>
-                      <property name="SeasonEpisode">S $INFO[Window(Home).Property(NextAire.%d.NextSeasonNumber)]E $INFO[Window(Home).Property(NextAire.%d.NextEpisodeNumber)]</property>
-                      <thumb>$INFO[Window(Home).Property(NextAire.%d.Thumb)]</thumb>
-
-                      <onclick>$INFO[Window(Home).Property(NextAire.%d.Play)]</onclick>
-                    </item-->
                 </content>
             </control>
 
@@ -627,8 +624,9 @@
                 <height>300</height>
                 <pagecontrol>60</pagecontrol>
                 <ondown>60</ondown>
-                <orientation>horizontal</orientation>
-                <itemlayout width="228" height="280">
+                <include>squareshome</include>
+				<orientation>horizontal</orientation>
+                <!--itemlayout width="228" height="280">
                     <control type="image">
                         <top>64</top>
                         <centerleft>114</centerleft>
@@ -636,12 +634,6 @@
                         <height>200</height>
                         <aspectratio>scale</aspectratio>
                         <texture fallback="posterfallback.png">$INFO[ListItem.Icon]</texture>
-                    </control>
-                    <control type="image">
-                        <centerleft>114</centerleft>
-                        <width>218</width>
-                        <height>58</height>
-                        <texture colordiffuse="design">white.png</texture>
                     </control>
                     <control type="textbox">
                         <align>center</align>
@@ -651,34 +643,28 @@
                         <height>58</height>
                         <info>ListItem.Label</info>
                     </control>
-                </itemlayout>
-                <focusedlayout width="228" height="280">
-                    <control type="image">
+                </itemlayout-->
+                <!--focusedlayout width="228" height="280">
+                    <control type="image"-->
                         <!--visible>Control.HasFocus(888)</visible-->
-                        <top>60</top>
+                        <!--top>60</top>
                         <centerleft>114</centerleft>
                         <width>208</width>
                         <height>208</height>
                         <aspectratio>scale</aspectratio>
                         <texture fallback="posterfallback.png">$INFO[ListItem.Icon]</texture>
-                        <bordertexture colordiffuse="red">white.png</bordertexture>
-                        <bordersize>4</bordersize>
-                    </control>
-                    <control type="image">
+                        <bordertexture  colordiffuse="red" border="40">shadow2.png</bordertexture>
+						<bordersize>10</bordersize>
+					</control>
+                    <control type="image"-->
                         <!--visible>!Control.HasFocus(888)</visible-->
-                        <top>64</top>
+                        <!--top>64</top>
                         <centerleft>114</centerleft>
                         <width>200</width>
                         <height>200</height>
                         <aspectratio>scale</aspectratio>
                         <texture>$INFO[ListItem.Icon]</texture>
                     </control>
-                    <control type="image">
-                        <centerleft>114</centerleft>
-                        <width>218</width>
-                        <height>58</height>
-                        <texture colordiffuse="design">white.png</texture>
-                    </control>
                     <control type="textbox">
                         <centerleft>114</centerleft>
                         <align>center</align>
@@ -687,7 +673,7 @@
                         <height>58</height>
                         <info>ListItem.Label</info>
                     </control>
-                </focusedlayout>
+                </focusedlayout-->
                 <content target="video">favourites://</content>
             </control>
 

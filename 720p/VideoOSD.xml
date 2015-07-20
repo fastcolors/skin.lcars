@@ -8,7 +8,6 @@
             <visible>!Window.IsVisible(10123) + !Window.IsVisible(10124) + !Window.IsVisible(10125)</visible>
             <left>640</left>
             <top>718</top>
-            <width>780</width>
             <animation type="Focus">
                 <effect type="slide" tween="Cubic" easing="out" start="0,0" end="0,-620" time="800"/>
             </animation>
@@ -33,59 +32,43 @@
                 <onup>101</onup>
                 <ondown>101</ondown>
                 <scrolltime>240</scrolltime>
-                <control type="togglebutton" id="701" description="Subtitles">
+                <control type="button" id="250" description="Subtitles">
                     <include>largebutton</include>
                     <label>$LOCALIZE[33003] $LOCALIZE[287]</label>
-                    <texturenofocus colordiffuse="design" border="20">whiteallrounded.png</texturenofocus>
-                    <texturefocus colordiffuse="white" border="20">whiteallrounded.png</texturefocus>
-                    <alttexturenofocus colordiffuse="design" border="20">whiteallrounded.png</alttexturenofocus>
-					<alttexturefocus colordiffuse="white" border="20">whiteallrounded.png</alttexturefocus>
-					<onclick>SetFocus(100,2)</onclick>
-                    <onclick>Dialog.Close(VideoOSD)</onclick>
+                    <onclick>close</onclick>
                     <onclick>ActivateWindow(SubtitleSearch)</onclick>
                 </control>
-                <control type="button" id="703">
+                <control type="button" id="251">
                     <include>largebutton</include>
                     <label>13395</label>
-                    <onclick>SetFocus(100,2)</onclick>
                     <onclick>ActivateWindow(OSDVideoSettings)</onclick>
                 </control>
-                <control type="button" id="704">
+                <control type="button" id="252">
                     <include>largebutton</include>
                     <label>$LOCALIZE[292] &amp; $LOCALIZE[287]</label>
-                    <onclick>SetFocus(100,2)</onclick>
                     <onclick>ActivateWindow(OSDAudioSettings)</onclick>
                 </control>
-                <control type="button" id="705">
+                <control type="button" id="253">
                     <include>largebutton</include>
                     <label>298</label>
-                    <onclick>SetFocus(100,2)</onclick>
                     <onclick>ActivateWindow(VideoBookmarks)</onclick>
                 </control>
-                <control type="togglebutton" id="706" description="Info">
+                <control type="button" id="706" description="Info">
                     <include>largebutton</include>
                     <label>20176</label>
-                    <texturenofocus colordiffuse="design" border="20">whiteallrounded.png</texturenofocus>
-                    <texturefocus colordiffuse="white" border="20">whiteallrounded.png</texturefocus>
-                    <alttexturenofocus colordiffuse="design" border="20">whiteallrounded.png</alttexturenofocus>
-					<alttexturefocus colordiffuse="white" border="20">whiteallrounded.png</alttexturefocus>
-					<onclick>SetFocus(100,2)</onclick>
                     <onclick>close</onclick>
                     <onclick>ActivateWindow(142)</onclick>
-                    <altclick>SetFocus(100,2)</altclick>
-                    <altclick>close</altclick>
-                    <altclick>Dialog.Close(142)</altclick>
-                    <usealttexture>Window.IsActive(142)</usealttexture>
                 </control>
                 <control type="button" id="707">
                     <include>largebutton</include>
                     <label>21445</label>
+                    <onclick>close</onclick>
                     <onclick>CodecInfo</onclick>
                 </control>
-                <control type="button" id="708">
+                <control type="button" id="254">
                     <include>largebutton</include>
                     <label>25003</label>
-                    <onclick>SetFocus(100,2)</onclick>
+                    <onclick>close</onclick>
                     <onclick>PlayerControl(ShowVideoMenu)</onclick>
                     <enable>VideoPlayer.HasMenu</enable>
                     <animation effect="fade" start="100" end="50" time="100" condition="!VideoPlayer.HasMenu">Conditional</animation>
@@ -93,7 +76,7 @@
             </control>
         </control>
         <control type="group">
-            <visible>![Window.IsActive(DialogSelect.xml) | Window.IsActive(SliderDialog) | Window.IsActive(OSDVideoSettings) | Window.IsActive(OSDAudioSettings) | Window.IsActive(VideoBookmarks) | Window.IsActive(script-XBMC-Subtitles-main.xml)]</visible>
+            <visible>![Window.IsActive(DialogSelect.xml) | Window.IsActive(SubtitleSearch)  | Window.IsActive(SliderDialog) | Window.IsActive(OSDVideoSettings) | Window.IsActive(OSDAudioSettings) | Window.IsActive(VideoBookmarks) | Window.IsActive(script-XBMC-Subtitles-main.xml)]</visible>
             <animation effect="fade" end="100" time="400">Visible</animation>
             <animation effect="fade" end="0" time="100">Hidden</animation>
             <!--control type="group" description="Dialog Background">
@@ -264,11 +247,10 @@
             <font>font13</font>
             <label>PRESS UP FOR MENU</label>
         </control-->
-
-        <!-- 3D -->
+		<!-- 3D -->
         <control type="group">
             <top>80</top>
-            <visible>VideoPlayer.IsStereoscopic + ![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks)]</visible>
+            <visible>VideoPlayer.IsStereoscopic + ![Window.IsVisible(SliderDialog) | Window.IsActive(SubtitleSearch) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks)]</visible>
             <visible allowhiddenfocus="true">ControlGroup(500).HasFocus</visible>
             <!--<animation effect="fade" time="200">VisibleChange</animation>-->
             <control type="image">

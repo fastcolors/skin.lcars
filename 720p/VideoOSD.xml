@@ -4,77 +4,98 @@
     <allowoverlay>yes</allowoverlay>
     <zorder>2</zorder>
     <controls>
-        <control type="group" description="Options content">
-            <visible>!Window.IsVisible(10123) + !Window.IsVisible(10124) + !Window.IsVisible(10125)</visible>
-            <left>640</left>
-            <top>718</top>
-            <animation type="Focus">
-                <effect type="slide" tween="Cubic" easing="out" start="0,0" end="0,-620" time="800"/>
-            </animation>
-            <animation type="unFocus">
-                <effect type="slide" tween="Cubic" easing="in" start="0,-620" end="0,0" time="500"/>
-            </animation>
-            <control type="image">
-                <centerleft>0</centerleft>
-                <width>550</width>
-                <height>400</height>
-                <aspectratio>stretch</aspectratio>
-                <texture border="120">dialog.png</texture>
+        <control type="group" id="101" description="Options content">
+                <visible>!Window.IsVisible(10123) + !Window.IsVisible(10124) + !Window.IsVisible(10125)</visible>
+                <posx>640</posx>
+                <top>710</top>
+                <animation type="Focus">
+                    <effect type="slide" tween="Cubic" easing="out" start="0,0" end="0,-620" time="800"/>
+                </animation>
+                <animation type="unFocus">
+                    <effect type="slide" tween="Cubic" easing="in" start="0,-620" end="0,0" time="500"/>
+                </animation>
+                <control type="image">
+                    <centerleft>0</centerleft>
+					<width>550</width>
+					<height>400</height>
+					<aspectratio>stretch</aspectratio>
+                    <texture border="120" >dialog.png</texture>
+                </control>
+                <control type="grouplist" id="101" description="OSD Options">
+                    <centerleft>5</centerleft>
+					<top>40</top>
+					<width>400</width>
+					<height>400</height>
+					<itemgap>6</itemgap>
+					<onleft>100</onleft>
+                    <onright>100</onright>
+                    <onup>101</onup>
+                    <ondown>101</ondown>
+                    <scrolltime>240</scrolltime>
+                    <control type="button" id="350">
+						<visible>VideoPlayer.Content(LiveTV)</visible>
+						<include>largebutton</include>
+						<label>Teletext</label>
+						<onclick>ActivateWindow(Teletext)</onclick>
+					</control>
+					<control type="button" id="701" description="Subtitles">
+                        <visible>!VideoPlayer.Content(LiveTV)</visible>
+						<include>largebutton</include>
+						<label>$LOCALIZE[33003] $LOCALIZE[287]</label>
+                        <onclick>SetFocus(100,2)</onclick>
+                        <onclick>Dialog.Close(VideoOSD)</onclick>
+                        <onclick>ActivateWindow(SubtitleSearch)</onclick>
+                    </control>
+                    <control type="button" id="703">
+                        <include>largebutton</include>
+						<label>13395</label>
+                        <onclick>SetFocus(100,2)</onclick>
+                        <onclick>ActivateWindow(OSDVideoSettings)</onclick>
+                    </control>
+                    <control type="button" id="704">
+                        <include>largebutton</include>
+						<label>$LOCALIZE[292] &amp; $LOCALIZE[287]</label>
+                        <onclick>SetFocus(100,2)</onclick>
+                        <onclick>ActivateWindow(OSDAudioSettings)</onclick>
+                    </control>
+                    <control type="button" id="705">
+                        <include>largebutton</include>
+                        <visible>!VideoPlayer.Content(LiveTV)</visible>
+						<label>298</label>
+                        <onclick>SetFocus(100,2)</onclick>
+                        <onclick>ActivateWindow(VideoBookmarks)</onclick>
+                    </control>
+                    <control type="togglebutton" id="706" description="Info">
+                        <visible>!VideoPlayer.Content(LiveTV)</visible>
+                        <include>largebutton</include>
+                        <texturenofocus colordiffuse="design" border="20">whiteallrounded.png</texturenofocus>
+-                    	<texturefocus colordiffuse="white" border="20">whiteallrounded.png</texturefocus>
+-                    	<alttexturenofocus colordiffuse="design" border="20">whiteallrounded.png</alttexturenofocus>
+-						<alttexturefocus colordiffuse="white" border="20">whiteallrounded.png</alttexturefocus>
+-						<label>20176</label>
+                        <onclick>SetFocus(100,2)</onclick>
+                        <onclick>close</onclick>
+                        <onclick>ActivateWindow(142)</onclick>
+                        <altclick>SetFocus(100,2)</altclick>
+                        <altclick>close</altclick>
+                        <altclick>Dialog.Close(142)</altclick>
+                        <usealttexture>Window.IsActive(142)</usealttexture>
+                    </control>
+                    <control type="button" id="708">
+                        <include>largebutton</include>
+						<label>25003</label>
+                        <onclick>SetFocus(100,2)</onclick>
+                        <onclick>PlayerControl(ShowVideoMenu)</onclick>
+                        <enable>VideoPlayer.HasMenu</enable>
+                        <animation effect="fade" start="100" end="50" time="100" condition="!VideoPlayer.HasMenu">Conditional</animation>
+                    </control>
+					<control type="button" id="677">
+                        <include>largebutton</include>
+                    	<onclick>ParentDir</onclick>
+						<label>Cancel</label>
+					</control>
+                </control>
             </control>
-            <control type="grouplist" id="101" description="OSD Options">
-                <centerleft>5</centerleft>
-                <top>40</top>
-                <width>400</width>
-                <height>400</height>
-                <itemgap>6</itemgap>
-                <onleft>100</onleft>
-                <onright>100</onright>
-                <onup>101</onup>
-                <ondown>101</ondown>
-                <scrolltime>240</scrolltime>
-                <control type="button" id="250" description="Subtitles">
-                    <include>largebutton</include>
-                    <label>$LOCALIZE[33003] $LOCALIZE[287]</label>
-                    <onclick>close</onclick>
-                    <onclick>ActivateWindow(SubtitleSearch)</onclick>
-                </control>
-                <control type="button" id="251">
-                    <include>largebutton</include>
-                    <label>13395</label>
-                    <onclick>ActivateWindow(OSDVideoSettings)</onclick>
-                </control>
-                <control type="button" id="252">
-                    <include>largebutton</include>
-                    <label>$LOCALIZE[292] &amp; $LOCALIZE[287]</label>
-                    <onclick>ActivateWindow(OSDAudioSettings)</onclick>
-                </control>
-                <control type="button" id="253">
-                    <include>largebutton</include>
-                    <label>298</label>
-                    <onclick>ActivateWindow(VideoBookmarks)</onclick>
-                </control>
-                <control type="button" id="706" description="Info">
-                    <include>largebutton</include>
-                    <label>20176</label>
-                    <onclick>close</onclick>
-                    <onclick>ActivateWindow(142)</onclick>
-                </control>
-                <control type="button" id="707">
-                    <include>largebutton</include>
-                    <label>21445</label>
-                    <onclick>close</onclick>
-                    <onclick>CodecInfo</onclick>
-                </control>
-                <control type="button" id="254">
-                    <include>largebutton</include>
-                    <label>25003</label>
-                    <onclick>close</onclick>
-                    <onclick>PlayerControl(ShowVideoMenu)</onclick>
-                    <enable>VideoPlayer.HasMenu</enable>
-                    <animation effect="fade" start="100" end="50" time="100" condition="!VideoPlayer.HasMenu">Conditional</animation>
-                </control>
-            </control>
-        </control>
         <control type="group">
             <visible>![Window.IsActive(DialogSelect.xml) | Window.IsActive(SubtitleSearch)  | Window.IsActive(SliderDialog) | Window.IsActive(OSDVideoSettings) | Window.IsActive(OSDAudioSettings) | Window.IsActive(VideoBookmarks) | Window.IsActive(script-XBMC-Subtitles-main.xml)]</visible>
             <animation effect="fade" end="100" time="400">Visible</animation>

@@ -15,6 +15,7 @@
             <left>200</left>
             <width>1045</width>
             <height>520</height>
+            <viewtype label="31023">Panel</viewtype>
             <itemlayout width="260" height="260">
                 <control type="image">
                     <left>10</left>
@@ -235,7 +236,7 @@
             <info>ListItem.DBID</info>
         </control>
         <control type="image">
-            <visible>Container.Content(songs)</visible>
+            <visible>Container.Content(songs) + Control.IsVisible(502)</visible>
             <centerleft>940</centerleft>
             <centertop>360</centertop>
             <width>550</width>
@@ -286,5 +287,116 @@
                 </control>
             </focusedlayout>
         </control>
+        <control type="panel" id="53">
+            <visible>!Container.Content(artists)</visible>
+            <animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
+            <onleft>9000</onleft>
+            <top>100</top>
+            <left>200</left>
+            <width>1045</width>
+            <viewtype label="Panel">Panel</viewtype>
+            <height>520</height>
+            <itemlayout width="510" height="260">
+                <control type="image">
+                    <width>500</width>
+                    <height>250</height>
+                    <aspectratio>stretch</aspectratio>
+                    <texture colordiffuse="design">frame2.png</texture>
+                </control>
+                <control type="image">
+                    <right>30</right>
+                    <top>40</top>
+                    <width>168</width>
+                    <height>168</height>
+                    <aspectratio>keep</aspectratio>
+                    <texture fallback="posterfallback.png">$VAR[poster]</texture>
+					<bordertexture  colordiffuse="green" border="40">shadow2.png</bordertexture>
+                    <bordersize>10</bordersize>
+                </control>
+                <control type="label">
+                    <top>20</top>
+                    <left>25</left>
+                    <width>300</width>
+                    <height>20</height>
+                    <font>font16</font>
+                    <textcolor>yellow</textcolor>
+                    <label>$INFO[ListItem.Label]</label>
+                </control>
+                <control type="group">
+                    <visible>!StringCompare(listitem.label,..)</visible>
+                    <control type="label">
+                        <top>45</top>
+                        <left>25</left>
+                        <width>300</width>
+                        <height>20</height>
+                        <font>font16</font>
+                        <textcolor>yellow</textcolor>
+                        <label>$INFO[ListItem.Year,(,)]</label>
+                    </control>
+                    <control type="label">
+                        <visible>Container.Content(songs) | Container.Content(albums)</visible>
+                        <top>80</top>
+                        <left>25</left>
+                        <width>300</width>
+                        <height>20</height>
+                        <font>font16</font>
+                        <textcolor>blue</textcolor>
+                        <label>$INFO[ListItem.Genre]</label>
+                    </control>
+                </control>
+            </itemlayout>
+            <focusedlayout width="510" height="260">
+                <control type="image">
+                    <width>500</width>
+                    <height>250</height>
+                    <aspectratio>stretch</aspectratio>
+                    <texture colordiffuse="red">frame2.png</texture>
+                </control>
+                 <control type="image">
+                    <right>30</right>
+                    <top>40</top>
+                    <width>168</width>
+                    <height>168</height>
+                    <aspectratio>keep</aspectratio>
+                    <texture fallback="posterfallback.png">$VAR[poster]</texture>
+					<bordertexture  colordiffuse="red" border="40">shadow2.png</bordertexture>
+                    <bordersize>10</bordersize>
+					<animation reversible="false" effect="zoom" start="30,40,168,168" end="-80,20,210,210" time="150">focus</animation>
+					<animation reversible="false" effect="zoom" end="30,40,168,168" start="-80,20,210,210" time="150">unfocus</animation>
+                </control>
+                <control type="label">
+                    <top>20</top>
+                    <left>25</left>
+                    <width>300</width>
+                    <height>20</height>
+                    <font>font16</font>
+                    <textcolor>yellow</textcolor>
+                    <label>$INFO[ListItem.Label]</label>
+                </control>
+                <control type="group">
+                    <visible>!StringCompare(listitem.label,..)</visible>
+                    <control type="label">
+                        <top>45</top>
+                        <left>25</left>
+                        <width>300</width>
+                        <height>20</height>
+                        <font>font16</font>
+                        <textcolor>yellow</textcolor>
+                        <label>$INFO[ListItem.Year,(,)]</label>
+                    </control>
+                    <control type="label">
+                        <visible>Container.Content(songs) | Container.Content(albums)</visible>
+                        <top>80</top>
+                        <left>25</left>
+                        <width>300</width>
+                        <height>20</height>
+                        <font>font16</font>
+                        <textcolor>blue</textcolor>
+                        <label>$INFO[ListItem.Genre]</label>
+                    </control>
+                </control>
+            </focusedlayout>
+        </control>
+
     </include>
 </includes>

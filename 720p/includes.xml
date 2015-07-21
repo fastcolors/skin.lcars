@@ -957,7 +957,7 @@
         <control type="image">
             <top>15</top>
             <left>325</left>
-            <width>685</width>
+            <width>675</width>
             <height>39</height>
             <texture colordiffuse="blue">white.png</texture>
         </control>
@@ -997,24 +997,14 @@
             <texture colordiffuse="purple">white.png</texture>
         </control>
         <control type="label">
-            <top>8</top>
-            <left>1020</left>
+            <top>18</top>
+            <left>1005</left>
             <height>25</height>
-            <width>210</width>
-            <font>font16</font>
+            <width>220</width>
+            <font>font28_title</font>
             <align>left</align>
             <textcolor>yellow</textcolor>
-            <label>U.S.S. $INFO[Skin.String(shipname)]</label>
-        </control>
-        <control type="label">
-            <top>33</top>
-            <left>1020</left>
-            <height>25</height>
-            <width>200</width>
-            <font>font16</font>
-            <align>left</align>
-            <textcolor>yellow</textcolor>
-            <label>ncc $INFO[Skin.String(shipregistry)]</label>
+            <label>$INFO[Skin.String(shipname),u.s.s. ] $INFO[Skin.String(shipregistry),ncc ]</label>
         </control>
         <control type="label">
             <visible>system.hasnetwork</visible>

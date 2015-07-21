@@ -76,6 +76,7 @@
 		<font>
 			<name>font28_title</name>
 			<filename>lcars.ttf</filename>
+            <style>uppercase</style>
 			<size>28</size>
 		</font>
 		<font>

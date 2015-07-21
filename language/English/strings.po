@@ -147,3 +147,7 @@ msgstr "Icons"
 msgctxt "#31024"
 msgid "Panel"
 msgstr "Panel"
+
+msgctxt "#31025"
+msgid "emergency shutdown"
+msgstr "emergency shutdown"

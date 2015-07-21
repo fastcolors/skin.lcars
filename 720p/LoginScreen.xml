@@ -7,7 +7,7 @@
             <control type="image">
                 <width>1280</width>
                 <height>720</height>
-                <texture>login.jpg</texture>
+                <texture>login.png</texture>
             </control>
             <control type="fixedlist" id="52">
                 <centerleft>640</centerleft>
@@ -54,7 +54,9 @@
                 <top>669</top>
                 <width>1160</width>
                 <height>39</height>
-                <label>$LOCALIZE[31003]</label>
+                <label>$LOCALIZE[31025]</label>
+                <texturenofocus colordiffuse="design" border="20">white.png</texturenofocus>
+                <texturefocus colordiffuse="white" border="20">white.png</texturefocus>
                 <font>font30</font>
                 <onclick>ActivateWindow(ShutdownMenu)</onclick>
                 <align>center</align>
@@ -111,12 +113,12 @@
             </control>
             <control type="label">
                 <top>18</top>
-                <left>1020</left>
+                <left>990</left>
                 <height>39</height>
-                <width>200</width>
-                <font>font30</font>
+                <width>230</width>
+                <font>font28_title</font>
                 <textcolor>yellow</textcolor>
-                <label>USS XBMC  •  NCC-1929</label>
+                <label>$INFO[Skin.String(shipname),u.s.s. ] $INFO[Skin.String(shipregistry),ncc ]</label>
             </control>
         </control>
     </controls>

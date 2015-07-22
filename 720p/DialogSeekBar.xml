@@ -15,6 +15,7 @@
             <texture colordiffuse="osd">osb.png</texture>
         </control>
         <control type="group">
+            <visible>!Pvr.IsPlayingTV</visible>
             <description>PROGRESS</description>
             <width>1200</width>
             <top>362</top>

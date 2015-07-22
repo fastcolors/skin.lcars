@@ -5,12 +5,8 @@
     <views>50</views>
     <controls>
         <control type="group">
-            <!--control type="image">
-            <width>1280</width>
-            <height>720</height>
-            <texture>background.png</texture>
-        </control-->
-        <control type="image">
+        <include>background</include>
+        <!--control type="image">
             <width>1280</width>
             <height>720</height>
             <texture colordiffuse="design" >background2.png</texture>
@@ -29,7 +25,7 @@
             <width>1280</width>
             <height>720</height>
             <texture colordiffuse="button4" >background5.png</texture>
-        </control>
+        </control-->
         <control type="label">
                 <visible>Control.HasFocus(311)</visible>
                 <top>417</top>

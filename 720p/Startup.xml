@@ -21,7 +21,7 @@
             <font>font30_title</font>
             <textcolor>yellow</textcolor>
             <align>center</align>
-            <label>U.S.S. $INFO[Skin.String(shipname),, • ]N.C.C. $INFO[Skin.String(shipregistry)] [CR]security scan approved</label>
+            <label>$INFO[Skin.String(shipname),U.S.S. , • ]$INFO[Skin.String(shipregistry),N.C.C.] [CR]security scan approved</label>
         </control>
     </controls>
 </window>

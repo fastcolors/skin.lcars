@@ -15,15 +15,13 @@
         </control>
 		<control type="textbox" description="Title">
             <centerleft>640</centerleft>
-            <top>480</top>
-            <align>center</align>
-			<height>100</height>
+            <top>580</top>
+            <height>100</height>
             <width>800</width>
             <font>font30_title</font>
             <textcolor>yellow</textcolor>
             <align>center</align>
-            <aligny>center</aligny>
-			<label>U.S.S. $INFO[Skin.String(shipname),, • ]N.C.C. $INFO[Skin.String(shipregistry)] [CR]L.C.A.R.S System Online...</label>
+            <label>U.S.S. $INFO[Skin.String(shipname),, • ]N.C.C. $INFO[Skin.String(shipregistry)] [CR]security scan approved</label>
         </control>
     </controls>
 </window>

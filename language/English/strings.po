@@ -148,6 +148,6 @@ msgctxt "#31024"
 msgid "Panel"
 msgstr "Panel"
 
-msgctxt "#31025"
+msgctxt "#31225"
 msgid "emergency shutdown"
 msgstr "emergency shutdown"

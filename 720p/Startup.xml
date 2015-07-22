@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
     <onload>AlarmClock(CloseStartup,ReplaceWindow($INFO[System.StartupWindow]),00:04,silent)</onload>
-    <backgroundcolor>black</backgroundcolor>
+    <!--backgroundcolor>black</backgroundcolor-->
     <animation effect="fade" start="0" end="100" time="300" delay="150">WindowOpen</animation>
     <animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
-    <controls>
+    <!--controls>
         <control type="image">
             <centerleft>640</centerleft>
             <centertop>360</centertop>
@@ -22,6 +22,87 @@
             <textcolor>yellow</textcolor>
             <align>center</align>
             <label>$INFO[Skin.String(shipname),U.S.S. , • ]$INFO[Skin.String(shipregistry),N.C.C.] [CR]security scan approved</label>
+        </control>
+    </controls-->
+	    <controls>
+        <control type="group">
+            <control type="image">
+                <width>1280</width>
+                <height>720</height>
+                <texture>login.png</texture>
+            </control>
+			<control type="textbox" description="Title">
+				<centerleft>640</centerleft>
+				<top>500</top>
+				<height>100</height>
+				<width>800</width>
+				<font>font_MainMenu</font>
+				<textcolor>yellow</textcolor>
+				<align>center</align>
+				<label>security scan approved</label>
+			</control>
+            
+            <control type="image">
+                <centerleft>640</centerleft>
+                <top>669</top>
+                <width>1160</width>
+                <height>39</height>
+                <texture colordiffuse="design">white.png</texture>
+            </control>
+            <control type="image">
+                <top>669</top>
+                <left>1230</left>
+                <width>40</width>
+                <height>39</height>
+                <texture colordiffuse="design">bullet.png</texture>
+            </control>
+            <control type="image">
+                <top>15</top>
+                <left>1230</left>
+                <width>40</width>
+                <height>39</height>
+                <texture colordiffuse="design">bullet.png</texture>
+            </control>
+            <control type="image">
+                <top>669</top>
+                <left>10</left>
+                <width>40</width>
+                <height>39</height>
+                <texture colordiffuse="design" flipx="true">bullet.png</texture>
+            </control>
+            <control type="image">
+                <top>15</top>
+                <left>10</left>
+                <width>40</width>
+                <height>39</height>
+                <texture colordiffuse="design" flipx="true">bullet.png</texture>
+            </control>
+            <control type="image">
+                <top>15</top>
+                <centerleft>640</centerleft>
+                <width>685</width>
+                <height>39</height>
+                <texture colordiffuse="design">white.png</texture>
+            </control>
+            <control type="label">
+                <top>18</top>
+                <centerleft>176</centerleft>
+                <height>39</height>
+                <width>240</width>
+                <font>font30</font>
+                <textcolor>yellow</textcolor>
+                <align>center</align>
+                <label>$INFO[System.Date] • $INFO[System.Time]</label>
+            </control>
+            <control type="label">
+                <top>18</top>
+                <left>990</left>
+                <height>39</height>
+                <width>230</width>
+                <font>font28_title</font>
+                <textcolor>yellow</textcolor>
+                <label>$INFO[Skin.String(shipname),u.s.s. ] $INFO[Skin.String(shipregistry),ncc ]</label>
+            </control>
         </control>
     </controls>
 </window>

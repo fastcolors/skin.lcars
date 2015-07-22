@@ -83,8 +83,21 @@
             <width>910</width>
             <height>280</height>
             <aspectratio>keep</aspectratio>
-            <texture>login.jpg</texture>
+            <texture>login.png</texture>
         </control>
+		<control type="textbox" description="Title">
+			<visible>!Control.IsVisible(311) + !Control.IsVisible(411)</visible>
+            <animation effect="fade" time="150" start="0" end="100">VisibleChange</animation>
+            <centerleft>755</centerleft>
+			<top>340</top>
+			<height>100</height>
+			<width>800</width>
+			<font>font24_title</font>
+			<textcolor>blue</textcolor>
+			<align>center</align>
+			<label>authorized access only[CR]please report malfunction to engineering staff on duty</label>
+		</control>
+            
         <control type="group" id="750">
             <!--background-->
             <control type="label">

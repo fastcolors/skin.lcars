@@ -9,6 +9,16 @@
                 <height>720</height>
                 <texture>login.png</texture>
             </control>
+			<control type="textbox" description="Title">
+				<centerleft>640</centerleft>
+				<top>500</top>
+				<height>100</height>
+				<width>800</width>
+				<font>font_MainMenu</font>
+				<textcolor>yellow</textcolor>
+				<align>center</align>
+				<label>identify for retina scan</label>
+			</control>
             <control type="fixedlist" id="52">
                 <centerleft>640</centerleft>
                 <top>142</top>

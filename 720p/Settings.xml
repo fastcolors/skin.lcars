@@ -10,8 +10,19 @@
 			<width>1050</width>
 			<height>419</height>
 			<aspectratio>keep</aspectratio>
-			<texture colordiffuse="red">login.jpg</texture>
+			<texture colordiffuse="red">login.png</texture>
 		</control>
+		<control type="textbox" description="Title">
+			<centerleft>715</centerleft>
+			<top>360</top>
+			<height>100</height>
+			<width>800</width>
+			<font>font28_title</font>
+			<textcolor>red</textcolor>
+			<align>center</align>
+			<label>authorized access only[CR]please report malfunction to engineering staff on duty</label>
+		</control>
+        
 		<control type="grouplist">
 			<left>340</left>
 			<top>450</top>

@@ -24,7 +24,7 @@
                 <height>300</height>
                 <pagecontrol>60</pagecontrol>
                 <ondown>60</ondown>
-                <viewtype label="31023">Icons</viewtype>
+                <viewtype label="31223">Icons</viewtype>
                 <orientation>horizontal</orientation>
                 <itemlayout width="180" height="280">
                     <control type="image">
@@ -149,7 +149,7 @@
             <top>100</top>
             <left>200</left>
             <width>1045</width>
-            <viewtype label="31024">Panel</viewtype>
+            <viewtype label="31224">Panel</viewtype>
             <height>520</height>
             <itemlayout width="510" height="260">
                 <control type="image">

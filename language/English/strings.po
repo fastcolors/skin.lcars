@@ -140,11 +140,11 @@ msgctxt "#31022"
 msgid "ARE YOU SURE YOU WANT TO RESET ALL SETTINGS?"
 msgstr "ARE YOU SURE YOU WANT TO RESET ALL SETTINGS?"
 
-msgctxt "#31023"
+msgctxt "#31223"
 msgid "Icons"
 msgstr "Icons"
 
-msgctxt "#31024"
+msgctxt "#31224"
 msgid "Panel"
 msgstr "Panel"
 

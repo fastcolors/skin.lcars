@@ -15,7 +15,7 @@
             <left>200</left>
             <width>1045</width>
             <height>520</height>
-            <viewtype label="31023">Panel</viewtype>
+            <viewtype label="31223">Panel</viewtype>
             <itemlayout width="260" height="260">
                 <control type="image">
                     <left>10</left>
@@ -294,7 +294,7 @@
             <top>100</top>
             <left>200</left>
             <width>1045</width>
-            <viewtype label="Panel">Panel</viewtype>
+            <viewtype label="31224">Panel</viewtype>
             <height>520</height>
             <itemlayout width="510" height="260">
                 <control type="image">

@@ -15,7 +15,7 @@
                 <textureslidernibfocus>HScrollerFO.png</textureslidernibfocus>
             </control>
             <control type="panel" id="50">
-                <visible>!Container.Content(addons)</visible>
+                <visible>!Container.Content(addons) + !Container.Content(sets)</visible>
                 <animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
                 <onup>9000</onup>
                 <top>125</top>
@@ -142,8 +142,9 @@
                 <label>HD : $INFO[ListItem.VideoResolution]</label>
             </control>
         </control>
-        <control type="panel" id="52">
-            <visible>!Container.Content(addons)</visible>
+        <!-- old panel view >
+		<control type="panel" id="52">
+            <visible>!Container.Content(addons) + !Container.Content(sets)</visible>
             <animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
             <onleft>9000</onleft>
             <top>100</top>
@@ -380,14 +381,15 @@
                 </control>
             </focusedlayout>
         </control>
+		< end of old panel view-->
         <control type="panel" id="53">
-            <visible>!Container.Content(addons)</visible>
+            <visible>!Container.Content(addons) + !Container.Content(sets)</visible>
             <animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
             <onleft>9000</onleft>
             <top>100</top>
             <left>200</left>
             <width>1045</width>
-            <viewtype label="Panel-2">Panel</viewtype>
+            <viewtype label="31224">Panel</viewtype>
             <height>520</height>
             <itemlayout width="510" height="260">
                 <control type="image">
@@ -504,7 +506,7 @@
                     <aspectratio>stretch</aspectratio>
                     <texture colordiffuse="red">frame2.png</texture>
                 </control>
-                 <control type="image">
+                <control type="image">
                     <right>60</right>
                     <top>40</top>
                     <width>108</width>
@@ -608,5 +610,133 @@
                 </control>
             </focusedlayout>
         </control>
+		<!-- view for sets -->
+		<control type="image">
+            <visible>Container.Content(sets)</visible>
+            <width>1280</width>
+            <height>720</height>
+            <texture>artistsbg.jpg</texture>
+        </control>
+		            
+		<control type="image">
+            <visible>Container.Content(sets) + Control.IsVisible(501)</visible>
+            <centerleft>1140</centerleft>
+            <centertop>230</centertop>
+            <width>152</width>
+            <height>210</height>
+            <aspectratio>keep</aspectratio>
+            <texture fallback="defaultmissing.png">$INFO[ListItem.Icon]</texture>
+            <bordertexture>shadow2.png</bordertexture>
+            <bordersize>4</bordersize>
+        </control>
+        <control type="image">
+            <visible>Container.Content(sets) + Control.HasFocus(300)</visible>
+            <centerleft>1140</centerleft>
+            <centertop>460</centertop>
+            <width>152</width>
+            <height>210</height>
+            <aspectratio>keep</aspectratio>
+            <texture fallback="defaultmissing.png">$INFO[Container(300).ListItem.Icon]</texture>
+            <bordertexture>shadow2.png</bordertexture>
+            <bordersize>4</bordersize>
+        </control>
+        <control type="label">
+            <visible>Container.Content(sets) + Control.HasFocus(300)</visible>
+            <centertop>400</centertop>
+            <centerleft>1140</centerleft>
+            <width>300</width>
+            <height>20</height>
+            <font>font16</font>
+            <textcolor>yellow</textcolor>
+            <label>$INFO[Container(300).ListItem.Year,(,)]</label>
+		</control>
+        
+		<control type="list" id="501">
+            <visible>Container.Content(sets)</visible>
+            <centertop>360</centertop>
+            <left>250</left>
+            <height>484</height>
+            <width>300</width>
+            <onup>noop</onup>
+            <ondown>noop</ondown>
+            <onleft>9000</onleft>
+            <onright>300</onright>
+            <orientation>vertical</orientation>
+            <itemlayout height="44" width="300">
+                <control type="label">
+                    <width>290</width>
+                    <height>40</height>
+                    <align>right</align>
+                    <aligny>center</aligny>
+                    <textcolor>yellow</textcolor>
+					<info>ListItem.Label</info>
+                </control>
+            </itemlayout>
+            <focusedlayout height="44" width="300">
+                <control type="label">
+                    <visible>!Control.HasFocus(501)</visible>
+					<width>290</width>
+                    <height>40</height>
+                    <align>right</align>
+                    <aligny>center</aligny>
+                    <textcolor>grey</textcolor>
+					<info>ListItem.Label</info>
+                </control>
+				<control type="label">
+                    <visible>Control.HasFocus(501)</visible>
+					<width>290</width>
+                    <height>40</height>
+                    <align>right</align>
+                    <aligny>center</aligny>
+                    <textcolor>red</textcolor>
+					<info>ListItem.Label</info>
+                </control>
+            </focusedlayout>
+        </control>
+        <control type="list" id="300">
+            <visible>Container.Content(sets)</visible>
+            <visible>!StringCompare(ListItem.Label,..)</visible>
+            <centertop>360</centertop>
+            <left>610</left>
+            <height>484</height>
+            <width>300</width>
+            <onup>noop</onup>
+            <ondown>noop</ondown>
+            <onleft>501</onleft>
+            <onright>301</onright>
+            <orientation>vertical</orientation>
+            <itemlayout height="44" width="300">
+                <control type="label">
+                    <width>290</width>
+                    <height>40</height>
+                    <align>right</align>
+                    <aligny>center</aligny>
+                    <textcolor>yellow</textcolor>
+					<info>ListItem.Label</info>
+                </control>
+            </itemlayout>
+            <focusedlayout height="44" width="300">
+                <control type="label">
+                    <visible>!Control.HasFocus(300)</visible>
+					<width>290</width>
+                    <height>40</height>
+                    <align>right</align>
+                    <aligny>center</aligny>
+                    <textcolor>grey</textcolor>
+					<info>ListItem.Label</info>
+                </control>
+				<control type="label">
+                    <visible>Control.HasFocus(300)</visible>
+					<width>290</width>
+                    <height>40</height>
+                    <align>right</align>
+                    <aligny>center</aligny>
+                    <textcolor>red</textcolor>
+					<info>ListItem.Label</info>
+                </control>
+            </focusedlayout>
+            <content>$INFO[ListItem.DBID,videodb://movies/sets/]</content>
+        </control>
+        
     </include>
 </includes>

@@ -638,12 +638,12 @@
             <aspectratio>keep</aspectratio>
             <texture fallback="defaultmissing.png">$INFO[Container(300).ListItem.Icon]</texture>
             <bordertexture>shadow2.png</bordertexture>
-            <bordersize>4</bordersize>
+            <bordersize>6</bordersize>
         </control>
         <control type="label">
             <visible>[Container.Content(sets) | Container.Content(directors) | Container.Content(countries)] + Control.HasFocus(300)</visible>
             <centertop>460</centertop>
-            <centerleft>1160</centerleft>
+            <centerleft>1170</centerleft>
             <width>300</width>
             <height>20</height>
             <font>font16</font>

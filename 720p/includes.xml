@@ -1370,4 +1370,73 @@
 			<texture colordiffuse="button4" >background5.png</texture>
 		</control>
     </include>
+	<include name="dialog2">
+        <control type="image">
+			<description>background image</description>
+			<left>185</left>
+			<top>22</top>
+			<width>1250</width>
+			<height>600</height>
+			<texture border="130">black.png</texture>
+		</control>
+		<control type="image">
+			<left>185</left>
+			<top>22</top>
+			<width>1250</width>
+			<height>600</height>
+			<texture colordiffuse="design" >dialog2A.png</texture>
+		</control>
+		<control type="image">
+			<left>185</left>
+			<top>22</top>
+			<width>1250</width>
+			<height>600</height>
+			<texture colordiffuse="button2" >dialog2B.png</texture>
+		</control>
+		<control type="image">
+			<left>185</left>
+			<top>22</top>
+			<width>1250</width>
+			<height>600</height>
+			<texture colordiffuse="button3" >dialog2C.png</texture>
+		</control>
+		<control type="image">
+			<left>185</left>
+			<top>22</top>
+			<width>1250</width>
+			<height>600</height>
+			<texture colordiffuse="button4" >dialog2D.png</texture>
+		</control>
+    </include>
+	<include name="dialog4">
+        <control type="image">
+			<description>background image</description>
+			<left>185</left>
+			<top>60</top>
+			<width>1250</width>
+			<height>600</height>
+			<texture border="130">black.png</texture>
+		</control>
+		<control type="image">
+			<left>185</left>
+			<top>60</top>
+			<width>1250</width>
+			<height>600</height>
+			<texture colordiffuse="design" >dialog4A.png</texture>
+		</control>
+		<control type="image">
+			<left>185</left>
+			<top>60</top>
+			<width>1250</width>
+			<height>600</height>
+			<texture colordiffuse="button2" >dialog4B.png</texture>
+		</control>
+		<control type="image">
+			<left>185</left>
+			<top>60</top>
+			<width>1250</width>
+			<height>600</height>
+			<texture colordiffuse="button3" >dialog4C.png</texture>
+		</control>
+	</include>
 </includes>

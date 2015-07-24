@@ -1125,6 +1125,8 @@
         <value condition="!IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
         <value condition="Container.Content(directors) + !StringCompare(ListItem.Label,..)">DefaultDirector.png</value>
         <value condition="Container.Content(directors) + StringCompare(ListItem.Label,..)">DefaultFolderBack.png</value>
+        <value condition="Container.Content(countries) + !StringCompare(ListItem.Label,..)">DefaultCountry.png</value>
+        <value condition="Container.Content(countries) + StringCompare(ListItem.Label,..)">DefaultFolderBack.png</value>
         <!--<value condition="StringCompare(ListItem.Label,..)">$INFO[ListItem.Icon]</value>-->
         <!--<value condition="!IsEmpty(ListItem.Thumb))">$INFO[ListItem.Thumb]</value>-->
         <value>$INFO[ListItem.Icon]</value>

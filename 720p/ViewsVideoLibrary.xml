@@ -15,7 +15,7 @@
                 <textureslidernibfocus>HScrollerFO.png</textureslidernibfocus>
             </control>
             <control type="panel" id="50">
-                <visible>!Container.Content(addons) + !Container.Content(sets)</visible>
+                <visible>!Container.Content(addons) + ![Container.Content(sets) | Container.Content(directors) | Container.Content(countries)]</visible>
                 <animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
                 <onup>9000</onup>
                 <top>125</top>
@@ -383,7 +383,7 @@
         </control>
 		< end of old panel view-->
         <control type="panel" id="53">
-            <visible>!Container.Content(addons) + !Container.Content(sets)</visible>
+            <visible>!Container.Content(addons) + ![Container.Content(sets) | Container.Content(directors) | Container.Content(countries)]</visible>
             <animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
             <onleft>9000</onleft>
             <top>100</top>
@@ -612,26 +612,26 @@
         </control>
 		<!-- view for MovieSets -->
 		<control type="image">
-            <visible>Container.Content(sets)</visible>
+            <visible>[Container.Content(sets) | Container.Content(directors) | Container.Content(countries)]</visible>
             <width>1280</width>
             <height>720</height>
             <texture>artistsbg.jpg</texture>
         </control>
 		            
 		<control type="image">
-            <visible>Container.Content(sets) + Control.IsVisible(501)</visible>
+            <visible>[Container.Content(sets) | Container.Content(directors) | Container.Content(countries)]+ Control.IsVisible(501)</visible>
             <centerleft>1120</centerleft>
-            <centertop>230</centertop>
+            <centertop>280</centertop>
             <width>300</width>
             <height>300</height>
             <aspectratio>keep</aspectratio>
-            <texture>$INFO[ListItem.Art(fanart)]</texture>
+            <texture>$VAR[poster]</texture>
             <bordertexture>shadow2.png</bordertexture>
             <bordersize>8</bordersize>
         </control>
         <control type="image">
-            <visible>Container.Content(sets) + Control.HasFocus(300)</visible>
-            <centerleft>1140</centerleft>
+            <visible>[Container.Content(sets) | Container.Content(directors) | Container.Content(countries)] + Control.HasFocus(300)</visible>
+            <centerleft>1170</centerleft>
             <centertop>460</centertop>
             <width>152</width>
             <height>210</height>
@@ -641,9 +641,9 @@
             <bordersize>4</bordersize>
         </control>
         <control type="label">
-            <visible>Container.Content(sets) + Control.HasFocus(300)</visible>
-            <centertop>400</centertop>
-            <centerleft>1140</centerleft>
+            <visible>[Container.Content(sets) | Container.Content(directors) | Container.Content(countries)] + Control.HasFocus(300)</visible>
+            <centertop>460</centertop>
+            <centerleft>1160</centerleft>
             <width>300</width>
             <height>20</height>
             <font>font16</font>
@@ -652,7 +652,7 @@
 		</control>
         
 		<control type="list" id="501">
-            <visible>Container.Content(sets)</visible>
+            <visible>[Container.Content(sets) | Container.Content(directors) | Container.Content(countries)]</visible>
             <centertop>360</centertop>
             <left>250</left>
             <height>484</height>
@@ -694,7 +694,7 @@
             </focusedlayout>
         </control>
         <control type="list" id="300">
-            <visible>Container.Content(sets)</visible>
+            <visible>[Container.Content(sets) | Container.Content(directors) | Container.Content(countries)]</visible>
             <visible>!StringCompare(ListItem.Label,..)</visible>
             <centertop>360</centertop>
             <left>610</left>
@@ -735,8 +735,8 @@
 					<info>ListItem.Label</info>
                 </control>
             </focusedlayout>
-            <content>$INFO[ListItem.DBID,videodb://movies/sets/]</content>
+            <content>$VAR[content]</content>
         </control>
-        
+  
     </include>
 </includes>

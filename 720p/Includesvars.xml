@@ -80,4 +80,10 @@
 		<value condition="StringCompare(Skin.String(sourceshome),sources://music/)">$LOCALIZE[653][CR]$LOCALIZE[292]</value>
 		<value>$LOCALIZE[653][CR]$LOCALIZE[157]</value>
 	</variable>
+	
+	<variable name="content">
+		<value condition="Container.Content(sets)">$INFO[ListItem.DBID,videodb://movies/sets/]</value>
+		<value condition="Container.Content(directors)">$INFO[ListItem.DBID,videodb://movies/directors/]</value>
+		<value condition="Container.Content(countries)">$INFO[ListItem.DBID,videodb://movies/countries/]</value>
+	</variable>
 </includes>

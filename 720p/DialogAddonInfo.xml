@@ -170,7 +170,7 @@
 					<align>right</align>
 					<aligny>center</aligny>
 					<font>font13</font>
-					<textcolor>darkblue</textcolor>
+					<textcolor>blue</textcolor>
 				</control>
 				<control type="group">
 					<control type="textbox" id="400">
@@ -178,7 +178,7 @@
 						<left>10</left>
 						<top>195</top>
 						<width>600</width>
-						<height>250</height>
+						<height>200</height>
 						<font>font13</font>
 						<align>justify</align>
 						<textcolor>white</textcolor>

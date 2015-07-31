@@ -397,39 +397,58 @@
             <align>center</align>
 			<viewtype label="List">List</viewtype>
             <height>515</height>
-            <itemlayout width="290" height="44">
+            <itemlayout width="300" height="44">
                 <control type="image">
-                    <aligny>center</aligny>
-					<width>30</width>
+                    <top>5</top>
+                    <width>40</width>
                     <height>30</height>
                     <texture border="20" colordiffuse="design">white.png</texture>
                 </control>
                 <control type="label">
-                    <left>35</left>
+                    <top>5</top>
+                    <width>40</width>
+                    <height>30</height>
+                    <aligny>center</aligny>
+					<align>center</align>
+					<font>font14</font>
+                    <textcolor>black</textcolor>
+                    <label>$VAR[MediaFlag_MPAA]</label>
+                </control>
+				<control type="label">
+                    <left>45</left>
                     <width>250</width>
                     <height>40</height>
                     <aligny>center</aligny>
 					<align>left</align>
-					<font>font16</font>
+					<font>font14</font>
                     <textcolor>yellow</textcolor>
                     <label>$INFO[ListItem.Label]</label>
                 </control>
-                
             </itemlayout>
-            <focusedlayout width="290" height="44">
+            <focusedlayout width="300" height="44">
                 <control type="image">
-                    <aligny>center</aligny>
-					<width>30</width>
+                    <top>5</top>
+                    <width>40</width>
                     <height>30</height>
                     <texture border="20" colordiffuse="white">white.png</texture>
                 </control>
                 <control type="label">
-                    <left>35</left>
+                    <top>5</top>
+                    <width>40</width>
+                    <height>30</height>
+                    <aligny>center</aligny>
+					<align>center</align>
+					<font>font14</font>
+                    <textcolor>black</textcolor>
+                    <label>$VAR[MediaFlag_MPAA]</label>
+                </control>
+				<control type="label">
+                    <left>45</left>
                     <width>250</width>
                     <height>40</height>
                     <aligny>center</aligny>
 					<align>left</align>
-					<font>font16</font>
+					<font>font14</font>
                     <textcolor>white</textcolor>
                     <label>$INFO[ListItem.Label]</label>
                 </control>

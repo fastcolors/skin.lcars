@@ -142,246 +142,8 @@
                 <label>HD : $INFO[ListItem.VideoResolution]</label>
             </control>
         </control>
-        <!-- old panel view >
-		<control type="panel" id="52">
-            <visible>!Container.Content(addons) + !Container.Content(sets)</visible>
-            <animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
-            <onleft>9000</onleft>
-            <top>100</top>
-            <left>200</left>
-            <width>1045</width>
-            <viewtype label="31224">Panel</viewtype>
-            <height>520</height>
-            <itemlayout width="510" height="260">
-                <control type="image">
-                    <width>500</width>
-                    <height>250</height>
-                    <aspectratio>stretch</aspectratio>
-                    <texture>frame.png</texture>
-                </control>
-                <control type="image">
-                    <right>60</right>
-                    <top>40</top>
-                    <width>108</width>
-                    <height>168</height>
-                    <aspectratio>scale</aspectratio>
-                    <texture fallback="posterfallback.png">$VAR[poster]</texture>
-                </control>
-                <control type="image">
-                    <right>36</right>
-                    <top>20</top>
-                    <width>152</width>
-                    <height>210</height>
-                    <aspectratio>keep</aspectratio>
-                    <texture>padd.png</texture>
-                </control>
-                <control type="label">
-                    <top>20</top>
-                    <left>20</left>
-                    <width>300</width>
-                    <height>20</height>
-                    <font>font16</font>
-                    <textcolor>yellow</textcolor>
-                    <label>$INFO[ListItem.Label]</label>
-                </control>
-                <control type="group">
-                    <visible>!StringCompare(listitem.label,..)</visible>
-                    <control type="label">
-                        <top>45</top>
-                        <left>20</left>
-                        <width>300</width>
-                        <height>20</height>
-                        <font>font16</font>
-                        <textcolor>yellow</textcolor>
-                        <label>$INFO[ListItem.Year,(,)]</label>
-                    </control>
-                    <control type="label">
-                        <top>80</top>
-                        <left>20</left>
-                        <width>300</width>
-                        <height>20</height>
-                        <font>font16</font>
-                        <textcolor>blue</textcolor>
-                        <label>$INFO[ListItem.Genre]</label>
-                    </control>
-                    <control type="label">
-                        <visible>Container.Content(movies) | Container.Content(episodes)</visible>
-                        <top>140</top>
-                        <left>20</left>
-                        <width>300</width>
-                        <height>20</height>
-                        <font>font16</font>
-                        <textcolor>blue</textcolor>
-                        <label>$INFO[ListItem.Rating]</label>
-                    </control>
-					<control type="label">
-                        <visible>Container.Content(tvshows) | Container.Content(Seasons)</visible>
-                        <top>140</top>
-                        <left>20</left>
-                        <width>300</width>
-                        <height>20</height>
-                        <font>font16</font>
-                        <textcolor>blue</textcolor>
-                        <label>$INFO[ListItem.Property(TotalEpisodes),Episodes: ]  ($INFO[ListItem.Property(WatchedEpisodes),, Watched] - $INFO[ListItem.Property(UnWatchedEpisodes), , UnWatched])</label>
-                    </control>
-					<control type="label">
-                        <visible>Container.Content(movies)</visible>
-                        <top>110</top>
-                        <left>20</left>
-                        <width>300</width>
-                        <height>20</height>
-                        <font>font16</font>
-                        <textcolor>blue</textcolor>
-                        <label>$INFO[ListItem.TagLine]</label>
-                    </control>
-                    <control type="label">
-                        <visible>Container.Content(episodes) | Container.Content(tvshows)</visible>
-                        <top>110</top>
-                        <left>20</left>
-                        <width>300</width>
-                        <height>20</height>
-                        <font>font16</font>
-                        <textcolor>blue</textcolor>
-                        <label>First Aired: $INFO[listitem.premiered]</label>
-                    </control>
-                    <control type="label">
-                        <visible>Container.Content(movies) | Container.Content(tvshows)</visible>
-                        <top>170</top>
-                        <left>20</left>
-                        <width>300</width>
-                        <height>20</height>
-                        <font>font16</font>
-                        <textcolor>blue</textcolor>
-                        <label>Rated: $VAR[MediaFlag_MPAA]</label>
-                    </control>
-                    <control type="label">
-                        <visible>Container.Content(movies) | Container.Content(episodes)</visible>
-                        <top>200</top>
-                        <left>20</left>
-                        <width>300</width>
-                        <height>20</height>
-                        <font>font16</font>
-                        <textcolor>blue</textcolor>
-                        <label>Resolution: $INFO[ListItem.VideoResolution]</label>
-                    </control>
-                </control>
-            </itemlayout>
-            <focusedlayout width="510" height="260">
-                <control type="image">
-                    <width>500</width>
-                    <height>250</height>
-                    <aspectratio>stretch</aspectratio>
-                    <texture>frame_fo.png</texture>
-                </control>
-                 <control type="image">
-                    <right>60</right>
-                    <top>40</top>
-                    <width>108</width>
-                    <height>168</height>
-                    <aspectratio>scale</aspectratio>
-                    <texture fallback="posterfallback.png">$VAR[poster]</texture>
-                </control>
-                <control type="image">
-                    <right>36</right>
-                    <top>20</top>
-                    <width>152</width>
-                    <height>210</height>
-                    <aspectratio>keep</aspectratio>
-                    <texture>padd.png</texture>
-                </control>
-                <control type="label">
-                    <top>20</top>
-                    <left>20</left>
-                    <width>300</width>
-                    <height>20</height>
-                    <font>font16</font>
-                    <textcolor>yellow</textcolor>
-                    <label>$INFO[ListItem.Label]</label>
-                </control>
-                <control type="group">
-                    <visible>!StringCompare(listitem.label,..)</visible>
-                    <control type="label">
-                        <top>45</top>
-                        <left>20</left>
-                        <width>300</width>
-                        <height>20</height>
-                        <font>font16</font>
-                        <textcolor>yellow</textcolor>
-                        <label>$INFO[ListItem.Year,(,)]</label>
-                    </control>
-                    <control type="label">
-                        <top>80</top>
-                        <left>20</left>
-                        <width>300</width>
-                        <height>20</height>
-                        <font>font16</font>
-                        <textcolor>blue</textcolor>
-                        <label>$INFO[ListItem.Genre]</label>
-                    </control>
-                    <control type="label">
-                        <visible>Container.Content(movies) | Container.Content(episodes)</visible>
-                        <top>140</top>
-                        <left>20</left>
-                        <width>300</width>
-                        <height>20</height>
-                        <font>font16</font>
-                        <textcolor>blue</textcolor>
-                        <label>$INFO[ListItem.Rating]</label>
-                    </control>
-					<control type="label">
-                        <visible>Container.Content(tvshows) | Container.Content(Seasons)</visible>
-                        <top>140</top>
-                        <left>20</left>
-                        <width>300</width>
-                        <height>20</height>
-                        <font>font16</font>
-                        <textcolor>blue</textcolor>
-                        <label>$INFO[ListItem.Property(TotalEpisodes),Episodes: ]  ($INFO[ListItem.Property(WatchedEpisodes),, Watched] - $INFO[ListItem.Property(UnWatchedEpisodes), , UnWatched])</label>
-                    </control>
-					<control type="label">
-                        <visible>Container.Content(movies)</visible>
-                        <top>110</top>
-                        <left>20</left>
-                        <width>300</width>
-                        <height>20</height>
-                        <font>font16</font>
-                        <textcolor>blue</textcolor>
-                        <label>$INFO[ListItem.TagLine]</label>
-                    </control>
-                    <control type="label">
-                        <visible>Container.Content(episodes) | Container.Content(tvshows)</visible>
-                        <top>110</top>
-                        <left>20</left>
-                        <width>300</width>
-                        <height>20</height>
-                        <font>font16</font>
-                        <textcolor>blue</textcolor>
-                        <label>First Aired: $INFO[listitem.premiered]</label>
-                    </control>
-                    <control type="label">
-                        <visible>Container.Content(movies) | Container.Content(tvshows)</visible>
-                        <top>170</top>
-                        <left>20</left>
-                        <width>300</width>
-                        <height>20</height>
-                        <font>font16</font>
-                        <textcolor>blue</textcolor>
-                        <label>Rated: $VAR[MediaFlag_MPAA]</label>
-                    </control>
-                    <control type="label">
-                        <visible>Container.Content(movies) | Container.Content(episodes)</visible>
-                        <top>200</top>
-                        <left>20</left>
-                        <width>300</width>
-                        <height>20</height>
-                        <font>font16</font>
-                        <textcolor>blue</textcolor>
-                        <label>Resolution: $INFO[ListItem.VideoResolution]</label>
-                    </control>
-                </control>
-            </focusedlayout>
-        </control>
-		< end of old panel view-->
+        
+		<!--panel view-->
         <control type="panel" id="53">
             <visible>!Container.Content(addons) + ![Container.Content(sets) | Container.Content(directors) | Container.Content(countries)]</visible>
             <animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
@@ -610,7 +372,71 @@
                 </control>
             </focusedlayout>
         </control>
-		<!-- view for MovieSets -->
+		<!-- view list -->
+		
+		<control type="label">
+            <visible>Control.IsVisible(52)</visible>
+            <left>0</left>
+            <top>70</top>
+            <width>1300</width>
+            <height>40</height>
+            <aligny>center</aligny>
+			<align>center</align>
+			<font>font35_title</font>
+            <textcolor>yellow</textcolor>
+            <label>$VAR[RootLabel] $INFO[Container.NumItems, (,)]</label>
+        </control>
+        
+        <control type="panel" id="52">
+            <visible>!Container.Content(addons) + ![Container.Content(sets) | Container.Content(directors) | Container.Content(countries)]</visible>
+            <animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
+            <onleft>9000</onleft>
+            <top>120</top>
+            <left>300</left>
+            <width>900</width>
+            <align>center</align>
+			<viewtype label="List">List</viewtype>
+            <height>515</height>
+            <itemlayout width="290" height="44">
+                <control type="image">
+                    <aligny>center</aligny>
+					<width>30</width>
+                    <height>30</height>
+                    <texture border="20" colordiffuse="design">white.png</texture>
+                </control>
+                <control type="label">
+                    <left>35</left>
+                    <width>250</width>
+                    <height>40</height>
+                    <aligny>center</aligny>
+					<align>left</align>
+					<font>font16</font>
+                    <textcolor>yellow</textcolor>
+                    <label>$INFO[ListItem.Label]</label>
+                </control>
+                
+            </itemlayout>
+            <focusedlayout width="290" height="44">
+                <control type="image">
+                    <aligny>center</aligny>
+					<width>30</width>
+                    <height>30</height>
+                    <texture border="20" colordiffuse="white">white.png</texture>
+                </control>
+                <control type="label">
+                    <left>35</left>
+                    <width>250</width>
+                    <height>40</height>
+                    <aligny>center</aligny>
+					<align>left</align>
+					<font>font16</font>
+                    <textcolor>white</textcolor>
+                    <label>$INFO[ListItem.Label]</label>
+                </control>
+                
+            </focusedlayout>
+        </control>
+		<!-- view for MovieSets directors countries-->
 		<control type="image">
             <visible>[Container.Content(sets) | Container.Content(directors) | Container.Content(countries)]</visible>
             <width>1280</width>
@@ -663,16 +489,33 @@
             <onright>300</onright>
             <orientation>vertical</orientation>
             <itemlayout height="44" width="300">
+                <control type="image">
+                    <width>300</width>
+                    <height>40</height>
+                    <texture flipx="true" border="20" colordiffuse="design">whiterounded.png</texture>
+                </control>
                 <control type="label">
                     <width>290</width>
                     <height>40</height>
                     <align>right</align>
                     <aligny>center</aligny>
-                    <textcolor>yellow</textcolor>
+                    <textcolor>black</textcolor>
 					<info>ListItem.Label</info>
                 </control>
             </itemlayout>
             <focusedlayout height="44" width="300">
+                <control type="image">
+                    <visible>!Control.HasFocus(501)</visible>
+                    <width>300</width>
+                    <height>40</height>
+                    <texture flipx="true" border="20" colordiffuse="design">whiterounded.png</texture>
+                </control>
+                <control type="image">
+                    <visible>Control.HasFocus(501)</visible>
+                    <width>300</width>
+                    <height>40</height>
+                    <texture flipx="true" border="20" colordiffuse="white">whiterounded.png</texture>
+                </control>
                 <control type="label">
                     <visible>!Control.HasFocus(501)</visible>
 					<width>290</width>
@@ -688,7 +531,7 @@
                     <height>40</height>
                     <align>right</align>
                     <aligny>center</aligny>
-                    <textcolor>red</textcolor>
+                    <textcolor>black</textcolor>
 					<info>ListItem.Label</info>
                 </control>
             </focusedlayout>
@@ -706,16 +549,33 @@
             <onright>301</onright>
             <orientation>vertical</orientation>
             <itemlayout height="44" width="300">
+                <control type="image">
+                    <width>300</width>
+                    <height>40</height>
+                    <texture flipx="true" border="20" colordiffuse="design">whiterounded.png</texture>
+                </control>
                 <control type="label">
                     <width>290</width>
                     <height>40</height>
                     <align>right</align>
                     <aligny>center</aligny>
-                    <textcolor>yellow</textcolor>
+                    <textcolor>black</textcolor>
 					<info>ListItem.Label</info>
                 </control>
             </itemlayout>
             <focusedlayout height="44" width="300">
+                <control type="image">
+                    <visible>!Control.HasFocus(300)</visible>
+                    <width>300</width>
+                    <height>40</height>
+                    <texture flipx="true" border="20" colordiffuse="design">whiterounded.png</texture>
+                </control>
+                <control type="image">
+                    <visible>Control.HasFocus(300)</visible>
+                    <width>300</width>
+                    <height>40</height>
+                    <texture flipx="true" border="20" colordiffuse="white">whiterounded.png</texture>
+                </control>
                 <control type="label">
                     <visible>!Control.HasFocus(300)</visible>
 					<width>290</width>
@@ -731,7 +591,7 @@
                     <height>40</height>
                     <align>right</align>
                     <aligny>center</aligny>
-                    <textcolor>red</textcolor>
+                    <textcolor>black</textcolor>
 					<info>ListItem.Label</info>
                 </control>
             </focusedlayout>

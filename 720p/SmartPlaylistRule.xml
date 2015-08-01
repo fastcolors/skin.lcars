@@ -7,7 +7,6 @@
 		<left>240</left>
 		<top>220</top>
 	</coordinates>
-	<include>dialogeffect</include>
 	<controls>
 		<control type="image">
 			<description>background image</description>
@@ -15,15 +14,7 @@
 			<top>0</top>
 			<width>800</width>
 			<height>280</height>
-			<texture border="40">DialogBack.png</texture>
-		</control>
-		<control type="image">
-			<description>Dialog Header image</description>
-			<left>40</left>
-			<top>16</top>
-			<width>720</width>
-			<height>40</height>
-			<texture>dialogheader.png</texture>
+			<texture border="40">dialog.png</texture>
 		</control>
 		<control type="label">
 			<description>header label</description>
@@ -36,19 +27,18 @@
 			<align>center</align>
 			<aligny>center</aligny>
 			<textcolor>selected</textcolor>
-			<shadowcolor>black</shadowcolor>
 		</control>
 		<control type="button">
 			<description>Close Window button</description>
 			<left>710</left>
 			<top>15</top>
-			<width>64</width>
-			<height>32</height>
+			<width>30</width>
+			<height>30</height>
 			<label>-</label>
 			<font>-</font>
 			<onclick>PreviousMenu</onclick>
-			<texturefocus>DialogCloseButton-focus.png</texturefocus>
-			<texturenofocus>DialogCloseButton.png</texturenofocus>
+			<texturefocus>closefocus.png</texturefocus>
+			<texturenofocus>close.png</texturenofocus>
 			<onleft>9001</onleft>
 			<onright>9001</onright>
 			<onup>9001</onup>
@@ -65,7 +55,6 @@
 			<aligny>center</aligny>
 			<font>font12</font>
 			<textcolor>blue</textcolor>
-			<shadowcolor>black</shadowcolor>
 			<label>21422</label>
 		</control>
 		<control type="group" id="9001">
@@ -76,8 +65,8 @@
 				<width>365</width>
 				<height>40</height>
 				<font>-</font>
-				<texturefocus border="3">button-focus2.png</texturefocus>
-				<texturenofocus border="3">button-nofocus.png</texturenofocus>
+				<texturenofocus colordiffuse="design" border="20">whiteallrounded.png</texturenofocus>
+				<texturefocus colordiffuse="white" border="20">whiteallrounded.png</texturefocus>
 				<onright>16</onright>
 				<onleft>16</onleft>
 				<onup>9000</onup>
@@ -93,8 +82,7 @@
 				<label>$INFO[Control.GetLabel(15)]</label>
 				<align>left</align>
 				<aligny>center</aligny>
-				<textcolor>white</textcolor>
-				<shadowcolor>black</shadowcolor>
+				<textcolor>black</textcolor>
 			</control>
 			<control type="spincontrolex" id="16">
 				<description>Rule operator</description>
@@ -103,8 +91,8 @@
 				<width>365</width>
 				<height>40</height>
 				<font>-</font>
-				<texturefocus border="3">button-focus2.png</texturefocus>
-				<texturenofocus border="3">button-nofocus.png</texturenofocus>
+				<texturenofocus colordiffuse="design" border="20">whiteallrounded.png</texturenofocus>
+				<texturefocus colordiffuse="white" border="20">whiteallrounded.png</texturefocus>
 				<onright>15</onright>
 				<onleft>15</onleft>
 				<onup>9000</onup>
@@ -120,8 +108,7 @@
 				<label>$INFO[Control.GetLabel(16)]</label>
 				<align>left</align>
 				<aligny>center</aligny>
-				<textcolor>white</textcolor>
-				<shadowcolor>black</shadowcolor>
+				<textcolor>black</textcolor>
 			</control>
 		</control>
 		<control type="button" id="17">
@@ -133,9 +120,10 @@
 			<font>font13</font>
 			<aligny>center</aligny>
 			<invalidcolor>invalid</invalidcolor>
-			<texturefocus border="3">button-focus2.png</texturefocus>
-			<texturenofocus border="3">button-nofocus.png</texturenofocus>
+			<textcolor>white</textcolor>
 			<label>-</label>
+			<texturenofocus border="20">thumb-focus2.png</texturenofocus>
+			<texturefocus border="20">thumb-focus.png</texturefocus>
 			<onup>9001</onup>
 			<onleft>20</onleft>
 			<onright>20</onright>
@@ -149,8 +137,6 @@
 			<height>40</height>
 			<align>center</align>
 			<aligny>center</aligny>
-			<texturefocus border="3">button-focus.png</texturefocus>
-			<texturenofocus border="3">button-nofocus.png</texturenofocus>
 			<label>1024</label>
 			<font>font12_title</font>
 			<onup>9001</onup>

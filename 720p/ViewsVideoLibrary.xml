@@ -396,16 +396,18 @@
             <width>900</width>
             <align>center</align>
 			<viewtype label="List">List</viewtype>
-            <height>515</height>
+            <height>525</height>
             <itemlayout width="300" height="44">
                 <control type="image">
                     <top>5</top>
-                    <width>40</width>
+                    <width>44</width>
+                    <aspectratio>strech</aspectratio>
                     <height>30</height>
-                    <texture border="20" colordiffuse="design">white.png</texture>
+                    <texture>$VAR[MediaFlag_ico]</texture>
                 </control>
-                <control type="label">
-                    <top>5</top>
+				<control type="label">
+                    <left>2</left>
+					<top>5</top>
                     <width>40</width>
                     <height>30</height>
                     <aligny>center</aligny>
@@ -427,13 +429,20 @@
             </itemlayout>
             <focusedlayout width="300" height="44">
                 <control type="image">
-                    <top>5</top>
-                    <width>40</width>
-                    <height>30</height>
-                    <texture border="20" colordiffuse="white">white.png</texture>
+                    <width>300</width>
+                    <height>40</height>
+                    <texture border="5">thumb-focus.png</texture>
                 </control>
-                <control type="label">
+				<control type="image">
                     <top>5</top>
+                    <aspectratio>strech</aspectratio>
+                    <width>44</width>
+                    <height>30</height>
+                    <texture>$VAR[MediaFlag_ico]</texture>
+                </control>
+				<control type="label">
+                    <left>2</left>
+					<top>5</top>
                     <width>40</width>
                     <height>30</height>
                     <aligny>center</aligny>

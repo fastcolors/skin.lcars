@@ -72,9 +72,40 @@
 		<value condition="[SubString(Container(311).ListItem.MPAA,UK:18)] | [!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,UK:18)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,UK:18)]">18</value>
 		<value condition="[SubString(Container(311).ListItem.MPAA,mpaa,UK:X)] | [!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,UK:X)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,UK:X)]">X</value>
 		<value condition="IsEmpty(ListItem.mpaa)"> </value>
-
 	</variable>
 
+	<variable name="MediaFlag_ico">
+		<!-- US (IMDB) -->
+        <value condition="SubString(ListItem.mpaa,Rated G,Left)">epg-genres/96.png</value>
+        <value condition="SubString(ListItem.mpaa,Rated PG,Left)">epg-genres/32.png</value>
+        <value condition="SubString(ListItem.mpaa,Rated PG-13,Left)">epg-genres/48.png</value>
+        <value condition="SubString(ListItem.mpaa,Rated R,Left)">epg-genres/64.png</value>
+        <value condition="SubString(ListItem.mpaa,Rated NC,Left)">epg-genres/16.png</value>
+        <!-- US (TMDB) -->
+        <value condition="StringCompare(ListItem.mpaa,G)">epg-genres/96.png</value>
+        <value condition="StringCompare(ListItem.mpaa,PG)">epg-genres/32.png</value>
+        <value condition="StringCompare(ListItem.mpaa,PG-13)">epg-genres/48.png</value>
+        <value condition="StringCompare(ListItem.mpaa,R)">epg-genres/16.png</value>
+        <value condition="StringCompare(ListItem.mpaa,NC-17)">epg-genres/64.png</value>
+        <!-- US (TV) -->
+        <value condition="SubString(ListItem.mpaa,TV-Y)">epg-genres/96.png</value>
+        <value condition="SubString(ListItem.mpaa,TV-Y7)">epg-genres/96.png</value>
+        <value condition="SubString(ListItem.mpaa,TV-G)">epg-genres/96.png</value>
+        <value condition="SubString(ListItem.mpaa,TV-PG)">epg-genres/32.png</value>
+        <value condition="SubString(ListItem.mpaa,TV-14)">epg-genres/48.png</value>
+        <value condition="SubString(ListItem.mpaa,TV-MA)">epg-genres/64.png</value>
+        <!-- United Kingdom -->
+        <value condition="SubString(ListItem.mpaa,UK:U)">epg-genres/96.png</value>
+        <value condition="SubString(ListItem.mpaa,UK:PG)">epg-genres/32.png</value>
+        <value condition="SubString(ListItem.mpaa,UK:12A)">epg-genres/48.png</value>
+        <value condition="SubString(ListItem.mpaa,UK:12)">epg-genres/48.png</value>
+        <value condition="SubString(ListItem.mpaa,UK:15)">epg-genres/48.png</value>
+        <value condition="SubString(ListItem.mpaa,UK:18)">epg-genres/16.png</value>
+        <value condition="SubString(ListItem.mpaa,UK:X)">epg-genres/64.png</value>
+        <!--general-->
+        <value>epg-genres/128.png</value>
+	</variable>
+	
 	<variable name="updlibrary">
 		<value condition="library.isscanning">$LOCALIZE[13353]</value>
 		<value condition="StringCompare(Skin.String(sourceshome),sources://music/)">$LOCALIZE[653][CR]$LOCALIZE[292]</value>
@@ -96,4 +127,6 @@
         <value condition="IsEmpty(Container.FolderName)">$INFO[System.CurrentWindow]</value>
         <value>$INFO[Container.FolderName]</value>
     </variable>
+	
+	
 </includes>

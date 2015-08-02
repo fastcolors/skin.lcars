@@ -618,9 +618,9 @@
                 <texturefocus>-</texturefocus>
                 <texturenofocus>-</texturenofocus>
                 <onup>9000</onup>
-                <!--<onleft>9000</onleft>-->
-                <onleft condition="Container(311).Position(0)">9000</onleft>
-                <onleft condition="!Container(311).Position(0)">Control.Move(311,-1)</onleft>
+                <onleft>Control.Move(311,-1)</onleft>
+                <!--<onleft condition="Container(311).Position(0)">Control.Move(311,-1)</onleft>
+                <onleft condition="!Container(311).Position(0)">Control.Move(311,-1)</onleft>-->
                 <onright>Control.Move(311,1)</onright>
                 <label>-</label>
                 <onclick>$INFO[Container(311).ListItem.FileNameAndPath]</onclick>

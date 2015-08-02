@@ -55,9 +55,9 @@
 				<height>350</height>
 				<onup>450</onup>
 				<onleft>Dialog.Close(Favourites)</onleft>
-				<onright>450</onright>
+				<onright>30</onright>
 				<ondown>450</ondown>
-				<pagecontrol>-</pagecontrol>
+				<pagecontrol>30</pagecontrol>
 				<scrolltime>200</scrolltime>
 				<itemlayout height="45">
 					<control type="image">
@@ -100,6 +100,20 @@
 					</control>
 				</focusedlayout>
 			</control>
+			<control type="scrollbar" id="30">
+				<left>40r</left>
+				<top>250</top>
+				<width>10</width>
+				<height>350</height>
+				<texturesliderbackground border="4">ScrollbarBG_light.png</texturesliderbackground>
+				<textureslidernib border="4">ScrollerNF.png</textureslidernib>
+				<textureslidernibfocus>ScrollerFO.png</textureslidernibfocus>
+				<onleft>450</onleft>
+				<onright>450</onright>
+				<showonepage>false</showonepage>
+				<orientation>vertical</orientation>
+			</control>
+			
 			<!--control type="label">
 				<description>Page label</description>
 				<right>30</right>

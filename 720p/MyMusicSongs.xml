@@ -70,6 +70,13 @@
                 <onclick>right</onclick>
                 <onclick>Filter</onclick>
             </control>
+			<control type="button" id="77">
+				<description>Favorites</description>
+				<include>9000butts</include>
+				<visible>!Skin.HasSetting(HomeMenuNoFavoritesButton)</visible>
+                <label>1036</label>
+                <onclick>ActivateWindow(134)</onclick>
+			</control>
         </control>
     </controls>
 </window>

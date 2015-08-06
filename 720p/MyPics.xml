@@ -59,6 +59,13 @@
 				<include>9000butts</include>
 				<label>13319</label>
 			</control>
+			<control type="button" id="77">
+				<description>Favorites</description>
+				<include>9000butts</include>
+				<visible>!Skin.HasSetting(HomeMenuNoFavoritesButton)</visible>
+                <label>1036</label>
+                <onclick>ActivateWindow(134)</onclick>
+			</control>
 		</control>
 		<control type="label">
 			<centerleft>730</centerleft>

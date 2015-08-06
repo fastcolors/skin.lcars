@@ -1256,6 +1256,13 @@
                 <label>19184</label>
                 <visible>Window.IsActive(TVRecordings) | Window.IsActive(RadioRecordings)</visible>
             </control>
+			<control type="button" id="77">
+				<description>Favorites</description>
+				<include>9000butts</include>
+				<visible>!Skin.HasSetting(HomeMenuNoFavoritesButton)</visible>
+                <label>1036</label>
+                <onclick>ActivateWindow(134)</onclick>
+			</control>
 		</control>
     </include>
     <include name="TVNextAiredListCommonLayout">

@@ -13,7 +13,6 @@
             <visible>Control.IsVisible(50) | Control.IsVisible(510)</visible>
             <include>background</include>
         </control>
-		<include>addonview</include> <!-- view id = 510 -->
         <include>lcarsview</include> <!-- view id = 50 ,52, 53-->
         <include>allwindows</include>
         <control type="grouplist" id="9000">

@@ -625,6 +625,54 @@
             </focusedlayout>
             <content>$VAR[content]</content>
         </control>
+		        <control type="panel" id="510">
+        <visible>Container.Content(addons)</visible>
+            <animation effect="fade" start="100" end="80" condition="!Control.HasFocus(510) + !Control.HasFocus(60)">Conditional</animation>
+            <onup>9000</onup>
+            <onleft>9000</onleft>
+            <top>125</top>
+            <left>330</left>
+            <width>900</width>
+            <height>300</height>
+            <pagecontrol>60</pagecontrol>
+            <ondown>60</ondown>
+            <orientation>horizontal</orientation>
+            <include>squareshome</include>
+        </control>
+        <control type="label">
+            <visible>Control.HasFocus(510)</visible>
+            <top>469</top>
+            <centerleft>670</centerleft>
+            <width>660</width>
+            <height>30</height>
+            <font>font30</font>
+            <textcolor>yellow</textcolor>
+            <align>center</align>
+            <label>$INFO[ListItem.Label] $INFO[ListItem.Label2, • ]</label>
+        </control>
+        <control type="textbox">
+            <visible>Control.HasFocus(510)</visible>
+            <top>500</top>
+            <centerleft>670</centerleft>
+            <width>660</width>
+            <height>150</height>
+            <textcolor>yellow</textcolor>
+            <font>font14_plot</font>
+            <align>justify</align>
+            <label>$INFO[ListItem.Property(Addon.Description)]</label>
+        </control>
+		<control type="scrollbar" id="60">
+            <visible>Control.IsVisible(510)</visible>
+            <top>400</top>
+            <left>350</left>
+            <onup>510</onup>
+            <orientation>horizontal</orientation>
+            <width>860</width>
+            <height>6</height>
+            <texturesliderbackground border="4">HScrollbarBG.png</texturesliderbackground>
+            <textureslidernib border="4">HScrollerNF.png</textureslidernib>
+            <textureslidernibfocus>HScrollerFO.png</textureslidernibfocus>
+        </control>
   
     </include>
 </includes>

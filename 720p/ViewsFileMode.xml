@@ -86,5 +86,17 @@
             <align>justify</align>
             <label>$INFO[ListItem.Property(Addon.Description)]</label>
         </control>
+		<control type="scrollbar" id="60">
+            <visible>Control.IsVisible(510)</visible>
+            <top>400</top>
+            <left>350</left>
+            <onup>510</onup>
+            <orientation>horizontal</orientation>
+            <width>860</width>
+            <height>6</height>
+            <texturesliderbackground border="4">HScrollbarBG.png</texturesliderbackground>
+            <textureslidernib border="4">HScrollerNF.png</textureslidernib>
+            <textureslidernibfocus>HScrollerFO.png</textureslidernibfocus>
+        </control>
     </include>
 </includes>

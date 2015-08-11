@@ -73,7 +73,7 @@
                         		<width>150</width>
                         		<height>150</height>
                         		<aspectratio>scale</aspectratio>
-                        		<texture>$INFO[ListItem.Icon]</texture>
+                        		<texture fallback="posterfallback.png">$INFO[ListItem.Icon]</texture>
 					<bordertexture border="40">shadow2.png</bordertexture>
 					<bordersize>10</bordersize>
                     		</control>
@@ -84,7 +84,7 @@
                         		<width>158</width>
                         		<height>158</height>
                         		<aspectratio>scale</aspectratio>
-                        		<texture>$INFO[ListItem.Icon]</texture>
+                        		<texture fallback="posterfallback.png">$INFO[ListItem.Icon]</texture>
                         		<bordertexture  colordiffuse="red" border="40">shadow2.png</bordertexture>
 					<bordersize>10</bordersize>
 				</control>

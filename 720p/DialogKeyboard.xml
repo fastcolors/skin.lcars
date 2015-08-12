@@ -1,32 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">300</defaultcontrol>
-	<animation type="WindowOpen" reversible="false">
-		<effect type="slide" start="0,600" end="0,0" easing="out" tween="back" time="400" />
-		<effect type="fade" start="0" end="100" time="300" />
-	</animation>
-	<animation type="WindowClose" reversible="false">
-		<effect type="slide" start="0,0" end="0,600" easing="in" tween="back" time="400" />
-		<effect type="fade" start="100" end="0" time="300" />
-	</animation>
-	
 	<controls>
 		<control type="group">
 			<top>300</top>
-			<visible>!Window.IsVisible(numericinput)</visible>
+			<animation effect="slide" start="1100,0" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="1100,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
 			<control type="image">
-				<left>0</left>
+				<left>185</left>
 				<top>0</top>
 				<width>1280</width>
-				<height>400</height>
+				<height>350</height>
 				<texture border="40">dialog.png</texture>
 			</control>
 			
 			
 			
 			<control type="image">
-				<centerleft>650</centerleft>
-				<top>60</top>
+				<left>310</left>
+				<top>30</top>
 				<width>850</width>
 				<height>40</height>
 				<aspectratio>stretch</aspectratio>
@@ -34,8 +26,8 @@
 			</control>
 			<control type="edit" id="312">
 				<description>Edit Text</description>
-				<top>60</top>
-				<left>230</left>
+				<top>30</top>
+				<left>320</left>
 				<width>830</width>
 				<height>40</height>
 				<align>center</align>
@@ -54,8 +46,8 @@
 				<texture>DialogHeader.png</texture>
 			</control-->
 			<control type="group">
-				<left>115</left>
-				<top>110</top>
+				<left>210</left>
+				<top>80</top>
 				<!-- 1st row -->
 				<control type="grouplist">
 					<itemgap>2</itemgap>

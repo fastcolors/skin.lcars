@@ -2,48 +2,19 @@
 <includes>
     <include name="PictureWrapView">
         <control type="panel" id="50">
-            <animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
+        <animation effect="fade" start="100" end="80" condition="!Control.HasFocus(50) + !Control.HasFocus(60)">Conditional</animation>
             <onup>9000</onup>
-            <top>135</top>
-            <left>320</left>
-            <width>910</width>
-            <height>280</height>
+            <onleft>9000</onleft>
+            <top>125</top>
+            <left>330</left>
+            <width>900</width>
+            <height>300</height>
+            <pagecontrol>60</pagecontrol>
+            <ondown>60</ondown>
             <orientation>horizontal</orientation>
-            <itemlayout width="260" height="280">
-                <control type="image">
-                    <centerleft>130</centerleft>
-                    <centertop>140</centertop>
-                    <width>200</width>
-                    <height>200</height>
-                    <aspectratio>scale</aspectratio>
-                    <texture fallback="posterfallback.png">$INFO[ListItem.Icon]</texture>
-                </control>
-                <control type="label">
-                    <centerleft>130</centerleft>
-                    <align>center</align>
-                    <textcolor>white</textcolor>
-                    <info>ListItem.Label</info>
-                </control>
-            </itemlayout>
-            <focusedlayout width="260" height="280">
-                <control type="image">
-                    <centerleft>130</centerleft>
-                    <centertop>140</centertop>
-                    <width>208</width>
-                    <height>208</height>
-                    <aspectratio>scale</aspectratio>
-                    <texture fallback="posterfallback.png">$INFO[ListItem.Icon]</texture>
-                    <bordertexture>white.png</bordertexture>
-                    <bordersize>4</bordersize>
-                </control>
-                <control type="label">
-                    <centerleft>130</centerleft>
-                    <align>center</align>
-                    <textcolor>white</textcolor>
-                    <info>ListItem.Label</info>
-                </control>
-            </focusedlayout>
+            <include>squareshome</include>
         </control>
+        
         <control type="textbox">
             <top>470</top>
             <centerleft>670</centerleft>
@@ -53,5 +24,18 @@
             <align>justify</align>
             <label>$INFO[ListItem.PictureDateTime,[COLOR=blue]$LOCALIZE[31326][/COLOR] - ][CR]$INFO[ListItem.PictureResolution,[COLOR=blue]$LOCALIZE[31327][/COLOR] - ][CR]$INFO[ListItem.PictureCamModel,[COLOR=blue]$LOCALIZE[21823][/COLOR] - ][CR]$INFO[ListItem.PictureFlashUsed,[COLOR=blue]$LOCALIZE[21833][/COLOR] - ]</label>
         </control>
+		<control type="scrollbar" id="60">
+            <visible>Control.IsVisible(50)</visible>
+            <top>400</top>
+            <left>350</left>
+            <onup>50</onup>
+            <orientation>horizontal</orientation>
+            <width>860</width>
+            <height>6</height>
+            <texturesliderbackground border="4">HScrollbarBG.png</texturesliderbackground>
+            <textureslidernib border="4">HScrollerNF.png</textureslidernib>
+            <textureslidernibfocus>HScrollerFO.png</textureslidernibfocus>
+        </control>
+  
     </include>
 </includes>

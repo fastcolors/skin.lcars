@@ -71,7 +71,7 @@
         <width>30</width>
         <height>18</height>
         <font>font14</font>
-        <textcolor>white</textcolor>
+        <textcolor>black</textcolor>
         <disabledcolor>grey3</disabledcolor>
         <subtype>text</subtype>
         <textoffsetx>-5</textoffsetx>
@@ -173,8 +173,8 @@
         <top>200</top>
         <width>300</width>
         <height>40</height>
-        <texturefocus colordiffuse="lightblue" border="20">whiteallrounded.png</texturefocus>
-        <texturenofocus colordiffuse="blue" border="20">whiteallrounded.png</texturenofocus>
+        <texturefocus colordiffuse="white" border="20">whiteallrounded.png</texturefocus>
+        <texturenofocus colordiffuse="osd" border="20">whiteallrounded.png</texturenofocus>
         <font>font14</font>
         <textcolor>black</textcolor>
         <disabledcolor>grey3</disabledcolor>
@@ -184,9 +184,9 @@
         <pulseonselect>no</pulseonselect>
     </default>
     <default type="scrollbar">
-        <width>9</width>
-        <texturesliderbackground border="4">ScrollbarBG.png</texturesliderbackground>
-        <textureslidernib>ScrollerNF.png</textureslidernib>
+        <width>10</width>
+        <texturesliderbackground border="4">ScrollbarBG_light.png</texturesliderbackground>
+        <textureslidernib border="4">ScrollerNF.png</textureslidernib>
         <textureslidernibfocus>ScrollerFO.png</textureslidernibfocus>
         <showonepage>false</showonepage>
     </default>

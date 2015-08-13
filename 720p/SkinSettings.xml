@@ -52,7 +52,7 @@
 				<!---SKIN RESET-->
 				<item id="11">
 					<label>10035</label>
-					<onclick>ActivateWindow(1113)</onclick>
+					<onclick>noop</onclick>
 				</item>
 			</content>
 		</control>
@@ -210,5 +210,66 @@
 			</control>
 
 		</control>
+		<control type="image">
+			<visible>Container(9000).HasFocus(11)</visible>
+            <centerleft>720</centerleft>
+            <top>160</top>
+            <width>1090</width>
+            <height>400</height>
+            <aspectratio>keep</aspectratio>
+            <texture>redalert.png</texture>
+        </control>
+        <control type="label" id="1">
+			<visible>Container(9000).HasFocus(11)</visible>
+            <description>header label</description>
+            <centerleft>720</centerleft>
+            <top>100</top>
+            <width>580</width>
+            <height>30</height>
+            <font>font35_title</font>
+            <label>31022</label>
+            <align>center</align>
+            <aligny>center</aligny>
+            <textcolor>red</textcolor>
+        </control>
+        
+		<control type="grouplist" id="9001">
+			<visible>Container(9000).HasFocus(11)</visible>
+			<centerleft>720</centerleft>
+            <top>580</top>
+            <orientation>horizontal</orientation>
+            <align>center</align>
+            <width>460</width>
+            <height>40</height>
+            <onleft>9000</onleft>
+			<onright>9000</onright>
+			<control type="button" id="11">
+                <description>Yes button</description>
+                <texturenofocus>-</texturenofocus>
+                <texturefocus colordiffuse="red" border="20">whiteallrounded.png</texturefocus>
+                <width>220</width>
+                <height>40</height>
+                <label>107</label>
+                <textcolor>yellow</textcolor>
+                <font>font_MainMenu</font>
+                <align>center</align>
+                <textoffsety>0</textoffsety>
+                <onclick>Skin.ResetSettings</onclick>
+                <onclick>Close</onclick>
+            </control>
+            <control type="button" id="10">
+                <description>No button</description>
+                <texturenofocus>-</texturenofocus>
+                <texturefocus colordiffuse="red" border="20">whiteallrounded.png</texturefocus>
+                <width>220</width>
+                <height>40</height>
+                <label>106</label>
+                <textcolor>yellow</textcolor>
+                <font>font_MainMenu</font>
+                <align>center</align>
+                <textoffsety>0</textoffsety>
+                <onclick>Close</onclick>
+            </control>
+        </control>
 	</controls>
 </window>

@@ -34,7 +34,7 @@
             <left>50</left>
             <centertop>320</centertop>
             <width>320</width>
-            <height max="520">auto</height>
+            <height max="480">auto</height>
             <onup>3</onup>
             <ondown>5</ondown>
             <onleft>61</onleft>

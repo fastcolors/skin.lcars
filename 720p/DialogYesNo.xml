@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
     <defaultcontrol always="true">10</defaultcontrol>
-    <include>dialogeffect</include>
-    <controls>
+    <include>animation</include>
+	<controls>
         <control type="image">
             <centerleft>640</centerleft>
             <centertop>360</centertop>
@@ -20,7 +20,7 @@
             <label>-</label>
             <align>center</align>
             <aligny>center</aligny>
-            <textcolor>darkgreen</textcolor>
+            <textcolor>yellow</textcolor>
         </control>
         <control type="textbox" id="9">
             <description>text</description>

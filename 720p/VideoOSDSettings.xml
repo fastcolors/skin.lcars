@@ -8,7 +8,7 @@
 	</coordinates>
 	<controls>
 		<control type="group">
-			<animation effect="fade" start="100" end="0" time="400" condition="Window.IsVisible(SliderDialog) | Window.IsVisible(FileBrowser)">Conditional</animation>
+			<include>animation</include>
 			<control type="image">
 				<description>background image</description>
 				<left>0</left>
@@ -16,14 +16,6 @@
 				<width>800</width>
 				<height>600</height>
 				<texture border="40">dialog.png</texture>
-			</control>
-			<control type="image">
-				<description>Dialog Header image</description>
-				<left>40</left>
-				<top>16</top>
-				<width>720</width>
-				<height>40</height>
-				<texture>dialogheader.png</texture>
 			</control>
 			<control type="label">
 				<description>header label</description>

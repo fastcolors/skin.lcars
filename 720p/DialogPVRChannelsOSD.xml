@@ -3,7 +3,7 @@
 	<defaultcontrol always="true">11</defaultcontrol>
 	<coordinates>
 		<system>1</system>
-		<left>780</left>
+		<left>800</left>
 		<top>30</top>
 	</coordinates>
 	<include>animation</include>
@@ -13,13 +13,13 @@
 				<description>background image</description>
 				<left>0</left>
 				<top>30</top>
-				<width>480</width>
+				<width>520</width>
 				<height>560</height>
 				<texture border="40">dialog.png</texture>
 			</control>
 			<control type="button">
 				<description>Close Window button</description>
-				<left>390</left>
+				<left>25</left>
 				<top>45</top>
 				<width>30</width>
 				<height>30</height>

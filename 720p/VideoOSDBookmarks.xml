@@ -2,7 +2,7 @@
 <window id="125">
 	<defaultcontrol always="true">2</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-	<include>OpenClose</include>
+		<include>animation</include>
 	<controls>
 		<control type="image" description="Background">
 			<top>430</top>

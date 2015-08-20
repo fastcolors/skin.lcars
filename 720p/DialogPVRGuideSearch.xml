@@ -6,6 +6,7 @@
 		<left>210</left>
 		<top>65</top>
 	</coordinates>
+	<include>animation</include>
 	<controls>
 		<control type="image">
 			<description>background image</description>

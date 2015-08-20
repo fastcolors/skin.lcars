@@ -3,18 +3,21 @@
     <defaultcontrol always="false">9000</defaultcontrol>
     <zorder>2</zorder>
     <controls>
-        
+		<control type="group">
+		<include>animation</include>
+			<left>500</left>
+			<top>32</top>
 			<control type="image">
 				<description>background image</description>
 				<left>0</left>
 				<top>30</top>
-				<width>730</width>
+				<width>830</width>
 				<height>560</height>
 				<texture border="40">dialog.png</texture>
 			</control>
 			<control type="button">
 				<description>Close Window button</description>
-				<left>640</left>
+				<left>20</left>
 				<top>45</top>
 				<width>30</width>
 				<height>30</height>
@@ -86,6 +89,7 @@
                     <autoscroll delay="3000" time="3000" repeat="10000">Window.IsVisible(142)</autoscroll>
                 </control>
 			</control>
+		</control>
 		</control>
 	</controls>
 </window>

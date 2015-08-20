@@ -83,7 +83,7 @@
             <control type="image">
 				<top>-28</top>
 				<centerleft>306</centerleft>
-				<width>390</width>
+				<width>620</width>
 				<height>214</height>
 				<!--<aspectratio>keep</aspectratio>-->
 				<texture background="true" border="10">videowindowbg.png</texture>

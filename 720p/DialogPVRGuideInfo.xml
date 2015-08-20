@@ -210,6 +210,8 @@
 		</control>			
 			<control type="group">
 			<visible>Window.IsVisible(FullscreenVideo) | Window.IsVisible(Visualisation)</visible>
+			<include>animation</include>
+			<left>580</left>
 			<control type="image">
 				<description>background image</description>
 				<left>0</left>
@@ -231,23 +233,6 @@
 				<textcolor>selected</textcolor>
 				<shadowcolor>black</shadowcolor>
 			</control>
-			<control type="button">
-				<description>Close Window button</description>
-				<left>640</left>
-				<top>45</top>
-				<width>30</width>
-				<height>30</height>
-				<label>-</label>
-				<font>-</font>
-				<onclick>PreviousMenu</onclick>
-				<texturefocus>closefocus.png</texturefocus>
-				<texturenofocus>close.png</texturenofocus>
-				<onleft>10</onleft>
-				<onright>10</onright>
-				<onup>10</onup>
-				<ondown>10</ondown>
-				<visible>system.getbool(input.enablemouse)</visible>
-			</control>
 			<control type="label">
 				<description>Title label</description>
 				<left>40</left>
@@ -259,7 +244,6 @@
 				<align>center</align>
 				<aligny>center</aligny>
 				<textcolor>blue</textcolor>
-				<shadowcolor>black</shadowcolor>
 			</control>
 			<control type="group">
 				<control type="group">

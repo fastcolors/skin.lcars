@@ -6,6 +6,7 @@
 		<left>415</left>
 		<top>275</top>
 	</coordinates>
+	<include>animation</include>
 	<controls>
 		<control type="group">
 			<control type="image">

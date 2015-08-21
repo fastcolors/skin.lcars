@@ -1382,6 +1382,14 @@
 			<height>720</height>
 			<texture colordiffuse="button4" >background5.png</texture>
 		</control>
+		<control type="image">
+            <left>285r</left>
+            <top>512</top>
+            <width>242</width>
+            <height>101</height>
+            <texture>lcars1.gif</texture>
+        </control>
+        
     </include>
 	<include name="dialog2">
         <control type="image">

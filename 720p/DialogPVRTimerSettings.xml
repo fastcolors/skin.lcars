@@ -3,8 +3,8 @@
 	<defaultcontrol>29</defaultcontrol>
 	<coordinates>
 		<system>1</system>
-		<left>275</left>
-		<top>30</top>
+		<left>550</left>
+		<top>65</top>
 	</coordinates>
 	<include>animation</include>
 	<controls>
@@ -12,8 +12,8 @@
 			<description>background image</description>
 			<left>0</left>
 			<top>0</top>
-			<width>730</width>
-			<height>660</height>
+			<width>830</width>
+			<height>600</height>
 			<texture border="40">dialog.png</texture>
 		</control>
 		<control type="label" id="2">
@@ -29,29 +29,12 @@
 			<textcolor>selected</textcolor>
 			<shadowcolor>black</shadowcolor>
 		</control>
-		<control type="button">
-			<description>Close Window button</description>
-			<left>640</left>
-			<top>15</top>
-			<width>30</width>
-			<height>30</height>
-			<label>-</label>
-			<font>-</font>
-			<onclick>PreviousMenu</onclick>
-			<texturefocus>closefocus.png</texturefocus>
-			<texturenofocus>close.png</texturenofocus>
-			<onleft>10</onleft>
-			<onright>10</onright>
-			<onup>10</onup>
-			<ondown>10</ondown>
-			<visible>system.getbool(input.enablemouse)</visible>
-		</control>
 		<control type="grouplist" id="5">
 			<description>control area</description>
 			<left>30</left>
 			<top>70</top>
 			<width>670</width>
-			<height>510</height>
+			<height>410</height>
 			<itemgap>5</itemgap>
 			<onup>9001</onup>
 			<ondown>9001</ondown>
@@ -60,7 +43,7 @@
 		</control>
 		<control type="group" id="9001">
 			<left>160</left>
-			<top>590</top>
+			<top>490</top>
 			<control type="button" id="28">
 				<description>OK Button</description>
 				<left>0</left>

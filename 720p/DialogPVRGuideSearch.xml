@@ -3,7 +3,7 @@
 	<defaultcontrol always="true">9</defaultcontrol>
 	<coordinates>
 		<system>1</system>
-		<left>210</left>
+		<left>410</left>
 		<top>65</top>
 	</coordinates>
 	<include>animation</include>
@@ -12,8 +12,8 @@
 			<description>background image</description>
 			<left>0</left>
 			<top>0</top>
-			<width>865</width>
-			<height>605</height>
+			<width>965</width>
+			<height>600</height>
 			<texture border="40">dialog.png</texture>
 		</control>
 		<control type="label">
@@ -27,25 +27,7 @@
 			<align>center</align>
 			<aligny>center</aligny>
 			<textcolor>selected</textcolor>
-			<shadowcolor>black</shadowcolor>
 			<visible>!pvr.IsPlayingRadio</visible>
-		</control>
-		<control type="button">
-			<description>Close Window button</description>
-			<left>775</left>
-			<top>15</top>
-			<width>30</width>
-			<height>30</height>
-			<label>-</label>
-			<font>-</font>
-			<onclick>PreviousMenu</onclick>
-			<texturefocus>closefocus.png</texturefocus>
-			<texturenofocus>close.png</texturenofocus>
-			<onleft>3</onleft>
-			<onright>3</onright>
-			<onup>3</onup>
-			<ondown>3</ondown>
-			<visible>system.getbool(input.enablemouse)</visible>
 		</control>
 		<control type="label">
 			<description>Search string</description>
@@ -58,7 +40,6 @@
 			<align>left</align>
 			<aligny>center</aligny>
 			<textcolor>blue</textcolor>
-			<shadowcolor>black</shadowcolor>
 		</control>
 		<control type="image">
 			<left>30</left>
@@ -99,7 +80,7 @@
 		</control>
 		<control type="grouplist">
 			<left>30</left>
-			<top>185</top>
+			<top>180</top>
 			<itemgap>8</itemgap>
 			<height>350</height>
 			<width>400</width>
@@ -226,7 +207,7 @@
 		</control>
 		<control type="grouplist">
 			<left>440</left>
-			<top>185</top>
+			<top>180</top>
 			<itemgap>8</itemgap>
 			<height>350</height>
 			<width>400</width>
@@ -339,7 +320,7 @@
 			</control>
 		</control>
 		<control type="group" id="9000">
-			<top>540</top>
+			<top>535</top>
 			<left>125</left>
 			<onup>9</onup>
 			<ondown>9000</ondown>

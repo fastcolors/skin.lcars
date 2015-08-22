@@ -234,7 +234,8 @@
 			</control>
 			<control type="image">
 				<top>16</top>
-				<width>400</width>
+				<centerleft>200</centerleft>
+				<width>220</width>
 				<height>130</height>
 				<aspectratio scalediffuse="false">keep</aspectratio>
 				<texture  background="true" >$INFO[ListItem.Icon]</texture>
@@ -242,7 +243,8 @@
 			</control>
 			<control type="videowindow">
 				<top>16</top>
-				<width>400</width>
+				<centerleft>200</centerleft>
+				<width>220</width>
 				<height>130</height>
 				<visible>Player.HasVideo</visible>
 				<animation effect="slide" start="0,0" end="-2000,0" time="0">WindowClose</animation>

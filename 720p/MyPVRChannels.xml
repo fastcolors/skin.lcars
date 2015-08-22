@@ -89,18 +89,18 @@
 				<texture background="true" border="10">videowindowbg.png</texture>
 			</control>
             <control type="image">
-                <left>5</left>
+                <left>55</left>
                 <top>5</top>
-                <width>600</width>
+                <width>500</width>
                 <height>150</height>
                 <aspectratio scalediffuse="false">keep</aspectratio>
                 <texture  background="true" >$INFO[ListItem.Icon]</texture>
                 <visible>!Player.HasVideo</visible>
             </control>
             <control type="videowindow">
-                <left>5</left>
+                <left>55</left>
                 <top>5</top>
-                <width>600</width>
+                <width>500</width>
                 <height>150</height>
                 <visible>Player.HasVideo</visible>
                 <animation effect="slide" start="0,0" end="-2000,0" time="0">WindowClose</animation>

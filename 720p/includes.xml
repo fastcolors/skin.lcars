@@ -83,7 +83,8 @@
     <include name="750">
         <control type="image">
             <visible>!Control.IsVisible(311) + !Control.IsVisible(411)</visible>
-            <animation effect="fade" time="150" start="0" end="100">VisibleChange</animation>
+            <visible>!Stringcompare(Skin.CurrentColourTheme,redalert)</visible>
+			<animation effect="fade" time="150" start="0" end="100">VisibleChange</animation>
             <top>135</top>
             <left>300</left>
             <width>910</width>
@@ -91,9 +92,21 @@
             <aspectratio>keep</aspectratio>
             <texture>login.png</texture>
         </control>
+        <control type="image">
+            <visible>!Control.IsVisible(311) + !Control.IsVisible(411)</visible>
+            <visible>Stringcompare(Skin.CurrentColourTheme,redalert)</visible>
+			<animation effect="fade" time="150" start="0" end="100">VisibleChange</animation>
+            <top>135</top>
+            <left>300</left>
+            <width>910</width>
+            <height>280</height>
+            <aspectratio>keep</aspectratio>
+            <texture  colordiffuse="red">login.png</texture>
+        </control>
 		<control type="textbox" description="Title">
 			<visible>!Control.IsVisible(311) + !Control.IsVisible(411)</visible>
-            <animation effect="fade" time="150" start="0" end="100">VisibleChange</animation>
+            <visible>!Stringcompare(Skin.CurrentColourTheme,redalert)</visible>
+			<animation effect="fade" time="150" start="0" end="100">VisibleChange</animation>
             <centerleft>755</centerleft>
 			<top>340</top>
 			<height>100</height>
@@ -102,6 +115,19 @@
 			<textcolor>blue</textcolor>
 			<align>center</align>
 			<label>authorized access only[CR]please report malfunction to engineering staff on duty</label>
+		</control>
+		<control type="textbox" description="Title">
+			<visible>!Control.IsVisible(311) + !Control.IsVisible(411)</visible>
+            <visible>Stringcompare(Skin.CurrentColourTheme,redalert)</visible>
+			<animation effect="fade" time="150" start="0" end="100">VisibleChange</animation>
+            <centerleft>755</centerleft>
+			<top>340</top>
+			<height>100</height>
+			<width>800</width>
+			<font>font30_title</font>
+			<textcolor>red</textcolor>
+			<align>center</align>
+			<label>auto destruct sequence engaged</label>
 		</control>
             
         <control type="group" id="750">
@@ -1383,13 +1409,22 @@
 			<texture colordiffuse="button4" >background5.png</texture>
 		</control>
 		<control type="image">
-            <left>285r</left>
+            <visible>!Stringcompare(Skin.CurrentColourTheme,redalert)</visible>
+			<left>285r</left>
             <top>512</top>
             <width>242</width>
             <height>101</height>
             <texture>lcars1.gif</texture>
         </control>
-        
+		<control type="image">
+            <visible>Stringcompare(Skin.CurrentColourTheme,redalert)</visible>
+			<left>285r</left>
+            <top>512</top>
+            <width>125</width>
+            <height>101</height>
+            <texture>7999.gif</texture>
+        </control>
+         
     </include>
 	<include name="dialog2">
         <control type="image">

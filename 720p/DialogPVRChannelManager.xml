@@ -14,7 +14,7 @@
 			<top>0</top>
 			<width>1120</width>
 			<height>570</height>
-			<texture border="40">dialog.png</texture>
+			<texture border="40" colordiffuse="design">dialog.png</texture>
 		</control>
 		<control type="label">
 			<description>header label</description>

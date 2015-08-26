@@ -9,7 +9,7 @@
 			<centerleft>640</centerleft>
 			<width>1480</width>
 			<height>600</height>
-			<texture border="40">dialog.png</texture>
+			<texture border="40" colordiffuse="design">dialog.png</texture>
 		</control>
 		<control type="button">
 			<description>Close Window button</description>
@@ -21,7 +21,7 @@
 			<font>-</font>
 			<onclick>PreviousMenu</onclick>
 			<texturefocus>closefocus.png</texturefocus>
-			<texturenofocus>close.png</texturenofocus>
+			<texturenofocus  colordiffuse="design">close.png</texturenofocus>
 			<onleft>2</onleft>
 			<onright>2</onright>
 			<onup>2</onup>

@@ -18,7 +18,7 @@
                 <width>550</width>
                 <height>400</height>
                 <aspectratio>stretch</aspectratio>
-                <texture border="120">dialog.png</texture>
+                <texture border="120" colordiffuse="design">dialog.png</texture>
             </control>
             <control type="grouplist" id="1000">
                 <centerleft>5</centerleft>

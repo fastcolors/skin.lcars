@@ -17,7 +17,7 @@
 				<top>0</top>
 				<width>800</width>
 				<height>675</height>
-				<texture border="40">dialog.png</texture>
+				<texture border="40" colordiffuse="design">dialog.png</texture>
 			</control>
 			<control type="label" id="2">
 				<description>header label</description>
@@ -41,7 +41,7 @@
 				<font>-</font>
 				<onclick>PreviousMenu</onclick>
 				<texturefocus>closefocus.png</texturefocus>
-				<texturenofocus>close.png</texturenofocus>
+				<texturenofocus  colordiffuse="design">close.png</texturenofocus>
 				<onleft>22</onleft>
 				<onright>22</onright>
 				<onup>22</onup>

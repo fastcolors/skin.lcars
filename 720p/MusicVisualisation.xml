@@ -32,7 +32,7 @@
                 <height>230</height>
                 <top>60</top>
                 <left>60</left>
-                <texture border="100">dialog.png</texture>
+                <texture border="100" colordiffuse="design">dialog.png</texture>
                 <colordiffuse>99FFFF00</colordiffuse>
             </control>
             <!--control type="label">

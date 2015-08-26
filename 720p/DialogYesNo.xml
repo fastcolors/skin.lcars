@@ -8,7 +8,7 @@
             <centertop>360</centertop>
             <width>610</width>
             <height>240</height>
-            <texture border="40">dialog.png</texture>
+            <texture border="40" colordiffuse="design">dialog.png</texture>
         </control>
         <control type="label" id="1">
             <description>header label</description>

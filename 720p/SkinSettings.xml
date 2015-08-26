@@ -213,11 +213,29 @@
 		<control type="image">
 			<visible>Container(9000).HasFocus(11)</visible>
             <centerleft>720</centerleft>
-            <top>160</top>
-            <width>1090</width>
-            <height>400</height>
+            <top>260</top>
+            <width>125</width>
+            <height>101</height>
             <aspectratio>keep</aspectratio>
-            <texture>redalert.png</texture>
+            <texture>7997.gif</texture>
+        </control>
+        <control type="image">
+			<visible>Container(9000).HasFocus(11)</visible>
+            <centerleft>590</centerleft>
+            <top>365</top>
+            <width>125</width>
+            <height>101</height>
+            <aspectratio>keep</aspectratio>
+            <texture>8001.gif</texture>
+        </control>
+        <control type="image">
+			<visible>Container(9000).HasFocus(11)</visible>
+            <centerleft>850</centerleft>
+            <top>365</top>
+            <width>125</width>
+            <height>101</height>
+            <aspectratio>keep</aspectratio>
+            <texture>8000.gif</texture>
         </control>
         <control type="label" id="1">
 			<visible>Container(9000).HasFocus(11)</visible>

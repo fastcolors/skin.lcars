@@ -26,67 +26,8 @@
                 <ondown>60</ondown>
                 <viewtype label="31223">Icons</viewtype>
                 <orientation>horizontal</orientation>
-                <itemlayout width="180" height="280">
-                    <control type="image">
-                        <visible>!Container.Content(episodes)</visible>
-                        <left>10</left>
-                        <top>4</top>
-                        <width>170</width>
-                        <height>250</height>
-                        <aspectratio>scale</aspectratio>
-                        <texture fallback="posterfallback.png">$VAR[poster]</texture>
-                    </control>
-                    <control type="image">
-                        <visible>Container.Content(episodes)</visible>
-                        <left>10</left>
-                        <top>4</top>
-                        <width>170</width>
-                        <height>250</height>
-                        <aspectratio>scale</aspectratio>
-                        <texture fallback="posterfallback.png">$VAR[poster]</texture>
-                    </control>
-                    <control type="textbox">
-                        <visible>IsEmpty(ListItem.Art(thumb)) | [IsEmpty(ListItem.Art(fanart)) +  ![Container.Content(files)|Container.Content(tvshows)|Container.Content(movies)|Container.Content(musicvideos) |Container.Content(actors)|Container.Content(episodes)]]</visible>
-                        <top>10</top>
-                        <right>10</right>
-                        <align>right</align>
-                        <font>font30</font>
-                        <width>155</width>
-                        <info>ListItem.Label</info>
-                    </control>
-                </itemlayout>
-                <focusedlayout width="180" height="280">
-                    <control type="image">
-                        <visible>!Container.Content(episodes)</visible>
-                        <left>6</left>
-                        <width>178</width>
-                        <height>258</height>
-                        <aspectratio>scale</aspectratio>
-                        <texture fallback="posterfallback.png">$VAR[poster]</texture>
-                        <bordertexture colordiffuse="red">white.png</bordertexture>
-                        <bordersize>4</bordersize>
-                    </control>
-                    <control type="image">
-                        <visible>Container.Content(episodes)</visible>
-                        <left>6</left>
-                        <width>178</width>
-                        <height>258</height>
-                        <aspectratio>scale</aspectratio>
-                        <texture fallback="posterfallback.png">$VAR[poster]</texture>
-                        <bordertexture colordiffuse="red">white.png</bordertexture>
-                        <bordersize>4</bordersize>
-                    </control>
-                    <control type="textbox">
-                        <visible>IsEmpty(ListItem.Art(thumb)) | [IsEmpty(ListItem.Art(fanart)) +  ![Container.Content(files)|Container.Content(tvshows)|Container.Content(movies)|Container.Content(musicvideos) |Container.Content(actors)|Container.Content(episodes)]]</visible>
-                        <top>10</top>
-                        <right>10</right>
-                        <align>right</align>
-                        <font>font30</font>
-                        <width>155</width>
-                        <info>ListItem.Label</info>
-                    </control>
-                </focusedlayout>
-            </control>
+                <include>squareshome</include>
+			</control>
             <control type="textbox">
                 <top>470</top>
                 <centerleft>670</centerleft>

@@ -170,7 +170,7 @@
             <label>$INFO[Container(311).ListItem.Year]</label>
         </control>
         <control type="label">
-            <visible>Control.HasFocus(311)</visible>
+            <visible>Control.HasFocus(311) | Control.HasFocus(888)</visible>
             <top>469</top>
             <centerleft>670</centerleft>
             <width>660</width>

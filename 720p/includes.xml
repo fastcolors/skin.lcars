@@ -1269,7 +1269,7 @@
 		<control type="image">
             <visible>!Stringcompare(Skin.CurrentColourTheme,redalert)</visible>
 			<left>285r</left>
-            <top>512</top>
+            <top>490</top>
             <width>242</width>
             <height>101</height>
             <texture>lcars1.gif</texture>

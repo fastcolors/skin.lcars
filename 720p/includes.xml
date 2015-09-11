@@ -29,7 +29,6 @@
     <include name="squareshome">
         <itemlayout width="180" height="280">
              <control type="image">
-                <visible>!Container.Content(episodes)</visible>
                 <left>10</left>
                 <top>4</top>
                 <width>170</width>

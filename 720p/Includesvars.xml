@@ -111,6 +111,13 @@
 		<value condition="StringCompare(Skin.String(sourceshome),sources://music/)">$LOCALIZE[653][CR]$LOCALIZE[292]</value>
 		<value>$LOCALIZE[653][CR]$LOCALIZE[157]</value>
 	</variable>
+
+	<variable name="logoanimation">
+		<value condition="Stringcompare(Skin.CurrentColourTheme,redalert)">7997.gif</value>
+		<value condition="Stringcompare(Skin.CurrentColourTheme,nemesis)">8001.gif</value>
+		<value condition="Stringcompare(Skin.CurrentColourTheme,primary)">8000.gif</value>
+		<value>lcars1.gif</value>
+	</variable>
 	
 	<variable name="content">
 		<value condition="Container.Content(sets)">$INFO[ListItem.DBID,videodb://movies/sets/]</value>

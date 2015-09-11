@@ -779,7 +779,7 @@
                 <top>137</top>
                 <width>155</width>
                 <height>38</height>
-                <texture colordiffuse="button2">white.png</texture>
+                <texture colordiffuse="button2">white3.gif</texture>
             </control>
             <control type="image">
                 <top>181</top>
@@ -797,7 +797,7 @@
                 <top>269</top>
                 <width>155</width>
                 <height>38</height>
-                <texture colordiffuse="button3">white.png</texture>
+                <texture colordiffuse="button3">white2.gif</texture>
             </control>
             <control type="image">
                 <top>313</top>
@@ -809,7 +809,7 @@
                 <top>357</top>
                 <width>155</width>
                 <height>38</height>
-                <texture colordiffuse="button3">white.png</texture>
+                <texture colordiffuse="button3">white4.gif</texture>
             </control>
             <control type="image">
                 <top>401</top>
@@ -828,7 +828,7 @@
                 <top>489</top>
                 <width>155</width>
                 <height>38</height>
-                <texture colordiffuse="button4">white.png</texture>
+                <texture colordiffuse="button4">white.gif</texture>
             </control>
             <control type="button" id="700">
                 <visible>!Window.IsActive(Home)</visible>
@@ -1267,22 +1267,14 @@
 			<texture colordiffuse="button4" >background5.png</texture>
 		</control>
 		<control type="image">
-            <visible>!Stringcompare(Skin.CurrentColourTheme,redalert)</visible>
-			<left>285r</left>
+            <left>285r</left>
             <top>490</top>
             <width>242</width>
             <height>101</height>
-            <texture>lcars1.gif</texture>
+            <aspectratio scalediffuse="false" align="center">keep</aspectratio>
+            <texture>$VAR[logoanimation]</texture>
         </control>
-		<control type="image">
-            <visible>Stringcompare(Skin.CurrentColourTheme,redalert)</visible>
-			<left>285r</left>
-            <top>512</top>
-            <width>125</width>
-            <height>101</height>
-            <texture>7999.gif</texture>
-        </control>
-         
+		 
     </include>
 	<include name="dialog2">
         <control type="image">

@@ -1,0 +1,6 @@
+Version 0.0.3
+2015-09-11 add new animation
+
+
+Version 0.0.2
+first concept

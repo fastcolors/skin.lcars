@@ -2,7 +2,12 @@
 <window>
 	<defaultcontrol always="true">9001</defaultcontrol>
 	<controls>
-		<include>allwindows</include>
+		<control type="image">
+            <width>1280</width>
+            <height>720</height>
+            <texture>settings.png</texture>
+        </control>
+        <include>allwindows</include>
 		<control type="panel" id="9000">
 			<top>96</top>
 			<left>13</left>
@@ -58,19 +63,19 @@
 		</control>
 		<control type="grouplist" id="9001">
 			<visible>Container(9000).HasFocus(1)</visible>
-			<left>290</left>
-			<top>130</top>
-			<width>750</width>
-			<height>530</height>
-			<itemgap>8</itemgap>
-			<pagecontrol>-</pagecontrol>
+			<top>78</top>
+            <left>240</left>
+            <width>650</width>
+            <height>526</height>
+            <itemgap>4</itemgap>
+            <pagecontrol>-</pagecontrol>
 			<onleft>9000</onleft>
 			<onright>noop</onright>
 			<onup>9001</onup>
 			<ondown>9001</ondown>
 			<control type="button" id="8">
 				<description>Ship name</description>
-				<width>750</width>
+				<width>650</width>
 				<height>40</height>
 				<aligny>center</aligny>
 				<textcolor>black</textcolor>
@@ -80,7 +85,7 @@
 			</control>
 			<control type="button" id="9">
 				<description>Ship registry</description>
-				<width>750</width>
+				<width>650</width>
 				<height>40</height>
 				<aligny>center</aligny>
 				<textcolor>black</textcolor>
@@ -91,19 +96,19 @@
 		</control>
 		<control type="grouplist" id="9001">
 			<visible>Container(9000).HasFocus(2)</visible>
-			<left>290</left>
-			<top>130</top>
-			<width>750</width>
-			<height>530</height>
-			<itemgap>8</itemgap>
-			<pagecontrol>-</pagecontrol>
+			<top>78</top>
+            <left>240</left>
+            <width>650</width>
+            <height>526</height>
+            <itemgap>4</itemgap>
+            <pagecontrol>-</pagecontrol>
 			<onleft>9000</onleft>
 			<onright>noop</onright>
 			<onup>9001</onup>
 			<ondown>9001</ondown>
 			<control type="radiobutton" id="222">
 				<description>Hide Movies Button</description>
-				<width>750</width>
+				<width>650</width>
 				<height>40</height>
 				<aligny>center</aligny>
 				<textcolor>black</textcolor>
@@ -117,7 +122,7 @@
 			</control>
 			<control type="radiobutton" id="223">
 				<description>Hide TV Shows Button</description>
-				<width>750</width>
+				<width>650</width>
 				<height>40</height>
 				<aligny>center</aligny>
 				<textcolor>black</textcolor>
@@ -131,7 +136,7 @@
 			</control>
 			<control type="radiobutton" id="224">
 				<description>Hide Music Button</description>
-				<width>750</width>
+				<width>650</width>
 				<height>40</height>
 				<aligny>center</aligny>
 				<textcolor>black</textcolor>
@@ -144,7 +149,7 @@
 			</control>
 			<control type="radiobutton" id="225">
 				<description>Hide Pictures Button</description>
-				<width>750</width>
+				<width>650</width>
 				<height>40</height>
 				<aligny>center</aligny>
 				<textcolor>black</textcolor>
@@ -157,7 +162,7 @@
 			</control>
 			<control type="radiobutton" id="229">
 				<description>Hide ADDONS Button</description>
-				<width>750</width>
+				<width>650</width>
 				<height>40</height>
 				<aligny>center</aligny>
 				<textcolor>black</textcolor>
@@ -171,7 +176,7 @@
 			<control type="radiobutton" id="230">
 				<visible>!Skin.HasSetting(nextair) + System.HasAddon(script.tv.show.next.aired) + Library.HasContent(TVShows)</visible>
 				<description>Hide NEXT AIR Button</description>
-				<width>750</width>
+				<width>650</width>
 				<height>40</height>
 				<aligny>center</aligny>
 				<textcolor>black</textcolor>
@@ -184,7 +189,7 @@
 			</control>
 			<control type="radiobutton" id="231">
 				<description>Hide Favorites Button</description>
-				<width>750</width>
+				<width>650</width>
 				<height>40</height>
 				<aligny>center</aligny>
 				<textcolor>black</textcolor>
@@ -197,7 +202,7 @@
 			</control>
 			<control type="radiobutton" id="228">
 				<description>Hide Weather Button</description>
-				<width>750</width>
+				<width>650</width>
 				<height>40</height>
 				<aligny>center</aligny>
 				<textcolor>black</textcolor>
@@ -210,38 +215,11 @@
 			</control>
 
 		</control>
-		<control type="image">
-			<visible>Container(9000).HasFocus(11)</visible>
-            <centerleft>720</centerleft>
-            <top>260</top>
-            <width>125</width>
-            <height>101</height>
-            <aspectratio>keep</aspectratio>
-            <texture>7997.gif</texture>
-        </control>
-        <control type="image">
-			<visible>Container(9000).HasFocus(11)</visible>
-            <centerleft>590</centerleft>
-            <top>365</top>
-            <width>125</width>
-            <height>101</height>
-            <aspectratio>keep</aspectratio>
-            <texture>8001.gif</texture>
-        </control>
-        <control type="image">
-			<visible>Container(9000).HasFocus(11)</visible>
-            <centerleft>850</centerleft>
-            <top>365</top>
-            <width>125</width>
-            <height>101</height>
-            <aspectratio>keep</aspectratio>
-            <texture>8000.gif</texture>
-        </control>
-        <control type="label" id="1">
+		<control type="label" id="1">
 			<visible>Container(9000).HasFocus(11)</visible>
             <description>header label</description>
-            <centerleft>720</centerleft>
-            <top>100</top>
+            <top>230</top>
+            <left>240</left>
             <width>580</width>
             <height>30</height>
             <font>font35_title</font>
@@ -253,11 +231,11 @@
         
 		<control type="grouplist" id="9001">
 			<visible>Container(9000).HasFocus(11)</visible>
-			<centerleft>720</centerleft>
-            <top>580</top>
+			<left>240</left>
+            <top>280</top>
             <orientation>horizontal</orientation>
             <align>center</align>
-            <width>460</width>
+            <width>580</width>
             <height>40</height>
             <onleft>9000</onleft>
 			<onright>9000</onright>
@@ -265,11 +243,11 @@
                 <description>Yes button</description>
                 <texturenofocus>-</texturenofocus>
                 <texturefocus colordiffuse="red" border="20">whiteallrounded.png</texturefocus>
-                <width>220</width>
+                <width>120</width>
                 <height>40</height>
                 <label>107</label>
                 <textcolor>yellow</textcolor>
-                <font>font_MainMenu</font>
+                <font>font35_title</font>
                 <align>center</align>
                 <textoffsety>0</textoffsety>
                 <onclick>Skin.ResetSettings</onclick>
@@ -279,11 +257,11 @@
                 <description>No button</description>
                 <texturenofocus>-</texturenofocus>
                 <texturefocus colordiffuse="red" border="20">whiteallrounded.png</texturefocus>
-                <width>220</width>
+                <width>120</width>
                 <height>40</height>
                 <label>106</label>
                 <textcolor>yellow</textcolor>
-                <font>font_MainMenu</font>
+                <font>font35_title</font>
                 <align>center</align>
                 <textoffsety>0</textoffsety>
                 <onclick>Close</onclick>

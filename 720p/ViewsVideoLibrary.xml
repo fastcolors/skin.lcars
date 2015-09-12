@@ -106,10 +106,10 @@
                     <top>40</top>
                     <width>108</width>
                     <height>168</height>
-                    <aspectratio>scale</aspectratio>
-                    <texture fallback="posterfallback.png">$VAR[poster]</texture>
-					<bordertexture  colordiffuse="green" border="40">shadow2.png</bordertexture>
-                    <bordersize>10</bordersize>
+                    <aspectratio scalediffuse="false" align="right">scale</aspectratio>
+					<texture  diffuse="poster-mask.png" fallback="posterfallback.png" background="true">$VAR[poster]</texture>
+					<bordertexture>shadow.png</bordertexture>
+					<bordersize>4</bordersize>
                 </control>
                 <control type="label">
                     <top>20</top>
@@ -214,10 +214,10 @@
                     <top>40</top>
                     <width>108</width>
                     <height>168</height>
-                    <aspectratio>scale</aspectratio>
-                    <texture fallback="posterfallback.png">$VAR[poster]</texture>
-					<bordertexture  colordiffuse="red" border="40">shadow2.png</bordertexture>
-                    <bordersize>10</bordersize>
+                    <aspectratio scalediffuse="false" align="right">scale</aspectratio>
+					<texture  diffuse="poster-mask.png" fallback="posterfallback.png" background="true">$VAR[poster]</texture>
+					<bordertexture  colordiffuse="red">shadow.png</bordertexture>
+					<bordersize>4</bordersize>
 					<animation reversible="false" effect="zoom" start="60,40,108,168" end="-67,20,152,210" time="150">focus</animation>
 					<animation reversible="false" effect="zoom" end="60,40,108,168" start="-67,20,152,210" time="150">unfocus</animation>
                 </control>
@@ -417,12 +417,12 @@
             <visible>[Container.Content(sets) | Container.Content(directors) | Container.Content(countries)]+ Control.IsVisible(501)</visible>
             <centerleft>1120</centerleft>
             <centertop>280</centertop>
-            <width>300</width>
-            <height>300</height>
-            <aspectratio>keep</aspectratio>
-            <texture>$VAR[poster]</texture>
-            <bordertexture>shadow2.png</bordertexture>
-            <bordersize>8</bordersize>
+            <width>180</width>
+            <height>280</height>
+            <aspectratio scalediffuse="false" align="right">scale</aspectratio>
+			<texture  diffuse="poster-mask.png" fallback="posterfallback.png" background="true">$VAR[poster]</texture>
+            <bordertexture >shadow.png</bordertexture>
+			<bordersize>4</bordersize>
         </control>
         <control type="image">
             <visible>[Container.Content(sets) | Container.Content(directors) | Container.Content(countries)] + Control.HasFocus(300)</visible>
@@ -430,11 +430,11 @@
             <centertop>460</centertop>
             <width>152</width>
             <height>210</height>
-            <aspectratio>keep</aspectratio>
-            <texture fallback="defaultmissing.png">$INFO[Container(300).ListItem.Icon]</texture>
-            <bordertexture>shadow2.png</bordertexture>
-            <bordersize>6</bordersize>
-        </control>
+            <aspectratio scalediffuse="false" align="right">scale</aspectratio>
+			<texture  diffuse="poster-mask.png" fallback="posterfallback.png" background="true">$INFO[Container(300).ListItem.Icon]</texture>
+            <bordertexture>shadow.png</bordertexture>
+			<bordersize>4</bordersize>
+		</control>
         <control type="label">
             <visible>[Container.Content(sets) | Container.Content(directors) | Container.Content(countries)] + Control.HasFocus(300)</visible>
             <centertop>460</centertop>

@@ -25,21 +25,21 @@
         <texturenofocus>-</texturenofocus>
         <texturefocus >white.png</texturefocus>
     </include>
-    
+
     <include name="squareshome">
-        <itemlayout width="180" height="280">
-             <control type="image">
+		<itemlayout width="180" height="280">
+            <control type="image">
                 <left>10</left>
-                <top>4</top>
+                <top>10</top>
                 <width>170</width>
                 <height>250</height>
-                <aspectratio align="right">scale</aspectratio>
-                <texture fallback="posterfallback.png">$VAR[poster]</texture>
-				<bordertexture border="40">shadow2.png</bordertexture>
-				<bordersize>10</bordersize>
+                <aspectratio scalediffuse="false" align="right">scale</aspectratio>
+				<texture  diffuse="poster-mask.png" fallback="posterfallback.png" background="true">$VAR[poster]</texture>
+                <bordertexture>shadow.png</bordertexture>
+				<bordersize>4</bordersize>
             </control>
 			<control type="textbox">
-                <visible>IsEmpty(ListItem.Art(thumb)) | [IsEmpty(ListItem.Art(fanart)) +  ![Container.Content(files)|Container(9000).HasFocus(9)|Container(9000).HasFocus(4)|Container.Content(tvshows)|Container.Content(movies)|Container.Content(musicvideos) |Container.Content(actors)|Container.Content(episodes)]]</visible>
+				<visible>[IsEmpty(ListItem.Art(thumb)) | [IsEmpty(ListItem.Art(fanart)) +  ![Container(9000).HasFocus(3)| Container(9000).HasFocus(10)| Container(9000).HasFocus(9)| Container(9000).HasFocus(4)|Container.Content(files)|Container.Content(tvshows)|Container.Content(movies)|Container.Content(musicvideos) |Container.Content(actors)|Container.Content(episodes)]]]</visible>
                 <top>15</top>
                 <right>15</right>
                 <align>right</align>
@@ -50,18 +50,18 @@
 		</itemlayout>
         <focusedlayout width="180" height="280">
             <control type="image">
-                <left>6</left>
-                <width>178</width>
-                <height>258</height>
-                <aspectratio align="right">scale</aspectratio>
-                <texture  fallback="posterfallback.png">$VAR[poster]</texture>
-                <bordertexture  colordiffuse="red" border="40">shadow2.png</bordertexture>
-				<bordersize>10</bordersize>
+                <left>4</left>
+                <width>176</width>
+                <height>256</height>
+                <aspectratio scalediffuse="false" align="right">scale</aspectratio>
+				<texture  diffuse="poster-mask.png" fallback="posterfallback.png" background="true">$VAR[poster]</texture>
+                <bordertexture  colordiffuse="red">shadow.png</bordertexture>
+				<bordersize>4</bordersize>
 			</control>
 			<control type="textbox">
-                <visible>IsEmpty(ListItem.Art(thumb)) | [IsEmpty(ListItem.Art(fanart)) +  ![Container.Content(files)|Container(9000).HasFocus(9)|Container(9000).HasFocus(4)|Container.Content(tvshows)|Container.Content(movies)|Container.Content(musicvideos) |Container.Content(actors)|Container.Content(episodes)]]</visible>
-                <top>10</top>
-                <right>10</right>
+                <visible>[IsEmpty(ListItem.Art(thumb)) | [IsEmpty(ListItem.Art(fanart)) +  ![Container(9000).HasFocus(3)| Container(9000).HasFocus(10)| Container(9000).HasFocus(9)| Container(9000).HasFocus(4)|Container.Content(files)|Container.Content(tvshows)|Container.Content(movies)|Container.Content(musicvideos) |Container.Content(actors)|Container.Content(episodes)]]]</visible>
+                <top>6</top>
+                <right>14</right>
                 <align>right</align>
                 <font>font30</font>
                 <width>155</width>

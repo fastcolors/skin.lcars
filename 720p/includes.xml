@@ -38,6 +38,15 @@
                 <bordertexture>shadow.png</bordertexture>
 				<bordersize>4</bordersize>
             </control>
+			<control type="image">
+                <visible>Container(9000).HasFocus(2)</visible>
+                <left>14</left>
+                <top>210</top>
+                <width>162</width>
+                <height>40</height>
+                <aspectratio scalediffuse="false" align="right">keep</aspectratio>
+				<texture background="true">$INFO[ListItem.Art(tvshow.banner)]</texture>
+            </control>
 			<control type="textbox">
 				<visible>[IsEmpty(ListItem.Art(thumb)) | [IsEmpty(ListItem.Art(fanart)) +  ![Container(9000).HasFocus(3)| Container(9000).HasFocus(10)| Container(9000).HasFocus(9)| Container(9000).HasFocus(4)|Container.Content(files)|Container.Content(tvshows)|Container.Content(movies)|Container.Content(musicvideos) |Container.Content(actors)|Container.Content(episodes)]]]</visible>
                 <top>15</top>
@@ -58,6 +67,15 @@
                 <bordertexture  colordiffuse="red">shadow.png</bordertexture>
 				<bordersize>4</bordersize>
 			</control>
+			<control type="image">
+                <visible>Container(9000).HasFocus(2)</visible>
+                <left>8</left>
+                <top>200</top>
+                <width>168</width>
+                <height>50</height>
+                <aspectratio scalediffuse="false" align="right">keep</aspectratio>
+				<texture background="true">$INFO[ListItem.Art(tvshow.banner)]</texture>
+            </control>
 			<control type="textbox">
                 <visible>[IsEmpty(ListItem.Art(thumb)) | [IsEmpty(ListItem.Art(fanart)) +  ![Container(9000).HasFocus(3)| Container(9000).HasFocus(10)| Container(9000).HasFocus(9)| Container(9000).HasFocus(4)|Container.Content(files)|Container.Content(tvshows)|Container.Content(movies)|Container.Content(musicvideos) |Container.Content(actors)|Container.Content(episodes)]]]</visible>
                 <top>6</top>
@@ -1016,7 +1034,7 @@
         <value condition="Container.Content(directors) + StringCompare(ListItem.Label,..)">DefaultFolderBack.png</value>
         <value condition="Container.Content(countries) + !StringCompare(ListItem.Label,..)">DefaultCountry.png</value>
         <value condition="Container.Content(countries) + StringCompare(ListItem.Label,..)">DefaultFolderBack.png</value>
-        <value condition="Container(9000).HasFocus(2)">$INFO[ListItem.Art(poster)]$INFO[ListItem.Art(tvshow.poster)]</value>
+        <value condition="Container(9000).HasFocus(2)">$INFO[ListItem.Art(poster)]$INFO[ListItem.Art(thumb)]</value>
         <!--<value condition="StringCompare(ListItem.Label,..)">$INFO[ListItem.Icon]</value>-->
         <!--<value condition="!IsEmpty(ListItem.Thumb))">$INFO[ListItem.Thumb]</value>-->
         <value>$INFO[ListItem.Icon]</value>
@@ -1156,91 +1174,119 @@
 		</control>
     </include>
     <include name="TVNextAiredListCommonLayout">
-        <top>120</top>
+        <top>140</top>
         <left>630</left>
-        <height>475</height>
+        <height>450</height>
         <width>600</width>
         <onleft>5000</onleft>
         <pagecontrol>-</pagecontrol>
         <orientation>verical</orientation>
-        <itemlayout width="600" height="185">
+        <itemlayout width="600" height="210">
             <control type="image">
-                <!--Panel poster image-->
-                <left>20</left>
-                <posy>38</posy>
-                <width>200</width>
-                <height>170</height>
-                <texture background="true"  fallback="posterfallback.png">$INFO[ListItem.Property(Art(poster))]</texture>
-                <aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
-                <visible>StringCompare(Window(Home).Property(TVGuide.ThumbType),0)</visible>
-				<bordertexture border="5">shadow2.png</bordertexture>
-                <bordersize>10</bordersize>
+                <top>7</top>
+                <width>600</width>
+                <height>26</height>
+                <texture colordiffuse="design">white.png</texture>
             </control>
+			<control type="label">
+                <left>7</left>
+                <textcolor>black</textcolor>
+                <font>font14</font>
+				<width>600</width>
+                <height>40</height>
+                <label>$INFO[ListItem.Label] : $INFO[ListItem.Property(NextNumber),, ]$INFO[ListItem.Property(NextTitle)]</label>
+                <aligny>center</aligny>
+            </control>
+			<control type="image">
+                <!--Panel poster image-->
+                <align>left</align>
+                <top>30</top>
+                <width>100</width>
+                <height>160</height>
+                <texture fallback="posterfallback.png" background="true">$INFO[ListItem.Property(Art(poster))]</texture>
+                <aspectratio scalediffuse="false">keep</aspectratio>
+			</control>
             <control type="image">
                 <!--Panel banner image-->
-                <left>20</left>
-                <posy>38</posy>
-                <width>200</width>
-                <height>170</height>
+                <left>110</left>
+                <top>123</top>
+                <width>250</width>
+                <height>60</height>
                 <texture background="true"  fallback="posterfallback.png">$INFO[ListItem.Property(Art(banner))]</texture>
-                <aspectratio scalediffuse="false" align="center" aligny="center">keep</aspectratio>
-                <visible>StringCompare(Window(Home).Property(TVGuide.ThumbType),1)</visible>
-				<bordertexture border="5">shadow2.png</bordertexture>
-                <bordersize>10</bordersize>
+                <aspectratio scalediffuse="false">scale</aspectratio>
             </control>
             <control type="image">
-                <!--Panel logo image-->
-                <left>20</left>
-                <posy>38</posy>
-                <width>200</width>
-                <height>170</height>
-                <texture background="true"  fallback="posterfallback.png">$INFO[ListItem.Property(Art(clearlogo))]</texture>
-                <aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
-                <visible>StringCompare(Window(Home).Property(TVGuide.ThumbType),2)</visible>
-				<bordertexture border="5">shadow2.png</bordertexture>
-                <bordersize>10</bordersize>
+                <left>370</left>
+                <align>left</align>
+                <top>33</top>
+                <width>230</width>
+                <height>150</height>
+                <texture fallback="posterfallback.png" background="true">$INFO[ListItem.Property(Fanart)]</texture>
+                <aspectratio scalediffuse="false">scale</aspectratio>
             </control>
             <control type="textbox">
-                <left>240</left>
+                <left>110</left>
                 <textcolor>yellow</textcolor>
-                <posy>38</posy>
-                <width>400</width>
-                <height>170</height>
-                <label>$INFO[ListItem.Label][CR]$LOCALIZE[126]: $INFO[ListItem.Property(Status)][CR]$INFO[ListItem.Property(Genre)][CR][CR]Episode: $INFO[ListItem.Property(NextNumber),,. ]$INFO[ListItem.Property(NextTitle)][CR]Air: $INFO[ListItem.Property(NextDay)] At $INFO[ListItem.Property(ShortTime)]$INFO[ListItem.Property(Network), On ]</label>
-                <aligny>center</aligny>
+                <font>font13</font>
+				<top>32</top>
+                <width>250</width>
+                <height>140</height>
+                <label>$LOCALIZE[126]: $INFO[ListItem.Property(Status)][CR]$INFO[ListItem.Property(Genre)][CR][CR]Air: $INFO[ListItem.Property(NextDay)] At $INFO[ListItem.Property(ShortTime)]$INFO[ListItem.Property(Network), On ]</label>
+                <aligny>top</aligny>
             </control>
         </itemlayout>
-        <focusedlayout width="600" height="185">
+        <focusedlayout width="600" height="210">
             <control type="image">
-                <!--Panel fanart image-->
-                <left>20</left>
-                <posy>38</posy>
-                <width>200</width>
-                <height>170</height>
-                <texture background="true" fallback="posterfallback.png">$INFO[ListItem.Property(Fanart)]</texture>
-                <aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
-				<bordertexture  colordiffuse="red" border="5">shadow2.png</bordertexture>
-                <bordersize>10</bordersize>
+                <top>7</top>
+                <width>600</width>
+                <height>26</height>
+                <texture colordiffuse="white">white.png</texture>
             </control>
+			<control type="label">
+                <left>7</left>
+                <textcolor>black</textcolor>
+                <font>font14</font>
+				<width>600</width>
+                <height>40</height>
+                <label>$INFO[ListItem.Label] : $INFO[ListItem.Property(NextNumber),, ]$INFO[ListItem.Property(NextTitle)]</label>
+                <aligny>center</aligny>
+            </control>
+			<control type="image">
+                <!--Panel poster image-->
+                <align>left</align>
+                <top>30</top>
+                <width>100</width>
+                <height>160</height>
+                <texture fallback="posterfallback.png" background="true">$INFO[ListItem.Property(Art(poster))]</texture>
+                <aspectratio scalediffuse="false">keep</aspectratio>
+			</control>
             <control type="image">
                 <!--Panel banner image-->
-                <left>20</left>
-                <posy>18</posy>
-                <width>200</width>
-                <height>170</height>
+                <left>110</left>
+                <top>123</top>
+                <width>250</width>
+                <height>60</height>
                 <texture background="true"  fallback="posterfallback.png">$INFO[ListItem.Property(Art(banner))]</texture>
-                <aspectratio scalediffuse="false" align="center" aligny="bottom">keep</aspectratio>
-                <bordertexture  colordiffuse="red" border="5">shadow2.png</bordertexture>
-                <bordersize>10</bordersize>
+                <aspectratio scalediffuse="false">scale</aspectratio>
+            </control>
+            <control type="image">
+                <left>370</left>
+                <align>left</align>
+                <top>33</top>
+                <width>230</width>
+                <height>150</height>
+                <texture fallback="posterfallback.png" background="true">$INFO[ListItem.Property(Fanart)]</texture>
+                <aspectratio scalediffuse="false">scale</aspectratio>
             </control>
             <control type="textbox">
-                <left>240</left>
+                <left>110</left>
                 <textcolor>yellow</textcolor>
-                <posy>38</posy>
-                <width>400</width>
-                <height>170</height>
-                <label>$INFO[ListItem.Label][CR]$LOCALIZE[126]: $INFO[ListItem.Property(Status)][CR]$INFO[ListItem.Property(Genre)][CR][CR]Episode: $INFO[ListItem.Property(NextNumber),,. ]$INFO[ListItem.Property(NextTitle)][CR]Air: $INFO[ListItem.Property(NextDay)] At $INFO[ListItem.Property(ShortTime)]$INFO[ListItem.Property(Network), On ]</label>
-                <aligny>center</aligny>
+                <font>font13</font>
+				<top>32</top>
+                <width>250</width>
+                <height>140</height>
+                <label>$LOCALIZE[126]: $INFO[ListItem.Property(Status)][CR]$INFO[ListItem.Property(Genre)][CR][CR]Air: $INFO[ListItem.Property(NextDay)] At $INFO[ListItem.Property(ShortTime)]$INFO[ListItem.Property(Network), On ]</label>
+                <aligny>top</aligny>
             </control>
         </focusedlayout>
 

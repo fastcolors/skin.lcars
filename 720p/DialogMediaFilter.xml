@@ -44,7 +44,6 @@
 				<onleft>5</onleft>
 				<onright>9001</onright>
 				<texturesliderbackground border="4">ScrollbarBG_light.png</texturesliderbackground>
-				<showonepage>true</showonepage>
 				<orientation>vertical</orientation>
 			</control>
 			<control type="button" id="7">
@@ -52,7 +51,6 @@
 				<height>40</height>
 				<align>center</align>
 				<aligny>center</aligny>
-				<focusedcolor>white</focusedcolor>
 			</control>
 			<control type="radiobutton" id="8">
 				<description>Default RadioButton</description>
@@ -63,7 +61,7 @@
 				<height>40</height>
 				<aligny>center</aligny>
 				<texturenofocus colordiffuse="design" border="20">whiteallrounded.png</texturenofocus>
-				<texturefocus colordiffuse="green" border="20">whiteallrounded.png</texturefocus>
+				<texturefocus colordiffuse="white" border="20">whiteallrounded.png</texturefocus>
 				<reverse>yes</reverse>
 			</control>
 			<control type="sliderex" id="13">

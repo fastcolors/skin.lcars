@@ -972,6 +972,22 @@
             <height>79</height>
             <texture colordiffuse="design">curvelcars1.png</texture>
         </control>
+		<control type="group" description="Scroll letter">
+            <visible>Container.Scrolling + [StringCompare(Container.SortMethod,$LOCALIZE[551]) | StringCompare(Container.SortMethod,$LOCALIZE[561]) | StringCompare(Container.SortMethod,$LOCALIZE[558]) | StringCompare(Container.SortMethod,$LOCALIZE[557]) | StringCompare(Container.SortMethod,$LOCALIZE[556])]</visible>
+			<animation effect="fade" start="0" end="100" time="60" delay="0" reversible="true">Visible</animation>
+            <animation effect="fade" start="100" end="0" time="160" delay="260" reversible="true">Hidden</animation>
+				<control type="label">
+					<top>18</top>
+					<centerleft>670</centerleft>
+					<width>675</width>
+					<height>40</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font_MainMenu</font>
+					<textcolor>black</textcolor>
+					<label>$INFO[ListItem.SortLetter]</label>
+				</control>
+        </control>
         <control type="image" >
             <bottom>16</bottom>
             <right>16</right>

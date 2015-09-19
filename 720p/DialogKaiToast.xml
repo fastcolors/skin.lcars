@@ -1,29 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
+	<animation effect="fade" start="0" end="100" time="200">WindowOpen</animation>
+	<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
 	<controls>
 		<control type="group">
             <visible>![Window.IsVisible(SliderDialog) | Window.IsActive(SubtitleSearch) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks) | Window.IsActive(script-XBMC-Subtitles-main.xml)]</visible>
 			<visible>![Window.IsVisible(FullScreenVideo) + [Window.IsActive(videoosd.xml) | Player.Seeking | Player.DisplayAfterSeek | Player.Forwarding | Player.Rewinding | Player.Caching | Player.Paused]]</visible>
-			<top>15</top>
-            <left>775</left>
-            <control type="image" id="400">
+			<left>60</left>
+            <top>669</top>
+			<control type="image" id="400">
 				<description>avatar</description>
                 <top>1</top>
 				<width>38</width>
-				<height>38</height>
+				<height>37</height>
 				<aspectratio>keep</aspectratio>
 				<texture>DefaultFile.png</texture>
 			</control>
 			<control type="fadelabel" id="401">
 				<description>Line 1 Label</description>
-				<top>4</top>
+				<top>0</top>
 				<left>45</left>
 				<width>225</width>
-                <height>18</height>
-				<font>font10</font>
+                		<height>20</height>
+				<font>font12</font>
 				<align>left</align>
 				<aligny>center</aligny>
-                <scrollout>false</scrollout>
+                		<scrollout>false</scrollout>
 				<pauseatend>2000</pauseatend>
 			</control>
 			<control type="fadelabel" id="402">
@@ -32,7 +34,7 @@
 				<top>20</top>
 				<width>225</width>
 				<height>20</height>
-				<font>font13</font>
+				<font>font12</font>
 				<align>left</align>
 				<aligny>center</aligny>
                 <!--<textcolor>red</textcolor>-->
@@ -41,27 +43,24 @@
 			</control>
 			<control type="image" id="403">
 				<description>avatar</description>
-				<top>1</top>
-				<width>38</width>
-				<height>38</height>
+				<width>40</width>
+				<height>40</height>
 				<aspectratio>keep</aspectratio>
 				<visible>false</visible>
 				<texture>DefaultIconInfo.png</texture>
 			</control>
 			<control type="image" id="404">
 				<description>avatar</description>
-				<top>1</top>
-				<width>38</width>
-				<height>38</height>
+				<width>40</width>
+				<height>40</height>
 				<aspectratio>keep</aspectratio>
 				<visible>false</visible>
 				<texture>DefaultIconWarning.png</texture>
 			</control>
 			<control type="image" id="405">
 				<description>avatar</description>
-				<top>1</top>
-				<width>38</width>
-				<height>38</height>
+				<width>40</width>
+				<height>40</height>
 				<aspectratio>keep</aspectratio>
 				<visible>false</visible>
 				<texture>DefaultIconError.png</texture>

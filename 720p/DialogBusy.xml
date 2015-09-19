@@ -13,12 +13,12 @@
             <left>325</left>
             <control type="label">
 				<description>Busy label</description>
-				<left>215</left>
+				<centerleft>345</centerleft>
                 <top>5</top>
                 <height>39</height>
 				<width>450</width>
 				<font>font30</font>
-				<align>right</align>
+				<align>center</align>
                 <aligny>center</aligny>
 				<label>Please Stand By</label>
 			</control>

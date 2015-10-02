@@ -223,9 +223,9 @@
                 <font>font24_title</font>
                 <urlset>1</urlset>
                 <shadowcolor>-</shadowcolor>
-                <titlecolor>red</titlecolor>
+                <titlecolor>darkred</titlecolor>
                 <headlinecolor>brown</headlinecolor>
-                <textcolor>white</textcolor>
+                <textcolor>brown</textcolor>
             </control>
         </control>
         <control type="scrollbar" id="60">

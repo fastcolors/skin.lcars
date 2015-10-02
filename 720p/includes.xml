@@ -527,7 +527,7 @@
                 <visible>Container(9000).HasFocus(3)</visible>
                 <onup>888</onup>
                 <onleft>888</onleft>
-                <top>125</top>
+                <top>140</top>
                 <left>330</left>
                 <width>910</width>
                 <height>300</height>

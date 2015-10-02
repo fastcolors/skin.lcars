@@ -4,12 +4,11 @@
 		<control type="group">
             <visible>![Window.IsVisible(SliderDialog) | Window.IsActive(SubtitleSearch) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks) | Window.IsActive(script-XBMC-Subtitles-main.xml)]</visible>
 			<visible>![Window.IsVisible(FullScreenVideo) + [Window.IsActive(videoosd.xml) | Player.Seeking | Player.DisplayAfterSeek | Player.Forwarding | Player.Rewinding | Player.Caching | Player.Paused]]</visible>
-			<top>15</top>
+			<top>17</top>
             <left>775</left>
             <control type="image" id="400">
 				<description>avatar</description>
                 <left>175</left>
-				<top>3</top>
 				<width>35</width>
 				<height>35</height>
 				<aspectratio>keep</aspectratio>
@@ -17,7 +16,6 @@
 			</control>
 			<control type="fadelabel" id="401">
 				<description>Line 1 Label</description>
-				<top>4</top>
 				<left>45</left>
 				<width>125</width>
                 <height>18</height>
@@ -29,7 +27,7 @@
 			</control>
 			<control type="fadelabel" id="402">
 				<description>Line 2 Label</description>
-				<top>20</top>
+				<top>16</top>
 				<left>45</left>
 				<width>125</width>
 				<height>20</height>
@@ -43,7 +41,6 @@
 			<control type="image" id="403">
 				<description>avatar</description>
 				<left>175</left>
-				<top>3</top>
 				<width>35</width>
 				<height>35</height>
 				<aspectratio>keep</aspectratio>
@@ -53,7 +50,6 @@
 			<control type="image" id="404">
 				<description>avatar</description>
 				<left>175</left>
-				<top>3</top>
 				<width>35</width>
 				<height>35</height>
 				<aspectratio>keep</aspectratio>
@@ -63,7 +59,6 @@
 			<control type="image" id="405">
 				<description>avatar</description>
 				<left>175</left>
-				<top>3</top>
 				<width>35</width>
 				<height>35</height>
 				<aspectratio>keep</aspectratio>

@@ -213,20 +213,21 @@
             <align>justify</align>
             <label>$INFO[Window(Home).Property(NextAired.TodayShow),PLAYING TODAY ARE:    ]</label>
         </control>
-		<control type="rss" description="RSS Feed">
+        <control type="group">
             <visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
-			<left>265r</left>
-            <top>620</top>
-            <width>200</width>
-            <height>40</height>
-            <font>font28_title</font>
-			<urlset>1</urlset>
-            <shadowcolor>-</shadowcolor>
-            <titlecolor>red</titlecolor>
-            <headlinecolor>red</headlinecolor>
-            <textcolor>white</textcolor>
+            <control type="rss" description="RSS Feed">
+                <left>662</left>
+                <top>676</top>
+                <width>277</width>
+                <height>40</height>
+                <font>font24_title</font>
+                <urlset>1</urlset>
+                <shadowcolor>-</shadowcolor>
+                <titlecolor>red</titlecolor>
+                <headlinecolor>brown</headlinecolor>
+                <textcolor>white</textcolor>
+            </control>
         </control>
-		
         <control type="scrollbar" id="60">
             <visible>Control.IsVisible(311)</visible>
             <top>400</top>

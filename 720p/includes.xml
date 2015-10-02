@@ -269,6 +269,7 @@
                 <width>600</width>
                 <label>$VAR[311label]</label>
             </control>
+
             <!--movies-->
 
             <control type="grouplist" id="888">
@@ -863,7 +864,7 @@
                 <top>137</top>
                 <width>155</width>
                 <height>38</height>
-                <texture colordiffuse="button2">white3.gif</texture>
+                <texture colordiffuse="button2">white.png</texture>
             </control>
             <control type="image">
                 <top>181</top>
@@ -881,7 +882,7 @@
                 <top>269</top>
                 <width>155</width>
                 <height>38</height>
-                <texture colordiffuse="button3">white2.gif</texture>
+                <texture colordiffuse="button3">white.png</texture>
             </control>
             <control type="image">
                 <top>313</top>
@@ -893,7 +894,7 @@
                 <top>357</top>
                 <width>155</width>
                 <height>38</height>
-                <texture colordiffuse="button3">white4.gif</texture>
+                <texture colordiffuse="button3">white.png</texture>
             </control>
             <control type="image">
                 <top>401</top>
@@ -912,7 +913,7 @@
                 <top>489</top>
                 <width>155</width>
                 <height>38</height>
-                <texture colordiffuse="button4">white.gif</texture>
+                <texture colordiffuse="button4">white.png</texture>
             </control>
             <control type="button" id="700">
                 <visible>!Window.IsActive(Home)</visible>
@@ -1371,7 +1372,6 @@
                 <aligny>top</aligny>
             </control>
         </focusedlayout>
-
     </include>
     <include name="background">
         <control type="image">
@@ -1395,14 +1395,13 @@
             <texture colordiffuse="button4" >background5.png</texture>
         </control>
         <control type="image">
-            <left>285r</left>
+            <right>22</right>
             <top>490</top>
             <width>242</width>
             <height>101</height>
             <aspectratio scalediffuse="false" align="center">keep</aspectratio>
             <texture>$VAR[logoanimation]</texture>
         </control>
-
     </include>
     <include name="dialog2">
         <control type="image">
@@ -1418,28 +1417,28 @@
             <top>22</top>
             <width>1250</width>
             <height>600</height>
-            <texture colordiffuse="design" >dialog2A.png</texture>
+            <texture colordiffuse="design">dialog2A.png</texture>
         </control>
         <control type="image">
             <left>185</left>
             <top>22</top>
             <width>1250</width>
             <height>600</height>
-            <texture colordiffuse="button2" >dialog2B.png</texture>
+            <texture colordiffuse="button2">dialog2B.png</texture>
         </control>
         <control type="image">
             <left>185</left>
             <top>22</top>
             <width>1250</width>
             <height>600</height>
-            <texture colordiffuse="button3" >dialog2C.png</texture>
+            <texture colordiffuse="button3">dialog2C.png</texture>
         </control>
         <control type="image">
             <left>185</left>
             <top>22</top>
             <width>1250</width>
             <height>600</height>
-            <texture colordiffuse="button4" >dialog2D.png</texture>
+            <texture colordiffuse="button4">dialog2D.png</texture>
         </control>
     </include>
     <include name="dialog4">
@@ -1456,21 +1455,21 @@
             <top>60</top>
             <width>1250</width>
             <height>600</height>
-            <texture colordiffuse="design" >dialog4A.png</texture>
+            <texture colordiffuse="design">dialog4A.png</texture>
         </control>
         <control type="image">
             <left>185</left>
             <top>60</top>
             <width>1250</width>
             <height>600</height>
-            <texture colordiffuse="button2" >dialog4B.png</texture>
+            <texture colordiffuse="button2">dialog4B.png</texture>
         </control>
         <control type="image">
             <left>185</left>
             <top>60</top>
             <width>1250</width>
             <height>600</height>
-            <texture colordiffuse="button3" >dialog4C.png</texture>
+            <texture colordiffuse="button3">dialog4C.png</texture>
         </control>
     </include>
 </includes>

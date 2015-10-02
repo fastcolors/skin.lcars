@@ -91,7 +91,6 @@
             <style>uppercase</style>
 			<size>35</size>
 		</font>
-
 		<font>
 			<name>font_MainMenu</name>
 			<filename>lcars.ttf</filename>

@@ -308,10 +308,10 @@
                     <top>40</top>
                     <width>168</width>
                     <height>168</height>
-                    <aspectratio scalediffuse="false" align="right">scale</aspectratio>
-					<texture  diffuse="poster-mask.png" fallback="defaultmissing.png" background="true">$VAR[poster]</texture>
-					<bordertexture >shadow.png</bordertexture>
-					<bordersize>4</bordersize>
+                    <aspectratio>stretch</aspectratio>
+                    <texture  diffuse="poster-mask.png" fallback="defaultmissing.png" background="true">$VAR[poster]</texture>
+                    <bordertexture >shadow.png</bordertexture>
+                    <bordersize>4</bordersize>
                 </control>
                 <control type="label">
                     <top>20</top>
@@ -352,17 +352,17 @@
                     <aspectratio>stretch</aspectratio>
                     <texture colordiffuse="red">frame2.png</texture>
                 </control>
-                 <control type="image">
+                <control type="image">
                     <right>30</right>
                     <top>40</top>
                     <width>168</width>
                     <height>168</height>
-                    <aspectratio scalediffuse="false" align="right">scale</aspectratio>
-					<texture  diffuse="poster-mask.png" fallback="defaultmissing.png" background="true">$VAR[poster]</texture>
-					<bordertexture  colordiffuse="red">shadow.png</bordertexture>
-					<bordersize>4</bordersize>
-					<animation reversible="false" effect="zoom" start="30,40,168,168" end="-80,20,210,210" time="150">focus</animation>
-					<animation reversible="false" effect="zoom" end="30,40,168,168" start="-80,20,210,210" time="150">unfocus</animation>
+                    <aspectratio>stretch</aspectratio>
+                    <texture  diffuse="poster-mask.png" fallback="defaultmissing.png" background="true">$VAR[poster]</texture>
+                    <bordertexture  colordiffuse="red">shadow.png</bordertexture>
+                    <bordersize>4</bordersize>
+                    <animation reversible="true" effect="zoom" end="120" center="auto" time="150">focus</animation>
+                    <animation reversible="true" effect="zoom" start="120" end="100" center="auto" time="150">unFocus</animation>
                 </control>
                 <control type="label">
                     <top>20</top>

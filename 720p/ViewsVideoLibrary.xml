@@ -26,7 +26,7 @@
                 <ondown>60</ondown>
                 <viewtype label="31223">Icons</viewtype>
                 <orientation>horizontal</orientation>
-                <include>squareshome</include>
+                <include>movieshome</include>
 			</control>
             <control type="textbox">
                 <top>470</top>
@@ -578,7 +578,7 @@
             <pagecontrol>60</pagecontrol>
             <ondown>60</ondown>
             <orientation>horizontal</orientation>
-            <include>squareshome</include>
+            <include>movieshome</include>
         </control>
         <control type="label">
             <visible>Control.HasFocus(510)</visible>

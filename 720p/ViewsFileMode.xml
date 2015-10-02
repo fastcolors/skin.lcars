@@ -62,7 +62,7 @@
             <pagecontrol>60</pagecontrol>
             <ondown>60</ondown>
             <orientation>horizontal</orientation>
-            <include>squareshome</include>
+            <include>movieshome</include>
         </control>
         <control type="label">
             <visible>Control.HasFocus(510)</visible>

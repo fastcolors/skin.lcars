@@ -576,7 +576,7 @@
                 <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
                 <onup>888</onup>
                 <onleft>888</onleft>
-                <top>125</top>
+                <top>140</top>
                 <left>330</left>
                 <width>900</width>
                 <height>300</height>

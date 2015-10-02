@@ -99,7 +99,7 @@
                 <width>215</width>
                 <height>215</height>
                 <aspectratio>keep</aspectratio>
-                <texture  diffuse="poster-mask.png" fallback="posterfallback.png" background="true">$VAR[poster]</texture>
+                <texture  diffuse="poster-mask.png" fallback="posterfallbacksq.png" background="true">$VAR[poster]</texture>
                 <bordertexture>shadow.png</bordertexture>
                 <bordersize>4</bordersize>
             </control>
@@ -122,7 +122,7 @@
                     <width>215</width>
                     <height>215</height>
                     <aspectratio>keep</aspectratio>
-                    <texture  diffuse="poster-mask.png" fallback="posterfallback.png" background="true">$VAR[poster]</texture>
+                    <texture  diffuse="poster-mask.png" fallback="posterfallbacksq.png" background="true">$VAR[poster]</texture>
                     <bordertexture colordiffuse="red">shadow.png</bordertexture>
                     <bordersize>4</bordersize>
                 </control>

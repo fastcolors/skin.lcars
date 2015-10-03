@@ -48,7 +48,7 @@
                 <texture background="true">$INFO[ListItem.Art(tvshow.banner)]</texture>
             </control>
             <control type="textbox">
-                <visible>[IsEmpty(ListItem.Art(thumb)) | [IsEmpty(ListItem.Art(fanart)) +  ![Container(9000).HasFocus(3)| Container(9000).HasFocus(10)| Container(9000).HasFocus(9)| Container(9000).HasFocus(4)|Container.Content(files)|Container.Content(tvshows)|Container.Content(movies)|Container.Content(musicvideos) |Container.Content(actors)|Container.Content(episodes)]]]</visible>
+                <visible>IsEmpty(ListItem.Art(thumb))</visible>
                 <top>15</top>
                 <right>15</right>
                 <align>right</align>
@@ -80,7 +80,7 @@
                     <texture background="true">$INFO[ListItem.Art(tvshow.banner)]</texture>
                 </control>
                 <control type="textbox">
-                    <visible>[IsEmpty(ListItem.Art(thumb)) | [IsEmpty(ListItem.Art(fanart)) +  ![Container(9000).HasFocus(3)| Container(9000).HasFocus(10)| Container(9000).HasFocus(9)| Container(9000).HasFocus(4)|Container.Content(files)|Container.Content(tvshows)|Container.Content(movies)|Container.Content(musicvideos) |Container.Content(actors)|Container.Content(episodes)]]]</visible>
+                    <visible>IsEmpty(ListItem.Art(thumb))</visible>
                     <top>15</top>
                     <right>15</right>
                     <align>right</align>

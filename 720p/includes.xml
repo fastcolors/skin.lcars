@@ -1385,22 +1385,22 @@
         <control type="image">
             <width>1280</width>
             <height>720</height>
-            <texture colordiffuse="design" >background2.png</texture>
+            <texture colordiffuse="design">background2.png</texture>
         </control>
         <control type="image">
             <width>1280</width>
             <height>720</height>
-            <texture colordiffuse="button2" >background3.png</texture>
+            <texture colordiffuse="button2">background3.png</texture>
         </control>
         <control type="image">
             <width>1280</width>
             <height>720</height>
-            <texture colordiffuse="button3" >background4.png</texture>
+            <texture colordiffuse="button3">background4.png</texture>
         </control>
         <control type="image">
             <width>1280</width>
             <height>720</height>
-            <texture colordiffuse="button4" >background5.png</texture>
+            <texture colordiffuse="button4">background5.png</texture>
         </control>
         <control type="image">
             <right>22</right>

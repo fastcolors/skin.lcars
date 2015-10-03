@@ -4,13 +4,39 @@
     <controls>
         <control type="group">
             <visible>![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks) | Window.IsActive(script-XBMC-Subtitles-main.xml)]</visible>
-			<visible>![Window.IsVisible(FullScreenVideo) + [Window.IsActive(videoosd.xml) | Player.Seeking | Player.DisplayAfterSeek | Player.Forwarding | Player.Rewinding | Player.Caching | Player.Paused]]</visible>
-			<top>12</top>
-            <left>325</left>
+            <visible>![Window.IsVisible(FullScreenVideo) + [Window.IsActive(videoosd.xml) | Player.Seeking | Player.DisplayAfterSeek | Player.Forwarding | Player.Rewinding | Player.Caching | Player.Paused]]</visible>
+            <control type="progress" id="32">
+                <visible>!Stringcompare(Skin.CurrentColourTheme,redalert)</visible>
+                <description>progress control</description>
+                <colordiffuse>mediumslateblue</colordiffuse>
+                <top>-4</top>
+                <left>325</left>
+                <width>675</width>
+                <height>39</height>
+                <texturebg>-</texturebg>
+                <lefttexture>-</lefttexture>
+                <midtexture border="10">white.png</midtexture>
+                <righttexture>-</righttexture>
+                <overlaytexture>-</overlaytexture>
+            </control>
+            <control type="progress" id="32">
+                <visible>Stringcompare(Skin.CurrentColourTheme,redalert)</visible>
+                <description>progress control</description>
+                <colordiffuse>darkred</colordiffuse>
+                <top>-4</top>
+                <left>325</left>
+                <width>675</width>
+                <height>39</height>
+                <texturebg>-</texturebg>
+                <lefttexture>-</lefttexture>
+                <midtexture border="10">white.png</midtexture>
+                <righttexture>-</righttexture>
+                <overlaytexture>-</overlaytexture>
+            </control>
             <control type="label" id="30">
                 <description>Header Label</description>
-                <left>15</left>
-                <top>4</top>
+                <left>340</left>
+                <top>16</top>
                 <width>350</width>
                 <height>18</height>
                 <font>font10</font>
@@ -19,21 +45,13 @@
             </control>
             <control type="label" id="31">
                 <description>Title Label</description>
-                <left>15</left>
-                <top>20</top>
+                <left>340</left>
+                <top>36</top>
                 <width>450</width>
                 <height>20</height>
                 <font>font13</font>
                 <align>left</align>
                 <aligny>center</aligny>
-            </control>
-            <control type="progress" id="32">
-                <description>progress control</description>
-                <colordiffuse>black</colordiffuse>
-                <left>350</left>
-                <top>673</top>
-                <width>250</width>
-                <height>8</height>
             </control>
         </control>
     </controls>

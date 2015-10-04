@@ -11,7 +11,35 @@
 			<visible>![Window.IsVisible(FullScreenVideo) + [Window.IsActive(videoosd.xml) | Player.Seeking | Player.DisplayAfterSeek | Player.Forwarding | Player.Rewinding | Player.Caching | Player.Paused]]</visible>
 			<top>12</top>
             <left>325</left>
-            <control type="label">
+            <control type="progress" id="32">
+                <visible>!Stringcompare(Skin.CurrentColourTheme,redalert)</visible>
+                <description>progress control</description>
+                <colordiffuse>mediumslateblue</colordiffuse>
+                <top>3</top>
+                <left>0</left>
+                <width>675</width>
+                <height>39</height>
+                <texturebg>homeprogressbarshape.png</texturebg>
+                <lefttexture>-</lefttexture>
+                <midtexture>white.png</midtexture>
+                <righttexture>-</righttexture>
+                <overlaytexture>-</overlaytexture>
+            </control>
+            <control type="progress" id="32">
+                <visible>Stringcompare(Skin.CurrentColourTheme,redalert)</visible>
+                <description>progress control</description>
+                <colordiffuse>darkred</colordiffuse>
+                <top>3</top>
+                <left>0</left>
+                <width>675</width>
+                <height>39</height>
+                <texturebg>homeprogressbarshape.png</texturebg>
+                <lefttexture>-</lefttexture>
+                <midtexture>white.png</midtexture>
+                <righttexture>-</righttexture>
+                <overlaytexture>-</overlaytexture>
+            </control>
+			<control type="label">
 				<description>Busy label</description>
 				<centerleft>345</centerleft>
                 <top>5</top>
@@ -22,14 +50,7 @@
                 <aligny>center</aligny>
 				<label>Please Stand By</label>
 			</control>
-			<control type="progress" id="32">
-                <description>progress control</description>
-                <colordiffuse>black</colordiffuse>
-                <left>350</left>
-                <top>673</top>
-                <width>250</width>
-                <height>8</height>
-            </control>
-		</control>
+			
+        </control>
 	</controls>
 </window>

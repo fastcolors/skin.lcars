@@ -16,6 +16,7 @@
 			</control>
 			<control type="fadelabel" id="401">
 				<description>Line 1 Label</description>
+				<top>-1</top>
 				<left>45</left>
 				<width>125</width>
                 <height>18</height>

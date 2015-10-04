@@ -9,13 +9,13 @@
                 <visible>!Stringcompare(Skin.CurrentColourTheme,redalert)</visible>
                 <description>progress control</description>
                 <colordiffuse>mediumslateblue</colordiffuse>
-                <top>-4</top>
+                <top>15</top>
                 <left>325</left>
                 <width>675</width>
                 <height>39</height>
-                <texturebg>-</texturebg>
+                <texturebg>homeprogressbarshape.png</texturebg>
                 <lefttexture>-</lefttexture>
-                <midtexture border="10">white.png</midtexture>
+                <midtexture>white.png</midtexture>
                 <righttexture>-</righttexture>
                 <overlaytexture>-</overlaytexture>
             </control>
@@ -23,13 +23,13 @@
                 <visible>Stringcompare(Skin.CurrentColourTheme,redalert)</visible>
                 <description>progress control</description>
                 <colordiffuse>darkred</colordiffuse>
-                <top>-4</top>
+                <top>15</top>
                 <left>325</left>
                 <width>675</width>
                 <height>39</height>
-                <texturebg>-</texturebg>
+                <texturebg>homeprogressbarshape.png</texturebg>
                 <lefttexture>-</lefttexture>
-                <midtexture border="10">white.png</midtexture>
+                <midtexture>white.png</midtexture>
                 <righttexture>-</righttexture>
                 <overlaytexture>-</overlaytexture>
             </control>

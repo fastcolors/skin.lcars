@@ -1070,6 +1070,81 @@
             <height>30</height>
             <texture colordiffuse="black">kodilogo.png</texture>
         </control>
+		<!-- Music Info -->
+		<control type="group">
+			<left>662</left>
+			<top>676</top>
+			<visible>Player.HasAudio</visible>
+			<control type="label">
+				<description>Album Label</description>
+				<left>0</left>
+				<top>0</top>
+				<height>40</height>
+				<width>277</width>
+				<scroll>true</scroll>
+				<label>NOW PLAYING : $INFO[Player.Title] $INFO[MusicPlayer.Artist,, - ]$INFO[MusicPlayer.Album]$INFO[musicplayer.discnumber, - $LOCALIZE[427]:]</label>
+				<font>font24_title</font>
+			</control>
+		</control>
+		<!-- Video Info -->
+		<control type="group">
+			<left>662</left>
+			<top>676</top>
+			<visible>Player.HasVideo</visible>
+			<control type="group">
+				<visible>!VideoPlayer.Content(Movies) + !VideoPlayer.Content(Episodes) + !VideoPlayer.Content(LiveTV)</visible>
+				<control type="label">
+					<description>Title label</description>
+					<left>0</left>
+					<top>0</top>
+					<height>40</height>
+					<width>277</width>
+					<scroll>true</scroll>
+					<label>NOW PLAYING : $INFO[Player.Title]</label>
+					<font>font24_title</font>
+				</control>
+			</control>
+			<control type="group">
+				<visible>VideoPlayer.Content(LiveTV)</visible>
+				<control type="label">
+					<description>Channel label</description>
+					<left>0</left>
+					<top>0</top>
+					<height>40</height>
+					<width>277</width>
+					<scroll>true</scroll>
+					<label>NOW PLAYING : $INFO[VideoPlayer.ChannelName] $INFO[Player.Title]</label>
+					<font>font24_title</font>
+				</control>
+			</control>
+			<control type="group">
+				<visible>VideoPlayer.Content(Movies)</visible>
+				<control type="label">
+					<description>Studio label</description>
+					<left>0</left>
+					<top>0</top>
+					<height>40</height>
+					<width>277</width>
+					<scroll>true</scroll>
+					<label>NOW PLAYING : $INFO[VideoPlayer.Studio] $INFO[Player.Title]$INFO[VideoPlayer.Year,[COLOR=grey] (,)[/COLOR]]</label>
+					<font>font24_title</font>
+				</control>
+			</control>
+			<control type="group">
+				<visible>VideoPlayer.Content(Episodes)</visible>
+				<control type="label">
+					<description>TV Show Season Ep Label</description>
+					<left>0</left>
+					<top>0</top>
+					<height>40</height>
+					<width>277</width>
+					<scroll>true</scroll>
+					<label>NOW PLAYING : $INFO[VideoPlayer.TVShowTitle] ($INFO[VideoPlayer.Season,$LOCALIZE[20373] , - ]$INFO[VideoPlayer.episode,$LOCALIZE[20359] ,]) $INFO[Player.Title]</label>
+					<font>font24_title</font>
+				</control>
+			</control>
+		</control>
+		
     </include>
     <include name="keybutt">
         <width>85</width>

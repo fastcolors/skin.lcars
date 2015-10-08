@@ -36,6 +36,7 @@
             <width>155</width>
             <height>530</height>
             <onright>888</onright>
+            <ondown condition="Player.HasAudio">9090</ondown>
             <itemlayout width="155" height="44">
                 <control type="label">
                     <top>7</top>
@@ -228,7 +229,48 @@
                 <textcolor>brown</textcolor>
             </control>
         </control>
-		<control type="scrollbar" id="60">
+        <control type="group" id="9090">
+            <top>625</top>
+            <left>30</left>
+            <visible>Player.HasAudio</visible>
+            <control type="image">
+                <height>52</height>
+                <width>170</width>
+                <texture border="0" colordiffuse="black">whiteallrounded.png</texture>
+            </control>
+            <control type="grouplist">
+                <top>5</top>
+                <left>5</left>
+                <onup>9000</onup>
+                <orientation>horizontal</orientation>
+                <itemgap>4</itemgap>
+                <control type="button" id="9091">
+                    <width>50</width>
+                    <texturenofocus colordiffuse="design" border="20" flipx="true">bullet.png</texturenofocus>
+                    <texturefocus colordiffuse="white" border="20" flipx="true">bullet.png</texturefocus>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <label>RWD</label>
+                </control>
+                <control type="button" id="9092">
+                    <width>50</width>
+                    <texturenofocus colordiffuse="design" border="20">white.png</texturenofocus>
+                    <texturefocus colordiffuse="white" border="20">white.png</texturefocus>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <label>STOP</label>
+                </control>
+                <control type="button" id="9093">
+                    <width>50</width>
+                    <texturenofocus colordiffuse="design" border="20">bullet.png</texturenofocus>
+                    <texturefocus colordiffuse="white" border="20">bullet.png</texturefocus>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <label>FFWD</label>
+                </control>
+            </control>
+        </control>
+        <control type="scrollbar" id="60">
             <visible>Control.IsVisible(311)</visible>
             <top>400</top>
             <left>350</left>

@@ -230,44 +230,51 @@
             </control>
         </control>
         <control type="group" id="9090">
-            <top>625</top>
-            <left>30</left>
+            <top>590</top>
+            <left>1020</left>
             <visible>Player.HasAudio</visible>
-            <control type="image">
-                <height>52</height>
-                <width>170</width>
-                <texture border="0" colordiffuse="black">whiteallrounded.png</texture>
-            </control>
             <control type="grouplist">
                 <top>5</top>
                 <left>5</left>
                 <onup>9000</onup>
                 <orientation>horizontal</orientation>
-                <itemgap>4</itemgap>
+                <itemgap>3</itemgap>
                 <control type="button" id="9091">
                     <width>50</width>
+                    <height>40</height>
                     <texturenofocus colordiffuse="design" border="20" flipx="true">bullet.png</texturenofocus>
                     <texturefocus colordiffuse="white" border="20" flipx="true">bullet.png</texturefocus>
                     <align>center</align>
                     <aligny>center</aligny>
-                    <label>210</label>
+                    <label>PREV</label>
                     <onclick>PlayerControl(Previous)</onclick>
                 </control>
                 <control type="togglebutton" id="9092">
-                    <width>50</width>
+                    <width>58</width>
                     <height>40</height>
                     <texturenofocus colordiffuse="design" border="20">white.png</texturenofocus>
                     <texturefocus colordiffuse="white" border="20">white.png</texturefocus>
                     <align>center</align>
                     <aligny>center</aligny>
-                    <label>208</label>
-                    <altlabel>31226</altlabel>
+                    <label>31226</label>
+                    <altlabel>208</altlabel>
                     <usealttexture>Player.Paused</usealttexture>
                     <onclick>PlayerControl(Play)</onclick>
                 </control>
+                <control type="togglebutton" id="9094">
+                    <width>58</width>
+                    <height>40</height>
+                    <texturenofocus colordiffuse="design" border="20">white.png</texturenofocus>
+                    <texturefocus colordiffuse="white" border="20">white.png</texturefocus>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <label>STOP</label>
+                    <onclick>PlayerControl(Stop)</onclick>
+                </control>
                 <control type="button" id="9093">
                     <width>50</width>
-                    <texturenofocus colordiffuse="design" border="20">bullet.png</texturenofocus>
+                   <height>40</height>
+                     <texturenofocus colordiffuse="design" border="20">bullet.png</texturenofocus>
                     <texturefocus colordiffuse="white" border="20">bullet.png</texturefocus>
                     <align>center</align>
                     <aligny>center</aligny>

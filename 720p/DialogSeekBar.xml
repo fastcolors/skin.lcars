@@ -85,7 +85,7 @@
             <control type="label" description="Pause">
                 <visible>Player.Paused + !Player.Caching</visible>
                 <include>winding</include>
-                <label>PAUSE</label>
+                <label>31226</label>
             </control>
             <control type="label" description="FF">
                 <visible>player.forwarding2x</visible>

@@ -154,23 +154,23 @@
                     <texturenofocus colordiffuse="osd"  flipx="true" border="20">whiterounded.png</texturenofocus>
                     <texturefocus colordiffuse="green"  flipx="true" border="20">whiterounded.png</texturefocus>
                     <include>osdbutt</include>
-                    <label>PREV</label>
+                    <label>31227</label>
                     <onclick>PlayerControl(Previous)</onclick>
                 </control>
                 <control type="button" id="2">
                     <visible>!Pvr.IsPlayingTV</visible>
                     <include>osdbutt</include>
-                    <label>REW</label>
+                    <label>31228</label>
                     <onclick>PlayerControl(Rewind)</onclick>
                 </control>
                 <control type="togglebutton" id="3">
                     <visible>!Pvr.IsPlayingTV</visible>
                     <usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
                     <include>osdbutt</include>
-                    <label>PAUSE</label>
+                    <label>31226</label>
                     <alttexturenofocus colordiffuse="blue" border="20">white.png</alttexturenofocus>
                     <alttexturefocus colordiffuse="green" border="20">white.png</alttexturefocus>
-                    <altlabel>PLAY</altlabel>
+                    <altlabel>208</altlabel>
                     <onclick>PlayerControl(Play)</onclick>
                 </control>
                 <control type="button" id="4">
@@ -181,25 +181,25 @@
                 <control type="button" id="5">
                     <visible>!Pvr.IsPlayingTV</visible>
                     <include>osdbutt</include>
-                    <label>FFWD</label>
+                    <label>31229</label>
                     <onclick>PlayerControl(Forward)</onclick>
                 </control>
                 <control type="button" id="7">
                     <visible>Pvr.IsPlayingTV</visible>
                     <include>osdbutt</include>
-                    <label>CHANEL</label>
+                    <label>19148</label>
                     <onclick>ActivateWindow(PVROSDChannels)</onclick>
                 </control>
                 <control type="button" id="8">
                     <visible>Pvr.IsPlayingTV</visible>
                     <include>osdbutt</include>
-                    <label>GUIDE</label>
+                    <label>19069</label>
                     <onclick>ActivateWindow(PVROSDGuide)</onclick>
                 </control>
                 <control type="button" id="9">
                     <visible>Pvr.IsPlayingTV + Player.CanRecord</visible>
                     <include>osdbutt</include>
-                    <label>Record</label>
+                    <label>264</label>
                     <onclick>PlayerControl(Record)</onclick>
                 </control>
                 <control type="button" id="10">
@@ -210,14 +210,14 @@
                 </control>
                 <control type="button" id="11">
                     <include>osdbutt</include>
-                    <label>Menu</label>
+                    <label>33061</label>
                     <onclick>SetFocus(101)</onclick>
                 </control>
 				<control type="button" id="6">
                     <texturenofocus colordiffuse="osd" border="20">whiterounded.png</texturenofocus>
                     <texturefocus colordiffuse="green" border="20">whiterounded.png</texturefocus>
                     <include>osdbutt</include>
-                    <label>NEXT</label>
+                    <label>209</label>
                     <onclick>PlayerControl(Next)</onclick>
                 </control>
             </control>

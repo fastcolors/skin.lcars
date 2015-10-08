@@ -151,3 +151,21 @@ msgstr "Panel"
 msgctxt "#31225"
 msgid "emergency shutdown"
 msgstr "emergency shutdown"
+
+msgctxt "#31226"
+msgid "Pause"
+msgstr "Pause"
+
+msgctxt "#31227"
+msgid "PREV"
+msgstr "PREV"
+
+msgctxt "#31228"
+msgid "REW"
+msgstr "REW"
+
+msgctxt "#31229"
+msgid "FFWD"
+msgstr "FFWD"
+
+

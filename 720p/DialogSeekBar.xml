@@ -74,9 +74,8 @@
             </control>
             <control type="label" description="Seek time label">
                 <visible>![player.forwarding | player.rewinding]</visible>
-                <visible>Player.DisplayAfterSeek</visible>
                 <include>winding</include>
-                <label>$INFO[Player.SeekOffset]</label>
+                <label>$VAR[SeekLabel]</label>
             </control>
             <control type="label" description="Buffer icon">
                 <visible>Player.Caching</visible>

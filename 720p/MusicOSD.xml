@@ -2,17 +2,10 @@
 <window>
     <defaultcontrol always="true">603</defaultcontrol>
     <controls>
-         <control type="group" description="Options content">
-            <!--<visible>!Window.IsVisible(10123) + !Window.IsVisible(10124) + !Window.IsVisible(10125)</visible>-->
+        <control type="group" description="Options content">
             <width>780</width>
             <left>1600</left>
             <top>165</top>
-            <animation type="Focus">
-                <effect type="slide" tween="Cubic" easing="out" start="0,0" end="-550,0" time="800"/>
-            </animation>
-            <animation type="unFocus">
-                <effect type="slide" tween="Cubic" easing="in" start="-550,0" end="0,0" time="500"/>
-            </animation>
             <control type="image">
                 <centerleft>0</centerleft>
                 <width>550</width>
@@ -26,15 +19,13 @@
                 <width>400</width>
                 <height>400</height>
                 <itemgap>6</itemgap>
-                <!--<animation effect="fade" time="200">VisibleChange</animation>-->
-                <!--<visible>![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList)]</visible>-->
-               <control type="togglebutton" id="701">
+                <control type="togglebutton" id="701">
                     <include>largebutton</include>
                     <texturenofocus colordiffuse="design" border="20">whiteallrounded.png</texturenofocus>
                     <texturefocus colordiffuse="white" border="20">whiteallrounded.png</texturefocus>
                     <alttexturenofocus colordiffuse="design" border="20">whiteallrounded.png</alttexturenofocus>
-					<alttexturefocus colordiffuse="white" border="20">whiteallrounded.png</alttexturefocus>
-					<label>LYRICS</label>
+                    <alttexturefocus colordiffuse="white" border="20">whiteallrounded.png</alttexturefocus>
+                    <label>LYRICS</label>
                     <onleft>607</onleft>
                     <onright>500</onright>
                     <onup>1000</onup>
@@ -109,65 +100,65 @@
                 <info>Player.Progress</info>
             </control>
         </control>
-		<control type="group" description="Top Bar">
-                <visible>!Window.IsActive(142)</visible>
-                <control type="label">
-                    <top>10</top>
-                    <left>50</left>
-                    <width>110</width>
-                    <height>20</height>
-                    <textcolor>white</textcolor>
-                    <align>center</align>
-                    <label>$LOCALIZE[142] $INFO[System.Time]</label>
-                </control>
-                <control type="label">
-                    <top>32</top>
-                    <left>50</left>
-                    <width>110</width>
-                    <height>20</height>
-                    <align>center</align>
-                    <textcolor>white</textcolor>
-                    <label>$INFO[Player.Time]</label>
-                </control>
-                <control type="label" description="Normal Header label">
-                    <visible>!MusicPartyMode.Enabled</visible>
-					<top>10</top>
-                    <right>50</right>
-                    <width>110</width>
-                    <height>20</height>
-                    <align>center</align>
-                    <textcolor>white</textcolor>
-                    <label>$INFO[musicplayer.Playlistposition,$LOCALIZE[554]: ]$INFO[musicplayer.Playlistlength, / ]</label>
-                </control>
-				<control type="label" description="Partymode Header label">
-                    <visible>MusicPartyMode.Enabled</visible>
-					<top>10</top>
-                    <right>50</right>
-                    <width>110</width>
-                    <height>20</height>
-                    <align>center</align>
-                    <textcolor>white</textcolor>
-                    <label>$LOCALIZE[589]</label>
-                </control>
-				<control type="label">
-                    <top>32</top>
-                    <right>50</right>
-                    <width>110</width>
-                    <align>center</align>
-                    <textcolor>white</textcolor>
-                    <label>- $INFO[Player.TimeRemaining]</label>
-                </control>
-             </control>
-		<control type="grouplist" id="100">
-				<posx>0</posx>
-                <top>620</top>
-                <onright>100</onright>
-                <onleft>100</onleft>
-                <width>1280</width>
-                <height>40</height>
+        <control type="group" description="Top Bar">
+            <visible>!Window.IsActive(142)</visible>
+            <control type="label">
+                <top>10</top>
+                <left>50</left>
+                <width>110</width>
+                <height>20</height>
+                <textcolor>white</textcolor>
                 <align>center</align>
-                <orientation>horizontal</orientation>
-                <visible>![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList)]</visible>
+                <label>$LOCALIZE[142] $INFO[System.Time]</label>
+            </control>
+            <control type="label">
+                <top>32</top>
+                <left>50</left>
+                <width>110</width>
+                <height>20</height>
+                <align>center</align>
+                <textcolor>white</textcolor>
+                <label>$INFO[Player.Time]</label>
+            </control>
+            <control type="label" description="Normal Header label">
+                <visible>!MusicPartyMode.Enabled</visible>
+                <top>10</top>
+                <right>50</right>
+                <width>110</width>
+                <height>20</height>
+                <align>center</align>
+                <textcolor>white</textcolor>
+                <label>$INFO[musicplayer.Playlistposition,$LOCALIZE[554]: ]$INFO[musicplayer.Playlistlength, / ]</label>
+            </control>
+            <control type="label" description="Partymode Header label">
+                <visible>MusicPartyMode.Enabled</visible>
+                <top>10</top>
+                <right>50</right>
+                <width>110</width>
+                <height>20</height>
+                <align>center</align>
+                <textcolor>white</textcolor>
+                <label>$LOCALIZE[589]</label>
+            </control>
+            <control type="label">
+                <top>32</top>
+                <right>50</right>
+                <width>110</width>
+                <align>center</align>
+                <textcolor>white</textcolor>
+                <label>- $INFO[Player.TimeRemaining]</label>
+            </control>
+        </control>
+        <control type="grouplist" id="100">
+            <posx>0</posx>
+            <top>620</top>
+            <onright>100</onright>
+            <onleft>100</onleft>
+            <width>1280</width>
+            <height>40</height>
+            <align>center</align>
+            <orientation>horizontal</orientation>
+            <visible>![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList)]</visible>
             <control type="button" id="600">
                 <label>210</label>
                 <texturenofocus colordiffuse="osd"  flipx="true" border="20">whiterounded.png</texturenofocus>
@@ -216,11 +207,11 @@
                 <onclick>PlayerControl(Next)</onclick>
             </control>
             <control type="button" id="11">
-                    <include>osdbutt</include>
-                    <label>Menu</label>
-                    <onclick>SetFocus(1000)</onclick>
+                <include>osdbutt</include>
+                <label>Menu</label>
+                <onclick>SetFocus(1000)</onclick>
             </control>
-			<control type="button" id="606">
+            <control type="button" id="606">
                 <include>osdbutt</include>
                 <align>center</align>
                 <label>$LOCALIZE[486]$INFO[Playlist.Repeat, : ]</label>
@@ -240,18 +231,5 @@
                 <onright>701</onright>
             </control>
         </control>
-        <!--control type="label">
-            <visible>!ControlGroup(1000).HasFocus()</visible>
-            <animation type="Visible">
-                <effect type="fade" tween="circle" easing="in" start="0" end="100" time="800"/>
-            </animation>
-            <centerleft>640</centerleft>
-            <top>700</top>
-            <width>800</width>
-            <height>35</height>
-            <font>font13</font>
-            <align>center</align>
-            <label>PRESS UP FOR MENU</label>
-        </control-->
     </controls>
 </window>

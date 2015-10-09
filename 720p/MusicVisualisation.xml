@@ -25,14 +25,14 @@
         </control>
         <!-- media infos -->
         <control type="group">
+            <left>240</left>
+            <top>370</top>
             <animation effect="fade" time="200">VisibleChange</animation>
             <visible>[Player.ShowInfo | Window.IsActive(MusicOSD)] + ![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList)]</visible>
             <control type="image">
                 <width>800</width>
                 <height>230</height>
-                <top>60</top>
-                <left>60</left>
-                <texture border="100" colordiffuse="design">dialog.png</texture>
+                <texture border="50" colordiffuse="design">dialog.png</texture>
                 <colordiffuse>99FFFF00</colordiffuse>
             </control>
             <!--control type="label">
@@ -77,18 +77,18 @@
             </control-->
             <control type="image">
                 <description>cover image</description>
-                <centerleft>210</centerleft>
-                <top>70</top>
+                <centerleft>150</centerleft>
+                <centertop>115</centertop>
                 <width>210</width>
                 <height>210</height>
                 <texture fallback="DefaultAlbumCover.png">$INFO[Player.Art(thumb)]</texture>
-                <aspectratio aligny="bottom">keep</aspectratio>
+                <aspectratio>keep</aspectratio>
                 <bordertexture border="8">white.png</bordertexture>
-                <bordersize>8</bordersize>
+                <bordersize>4</bordersize>
             </control>
             <control type="group">
-                <left>330</left>
-                <top>600r</top>
+                <left>250</left>
+                <top>60</top>
                 <control type="label" id="1">
                     <description>Artist label</description>
                     <left>20</left>
@@ -124,7 +124,6 @@
                         <aligny>center</aligny>
                         <label>$INFO[MusicPlayer.Codec]</label>
                     </control-->
-                    
                 </control>
                 <control type="label">
                     <left>20</left>

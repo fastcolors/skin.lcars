@@ -168,4 +168,6 @@ msgctxt "#31229"
 msgid "FFWD"
 msgstr "FFWD"
 
-
+msgctxt "#31230"
+msgid "STOP"
+msgstr "STOP"

@@ -65,26 +65,28 @@
 				<pagecontrol>30</pagecontrol>
 				<scrolltime>200</scrolltime>
                 <orientation>vertical</orientation>
-				<itemlayout width="180" height="260">
+				<itemlayout width="226" height="236">
 					<control type="image">
-						<left>10</left>
+						<centerleft>113</centerleft>
 						<top>10</top>
-						<width>170</width>
-						<height>250</height>
-						<aspectratio scalediffuse="false" align="right">scale</aspectratio>
-						<texture  diffuse="poster-mask.png" fallback="posterfallback.png" background="true">$VAR[poster]</texture>
-						<bordertexture  colordiffuse="white">shadow.png</bordertexture>
+						<width>215</width>
+						<height>215</height>
+						<aspectratio>keep</aspectratio>
+						<texture  diffuse="poster-mask.png" fallback="posterfallbacksq.png" background="true">$VAR[poster]</texture>
+						<bordertexture>shadow.png</bordertexture>
 						<bordersize>4</bordersize>
 					</control>
 				</itemlayout>
-				<focusedlayout width="180" height="260">
+				<focusedlayout width="226" height="236">
+				<animation effect="zoom" end="105" center="113,140">Focus</animation>
 					<control type="image">
-						<left>4</left>
-						<width>176</width>
-						<height>256</height>
-						<aspectratio scalediffuse="false" align="right">scale</aspectratio>
-						<texture  diffuse="poster-mask.png" fallback="posterfallback.png" background="true">$VAR[poster]</texture>
-						<bordertexture  colordiffuse="red">shadow.png</bordertexture>
+						<centerleft>113</centerleft>
+						<top>10</top>
+						<width>215</width>
+						<height>215</height>
+						<aspectratio>keep</aspectratio>
+						<texture  diffuse="poster-mask.png" fallback="posterfallbacksq.png" background="true">$VAR[poster]</texture>
+						<bordertexture colordiffuse="red">shadow.png</bordertexture>
 						<bordersize>4</bordersize>
 					</control>
 				</focusedlayout>

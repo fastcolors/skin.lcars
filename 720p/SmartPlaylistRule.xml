@@ -123,8 +123,8 @@
 			<invalidcolor>invalid</invalidcolor>
 			<textcolor>white</textcolor>
 			<label>-</label>
-			<texturenofocus border="20">thumb-focus2.png</texturenofocus>
-			<texturefocus border="20">thumb-focus.png</texturefocus>
+			<texturenofocus colordiffuse="design" border="20">whiteallrounded.png</texturenofocus>
+			<texturefocus colordiffuse="white" border="20">whiteallrounded.png</texturefocus>
 			<onup>9001</onup>
 			<onleft>20</onleft>
 			<onright>20</onright>

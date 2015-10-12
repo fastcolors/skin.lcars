@@ -80,7 +80,7 @@
 				<textwidth>720</textwidth>
 				<font>font13</font>
 				<align>center</align>
-				<texturefocus border="5">thumb-focus.png</texturefocus>
+				<texturefocus colordiffuse="white" border="20">whiteallrounded.png</texturefocus>
 				<label>-</label>
 				<onup>22</onup>
 				<onleft>12</onleft>
@@ -113,7 +113,7 @@
 						<top>0</top>
 						<width>550</width>
 						<height>40</height>
-						<texture border="5">thumb-focus2.png</texture>
+						<texture colordiffuse="design" border="20">whiteallrounded.png</texture>
 					</control>
 					<control type="label">
 						<left>10</left>
@@ -132,7 +132,7 @@
 						<top>0</top>
 						<width>550</width>
 						<height>40</height>
-						<texture border="5">thumb-focus.png</texture>
+						<texture colordiffuse="white" border="20">whiteallrounded.png</texture>
 						<visible>Control.HasFocus(10)</visible>
 					</control>
 					<control type="image">
@@ -140,7 +140,7 @@
 						<top>0</top>
 						<width>550</width>
 						<height>40</height>
-						<texture border="5">thumb-focus2.png</texture>
+						<texture colordiffuse="design" border="20">whiteallrounded.png</texture>
 						<visible>!Control.HasFocus(10)</visible>
 					</control>
 					<control type="label">

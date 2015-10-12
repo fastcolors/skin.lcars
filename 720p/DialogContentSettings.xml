@@ -188,11 +188,11 @@
 			</control>
 			<control type="scrollbar" id="60">
 				<left>760</left>
+				<onleft>21</onleft>
 				<top>100</top>
 				<height>240</height>
 				<onleft>4</onleft>
 				<onright>3</onright>
-				<showonepage>true</showonepage>
 				<orientation>vertical</orientation>
 			</control>
 			<control type="label">

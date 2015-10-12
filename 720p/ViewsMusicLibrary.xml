@@ -23,8 +23,10 @@
                     <width>250</width>
                     <height>250</height>
                     <aspectratio>stretch</aspectratio>
-                    <texture fallback="posterfallback.png">$VAR[poster]</texture>
-                </control>
+                    <texture  diffuse="poster-mask.png" fallback="posterfallbacksq.png">$VAR[poster]</texture>
+					<bordertexture>shadow.png</bordertexture>
+					<bordersize>4</bordersize>
+				</control>
                 <control type="textbox">
                     <visible>Container.Content(albums) + IsEmpty(ListItem.Art(thumb))</visible>
                     <top>10</top>
@@ -61,10 +63,10 @@
                     <width>258</width>
                     <height>258</height>
                     <aspectratio>stretch</aspectratio>
-                    <texture fallback="posterfallback.png">$VAR[poster]</texture>
-                    <bordertexture colordiffuse="red">white.png</bordertexture>
-                    <bordersize>4</bordersize>
-                </control>
+                    <texture  diffuse="poster-mask.png" fallback="posterfallbacksq.png">$VAR[poster]</texture>
+					<bordertexture colordiffuse="red">shadow.png</bordertexture>
+					<bordersize>4</bordersize>
+				</control>
                 <control type="textbox">
                     <visible>Container.Content(albums) + IsEmpty(ListItem.Art(thumb))</visible>
                     <top>10</top>

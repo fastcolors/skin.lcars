@@ -28,7 +28,7 @@
 				<description>media info background image</description>
 				<left>0</left>
 				<top>10</top>
-				<width>1150</width>
+				<width>1200</width>
 				<height>700</height>
 				<texture border="130" colordiffuse="design">dialog.png</texture>
 			</control>
@@ -308,15 +308,6 @@
 				</control-->
 			</control>
 			<control type="group">
-				<control type="image">
-					<description>separator</description>
-					<left>542</left>
-					<top>360</top>
-					<width>720</width>
-					<height>4</height>
-					<texture>separator.png</texture>
-					<animation effect="rotate" start="0" end="90" center="auto" time="0" condition="true">Conditional</animation>		
-				</control>
 				<control type="label">
 					<left>905</left>
 					<top>150</top>
@@ -338,9 +329,9 @@
 					<texture>separator.png</texture>
 				</control>
 				<control type="list" id="150">
-					<left>880</left>
+					<left>890</left>
 					<top>206</top>
-					<width>250</width>
+					<width>230</width>
 					<height>399</height>
 					<onleft>120</onleft>
 					<onright>120</onright>
@@ -349,10 +340,15 @@
 					<viewtype label="535">list</viewtype>
 					<scrolltime>200</scrolltime>
 					<itemlayout width="250" height="36">
-						<control type="label">
-							<left>20</left>
+						<control type="image">
 							<top>0</top>
-							<width>210</width>
+							<width>230</width>
+							<height>40</height>
+							<texture border="20" colordiffuse="design">whiteallrounded.png</texture>
+						</control>
+						<control type="label">
+							<top>0</top>
+							<width>230</width>
 							<height>38</height>
 							<font>font18</font>
 							<aligny>center</aligny>
@@ -364,25 +360,22 @@
 					</itemlayout>
 					<focusedlayout width="250" height="36">
 						<control type="image">
-							<left>10</left>
 							<top>0</top>
 							<width>230</width>
-							<height>38</height>
-							<texture border="5">thumb-focus2.png</texture>
+							<height>40</height>
+							<texture border="20" colordiffuse="design">whiteallrounded.png</texture>
 							<visible>!Control.HasFocus(150)</visible>
 						</control>
 						<control type="image">
-							<left>10</left>
 							<top>0</top>
 							<width>230</width>
-							<height>38</height>
-							<texture border="5">thumb-focus.png</texture>
+							<height>40</height>
+							<texture border="20"  colordiffuse="white">whiteallrounded.png</texture>
 							<visible>Control.HasFocus(150)</visible>
 						</control>
 						<control type="label">
-							<left>20</left>
 							<top>0</top>
-							<width>210</width>
+							<width>230</width>
 							<height>38</height>
 							<font>font18</font>
 							<aligny>center</aligny>

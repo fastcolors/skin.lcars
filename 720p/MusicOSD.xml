@@ -6,6 +6,12 @@
             <width>780</width>
             <left>1600</left>
             <top>165</top>
+            <animation type="Focus">
+                <effect type="slide" tween="Cubic" easing="out" start="0,0" end="-550,0" time="800"/>
+            </animation>
+            <animation type="unFocus">
+                <effect type="slide" tween="Cubic" easing="in" start="-550,0" end="0,0" time="500"/>
+            </animation>
             <control type="image">
                 <centerleft>0</centerleft>
                 <width>550</width>

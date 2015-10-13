@@ -59,12 +59,12 @@
                     <onclick>close</onclick>
                     <onclick>ActivateWindow(142)</onclick>
                 </control>
-                <control type="button" id="707">
+                <!--control type="button" id="707">
                     <include>largebutton</include>
                     <label>21445</label>
                     <onclick>close</onclick>
                     <onclick>CodecInfo</onclick>
-                </control>
+                </control-->
                 <control type="button" id="254">
                     <include>largebutton</include>
                     <label>25003</label>

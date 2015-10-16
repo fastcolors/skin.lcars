@@ -109,7 +109,7 @@
                 <centerleft>640</centerleft>
                 <width>685</width>
                 <height>39</height>
-                <texture colordiffuse="design">white.png</texture>
+                <texture colordiffuse="design"  border="20">white.png</texture>
             </control>
             <control type="label">
                 <top>18</top>

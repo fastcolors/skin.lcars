@@ -954,7 +954,7 @@
             <left>325</left>
             <width>675</width>
             <height>39</height>
-            <texture colordiffuse="blue">white.png</texture>
+            <texture colordiffuse="blue" border="20">white.png</texture>
         </control>
         <control type="image">
             <top>15</top>
@@ -1483,7 +1483,7 @@
             <width>242</width>
             <height>101</height>
             <aspectratio scalediffuse="false" align="center">keep</aspectratio>
-            <texture>$VAR[logoanimation]</texture>
+            <texture>lcars1.gif</texture>
         </control>
     </include>
     <include name="dialog2">

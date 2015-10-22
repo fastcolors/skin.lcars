@@ -6,17 +6,6 @@
     <controls>
         <include>allwindows</include>
         <include>musiclcarsview</include> <!-- view id = 50 -->
-        <control type="button" id="701">
-            <onup>9000</onup>
-            <top>630</top>
-            <left>13</left>
-            <width>305</width>
-            <height>79</height>
-            <label></label>
-            <texturenofocus colordiffuse="design" flipy="true">curvelcars1.png</texturenofocus>
-            <texturefocus colordiffuse="blue" flipy="true">curvelcars1.png</texturefocus>
-            <onclick>ActivateWindow(Settings)</onclick>
-        </control>
         <control type="grouplist" id="9000">
             <top>101</top>
             <left>13</left>

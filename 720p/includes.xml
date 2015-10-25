@@ -1352,7 +1352,7 @@
                 <top>7</top>
                 <width>600</width>
                 <height>26</height>
-                <texture colordiffuse="design">white.png</texture>
+                <texture colordiffuse="design"  border="20">white.png</texture>
             </control>
             <control type="label">
                 <left>7</left>
@@ -1397,7 +1397,7 @@
                 <top>32</top>
                 <width>250</width>
                 <height>140</height>
-                <label>$LOCALIZE[126]: $INFO[ListItem.Property(Status)][CR]$INFO[ListItem.Property(Genre)][CR][CR]Air: $INFO[ListItem.Property(NextDay)] At $INFO[ListItem.Property(ShortTime)]$INFO[ListItem.Property(Network), On ]</label>
+                <label>$LOCALIZE[126]: $INFO[ListItem.Property(Status)][CR]$INFO[ListItem.Property(Genre)][CR]Air: $INFO[ListItem.Property(NextDay)] At $INFO[ListItem.Property(ShortTime)]$INFO[ListItem.Property(Network), On ]</label>
                 <aligny>top</aligny>
             </control>
         </itemlayout>
@@ -1406,7 +1406,7 @@
                 <top>7</top>
                 <width>600</width>
                 <height>26</height>
-                <texture colordiffuse="white">white.png</texture>
+                <texture colordiffuse="white" border="20">white.png</texture>
             </control>
             <control type="label">
                 <left>7</left>
@@ -1451,7 +1451,7 @@
                 <top>32</top>
                 <width>250</width>
                 <height>140</height>
-                <label>$LOCALIZE[126]: $INFO[ListItem.Property(Status)][CR]$INFO[ListItem.Property(Genre)][CR][CR]Air: $INFO[ListItem.Property(NextDay)] At $INFO[ListItem.Property(ShortTime)]$INFO[ListItem.Property(Network), On ]</label>
+                <label>$LOCALIZE[126]: $INFO[ListItem.Property(Status)][CR]$INFO[ListItem.Property(Genre)][CR]Air: $INFO[ListItem.Property(NextDay)] At $INFO[ListItem.Property(ShortTime)]$INFO[ListItem.Property(Network), On ]</label>
                 <aligny>top</aligny>
             </control>
         </focusedlayout>

@@ -15,44 +15,47 @@
             <onup>noop</onup>
 			<ondown>700</ondown>
 			<onright>50</onright>
-
-			<!--<control type="button" id="2">-->
-			<!--USELESS-->
-				<!--<description>View As button</description>-->
-				<!--<textwidth>235</textwidth>-->
-				<!--<include>9000butts</include>-->
-				<!--<label>-</label>-->
-			<!--</control>-->
-
-			<control type="button" id="3">
-				<description>Sort by button</description>
-				<include>9000butts</include>
-				<label>103</label>
-			</control>
-			<control type="togglebutton" id="4">
-				<description>Sort asc</description>
-				<include>9000butts</include>
-				<label>584</label>
-				<altlabel>585</altlabel>
-				<usealttexture>Container.SortDirection(Ascending)</usealttexture>
-			</control>
-			<control type="button" id="5">
-				<description>Enable auto-updates</description>
-				<include>9000butts</include>
-				<label>24063</label>
-			</control>
-			<control type="radiobutton" id="6">
-				<radioposx>5</radioposx>
-				<description>No notifications</description>
-				<include>9000butts</include>
-				<label>25000</label>
-			</control>
-			<control type="radiobutton" id="7">
-				<radioposx>5</radioposx>
-				<description>Hide foreign</description>
-				<include>9000butts</include>
-				<label>25001</label>
-			</control>
+				<control type="button" id="3">
+					<description>Sort by button</description>
+					<include>9000butts</include>
+					<label>103</label>
+				</control>
+				<control type="togglebutton" id="4">
+					<description>Sort asc</description>
+					<include>9000butts</include>
+					<label>31051</label>
+					<altlabel>31050</altlabel>
+					<usealttexture>Container.SortDirection(Ascending)</usealttexture>
+				</control>
+				<control type="button" id="5">
+					<description>addon-updates</description>
+					<textwidth>235</textwidth>
+					<include>9000butts</include>
+					<label>24063</label>
+				</control>
+				<control type="radiobutton" id="6">
+					<radioposx>5</radioposx>
+					<description>No notifications</description>
+					<include>9000butts</include>
+					<label>25000</label>
+				</control>
+				<control type="radiobutton" id="7">
+					<radioposx>5</radioposx>
+					<description>Hide foreign</description>
+					<include>9000butts</include>
+					<label>25001</label>
+				</control>
+				<control type="radiobutton" id="8">
+					<description>Hide broken</description>
+					<radioposx>5</radioposx>
+					<include>9000butts</include>
+					<label>24999</label>
+				</control>
+				<control type="button" id="9">
+					<description>Check for updates</description>
+					<include>9000butts</include>
+					<label>24034</label>
+				</control>
 		</control>
 	</controls>
 </window>

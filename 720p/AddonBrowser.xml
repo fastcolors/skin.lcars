@@ -56,6 +56,12 @@
 					<include>9000butts</include>
 					<label>24034</label>
 				</control>
+				<control type="button" id="778">
+					<description>home</description>
+					<include>9000butts</include>
+					<label>HOME</label>
+					<onclick>ActivateWindow(home)</onclick>
+				</control>
 		</control>
 	</controls>
 </window>

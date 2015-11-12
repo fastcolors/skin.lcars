@@ -387,27 +387,6 @@
                 <ondown>60</ondown>
                 <include>movieshome</include>
                 <orientation>horizontal</orientation>
-                <!--itemlayout width="180" height="280">
-                    <control type="image">
-                        <left>10</left>
-                        <top>4</top>
-                        <width>170</width>
-                        <height>250</height>
-                        <aspectratio>keep</aspectratio>
-                        <texture>$INFO[ListItem.Thumb]</texture>
-                    </control>
-                </itemlayout>
-                <focusedlayout width="180" height="280">
-                    <control type="image">
-                        <left>6</left>
-                        <width>178</width>
-                        <height>258</height>
-                        <aspectratio>keep</aspectratio>
-                        <texture>$INFO[ListItem.Thumb]</texture>
-                        <bordertexture colordiffuse="red">white.png</bordertexture>
-                        <bordersize>4</bordersize>
-                    </control>
-                </focusedlayout-->
                 <content>
                     <item id="1" description="Episodes1">
                         <visible>!IsEmpty(Window(Home).Property(NextAired.1.NextTitle))</visible>
@@ -618,7 +597,7 @@
                     <include>888buttons</include>
                     <label>292</label>
                     <onfocus>Skin.SetString(sourceshome,sources://music/)</onfocus>
-                    <onclick>ActivateWindow(Music,sources://)</onclick>
+                    <onclick>ActivateWindow(MusicFiles)</onclick>
                 </control>
             </control>
 
@@ -1337,6 +1316,12 @@
                 <label>1036</label>
                 <onclick>ActivateWindow(134)</onclick>
             </control>
+			<control type="button" id="778">
+				<description>home</description>
+				<include>9000butts</include>
+				<label>HOME</label>
+                <onclick>ActivateWindow(home)</onclick>
+			</control>
         </control>
     </include>
     <include name="TVNextAiredListCommonLayout">

@@ -106,7 +106,13 @@
                 <label>1036</label>
                 <onclick>ActivateWindow(134)</onclick>
 			</control>
-        </control>
+			<control type="button" id="778">
+				<description>home</description>
+				<include>9000butts</include>
+				<label>HOME</label>
+                <onclick>ActivateWindow(home)</onclick>
+			</control>
+         </control>
         <control type="label">
             <visible>Control.IsVisible(50)</visible>
             <centerleft>730</centerleft>

@@ -2,6 +2,11 @@
 <window type="dialog">
 	<defaultcontrol always="true">450</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
+	<coordinates>
+		<system>1</system>
+		<left>0</left>
+		<top>0</top>
+	</coordinates>
 	<controls>
 		<control type="group">
 			<top>40</top>
@@ -64,8 +69,7 @@
 				<ondown>450</ondown>
 				<pagecontrol>30</pagecontrol>
 				<scrolltime>200</scrolltime>
-                <orientation>vertical</orientation>
-				<itemlayout width="226" height="236">
+                <itemlayout width="226" height="236">
 					<control type="image">
 						<centerleft>113</centerleft>
 						<top>10</top>
